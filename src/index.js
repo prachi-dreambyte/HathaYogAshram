@@ -4,11 +4,13 @@ import { BrowserRouter } from 'react-router-dom';
 import './assets/css/App.css';
 
 import App from './App';
+import Header from 'components/navigations/Header';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <BrowserRouter>
+  <Header/>
     <App />
   </BrowserRouter>,
 );

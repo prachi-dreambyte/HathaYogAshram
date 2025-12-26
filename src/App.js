@@ -1,5 +1,5 @@
 import './assets/css/App.css';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import {} from 'react-router-dom';
 import AuthLayout from './layouts/auth';
 import AdminLayout from './layouts/admin';
@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import initialTheme from './theme/theme'; //  { themeGreen }
 import { useState } from 'react';
+import { Homepage } from 'components/Homepage';
 // Chakra imports
 
 export default function Main() {
@@ -25,7 +26,7 @@ export default function Main() {
           }
         />
         
-        <Route path="/" element={<Navigate to="/admin" replace />} />
+        <Route path="/" element={< Homepage />} />
       </Routes>
     </ChakraProvider>
   );

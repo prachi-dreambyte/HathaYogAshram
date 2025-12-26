@@ -1,0 +1,113 @@
+/* ================= HEADER ================= */
+.header {
+  background-color: #6d343b;
+  padding: 16px 0;
+  color: #f4e8dc;
+  position: relative;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* IMPORTANT: allows mobile menu to push content */
+}
+
+/* ================= DESKTOP NAV ================= */
+.desktopNav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.desktopNav a {
+  text-decoration: none;
+  color: #f4e8dc;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.desktopNav a:hover {
+  opacity: 0.7;
+}
+
+/* ================= LOGO ================= */
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 42px;
+  display: block;
+  margin: 0 auto 4px;
+}
+
+.logo span {
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+/* ================= LOGIN BUTTON ================= */
+.authBtn {
+  border: 1px solid #f4e8dc;
+  padding: 8px 18px;
+  color: #f4e8dc;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.authBtn:hover {
+  background-color: #f4e8dc;
+  color: #6d343b;
+}
+
+/* ================= HAMBURGER ================= */
+.menuToggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE MENU ================= */
+/* NORMAL FLOW — NO ABSOLUTE */
+.mobileNav {
+  width: 100%;
+  background-color: #6d343b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px 0px;
+  box-sizing: border-box;
+}
+
+.mobileNav a {
+  color: #f4e8dc;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+  .mobileNav{
+    margin-top: 8px;
+  }
+}
