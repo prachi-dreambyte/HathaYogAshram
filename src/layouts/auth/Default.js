@@ -2,7 +2,7 @@
 import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import React from "react";
-import FixedPlugin from "components/fixedPlugin/FixedPlugin";
+import FixedPlugin from "../../components/admindashboard/fixedPlugin/FixedPlugin";
 // Custom components
 import { NavLink } from "react-router-dom";
 // Assets

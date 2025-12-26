@@ -1,8 +1,8 @@
 // Chakra imports
 import { Portal, Box, useDisclosure } from '@chakra-ui/react';
 // Layout components
-import Navbar from 'components/navbar/NavbarAdmin.js';
-import Sidebar from 'components/sidebar/Sidebar.js';
+import Navbar from '../../components/admindashboard/navbar/NavbarAdmin';
+import Sidebar from '../../components/admindashboard/sidebar/Sidebar';
 import { SidebarContext } from 'contexts/SidebarContext';
 import React, { useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';

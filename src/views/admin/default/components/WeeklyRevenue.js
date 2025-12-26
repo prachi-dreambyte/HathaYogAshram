@@ -7,9 +7,9 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
-import Card from "components/card/Card.js";
+import Card from "../../../../components/admindashboard/card/Card";
 // Custom components
-import BarChart from "components/charts/BarChart";
+import BarChart from "../../../../components/admindashboard/charts/BarChart";
 import React from "react";
 import {
   barChartDataConsumption,

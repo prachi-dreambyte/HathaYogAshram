@@ -34,8 +34,8 @@ import {
 // Assets
 import Usa from "assets/img/dashboards/usa.png";
 // Custom components
-import MiniStatistics from "components/card/MiniStatistics";
-import IconBox from "components/icons/IconBox";
+import MiniStatistics from "../../../components/admindashboard/card/MiniStatistics";
+import IconBox from "../../../components/admindashboard/icons/IconBox";
 import React from "react";
 import {
   MdAddTask,
@@ -43,15 +43,15 @@ import {
   MdBarChart,
   MdFileCopy,
 } from "react-icons/md";
-import CheckTable from "views/admin/default/components/CheckTable";
-import DailyTraffic from "views/admin/default/components/DailyTraffic";
-import PieCard from "views/admin/default/components/PieCard";
-import TotalSpent from "views/admin/default/components/TotalSpent";
-import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
+import CheckTable from "../../../views/admin/default/components/CheckTable";
+import DailyTraffic from "../../../views/admin/default/components/DailyTraffic";
+import PieCard from "../../../views/admin/default/components/PieCard";
+import TotalSpent from "../../../views/admin/default/components/TotalSpent";
+import WeeklyRevenue from "../../../views/admin/default/components/WeeklyRevenue";
 import {
   columnsDataCheck,
-} from "views/admin/default/variables/columnsData";
-import tableDataCheck from "views/admin/default/variables/tableDataCheck.json";
+} from "../../../views/admin/default/variables/columnsData";
+import tableDataCheck from "../../../views/admin/default/variables/tableDataCheck.json";
 
 export default function UserReports() {
   // Chakra Color Mode
