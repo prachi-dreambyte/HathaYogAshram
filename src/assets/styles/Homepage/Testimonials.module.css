@@ -1,0 +1,145 @@
+.section {
+  position: relative;
+  padding: 120px 0;
+  /* thoda compact */
+  background: linear-gradient(135deg,
+      #2b124c,
+      #3a1c71,
+      #5f2c82);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* GLOW BACKGROUND */
+.glow {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle,
+      rgba(157, 80, 187, 0.35),
+      transparent 60%);
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(90px);
+}
+
+/* HEADER */
+.heading {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subText {
+  max-width: 600px;
+  margin: 0 auto 55px;
+  font-size: 16.5px;
+  opacity: 0.9;
+}
+
+/* SWIPER */
+.swiper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* CARD (HEIGHT REDUCED + CENTERED) */
+.card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  padding: 48px 44px;
+  /* ⬅ BIG FIX */
+  box-shadow:
+    0 32px 75px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+/* CENTER IMAGE */
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.avatarWrapper img {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+/* QUOTE ICON */
+.quoteIcon {
+  position: absolute;
+  top: 18px;
+  left: 26px;
+  font-size: 70px;
+  opacity: 0.12;
+}
+
+/* TEXT */
+.quote {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+
+/* STARS */
+.stars {
+  font-size: 16px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+  opacity: 0.9;
+}
+
+/* NAME */
+.name {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+/* LOCATION */
+.location {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.quote span {
+  white-space: pre;
+}
+
+.section {
+  perspective: 1200px;
+  /* 🔥 makes rotateX visible */
+}
+
+.card {
+  transform-style: preserve-3d;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 38px 26px;
+  }
+
+  .quote {
+    font-size: 15.5px;
+  }
+
+  .avatarWrapper img {
+    width: 68px;
+    height: 68px;
+  }
+}

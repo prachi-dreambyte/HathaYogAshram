@@ -1,6 +1,6 @@
 /* ================= HEADER ================= */
 .header {
-  background-color: #6d343b;
+ background: linear-gradient(135deg, #ba80e2, #5d3074, #512164);
   padding: 16px 0;
   color: #f4e8dc;
   position: relative;
@@ -43,7 +43,7 @@
 }
 
 .logo img {
-  width: 42px;
+  width: 78px;
   display: block;
   margin: 0 auto 4px;
 }
@@ -81,7 +81,6 @@
 /* NORMAL FLOW — NO ABSOLUTE */
 .mobileNav {
   width: 100%;
-  background-color: #6d343b;
   display: flex;
   flex-direction: column;
   align-items: flex-start;

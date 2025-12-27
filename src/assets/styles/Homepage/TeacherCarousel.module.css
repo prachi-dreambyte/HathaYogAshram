@@ -1,0 +1,121 @@
+.teacherSection {
+  padding: 60px 0px 40px 0px;
+  background-color: #fdfdfb;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 600;
+  color: #0b4f4a;
+  margin-bottom: 12px;
+}
+
+.subText {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 18px;
+}
+
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.teacherCard {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teacherImg {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.teacherName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0b4f4a;
+  margin-bottom: 4px;
+}
+
+.teacherStyle {
+  font-size: 16px;
+  color: #777;
+  max-width: 220px;
+}
+
+/* ===== CUSTOM ARROWS ===== */
+
+.customNav {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.navBtn {
+  pointer-events: all;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  font-size: 28px;
+  color: #0b4f4a;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.navBtn:hover {
+  background-color: #0b4f4a;
+  color: #ffffff;
+  transform: scale(1.12);
+}
+
+.prev {
+  margin-left: -25px;
+}
+
+.next {
+  margin-right: -25px;
+}
+.teacherCard {
+  transition: box-shadow 0.4s ease;
+}
+
+.teacherCard:hover {
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+}
+
+/* Active slide highlight */
+:global(.swiper-slide-active) .teacherCard {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .teacherImg {
+    width: 150px;
+    height: 150px;
+  }
+
+  .customNav {
+    display: none;
+  }
+}

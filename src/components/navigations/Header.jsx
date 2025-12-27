@@ -89,7 +89,7 @@ const Header = () => {
         {/* LOGO */}
         <motion.div className={styles.logo} variants={logoAnim}>
           <img src={logo} alt="Mah Yoga" />
-          <span>MAH YOGA</span>
+          
         </motion.div>
 
         {/* RIGHT MENU */}
@@ -106,7 +106,7 @@ const Header = () => {
           ))}
 
           <motion.div variants={navItem}>
-            <Link to="/login" className={styles.authBtn}>
+            <Link to="/auth/sign-in" className={styles.authBtn}>
               Login / Signup
             </Link>
           </motion.div>

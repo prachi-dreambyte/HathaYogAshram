@@ -1,0 +1,154 @@
+.footer {
+  padding: 70px 0 30px;
+  background: linear-gradient(
+    135deg,
+    #3a1c71,
+    #5f2c82,
+    #9d50bb
+  );
+  color: #ffffff;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #ffffff;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  opacity: 1;
+  padding-left: 4px;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: #ffffff;
+  color: #5f2c82;
+}
+
+.newsText {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.newsletter {
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+}
+
+.newsletter button {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  background: #ffffff;
+  color: #5f2c82;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #f2e9ff;
+}
+
+.bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.logo {
+  width: 136px;        /* adjust as needed */
+  margin-bottom: 15px;
+}
+
+.socials a {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.links li a {
+  position: relative;
+}
+
+.links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.links li a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletter button {
+    width: 100%;
+  }
+}
