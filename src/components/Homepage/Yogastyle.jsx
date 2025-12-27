@@ -1,26 +1,26 @@
-import React from "react";
-import { motion } from "framer-motion";
-import styles from "../../assets/styles/Homepage/Yogastyle.module.css";
+import React from 'react';
+import { motion } from 'framer-motion';
+import styles from '../../assets/styles/Homepage/Yogastyle.module.css';
 
 // images
-import vinyasa from "../../assets/images/yoga1.webp";
-import hatha from "../../assets/images/yoga2.webp";
-import yin from "../../assets/images/yoga3.webp";
-import restorative from "../../assets/images/yoga4.webp";
-import kundalini from "../../assets/images/yoga5.webp";
-import conditioning from "../../assets/images/yoga6.webp";
-import power from "../../assets/images/yoga7.webp";
-import prenatal from "../../assets/images/yoga8.webp";
+import vinyasa from '../../assets/images/yoga1.webp';
+import hatha from '../../assets/images/yoga2.webp';
+import yin from '../../assets/images/yoga3.webp';
+import restorative from '../../assets/images/yoga4.webp';
+import kundalini from '../../assets/images/yoga5.webp';
+import conditioning from '../../assets/images/yoga6.webp';
+import power from '../../assets/images/yoga7.webp';
+import prenatal from '../../assets/images/yoga8.webp';
 
 const yogaStyles = [
-  { title: "Vinyasa Flow", img: vinyasa },
-  { title: "Hatha", img: hatha },
-  { title: "Yin", img: yin },
-  { title: "Restorative", img: restorative },
-  { title: "Kundalini", img: kundalini },
-  { title: "Yoga Conditioning", img: conditioning },
-  { title: "Power Yoga", img: power },
-  { title: "Prenatal", img: prenatal },
+  { title: 'Vinyasa Flow', img: vinyasa },
+  { title: 'Hatha', img: hatha },
+  { title: 'Yin', img: yin },
+  { title: 'Restorative', img: restorative },
+  { title: 'Kundalini', img: kundalini },
+  { title: 'Yoga Conditioning', img: conditioning },
+  { title: 'Power Yoga', img: power },
+  { title: 'Prenatal', img: prenatal },
 ];
 
 /* 🔮 Variants */
@@ -39,13 +39,13 @@ const card = {
     opacity: 0,
     y: 60,
     scale: 0.95,
-    filter: "blur(8px)",
+    filter: 'blur(8px)',
   },
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
-    filter: "blur(0px)",
+    filter: 'blur(0px)',
     transition: {
       duration: 0.9,
       ease: [0.16, 1, 0.3, 1],
@@ -77,7 +77,7 @@ const YogaStyle = () => {
           <motion.h1
             className={styles.heading}
             animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
           >
             Create a practice that has purpose
           </motion.h1>
@@ -105,7 +105,7 @@ const YogaStyle = () => {
                   rotateX: 6,
                   rotateY: -6,
                 }}
-                transition={{ type: "spring", stiffness: 200, damping: 18 }}
+                transition={{ type: 'spring', stiffness: 200, damping: 18 }}
               >
                 {/* Image Parallax */}
                 <motion.img
@@ -116,13 +116,12 @@ const YogaStyle = () => {
                 />
 
                 {/* Overlay */}
-               <motion.div
-  className={styles.cardOverlay}
-  initial={{ opacity: 1, y: 0 }}
-  whileHover={{ y: -6 }}
-  transition={{ duration: 0.4 }}
->
-
+                <motion.div
+                  className={styles.cardOverlay}
+                  initial={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.4 }}
+                >
                   <span>YOGA</span>
                   <h5>{item.title}</h5>
                 </motion.div>
@@ -143,7 +142,7 @@ const YogaStyle = () => {
             className={styles.exploreBtn}
             whileHover={{
               scale: 1.05,
-              boxShadow: "0px 20px 40px rgba(0,0,0,0.15)",
+              boxShadow: '0px 20px 40px rgba(0,0,0,0.15)',
             }}
             whileTap={{ scale: 0.95 }}
           >
