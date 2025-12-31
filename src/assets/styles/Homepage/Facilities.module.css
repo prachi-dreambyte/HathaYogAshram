@@ -1,0 +1,68 @@
+.facilitiesSection {
+  padding: 60px 0;
+  background: #fff;
+}
+
+/* Heading */
+.heading {
+  color: #6a1b4d;
+  font-weight: 600;
+}
+
+.headingIcon {
+  display: block;
+  font-size: 24px;
+  color: #6a1b4d;
+  margin-top: 6px;
+}
+
+/* Text Card (Pink Box) */
+.textCard {
+  background: #ffb6ac;
+  padding: 25px;
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  text-align: center;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.35) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+.textCard h5 {
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.textCard p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.textCard span {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image {
+    height: 220px;
+  }
+
+  .textCard {
+    padding: 20px;
+  }
+}

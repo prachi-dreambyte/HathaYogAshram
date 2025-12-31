@@ -9,6 +9,9 @@ import WhyChooseUs from './WhyChooseUs'
 import Testimonials from './Testimonials'
 import YogaAbout from './YogaAbout'
 import YogaJourney from './YogaJourney'
+import HowToReach from './HowToReach'
+import Facilities from './Facilities'
+import StudentReviews from './StudentReviews'
 
 export const Homepage = () => {
   return (
@@ -20,9 +23,12 @@ export const Homepage = () => {
     <ExpertInstruction/>
     <TeacherCarousel/>
     <YogaJourney/>
+    <Facilities/>
     <WhyChooseUs/>
     <Testimonials/>
+    <StudentReviews/>
     <FaqSection/>
+    <HowToReach/>
     </>
   )
 }

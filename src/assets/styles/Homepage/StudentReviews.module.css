@@ -1,0 +1,75 @@
+.reviewSection {
+  background-color: #fff3ee;
+  padding: 80px 0;
+}
+
+/* Heading */
+.heading {
+  font-size: 32px;
+  font-weight: 500;
+  color: #4b0c3b;
+  margin-bottom: 12px;
+}
+
+.divider {
+  width: 120px;
+  height: 14px;
+  margin: 0 auto;
+  background-image: url("../../../assets/images/video.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Card */
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+/* Play Icon */
+.playIcon {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.playIcon span {
+  width: 56px;
+  height: 56px;
+  background-color: #ff0000;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playIcon span::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 16px solid #fff;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .thumbnail {
+    height: 360px;
+  }
+}

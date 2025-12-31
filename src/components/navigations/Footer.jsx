@@ -1,157 +1,111 @@
-import React from 'react';
-import styles from '../../assets/styles/Footer.module.css';
-import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
-import logo from '../../assets/images/logo.png';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-
-/* ANIMATION VARIANTS */
-const footerReveal = {
-  hidden: { opacity: 0, y: 80 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1, ease: 'easeOut' },
-  },
-};
-
-const columnAnim = {
-  hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: 'easeOut' },
-  },
-};
-
-const stagger = {
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
-};
+import React from "react";
+import styles from "../../assets/styles/Footer.module.css";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaMapMarkerAlt,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaClock,
+} from "react-icons/fa";
+import logo from "../../assets/images/logo.png";
 
 const Footer = () => {
   return (
-    <motion.footer
-      className={styles.footer}
-      variants={footerReveal}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
-      <div className="container">
-        <motion.div className="row gy-4" variants={stagger}>
+    <footer className={styles.footer}>
+      <div className={styles.overlay}></div>
+
+      <div className="container position-relative">
+        <div className="row gy-5">
+
           {/* BRAND */}
-          <motion.div className="col-lg-4 col-md-6" variants={columnAnim}>
-            <motion.img
-              src={logo}
-              alt="Hatha Yoga Logo"
-              className={styles.logo}
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            />
-
+          <div className="col-lg-4 col-md-6">
+            <img src={logo} alt="Hatha Yoga Ashram" className={styles.logo} />
             <p className={styles.desc}>
-              A mindful yoga experience designed to help you move, breathe, and
-              live with balance and intention.
+              Hatha Yoga Ashram, founded in 2017 in Rishikesh, India, is one of the
+              most trusted yoga teacher training schools. We offer traditional
+              Hatha, Ashtanga, Kundalini, Meditation and Pranayama practices
+              rooted in ancient yogic wisdom.
             </p>
-
-            <motion.div
-              className={styles.socials}
-              initial="hidden"
-              animate="visible"
-              variants={{
-                visible: { transition: { staggerChildren: 0.12 } },
-              }}
-            >
-              {[FaFacebookF, FaInstagram, FaYoutube, FaTwitter].map(
-                (Icon, i) => (
-                  <motion.a
-                    href="#"
-                    key={i}
-                    whileHover={{ y: -6, scale: 1.1 }}
-                    transition={{ type: 'spring', stiffness: 300 }}
-                  >
-                    <Icon />
-                  </motion.a>
-                ),
-              )}
-            </motion.div>
-          </motion.div>
-
-          {/* LINKS */}
-          <motion.div className="col-lg-2 col-md-6" variants={columnAnim}>
-            <h5 className={styles.title}>Explore</h5>
-            <ul className={styles.links}>
-              {['Home', 'Classes', 'Teachers', 'Pricing'].map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ x: -20, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Link to="#">{item}</Link>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* SUPPORT */}
-          <motion.div className="col-lg-2 col-md-6" variants={columnAnim}>
-            <h5 className={styles.title}>Support</h5>
-            <ul className={styles.links}>
-              {['Help Center', 'Privacy Policy', 'Terms', 'Contact'].map(
-                (item, i) => (
-                  <motion.li
-                    key={i}
-                    initial={{ x: -20, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Link to="#">{item}</Link>
-                  </motion.li>
-                ),
-              )}
-            </ul>
-          </motion.div>
-
-          {/* NEWSLETTER */}
-          <motion.div className="col-lg-4 col-md-6" variants={columnAnim}>
-            <h5 className={styles.title}>Stay Connected</h5>
-            <p className={styles.newsText}>
-              Get weekly yoga inspiration and updates.
+            <p className={styles.desc}>
+              Our mission is to spread authentic yoga teachings across the
+              world and help students experience holistic transformation of
+              body, mind and soul.
             </p>
+          </div>
 
-            <motion.form
-              className={styles.newsletter}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit">Subscribe</button>
-            </motion.form>
-          </motion.div>
-        </motion.div>
+          {/* QUICK LINKS */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.title}>Quick Links</h5>
+            <ul className={styles.list}>
+              <li>Home</li>
+              <li>About Us</li>
+              <li>Our Teachers</li>
+              <li>Gallery</li>
+              <li>Blog</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
 
-        {/* BOTTOM */}
-        <motion.div
-          className={styles.bottom}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p>
-            © {new Date().getFullYear()} Hatha Yoga Ashram. All rights reserved.
-          </p>
-        </motion.div>
+          {/* YOGA COURSES */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.title}>Yoga Courses</h5>
+            <ul className={styles.list}>
+              <li>100 Hour Yoga TTC</li>
+              <li>200 Hour Yoga TTC</li>
+              <li>300 Hour Yoga TTC</li>
+              <li>500 Hour Yoga TTC</li>
+              <li>Kundalini Yoga TTC</li>
+              <li>Online Yoga TTC</li>
+            </ul>
+          </div>
+
+          {/* RETREATS */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.title}>Yoga Retreats</h5>
+            <ul className={styles.list}>
+              <li>Yoga Retreat in Rishikesh</li>
+              <li>5 Days Yoga Retreat</li>
+              <li>10 Days Yoga Retreat</li>
+              <li>20 Days Yoga Retreat</li>
+              <li>Meditation Retreat</li>
+            </ul>
+          </div>
+
+          {/* CONTACT */}
+          <div className="col-lg-2 col-md-6">
+            <h5 className={styles.title}>Registered Office</h5>
+            <ul className={styles.contact}>
+              <li><FaMapMarkerAlt /> Upper Tapovan, Rishikesh, Uttarakhand – 249192</li>
+              <li><FaPhoneAlt /> +91 9335606336</li>
+              <li><FaEnvelope /> info@hathayogashram.com</li>
+              <li><FaClock /> 7:00 AM – 7:00 PM</li>
+            </ul>
+
+            <div className={styles.socials}>
+              <a href="#"><FaFacebookF /></a>
+              <a href="#"><FaInstagram /></a>
+              <a href="#"><FaYoutube /></a>
+            </div>
+          </div>
+        </div>
+
+        {/* KEYWORDS */}
+        <div className={styles.keywords}>
+          <span>Yoga School in Rishikesh</span>
+          <span>Best Yoga Teacher Training India</span>
+          <span>200 Hour Yoga TTC</span>
+          <span>300 Hour Yoga TTC</span>
+          <span>Yoga Retreats in India</span>
+          <span>Online Yoga Teacher Training</span>
+        </div>
+
+        <div className={styles.bottom}>
+          © {new Date().getFullYear()} Hatha Yoga Ashram. All Rights Reserved.
+        </div>
       </div>
-    </motion.footer>
+    </footer>
   );
 };
 
