@@ -76,4 +76,8 @@
   .heading {
     font-size: 26px;
   }
+  .icon{
+    display: flex;
+    justify-content: center;
+  }
 }
