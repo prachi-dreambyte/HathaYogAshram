@@ -3,17 +3,34 @@ import styles from "../../assets/styles/Homepage/WhyChooseUs.module.css";
 import { FaUserGraduate, FaClock, FaLeaf, FaVideo } from "react-icons/fa";
 import { motion } from "framer-motion";
 
+/* ===================== */
+/* Framer Motion Variants */
+/* ===================== */
+
 const containerVariant = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
     },
   },
 };
 
 const itemVariant = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 35 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  },
+};
+
+const headerVariant = {
+  hidden: { opacity: 0, y: 25 },
   visible: {
     opacity: 1,
     y: 0,
@@ -21,12 +38,11 @@ const itemVariant = {
   },
 };
 
-const headerVariant = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.8 },
+const iconHover = {
+  hover: {
+    scale: 1.15,
+    rotate: [0, -5, 5, 0],
+    transition: { duration: 0.4 },
   },
 };
 
@@ -58,49 +74,58 @@ const WhyChooseUs = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.div className="col-lg-3 col-md-6" variants={itemVariant}>
-            <div className={styles.card}>
-              <FaUserGraduate className={styles.icon} />
-              <h5>Expert Teachers</h5>
-              <p>
-                Learn from certified and experienced yoga instructors who guide
-                you with clarity and care.
-              </p>
-            </div>
-          </motion.div>
+          {[
+            {
+              icon: FaUserGraduate,
+              title: "Expert Teachers",
+              text:
+                "Learn from certified and experienced yoga instructors who guide you with clarity and care.",
+            },
+            {
+              icon: FaClock,
+              title: "Anytime Practice",
+              text:
+                "Short or long sessions — practice whenever it fits your schedule.",
+            },
+            {
+              icon: FaLeaf,
+              title: "Mind–Body Balance",
+              text:
+                "Improve flexibility, strength, focus, and inner calm with every session.",
+            },
+            {
+              icon: FaVideo,
+              title: "On-Demand Classes",
+              text:
+                "Access a growing library of yoga, meditation, and breathwork classes.",
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              className="col-lg-3 col-md-6"
+              variants={itemVariant}
+            >
+              <motion.div
+                className={styles.card}
+                whileHover={{
+                  y: -8,
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.12)",
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <motion.div
+                  variants={iconHover}
+                  whileHover="hover"
+                  className={styles.icon}
+                >
+                  <item.icon />
+                </motion.div>
 
-          <motion.div className="col-lg-3 col-md-6" variants={itemVariant}>
-            <div className={styles.card}>
-              <FaClock className={styles.icon} />
-              <h5>Anytime Practice</h5>
-              <p>
-                Short or long sessions — practice whenever it fits your
-                schedule.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div className="col-lg-3 col-md-6" variants={itemVariant}>
-            <div className={styles.card}>
-              <FaLeaf className={styles.icon} />
-              <h5>Mind–Body Balance</h5>
-              <p>
-                Improve flexibility, strength, focus, and inner calm with every
-                session.
-              </p>
-            </div>
-          </motion.div>
-
-          <motion.div className="col-lg-3 col-md-6" variants={itemVariant}>
-            <div className={styles.card}>
-              <FaVideo className={styles.icon} />
-              <h5>On-Demand Classes</h5>
-              <p>
-                Access a growing library of yoga, meditation, and breathwork
-                classes.
-              </p>
-            </div>
-          </motion.div>
+                <h5>{item.title}</h5>
+                <p>{item.text}</p>
+              </motion.div>
+            </motion.div>
+          ))}
         </motion.div>
 
       </div>

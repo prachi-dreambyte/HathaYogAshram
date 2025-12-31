@@ -1,0 +1,148 @@
+.section {
+  padding: 0px 0px 50px 0px;
+  background-color: #ffffff;
+}
+
+.headingWrapper {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  color: #0b1b5c;
+  margin-bottom: 16px;
+  font-family: "Playfair Display", serif;
+}
+
+/* Divider */
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.line {
+  width: 80px;
+  height: 1px;
+  background-color: #0b1b5c;
+}
+
+.dividerImage {
+  width: 208px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Cards Layout */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+
+.card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Icon */
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  background: rgba(177, 0, 198, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 36px;
+  color: #b100c6;
+}
+
+/* Text */
+
+.cardTitle {
+  font-size: 26px;
+  font-weight: 600;
+  color: #0b1b5c;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  font-family: "Playfair Display", serif;
+}
+
+.cardText {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #2d2d2d;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 32px 22px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .iconWrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+
+  .line {
+    width: 50px;
+  }
+
+  .dividerImage {
+    width: 22px;
+  }
+}

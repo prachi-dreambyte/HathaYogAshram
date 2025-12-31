@@ -1,0 +1,141 @@
+.section {
+  padding: 90px 0;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main Heading */
+.heading {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #5a0037;
+}
+
+.ornamentWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.ornamentImage {
+  width: 300px;   /* adjust as per design */
+  height: 35px;
+  margin-bottom: 10px;
+ 
+}
+
+
+/* Rating */
+.rating {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+/* Subtitle */
+.subTitle {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Info Boxes */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 45px;
+}
+
+.infoGrid div {
+  border: 1px solid #5a0037;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Main Layout */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 45px;
+  align-items: flex-start;
+}
+
+/* Content */
+.content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.innerHeading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #5a0037;
+  margin-bottom: 10px;
+}
+
+.highlightText {
+  font-size: 15px;
+  font-weight: 500;
+  color: #7a004a;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 18px;
+}
+
+.buttons button {
+  background: #5a0037;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #7a004a;
+}
+
+/* Images */
+.images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid #f0b7cb;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+  }
+}

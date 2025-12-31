@@ -12,13 +12,22 @@
 }
 
 .divider {
-  width: 120px;
-  height: 14px;
-  margin: 0 auto;
-  background-image: url("../../../assets/images/video.png");
+  width: 250px;
+  height: 22px;
+  margin: 12px auto 0;
+  background-image: url("../../images/linedesign.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .divider {
+    width: 100px;
+  }
+}
+
 
 /* Card */
 .card {

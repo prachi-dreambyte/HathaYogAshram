@@ -1,0 +1,80 @@
+.facilitiesSection {
+  background: #ffffff;
+}
+
+/* ===== TOP BANNER ===== */
+.topBanner {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerOverlay {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* TEXT */
+.bannerOverlay h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bannerOverlay h2 {
+  font-size: 32px;
+  font-weight: 600;
+  max-width: 850px;
+  margin-bottom: 28px;
+}
+
+/* ===== BUTTON ===== */
+.bannerBtn {
+  padding: 14px 36px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bannerBtn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .topBanner {
+    height: 260px;
+  }
+
+  .bannerOverlay h1 {
+    font-size: 28px;
+  }
+
+  .bannerOverlay h2 {
+    font-size: 16px;
+  }
+
+  .bannerBtn {
+    padding: 12px 28px;
+    font-size: 13px;
+  }
+}

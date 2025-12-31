@@ -1,9 +1,11 @@
 .facilitiesSection {
-  padding: 60px 0;
-  background: #fff;
+  padding: 80px 0;
+  background: #ffffff;
 }
 
-/* Heading */
+/* =====================
+   Heading
+===================== */
 .heading {
   color: #6a1b4d;
   font-weight: 600;
@@ -11,58 +13,146 @@
 
 .headingIcon {
   display: block;
-  font-size: 24px;
+  font-size: 26px;
   color: #6a1b4d;
   margin-top: 6px;
 }
 
-/* Text Card (Pink Box) */
+/* =====================
+   TEXT CARD (SAME DESIGN)
+===================== */
 .textCard {
-  background: #ffb6ac;
-  padding: 25px;
-  height: 100%;
-  border-radius: 6px;
   position: relative;
+  padding: 36px 30px;
+  border-radius: 8px;
+  min-height: 380px;
+  /* SHOW LESS height */
+  transition: all 0.5s ease;
+}
+
+/* ELEMENT IMAGE – FULL VISIBLE */
+.textCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../images/yogaelements-01.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* 🔥 key */
+  background-position: center;
+  z-index: 0;
+}
+
+/* WHITE BORDER FRAME */
+.textCard::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+
+  z-index: 1;
+}
+
+/* CONTENT */
+.textCard h5,
+.textCard p,
+.textCard span {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.35) 1px,
-    transparent 1px
-  );
-  background-size: 20px 20px;
 }
 
 .textCard h5 {
-  font-weight: 600;
-  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #000;
 }
 
+/* TEXT LIMIT (SHOW LESS) */
 .textCard p {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.9;
+  color: #000;
+  max-height: 120px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
+/* EXPANDED STATE (SHOW MORE) */
+.expanded {
+  min-height: auto;
+  /* 🔥 card grows */
+}
+
+.expanded p {
+  max-height: 1000px;
+}
+
+/* SHOW MORE / LESS */
 .textCard span {
-  display: block;
-  margin-top: 10px;
+  display: inline-block;
+  margin-top: 18px;
   font-size: 13px;
+  font-weight: 600;
+  color: #5b0f6f;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
-/* Image */
+.textCard span:hover {
+  text-decoration: underline;
+}
+
+.headingIcon {
+  display: block;
+  margin-top: 8px;
+}
+
+.headingIcon img {
+  width: 250px;
+  /* size control */
+  height: 35px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* =====================
+   IMAGE CARD (UNCHANGED)
+===================== */
 .image {
   width: 100%;
-  height: 260px;
+  height: 100%;          /* 🔥 fill column height */
+  min-height: 380px;     /* 🔥 SAME as textCard */
   object-fit: cover;
   border-radius: 6px;
+  border: 2px solid #c58be2;
 }
 
-/* Responsive */
+/* GRID FIX */
+.row>div {
+  display: flex;
+}
+
+.row>div>* {
+  width: 100%;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
-  .image {
-    height: 220px;
+  .textCard {
+    padding: 26px 22px;
+    min-height: 300px;
   }
 
-  .textCard {
-    padding: 20px;
+  .textCard::after {
+    inset: 10px;
+  }
+
+  .image {
+    max-height: 220px;
   }
 }

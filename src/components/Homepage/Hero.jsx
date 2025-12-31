@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from '../../assets/styles/Homepage/Hero.module.css';
+import heroVideo from '../../assets/videos/Hatha Yogashram Best Yoga Teacher Training in India.mp4';
 
 /* ================= VARIANTS ================= */
 
@@ -72,7 +73,7 @@ const Hero = () => {
         animate="show"
       >
         <source
-          src={require('../../assets/videos/herovideo.mp4')}
+          src={heroVideo}
           type="video/mp4"
         />
       </motion.video>
@@ -95,9 +96,9 @@ const Hero = () => {
               initial="hidden"
               animate="show"
             >
-              more <br />
+              More 
               yoga, <br />
-              better <br />
+              Better 
               world<span>®</span>
             </motion.h1>
 

@@ -1,39 +1,97 @@
 import React from "react";
+import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/StudentReviews.module.css";
 import reviews from "./reviewsData";
 
+/* ===================== */
+/* Animation Variants */
+/* ===================== */
+
+const headingVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
+
+const containerVariant = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 40, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
 const StudentReviews = () => {
   return (
-    <section className={styles.reviewSection}>
+    <motion.section
+      className={styles.reviewSection}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <div className="container">
         {/* Heading */}
-        <div className="text-center mb-5">
+        <motion.div
+          className="text-center mb-5"
+          variants={headingVariant}
+        >
           <h2 className={styles.heading}>
             Student’s Short Review - Student’s Experience With Us
           </h2>
           <div className={styles.divider}></div>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="row g-4">
+        <motion.div
+          className="row g-4"
+          variants={containerVariant}
+        >
           {reviews.map((item, index) => (
-            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12" key={index}>
-              <div className={styles.card}>
+            <motion.div
+              className="col-xl-3 col-lg-3 col-md-6 col-sm-12"
+              key={index}
+              variants={cardVariant}
+            >
+              <motion.div
+                className={styles.card}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 15px 35px rgba(0,0,0,0.15)",
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
                 <img
                   src={item.thumbnail}
                   alt="student review"
                   className={styles.thumbnail}
                 />
 
-                <div className={styles.playIcon}>
+                <motion.div
+                  className={styles.playIcon}
+                  whileHover={{ scale: 1.2 }}
+                >
                   <span></span>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

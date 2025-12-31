@@ -1,32 +1,40 @@
 import React from 'react'
 import Hero from '../../components/Homepage/Hero'
-import YogaStyle from '../../components/Homepage/Yogastyle'
-import MeaningSection from './MeaningSection'
-import ExpertInstruction from './ExpertInstruction'
 import FaqSection from './FaqSection'
-import TeacherCarousel from './TeacherCarousel'
 import WhyChooseUs from './WhyChooseUs'
 import Testimonials from './Testimonials'
-import YogaAbout from './YogaAbout'
-import YogaJourney from './YogaJourney'
 import HowToReach from './HowToReach'
 import Facilities from './Facilities'
 import StudentReviews from './StudentReviews'
+import YogaIntro from './YogaIntro'
+import YogaSchool from './YogaSchool'
+import FacilitiesSection from './FacilitiesSection'
+import HathaAshramSection from './HathaAshramSection'
+import ReviewsSection from './ReviewsSection'
+import WhatWeOffer from './WhatWeOffer'
+import YogaTeacherTraining from './YogaTeacherTraining'
+import VedicMantraCourse from './VedicMantraCourse'
+import YogaRetreat from './YogaRetreat'
+import YogaTeachersSection from './NewSection'
 
 export const Homepage = () => {
   return (
     <>
     <Hero/>
-    <YogaAbout/>
-    <YogaStyle/>
-    <MeaningSection/>
-    <ExpertInstruction/>
-    <TeacherCarousel/>
-    <YogaJourney/>
+    <YogaSchool/>
+    <YogaTeachersSection/>
+    <YogaIntro/>
+    <FacilitiesSection/>
     <Facilities/>
+    <HathaAshramSection/>
     <WhyChooseUs/>
     <Testimonials/>
     <StudentReviews/>
+    <YogaTeacherTraining/>
+    <ReviewsSection/>
+    <YogaRetreat/>
+    <VedicMantraCourse/>
+    <WhatWeOffer/>
     <FaqSection/>
     <HowToReach/>
     </>
