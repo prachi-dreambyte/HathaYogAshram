@@ -49,7 +49,10 @@ const YogaSchool = () => {
       <div className="container">
 
         {/* Heading */}
-        <motion.h2 className={styles.heading} variants={fadeUp}>
+        <motion.h2 className={styles.heading } variants={fadeUp}>
+          Namaste & Welcome to Hatha Yoga Ashram
+        </motion.h2>
+        <motion.h2 className={styles.subTitle} variants={fadeUp}>
           The Best Yoga School In Rishikesh, India
         </motion.h2>
 
@@ -61,9 +64,7 @@ const YogaSchool = () => {
           ⭐ 5 Rated Yoga School
         </motion.p>
 
-        <motion.p className={styles.subTitle} variants={fadeUp}>
-          Namaste & Welcome to Hatha Yoga Ashram
-        </motion.p>
+        
 
         {/* Info Boxes */}
         <div className={styles.infoGrid}>
