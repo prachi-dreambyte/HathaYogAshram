@@ -27,7 +27,7 @@ export const Homepage = () => {
     <YogaSchool/>
     <YogaTeachersSection/>
     <YogaIntro/>
-     <YogaOverview/>
+    <YogaOverview/>
     <FacilitiesSection/>
     <Facilities/>
     <HathaAshramSection/>

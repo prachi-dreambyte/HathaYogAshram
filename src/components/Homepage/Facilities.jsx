@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import styles from "../../assets/styles/Homepage/Facilities.module.css";
+import transportationImg from "../../assets/images/library.jpg";
+import libraryImg from "../../assets/images/excursion.jpg";
+import excursionsImg from "../../assets/images/station.jpg";
+import foodImg from "../../assets/images/food.jpg";
+import supportImg from "../../assets/images/food.jpg";
 
 const Facilities = () => {
   const [expanded, setExpanded] = useState(null);
@@ -17,31 +22,31 @@ const Facilities = () => {
   const cards = [
     {
       title: "Transportation",
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80",
+      image: transportationImg,
       text: `We provide complete transportation assistance to ensure a smooth and stress-free arrival for our students. For those without a direct flight to Dehradun, we arrange comfortable pickups from Dehradun Airport, Haridwar Railway Station, or even Delhi upon request. Students arriving independently by taxi or cab are provided with detailed Google Maps directions, live assistance, and continuous communication until they safely reach the campus.`,
       colorClass: "purple"
     },
     {
       title: "Library",
-      image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80",
+      image: libraryImg,
       text: `Our yoga library is a calm and inspiring space designed to deepen your learning experience. It is thoughtfully stocked with a wide collection of books covering Yoga Asanas, Pranayama, Meditation, Yoga Philosophy, Anatomy, and ancient yogic texts.`,
       colorClass: "blue"
     },
     {
       title: "Excursions",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
+      image: excursionsImg,
       text: `To help students connect with nature and local culture, we organize weekly excursions around Rishikesh and the Himalayan region. Explore sacred temples, pristine waterfalls, and breathtaking mountain trails.`,
       colorClass: "green"
     },
     {
       title: "Satvik Food",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+      image: foodImg,
       text: `Our school serves freshly prepared Satvik vegetarian meals that support a yogic lifestyle and holistic well-being. Every dish is prepared with pure, organic ingredients to enhance mental clarity and spiritual practice.`,
       colorClass: "orange"
     },
     {
       title: "24/7 Support",
-      image: "https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=800&q=80",
+      image: supportImg,
       text: `Our reception desk is available 24/7 to assist students throughout their stay and ensure a peaceful experience. Whether you need medical assistance or have questions, our dedicated team is always ready to support you.`,
       colorClass: "indigo"
     },
