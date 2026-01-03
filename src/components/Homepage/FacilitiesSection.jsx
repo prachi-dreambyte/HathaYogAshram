@@ -50,7 +50,7 @@ const FacilitiesSection = () => {
           className={styles.bannerOverlay}
           variants={staggerText}
         >
-          <motion.h1 variants={textFadeUp}>Join Our</motion.h1>
+          <motion.h1 variants={textFadeUp}>Join Our School</motion.h1>
 
           <motion.h2 variants={textFadeUp}>
             Begin Your Journey with Our 200 Hour Hatha Yoga TTC

@@ -1,0 +1,123 @@
+.section {
+  position: relative;
+  padding: 140px 20px;
+  background: #fff6f2;
+  overflow: hidden;
+}
+
+/* Abstract Shape */
+.bgShape {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #ffb8a2, transparent 70%);
+  top: -200px;
+  right: -200px;
+  z-index: 0;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Story Content */
+.story {
+  flex: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #ffe0d6;
+  color: #e74c3c;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.story h2 {
+  font-size: 44px;
+  line-height: 1.2;
+  color: #4a1d34;
+  margin-bottom: 25px;
+}
+
+.story h2 span {
+  color: #e74c3c;
+}
+
+.story p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+  max-width: 480px;
+}
+
+/* Give Stamp */
+.stamp {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 36px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #e74c3c;
+  border: 3px dashed #e74c3c;
+  border-radius: 50%;
+  transform: rotate(-8deg);
+}
+
+/* Image Card */
+.imageCard {
+  flex: 1;
+  position: relative;
+}
+
+.imageCard img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18);
+}
+
+.imageLabel {
+  position: absolute;
+  bottom: -18px;
+  left: 30px;
+  background: #ffffff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story p {
+    max-width: 100%;
+  }
+
+  .imageLabel {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .story h2 {
+    font-size: 32px;
+  }
+}
