@@ -83,7 +83,7 @@
   color: #8b008b;
   margin-bottom: 16px;
   line-height: 1.2;
-  
+
 }
 
 .cardText {
@@ -91,6 +91,20 @@
   line-height: 1.8;
   color: #2d2d2d;
 }
+
+/* Card hover effects for icon & title */
+.card:hover .iconWrapper {
+  background: #e41cd7db;
+}
+
+.card:hover .icon {
+  color: #000000;
+}
+
+.card:hover .cardTitle {
+  color: #000000;
+}
+
 
 /* Responsive */
 

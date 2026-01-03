@@ -19,7 +19,6 @@
 .overlay {
     position: absolute;
     inset: 0;
-   
     z-index: 2;
 }
 
@@ -61,7 +60,7 @@
 
 /* Card (PILL DESIGN) */
 .card {
-    background: rgba(190, 185, 175, 0.9);
+    background: rgb(169 114 179 / 90%);
     border-radius: 999px;
     padding: 22px 26px;
     min-height: 88px;

@@ -1,18 +1,18 @@
 .footer {
   position: relative;
-  background-image: url("../images/fotter-01.png");
+  background-image: url("../images/fotter-01.webp");
   background-repeat: no-repeat;
-  background-size: cover;        /* FIXED ZOOM ISSUE */
-  background-position: center;   /* FIXED ZOOM ISSUE */
-  padding: 90px 0 30px;
+  background-size: cover;
+  background-position: center;
   color: #000000;
+  overflow: hidden;
 }
 
-/* DARK OVERLAY FOR READABILITY */
+/* OVERLAY */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5, 5, 75, 0.85);
+  background: rgba(5, 5, 75, 0.88);
   z-index: 0;
 }
 
@@ -21,31 +21,39 @@
   z-index: 1;
 }
 
-/* LOGO */
+/* ===================== */
+/* BRAND SECTION */
+/* ===================== */
+.brandWrap {
+  display: flex;
+  gap: 24px;
+  max-width: 700px;
+}
+
 .logo {
-  width: 150px;
-  margin-bottom: 20px;
+  width: 220px;
+  flex-shrink: 0;
 }
 
-/* TEXT */
 .desc {
-  font-size: 14px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.7;
   opacity: 0.9;
-  margin-bottom: 15px;
 }
 
+/* ===================== */
 /* TITLES */
+/* ===================== */
 .title {
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   position: relative;
 }
 
 .title::after {
   content: "";
-  width: 40px;
+  width: 36px;
   height: 2px;
   background: #e6c87a;
   position: absolute;
@@ -53,18 +61,23 @@
   left: 0;
 }
 
+/* ===================== */
 /* LISTS */
+/* ===================== */
 .list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .list li {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 10px;
   opacity: 0.85;
   cursor: pointer;
   transition: 0.3s;
+  white-space: nowrap;
+  font-weight: 500;
 }
 
 .list li:hover {
@@ -72,31 +85,39 @@
   transform: translateX(6px);
 }
 
+/* ===================== */
 /* CONTACT */
+/* ===================== */
 .contact {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .contact li {
   display: flex;
+  align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 
+/* ===================== */
 /* SOCIAL */
+/* ===================== */
 .socials {
   display: flex;
   gap: 14px;
   margin-top: 18px;
+  flex-wrap: wrap;
 }
 
 .socials a {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,40 +130,128 @@
   color: #05054b;
 }
 
+/* ===================== */
 /* KEYWORDS */
+/* ===================== */
 .keywords {
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  padding: 0 10px;
 }
 
 .keywords span {
-  font-size: 12px;
+  font-size: 16px;
   padding: 6px 14px;
   background: rgba(255, 255, 255, 0.12);
   border-radius: 20px;
+  white-space: nowrap;
 }
 
+/* ===================== */
 /* BOTTOM */
+/* ===================== */
 .bottom {
   margin-top: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 15px;
   text-align: center;
-  font-size: 13px;
-  opacity: 0.8;
+  font-size: 15px;
+  opacity: 0.85;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .footer {
-    padding: 70px 0 25px;
-    background-position: top center;
+/* ================================================= */
+/* ================= RESPONSIVE ==================== */
+/* ================================================= */
+
+/* LARGE DESKTOP */
+@media (max-width: 1400px) {
+  .logo {
+    width: 200px;
+  }
+}
+
+/* LAPTOP */
+@media (max-width: 1199px) {
+  .brandWrap {
+    max-width: 100%;
+  }
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+  .brandWrap {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .logo {
-    width: 130px;
+    width: 170px;
+  }
+
+  .desc {
+    font-size: 15px;
+  }
+
+  .list li,
+  .contact li {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE LARGE */
+@media (max-width: 767px) {
+  .brandWrap {
+    text-align: center;
+    align-items: center;
+  }
+
+  .desc {
+    text-align: center;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .list li {
+    text-align: center;
+    transform: none !important;
+  }
+
+  .contact li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .logo {
+    width: 150px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .keywords span {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+
+  .bottom {
+    font-size: 12px;
   }
 }

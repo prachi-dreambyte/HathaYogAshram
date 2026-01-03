@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import styles from "../../assets/styles/Footer.module.css";
+import React from 'react';
+import { motion } from 'framer-motion';
+import styles from '../../assets/styles/Footer.module.css';
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,8 +9,8 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
-} from "react-icons/fa";
-import logo from "../../assets/images/logo.png";
+} from 'react-icons/fa';
+import logo from '../../assets/images/logo.png';
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -20,7 +20,7 @@ const footerFade = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 };
 
@@ -38,7 +38,7 @@ const columnItem = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 };
 
@@ -53,37 +53,28 @@ const Footer = () => {
     >
       <div className={styles.overlay}></div>
 
-      <div className="container position-relative">
-
-        {/* TOP COLUMNS */}
+      <div className="container-fluid p-5 position-relative">
+        {/* MAIN ROW */}
         <motion.div
-          className="row gy-5"
+          className="row gy-5 align-items-start"
           variants={columnContainer}
         >
-          {/* BRAND */}
-          <motion.div
-            className="col-lg-4 col-md-6"
-            variants={columnItem}
-          >
-            <img src={logo} alt="Hatha Yoga Ashram" className={styles.logo} />
-            <p className={styles.desc}>
-              Hatha Yoga Ashram, founded in 2017 in Rishikesh, India, is one of the
-              most trusted yoga teacher training schools. We offer traditional
-              Hatha, Ashtanga, Kundalini, Meditation and Pranayama practices
-              rooted in ancient yogic wisdom.
-            </p>
-            <p className={styles.desc}>
-              Our mission is to spread authentic yoga teachings across the
-              world and help students experience holistic transformation of
-              body, mind and soul.
-            </p>
+          {/* LOGO + DESCRIPTION */}
+          <motion.div className="col-lg-5 col-md-12" variants={columnItem}>
+            <div className={styles.brandWrap}>
+              <img src={logo} alt="Hatha Yoga Ashram" className={styles.logo} />
+              <p className={styles.desc}>
+                Hatha Yoga Ashram, founded in 2017 in Rishikesh, India, is one
+                of the most trusted yoga teacher training schools.
+                <br />
+                We offer traditional Hatha, Ashtanga, Kundalini, Meditation and
+                Pranayama practices rooted in ancient yogic wisdom.
+              </p>
+            </div>
           </motion.div>
 
           {/* QUICK LINKS */}
-          <motion.div
-            className="col-lg-2 col-md-6"
-            variants={columnItem}
-          >
+          <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Quick Links</h5>
             <ul className={styles.list}>
               <li>Home</li>
@@ -96,45 +87,34 @@ const Footer = () => {
           </motion.div>
 
           {/* YOGA COURSES */}
-          <motion.div
-            className="col-lg-2 col-md-6"
-            variants={columnItem}
-          >
+          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Yoga Courses</h5>
             <ul className={styles.list}>
               <li>100 Hour Yoga TTC</li>
               <li>200 Hour Yoga TTC</li>
               <li>300 Hour Yoga TTC</li>
               <li>500 Hour Yoga TTC</li>
-              <li>Kundalini Yoga TTC</li>
               <li>Online Yoga TTC</li>
             </ul>
           </motion.div>
 
-          {/* RETREATS */}
-          <motion.div
-            className="col-lg-2 col-md-6"
-            variants={columnItem}
-          >
+          {/* YOGA RETREATS */}
+          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
             <ul className={styles.list}>
-              <li>Yoga Retreat in Rishikesh</li>
-              <li>5 Days Yoga Retreat</li>
-              <li>10 Days Yoga Retreat</li>
-              <li>20 Days Yoga Retreat</li>
+              <li>5 Days Retreat</li>
+              <li>10 Days Retreat</li>
+              <li>20 Days Retreat</li>
               <li>Meditation Retreat</li>
             </ul>
           </motion.div>
 
-          {/* CONTACT */}
-          <motion.div
-            className="col-lg-2 col-md-6"
-            variants={columnItem}
-          >
+          {/* REGISTERED OFFICE */}
+          <motion.div className="col-lg-2 col-md-12" variants={columnItem}>
             <h5 className={styles.title}>Registered Office</h5>
             <ul className={styles.contact}>
               <li>
-                <FaMapMarkerAlt /> Upper Tapovan, Rishikesh, Uttarakhand – 249192
+                <FaMapMarkerAlt /> Upper Tapovan, Rishikesh
               </li>
               <li>
                 <FaPhoneAlt /> +91 9335606336
@@ -162,26 +142,18 @@ const Footer = () => {
         </motion.div>
 
         {/* KEYWORDS */}
-        <motion.div
-          className={styles.keywords}
-          variants={columnItem}
-        >
+        <motion.div className={styles.keywords} variants={columnItem}>
           <span>Yoga School in Rishikesh</span>
           <span>Best Yoga Teacher Training India</span>
           <span>200 Hour Yoga TTC</span>
           <span>300 Hour Yoga TTC</span>
           <span>Yoga Retreats in India</span>
-          <span>Online Yoga Teacher Training</span>
         </motion.div>
 
         {/* BOTTOM */}
-        <motion.div
-          className={styles.bottom}
-          variants={columnItem}
-        >
+        <motion.div className={styles.bottom} variants={columnItem}>
           © {new Date().getFullYear()} Hatha Yoga Ashram. All Rights Reserved.
         </motion.div>
-
       </div>
     </motion.footer>
   );
