@@ -79,7 +79,7 @@ const WhatWeOffer = () => {
           className={styles.headingWrapper}
           variants={headingVariant}
         >
-          <h2 className={styles.heading}>What We Offer</h2>
+          <h2 className={styles.heading}>What We Offer ?</h2>
 
           {/* Divider */}
           <div className={styles.divider}>

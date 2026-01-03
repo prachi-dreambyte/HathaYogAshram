@@ -4,68 +4,86 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Main Heading */
+/* Headings */
 .heading {
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  color: #5a0037;
+  color: #6f027edf;
+}
+
+.subTitle {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .ornamentWrapper {
   display: flex;
   justify-content: center;
-  margin: 0px;
 }
 
 .ornamentImage {
-  width: 250px;   /* adjust as per design */
+  width: 250px;
   height: 28px;
   margin-bottom: 10px;
- 
 }
 
-
-/* Rating */
 .rating {
   text-align: center;
-  font-size: 18px;
+  font-size: 19px;
   color: #555;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 
-/* Subtitle */
-.subTitle {
-  text-align: center;
-  font-size: 22px;
-  font-weight: 600;
-  
-}
-
-/* Info Boxes */
+/* INFO CIRCLES */
 .infoGrid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-bottom: 45px;
+  gap: 30px;
+  margin-bottom: 50px;
 }
 
-.infoGrid div {
-  border: 1px solid #5a0037;
-  padding: 10px 14px;
+.infoCircle {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid #5a0037;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  font-size: 14px;
+
+  transition: 0.3s ease;
 }
 
-/* Main Layout */
+.infoCircle:hover {
+  background: #5a0037;
+  color: #fff;
+}
+
+.circleIcon {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.infoCircle p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+/* MAIN GRID */
 .mainGrid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 45px;
-  align-items: flex-start;
 }
 
-/* Content */
+/* CONTENT */
 .content p {
   font-size: 18px;
   line-height: 1.8;
@@ -76,7 +94,7 @@
 .innerHeading {
   font-size: 20px;
   font-weight: 600;
-  color: #5a0037;
+  color: #6f027edf;
   margin-bottom: 10px;
 }
 
@@ -87,7 +105,7 @@
   margin-bottom: 18px;
 }
 
-/* Buttons */
+/* BUTTONS */
 .buttons {
   margin-top: 18px;
 }
@@ -108,7 +126,7 @@
   background: #7a004a;
 }
 
-/* Images */
+/* IMAGES */
 .images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -122,14 +140,18 @@
   object-fit: cover;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
 @media (max-width: 992px) {
   .mainGrid {
     grid-template-columns: 1fr;
+    gap: 35px;
   }
 
-  .infoGrid {
-    grid-template-columns: 1fr;
+  .infoCircle {
+    width: 180px;
+    height: 180px;
   }
 
   .heading {
@@ -137,6 +159,58 @@
   }
 
   .subTitle {
+    font-size: 18px;
+  }
+
+  .content p {
     font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .infoGrid {
+    
+    gap: 20px;
+    display: grid;
+  }
+
+  .infoCircle {
+    width: 170px;
+    height: 170px;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .subTitle {
+    font-size: 15px;
+  }
+
+  .infoCircle {
+    width: 150px;
+    height: 150px;
+    padding: 14px;
+  }
+
+  .circleIcon {
+    font-size: 26px;
+  }
+
+  .infoCircle p {
+    font-size: 12px;
+  }
+
+  .buttons button {
+    width: 100%;
+    margin-right: 0;
   }
 }

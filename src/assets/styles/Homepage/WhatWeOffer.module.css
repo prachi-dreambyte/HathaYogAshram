@@ -11,7 +11,7 @@
 .heading {
   font-size: 42px;
   font-weight: 600;
-  color: #0b1b5c;
+  color: #8b008b;
   margin-bottom: 16px;
   font-family: "Playfair Display", serif;
 }
@@ -25,15 +25,11 @@
   gap: 16px;
 }
 
-.line {
-  width: 80px;
-  height: 1px;
-  background-color: #0b1b5c;
-}
+
 
 .dividerImage {
-  width: 208px;
-  height: auto;
+  width: 250px;
+  height: 28px;
   object-fit: contain;
 }
 
@@ -84,14 +80,14 @@
 .cardTitle {
   font-size: 26px;
   font-weight: 600;
-  color: #0b1b5c;
+  color: #8b008b;
   margin-bottom: 16px;
   line-height: 1.2;
-  font-family: "Playfair Display", serif;
+  
 }
 
 .cardText {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
   color: #2d2d2d;
 }

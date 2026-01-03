@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/StudentReviews.module.css";
 import reviews from "./reviewsData";
-
+import dividerImg from "../../assets/images/linedesign.png";
 /* ===================== */
 /* Animation Variants */
 /* ===================== */
@@ -52,7 +52,9 @@ const StudentReviews = () => {
           <h2 className={styles.heading}>
             Student’s Short Review - Student’s Experience With Us
           </h2>
-          <div className={styles.divider}></div>
+          <span className={styles.divider}>
+            <img src={dividerImg} alt="divider" />
+          </span>
         </motion.div>
 
         {/* Cards */}

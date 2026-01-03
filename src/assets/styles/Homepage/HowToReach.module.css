@@ -12,15 +12,15 @@
 .title {
   font-size: 34px;
   font-weight: 700;
-  color: #4b145b;
+  color: #8b008b;
   margin-bottom: 40px;
 }
 
 .title span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 8px;
-  color: #7a5a82;
+  color: #59585a;
 }
 
 /* Cards */

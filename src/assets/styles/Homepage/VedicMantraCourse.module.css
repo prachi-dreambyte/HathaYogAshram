@@ -1,10 +1,10 @@
 .section {
-  padding: 60px 0;
+  padding: 0px 0px 60px 0px;
   background: #ffffff;
 }
 
 .cardWrapper {
-  max-width: 1100px;
+  max-width: 1260px;
 }
 
 .card {
@@ -32,14 +32,14 @@
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
-  color: #2b1b52;
+  color: #8b008b;
   margin-bottom: 5px;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 18px;
   color: #6c6c6c;
   margin-bottom: 25px;
 }
@@ -53,7 +53,7 @@
 .price {
   font-size: 32px;
   font-weight: 700;
-  color: #2b1b52;
+  color: #8b008b;
   margin-bottom: 20px;
 }
 
@@ -62,9 +62,9 @@
 }
 
 .description {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.7;
-  color: #444;
+  color: #000000;
   margin-bottom: 25px;
 }
 
@@ -72,7 +72,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 30px;
 }
 
@@ -89,7 +89,7 @@
 .outlineBtn {
   padding: 10px 22px;
   background: transparent;
-  border: 2px solid #2b1b52;
+  border: 1px solid #000000;
   color: #2b1b52;
   font-weight: 600;
   border-radius: 4px;
@@ -97,14 +97,14 @@
 }
 
 .outlineBtn:hover {
-  background: #2b1b52;
+  background: #8b008b;
   color: #ffffff;
 }
 
 .fillBtn {
   padding: 10px 26px;
-  background: #2b1b52;
-  border: 2px solid #2b1b52;
+  background: #8b008b;
+  border: 1px solid #2b1b52;
   color: #ffffff;
   font-weight: 600;
   border-radius: 4px;

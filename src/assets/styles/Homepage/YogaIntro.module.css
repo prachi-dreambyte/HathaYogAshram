@@ -5,7 +5,7 @@
 
 /* Small label */
 .smallLabel {
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -17,21 +17,21 @@
   font-size: 40px;
   font-weight: 600;
   line-height: 1.3;
-  color: #1a1a6b;
+  color: #6f027edf;
   margin-bottom: 10px;
 }
 
 /* Sub heading */
 .subHeading {
   font-size: 22px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 600;
+  color: #000000;
   margin-bottom: 20px;
 }
 
 /* Text */
 .text {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.75;
   color: #555;
   margin-bottom: 15px;
@@ -40,14 +40,14 @@
 /* Highlight */
 .highlight {
   color: #1a1a6b;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Button */
 .button {
   margin-top: 20px;
   padding: 12px 32px;
-  background-color: #1a1a6b;
+  background-color: #6f027edf;
   color: #fff;
   border: none;
   font-size: 15px;
@@ -56,7 +56,7 @@
 }
 
 .button:hover {
-  background-color: #14145a;
+  background-color: #6f027edf;
 }
 
 /* Video */

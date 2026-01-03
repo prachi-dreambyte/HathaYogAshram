@@ -29,6 +29,7 @@
 
 .subText span {
   color: #ff2fa0;
+  font-weight: 500;
 }
 
 /* Divider */
@@ -112,7 +113,7 @@
 }
 
 .outlineBtn:hover {
-  background: #1c1c5c;
+  background: #8b008b;
   color: #ffffff;
 }
 .divider {

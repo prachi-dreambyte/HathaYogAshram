@@ -12,7 +12,7 @@
 .headingWrapper h2 {
   font-size: 30px;
   font-weight: 600;
-  color: #5a0f46;
+  color: #6f027edf;
 }
 
 .divider {
@@ -22,8 +22,8 @@
 }
 
 .divider img {
-  width: 320px;
-  height: auto;
+  width: 250px;
+  height: 28px;
 }
 
 /* ===== CONTENT ===== */
@@ -41,6 +41,7 @@
 .highlight {
   font-weight: 600;
   color: #000;
+  font-size: 20px !important;
 }
 
 /* ===== CERTIFICATIONS ===== */

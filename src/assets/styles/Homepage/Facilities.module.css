@@ -14,7 +14,7 @@
 .headingIcon {
   display: block;
   font-size: 26px;
-  color: #6a1b4d;
+  color: #6f027edf;
   margin-top: 6px;
 }
 
@@ -111,7 +111,7 @@
 .headingIcon img {
   width: 250px;
   /* size control */
-  height: 35px;
+  height: 28px;
   margin: 0 auto;
   display: block;
 }

@@ -16,16 +16,17 @@
 }
 
 .faqContent h2 {
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 600;
   margin-bottom: 10px;
+  color: #8b008b;
 }
 
 .subText {
-  font-size: 15px;
+  font-size: 17px;
   color: #666;
   margin-bottom: 30px;
-  max-width: 520px;
+  
 }
 
 /* FAQ List */
@@ -51,7 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -69,7 +70,7 @@
 
 .answer p {
   margin-top: 12px;
-  font-size: 14px;
+  font-size: 17px;
   color: #555;
   line-height: 1.6;
 }

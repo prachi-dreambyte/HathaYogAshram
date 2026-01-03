@@ -10,7 +10,7 @@
 .heading {
   font-size: 34px;
   font-weight: 600;
-  color: #3a1c71;
+  color: #6f027edf;
   margin-bottom: 12px;
 }
 
@@ -40,6 +40,9 @@
   font-size: 38px;
   color: #7b4397;
   margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 .card h5 {

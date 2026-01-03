@@ -2,10 +2,7 @@
   position: relative;
   padding: 120px 0;
   /* thoda compact */
-  background: linear-gradient(135deg,
-      #2b124c,
-      #3a1c71,
-      #5f2c82);
+  background: linear-gradient(135deg, #c075f3, #5d3074, #512164);
   color: #ffffff;
   overflow: hidden;
 }

@@ -6,7 +6,7 @@ import yogaAlliance from "../../assets/images/yoga-alliance-logo-1-e172569318566
 import rys200 from "../../assets/images/yoga-alliance-logo-2.jpg";
 import rys300 from "../../assets/images/yoga-alliance-logo-3.jpg";
 import yacep from "../../assets/images/yoga-alliance-logo-4.jpg";
-import rpyts from "../../assets/images/yoga-alliance-logo-5.jpg";
+import rpyts from "../../assets/images/images.png";
 
 /* ===================== */
 /* Framer Motion Variants */
