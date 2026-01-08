@@ -1,6 +1,6 @@
 .section {
   padding: 0px 0px 60px 0px;
-  background: #ffffff;
+   background: linear-gradient(180deg, #ffdfc5, #fff4f4);
 }
 
 .cardWrapper {

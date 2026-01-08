@@ -1,6 +1,8 @@
 .section {
   padding: 90px 0;
-  background: #ffffff;
+  background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+
+
   font-family: "Poppins", sans-serif;
 }
 
