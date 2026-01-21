@@ -12,7 +12,6 @@ import {
   FaClock,
 } from 'react-icons/fa';
 import logo from '../../assets/images/logo.png';
-import { Link } from 'react-router-dom';
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -79,12 +78,12 @@ const Footer = () => {
           <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Quick Links</h5>
            <ul className={styles.list}>
-  <li><Link  to="/">Home</Link></li>
-  <li><Link  to="/AboutUs">About Us</Link></li>
-  <li><Link  to="/teachers">Our Teachers</Link></li>
-  <li><Link  to="/gallery">Gallery</Link></li>
-  <li><Link  to="/blog">Blog</Link></li>
-  <li><Link  to="/contact-us">Contact Us</Link></li>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/AboutUs">About Us</Link></li>
+  <li><Link to="/teachers">Our Teachers</Link></li>
+  <li><Link to="/gallery">Gallery</Link></li>
+  <li><Link to="/blog">Blog</Link></li>
+  <li><Link to="/contact-us">Contact Us</Link></li>
 </ul>
 
           </motion.div>
