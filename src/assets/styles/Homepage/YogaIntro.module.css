@@ -1,6 +1,7 @@
 .section {
   padding: 90px 0;
- background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+ /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
+ background: linear-gradient(180deg, #f5e6d3, #fffdf7);
 }
 
 /* Small label */

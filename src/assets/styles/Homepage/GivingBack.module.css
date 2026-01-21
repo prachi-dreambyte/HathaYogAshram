@@ -1,7 +1,8 @@
 .section {
   position: relative;
   padding: 140px 20px;
-  background: #fff6f2;
+  /* background: #fff6f2; */
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
   overflow: hidden;
 }
 
@@ -10,7 +11,7 @@
   position: absolute;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, #ffb8a2, transparent 70%);
+  /* background: radial-gradient(circle, #ffb8a2, transparent 70%); */
   top: -200px;
   right: -200px;
   z-index: 0;

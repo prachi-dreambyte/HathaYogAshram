@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from '../../assets/styles/Footer.module.css';
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -78,7 +79,7 @@ const Footer = () => {
             <h5 className={styles.title}>Quick Links</h5>
             <ul className={styles.list}>
               <li>Home</li>
-              <li>About Us</li>
+              <li><Link to="/AboutUs">About Us</Link></li>
               <li>Our Teachers</li>
               <li>Gallery</li>
               <li>Blog</li>

@@ -9,6 +9,7 @@ import { Homepage } from 'components/Homepage';
 
 import Header from 'components/navigations/Header';
 import Footer from 'components/navigations/Footer';
+import { AboutUs } from 'components/AboutUs';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -36,6 +37,7 @@ export default function Main() {
           }
         />
         <Route path="/" element={<Homepage />} />
+        <Route path="/" element={<AboutUs/>}/>
       </Routes>
 
       {showHeaderFooter && <Footer />}

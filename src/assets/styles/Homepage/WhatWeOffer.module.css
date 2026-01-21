@@ -1,6 +1,7 @@
 .section {
-  padding: 0px 0px 50px 0px;
-  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+  padding: 50px 0px 50px 0px;
+  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
 }
 
 .headingWrapper {
