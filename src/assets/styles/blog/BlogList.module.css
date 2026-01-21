@@ -1,0 +1,152 @@
+.blogSection {
+  max-width: 1300px;
+  margin: auto;
+  padding: 70px 20px;
+  background: #fafafa;
+}
+
+/* CATEGORY TABS */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.tab {
+  background: #fff;
+  border: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #5b4cf5;
+  border-color: #5b4cf5;
+}
+
+.active {
+  background: linear-gradient(135deg, #5b4cf5, #7c6cff);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* CARD */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGE */
+.imageWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.imageWrap img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+/* CATEGORY BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+/* CONTENT */
+.content {
+  padding: 22px;
+}
+
+.content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #111;
+  line-height: 1.4;
+}
+
+.content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* READ MORE */
+.readMore {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #5b4cf5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* VIEW MORE */
+.viewMoreWrap {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.viewMore {
+  background: linear-gradient(135deg, #5b4cf5, #7c6cff);
+  color: #fff;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.viewMore:hover {
+  opacity: 0.9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imageWrap img {
+    height: 220px;
+  }
+}

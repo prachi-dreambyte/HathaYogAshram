@@ -19,6 +19,8 @@ import YogaTeachersSection from './NewSection'
 import YogaOverview from './YogaOverview'
 import GivingBack from './GivingBack'
 import GoogleReviews from './GoogleReviews'
+import YogaAlliance from './YoogaAlliance'
+import VideoHero from './VideoHero'
 
 export const Homepage = () => {
   return (
@@ -26,6 +28,7 @@ export const Homepage = () => {
     <Hero/>
     <YogaSchool/>
     <YogaTeachersSection/>
+    <YogaAlliance/>
     <YogaIntro/>
     <YogaOverview/>
     <FacilitiesSection/>
@@ -39,6 +42,7 @@ export const Homepage = () => {
     <YogaRetreat/>
     <VedicMantraCourse/>
     <WhatWeOffer/>
+    <VideoHero/>
     <FaqSection/>
     <HowToReach/>
    <GoogleReviews/>

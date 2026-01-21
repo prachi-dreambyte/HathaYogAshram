@@ -9,6 +9,10 @@ import { Homepage } from 'components/Homepage';
 
 import Header from 'components/navigations/Header';
 import Footer from 'components/navigations/Footer';
+import Gallery from 'components/gallery/Gallery';
+import BlogList from 'components/blog/BlogList';
+import SingleBlog from 'components/blog/SingleBlog';
+import ContactForm from 'components/ContactForm/ContactForm';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -36,6 +40,12 @@ export default function Main() {
           }
         />
         <Route path="/" element={<Homepage />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/blog" element={<BlogList />} />
+         <Route path="/blog/:slug" element={<SingleBlog />} />
+          <Route path="/contact-us" element={<ContactForm />} />
+
+
       </Routes>
 
       {showHeaderFooter && <Footer />}
