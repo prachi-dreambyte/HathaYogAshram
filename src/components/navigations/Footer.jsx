@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import styles from '../../assets/styles/Footer.module.css';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaInstagram,
@@ -57,11 +57,11 @@ const Footer = () => {
       <div className="container-fluid p-5 position-relative">
         {/* MAIN ROW */}
         <motion.div
-          className="row gy-5 align-items-start"
-          variants={columnContainer}
-        >
+  className="row gy-5 gx-5 align-items-start"
+  variants={columnContainer}
+>
           {/* LOGO + DESCRIPTION */}
-          <motion.div className="col-lg-5 col-md-12" variants={columnItem}>
+          <motion.div className="col-lg-4 col-md-12" variants={columnItem}>
             <div className={styles.brandWrap}>
               <img src={logo} alt="Hatha Yoga Ashram" className={styles.logo} />
               <p className={styles.desc}>
@@ -77,15 +77,39 @@ const Footer = () => {
           {/* QUICK LINKS */}
           <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Quick Links</h5>
-           <ul className={styles.list}>
-  <li><Link to="/">Home</Link></li>
-  <li><Link to="/AboutUs">About Us</Link></li>
-  <li><Link to="/teachers">Our Teachers</Link></li>
-  <li><Link to="/gallery">Gallery</Link></li>
-  <li><Link to="/blog">Blog</Link></li>
-  <li><Link to="/contact-us">Contact Us</Link></li>
-</ul>
+            <ul className={styles.list}>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/AboutUs">About Us</Link>
+              </li>
+              <li>
+                <Link to="/teachers">Our Teachers</Link>
+              </li>
+              <li>
+                <Link to="/gallery">Gallery</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/contact-us">Contact Us</Link>
+              </li>
+            </ul>
+          </motion.div>
 
+          {/* KUNDALINI LINKS */}
+          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
+            <h5 className={styles.title}>Kundalini Links</h5>
+            <ul className={styles.list}>
+              <li>
+                <Link to="/kundalini-200">200 Hour Kundalini</Link>
+              </li>
+              <li>
+                <Link to="/kundalini-300">300 Hour Kundalini</Link>
+              </li>
+            </ul>
           </motion.div>
 
           {/* YOGA COURSES */}
@@ -101,7 +125,7 @@ const Footer = () => {
           </motion.div>
 
           {/* YOGA RETREATS */}
-          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
+          <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
             <ul className={styles.list}>
               <li>5 Days Retreat</li>

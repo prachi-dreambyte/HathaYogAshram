@@ -13,53 +13,47 @@ const Header = () => {
     setOpenDropdown(openDropdown === name ? null : name);
   };
 
+  const closeAll = () => {
+    setOpenDropdown(null);
+    setMobileOpen(false);
+  };
+
   return (
     <>
       {/* ===== TOP HEADER ===== */}
-      {/* ===== TOP HEADER ===== */}
-<div className={styles.topHeader}>
-  <div className={styles.topContainer}>
-    
-    {/* LEFT */}
-    <div className={styles.topLeft}>
-      <span>
-        <span className={styles.icon}>📍</span>
-        Manzil Balaknath Road Upper Tapovan Rishikesh
-      </span>
+      <div className={styles.topHeader}>
+        <div className={styles.topContainer}>
+          <div className={styles.topLeft}>
+            <span>
+              <span className={styles.icon}>📍</span>
+              Manzil Balaknath Road Upper Tapovan Rishikesh
+            </span>
+            <span>
+              <span className={styles.icon}>📞</span>
+              +91 9335606336
+            </span>
+          </div>
 
-      <span>
-        <span className={styles.icon}>📞</span>
-        +91 9335606336
-      </span>
-    </div>
-
-    {/* RIGHT */}
-    <div className={styles.topRight}>
-      <span className={styles.yogaId}>
-        Yoga Alliance ID: 401771
-      </span>
-
-      <div className={styles.social}>
-        <Link to="#" className={styles.socialIcon}>
-          <FaFacebookF />
-        </Link>
-        <Link to="#" className={styles.socialIcon}>
-          <FaInstagram />
-        </Link>
+          <div className={styles.topRight}>
+            <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
+            <div className={styles.social}>
+              <Link to="#" className={styles.socialIcon}>
+                <FaFacebookF />
+              </Link>
+              <Link to="#" className={styles.socialIcon}>
+                <FaInstagram />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </div>
-</div>
-
 
       {/* ===== MAIN HEADER ===== */}
       <header className={styles.header}>
         <div className={styles.container}>
-
           {/* LEFT MENU */}
           <nav className={styles.desktopNav}>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={closeAll}>Home</Link>
 
             {/* ABOUT */}
             <div className={styles.dropdownWrap}>
@@ -74,11 +68,11 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/">Founder</Link>
-                    <Link to="/">Our Teachers</Link>
-                    <Link to="/">Accommodation</Link>
-                    <Link to="/">Gallery</Link>
-                    <Link to="/">FAQs</Link>
+                    <Link to="/" onClick={closeAll}>Founder</Link>
+                    <Link to="/" onClick={closeAll}>Our Teachers</Link>
+                    <Link to="/" onClick={closeAll}>Accommodation</Link>
+                    <Link to="/" onClick={closeAll}>Gallery</Link>
+                    <Link to="/" onClick={closeAll}>FAQs</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -97,9 +91,9 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/">200 Hour TTC</Link>
-                    <Link to="/">300 Hour TTC</Link>
-                    <Link to="/">500 Hour TTC</Link>
+                    <Link to="/" onClick={closeAll}>200 Hour TTC</Link>
+                    <Link to="/" onClick={closeAll}>300 Hour TTC</Link>
+                    <Link to="/" onClick={closeAll}>500 Hour TTC</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -118,8 +112,8 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/">Meditation</Link>
-                    <Link to="/">Pranayama</Link>
+                    <Link to="/" onClick={closeAll}>Meditation</Link>
+                    <Link to="/" onClick={closeAll}>Pranayama</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -133,11 +127,10 @@ const Header = () => {
 
           {/* RIGHT MENU */}
           <nav className={styles.desktopNav}>
-            <Link to="/">Online Courses</Link>
-            <Link to="/">Payment</Link>
-            <Link to="/">Contact</Link>
-
-            <Link to="/apply" className={styles.applyBtn}>
+            <Link to="/" onClick={closeAll}>Online Courses</Link>
+            <Link to="/" onClick={closeAll}>Payment</Link>
+            <Link to="/" onClick={closeAll}>Contact</Link>
+            <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
               Apply Today
             </Link>
           </nav>
@@ -160,14 +153,14 @@ const Header = () => {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
             >
-              <Link to="/">Home</Link>
-              <Link to="/">About</Link>
-              <Link to="/">Rishikesh TTC</Link>
-              <Link to="/">Short Course</Link>
-              <Link to="/">Online Courses</Link>
-              <Link to="/">Payment</Link>
-              <Link to="/">Contact</Link>
-              <Link to="/apply" className={styles.applyBtn}>
+              <Link to="/" onClick={closeAll}>Home</Link>
+              <Link to="/" onClick={closeAll}>About</Link>
+              <Link to="/" onClick={closeAll}>Rishikesh TTC</Link>
+              <Link to="/" onClick={closeAll}>Short Course</Link>
+              <Link to="/" onClick={closeAll}>Online Courses</Link>
+              <Link to="/" onClick={closeAll}>Payment</Link>
+              <Link to="/" onClick={closeAll}>Contact</Link>
+              <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
                 Apply Today
               </Link>
             </motion.div>

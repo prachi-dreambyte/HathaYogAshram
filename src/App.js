@@ -14,6 +14,8 @@ import BlogList from 'components/blog/BlogList';
 import SingleBlog from 'components/blog/SingleBlog';
 import ContactForm from 'components/ContactForm/ContactForm';
 import { AboutUs } from 'components/AboutUs';
+import Kundalini200Page from 'components/kundaliniyoga/Kundalini200page';
+import Kundalini300 from 'components/kundaliniyoga/Kundalini300';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -45,6 +47,8 @@ export default function Main() {
         <Route path="/blog" element={<BlogList />} />
          <Route path="/blog/:slug" element={<SingleBlog />} />
           <Route path="/contact-us" element={<ContactForm />} />
+           <Route path="/kundalini-200" element={<Kundalini200Page />} />
+            <Route path="/kundalini-300" element={<Kundalini300 />} />
 
 
         <Route path="/" element={<AboutUs/>}/>
