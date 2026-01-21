@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/Facilitiesbanner.module.css";
-import bannerImage from "../../assets/images/banner2.png";
+import bannerImage from "../../assets/images/banner3.png";
 
 /* ===================== */
 /* Animation Variants */

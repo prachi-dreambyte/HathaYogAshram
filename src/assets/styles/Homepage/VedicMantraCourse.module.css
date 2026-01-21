@@ -1,6 +1,7 @@
 .section {
-  padding: 0px 0px 60px 0px;
-   background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+  padding: 50px 0px 60px 0px;
+   /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
+   background: linear-gradient(180deg, #f5e6d3, #fffdf7);
 }
 
 .cardWrapper {
@@ -9,7 +10,8 @@
 
 .card {
   display: flex;
-  background: #f7e6f4;
+  /* background: #f7e6f4; */
+  background: linear-gradient(180deg, #f7d9e3, #fffafc);
   border-radius: 10px;
   overflow: hidden;
 }

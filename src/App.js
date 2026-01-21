@@ -13,6 +13,7 @@ import Gallery from 'components/gallery/Gallery';
 import BlogList from 'components/blog/BlogList';
 import SingleBlog from 'components/blog/SingleBlog';
 import ContactForm from 'components/ContactForm/ContactForm';
+import { AboutUs } from 'components/AboutUs';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -46,6 +47,7 @@ export default function Main() {
           <Route path="/contact-us" element={<ContactForm />} />
 
 
+        <Route path="/" element={<AboutUs/>}/>
       </Routes>
 
       {showHeaderFooter && <Footer />}

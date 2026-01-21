@@ -1,5 +1,7 @@
 .section {
-  background: linear-gradient(2deg, #ffdfc5, #fff4f4);
+  /* background: linear-gradient(2deg, #ffdfc5, #fff4f4); */
+  /* background: linear-gradient(180deg, #f7d9e3, #fffafc); */
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
   padding: 50px;
   text-align: center;
 }

@@ -2,7 +2,8 @@
   position: relative;
   padding: 120px 0;
   /* thoda compact */
-  background: linear-gradient(135deg, #c075f3, #5d3074, #512164);
+  /* background: linear-gradient(135deg, #c075f3, #5d3074, #512164); */
+     background: linear-gradient(135deg, #e3d5ff, #7f5296, #f5f0ff);
   color: #ffffff;
   overflow: hidden;
 }
@@ -44,8 +45,9 @@
 /* CARD (HEIGHT REDUCED + CENTERED) */
 .card {
   position: relative;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(18px);
+  /* background: rgba(255, 255, 255, 0.14); */
+  background: linear-gradient(135deg, #c075f3, #5d3074, #512164);
+  /* backdrop-filter: blur(18px); */
   border-radius: 30px;
   padding: 48px 44px;
   /* ⬅ BIG FIX */

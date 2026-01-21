@@ -1,6 +1,7 @@
 .section {
   padding: 80px 0;
-  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
+  background: linear-gradient(180deg, #f7d9e3, #fffafc);
 }
 
 /* Heading */
