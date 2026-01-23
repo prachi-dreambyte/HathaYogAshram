@@ -4,7 +4,7 @@ import {
   School, Heart, Mountain, BookOpen, Target, Users, 
   Award, Globe, Compass, Star, Sparkles, Leaf, 
   CheckCircle, TrendingUp, Shield, Lightbulb, Zap,
-  Calendar, MapPin, GraduationCap, Sun, Moon, Layers,
+  MapPin, GraduationCap, Sun, Layers,
   Activity, Flame, Wind, Flower2, TreePine, Sunset
 } from 'lucide-react';
 
