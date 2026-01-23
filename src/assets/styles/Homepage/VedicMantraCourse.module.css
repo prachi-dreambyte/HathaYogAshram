@@ -1,7 +1,7 @@
 .section {
   padding: 50px 0px 60px 0px;
-   /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
-   background: linear-gradient(180deg, #f5e6d3, #fffdf7);
+  /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
+  background: linear-gradient(180deg, #f5e6d3, #fffdf7);
 }
 
 .cardWrapper {

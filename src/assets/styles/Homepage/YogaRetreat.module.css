@@ -1,6 +1,6 @@
 .section {
   padding: 70px 0;
-   background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
 }
 
 /* Heading */
@@ -116,6 +116,7 @@
   background: #8b008b;
   color: #ffffff;
 }
+
 .divider {
   display: flex;
   justify-content: center;
@@ -124,7 +125,8 @@
 }
 
 .divider img {
-  width: 240px;       /* adjust as needed */
+  width: 240px;
+  /* adjust as needed */
   height: auto;
 }
 

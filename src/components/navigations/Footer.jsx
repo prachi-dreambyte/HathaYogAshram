@@ -57,9 +57,9 @@ const Footer = () => {
       <div className="container-fluid p-5 position-relative">
         {/* MAIN ROW */}
         <motion.div
-  className="row gy-5 gx-5 align-items-start"
-  variants={columnContainer}
->
+          className="row gy-5 gx-5 align-items-start"
+          variants={columnContainer}
+        >
           {/* LOGO + DESCRIPTION */}
           <motion.div className="col-lg-4 col-md-12" variants={columnItem}>
             <div className={styles.brandWrap}>
@@ -116,11 +116,14 @@ const Footer = () => {
           <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Yoga Courses</h5>
             <ul className={styles.list}>
+              <li>
+                {' '}
+                <Link to="/vedic-mantra">Vedic mantra</Link>
+              </li>
               <li>100 Hour Yoga TTC</li>
               <li>200 Hour Yoga TTC</li>
               <li>300 Hour Yoga TTC</li>
               <li>500 Hour Yoga TTC</li>
-              <li>Online Yoga TTC</li>
             </ul>
           </motion.div>
 
@@ -128,10 +131,22 @@ const Footer = () => {
           <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
             <ul className={styles.list}>
-              <li>5 Days Retreat</li>
-              <li>10 Days Retreat</li>
-              <li>20 Days Retreat</li>
-              <li>Meditation Retreat</li>
+              <li>
+                {' '}
+                <Link to="/meditation-retreat">Yoga Retreat</Link>
+              </li>
+              <li>
+                {' '}
+                <Link to="/5-days-yoga-retreat">5 Days Retreat</Link>
+              </li>
+              <li>
+                {' '}
+                <Link to="/10-days-yoga-retreat">10 Days Retreat</Link>
+              </li>
+              <li>
+                {' '}
+                <Link to="/20-days-yoga-retreat">20 Days Retreat</Link>
+              </li>
             </ul>
           </motion.div>
 
@@ -154,16 +169,34 @@ const Footer = () => {
             </ul>
 
             <div className={styles.socials}>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaFacebookF />
-              </motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaInstagram />
-              </motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaYoutube />
-              </motion.a>
-            </div>
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.facebook.com/profile.php?id=100095297992781"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaFacebookF />
+  </motion.a>
+
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.instagram.com/hathayogashram/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram />
+  </motion.a>
+
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaYoutube />
+  </motion.a>
+</div>
+
           </motion.div>
         </motion.div>
 

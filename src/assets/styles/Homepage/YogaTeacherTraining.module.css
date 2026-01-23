@@ -102,6 +102,7 @@
   background: #6f027edf;
   color: #fff;
 }
+
 .divider {
   display: flex;
   justify-content: center;
@@ -109,7 +110,8 @@
 }
 
 .divider img {
-  width: 250px;       /* adjust as needed */
+  width: 250px;
+  /* adjust as needed */
   height: 30px;
 }
 

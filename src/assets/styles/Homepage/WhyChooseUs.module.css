@@ -1,7 +1,7 @@
 .section {
   padding: 90px 0;
- /* background: linear-gradient(180deg, #e6ffcc, #fffff0); */
- background: linear-gradient(180deg, #e6ffcc, #fffff0);
+  /* background: linear-gradient(180deg, #e6ffcc, #fffff0); */
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
 }
 
 .heading {
@@ -31,7 +31,7 @@
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-  
+
 }
 
 .icon {
@@ -58,9 +58,10 @@
   color: #666;
   line-height: 1.6;
 }
+
 .card {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  
+
 }
 
 .card:hover {
@@ -83,7 +84,8 @@
   .heading {
     font-size: 26px;
   }
-  .icon{
+
+  .icon {
     display: flex;
     justify-content: center;
   }

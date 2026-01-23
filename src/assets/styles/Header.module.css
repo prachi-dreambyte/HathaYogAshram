@@ -6,7 +6,7 @@
 }
 
 .topContainer {
-  
+
   margin: auto;
   padding: 8px 20px;
   display: flex;
@@ -125,7 +125,7 @@
   background: #fff;
   min-width: 240px;
   border-radius: 6px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   z-index: 999;
 }

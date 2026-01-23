@@ -1,5 +1,5 @@
 .section {
- background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
   padding-bottom: 20px;
   padding-top: 40px;
 }
@@ -72,9 +72,10 @@
 
   .certifications img {
     max-height: 145px;
-    
+
   }
-  .certifications{
+
+  .certifications {
     gap: 0px !important;
   }
 }

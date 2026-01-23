@@ -21,7 +21,7 @@
   --radius-md: 20px;
   --radius-lg: 32px;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   background: var(--color-bg);
   min-height: 100vh;
   font-family: 'Georgia', 'Lora', serif;
@@ -55,15 +55,22 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 50%, rgba(126, 196, 166, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 50%, rgba(232, 168, 124, 0.2) 0%, transparent 50%);
   animation: pulseGlow 8s ease-in-out infinite;
 }
 
 @keyframes pulseGlow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.6; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
 }
 
 .heroImage {
@@ -104,6 +111,7 @@
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -174,8 +182,15 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
 }
 
 /* ============================================
@@ -203,6 +218,7 @@
     opacity: 0;
     transform: translateY(60px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -481,7 +497,7 @@
   border-color: var(--color-accent);
 }
 
-.benefitCard > * {
+.benefitCard>* {
   position: relative;
   z-index: 1;
 }
@@ -538,8 +554,15 @@
 }
 
 @keyframes floatBubble {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 30px) scale(1.1); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-30px, 30px) scale(1.1);
+  }
 }
 
 .highlightContent {
@@ -733,7 +756,7 @@
   font-family: 'Cormorant Garamond', serif;
 }
 
-.ctaSection > p {
+.ctaSection>p {
   font-size: 17px;
   line-height: 1.8;
   color: var(--color-text-light);

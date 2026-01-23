@@ -1,0 +1,1009 @@
+/* Container */
+.container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fef6e4 0%, #f3f9ff 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ffc857 0%, #ff6b6b 50%, #c56cf0 100%);
+  color: white;
+  padding: 100px 20px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  animation: float 25s infinite linear;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    transform: translateY(-80px) translateX(20px);
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroIcon {
+  margin-bottom: 24px;
+  color: #fff;
+  animation: pulse 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 0.85;
+  }
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heroSubtitle {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  animation: fadeInUp 1s ease-out;
+  font-weight: 400;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.heroOm {
+  font-size: 4rem;
+  margin-top: 30px;
+  opacity: 0.25;
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tab Section */
+.tabSection {
+  background: white;
+  padding: 30px 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #ffc857;
+}
+
+.tabContainer {
+  display: flex;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab {
+  padding: 14px 28px;
+  border: 2px solid #ffe8cc;
+  background: white;
+  color: #ff8c42;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 3px 8px rgba(255, 140, 66, 0.12);
+}
+
+.tab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 16px rgba(255, 140, 66, 0.25);
+  border-color: #ffc857;
+  background: #fffbf5;
+}
+
+.tabActive {
+  background: linear-gradient(135deg, #ffc857 0%, #ff8c42 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 5px 20px rgba(255, 200, 87, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Section Navigation */
+.sectionNav {
+  display: flex;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sectionBtn {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #6b7280;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 2px solid #f3f4f6;
+}
+
+.sectionBtn:hover {
+  background: #fef6e4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: #ffc857;
+}
+
+.sectionBtnActive {
+  background: linear-gradient(135deg, #17c3b2 0%, #227c9d 100%);
+  color: white;
+  box-shadow: 0 4px 14px rgba(23, 195, 178, 0.35);
+  border-color: transparent;
+}
+
+/* Content */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+/* Founder Card */
+.founderCard {
+  background: white;
+  border-radius: 28px;
+  padding: 50px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: slideIn 0.6s ease-out;
+  border: 2px solid #fef6e4;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.founderCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 35px;
+  padding-bottom: 25px;
+  border-bottom: 3px solid #fef6e4;
+}
+
+.iconCircle {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffc857 0%, #ff8c42 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(255, 140, 66, 0.3);
+}
+
+.cardTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.schoolName {
+  font-size: 1.15rem;
+  color: #ff8c42;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Quote Box */
+.quoteBox {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border-left: 5px solid #ff8c42;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 30px 0;
+  position: relative;
+  box-shadow: 0 3px 12px rgba(255, 140, 66, 0.1);
+}
+
+.quoteIcon {
+  color: #ff8c42;
+  opacity: 0.3;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #c05621;
+  margin: 0;
+  padding-left: 35px;
+  line-height: 1.7;
+  font-weight: 600;
+}
+
+/* Content Text */
+.contentText {
+  line-height: 1.9;
+  color: #4a5568;
+  font-size: 1.1rem;
+}
+
+.contentText h3 {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.contentText h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffc857 0%, #ff8c42 100%);
+  border-radius: 2px;
+}
+
+.contentText p {
+  margin-bottom: 20px;
+}
+
+.contentText em {
+  color: #c56cf0;
+  font-weight: 600;
+}
+
+/* Hindi Quote */
+.hindiQuote {
+  background: linear-gradient(135deg, #fef3e2 0%, #ffe4c4 100%);
+  border-radius: 16px;
+  padding: 30px;
+  margin: 30px 0;
+  border-left: 5px solid #ff6b6b;
+  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.15);
+}
+
+.hindiText {
+  font-size: 1.35rem;
+  color: #c23616;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.translation {
+  font-size: 1.05rem;
+  color: #7f5539;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+/* Philosophy Grid */
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin: 30px 0;
+}
+
+.philosophyCard {
+  background: white;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border-top: 5px solid transparent;
+  border: 2px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophyCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, transparent 0%, currentColor 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.philosophyCard:hover::before {
+  opacity: 1;
+}
+
+.philosophyCard:nth-child(1) {
+  border-top-color: #17c3b2;
+}
+
+.philosophyCard:nth-child(1)::before {
+  color: #17c3b2;
+}
+
+.philosophyCard:nth-child(2) {
+  border-top-color: #ffc857;
+}
+
+.philosophyCard:nth-child(2)::before {
+  color: #ffc857;
+}
+
+.philosophyCard:nth-child(3) {
+  border-top-color: #fe4a49;
+}
+
+.philosophyCard:nth-child(3)::before {
+  color: #fe4a49;
+}
+
+.philosophyCard:nth-child(4) {
+  border-top-color: #c56cf0;
+}
+
+.philosophyCard:nth-child(4)::before {
+  color: #c56cf0;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+.philosophyIcon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #e0f9f5 0%, #b8f3ea 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #17c3b2;
+  box-shadow: 0 4px 12px rgba(23, 195, 178, 0.2);
+}
+
+.philosophyCard:nth-child(2) .philosophyIcon {
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  color: #ff8c42;
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.2);
+}
+
+.philosophyCard:nth-child(3) .philosophyIcon {
+  background: linear-gradient(135deg, #ffe5e5 0%, #ffc8c8 100%);
+  color: #fe4a49;
+  box-shadow: 0 4px 12px rgba(254, 74, 73, 0.2);
+}
+
+.philosophyCard:nth-child(4) .philosophyIcon {
+  background: linear-gradient(135deg, #f4e8fb 0%, #e4c9f5 100%);
+  color: #c56cf0;
+  box-shadow: 0 4px 12px rgba(197, 108, 240, 0.2);
+}
+
+.philosophyTitle {
+  font-size: 1.65rem;
+  color: #2c3e50;
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+.philosophyText {
+  color: #4a5568;
+  line-height: 1.85;
+  font-size: 1.05rem;
+}
+
+/* Timeline */
+.timelineContainer {
+  background: white;
+  border-radius: 28px;
+  padding: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease-out;
+  border: 2px solid #fef6e4;
+}
+
+.timelineHeader {
+  font-size: 2.6rem;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.timelineHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #ffc857 0%, #ff8c42 100%);
+  border-radius: 3px;
+}
+
+.timelineSubheader {
+  font-size: 1.9rem;
+  color: #2c3e50;
+  margin: 40px 0 30px;
+  font-weight: 800;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, #ffc857 0%, #ff8c42 50%, #c56cf0 100%);
+  border-radius: 2px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -26px;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: white;
+  border: 5px solid #ffc857;
+  box-shadow: 0 0 0 5px rgba(255, 200, 87, 0.2);
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.timelineItem:hover .timelineDot {
+  transform: scale(1.3);
+  border-color: #ff8c42;
+}
+
+.timelineContent {
+  background: linear-gradient(135deg, #fffbf5 0%, #fef6e4 100%);
+  padding: 25px;
+  border-radius: 16px;
+  border-left: 4px solid #ffc857;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.timelineContent:hover {
+  background: white;
+  box-shadow: 0 6px 20px rgba(255, 140, 66, 0.15);
+  transform: translateX(8px);
+}
+
+.timelineAge {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ff8c42;
+  margin-bottom: 12px;
+}
+
+.timelineContent p {
+  color: #4a5568;
+  line-height: 1.75;
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* Journey Container */
+.journeyContainer {
+  background: white;
+  border-radius: 28px;
+  padding: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease-out;
+  border: 2px solid #fef6e4;
+}
+
+.journeyHeader {
+  font-size: 2.6rem;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.journeyHeader::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, #17c3b2 0%, #227c9d 100%);
+  border-radius: 3px;
+}
+
+.journeySection {
+  margin-bottom: 40px;
+}
+
+.journeySubtitle {
+  font-size: 1.9rem;
+  color: #17c3b2;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.journeySection p {
+  color: #4a5568;
+  line-height: 1.9;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Encounter Box */
+.encounterBox {
+  background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+  border-radius: 20px;
+  padding: 35px;
+  margin: 35px 0;
+  border-left: 5px solid #ffc107;
+  position: relative;
+  box-shadow: 0 5px 18px rgba(255, 193, 7, 0.2);
+}
+
+.encounterIcon {
+  color: #f57c00;
+  margin-bottom: 15px;
+}
+
+.encounterTitle {
+  font-size: 1.7rem;
+  color: #e65100;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.encounterBox p {
+  color: #6d4c41;
+  line-height: 1.85;
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+}
+
+.mysticalText {
+  font-style: italic;
+  color: #bf360c !important;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 20px !important;
+  border-left: 3px solid #ff6b6b;
+}
+
+.innerVoice {
+  font-style: italic;
+  font-size: 1.3rem !important;
+  color: #17c3b2 !important;
+  font-weight: 700;
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #e0f9f5 0%, #b8f3ea 100%);
+  border-radius: 14px;
+  margin: 24px 0 !important;
+  box-shadow: 0 4px 14px rgba(23, 195, 178, 0.2);
+}
+
+/* Challenge Box */
+.challengeBox {
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 20px;
+  padding: 35px;
+  margin: 35px 0;
+  border-left: 5px solid #2196f3;
+  box-shadow: 0 5px 18px rgba(33, 150, 243, 0.2);
+}
+
+.challengeTitle {
+  font-size: 1.9rem;
+  color: #0d47a1;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.challengeBox p {
+  color: #37474f;
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.challengeList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.challengeList li {
+  color: #37474f;
+  line-height: 1.85;
+  margin-bottom: 16px;
+  padding-left: 32px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.challengeList li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: #2196f3;
+  font-size: 1.3rem;
+}
+
+/* Rishikesh Section */
+.rishikeshSection {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 35px 0;
+  border-left: 5px solid #4caf50;
+  box-shadow: 0 5px 18px rgba(76, 175, 80, 0.2);
+}
+
+.rishikeshTitle {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.rishikeshSection p {
+  color: #2e7d32;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* Practice List */
+.practiceList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 30px 0;
+}
+
+.practiceItem {
+  background: linear-gradient(135deg, #c56cf0 0%, #9b59b6 100%);
+  color: white;
+  padding: 16px 22px;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(197, 108, 240, 0.3);
+  transition: all 0.3s ease;
+}
+
+.practiceItem:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(197, 108, 240, 0.4);
+}
+
+/* Message Card */
+.messageCard {
+  background: white;
+  border-radius: 28px;
+  padding: 50px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.6s ease-out;
+  border: 2px solid #fef6e4;
+}
+
+.messageHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.messageQuoteIcon {
+  color: #ffc857;
+  margin-bottom: 20px;
+}
+
+.messageTitle {
+  font-size: 2.6rem;
+  color: #2c3e50;
+  font-weight: 800;
+  margin: 0;
+}
+
+.messageContent {
+  color: #4a5568;
+  line-height: 1.95;
+  font-size: 1.1rem;
+}
+
+.messageContent p {
+  margin-bottom: 26px;
+}
+
+.callToAction {
+  background: linear-gradient(135deg, #17c3b2 0%, #227c9d 100%);
+  color: white;
+  padding: 45px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 45px 0;
+  box-shadow: 0 8px 28px rgba(23, 195, 178, 0.3);
+}
+
+.callToAction h3 {
+  font-size: 1.45rem;
+  margin: 16px 0;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.finalMessage {
+  font-weight: 700;
+  font-size: 1.2rem !important;
+  color: #2c3e50 !important;
+  text-align: center;
+  padding: 28px;
+  background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+  border-radius: 16px;
+  margin: 35px 0 !important;
+  border-left: 5px solid #ffc857;
+}
+
+.closing {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 3px solid #fef6e4;
+}
+
+.closingText {
+  font-size: 1.25rem;
+  color: #17c3b2;
+  font-weight: 700;
+  margin-bottom: 28px !important;
+}
+
+.sanskritMantra {
+  font-size: 1.5rem;
+  color: #ff6b6b;
+  font-weight: 700;
+  margin: 16px 0 !important;
+  line-height: 1.85;
+}
+
+.signature {
+  font-size: 1.35rem;
+  color: #2c3e50;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: 32px !important;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ffc857 0%, #ff8c42 50%, #c56cf0 100%);
+}
+
+.footerContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footerContent svg {
+  margin-bottom: 20px;
+  opacity: 0.9;
+  color: #ffc857;
+}
+
+.footerText {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .tabContainer {
+    flex-direction: column;
+  }
+
+  .tab {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .founderCard,
+  .journeyContainer,
+  .timelineContainer,
+  .messageCard {
+    padding: 30px;
+  }
+
+  .cardTitle {
+    font-size: 2rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .messageTitle,
+  .journeyHeader,
+  .timelineHeader {
+    font-size: 2rem;
+  }
+
+  .callToAction h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .founderCard,
+  .journeyContainer,
+  .timelineContainer,
+  .messageCard {
+    padding: 20px;
+  }
+
+  .quote {
+    font-size: 1.1rem;
+  }
+
+  .timelineAge {
+    font-size: 1.15rem;
+  }
+}
