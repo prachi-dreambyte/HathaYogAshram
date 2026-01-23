@@ -1,5 +1,5 @@
 import styles from '../../assets/styles/contactusform/ContactForm.module.css';
-import bannerImg from '../../assets/images/3.png';
+import bannerImg from '../../assets/images/contactus.webp';
 
 const ContactForm = () => {
   return (
@@ -9,7 +9,7 @@ const ContactForm = () => {
         <div className={styles.heroImage}>
           <img src={bannerImg} alt="Connect With Inner Peace" />
         </div>
-        <div className={styles.heroOverlay}>
+        {/* <div className={styles.heroOverlay}>
           <div className={styles.heroContent}>
             <div className={styles.lotusIcon}>
               <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@ const ContactForm = () => {
             </p>
             <div className={styles.heroDivider}></div>
           </div>
-        </div>
+        </div> */}
         <div className={styles.heroGradient}></div>
       </section>
 

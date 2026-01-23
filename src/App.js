@@ -61,6 +61,11 @@ export default function Main() {
         <Route path="/meditation-retreat" element={<YogaRetreatRishikesh />} />
         <Route path="/Our-Founder" element={<AboutFounder />} />
          <Route path="/Our-School" element={<AboutSchool />} />
+         <Route path="/YogaCourse100" element={<YogaCourse100/>} />
+             <Route path="/YogaCourse200" element={<YogaCourse200/>} />
+             <Route path="/YogaCourse300" element={<YogaCourse300/>} />
+             <Route path="/YogaCourse500" element={<YogaCourse500/>} />
+
 
       </Routes>
 
