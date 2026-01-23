@@ -1,0 +1,605 @@
+/* ==================== Global Styles ==================== */
+.yogaPage {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.yogaPage img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==================== Hero Section ==================== */
+.heroSection {
+  background: linear-gradient(180deg, #f7d9e3, #fffafc);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: #8B4789;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.heroBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.badgeItem {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  color: #8B4789;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.heroImageWrapper {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+.heroImage:hover {
+  transform: scale(1.05);
+}
+
+/* ==================== Buttons ==================== */
+.ctaButton {
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ctaButton.primary {
+  background: linear-gradient(135deg, #8B4789, #D4A5D4);
+  color: white;
+  box-shadow: 0 4px 15px rgba(139, 71, 137, 0.3);
+}
+
+.ctaButton.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(139, 71, 137, 0.4);
+}
+
+.ctaButton.secondary {
+  background: transparent;
+  color: #8B4789;
+  border: 2px solid #8B4789;
+}
+
+.ctaButton.secondary:hover {
+  background: rgba(139, 71, 137, 0.1);
+  transform: translateY(-3px);
+}
+
+.ctaButton.large {
+  font-size: 1.2rem;
+  padding: 18px 50px;
+}
+
+/* ==================== Sections ==================== */
+.section {
+  padding: 80px 0;
+}
+
+.sectionAlt {
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+}
+
+.sectionPeach {
+  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+}
+
+.sectionHeader {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #8B4789;
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.leadText {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: center;
+}
+
+/* ==================== Info Boxes ==================== */
+.infoBox {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.infoBox:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.infoIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.infoBox h4 {
+  color: #8B4789;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.infoBox p {
+  color: #666;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ==================== Feature Cards ==================== */
+.featureCard {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.iconBox {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B4789, #D4A5D4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.3s ease;
+  font-size: 2rem;
+}
+
+.featureCard:hover .iconBox {
+  transform: rotate(360deg) scale(1.1);
+}
+
+.featureCard h4 {
+  color: #8B4789;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.featureCard p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================== School Cards ==================== */
+.schoolCard {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  height: 100%;
+  background: white;
+}
+
+.schoolCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.schoolImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.schoolCard:hover .schoolImage {
+  transform: scale(1.1);
+}
+
+.schoolBody {
+  padding: 1.5rem;
+}
+
+.schoolTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #8B4789;
+  margin-bottom: 0.75rem;
+}
+
+.schoolDesc {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ==================== Curriculum Cards ==================== */
+.curriculumCard {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border-left: 4px solid #8B4789;
+}
+
+.curriculumCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.curriculumTitle {
+  color: #8B4789;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.curriculumList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curriculumList li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.curriculumList li:last-child {
+  border-bottom: none;
+}
+
+.curriculumList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #8B4789;
+  font-weight: bold;
+}
+
+/* ==================== Schedule ==================== */
+.scheduleItem {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #8B4789;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scheduleItem:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.scheduleTime {
+  font-weight: 600;
+  color: #8B4789;
+  font-size: 1.1rem;
+  min-width: 100px;
+}
+
+.scheduleActivity {
+  color: #555;
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* ==================== Included Items ==================== */
+.includedItem {
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.includedItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.checkIcon {
+  color: #8B4789;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* ==================== Testimonials ==================== */
+.testimonialCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  position: relative;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.quoteIcon {
+  font-size: 4rem;
+  color: #D4A5D4;
+  opacity: 0.3;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.testimonialText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.authorAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8B4789, #D4A5D4);
+}
+
+.authorName {
+  margin: 0;
+  color: #8B4789;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.authorCountry {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ==================== FAQ ==================== */
+.faqItem {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+.faqQuestion {
+  color: #8B4789;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.faqAnswer {
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* ==================== CTA Section ==================== */
+.ctaSection {
+  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+  padding: 100px 0;
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #8B4789;
+  margin-bottom: 1.5rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================== Footer ==================== */
+.footer {
+  background: linear-gradient(135deg, #8B4789, #6B3768);
+  color: white;
+  padding: 60px 0 30px;
+}
+
+.footerTitle {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.footerSubtitle {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.footerText {
+  opacity: 0.9;
+  line-height: 1.8;
+  margin-bottom: 0.75rem;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.5rem;
+}
+
+.footerLinks a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+.footerLinks a:hover {
+  opacity: 1;
+  padding-left: 5px;
+}
+
+.footerBottom {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.footerBottom p {
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .heroSection {
+    padding: 50px 0;
+    /* min-height: auto; */
+  }
+  
+  .scheduleItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .scheduleTime {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .ctaButton {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .heroBadges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .badgeItem {
+    display: inline-block;
+  }
+}
