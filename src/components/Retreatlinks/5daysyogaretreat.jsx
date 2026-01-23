@@ -144,7 +144,7 @@ const YogaRetreat = () => {
           alt="Yoga Retreat"
           className={styles.heroImage}
         />
-        <div className={styles.heroContent}>
+        {/* <div className={styles.heroContent}>
           <div className={styles.heroTopLine}></div>
           <h1 className={styles.heroTitle}>5 Days Yoga Retreat</h1>
           <p className={styles.heroSubtitle}>
@@ -155,7 +155,7 @@ const YogaRetreat = () => {
             Retreat in Rishikesh, India
           </p>
           <div className={styles.heroBottomLine}></div>
-        </div>
+        </div> */}
       </section>
 
       {/* Main Content */}

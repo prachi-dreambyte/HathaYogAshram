@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaTeacherTraining.module.css";
 import dividerImg from "../../assets/images/linedesign.png";
@@ -23,6 +24,7 @@ const courses = [
     duration: "10 Days",
     privateRoom: "$612",
     sharedRoom: "$400",
+    path: "/YogaCourse100",
   },
   {
     image: img2,
@@ -30,6 +32,7 @@ const courses = [
     duration: "24 Days",
     privateRoom: "$1270",
     sharedRoom: "$980",
+    path: "/YogaCourse200",
   },
   {
     image: img3,
@@ -37,6 +40,7 @@ const courses = [
     duration: "28 Days",
     privateRoom: "$1480",
     sharedRoom: "$1150",
+    path: "/YogaCourse300",
   },
   {
     image: img4,
@@ -44,8 +48,10 @@ const courses = [
     duration: "56 Days",
     privateRoom: "$2350",
     sharedRoom: "$1900",
+    path: "/YogaCourse500",
   },
 ];
+
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -80,6 +86,8 @@ const cardVariant = {
 };
 
 const YogaTeacherTraining = () => {
+  const navigate = useNavigate();
+
   return (
     <motion.section
       className={styles.section}
@@ -148,6 +156,7 @@ const YogaTeacherTraining = () => {
                   className={styles.outlineBtn}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                   onClick={() => navigate(`${item.path}`)}
                 >
                   Course Details
                 </motion.button>
