@@ -13,9 +13,15 @@ import Gallery from 'components/gallery/Gallery';
 import BlogList from 'components/blog/BlogList';
 import SingleBlog from 'components/blog/SingleBlog';
 import ContactForm from 'components/ContactForm/ContactForm';
-import { AboutUs } from 'components/AboutUs';
 import Kundalini200Page from 'components/kundaliniyoga/Kundalini200page';
 import Kundalini300 from 'components/kundaliniyoga/Kundalini300';
+import Teachers from 'components/yogateachers/Teachers';
+import VedicMantra from 'components/Retreatlinks/Vedicmantra';
+import YogaRetreat from 'components/Retreatlinks/5daysyogaretreat';
+import Yoga10DaysRetreat from 'components/Retreatlinks/Yoga10DaysRetreat';
+import Yoga20DaysRetreat from 'components/Retreatlinks/Yoga20DaysRetreat';
+import YogaRetreatRishikesh from 'components/Retreatlinks/YogaRetreatRishikesh';
+import AboutFounder from 'components/Aboutfounder/AboutFounder';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -36,22 +42,23 @@ export default function Main() {
         <Route
           path="admin/*"
           element={
-            <AdminLayout
-              theme={currentTheme}
-              setTheme={setCurrentTheme}
-            />
+            <AdminLayout theme={currentTheme} setTheme={setCurrentTheme} />
           }
         />
         <Route path="/" element={<Homepage />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog" element={<BlogList />} />
-         <Route path="/blog/:slug" element={<SingleBlog />} />
-          <Route path="/contact-us" element={<ContactForm />} />
-           <Route path="/kundalini-200" element={<Kundalini200Page />} />
-            <Route path="/kundalini-300" element={<Kundalini300 />} />
-
-
-        <Route path="/" element={<AboutUs/>}/>
+        <Route path="/blog/:slug" element={<SingleBlog />} />
+        <Route path="/contact-us" element={<ContactForm />} />
+        <Route path="/kundalini-200" element={<Kundalini200Page />} />
+        <Route path="/kundalini-300" element={<Kundalini300 />} />
+        <Route path="/teachers" element={<Teachers />} />
+        <Route path="/vedic-mantra" element={<VedicMantra />} />
+        <Route path="/5-days-yoga-retreat" element={<YogaRetreat />} />
+        <Route path="/10-days-yoga-retreat" element={<Yoga10DaysRetreat />} />
+        <Route path="/20-days-yoga-retreat" element={<Yoga20DaysRetreat />} />
+        <Route path="/meditation-retreat" element={<YogaRetreatRishikesh />} />
+        <Route path="/Our-Founder" element={<AboutFounder />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

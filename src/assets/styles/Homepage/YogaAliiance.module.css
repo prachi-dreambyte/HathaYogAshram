@@ -49,11 +49,12 @@
 /* VIDEO STYLE (LIKE IMAGE) */
 .videoWrapper {
   flex: 1;
-  max-width: 420px;     /* 🔥 SMALLER SIZE */
+  max-width: 420px;
+  /* 🔥 SMALLER SIZE */
   border-radius: 18px;
   overflow: hidden;
   background: #000;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
 .video {

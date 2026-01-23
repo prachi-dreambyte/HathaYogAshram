@@ -11,26 +11,29 @@ export default function Kundalini300() {
       name: 'Kundalini Yoga Ashram',
       tagline: 'Traditional Kundalini Awakening Practices',
       location: 'Rishikesh, India',
-      image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=800'
+      image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=800',
     },
     'adi-yogpeeth': {
       name: 'Adi Yogpeeth',
       tagline: 'Ancient Wisdom, Modern Practice',
       location: 'Tapovan, Rishikesh',
-      image: 'https://images.unsplash.com/photo-1599447292023-aae792c5f948?w=800'
+      image:
+        'https://images.unsplash.com/photo-1599447292023-aae792c5f948?w=800',
     },
     'world-peace': {
       name: 'World Peace Yoga School',
       tagline: 'Himalayan Tradition of Kundalini',
       location: 'Laxman Jhula, Rishikesh',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800'
+      image:
+        'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
     },
     'vinyasa-yogashala': {
       name: 'Vinyasa Yogashaala',
       tagline: 'Authentic Kundalini Journey',
       location: 'Rishikesh, Uttarakhand',
-      image: 'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800'
-    }
+      image:
+        'https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800',
+    },
   };
 
   const chakras = [
@@ -39,77 +42,91 @@ export default function Kundalini300() {
       element: 'Root Chakra',
       location: 'Base of spine',
       color: '#C41E3A',
-      description: 'The foundation of physical and spiritual being, connecting Sattva, Rajas, and Tamas.'
+      description:
+        'The foundation of physical and spiritual being, connecting Sattva, Rajas, and Tamas.',
     },
     {
       name: 'Swadhistan',
       element: 'Sacral Chakra',
       location: 'Below navel',
       color: '#FF6B35',
-      description: 'Center of procreative and sexual energy, responsible for life formation.'
+      description:
+        'Center of procreative and sexual energy, responsible for life formation.',
     },
     {
       name: 'Manipura',
       element: 'Solar Plexus',
       location: 'Below navel',
       color: '#F7B801',
-      description: 'The power seat controlling physical and physiological wellbeing.'
+      description:
+        'The power seat controlling physical and physiological wellbeing.',
     },
     {
       name: 'Anahata',
       element: 'Heart Chakra',
       location: 'Center of chest',
       color: '#4CAF50',
-      description: 'Controls emotions, opens deep happiness and peace when awakened.'
+      description:
+        'Controls emotions, opens deep happiness and peace when awakened.',
     },
     {
       name: 'Vishuddhi',
       element: 'Throat Chakra',
       location: 'Throat region',
       color: '#2196F3',
-      description: 'Chakra of purity, awakens sweet voice and amazing communication.'
+      description:
+        'Chakra of purity, awakens sweet voice and amazing communication.',
     },
     {
       name: 'Ajna',
       element: 'Third Eye',
       location: 'Between eyebrows',
       color: '#673AB7',
-      description: 'Supreme chakra commanding the physical body, the powerhouse of vision.'
+      description:
+        'Supreme chakra commanding the physical body, the powerhouse of vision.',
     },
     {
       name: 'Sahasrara',
       element: 'Crown Chakra',
       location: 'Top of skull',
       color: '#9C27B0',
-      description: 'Highest level, lotus with multiple petals, supreme state of accomplishment.'
-    }
+      description:
+        'Highest level, lotus with multiple petals, supreme state of accomplishment.',
+    },
   ];
 
   const faqs = [
     {
       question: 'How is Kundalini different from other styles of yoga?',
-      answer: 'Kundalini yoga is a more spiritual practice compared to other yoga styles. While it involves physical movements, the main focus is on spiritual awakening rather than physical poses. Unlike Vinyasa or Hatha yoga which revolve mainly around physical postures, Kundalini is highly precise, repetitive, and focuses on awakening the dormant energy within.'
+      answer:
+        'Kundalini yoga is a more spiritual practice compared to other yoga styles. While it involves physical movements, the main focus is on spiritual awakening rather than physical poses. Unlike Vinyasa or Hatha yoga which revolve mainly around physical postures, Kundalini is highly precise, repetitive, and focuses on awakening the dormant energy within.',
     },
     {
       question: 'Can a beginner in yoga learn Kundalini?',
-      answer: 'Kundalini yoga is an intense practice suitable for practitioners of all levels. While it\'s powerful, the physical and mental benefits make it an excellent option for both beginners and advanced yogis. However, it\'s recommended to have basic knowledge of Hatha yoga, pranayama, and meditation before diving deep into Kundalini practices.'
+      answer:
+        "Kundalini yoga is an intense practice suitable for practitioners of all levels. While it's powerful, the physical and mental benefits make it an excellent option for both beginners and advanced yogis. However, it's recommended to have basic knowledge of Hatha yoga, pranayama, and meditation before diving deep into Kundalini practices.",
     },
     {
       question: 'What are chakras in Kundalini?',
-      answer: 'Chakras are energy centers in the human body that run along the spine from the base to the crown. There are seven main chakras, each responsible for different aspects of physical, mental, and spiritual wellbeing. Kundalini practices work to awaken and balance these chakras, allowing energy to flow freely through the body.'
+      answer:
+        'Chakras are energy centers in the human body that run along the spine from the base to the crown. There are seven main chakras, each responsible for different aspects of physical, mental, and spiritual wellbeing. Kundalini practices work to awaken and balance these chakras, allowing energy to flow freely through the body.',
     },
     {
       question: 'Can we awaken our kundalini chakras?',
-      answer: 'Yes, kundalini chakras can be awakened through dedicated practice under proper guidance. This requires eliminating distractions, developing strong focus, separating from external thoughts, and working with prana (life force energy). It\'s essential to practice under an experienced teacher who has authentic knowledge of the tradition.'
+      answer:
+        "Yes, kundalini chakras can be awakened through dedicated practice under proper guidance. This requires eliminating distractions, developing strong focus, separating from external thoughts, and working with prana (life force energy). It's essential to practice under an experienced teacher who has authentic knowledge of the tradition.",
     },
     {
       question: 'Is 300-Hour kundalini teacher training eligible for RYT-300?',
-      answer: 'Yes, the 300-Hour Kundalini teacher training is eligible for RYT-300 certification with Yoga Alliance, provided you complete the course at a registered yoga school. This certification allows you to teach yoga internationally as a recognized yoga teacher.'
+      answer:
+        'Yes, the 300-Hour Kundalini teacher training is eligible for RYT-300 certification with Yoga Alliance, provided you complete the course at a registered yoga school. This certification allows you to teach yoga internationally as a recognized yoga teacher.',
     },
     {
-      question: 'What is the eligibility for 300-Hour kundalini yoga teacher training?',
-      answer: 'The 300-Hour training is best for: students who have completed 200-hour training and wish to deepen their practice; those wanting comprehensive knowledge of Kundalini and yoga nidra; practitioners seeking self-growth and transformation; and anyone committed to the spiritual journey with at least 6 months of regular yoga practice.'
-    }
+      question:
+        'What is the eligibility for 300-Hour kundalini yoga teacher training?',
+      answer:
+        'The 300-Hour training is best for: students who have completed 200-hour training and wish to deepen their practice; those wanting comprehensive knowledge of Kundalini and yoga nidra; practitioners seeking self-growth and transformation; and anyone committed to the spiritual journey with at least 6 months of regular yoga practice.',
+    },
   ];
 
   return (
@@ -151,15 +168,20 @@ export default function Kundalini300() {
         <div className={styles.introContent}>
           <h2 className={styles.sectionTitle}>Awaken Your Inner Power</h2>
           <p className={styles.introParagraph}>
-            Kundalini Yoga is a spiritual practice that involves the ascension of our inner latent energy. 
-            The rise of Shakti to unite with Shiva our consciousness, opening our heart so that we can live 
-            our true authentic self. A practice which is a mix of physical kundalini kriya, Hatha asana, and 
-            spiritual involving kundalini pranayama and meditation - clearing our inner body so that we can 
-            meet the inner hidden power, our shakti as is bestowed upon us by Mother Nature.
+            Kundalini Yoga is a spiritual practice that involves the ascension
+            of our inner latent energy. The rise of Shakti to unite with Shiva
+            our consciousness, opening our heart so that we can live our true
+            authentic self. A practice which is a mix of physical kundalini
+            kriya, Hatha asana, and spiritual involving kundalini pranayama and
+            meditation - clearing our inner body so that we can meet the inner
+            hidden power, our shakti as is bestowed upon us by Mother Nature.
           </p>
           <div className={styles.introQuote}>
             <div className={styles.quoteIcon}>"</div>
-            <p>Kundalini Awakening – A pure heart is a golden vessel to fill with the primordial soul</p>
+            <p>
+              Kundalini Awakening – A pure heart is a golden vessel to fill with
+              the primordial soul
+            </p>
           </div>
         </div>
       </section>
@@ -174,7 +196,10 @@ export default function Kundalini300() {
               className={`${styles.schoolCard} ${activeSchool === key ? styles.schoolCardActive : ''}`}
               onClick={() => setActiveSchool(key)}
             >
-              <div className={styles.schoolImage} style={{ backgroundImage: `url(${school.image})` }}>
+              <div
+                className={styles.schoolImage}
+                style={{ backgroundImage: `url(${school.image})` }}
+              >
                 <div className={styles.schoolOverlay}></div>
               </div>
               <div className={styles.schoolInfo}>
@@ -191,14 +216,21 @@ export default function Kundalini300() {
       <section className={styles.chakras}>
         <h2 className={styles.sectionTitle}>Understanding the Seven Chakras</h2>
         <p className={styles.chakrasIntro}>
-          The human body consists of seven prominent chakras according to Patanjali yoga sutra. 
-          Each chakra represents a unique energy center that, when awakened, brings specific powers and transformations.
+          The human body consists of seven prominent chakras according to
+          Patanjali yoga sutra. Each chakra represents a unique energy center
+          that, when awakened, brings specific powers and transformations.
         </p>
         <div className={styles.chakrasGrid}>
           {chakras.map((chakra, index) => (
             <div key={index} className={styles.chakraCard}>
-              <div className={styles.chakraIcon} style={{ borderColor: chakra.color }}>
-                <div className={styles.chakraGlow} style={{ backgroundColor: chakra.color }}></div>
+              <div
+                className={styles.chakraIcon}
+                style={{ borderColor: chakra.color }}
+              >
+                <div
+                  className={styles.chakraGlow}
+                  style={{ backgroundColor: chakra.color }}
+                ></div>
               </div>
               <h3 className={styles.chakraName}>{chakra.name}</h3>
               <p className={styles.chakraElement}>{chakra.element}</p>
@@ -216,42 +248,65 @@ export default function Kundalini300() {
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🔥</div>
             <h3>Kundalini Kriyas</h3>
-            <p>Advanced practices to awaken the hidden energy and unite Shiva-Shakti consciousness</p>
+            <p>
+              Advanced practices to awaken the hidden energy and unite
+              Shiva-Shakti consciousness
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🧘</div>
             <h3>Hatha Yoga Asanas</h3>
-            <p>140+ yoga exercises for physical health, flexibility and spiritual preparation</p>
+            <p>
+              140+ yoga exercises for physical health, flexibility and spiritual
+              preparation
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🌬️</div>
             <h3>Pranayama Mastery</h3>
-            <p>Advanced breathing techniques for energy balance and chakra activation</p>
+            <p>
+              Advanced breathing techniques for energy balance and chakra
+              activation
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🧠</div>
             <h3>Deep Meditation</h3>
-            <p>Calming and relaxing the mind to achieve stillness, stability and awakening</p>
+            <p>
+              Calming and relaxing the mind to achieve stillness, stability and
+              awakening
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🙏</div>
             <h3>Bandhas & Mudras</h3>
-            <p>Energy locks and gestures to save and channel energy for transformation</p>
+            <p>
+              Energy locks and gestures to save and channel energy for
+              transformation
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>📚</div>
             <h3>Tantra Philosophy</h3>
-            <p>Understanding life, Kundalini Shakti function and ancient wisdom</p>
+            <p>
+              Understanding life, Kundalini Shakti function and ancient wisdom
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>✨</div>
             <h3>Shatkarma Cleansing</h3>
-            <p>Detox practices to make yourself lighter and open to energy awakening</p>
+            <p>
+              Detox practices to make yourself lighter and open to energy
+              awakening
+            </p>
           </div>
           <div className={styles.highlightCard}>
             <div className={styles.highlightIcon}>🎯</div>
             <h3>Teaching Methodology</h3>
-            <p>Professional teaching skills, alignment, adjustment and class management</p>
+            <p>
+              Professional teaching skills, alignment, adjustment and class
+              management
+            </p>
           </div>
         </div>
       </section>
@@ -260,22 +315,29 @@ export default function Kundalini300() {
       <section className={styles.schedule}>
         <h2 className={styles.sectionTitle}>A Day in the Life of a Yogi</h2>
         <p className={styles.scheduleIntro}>
-          Immerse yourself in yogic discipline with our carefully crafted daily routine designed to maximize your spiritual growth.
+          Immerse yourself in yogic discipline with our carefully crafted daily
+          routine designed to maximize your spiritual growth.
         </p>
         <div className={styles.scheduleTimeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>05:30 AM</div>
-              <div className={styles.timelineTitle}>Morning Bell & Herbal Tea</div>
+              <div className={styles.timelineTitle}>
+                Morning Bell & Herbal Tea
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>06:00 AM</div>
-              <div className={styles.timelineTitle}>Kundalini Kriya & Meditation</div>
-              <div className={styles.timelineDesc}>Awakening practices and chakra meditation</div>
+              <div className={styles.timelineTitle}>
+                Kundalini Kriya & Meditation
+              </div>
+              <div className={styles.timelineDesc}>
+                Awakening practices and chakra meditation
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -283,7 +345,9 @@ export default function Kundalini300() {
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>07:30 AM</div>
               <div className={styles.timelineTitle}>Pranayama & Shatkarma</div>
-              <div className={styles.timelineDesc}>Breathing exercises and cleansing practices</div>
+              <div className={styles.timelineDesc}>
+                Breathing exercises and cleansing practices
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -291,7 +355,9 @@ export default function Kundalini300() {
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>09:00 AM</div>
               <div className={styles.timelineTitle}>Breakfast</div>
-              <div className={styles.timelineDesc}>Organic vegetarian sattvic meal</div>
+              <div className={styles.timelineDesc}>
+                Organic vegetarian sattvic meal
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -299,7 +365,9 @@ export default function Kundalini300() {
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>10:30 AM</div>
               <div className={styles.timelineTitle}>Hatha Yoga Asana</div>
-              <div className={styles.timelineDesc}>Physical postures and alignment practice</div>
+              <div className={styles.timelineDesc}>
+                Physical postures and alignment practice
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -307,7 +375,9 @@ export default function Kundalini300() {
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>12:00 PM</div>
               <div className={styles.timelineTitle}>Theory Class</div>
-              <div className={styles.timelineDesc}>Philosophy, anatomy, teaching methodology</div>
+              <div className={styles.timelineDesc}>
+                Philosophy, anatomy, teaching methodology
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -321,15 +391,21 @@ export default function Kundalini300() {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>04:00 PM</div>
-              <div className={styles.timelineTitle}>Advanced Kundalini Practice</div>
-              <div className={styles.timelineDesc}>Kriyas, bandhas, mudras and advanced techniques</div>
+              <div className={styles.timelineTitle}>
+                Advanced Kundalini Practice
+              </div>
+              <div className={styles.timelineDesc}>
+                Kriyas, bandhas, mudras and advanced techniques
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>06:00 PM</div>
-              <div className={styles.timelineTitle}>Mantra Chanting & Kirtan</div>
+              <div className={styles.timelineTitle}>
+                Mantra Chanting & Kirtan
+              </div>
             </div>
           </div>
           <div className={styles.timelineItem}>
@@ -350,7 +426,9 @@ export default function Kundalini300() {
             <div className={styles.timelineDot}></div>
             <div className={styles.timelineContent}>
               <div className={styles.timelineTime}>09:30 PM</div>
-              <div className={styles.timelineTitle}>Yoga Nidra & Lights Out</div>
+              <div className={styles.timelineTitle}>
+                Yoga Nidra & Lights Out
+              </div>
             </div>
           </div>
         </div>
@@ -390,28 +468,51 @@ export default function Kundalini300() {
             <div className={styles.tabPanel}>
               <h3>Why Choose 300 Hour Kundalini Yoga Teacher Training?</h3>
               <p>
-                The 300-hour Kundalini yoga teacher training course holds the key to great health and personal success. 
-                Kundalini Yoga awakens the true source of limitless energy lying dormant in all of us and teaches us how 
-                to use this energy to its full potential.
+                The 300-hour Kundalini yoga teacher training course holds the
+                key to great health and personal success. Kundalini Yoga awakens
+                the true source of limitless energy lying dormant in all of us
+                and teaches us how to use this energy to its full potential.
               </p>
               <h4>Course Benefits:</h4>
               <ul>
-                <li>Complete and full teaching of everything relating to Kundalini and Kriya practices</li>
-                <li>Deep understanding of Kundalini Philosophy, anatomy and physiology</li>
-                <li>Verbal cues and alignment methods to support students and prevent injury</li>
+                <li>
+                  Complete and full teaching of everything relating to Kundalini
+                  and Kriya practices
+                </li>
+                <li>
+                  Deep understanding of Kundalini Philosophy, anatomy and
+                  physiology
+                </li>
+                <li>
+                  Verbal cues and alignment methods to support students and
+                  prevent injury
+                </li>
                 <li>Intense breath work and Kundalini Pranayama practices</li>
-                <li>Systematic understanding of body functioning and subtle energy</li>
+                <li>
+                  Systematic understanding of body functioning and subtle energy
+                </li>
                 <li>Kundalini Mantra and Chanting for inner alignment</li>
-                <li>Professional teaching certification from Yoga Alliance (RYT-300)</li>
-                <li>Lifetime access to traditional Kundalini lineage knowledge</li>
+                <li>
+                  Professional teaching certification from Yoga Alliance
+                  (RYT-300)
+                </li>
+                <li>
+                  Lifetime access to traditional Kundalini lineage knowledge
+                </li>
               </ul>
               <h4>Who Should Join:</h4>
               <ul>
-                <li>Yoga teachers wanting to deepen their Kundalini knowledge</li>
-                <li>Practitioners with at least 6 months of regular yoga practice</li>
+                <li>
+                  Yoga teachers wanting to deepen their Kundalini knowledge
+                </li>
+                <li>
+                  Practitioners with at least 6 months of regular yoga practice
+                </li>
                 <li>Those seeking spiritual growth and self-transformation</li>
                 <li>Anyone committed to awakening their inner potential</li>
-                <li>Students who have completed 200-hour YTT and want to advance</li>
+                <li>
+                  Students who have completed 200-hour YTT and want to advance
+                </li>
               </ul>
             </div>
           )}
@@ -530,7 +631,9 @@ export default function Kundalini300() {
                 </div>
               </div>
               <div className={styles.syllabusNote}>
-                <p><strong>Special Inclusions:</strong></p>
+                <p>
+                  <strong>Special Inclusions:</strong>
+                </p>
                 <ul>
                   <li>Mantra Diksha (Initiation) by Guru</li>
                   <li>Shakti Temple Visit (Kunjapuri Devi)</li>
@@ -633,9 +736,11 @@ export default function Kundalini300() {
             <div className={styles.tabPanel}>
               <h3>RYT-300 Certification & Yoga Alliance</h3>
               <p>
-                Upon successful completion of the 300 Hour Kundalini Yoga Teacher Training, you will receive 
-                a certification that is recognized by Yoga Alliance International. This certification enables 
-                you to register as RYT-300 (Registered Yoga Teacher - 300 hours) and teach yoga anywhere in the world.
+                Upon successful completion of the 300 Hour Kundalini Yoga
+                Teacher Training, you will receive a certification that is
+                recognized by Yoga Alliance International. This certification
+                enables you to register as RYT-300 (Registered Yoga Teacher -
+                300 hours) and teach yoga anywhere in the world.
               </p>
               <div className={styles.certificationGrid}>
                 <div className={styles.certificationCard}>
@@ -664,10 +769,13 @@ export default function Kundalini300() {
               <div className={styles.allianceInfo}>
                 <h4>About Yoga Alliance</h4>
                 <p>
-                  Yoga Alliance is the largest international nonprofit association representing the yoga community. 
-                  It supports over 100,000 registered yoga teachers and 7,000+ registered yoga schools worldwide. 
-                  RYT-300 certification offers you an international identity of your knowledge, experience, and training. 
-                  People feel confident in hiring you as they know your expertise meets globally recognized standards.
+                  Yoga Alliance is the largest international nonprofit
+                  association representing the yoga community. It supports over
+                  100,000 registered yoga teachers and 7,000+ registered yoga
+                  schools worldwide. RYT-300 certification offers you an
+                  international identity of your knowledge, experience, and
+                  training. People feel confident in hiring you as they know
+                  your expertise meets globally recognized standards.
                 </p>
               </div>
             </div>
@@ -686,7 +794,9 @@ export default function Kundalini300() {
                 onClick={() => setActiveFaq(activeFaq === index ? null : index)}
               >
                 <span>{faq.question}</span>
-                <span className={styles.faqIcon}>{activeFaq === index ? '−' : '+'}</span>
+                <span className={styles.faqIcon}>
+                  {activeFaq === index ? '−' : '+'}
+                </span>
               </button>
               {activeFaq === index && (
                 <div className={styles.faqAnswer}>
@@ -703,8 +813,8 @@ export default function Kundalini300() {
         <div className={styles.ctaContent}>
           <h2>Ready to Awaken Your Kundalini?</h2>
           <p>
-            Join us in Rishikesh for a life-transforming journey into the depths of Kundalini Yoga. 
-            Limited seats available for each batch.
+            Join us in Rishikesh for a life-transforming journey into the depths
+            of Kundalini Yoga. Limited seats available for each batch.
           </p>
           <div className={styles.ctaButtons}>
             <button className={styles.ctaPrimary}>Book Your Spot Now</button>
@@ -716,8 +826,6 @@ export default function Kundalini300() {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 }

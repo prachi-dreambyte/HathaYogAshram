@@ -159,7 +159,6 @@ export default function Dashboard(props) {
                 </Routes>
               </Box>
             ) : null}
-            
           </Box>
         </SidebarContext.Provider>
       </Box>

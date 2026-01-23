@@ -1,0 +1,734 @@
+/* Teachers Page - Editorial Magazine Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-gold: #D4AF37;
+  --deep-plum: #4A1942;
+  --soft-cream: #FFF8F0;
+  --charcoal: #2C2C2C;
+  --sage: #8B9D83;
+  --accent-rose: #C44536;
+  --light-gray: #F5F5F5;
+  --medium-gray: #E0E0E0;
+  --text-dark: #1A1A1A;
+  --text-light: #666666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--soft-cream) 0%, #FFFFFF 50%, var(--soft-cream) 100%);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(42, 27, 27, 0.7), rgba(74, 25, 66, 0.6)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23D4AF37;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%234A1942;stop-opacity:0.1"/></linearGradient></defs><rect fill="url(%23g)" width="1200" height="600"/></svg>');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.15), transparent 60%);
+  animation: breathe 8s ease-in-out infinite;
+}
+
+@keyframes breathe {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.1);
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.highlight {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-gold) 0%, #F4E4C1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  font-style: italic;
+  position: relative;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.heroDivider {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  margin: 0 auto;
+  animation: expandWidth 1.5s ease-out 0.9s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 120px;
+  }
+}
+
+/* School Navigation */
+.schoolNav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--medium-gray);
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.schoolNavInner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.schoolButton {
+  padding: 0.9rem 2rem;
+  border: 2px solid transparent;
+  background: white;
+  color: var(--text-dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.schoolButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--school-color);
+  transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.schoolButton:hover::before {
+  left: 0;
+}
+
+.schoolButton:hover {
+  border-color: var(--school-color);
+  color: var(--school-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schoolButton.active {
+  background: var(--school-color);
+  color: white;
+  border-color: var(--school-color);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Teachers Section */
+.teachersSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.sectionTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--deep-plum);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.sectionLine {
+  width: 80px;
+  height: 3px;
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: slideIn 0.8s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+/* Teachers Grid */
+.teachersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.teacherCard {
+  perspective: 1000px;
+  cursor: pointer;
+  animation: fadeInScale 0.6s ease-out both;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-style: preserve-3d;
+}
+
+.teacherCard:hover .cardInner {
+  transform: translateY(-10px);
+}
+
+.cardFront {
+  background: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid var(--medium-gray);
+}
+
+.teacherCard:hover .cardFront {
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
+
+.cardFront::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s;
+}
+
+.teacherCard:hover .cardFront::before {
+  left: 100%;
+}
+
+.teacherIcon {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border: 3px solid var(--medium-gray);
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.teacherIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.teacherCard:hover .teacherIcon {
+  transform: scale(1.08);
+  border-color: var(--primary-gold);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.teacherCard:hover .teacherIcon img {
+  transform: scale(1.1);
+}
+
+.teacherName {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.01em;
+}
+
+.teacherRole {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  min-height: 3rem;
+}
+
+.cardAccent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.teacherCard:hover .cardAccent {
+  transform: scaleX(1);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: white;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  border-radius: 0;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+  animation: modalSlideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: var(--text-dark);
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background: var(--accent-rose);
+  transform: rotate(90deg);
+}
+
+.modalHeader {
+  text-align: center;
+  padding: 3rem 3rem 2rem;
+  background: linear-gradient(135deg, var(--soft-cream) 0%, white 100%);
+  border-bottom: 2px solid var(--medium-gray);
+}
+
+.modalIcon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border: 4px solid var(--primary-gold);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modalIcon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.modalRole {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.modalBody {
+  padding: 2.5rem 3rem;
+}
+
+.modalBio {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.modalFullBio {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* How to Reach Section */
+.reachSection {
+  background: linear-gradient(135deg, var(--deep-plum) 0%, #2C1E2E 100%);
+  padding: 5rem 2rem;
+  margin-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reachSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: 30px 30px;
+  opacity: 0.3;
+}
+
+.reachTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 1;
+}
+
+.reachGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.reachCard {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.reachCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.reachCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.reachCard:hover::before {
+  opacity: 1;
+}
+
+.reachIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.4s ease;
+}
+
+.reachCard:hover .reachIcon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.reachCard h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.reachCard p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .schoolNavInner {
+    padding: 0 1rem;
+  }
+
+  .schoolButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .teachersSection {
+    padding: 3rem 1rem;
+  }
+
+  .teachersGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .modalContent {
+    margin: 1rem;
+    max-height: 90vh;
+  }
+
+  .modalHeader,
+  .modalBody {
+    padding: 2rem 1.5rem;
+  }
+
+  .modalTitle {
+    font-size: 2rem;
+  }
+
+  .reachSection {
+    padding: 3rem 1rem;
+  }
+
+  .reachGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .teacherCard {
+    max-width: 100%;
+  }
+
+  .cardFront {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Scrollbar Styling */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: var(--light-gray);
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: var(--deep-plum);
+}

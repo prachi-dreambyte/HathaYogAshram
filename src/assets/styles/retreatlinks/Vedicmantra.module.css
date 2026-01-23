@@ -1,0 +1,1027 @@
+/* Vedic Mantra Chanting Page - Spiritual Design */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --primary-purple: #9B4D96;
+  --deep-navy: #1A1A3E;
+  --gold-accent: #D4AF37;
+  --soft-cream: #FFF8F0;
+  --om-orange: #FF6B35;
+  --sacred-saffron: #FF9933;
+  --peaceful-white: #FFFFFF;
+  --text-dark: #2C2C2C;
+  --text-light: #666666;
+  --border-light: #E8E8E8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--peaceful-white);
+  font-family: 'Lato', sans-serif;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(155, 77, 150, 0.95), rgba(26, 26, 62, 0.9)),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect fill="url(%23pattern)" width="1200" height="600"/></svg>');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent 70%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vedic {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 600;
+  color: var(--primary-purple);
+  letter-spacing: 0.15em;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInLeft 1s ease-out 0.3s both;
+}
+
+.chanting {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  color: var(--peaceful-white);
+  letter-spacing: 0.1em;
+  animation: fadeInRight 1s ease-out 0.6s both;
+}
+
+.omSymbol {
+  font-size: clamp(4rem, 8vw, 6rem);
+  color: var(--gold-accent);
+  margin-top: 2rem;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  animation: omGlow 3s ease-in-out infinite;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes omGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+    transform: scale(1);
+  }
+
+  50% {
+    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 1));
+    transform: scale(1.05);
+  }
+}
+
+/* Section Titles */
+.sectionTitle {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  color: var(--deep-navy);
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
+  margin: 1rem auto 0;
+}
+
+/* What Section */
+.whatSection {
+  padding: 5rem 2rem;
+  background: var(--soft-cream);
+}
+
+.contentGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textContent {
+  padding: 2rem 0;
+}
+
+.paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.highlight {
+  color: var(--primary-purple);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-accent);
+  text-decoration-thickness: 2px;
+}
+
+.imageContent {
+  position: relative;
+}
+
+.mantराImage {
+  position: relative;
+  border: 4px solid var(--deep-navy);
+  box-shadow: 15px 15px 0 var(--primary-purple);
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.mantराImage:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 10px 10px 0 var(--primary-purple);
+}
+
+.mantराImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.mantराImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Why Section */
+.whySection {
+  padding: 5rem 2rem;
+  background: var(--peaceful-white);
+}
+
+.omCard {
+  background: linear-gradient(135deg, #C9A961 0%, #D4AF37 50%, #8B7355 100%);
+  padding: 3rem;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.omCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.omGlow {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.omLarge {
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.95);
+  display: inline-block;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
+  animation: omPulse 4s ease-in-out infinite;
+}
+
+@keyframes omPulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
+  }
+
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 50px rgba(255, 255, 255, 1));
+  }
+}
+
+.sanskritText {
+  font-family: 'Cinzel', serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 2;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.sanskritText p {
+  margin: 0.3rem 0;
+}
+
+.benefitsList {
+  margin-top: 2rem;
+}
+
+.benefitItem {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.7;
+}
+
+.benefitItem:last-child {
+  border-bottom: none;
+}
+
+.benefitItem strong {
+  color: var(--primary-purple);
+  font-weight: 600;
+}
+
+/* Types Section */
+.typesSection {
+  padding: 5rem 2rem;
+  background: var(--soft-cream);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.typesParagraph {
+  max-width: 1000px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: center;
+  color: var(--text-dark);
+}
+
+.mantraGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mantraCard {
+  background: var(--peaceful-white);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.mantraCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(155, 77, 150, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.mantraCard:hover::before {
+  left: 100%;
+}
+
+.mantraCard:hover {
+  border-color: var(--primary-purple);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.mantraName {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--deep-navy);
+  margin-bottom: 0.5rem;
+}
+
+.mantraDetails {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sanskrit {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.transliteration {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Gayatri Section */
+.gayatriSection {
+  padding: 5rem 2rem;
+  background: var(--peaceful-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.videoContainer {
+  position: relative;
+}
+
+.videoPlaceholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--deep-navy), var(--primary-purple));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--deep-navy);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.videoPlaceholder::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.2), transparent);
+  transform: translate(-50%, -50%);
+  animation: radiateGlow 3s ease-in-out infinite;
+}
+
+@keyframes radiateGlow {
+
+  0%,
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0.5;
+  }
+
+  50% {
+    width: 400px;
+    height: 400px;
+    opacity: 1;
+  }
+}
+
+.playButton {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--primary-purple);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.playButton:hover {
+  transform: scale(1.1);
+  background: white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+.gayatriContent {
+  padding: 1rem 0;
+}
+
+.gayatriTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--deep-navy);
+  margin-bottom: 1rem;
+}
+
+.gayatriList {
+  list-style: none;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.gayatriList li {
+  padding: 0.5rem 0;
+  position: relative;
+  color: var(--text-dark);
+}
+
+.gayatriList li::before {
+  content: '•';
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+  position: absolute;
+  left: -1.5rem;
+}
+
+.gayatriDesc {
+  margin: 1.5rem 0;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.gayatriSanskrit {
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  margin: 1rem 0;
+  line-height: 1.8;
+}
+
+.gayatriTranslation {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.mantraCategories {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.category {
+  padding: 0.8rem 1.5rem;
+  background: var(--soft-cream);
+  border-left: 3px solid var(--primary-purple);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category:hover {
+  background: var(--primary-purple);
+  color: white;
+  transform: translateX(5px);
+}
+
+.bookButton {
+  padding: 1rem 3rem;
+  background: var(--deep-navy);
+  color: white;
+  border: 2px solid var(--deep-navy);
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+
+.bookButton:hover {
+  background: transparent;
+  color: var(--deep-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Benefits Section */
+.benefitsSection {
+  padding: 5rem 2rem;
+  background: var(--soft-cream);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.benefitsIntro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+
+.benefitsImage {
+  position: relative;
+  border: 4px solid var(--deep-navy);
+  box-shadow: -15px 15px 0 var(--primary-purple);
+  overflow: hidden;
+  position: sticky;
+  top: 2rem;
+}
+
+.benefitsImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benefitsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefitCard {
+  background: var(--peaceful-white);
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary-purple);
+  transition: all 0.3s ease;
+}
+
+.benefitCard:hover {
+  transform: translateX(10px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.benefitTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  color: var(--deep-navy);
+  margin-bottom: 0.8rem;
+}
+
+.benefitDesc {
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.contactButtonContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contactButton {
+  padding: 1.2rem 4rem;
+  background: var(--deep-navy);
+  color: white;
+  border: 2px solid var(--deep-navy);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contactButton:hover {
+  background: transparent;
+  color: var(--deep-navy);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Section */
+.courseSection {
+  padding: 5rem 2rem;
+  background: var(--peaceful-white);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.courseIntro {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+.courseIcon {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.meditationIcon {
+  font-size: 4rem;
+  display: inline-block;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.certificationTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--deep-navy);
+  text-align: center;
+  margin: 2rem 0 3rem;
+  font-style: italic;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: center;
+}
+
+.donationCard {
+  background: var(--soft-cream);
+  padding: 0;
+  border: 3px solid var(--deep-navy);
+  overflow: hidden;
+}
+
+.donationTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--deep-navy);
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--peaceful-white);
+  border-bottom: 3px solid var(--deep-navy);
+}
+
+.priceTag {
+  background: var(--deep-navy);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.currency {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.amount {
+  font-family: 'Cinzel', serif;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.courseDetails {
+  padding: 2rem;
+  background: var(--peaceful-white);
+}
+
+.courseDetails p {
+  margin: 1rem 0;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.courseDetails strong {
+  color: var(--primary-purple);
+  font-weight: 600;
+}
+
+.teacherImage {
+  border: 4px solid var(--deep-navy);
+  box-shadow: 15px 15px 0 var(--primary-purple);
+  overflow: hidden;
+}
+
+.teacherImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.teacherImage:hover img {
+  transform: scale(1.05);
+}
+
+/* Rules Section */
+.rulesSection {
+  padding: 5rem 2rem;
+  background: var(--soft-cream);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.divider {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--gold-accent);
+  margin: 2rem 0;
+}
+
+.rulesContent {
+  margin-top: 3rem;
+}
+
+.rulesSubtitle {
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  color: var(--deep-navy);
+  margin: 2rem 0 1rem;
+}
+
+.rulesParagraph {
+  line-height: 1.8;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.linkText {
+  color: var(--primary-purple);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Contact Section */
+.contactSection {
+  padding: 5rem 2rem;
+  background: var(--peaceful-white);
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactTitle {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: var(--deep-navy);
+  margin-bottom: 1.5rem;
+}
+
+.phoneNumber {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: var(--primary-purple);
+  text-decoration: none;
+  display: inline-block;
+  margin: 1rem 0 2rem;
+  transition: all 0.3s ease;
+}
+
+.phoneNumber:hover {
+  color: var(--deep-navy);
+  transform: scale(1.05);
+}
+
+.mapContainer {
+  margin: 3rem 0;
+}
+
+
+.mapWrapper {
+  width: 100%;
+  height: 400px;
+  border: 3px solid var(--deep-navy);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.mapIframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+.address {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+
+.email a {
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email a:hover {
+  color: var(--deep-navy);
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .benefitsImage {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+  }
+
+  .vedic {
+    font-size: 2.5rem;
+  }
+
+  .chanting {
+    font-size: 2rem;
+  }
+
+  .omSymbol {
+    font-size: 4rem;
+  }
+
+  .whatSection,
+  .whySection,
+  .typesSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection {
+    padding: 3rem 1rem;
+  }
+
+  .mantraGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .videoPlaceholder {
+    height: 300px;
+  }
+
+  .omLarge {
+    font-size: 5rem;
+  }
+
+  .mapPlaceholder {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro {
+    font-size: 1rem;
+  }
+
+  .mantraGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .priceTag {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+}

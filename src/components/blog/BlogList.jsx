@@ -1,124 +1,124 @@
-import { useState } from "react";
-import styles from "../../assets/styles/blog/BlogList.module.css";
+import { useState } from 'react';
+import styles from '../../assets/styles/blog/BlogList.module.css';
 
-import blog1 from "../../assets/images/blog/5-Ways-to.webp";
-import blog2 from "../../assets/images/blog/500-.webp";
-import blog3 from "../../assets/images/blog/Sheetkari-.webp";
+import blog1 from '../../assets/images/blog/5-Ways-to.webp';
+import blog2 from '../../assets/images/blog/500-.webp';
+import blog3 from '../../assets/images/blog/Sheetkari-.webp';
 
 const categories = [
-  "All Posts",
-  "Kundalini Yoga",
-  "Yoga Online",
-  "Yoga Philosophy",
-  "Yoga Retreat",
-  "Yoga Training",
+  'All Posts',
+  'Kundalini Yoga',
+  'Yoga Online',
+  'Yoga Philosophy',
+  'Yoga Retreat',
+  'Yoga Training',
 ];
 
 const blogData = [
   {
     id: 1,
-    title: "Sheetkari Pranayama: Benefits and Techniques for Daily Yoga",
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
     excerpt:
-      "Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...",
-    category: "Yoga Philosophy",
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
     image: blog1,
-    link: "/blog/sheetkari-pranayama",
+    link: '/blog/sheetkari-pranayama',
   },
   {
     id: 2,
-    title: "5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India",
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
     excerpt:
-      "If you’re feeling the call to deepen your practice, here are five essential ways...",
-    category: "Yoga Training",
+      'If you’re feeling the call to deepen your practice, here are five essential ways...',
+    category: 'Yoga Training',
     image: blog2,
-    link: "/blog/prepare-ytt-rishikesh",
+    link: '/blog/prepare-ytt-rishikesh',
   },
   {
     id: 3,
     title:
-      "500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners",
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
     excerpt:
-      "Discover how a 500-hour yoga teacher training can elevate your teaching skills...",
-    category: "Yoga Training",
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
     image: blog3,
-    link: "/blog/500-hour-ytt",
+    link: '/blog/500-hour-ytt',
   },
   {
     id: 4,
-    title: "Sheetkari Pranayama: Benefits and Techniques for Daily Yoga",
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
     excerpt:
-      "Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...",
-    category: "Yoga Philosophy",
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
     image: blog1,
-    link: "/blog/sheetkari-pranayama",
+    link: '/blog/sheetkari-pranayama',
   },
   {
     id: 5,
-    title: "5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India",
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
     excerpt:
-      "If you’re feeling the call to deepen your practice, here are five essential ways...",
-    category: "Yoga Training",
+      'If you’re feeling the call to deepen your practice, here are five essential ways...',
+    category: 'Yoga Training',
     image: blog2,
-    link: "/blog/prepare-ytt-rishikesh",
+    link: '/blog/prepare-ytt-rishikesh',
   },
   {
     id: 6,
     title:
-      "500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners",
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
     excerpt:
-      "Discover how a 500-hour yoga teacher training can elevate your teaching skills...",
-    category: "Yoga Training",
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
     image: blog3,
-    link: "/blog/500-hour-ytt",
+    link: '/blog/500-hour-ytt',
   },
   {
     id: 7,
-    title: "Sheetkari Pranayama: Benefits and Techniques for Daily Yoga",
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
     excerpt:
-      "Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...",
-    category: "Yoga Philosophy",
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
     image: blog1,
-    link: "/blog/sheetkari-pranayama",
+    link: '/blog/sheetkari-pranayama',
   },
   {
     id: 8,
-    title: "5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India",
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
     excerpt:
-      "If you’re feeling the call to deepen your practice, here are five essential ways...",
-    category: "Yoga Training",
+      'If you’re feeling the call to deepen your practice, here are five essential ways...',
+    category: 'Yoga Training',
     image: blog2,
-    link: "/blog/prepare-ytt-rishikesh",
+    link: '/blog/prepare-ytt-rishikesh',
   },
   {
     id: 9,
     title:
-      "500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners",
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
     excerpt:
-      "Discover how a 500-hour yoga teacher training can elevate your teaching skills...",
-    category: "Yoga Training",
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
     image: blog3,
-    link: "/blog/500-hour-ytt",
+    link: '/blog/500-hour-ytt',
   },
 ];
 
 const BlogList = () => {
-  const [activeCategory, setActiveCategory] = useState("All Posts");
+  const [activeCategory, setActiveCategory] = useState('All Posts');
   const [visibleCount, setVisibleCount] = useState(6);
 
   const filteredBlogs =
-    activeCategory === "All Posts"
+    activeCategory === 'All Posts'
       ? blogData
-      : blogData.filter(blog => blog.category === activeCategory);
+      : blogData.filter((blog) => blog.category === activeCategory);
 
   return (
     <section className={styles.blogSection}>
       {/* CATEGORY TABS */}
       <div className={styles.tabs}>
-        {categories.map(cat => (
+        {categories.map((cat) => (
           <button
             key={cat}
             className={`${styles.tab} ${
-              activeCategory === cat ? styles.active : ""
+              activeCategory === cat ? styles.active : ''
             }`}
             onClick={() => {
               setActiveCategory(cat);
@@ -132,7 +132,7 @@ const BlogList = () => {
 
       {/* BLOG GRID */}
       <div className={styles.grid}>
-        {filteredBlogs.slice(0, visibleCount).map(blog => (
+        {filteredBlogs.slice(0, visibleCount).map((blog) => (
           <article key={blog.id} className={styles.card}>
             <div className={styles.imageWrap}>
               <img src={blog.image} alt={blog.title} />
@@ -155,7 +155,7 @@ const BlogList = () => {
         <div className={styles.viewMoreWrap}>
           <button
             className={styles.viewMore}
-            onClick={() => setVisibleCount(v => v + 3)}
+            onClick={() => setVisibleCount((v) => v + 3)}
           >
             View More Blogs
           </button>
