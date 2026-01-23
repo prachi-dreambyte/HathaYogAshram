@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/5daysyogaretreat.module.css';
+import bannerimage from "../../assets/images/5DaysYogaRetreat.webp"
 
 const YogaRetreat = () => {
   const features = [
@@ -139,7 +140,7 @@ const YogaRetreat = () => {
         </div>
 
         <img
-          src="https://images.pexels.com/photos/3822906/pexels-photo-3822906.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src={bannerimage}
           alt="Yoga Retreat"
           className={styles.heroImage}
         />

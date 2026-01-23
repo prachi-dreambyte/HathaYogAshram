@@ -36,8 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(155, 77, 150, 0.95), rgba(26, 26, 62, 0.9)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect fill="url(%23pattern)" width="1200" height="600"/></svg>');
+  background-image: url("../../images/Vedicmantra.webp");
   background-size: cover;
   background-position: center;
   overflow: hidden;

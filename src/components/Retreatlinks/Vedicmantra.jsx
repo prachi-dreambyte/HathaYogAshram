@@ -99,13 +99,13 @@ const VedicMantra = () => {
       {/* Hero Section */}
       <section className={`${styles.hero} ${isVisible ? styles.visible : ''}`}>
         <div className={styles.heroOverlay}></div>
-        <div className={styles.heroContent}>
+        {/* <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
             <span className={styles.vedic}>VEDIC MANTRA</span>
             <span className={styles.chanting}>CHANTING</span>
           </h1>
           <div className={styles.omSymbol}>ॐ</div>
-        </div>
+        </div> */}
       </section>
 
       {/* What is Vedic Mantra Section */}

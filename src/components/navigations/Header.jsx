@@ -35,16 +35,29 @@ const Header = () => {
           </div>
 
           <div className={styles.topRight}>
-            <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
-            <div className={styles.social}>
-              <Link to="#" className={styles.socialIcon}>
-                <FaFacebookF />
-              </Link>
-              <Link to="#" className={styles.socialIcon}>
-                <FaInstagram />
-              </Link>
-            </div>
-          </div>
+  <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
+
+  <div className={styles.social}>
+    <a
+      href="https://www.facebook.com/profile.php?id=100095297992781"
+      className={styles.socialIcon}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaFacebookF />
+    </a>
+
+    <a
+      href="https://www.instagram.com/hathayogashram/"
+      className={styles.socialIcon}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FaInstagram />
+    </a>
+  </div>
+</div>
+
         </div>
       </div>
 
@@ -73,6 +86,9 @@ const Header = () => {
                     </Link>
                     <Link to="/teachers" onClick={closeAll}>
                       Our Teachers
+                    </Link>
+                    <Link to="/Our-School" onClick={closeAll}>
+                      Our School
                     </Link>
                     <Link to="/" onClick={closeAll}>
                       Accommodation

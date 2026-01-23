@@ -169,16 +169,34 @@ const Footer = () => {
             </ul>
 
             <div className={styles.socials}>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaFacebookF />
-              </motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaInstagram />
-              </motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="#">
-                <FaYoutube />
-              </motion.a>
-            </div>
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.facebook.com/profile.php?id=100095297992781"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaFacebookF />
+  </motion.a>
+
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.instagram.com/hathayogashram/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram />
+  </motion.a>
+
+  <motion.a
+    whileHover={{ scale: 1.2 }}
+    href="https://www.youtube.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaYoutube />
+  </motion.a>
+</div>
+
           </motion.div>
         </motion.div>
 

@@ -22,6 +22,7 @@ import Yoga10DaysRetreat from 'components/Retreatlinks/Yoga10DaysRetreat';
 import Yoga20DaysRetreat from 'components/Retreatlinks/Yoga20DaysRetreat';
 import YogaRetreatRishikesh from 'components/Retreatlinks/YogaRetreatRishikesh';
 import AboutFounder from 'components/Aboutfounder/AboutFounder';
+import AboutSchool from 'components/Aboutschool/AboutSchool';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -59,6 +60,8 @@ export default function Main() {
         <Route path="/20-days-yoga-retreat" element={<Yoga20DaysRetreat />} />
         <Route path="/meditation-retreat" element={<YogaRetreatRishikesh />} />
         <Route path="/Our-Founder" element={<AboutFounder />} />
+         <Route path="/Our-School" element={<AboutSchool />} />
+
       </Routes>
 
       {showHeaderFooter && <Footer />}
