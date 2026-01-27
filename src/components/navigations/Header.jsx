@@ -151,9 +151,11 @@ const Header = () => {
           </nav>
 
           {/* LOGO */}
-          <div className={styles.logo}>
-            <img src={logo} alt="Yoga Logo" />
-          </div>
+        <div className={styles.logo}>
+<Link to="/">
+<img src={logo} alt="Yoga Logo" />
+</Link>
+</div>
 
           {/* RIGHT MENU */}
           <nav className={styles.desktopNav}>
