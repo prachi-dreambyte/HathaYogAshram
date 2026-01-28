@@ -23,6 +23,11 @@ import Yoga20DaysRetreat from 'components/Retreatlinks/Yoga20DaysRetreat';
 import YogaRetreatRishikesh from 'components/Retreatlinks/YogaRetreatRishikesh';
 import AboutFounder from 'components/Aboutfounder/AboutFounder';
 import AboutSchool from 'components/Aboutschool/AboutSchool';
+import YogaCourse100 from 'components/YogaCourses/YogaCourse100';
+import YogaCourse200 from 'components/YogaCourses/YogaCourse200';
+import YogaCourse300 from 'components/YogaCourses/YogaCourse300';
+import YogaCourse500 from 'components/YogaCourses/YogaCourse500';
+import AboutUs from 'components/AboutUs/AboutUs';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -65,6 +70,7 @@ export default function Main() {
              <Route path="/YogaCourse200" element={<YogaCourse200/>} />
              <Route path="/YogaCourse300" element={<YogaCourse300/>} />
              <Route path="/YogaCourse500" element={<YogaCourse500/>} />
+             <Route path="/AboutUs" element={<AboutUs/>} />
 
 
       </Routes>
