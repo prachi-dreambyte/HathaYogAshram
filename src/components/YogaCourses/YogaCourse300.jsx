@@ -6,28 +6,28 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/300hrs.webp';
 
 export default function YogaCourse300() {
-  const schools = [
-    {
-      name: 'Himalayan Yoga Institute',
-      image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
-      description: 'Premier yoga school offering advanced 300-hour teacher training in Rishikesh.'
-    },
-    {
-      name: 'Rishikesh Yogpeeth',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-      description: 'Traditional ashram with 20+ years of excellence in advanced yoga teacher training.'
-    },
-    {
-      name: 'Sivananda Ashram',
-      image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop',
-      description: 'World-renowned center for authentic Sivananda advanced yoga training.'
-    },
-    {
-      name: 'Parmarth Niketan',
-      image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&h=400&fit=crop',
-      description: 'Largest ashram in Rishikesh offering comprehensive RYT-300 certification.'
-    }
-  ];
+  // const schools = [
+  //   {
+  //     name: 'Himalayan Yoga Institute',
+  //     image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
+  //     description: 'Premier yoga school offering advanced 300-hour teacher training in Rishikesh.'
+  //   },
+  //   {
+  //     name: 'Rishikesh Yogpeeth',
+  //     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+  //     description: 'Traditional ashram with 20+ years of excellence in advanced yoga teacher training.'
+  //   },
+  //   {
+  //     name: 'Sivananda Ashram',
+  //     image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop',
+  //     description: 'World-renowned center for authentic Sivananda advanced yoga training.'
+  //   },
+  //   {
+  //     name: 'Parmarth Niketan',
+  //     image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&h=400&fit=crop',
+  //     description: 'Largest ashram in Rishikesh offering comprehensive RYT-300 certification.'
+  //   }
+  // ];
 
   const whyRishikesh = [
     {
@@ -52,16 +52,16 @@ export default function YogaCourse300() {
     }
   ];
 
-  const courseFeatures = [
-    { icon: '🎓', title: 'Yoga Alliance RYT-300', desc: 'Advanced globally recognized certification' },
-    { icon: '👨‍🏫', title: 'Lineage-Holding Masters', desc: '20-40+ years teaching experience' },
-    { icon: '📚', title: 'Advanced Curriculum', desc: '300+ hours of specialized training' },
-    { icon: '🏠', title: 'Ashram Living', desc: 'Traditional residential immersion' },
-    { icon: '🥗', title: 'Sattvic Vegetarian Meals', desc: '3 organic meals daily' },
-    { icon: '👥', title: 'Small Group Size', desc: 'Maximum 12 students per batch' },
-    { icon: '🔄', title: 'RYT-500 Pathway', desc: 'Complete your 500-hour registration' },
-    { icon: '✈️', title: 'Airport Pickup', desc: 'Free pickup from Dehradun airport' }
-  ];
+  // const courseFeatures = [
+  //   { icon: '🎓', title: 'Yoga Alliance RYT-300', desc: 'Advanced globally recognized certification' },
+  //   { icon: '👨‍🏫', title: 'Lineage-Holding Masters', desc: '20-40+ years teaching experience' },
+  //   { icon: '📚', title: 'Advanced Curriculum', desc: '300+ hours of specialized training' },
+  //   { icon: '🏠', title: 'Ashram Living', desc: 'Traditional residential immersion' },
+  //   { icon: '🥗', title: 'Sattvic Vegetarian Meals', desc: '3 organic meals daily' },
+  //   { icon: '👥', title: 'Small Group Size', desc: 'Maximum 12 students per batch' },
+  //   { icon: '🔄', title: 'RYT-500 Pathway', desc: 'Complete your 500-hour registration' },
+  //   { icon: '✈️', title: 'Airport Pickup', desc: 'Free pickup from Dehradun airport' }
+  // ];
 
   const curriculumBreakdown = [
     { subject: 'Advanced Asana & Techniques', hours: 80, color: '#8B4789' },
@@ -156,26 +156,26 @@ export default function YogaCourse300() {
     { time: '8:30 PM', activity: 'Self-Study / Integration / Satsang (Discourse)' }
   ];
 
-  const teachers = [
-    {
-      name: 'Yogacharya Ramesh',
-      title: 'Lead Instructor | E-RYT 500',
-      image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w-600&h=400&fit=crop',
-      bio: '25+ years teaching experience, specializes in Ashtanga, advanced adjustments, and therapeutic applications.'
-    },
-    {
-      name: 'Dr. Anjali Sharma',
-      title: 'Philosophy & Yoga Therapy Expert',
-      image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w-600&h=400&fit=crop',
-      bio: 'PhD in Yoga Philosophy, certified yoga therapist, author of five books on advanced yogic sciences.'
-    },
-    {
-      name: 'Swami Devananda',
-      title: 'Meditation & Pranayama Master',
-      image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w-600&h=400&fit=crop',
-      bio: '40+ years in meditation practice, expert in Himalayan meditation and advanced pranayama techniques.'
-    }
-  ];
+  // const teachers = [
+  //   {
+  //     name: 'Yogacharya Ramesh',
+  //     title: 'Lead Instructor | E-RYT 500',
+  //     image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w-600&h=400&fit=crop',
+  //     bio: '25+ years teaching experience, specializes in Ashtanga, advanced adjustments, and therapeutic applications.'
+  //   },
+  //   {
+  //     name: 'Dr. Anjali Sharma',
+  //     title: 'Philosophy & Yoga Therapy Expert',
+  //     image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w-600&h=400&fit=crop',
+  //     bio: 'PhD in Yoga Philosophy, certified yoga therapist, author of five books on advanced yogic sciences.'
+  //   },
+  //   {
+  //     name: 'Swami Devananda',
+  //     title: 'Meditation & Pranayama Master',
+  //     image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w-600&h=400&fit=crop',
+  //     bio: '40+ years in meditation practice, expert in Himalayan meditation and advanced pranayama techniques.'
+  //   }
+  // ];
 
   const roomOptions = [
     {

@@ -120,10 +120,18 @@ const Footer = () => {
                 {' '}
                 <Link to="/vedic-mantra">Vedic mantra</Link>
               </li>
-              <li>100 Hour Yoga TTC</li>
-              <li>200 Hour Yoga TTC</li>
-              <li>300 Hour Yoga TTC</li>
-              <li>500 Hour Yoga TTC</li>
+              <li>
+                <Link to="/YogaCourse100">100 Hour Yoga TTC</Link>
+              </li>
+              <li>
+                <Link to="/YogaCourse200">200 Hour Yoga TTC</Link>
+              </li>
+              <li>
+                <Link to="/YogaCourse300">300 Hour Yoga TTC</Link>
+              </li>
+              <li>
+                <Link to="/YogaCourse500">500 Hour Yoga TTC</Link>
+              </li>
             </ul>
           </motion.div>
 

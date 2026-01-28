@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../../assets/styles/YogaCourse/100Hours.module.css';
 import Refund from 'components/Refund/refund';
 import OurCourses from 'components/OurCourses/OurCourses';
@@ -6,7 +6,6 @@ import Hours24 from 'components/Hours24/Hours24';
 import heroVideo from '../../assets/images/100hrs.webp';
 
 export default function YogaCourse100() {
-  const [activeSection, setActiveSection] = useState('overview');
 
   const schools = [
     {

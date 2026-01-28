@@ -7,6 +7,7 @@ import yoga1 from '../../assets/images/about-vys1.jpg';
 import yoga2 from '../../assets/images/about-vys2.jpg';
 import yoga3 from '../../assets/images/about-vys2.jpg';
 import yoga4 from '../../assets/images/about-vys1.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -46,6 +47,7 @@ const YogaSchool = () => {
     { icon: '🧘', text: 'International Yoga Asana Champions' },
     { icon: '🌍', text: 'Trusted by 13,000+ Students Worldwide' },
   ];
+const navigate = useNavigate();
 
   return (
     <motion.section
@@ -136,18 +138,22 @@ const YogaSchool = () => {
   </p>
 
   <div className={styles.buttons}>
-    {['200 Hour Yoga TTC', '300 Hour Yoga TTC', '500 Hour Yoga TTC'].map(
-      (btn, i) => (
-        <motion.button
-          key={i}
-          whileHover={{ y: -4, scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {btn}
-        </motion.button>
-      )
-    )}
-  </div>
+  {[
+    { label: '200 Hour Yoga TTC', path: '/YogaCourse200' },
+    { label: '300 Hour Yoga TTC', path: '/YogaCourse300' },
+    { label: '500 Hour Yoga TTC', path: '/YogaCourse500' },
+  ].map((item, i) => (
+    <motion.button
+      key={i}
+      whileHover={{ y: -4, scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={() => navigate(item.path)}
+    >
+      {item.label}
+    </motion.button>
+  ))}
+</div>
+
 </motion.div>
 
           {/* RIGHT IMAGES */}

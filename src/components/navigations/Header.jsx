@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../../assets/styles/Header.module.css';
 import logo from '../../assets/images/logo.png';
@@ -8,6 +8,7 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef(null);
 
   const toggleDropdown = (name) => {
     setOpenDropdown(openDropdown === name ? null : name);
@@ -17,6 +18,17 @@ const Header = () => {
     setOpenDropdown(null);
     setMobileOpen(false);
   };
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -35,44 +47,42 @@ const Header = () => {
           </div>
 
           <div className={styles.topRight}>
-  <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
-
-  <div className={styles.social}>
-    <a
-      href="https://www.facebook.com/profile.php?id=100095297992781"
-      className={styles.socialIcon}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaFacebookF />
-    </a>
-
-    <a
-      href="https://www.instagram.com/hathayogashram/"
-      className={styles.socialIcon}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <FaInstagram />
-    </a>
-  </div>
-</div>
-
+            <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
+            <div className={styles.social}>
+              <a
+                href="https://www.facebook.com/profile.php?id=100095297992781"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                href="https://www.instagram.com/hathayogashram/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* ===== MAIN HEADER ===== */}
       <header className={styles.header}>
-        <div className={styles.container}>
+        <div className={styles.container} ref={navRef}>
           {/* LEFT MENU */}
           <nav className={styles.desktopNav}>
-            <Link to="/" onClick={closeAll}>
-              Home
-            </Link>
+            <Link to="/" onClick={closeAll}>Home</Link>
 
             {/* ABOUT */}
             <div className={styles.dropdownWrap}>
-              <button onClick={() => toggleDropdown('about')}>About ▾</button>
+              <button
+                onClick={() => toggleDropdown('about')}
+                aria-expanded={openDropdown === 'about'}
+              >
+                About ▾
+              </button>
               <AnimatePresence>
                 {openDropdown === 'about' && (
                   <motion.div
@@ -81,21 +91,11 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/Our-Founder" onClick={closeAll}>
-                      Founder
-                    </Link>
-                    <Link to="/teachers" onClick={closeAll}>
-                      Our Teachers
-                    </Link>
-                    <Link to="/Our-School" onClick={closeAll}>
-                      Our School
-                    </Link>
-                    <Link to="/" onClick={closeAll}>
-                      Accommodation
-                    </Link>
-                    <Link to="/gallery" onClick={closeAll}>
-                      Gallery
-                    </Link>
+                    <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
+                    <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
+                    <Link to="/Our-School" onClick={closeAll}>Our School</Link>
+                    <Link to="/" onClick={closeAll}>Accommodation</Link>
+                    <Link to="/gallery" onClick={closeAll}>Gallery</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -103,7 +103,10 @@ const Header = () => {
 
             {/* RISHIKESH TTC */}
             <div className={styles.dropdownWrap}>
-              <button onClick={() => toggleDropdown('rishikesh')}>
+              <button
+                onClick={() => toggleDropdown('rishikesh')}
+                aria-expanded={openDropdown === 'rishikesh'}
+              >
                 Rishikesh TTC ▾
               </button>
               <AnimatePresence>
@@ -114,15 +117,10 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/" onClick={closeAll}>
-                      200 Hour TTC
-                    </Link>
-                    <Link to="/" onClick={closeAll}>
-                      300 Hour TTC
-                    </Link>
-                    <Link to="/" onClick={closeAll}>
-                      500 Hour TTC
-                    </Link>
+                    <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
+                    <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
+                    <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
+                    <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -130,7 +128,10 @@ const Header = () => {
 
             {/* SHORT COURSE */}
             <div className={styles.dropdownWrap}>
-              <button onClick={() => toggleDropdown('short')}>
+              <button
+                onClick={() => toggleDropdown('short')}
+                aria-expanded={openDropdown === 'short'}
+              >
                 Short Course ▾
               </button>
               <AnimatePresence>
@@ -141,12 +142,8 @@ const Header = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                   >
-                    <Link to="/" onClick={closeAll}>
-                      Meditation
-                    </Link>
-                    <Link to="/" onClick={closeAll}>
-                      Pranayama
-                    </Link>
+                    <Link to="/" onClick={closeAll}>Meditation</Link>
+                    <Link to="/" onClick={closeAll}>Pranayama</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -154,21 +151,17 @@ const Header = () => {
           </nav>
 
           {/* LOGO */}
-          <div className={styles.logo}>
-            <img src={logo} alt="Yoga Logo" />
-          </div>
+        <div className={styles.logo}>
+<Link to="/">
+<img src={logo} alt="Yoga Logo" />
+</Link>
+</div>
 
           {/* RIGHT MENU */}
           <nav className={styles.desktopNav}>
-            <Link to="/" onClick={closeAll}>
-              Online Courses
-            </Link>
-            <Link to="/" onClick={closeAll}>
-              Payment
-            </Link>
-            <Link to="/contact-us" onClick={closeAll}>
-              Contact
-            </Link>
+            <Link to="/" onClick={closeAll}>Online Courses</Link>
+            <Link to="/" onClick={closeAll}>Payment</Link>
+            <Link to="/contact-us" onClick={closeAll}>Contact</Link>
             <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
               Apply Today
             </Link>
@@ -192,27 +185,29 @@ const Header = () => {
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
             >
-              <Link to="/" onClick={closeAll}>
-                Home
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                About
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                Rishikesh TTC
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                Short Course
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                Online Courses
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                Payment
-              </Link>
-              <Link to="/" onClick={closeAll}>
-                Contact
-              </Link>
+              <Link to="/" onClick={closeAll}>Home</Link>
+
+              <span className={styles.mobileTitle}>About</span>
+              <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
+              <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
+              <Link to="/Our-School" onClick={closeAll}>Our School</Link>
+              <Link to="/" onClick={closeAll}>Accommodation</Link>
+              <Link to="/gallery" onClick={closeAll}>Gallery</Link>
+
+              <span className={styles.mobileTitle}>Rishikesh TTC</span>
+              <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
+              <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
+              <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
+              <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+
+              <span className={styles.mobileTitle}>Short Course</span>
+              <Link to="/" onClick={closeAll}>Meditation</Link>
+              <Link to="/" onClick={closeAll}>Pranayama</Link>
+
+              <Link to="/" onClick={closeAll}>Online Courses</Link>
+              <Link to="/" onClick={closeAll}>Payment</Link>
+              <Link to="/contact-us" onClick={closeAll}>Contact</Link>
+
               <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
                 Apply Today
               </Link>

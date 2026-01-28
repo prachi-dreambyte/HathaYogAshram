@@ -127,11 +127,6 @@
     z-index: 1;
 }
 
-@media (min-width: 768px) {
-    .heroContent {
-        grid-template-columns: 1fr 1fr;
-    }
-}
 
 .heroLeft {
     display: flex;
