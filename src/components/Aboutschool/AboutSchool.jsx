@@ -76,7 +76,9 @@ const AboutSchool = () => {
 
       {/* Main Content */}
       <div className={styles.content}>
-        {/* WORLD PEACE YOGA SCHOOL */}
+        {/* =============================================
+            WORLD PEACE YOGA SCHOOL - COMPLETE CONTENT
+            ============================================= */}
         {activeTab === 'worldpeace' && (
           <>
             {activeSection === 'about' && (
@@ -346,10 +348,72 @@ const AboutSchool = () => {
                 </div>
               </div>
             )}
+
+            {activeSection === 'edge' && (
+              <div className={styles.schoolCard}>
+                <div className={styles.cardHeader}>
+                  <Zap size={40} className={styles.headerIcon} />
+                  <h2 className={styles.cardTitle}>Our Competitive Edge</h2>
+                </div>
+
+                <div className={styles.contentText}>
+                  <h3>What Sets World Peace Yoga School Apart</h3>
+                  <p>World Peace Yoga School distinguishes itself through a combination of authentic teachings, experienced faculty, and a nurturing environment that supports both personal and professional growth.</p>
+
+                  <div className={styles.edgeGrid}>
+                    <div className={styles.edgeCard}>
+                      <Award size={32} className={styles.edgeIcon} />
+                      <h4>Authentic Lineage</h4>
+                      <p>Direct teachings from masters who have spent years in the Himalayan tradition, ensuring authenticity in every practice and philosophy shared.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Users size={32} className={styles.edgeIcon} />
+                      <h4>Personal Attention</h4>
+                      <p>Small class sizes ensure each student receives individualized guidance and support throughout their journey.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Globe size={32} className={styles.edgeIcon} />
+                      <h4>Global Recognition</h4>
+                      <p>Graduates from World Peace Yoga School are recognized worldwide for their depth of knowledge and teaching capabilities.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Heart size={32} className={styles.edgeIcon} />
+                      <h4>Community Focus</h4>
+                      <p>Strong emphasis on building lasting connections and a supportive global yoga family.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <MapPin size={32} className={styles.edgeIcon} />
+                      <h4>Prime Location</h4>
+                      <p>Situated in the heart of Rishikesh with views of the Ganges and Himalayas, providing the perfect environment for spiritual growth.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Shield size={32} className={styles.edgeIcon} />
+                      <h4>Comprehensive Curriculum</h4>
+                      <p>Well-rounded programs covering all aspects of yoga from asana to philosophy, anatomy to teaching methodology.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.certificationBox}>
+                    <Lightbulb size={36} />
+                    <div>
+                      <h3>Continuous Growth</h3>
+                      <p>We believe in the continuous evolution of our students and teachers. Our alumni network provides ongoing support, advanced training opportunities, and a platform for collaboration and growth long after graduation.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </>
         )}
 
-        {/* VINYASA YOGASHRAM */}
+        {/* =============================================
+            VINYASA YOGASHRAM - COMPLETE CONTENT
+            ============================================= */}
         {activeTab === 'vinyasa' && (
           <>
             {activeSection === 'about' && (
@@ -501,6 +565,43 @@ const AboutSchool = () => {
                       <p>We believe in imparting not just the physical aspects of yoga, but also the spiritual and philosophical dimensions that make yoga a complete practice for life transformation.</p>
                     </div>
                   </div>
+
+                  <h3>Comprehensive Curriculum</h3>
+                  <p>Our teaching methodology is designed to provide students with a well-rounded education in all aspects of yoga. From the physical practice of asanas to the subtle energy work of pranayama, from the philosophical teachings of the ancient texts to the practical application of teaching methodology, we cover it all.</p>
+
+                  <div className={styles.styleGrid}>
+                    <div className={styles.styleCard}>
+                      <Sun size={32} />
+                      <h4>Asana Practice</h4>
+                      <p>Detailed instruction in traditional and modern yoga postures</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <Wind size={32} />
+                      <h4>Pranayama</h4>
+                      <p>Breath control techniques for energy management</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <BookOpen size={32} />
+                      <h4>Philosophy</h4>
+                      <p>Study of yogic texts and spiritual wisdom</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <Users size={32} />
+                      <h4>Teaching Skills</h4>
+                      <p>Professional development and teaching methodology</p>
+                    </div>
+                  </div>
+
+                  <h3>Traditional Approach with Modern Application</h3>
+                  <p>While we honor the ancient traditions of yoga, we also understand the needs of modern practitioners. Our courses are designed to make ancient wisdom accessible and applicable to contemporary life, ensuring that graduates can teach effectively in any setting.</p>
+
+                  <div className={styles.certificationBox}>
+                    <Shield size={36} />
+                    <div>
+                      <h3>Internationally Recognized Certification</h3>
+                      <p>Upon successful completion of our programs, students receive internationally recognized Yoga Alliance certification, enabling them to teach yoga anywhere in the world.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -513,12 +614,14 @@ const AboutSchool = () => {
                 </div>
 
                 <div className={styles.contentText}>
+                  <p>Vinyasa Yogashram is built on a foundation of core values that guide everything we do:</p>
+
                   <div className={styles.valuesList}>
                     <div className={styles.valueItem}>
                       <Heart size={28} className={styles.valueIcon} />
                       <div>
                         <h4>Authenticity</h4>
-                        <p>Staying true to ancient yogic traditions while adapting to modern needs</p>
+                        <p>Staying true to ancient yogic traditions while adapting to modern needs. We ensure that every teaching is rooted in authentic practice passed down through generations.</p>
                       </div>
                     </div>
 
@@ -526,7 +629,7 @@ const AboutSchool = () => {
                       <Users size={28} className={styles.valueIcon} />
                       <div>
                         <h4>Community</h4>
-                        <p>Building a supportive global community of yoga practitioners</p>
+                        <p>Building a supportive global community of yoga practitioners who uplift and inspire each other on the path of yoga.</p>
                       </div>
                     </div>
 
@@ -534,9 +637,90 @@ const AboutSchool = () => {
                       <Award size={28} className={styles.valueIcon} />
                       <div>
                         <h4>Excellence</h4>
-                        <p>Maintaining high standards in yoga education and practice</p>
+                        <p>Maintaining high standards in yoga education and practice, ensuring every graduate is well-prepared to share yoga with confidence and competence.</p>
                       </div>
                     </div>
+
+                    <div className={styles.valueItem}>
+                      <Leaf size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Holistic Development</h4>
+                        <p>Focusing on the complete development of students - physical, mental, emotional, and spiritual - creating well-rounded yoga practitioners and teachers.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Lightbulb size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Continuous Learning</h4>
+                        <p>Encouraging lifelong learning and growth, recognizing that the journey of yoga is ongoing and ever-evolving.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Globe size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Global Perspective</h4>
+                        <p>Embracing diversity and welcoming students from all backgrounds, creating a truly international yoga community.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeSection === 'edge' && (
+              <div className={styles.schoolCard}>
+                <div className={styles.cardHeader}>
+                  <Zap size={40} className={styles.headerIcon} />
+                  <h2 className={styles.cardTitle}>Our Competitive Edge</h2>
+                </div>
+
+                <div className={styles.contentText}>
+                  <h3>What Makes Vinyasa Yogashram Special</h3>
+                  <p>Vinyasa Yogashram stands out in the crowded field of yoga teacher training through our unique combination of traditional wisdom, experienced faculty, and commitment to student success.</p>
+
+                  <div className={styles.edgeGrid}>
+                    <div className={styles.edgeCard}>
+                      <MapPin size={32} className={styles.edgeIcon} />
+                      <h4>Multiple Locations</h4>
+                      <p>With campuses in Rishikesh, Goa, and Nepal, we offer diverse environments for yoga study, each with its unique spiritual and natural beauty.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Award size={32} className={styles.edgeIcon} />
+                      <h4>Experienced Faculty</h4>
+                      <p>Our teachers bring decades of combined experience, ensuring students receive the highest quality instruction in all aspects of yoga.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Users size={32} className={styles.edgeIcon} />
+                      <h4>Personal Attention</h4>
+                      <p>Small class sizes ensure every student receives individualized guidance and support throughout their training.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Shield size={32} className={styles.edgeIcon} />
+                      <h4>Yoga Alliance Certified</h4>
+                      <p>All our programs are registered with Yoga Alliance, providing internationally recognized certification upon completion.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Heart size={32} className={styles.edgeIcon} />
+                      <h4>Supportive Community</h4>
+                      <p>Join a global network of Vinyasa Yogashram graduates who continue to support and inspire each other long after training.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Lightbulb size={32} className={styles.edgeIcon} />
+                      <h4>Comprehensive Programs</h4>
+                      <p>From 100-hour introductory courses to 500-hour advanced training, we offer programs for every level of practitioner.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.inspirationBox}>
+                    <h3><Sparkles size={24} /> Join Our Community</h3>
+                    <p>When you train at Vinyasa Yogashram, you're not just earning a certification - you're joining a family of passionate yoga practitioners dedicated to spreading the light of yoga throughout the world.</p>
                   </div>
                 </div>
               </div>
@@ -544,7 +728,9 @@ const AboutSchool = () => {
           </>
         )}
 
-        {/* SATTVA YOGA ACADEMY */}
+        {/* =============================================
+            SATTVA YOGA ACADEMY - COMPLETE CONTENT
+            ============================================= */}
         {activeTab === 'sattva' && (
           <>
             {activeSection === 'about' && (
@@ -637,6 +823,35 @@ const AboutSchool = () => {
                     <p>Sattva Yoga is the experiencing and sharing of liberation and freedom on every level of our existence. It is coming together for that common purpose and to end the conflict in our lives.</p>
                     <p>Sattva Yoga includes and transcends all branches of yoga, it is simultaneously a whole and a part, and by this fact of the coming together, a new layer of intelligence is occurring. Sattva Yoga absorbs ever new ways of being.</p>
                   </div>
+
+                  <h3>Our Mission</h3>
+                  <p>To create a global community of conscious individuals who embody the principles of Sattva Yoga in their daily lives, spreading peace, awareness, and transformation wherever they go.</p>
+
+                  <div className={styles.missionGrid}>
+                    <div className={styles.missionCard}>
+                      <Heart size={36} className={styles.missionIcon} />
+                      <h3>Authentic Transformation</h3>
+                      <p>Providing genuine transformative experiences that go beyond superficial understanding to create deep, lasting change in practitioners' lives.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Globe size={36} className={styles.missionIcon} />
+                      <h3>Global Community</h3>
+                      <p>Building a worldwide network of Sattva practitioners who support each other in their journey of growth and awakening.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Leaf size={36} className={styles.missionIcon} />
+                      <h3>Environmental Consciousness</h3>
+                      <p>Promoting awareness and responsibility for our planet and all living beings through yogic principles and practices.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Sparkles size={36} className={styles.missionIcon} />
+                      <h3>Holistic Living</h3>
+                      <p>Teaching yoga as a complete way of life that encompasses all aspects of human existence - physical, mental, emotional, and spiritual.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -698,6 +913,57 @@ const AboutSchool = () => {
                   <div className={styles.inspirationBox}>
                     <h3><Flower2 size={24} /> Living Life as Practice</h3>
                     <p className={styles.quote}>On the path of Sattva Yoga, individuals live life as a practice. A Sattva Yogi is always a student, even as a teacher. A Sattva Yogi is committed to the path, a sincere practitioner.</p>
+                  </div>
+
+                  <h3>Core Values</h3>
+                  <div className={styles.valuesList}>
+                    <div className={styles.valueItem}>
+                      <Heart size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Authenticity</h4>
+                        <p>Being true to oneself and to the ancient wisdom traditions while remaining relevant to contemporary life.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Sparkles size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Radical Aliveness</h4>
+                        <p>Embracing life fully with passion, presence, and vitality in every moment.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Globe size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Unity Consciousness</h4>
+                        <p>Recognizing the interconnectedness of all beings and living from a place of compassion and service.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Leaf size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Environmental Stewardship</h4>
+                        <p>Taking responsibility for the well-being of our planet and all its inhabitants.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <Users size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Community & Sangha</h4>
+                        <p>Supporting each other in growth and transformation through sacred relationships.</p>
+                      </div>
+                    </div>
+
+                    <div className={styles.valueItem}>
+                      <TrendingUp size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Continuous Evolution</h4>
+                        <p>Embracing growth and change as essential aspects of the yogic path.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -893,7 +1159,9 @@ const AboutSchool = () => {
           </>
         )}
 
-        {/* RISHIKESH YOGKULAM */}
+        {/* =============================================
+            RISHIKESH YOGKULAM - COMPLETE CONTENT
+            ============================================= */}
         {activeTab === 'yogkulam' && (
           <>
             {activeSection === 'about' && (
@@ -979,12 +1247,39 @@ const AboutSchool = () => {
                 <div className={styles.contentText}>
                   <div className={styles.goalBox}>
                     <h3>Our Vision</h3>
-                    <p>To create a global yoga family where individuals from all walks of life come together to learn, grow, and transform through the ancient wisdom of yoga.</p>
+                    <p>To create a global yoga family where individuals from all walks of life come together to learn, grow, and transform through the ancient wisdom of yoga. We envision a world where yoga is accessible to everyone, regardless of their background, and where the teachings of yoga bring peace, health, and spiritual awakening to all.</p>
                   </div>
 
                   <div className={styles.goalBox}>
                     <h3>Our Mission</h3>
                     <p>To provide authentic, high-quality yoga teacher training that honors traditional teachings while making them accessible and relevant to the modern world. We strive to create a supportive community where every student feels valued and empowered to share the gift of yoga with others.</p>
+                  </div>
+
+                  <h3>Our Core Objectives</h3>
+                  <div className={styles.missionGrid}>
+                    <div className={styles.missionCard}>
+                      <Heart size={36} className={styles.missionIcon} />
+                      <h3>Family Environment</h3>
+                      <p>Creating a warm, inclusive environment where every student feels part of the Yogkulam family, fostering deep connections and lasting friendships.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Award size={36} className={styles.missionIcon} />
+                      <h3>Quality Education</h3>
+                      <p>Providing comprehensive, high-standard yoga education that prepares students to become confident, knowledgeable teachers.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Globe size={36} className={styles.missionIcon} />
+                      <h3>Cultural Bridge</h3>
+                      <p>Bridging ancient Indian wisdom with modern global perspectives, making yoga accessible and relevant to practitioners worldwide.</p>
+                    </div>
+
+                    <div className={styles.missionCard}>
+                      <Leaf size={36} className={styles.missionIcon} />
+                      <h3>Holistic Growth</h3>
+                      <p>Supporting the complete development of each student - physically, mentally, emotionally, and spiritually.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1000,26 +1295,61 @@ const AboutSchool = () => {
                 <div className={styles.contentText}>
                   <p>At Rishikesh Yogkulam®, our teaching approach combines traditional Himalayan wisdom with modern pedagogical methods to create a comprehensive and transformative learning experience.</p>
 
+                  <h3>Our Teaching Philosophy</h3>
+                  <p>We believe that yoga is more than just physical exercise - it's a complete science of life. Our teaching methodology reflects this understanding by integrating all aspects of yoga: asana, pranayama, meditation, philosophy, and lifestyle practices. We aim to create teachers who not only know yoga but who live yoga.</p>
+
                   <div className={styles.featureGrid}>
                     <div className={styles.featureCard}>
                       <Users size={32} />
                       <h4>Small Group Sizes</h4>
-                      <p>We value individual attention with only 15-20 students per group for personalized learning</p>
+                      <p>We value individual attention with only 15-20 students per group for personalized learning and deeper teacher-student connections.</p>
                     </div>
                     <div className={styles.featureCard}>
                       <Shield size={32} />
                       <h4>Safety First</h4>
-                      <p>Great focus on alignment and adjustment classes to perform poses safely</p>
+                      <p>Great focus on alignment and adjustment classes to perform poses safely and teach them with confidence and care.</p>
                     </div>
                     <div className={styles.featureCard}>
                       <Layers size={32} />
                       <h4>Balanced Approach</h4>
-                      <p>Blending traditional knowledge with modern scientific principles</p>
+                      <p>Blending traditional knowledge with modern scientific principles for a comprehensive understanding of yoga.</p>
                     </div>
                     <div className={styles.featureCard}>
                       <Award size={32} />
                       <h4>Professionalism</h4>
-                      <p>Every detail taken care of with professional guidance and experienced teachers</p>
+                      <p>Every detail taken care of with professional guidance and experienced teachers dedicated to your success.</p>
+                    </div>
+                  </div>
+
+                  <h3>Curriculum Highlights</h3>
+                  <div className={styles.styleGrid}>
+                    <div className={styles.styleCard}>
+                      <Sun size={32} />
+                      <h4>Hatha Yoga</h4>
+                      <p>Traditional practice with focus on alignment and holding</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <Zap size={32} />
+                      <h4>Ashtanga Vinyasa</h4>
+                      <p>Dynamic sequences with breath synchronization</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <Wind size={32} />
+                      <h4>Pranayama</h4>
+                      <p>Advanced breathing techniques for energy control</p>
+                    </div>
+                    <div className={styles.styleCard}>
+                      <Heart size={32} />
+                      <h4>Meditation</h4>
+                      <p>Various meditation practices for inner peace</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.certificationBox}>
+                    <Shield size={36} />
+                    <div>
+                      <h3>Yoga Alliance Certification</h3>
+                      <p>All our courses are registered with Yoga Alliance USA, ensuring that your certification is recognized worldwide and opens doors to teaching opportunities globally.</p>
                     </div>
                   </div>
                 </div>
@@ -1034,6 +1364,8 @@ const AboutSchool = () => {
                 </div>
 
                 <div className={styles.contentText}>
+                  <p>Rishikesh Yogkulam is built on strong foundational values that guide our teaching, community, and approach to yoga:</p>
+
                   <div className={styles.valuesList}>
                     <div className={styles.valueItem}>
                       <Heart size={28} className={styles.valueIcon} />
@@ -1062,7 +1394,7 @@ const AboutSchool = () => {
                     <div className={styles.valueItem}>
                       <Layers size={28} className={styles.valueIcon} />
                       <div>
-                        <h4>A Balance Approach</h4>
+                        <h4>A Balanced Approach</h4>
                         <p>At Yogkulam we offer holistic teacher training programs which explore yoga not only as physical practice but also as a lifestyle and spiritual practice. We blend traditional knowledge with modern scientific principles. While the learning atmosphere is serious, at the same time we also have fun and enjoyable moments to make your experience more memorable.</p>
                       </div>
                     </div>
@@ -1074,12 +1406,114 @@ const AboutSchool = () => {
                         <p>Every detail of the training is well taken care of with professional guidance. We offer the best teaching environment and a team of professional teachers to help you learn.</p>
                       </div>
                     </div>
+
+                    <div className={styles.valueItem}>
+                      <Sparkles size={28} className={styles.valueIcon} />
+                      <div>
+                        <h4>Family Spirit</h4>
+                        <p>True to our name "Yogkulam" (Yoga Family), we create an environment where everyone - students, teachers, and staff - work together as one family, supporting each other's growth and celebrating successes together.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeSection === 'edge' && (
+              <div className={styles.schoolCard}>
+                <div className={styles.cardHeader}>
+                  <Zap size={40} className={styles.headerIcon} />
+                  <h2 className={styles.cardTitle}>What Sets Us Apart</h2>
+                </div>
+
+                <div className={styles.contentText}>
+                  <h3>The Yogkulam Advantage</h3>
+                  <p>Rishikesh Yogkulam has quickly established itself as one of the premier yoga teacher training schools in Rishikesh through our unique approach and unwavering commitment to quality.</p>
+
+                  <div className={styles.edgeGrid}>
+                    <div className={styles.edgeCard}>
+                      <Heart size={32} className={styles.edgeIcon} />
+                      <h4>Family-Like Environment</h4>
+                      <p>Unlike larger, impersonal yoga schools, Yogkulam maintains a close-knit family atmosphere where every student is known, valued, and supported individually.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Users size={32} className={styles.edgeIcon} />
+                      <h4>Experienced Founders</h4>
+                      <p>Founded by Amit Ji and Dhirendra Ji, two of the most respected yoga teachers in Rishikesh, with over 12+ years of teaching experience each.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Award size={32} className={styles.edgeIcon} />
+                      <h4>Proven Track Record</h4>
+                      <p>Over 5,000 successful graduates since 2018, with students going on to teach and inspire others around the world.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Globe size={32} className={styles.edgeIcon} />
+                      <h4>International Community</h4>
+                      <p>Students from over 50 countries have trained at Yogkulam, creating a truly diverse and enriching learning environment.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Shield size={32} className={styles.edgeIcon} />
+                      <h4>Safety & Alignment Focus</h4>
+                      <p>Special emphasis on proper alignment and safe practice, ensuring students can teach with confidence and prevent injuries.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Layers size={32} className={styles.edgeIcon} />
+                      <h4>Comprehensive Curriculum</h4>
+                      <p>Covering all aspects of yoga from asana to philosophy, anatomy to teaching methodology, meditation to pranayama.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <MapPin size={32} className={styles.edgeIcon} />
+                      <h4>Prime Location</h4>
+                      <p>Located in the heart of Rishikesh with easy access to the Ganges River and surrounded by the peaceful Himalayan atmosphere.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Lightbulb size={32} className={styles.edgeIcon} />
+                      <h4>Modern Facilities</h4>
+                      <p>Well-equipped yoga halls, comfortable accommodation, nutritious meals, and all modern amenities while maintaining traditional values.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <BookOpen size={32} className={styles.edgeIcon} />
+                      <h4>Ongoing Support</h4>
+                      <p>Lifetime access to our community, continued guidance from teachers, and opportunities for advanced training.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Sun size={32} className={styles.edgeIcon} />
+                      <h4>Flexible Programs</h4>
+                      <p>Various course durations and formats to suit different needs, from intensive 200-hour courses to extended 300-hour and 500-hour programs.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Sparkles size={32} className={styles.edgeIcon} />
+                      <h4>Special Workshops</h4>
+                      <p>Regular workshops on special topics like Yin Yoga, Prenatal Yoga, Kids Yoga, and advanced pranayama techniques.</p>
+                    </div>
+
+                    <div className={styles.edgeCard}>
+                      <Activity size={32} className={styles.edgeIcon} />
+                      <h4>Cultural Immersion</h4>
+                      <p>Opportunities to experience Indian culture, visit temples, attend Ganga Aarti, and immerse in the spiritual atmosphere of Rishikesh.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.inspirationBox}>
+                    <h3><Compass size={24} /> One Destination, Many Paths, One Journey</h3>
+                    <p className={styles.quote}>This is not just our motto - it's our lived experience at Yogkulam. Every student brings their unique path, but we all journey together towards the same destination of yoga - unity, peace, and self-realization. Join our family and discover your path to yoga.</p>
                   </div>
                 </div>
               </div>
             )}
           </>
         )}
+
       </div>
 
       {/* Footer */}

@@ -1,734 +1,1294 @@
-/* Teachers Page - Editorial Magazine Style */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --primary-gold: #D4AF37;
-  --deep-plum: #4A1942;
-  --soft-cream: #FFF8F0;
-  --charcoal: #2C2C2C;
-  --sage: #8B9D83;
-  --accent-rose: #C44536;
-  --light-gray: #F5F5F5;
-  --medium-gray: #E0E0E0;
-  --text-dark: #1A1A1A;
-  --text-light: #666666;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Container */
 .container {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--soft-cream) 0%, #FFFFFF 50%, var(--soft-cream) 100%);
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-dark);
-  overflow-x: hidden;
+  background: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Hero Section */
-.hero {
+/* Hero Section - Exact as your image */
+.heroSection {
   position: relative;
-  height: 65vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(rgba(42, 27, 27, 0.7), rgba(74, 25, 66, 0.6)),
-    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23D4AF37;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%234A1942;stop-opacity:0.1"/></linearGradient></defs><rect fill="url(%23g)" width="1200" height="600"/></svg>');
+  padding: 3rem 2rem 2rem;
+
+  /* 👇 Image + gradient together */
+  background-image:url('../../../assets/images/ourteacher.jpeg'); /* 👈 your image path */
+
   background-size: cover;
   background-position: center;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-repeat: no-repeat;
 }
 
-.hero.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-.hero::before {
+.heroSection::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.15), transparent 60%);
-  animation: breathe 8s ease-in-out infinite;
-}
-
-@keyframes breathe {
-
-  0%,
-  100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-
-  50% {
-    opacity: 0.6;
-    transform: scale(1.1);
-  }
+  width: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath d='M150 50 Q180 100 150 150 Q120 100 150 50 M150 150 Q180 200 150 250 Q120 200 150 150 M100 200 Q130 230 100 260 Q70 230 100 200 M200 200 Q230 230 200 260 Q170 230 200 200' stroke='%23FFE4D6' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 900px;
-  padding: 0 2rem;
 }
 
-.heroTitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.5rem, 8vw, 7rem);
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  color: white;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-  animation: fadeInUp 1s ease-out 0.3s both;
-}
-
-.highlight {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--primary-gold) 0%, #F4E4C1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-  font-style: italic;
-  position: relative;
-}
-
-.highlight::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-
-.heroSubtitle {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 300;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.05em;
-  margin-bottom: 2rem;
-  animation: fadeInUp 1s ease-out 0.6s both;
-}
-
-.heroDivider {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  margin: 0 auto;
-  animation: expandWidth 1.5s ease-out 0.9s both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes expandWidth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 120px;
-  }
-}
-
-/* School Navigation */
-.schoolNav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--medium-gray);
-  padding: 1.5rem 0;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-}
-
-.schoolNavInner {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  gap: 1rem;
-  padding: 0 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.schoolButton {
-  padding: 0.9rem 2rem;
-  border: 2px solid transparent;
-  background: white;
-  color: var(--text-dark);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+.quoteText {
+  font-size: 1.1rem;
+  color: #D2691E;
   font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
-.schoolButton::before {
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #C41E3A;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  display: inline-flex;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.breadcrumbLink {
+  color: white;
+  text-decoration: none;
+}
+
+.breadcrumbSeparator {
+  color: white;
+  margin: 0 0.3rem;
+}
+
+/* Teaching Faculty Section */
+.facultySection {
+  background: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.facultyHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.facultyTitle {
+  font-size: 0.9rem;
+  color: #D2691E;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.facultySubtitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 0.5rem;
+}
+
+.decorativeLine {
+  width: 60px;
+  height: 3px;
+  background: #D2691E;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: var(--school-color);
-  transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  z-index: -1;
-  opacity: 0.1;
+  width: 8px;
+  height: 8px;
+  background: #D2691E;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.schoolButton:hover::before {
-  left: 0;
+.decorativeLine::before {
+  left: -15px;
 }
 
-.schoolButton:hover {
-  border-color: var(--school-color);
-  color: var(--school-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+.decorativeLine::after {
+  right: -15px;
 }
 
-.schoolButton.active {
-  background: var(--school-color);
-  color: white;
-  border-color: var(--school-color);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Teachers Section */
-.teachersSection {
-  max-width: 1400px;
+.facultyDescription {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 5rem 2rem;
-}
-
-.sectionHeader {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
   text-align: center;
-  margin-bottom: 4rem;
-  position: relative;
 }
 
-.sectionTitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 400;
-  color: var(--deep-plum);
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-}
-
-.sectionLine {
-  width: 80px;
-  height: 3px;
-  margin: 0 auto;
-  border-radius: 2px;
-  animation: slideIn 0.8s ease-out;
-}
-
-@keyframes slideIn {
-  from {
-    width: 0;
-    opacity: 0;
-  }
-
-  to {
-    width: 80px;
-    opacity: 1;
-  }
-}
-
-/* Teachers Grid */
+/* Teacher Cards Grid */
 .teachersGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 3rem;
   margin-top: 3rem;
 }
 
 .teacherCard {
-  perspective: 1000px;
-  cursor: pointer;
-  animation: fadeInScale 0.6s ease-out both;
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-.cardInner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transform-style: preserve-3d;
-}
-
-.teacherCard:hover .cardInner {
-  transform: translateY(-10px);
-}
-
-.cardFront {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
   background: white;
-  padding: 2.5rem 1.5rem;
-  border-radius: 0;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  border: 1px solid var(--medium-gray);
+  border: 1px solid #E5E5E5;
+  padding: 2.5rem;
+  align-items: start;
 }
 
-.teacherCard:hover .cardFront {
-  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.15);
-  border-color: transparent;
+.teacherImageSection {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  order: 2;
 }
 
-.cardFront::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
+.teacherImage {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.6s;
-}
-
-.teacherCard:hover .cardFront::before {
-  left: 100%;
-}
-
-.teacherIcon {
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
-  overflow: hidden;
-  border: 3px solid var(--medium-gray);
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.teacherIcon img {
-  width: 100%;
-  height: 100%;
+  max-width: 380px;
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  border-radius: 0;
+  border-radius: 0px 0px 0px 100px;
 }
 
-.teacherCard:hover .teacherIcon {
-  transform: scale(1.08);
-  border-color: var(--primary-gold);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+.teacherTags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
 }
 
-.teacherCard:hover .teacherIcon img {
-  transform: scale(1.1);
+.tag {
+  background: #C41E3A;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.teacherInfo {
+  padding-top: 0;
+  order: 1;
 }
 
 .teacherName {
-  font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
   font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 0.8rem;
-  letter-spacing: 0.01em;
-}
-
-.teacherRole {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
-  min-height: 3rem;
-}
-
-.cardAccent {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.teacherCard:hover .cardAccent {
-  transform: scaleX(1);
-}
-
-/* Modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 2rem;
-  animation: modalFadeIn 0.3s ease-out;
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.modalContent {
-  background: white;
-  max-width: 700px;
-  width: 100%;
-  max-height: 85vh;
-  overflow-y: auto;
-  position: relative;
-  border-radius: 0;
-  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
-  animation: modalSlideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-@keyframes modalSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px) scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.closeButton {
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: var(--text-dark);
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-
-.closeButton:hover {
-  background: var(--accent-rose);
-  transform: rotate(90deg);
-}
-
-.modalHeader {
-  text-align: center;
-  padding: 3rem 3rem 2rem;
-  background: linear-gradient(135deg, var(--soft-cream) 0%, white 100%);
-  border-bottom: 2px solid var(--medium-gray);
-}
-
-.modalIcon {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto 1.5rem;
-  overflow: hidden;
-  border: 4px solid var(--primary-gold);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.modalIcon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.modalTitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--text-dark);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.01em;
-}
-
-.modalRole {
-  font-size: 1.1rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.modalBody {
-  padding: 2.5rem 3rem;
-}
-
-.modalBio {
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: var(--text-dark);
+  color: #2C2C2C;
   margin-bottom: 1.5rem;
-  font-weight: 500;
+  border-bottom: 2px solid #E5E5E5;
+  padding-bottom: 1rem;
 }
 
-.modalFullBio {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: var(--text-light);
-  font-weight: 400;
-}
-
-/* How to Reach Section */
-.reachSection {
-  background: linear-gradient(135deg, var(--deep-plum) 0%, #2C1E2E 100%);
-  padding: 5rem 2rem;
-  margin-top: 5rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.reachSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/></svg>');
-  background-size: 30px 30px;
-  opacity: 0.3;
-}
-
-.reachTitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: 400;
-  color: white;
-  text-align: center;
-  margin-bottom: 3rem;
-  letter-spacing: 0.02em;
-  position: relative;
-  z-index: 1;
-}
-
-.reachGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.reachCard {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  padding: 2.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.reachCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.reachCard:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(212, 175, 55, 0.4);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-.reachCard:hover::before {
-  opacity: 1;
-}
-
-.reachIcon {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  transition: transform 0.4s ease;
-}
-
-.reachCard:hover .reachIcon {
-  transform: scale(1.2) rotate(5deg);
-}
-
-.reachCard h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--primary-gold);
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-}
-
-.reachCard p {
+.teacherBio {
   font-size: 0.95rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
+  color: #444;
+  margin: 1.5rem 0;
+  text-align: justify;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh;
+.infoSection {
+  margin-top: 2rem;
+}
+
+.infoTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+   padding-bottom: 0.4rem;
+  border-bottom: 1px solid black;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoList li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.infoList li::before {
+  content: '●';
+  color: #C41E3A;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Alternate layout for even cards */
+.teacherCard:nth-child(even) {
+  grid-template-columns: 380px 1fr;
+}
+
+.teacherCard:nth-child(even) .teacherImageSection {
+  order: 1;
+}
+
+.teacherCard:nth-child(even) .teacherInfo {
+  order: 2;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .heroContent {
+    max-width: 1400px;
   }
 
-  .heroTitle {
+  .facultySection {
+    max-width: 1400px;
+  }
+
+  .mainTitle {
     font-size: 3rem;
   }
 
-  .schoolNavInner {
-    padding: 0 1rem;
+  .facultySubtitle {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .heroContent {
+    max-width: 1140px;
   }
 
-  .schoolButton {
-    padding: 0.7rem 1.5rem;
-    font-size: 0.85rem;
+  .facultySection {
+    max-width: 1140px;
+  }
+}
+
+/* Laptop/Tablet Landscape - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .heroContent {
+    max-width: 960px;
   }
 
-  .teachersSection {
-    padding: 3rem 1rem;
-  }
-
-  .teachersGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .modalContent {
-    margin: 1rem;
-    max-height: 90vh;
-  }
-
-  .modalHeader,
-  .modalBody {
+  .facultySection {
+    max-width: 960px;
     padding: 2rem 1.5rem;
   }
 
-  .modalTitle {
-    font-size: 2rem;
+  .teacherCard {
+    grid-template-columns: 1fr 320px;
+    gap: 1.8rem;
+    padding: 2rem;
   }
 
-  .reachSection {
-    padding: 3rem 1rem;
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 320px 1fr;
   }
 
-  .reachGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .teacherImage {
+    max-width: 320px;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1.6rem;
   }
 }
 
-@media (max-width: 480px) {
-  .heroTitle {
-    font-size: 2.5rem;
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .heroSection {
+    padding: 2.5rem 1.5rem 2rem;
   }
 
-  .heroSubtitle {
-    font-size: 0.95rem;
+  .heroSection::before {
+    width: 40%;
+    opacity: 0.3;
+  }
+
+  .heroContent {
+    max-width: 720px;
+  }
+
+  .quoteText {
+    font-size: 1rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .facultySection {
+    max-width: 720px;
+    padding: 2rem 1.5rem;
+    margin: 1.5rem auto;
+  }
+
+  .facultyTitle {
+    font-size: 0.85rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1.5rem;
+  }
+
+  .facultyDescription {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .teachersGrid {
+    gap: 2.5rem;
+    margin-top: 2.5rem;
   }
 
   .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .teacherName {
+    font-size: 1.6rem;
+  }
+
+  .teacherBio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .infoTitle {
+    font-size: 0.95rem;
+  }
+
+  .infoList li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Landscape - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+  .heroSection {
+    padding: 2rem 1.5rem;
+  }
+
+  .heroSection::before {
+    width: 35%;
+    opacity: 0.25;
+  }
+
+  .quoteText {
+    font-size: 0.95rem;
+  }
+
+  .mainTitle {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .facultySection {
+    padding: 1.5rem;
+    margin: 1.5rem;
+  }
+
+  .facultyTitle {
+    font-size: 0.8rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1.4rem;
+  }
+
+  .decorativeLine {
+    width: 50px;
+  }
+
+  .facultyDescription {
+    font-size: 0.88rem;
+    padding: 0 0.5rem;
+  }
+
+  .teachersGrid {
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherImage {
     max-width: 100%;
   }
 
-  .cardFront {
-    padding: 2rem 1rem;
+  .teacherTags {
+    margin-bottom: 1.2rem;
+  }
+
+  .tag {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.7rem;
+  }
+
+  .teacherName {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .teacherBio {
+    font-size: 0.88rem;
+    margin: 1.2rem 0;
+  }
+
+  .infoSection {
+    margin-top: 1.5rem;
+  }
+
+  .infoTitle {
+    font-size: 0.9rem;
+  }
+
+  .infoList li {
+    font-size: 0.82rem;
+    padding: 0.4rem 0;
   }
 }
 
-/* Scrollbar Styling */
-.modalContent::-webkit-scrollbar {
-  width: 8px;
+/* Mobile Portrait - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .heroSection {
+    padding: 1.75rem 1rem;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .quoteText {
+    font-size: 0.9rem;
+  }
+
+  .mainTitle {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .facultySection {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
+
+  .facultyTitle {
+    font-size: 0.75rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1.3rem;
+    line-height: 1.3;
+  }
+
+  .decorativeLine {
+    width: 45px;
+    height: 2.5px;
+  }
+
+  .decorativeLine::before,
+  .decorativeLine::after {
+    width: 7px;
+    height: 7px;
+  }
+
+  .facultyDescription {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .teachersGrid {
+    gap: 2rem;
+    margin-top: 1.75rem;
+  }
+
+  .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-width: 1px;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherImage {
+    max-width: 100%;
+  }
+
+  .teacherTags {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+  }
+
+  .teacherName {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .teacherBio {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  .infoSection {
+    margin-top: 1.5rem;
+  }
+
+  .infoTitle {
+    font-size: 0.88rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .infoList li {
+    font-size: 0.8rem;
+    padding: 0.4rem 0;
+    gap: 0.6rem;
+  }
+
+  .infoList li::before {
+    margin-top: 0.4rem;
+  }
 }
 
-.modalContent::-webkit-scrollbar-track {
-  background: var(--light-gray);
+/* Small Mobile - 375px to 479px */
+@media (min-width: 375px) and (max-width: 479px) {
+  .heroSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .quoteText {
+    font-size: 0.85rem;
+  }
+
+  .mainTitle {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.7rem;
+    margin-top: 0.75rem;
+  }
+
+  .facultySection {
+    padding: 1.25rem 0.75rem;
+    margin: 0.75rem;
+  }
+
+  .facultyHeader {
+    margin-bottom: 1.5rem;
+  }
+
+  .facultyTitle {
+    font-size: 0.7rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+  }
+
+  .decorativeLine {
+    width: 40px;
+    height: 2px;
+  }
+
+  .decorativeLine::before,
+  .decorativeLine::after {
+    width: 6px;
+    height: 6px;
+  }
+
+  .decorativeLine::before {
+    left: -12px;
+  }
+
+  .decorativeLine::after {
+    right: -12px;
+  }
+
+  .facultyDescription {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .teachersGrid {
+    gap: 1.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherImage {
+    max-width: 100%;
+  }
+
+  .teacherTags {
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.62rem;
+  }
+
+  .teacherName {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom-width: 1.5px;
+  }
+
+  .teacherBio {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+    text-align: left;
+  }
+
+  .infoSection {
+    margin-top: 1.25rem;
+  }
+
+  .infoTitle {
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .infoList li {
+    font-size: 0.78rem;
+    padding: 0.35rem 0;
+    gap: 0.6rem;
+  }
+
+  .infoList li::before {
+    font-size: 0.5rem;
+    margin-top: 0.35rem;
+  }
 }
 
-.modalContent::-webkit-scrollbar-thumb {
-  background: var(--primary-gold);
-  border-radius: 4px;
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+  .heroSection {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .quoteText {
+    font-size: 0.8rem;
+  }
+
+  .mainTitle {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.65rem;
+    margin-top: 0.5rem;
+  }
+
+  .facultySection {
+    padding: 1rem 0.75rem;
+    margin: 0.75rem 0.5rem;
+  }
+
+  .facultyHeader {
+    margin-bottom: 1.25rem;
+  }
+
+  .facultyTitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+  }
+
+  .facultySubtitle {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    padding: 0 0.25rem;
+  }
+
+  .decorativeLine {
+    width: 35px;
+    height: 2px;
+  }
+
+  .decorativeLine::before,
+  .decorativeLine::after {
+    width: 5px;
+    height: 5px;
+  }
+
+  .decorativeLine::before {
+    left: -10px;
+  }
+
+  .decorativeLine::after {
+    right: -10px;
+  }
+
+  .facultyDescription {
+    font-size: 0.78rem;
+    line-height: 1.6;
+  }
+
+  .teachersGrid {
+    gap: 1.5rem;
+    margin-top: 1.25rem;
+  }
+
+  .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    border-width: 1px;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherImage {
+    max-width: 100%;
+  }
+
+  .teacherTags {
+    gap: 0.3rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .tag {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.6rem;
+    letter-spacing: 0.3px;
+  }
+
+  .teacherName {
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+    padding-bottom: 0.65rem;
+    border-bottom-width: 1.5px;
+  }
+
+  .teacherBio {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin: 0.85rem 0;
+    text-align: left;
+  }
+
+  .infoSection {
+    margin-top: 1rem;
+  }
+
+  .infoTitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .infoList li {
+    font-size: 0.75rem;
+    padding: 0.3rem 0;
+    gap: 0.5rem;
+  }
+
+  .infoList li::before {
+    font-size: 0.45rem;
+    margin-top: 0.35rem;
+  }
 }
 
-.modalContent::-webkit-scrollbar-thumb:hover {
-  background: var(--deep-plum);
+/* Ultra Small Mobile - below 320px */
+@media (max-width: 319px) {
+  .heroSection {
+    padding: 1rem 0.5rem;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .quoteText {
+    font-size: 0.75rem;
+  }
+
+  .mainTitle {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .breadcrumb {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.6rem;
+    margin-top: 0.5rem;
+  }
+
+  .facultySection {
+    padding: 0.85rem 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .facultyHeader {
+    margin-bottom: 1rem;
+  }
+
+  .facultyTitle {
+    font-size: 0.6rem;
+  }
+
+  .facultySubtitle {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .decorativeLine {
+    width: 30px;
+  }
+
+  .facultyDescription {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .teachersGrid {
+    gap: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .teacherCard {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 0.85rem;
+  }
+
+  .teacherCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .teacherImageSection {
+    position: relative;
+    top: 0;
+    order: 1;
+  }
+
+  .teacherCard:nth-child(even) .teacherImageSection {
+    order: 1;
+  }
+
+  .teacherInfo {
+    order: 2;
+  }
+
+  .teacherCard:nth-child(even) .teacherInfo {
+    order: 2;
+  }
+
+  .teacherTags {
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.55rem;
+  }
+
+  .teacherName {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .teacherBio {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 0.75rem 0;
+  }
+
+  .infoSection {
+    margin-top: 0.85rem;
+  }
+
+  .infoTitle {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .infoList li {
+    font-size: 0.7rem;
+    padding: 0.25rem 0;
+    gap: 0.4rem;
+  }
+
+  .infoList li::before {
+    font-size: 0.4rem;
+    margin-top: 0.3rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* subtle patterned background */
+  background-color: #f6f4f2;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.03) 0,
+    rgba(0, 0, 0, 0.03) 1px,
+    transparent 1px,
+    transparent 24px
+  );
+}
+
+.content {
+  max-width: 900px;
+  padding: 40px 20px;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.ctaBtn {
+  background: transparent;
+  border: 2px solid #c00000;
+  color: #c00000;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaBtn:hover {
+  background: #c00000;
+  color: #fff;
+}
+.section {
+  padding: 70px 5%;
+  background: #fff;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f36a10;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.heading h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.divider {
+  width: 120px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(to right, transparent, #000, transparent);
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card {
+  position: relative;
+  border: 2px solid #d00000;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+
+.card iframe {
+  width: 100%;
+  height: 420px;
+  pointer-events: none; /* clean look like reels */
+}
+
+/* 🔴 Shorts Logo */
+.shortsLogo {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shortsLogo span {
+  width: 64px;
+  height: 64px;
+  background: #ff0000;
+  color: #fff;
+  font-size: 34px;
+  font-weight: bold;
+  border-radius: 18px 18px 18px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-12deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effect */
+.card:hover .shortsLogo span {
+  transform: scale(1.1) rotate(-12deg);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .videoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+  .card iframe {
+    height: 480px;
+  }
 }

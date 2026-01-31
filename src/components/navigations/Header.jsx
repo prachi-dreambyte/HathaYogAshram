@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+
 import styles from '../../assets/styles/Header.module.css';
 import logo from '../../assets/images/logo.png';
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -21,29 +22,29 @@ const Header = () => {
 
   // Close dropdown on outside click
   useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setOpenDropdown(null);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
+  const handleClickOutside = (e) => {
+    if (navRef.current && !navRef.current.contains(e.target)) {
+      setOpenDropdown(null); // ✅ sirf subtab band
+    }
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+  document.addEventListener("touchstart", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+    document.removeEventListener("touchstart", handleClickOutside);
+  };
+}, []);
 
   return (
     <>
-      {/* ===== TOP HEADER ===== */}
+      {/* ===== TOP BAR ===== */}
       <div className={styles.topHeader}>
         <div className={styles.topContainer}>
           <div className={styles.topLeft}>
-            <span>
-              <span className={styles.icon}>📍</span>
-              Manzil Balaknath Road Upper Tapovan Rishikesh
-            </span>
-            <span>
-              <span className={styles.icon}>📞</span>
-              +91 9335606336
-            </span>
+            <span>📍 Manzil Balaknath Road Upper Tapovan Rishikesh</span>
+            <span>📞 +91 9335606336</span>
           </div>
 
           <div className={styles.topRight}>
@@ -71,18 +72,21 @@ const Header = () => {
       {/* ===== MAIN HEADER ===== */}
       <header className={styles.header}>
         <div className={styles.container} ref={navRef}>
+
           {/* LEFT MENU */}
           <nav className={styles.desktopNav}>
             <Link to="/" onClick={closeAll}>Home</Link>
 
             {/* ABOUT */}
-            <div className={styles.dropdownWrap}>
-              <button
-                onClick={() => toggleDropdown('about')}
-                aria-expanded={openDropdown === 'about'}
-              >
+            <div
+              className={styles.dropdownWrap}
+              onMouseEnter={() => setOpenDropdown('about')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button onClick={() => toggleDropdown('about')}>
                 About ▾
               </button>
+
               <AnimatePresence>
                 {openDropdown === 'about' && (
                   <motion.div
@@ -94,7 +98,7 @@ const Header = () => {
                     <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
                     <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
                     <Link to="/Our-School" onClick={closeAll}>Our School</Link>
-                    <Link to="/" onClick={closeAll}>Accommodation</Link>
+                    <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
                     <Link to="/gallery" onClick={closeAll}>Gallery</Link>
                   </motion.div>
                 )}
@@ -102,13 +106,15 @@ const Header = () => {
             </div>
 
             {/* RISHIKESH TTC */}
-            <div className={styles.dropdownWrap}>
-              <button
-                onClick={() => toggleDropdown('rishikesh')}
-                aria-expanded={openDropdown === 'rishikesh'}
-              >
+            <div
+              className={styles.dropdownWrap}
+              onMouseEnter={() => setOpenDropdown('rishikesh')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button onClick={() => toggleDropdown('rishikesh')}>
                 Rishikesh TTC ▾
               </button>
+
               <AnimatePresence>
                 {openDropdown === 'rishikesh' && (
                   <motion.div
@@ -127,13 +133,15 @@ const Header = () => {
             </div>
 
             {/* SHORT COURSE */}
-            <div className={styles.dropdownWrap}>
-              <button
-                onClick={() => toggleDropdown('short')}
-                aria-expanded={openDropdown === 'short'}
-              >
+            <div
+              className={styles.dropdownWrap}
+              onMouseEnter={() => setOpenDropdown('short')}
+              onMouseLeave={() => setOpenDropdown(null)}
+            >
+              <button onClick={() => toggleDropdown('short')}>
                 Short Course ▾
               </button>
+
               <AnimatePresence>
                 {openDropdown === 'short' && (
                   <motion.div
@@ -151,11 +159,11 @@ const Header = () => {
           </nav>
 
           {/* LOGO */}
-        <div className={styles.logo}>
-<Link to="/">
-<img src={logo} alt="Yoga Logo" />
-</Link>
-</div>
+          <div className={styles.logo}>
+            <Link to="/">
+              <img src={logo} alt="Yoga Logo" />
+            </Link>
+          </div>
 
           {/* RIGHT MENU */}
           <nav className={styles.desktopNav}>
@@ -168,52 +176,107 @@ const Header = () => {
           </nav>
 
           {/* HAMBURGER */}
-          <div
-            className={styles.hamburger}
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            ☰
-          </div>
+         <div
+  className={styles.hamburger}
+  onClick={() => setMobileOpen(!mobileOpen)}
+>
+  ☰
+</div>
         </div>
 
-        {/* ===== MOBILE MENU ===== */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <motion.div
-              className={styles.mobileMenu}
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-            >
-              <Link to="/" onClick={closeAll}>Home</Link>
+        
+       {/* ===== MOBILE MENU ===== */}
+<AnimatePresence>
+  {mobileOpen && (
+    <motion.div
+      className={styles.mobileMenu}
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+    >
+      <Link to="/" onClick={closeAll}>Home</Link>
 
-              <span className={styles.mobileTitle}>About</span>
-              <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
-              <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
-              <Link to="/Our-School" onClick={closeAll}>Our School</Link>
-              <Link to="/" onClick={closeAll}>Accommodation</Link>
-              <Link to="/gallery" onClick={closeAll}>Gallery</Link>
+      {/* ===== ABOUT DROPDOWN ===== */}
+      <div
+        className={styles.mobileTitle}
+        onClick={() => toggleDropdown("about")}
+      >
+        About ▾
+      </div>
 
-              <span className={styles.mobileTitle}>Rishikesh TTC</span>
-              <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
-              <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
-              <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
-              <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+      <AnimatePresence>
+        {openDropdown === "about" && (
+          <motion.div
+            className={styles.subMenu}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+          >
+            <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
+            <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
+            <Link to="/Our-School" onClick={closeAll}>Our School</Link>
+            <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
+            <Link to="/gallery" onClick={closeAll}>Gallery</Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              <span className={styles.mobileTitle}>Short Course</span>
-              <Link to="/" onClick={closeAll}>Meditation</Link>
-              <Link to="/" onClick={closeAll}>Pranayama</Link>
+      {/* ===== RISHIKESH TTC ===== */}
+      <div
+        className={styles.mobileTitle}
+        onClick={() => toggleDropdown("rishikesh")}
+      >
+        Rishikesh TTC ▾
+      </div>
 
-              <Link to="/" onClick={closeAll}>Online Courses</Link>
-              <Link to="/" onClick={closeAll}>Payment</Link>
-              <Link to="/contact-us" onClick={closeAll}>Contact</Link>
+      <AnimatePresence>
+        {openDropdown === "rishikesh" && (
+          <motion.div
+            className={styles.subMenu}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+          >
+            <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
+            <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
+            <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
+            <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-              <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
-                Apply Today
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
+      {/* ===== SHORT COURSE ===== */}
+      <div
+        className={styles.mobileTitle}
+        onClick={() => toggleDropdown("short")}
+      >
+        Short Course ▾
+      </div>
+
+      <AnimatePresence>
+        {openDropdown === "short" && (
+          <motion.div
+            className={styles.subMenu}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+          >
+            <Link to="/" onClick={closeAll}>Meditation</Link>
+            <Link to="/" onClick={closeAll}>Pranayama</Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <Link to="/" onClick={closeAll}>Online Courses</Link>
+      <Link to="/" onClick={closeAll}>Payment</Link>
+      <Link to="/contact-us" onClick={closeAll}>Contact</Link>
+
+      <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
+        Apply Today
+      </Link>
+    </motion.div>
+  )}
+</AnimatePresence>
       </header>
     </>
   );

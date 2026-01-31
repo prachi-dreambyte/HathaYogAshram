@@ -1,167 +1,190 @@
-/* ===== TOP HEADER ===== */
+/* ===============================
+   BASE
+================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+   background: #a41b08cf;
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* ===============================
+   TOP HEADER
+================================ */
 .topHeader {
-  background: linear-gradient(90deg, #02024f, #05057a);
-  color: #ffffff;
-  font-size: 13px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
 .topContainer {
-
   margin: auto;
   padding: 8px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-/* LEFT SIDE */
-.topLeft {
-  display: flex;
   align-items: center;
-  gap: 22px;
 }
 
 .topLeft span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-  font-size: 15px;
-  font-weight: 600;
+  margin-right: 20px;
 }
 
-/* RIGHT SIDE */
 .topRight {
   display: flex;
   align-items: center;
-  gap: 14px;
-  font-size: 15px;
-  font-weight: 600;
+  gap: 15px;
+}
+.social{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.social a {
+  color: #670404;
+  font-size: 14px;
+ 
 }
 
-.topRight span {
+.yogaId {
+  font-size: 14px;
+  opacity: 0.8;
   font-weight: 500;
 }
 
-/* SOCIAL ICONS */
-.social {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.social a {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #c000ff;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  transition: all 0.3s ease;
-}
-
-.social a:hover {
-  background: #ff2bdc;
-  transform: scale(1.1);
-}
-
-/* ===== HEADER ===== */
-.header {
-  background: linear-gradient(135deg, #ba80e2, #5d3074, #512164);
-}
-
+/* ===============================
+   MAIN HEADER
+================================ */
 .container {
-  max-width: 1360px;
+  max-width: 1300px;
   margin: auto;
-  padding: 16px 20px;
+  height: 80px;                 /* 🔒 HEADER HEIGHT FIX */
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-/* ===== NAV ===== */
+/* ===============================
+   LOGO (BIG WITHOUT HEADER GROW)
+================================ */
+.logo {
+  position: relative;
+  width: 180px;                 /* reserve space */
+  height: 80px;
+}
+
+.logo img {
+  height: 100px;                /* 🔥 BIG LOGO */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
 .desktopNav {
   display: flex;
-  gap: 22px;
   align-items: center;
+  gap: 25px;
 }
 
 .desktopNav a,
 .desktopNav button {
-  background: none;
-  border: none;
-  color: #f4e8dc;
-  font-size: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
 }
 
-/* ===== LOGO ===== */
-.logo img {
-  width: 80px;
-}
-
-/* ===== APPLY BTN ===== */
-.applyBtn {
-  background: #4b0c3b;
-  color: #fff;
-  padding: 10px 18px;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-/* ===== DROPDOWN ===== */
+/* ===============================
+   DROPDOWN
+================================ */
 .dropdownWrap {
   position: relative;
 }
 
+.dropdownWrap button {
+  padding: 6px 0;
+}
+
 .dropdown {
   position: absolute;
-  top: 130%;
+  top: 120%;
   left: 0;
   background: #fff;
-  min-width: 240px;
+  min-width: 220px;
   border-radius: 6px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   z-index: 999;
 }
 
 .dropdown a {
-  display: block;
-  padding: 10px 18px;
+  padding: 12px 16px;
+  font-size: 14px;
   color: #333;
+  transition: background .2s ease, color .2s ease;
 }
 
 .dropdown a:hover {
-  background: #f4f4f4;
+  background: #f5f5f5;
+  color: #000;
 }
 
-/* ===== HAMBURGER ===== */
+/* ===============================
+   APPLY BUTTON
+================================ */
+.applyBtn {
+  background: #c8a349;
+  color: #fff !important;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.applyBtn:hover {
+  background: #b8963f;
+}
+
+/* ===============================
+   HAMBURGER
+================================ */
 .hamburger {
   display: none;
-  font-size: 28px;
-  color: #fff;
+  font-size: 26px;
   cursor: pointer;
 }
 
-/* ===== MOBILE MENU ===== */
+/* ===============================
+   MOBILE MENU
+================================ */
 .mobileMenu {
-  background: linear-gradient(135deg, #ba80e2, #5d3074, #512164);
-  padding: 20px;
+  display: none;
 }
 
-.mobileMenu a {
-  display: block;
-  color: #fff;
-  margin-bottom: 14px;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 992px) {
   .desktopNav {
     display: none;
   }
@@ -170,14 +193,48 @@
     display: block;
   }
 
-  /* Address hide, phone stays */
-  .topLeft span:first-child {
+  .logo img {
+    height: 80px;             /* mobile pe thoda chota */
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #eee;
+  }
+
+  .mobileMenu a {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+  }
+
+  .mobileTitle {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+  .topHeader{
     display: none;
   }
 }
 
-@media (max-width: 767px) {
-  .topHeader {
-    display: none;
-  }
+.mobileTitle {
+  font-weight: 600;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.subMenu {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+}
+
+.subMenu a {
+  padding: 6px 0;
 }

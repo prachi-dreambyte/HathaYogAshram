@@ -21,12 +21,13 @@ import YogaRetreat from 'components/Retreatlinks/5daysyogaretreat';
 import Yoga10DaysRetreat from 'components/Retreatlinks/Yoga10DaysRetreat';
 import Yoga20DaysRetreat from 'components/Retreatlinks/Yoga20DaysRetreat';
 import YogaRetreatRishikesh from 'components/Retreatlinks/YogaRetreatRishikesh';
-import AboutFounder from 'components/Aboutfounder/AboutFounder';
 import AboutSchool from 'components/Aboutschool/AboutSchool';
 import YogaCourse100 from 'components/YogaCourses/YogaCourse100';
 import YogaCourse200 from 'components/YogaCourses/YogaCourse200';
 import YogaCourse300 from 'components/YogaCourses/YogaCourse300';
 import YogaCourse500 from 'components/YogaCourses/YogaCourse500';
+import Founders from 'components/Aboutfounder/AboutFounder';
+import AccommodationFood from 'components/AccommodationFood/AccommodationFood';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -63,8 +64,9 @@ export default function Main() {
         <Route path="/10-days-yoga-retreat" element={<Yoga10DaysRetreat />} />
         <Route path="/20-days-yoga-retreat" element={<Yoga20DaysRetreat />} />
         <Route path="/meditation-retreat" element={<YogaRetreatRishikesh />} />
-        <Route path="/Our-Founder" element={<AboutFounder />} />
+        <Route path="/Our-Founder" element={<Founders />} />
         <Route path="/Our-School" element={<AboutSchool />} />
+        <Route path="/Accommodation-Food" element={<AccommodationFood />} />
         <Route path="/YogaCourse100" element={<YogaCourse100 />} />
         <Route path="/YogaCourse200" element={<YogaCourse200 />} />
         <Route path="/YogaCourse300" element={<YogaCourse300 />} />
