@@ -8,10 +8,11 @@
 /* Small label */
 .smallLabel {
   font-size: 16px;
-  color: #777;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Main heading */
@@ -21,6 +22,7 @@
   line-height: 1.3;
   color: #bd0005;
   margin-bottom: 10px;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Sub heading */
@@ -28,7 +30,8 @@
   font-size: 22px;
   font-weight: 600;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Text */
@@ -37,12 +40,14 @@
   line-height: 1.75;
   color: #000;
   margin-bottom: 15px;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Highlight */
 .highlight {
   color: #000;
   font-weight: 600;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Button */
