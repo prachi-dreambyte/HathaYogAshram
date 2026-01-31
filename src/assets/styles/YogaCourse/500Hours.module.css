@@ -1,237 +1,256 @@
-/* App.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* Global Styles */
+/* ==================== GLOBAL STYLES ==================== */
 .yogaPage {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  background: #FAFAFA;
+  min-height: 100vh;
 }
 
-/* Hero Banner */
+.yogaPage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==================== HERO SECTION ==================== */
 .heroBanner {
-  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(46, 204, 113, 0.1)), 
-              url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+  position: relative;
+  padding: 3rem 2rem 2rem;
+  min-height: 520px;
   background-size: cover;
   background-position: center;
-  padding: 5rem 0;
-  position: relative;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
+  background-repeat: no-repeat;
 }
 
 .overlay {
+  content: '';
   position: absolute;
-  top: 0;
-  left: 0;
   right: 0;
+  top: 0;
   bottom: 0;
-  background: linear-gradient(180deg, #f7d9e3, #fffafc);
-  opacity: 0.9;
+  width: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath d='M150 50 Q180 100 150 150 Q120 100 150 50 M150 150 Q180 200 150 250 Q120 200 150 150 M100 200 Q130 230 100 260 Q70 230 100 200 M200 200 Q230 230 200 260 Q170 230 200 200' stroke='%23FFE4D6' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 0;
   position: relative;
   z-index: 2;
 }
 
 .certBadge {
   display: inline-block;
-  background: linear-gradient(45deg, #e74c3c, #e67e22);
+  background: #C41E3A;
   color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 25px;
+  padding: 0.5rem 1.1rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
   font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 1.5rem;
+  width: fit-content;
 }
 
 .mainTitle {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #2c3e50;
-  line-height: 1.2;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  line-height: 1.25;
+  max-width: 680px;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100px;
+  height: 3px;
+  background: #C41E3A;
 }
 
 .subTitle {
-  font-size: 1.8rem;
-  color: #34495e;
-  font-weight: 400;
-  margin-bottom: 2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  color: #C41E3A;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  max-width: 580px;
 }
 
 .heroStats {
   display: flex;
-  gap: 1.5rem;
-  margin: 2.5rem 0;
   flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
 }
 
 .statBox {
   background: white;
-  padding: 1.2rem 1.5rem;
-  border-radius: 15px;
+  padding: 1rem 1.3rem;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  min-width: 120px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  min-width: 110px;
+  transition: all 0.3s ease;
 }
 
 .statBox:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
 }
 
 .statNumber {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #27ae60;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #C41E3A;
   line-height: 1;
 }
 
 .statLabel {
   display: block;
-  font-size: 0.9rem;
-  color: #7f8c8d;
-  font-weight: 600;
-  margin-top: 0.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85rem;
+  color: #4a5568;
+  font-weight: 500;
+  margin-top: 0.4rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .heroDescription {
-  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   line-height: 1.8;
-  color: #2c3e50;
-  margin-bottom: 2.5rem;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid #27ae60;
+  color: #4a5568;
+  margin: 1.5rem 0;
+  max-width: 680px;
+}
+
+.heroDescription strong {
+  color: #C41E3A;
+  font-weight: 600;
 }
 
 .ctaButtons {
   display: flex;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .primaryBtn {
-  background: linear-gradient(45deg, #2980b9, #3498db);
+  background: #C41E3A;
   color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
+  padding: 0.9rem 2.2rem;
+  border-radius: 3px;
   border: none;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .primaryBtn:hover {
+  background: #8B1538;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.3);
 }
 
 .secondaryBtn {
   background: transparent;
-  color: #2980b9;
-  padding: 0.8rem 2rem;
-  border-radius: 30px;
-  border: 2px solid #2980b9;
+  color: #C41E3A;
+  padding: 0.9rem 2.2rem;
+  border-radius: 3px;
+  border: 2px solid #C41E3A;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .secondaryBtn:hover {
-  background: #2980b9;
+  background: #C41E3A;
   color: white;
   transform: translateY(-3px);
 }
 
-/* Yoga Elements */
-.yogaElements {
-  position: relative;
-}
-
-.floatingYogi {
-  position: absolute;
-  top: -30px;
-  right: 30px;
-  font-size: 4rem;
-  animation: floatYogi 4s ease-in-out infinite;
-  z-index: 3;
-}
-
-.floatingLotus {
-  position: absolute;
-  bottom: 50px;
-  left: -20px;
-  font-size: 3rem;
-  animation: floatLotus 3s ease-in-out infinite 1s;
-}
-
+/* Hide yoga elements */
+.yogaElements,
+.floatingYogi,
+.floatingLotus,
 .floatingOm {
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  font-size: 3.5rem;
-  animation: floatOm 5s ease-in-out infinite 0.5s;
-}
-
-@keyframes floatYogi {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-@keyframes floatLotus {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-15px) scale(1.1); }
-}
-
-@keyframes floatOm {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(180deg); }
+  display: none;
 }
 
 .courseCard {
-  background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  margin-top: 3rem;
-  position: relative;
-  z-index: 2;
+  display: none;
 }
 
-.courseCard h4 {
-  color: #2c3e50;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+/* ==================== SECTION STYLES ==================== */
+.overviewSection,
+.highlightsSection,
+.curriculumSection,
+.scheduleSection,
+.accommodationSection,
+.includedSection,
+.faqSection {
+  padding: 4rem 2rem;
 }
 
-.courseCard ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.courseCard li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #ecf0f1;
-  color: #34495e;
-}
-
-.courseCard li:last-child {
-  border-bottom: none;
-}
-
-/* Overview Section */
 .overviewSection {
-  padding: 5rem 0;
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+  background: white;
+}
+
+.highlightsSection {
+  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+}
+
+.curriculumSection {
+  background: white;
+}
+
+.scheduleSection {
+  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+}
+
+.accommodationSection {
+  background: white;
+}
+
+.includedSection {
+  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+}
+
+.faqSection {
+  background: white;
 }
 
 .sectionHeader {
@@ -240,45 +259,79 @@
 }
 
 .sectionTitle {
-  font-size: 2.8rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 1rem;
+  color: #2d3748;
+  margin-bottom: 0.8rem;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #C41E3A;
+  border-radius: 2px;
 }
 
 .sectionSubtitle {
-  font-size: 1.3rem;
-  color: #7f8c8d;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  color: #4a5568;
+  font-weight: 500;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
 }
 
+/* ==================== CONTENT CARD ==================== */
 .contentCard {
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
   height: 100%;
 }
 
 .contentCard h3 {
-  color: #2c3e50;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
 }
 
-.featureItem {
-  background: #f8f9fa;
-  border-radius: 15px;
-  padding: 1.5rem;
+.contentCard p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
   margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
+}
+
+/* ==================== FEATURE ITEMS ==================== */
+.featureItem {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
 .featureItem:hover {
-  transform: translateY(-5px);
-  background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
 }
 
 .featureIcon {
@@ -288,35 +341,46 @@
 }
 
 .featureItem h5 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
 }
 
 .featureItem p {
-  color: #7f8c8d;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.7;
   margin: 0;
-  line-height: 1.5;
 }
 
+/* ==================== WHY RISHIKESH ==================== */
 .whyRishikesh {
   background: white;
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
   height: 100%;
 }
 
 .whyRishikesh h4 {
-  color: #27ae60;
-  margin-bottom: 1.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .whyRishikesh p {
-  color: #34495e;
-  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 
@@ -327,104 +391,95 @@
 }
 
 .whyRishikesh li {
-  padding: 0.5rem 0;
-  color: #2c3e50;
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.6rem 0;
+  color: #4a5568;
+  font-size: 1rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-/* Highlights Section */
-.highlightsSection {
-  padding: 5rem 0;
-  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+.whyRishikesh li:last-child {
+  border-bottom: none;
 }
 
+/* ==================== HIGHLIGHT CARDS ==================== */
 .highlightCard {
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #C41E3A;
+  border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
   height: 100%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .highlightCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
-}
-
-.highlightCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #e74c3c, #e67e22);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
+  border-left-width: 6px;
 }
 
 .highlightNumber {
-  font-size: 4rem;
-  font-weight: 800;
-  color: rgba(231, 76, 60, 0.1);
+  font-family: 'Philosopher', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(196, 30, 58, 0.1);
   position: absolute;
-  top: -20px;
-  right: 20px;
-  z-index: 1;
+  top: 1rem;
+  right: 1.5rem;
 }
 
 .highlightCard h4 {
-  color: #2c3e50;
-  font-size: 1.5rem;
-  margin: 1rem 0 1.5rem 0;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
   position: relative;
-  z-index: 2;
 }
 
 .highlightCard p {
-  color: #7f8c8d;
-  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
-  position: relative;
-  z-index: 2;
 }
 
 .highlightTags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  position: relative;
-  z-index: 2;
 }
 
 .tag {
-  background: #f1f2f6;
-  color: #636e72;
+  background: #f0f0f0;
+  color: #4a5568;
   padding: 0.3rem 0.8rem;
-  border-radius: 15px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.85rem;
   font-weight: 500;
 }
 
-/* Curriculum Section */
-.curriculumSection {
-  padding: 5rem 0;
-  background: linear-gradient(180deg, #fff4f4, #ffffff);
-}
-
+/* ==================== CURRICULUM TABS ==================== */
 .curriculumTabs {
   background: white;
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
   margin-bottom: 3rem;
 }
 
 .tabHeader {
   display: flex;
   background: #f8f9fa;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .tabButton {
@@ -432,46 +487,53 @@
   padding: 1.2rem;
   border: none;
   background: none;
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  color: #7f8c8d;
+  color: #4a5568;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .tabButton:hover {
   background: white;
-  color: #2980b9;
+  color: #C41E3A;
 }
 
 .tabButton.active {
   background: white;
-  color: #2980b9;
-  border-bottom: 3px solid #2980b9;
+  color: #C41E3A;
+  border-bottom: 3px solid #C41E3A;
 }
 
 .tabContent {
   padding: 2.5rem;
 }
 
+/* ==================== SUBJECT CARDS ==================== */
 .subjectCard {
-  background: #f8f9fa;
-  border-radius: 15px;
+  background: white;
   padding: 1.5rem;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
   margin-bottom: 1.5rem;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
 .subjectCard:hover {
-  transform: translateY(-5px);
-  background: white;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.1);
 }
 
 .subjectCard h5 {
-  color: #2c3e50;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .subjectCard ul {
@@ -481,33 +543,41 @@
 }
 
 .subjectCard li {
-  padding: 0.3rem 0;
-  color: #34495e;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.5rem 0;
+  color: #4a5568;
   font-size: 0.95rem;
-  position: relative;
-  padding-left: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
 }
 
 .subjectCard li::before {
-  content: '•';
-  color: #27ae60;
-  position: absolute;
-  left: 0;
-  font-size: 1.2rem;
+  content: '●';
+  color: #C41E3A;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
 }
 
+/* ==================== DETAILED SUBJECTS ==================== */
 .detailedSubjects {
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
 }
 
 .detailedSubjects h4 {
-  color: #2c3e50;
-  margin-bottom: 2rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
   text-align: center;
-  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .subjectList {
@@ -515,11 +585,13 @@
 }
 
 .subjectList h6 {
-  color: #e74c3c;
-  margin-bottom: 1rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
+  font-weight: 700;
+  color: #C41E3A;
+  margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .subjectList ul {
@@ -529,98 +601,68 @@
 }
 
 .subjectList li {
-  padding: 0.4rem 0;
-  color: #34495e;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.5rem 0;
+  color: #4a5568;
   font-size: 0.95rem;
-  border-bottom: 1px solid #f1f2f6;
+  border-bottom: 1px solid #f0f0f0;
 }
 
 .subjectList li:last-child {
   border-bottom: none;
 }
 
-/* Schedule Section */
-.scheduleSection {
-  padding: 5rem 0;
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
-}
-
+/* ==================== SCHEDULE TIMELINE ==================== */
 .scheduleTitle {
-  text-align: center;
-  font-size: 2.2rem;
-  color: #2c3e50;
-  margin-bottom: 3rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2rem;
   font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .timeline {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  position: relative;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(to bottom, #27ae60, #2980b9);
-  transform: translateX(-50%);
 }
 
 .timelineItem {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
-  position: relative;
+  gap: 2rem;
+  background: white;
+  padding: 1.3rem 1.8rem;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #C41E3A;
+  border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  transition: all 0.3s ease;
 }
 
-.timelineItem:nth-child(odd) {
-  flex-direction: row;
-}
-
-.timelineItem:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.timelineItem::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 15px;
-  height: 15px;
-  background: #27ae60;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px #27ae60;
+.timelineItem:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
 }
 
 .timeSlot {
-  background: #27ae60;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #C41E3A;
   min-width: 120px;
-  text-align: center;
+  flex-shrink: 0;
 }
 
 .activity {
-  background: white;
-  padding: 1.2rem 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  margin: 0 2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
+  color: #4a5568;
   font-weight: 500;
-  color: #2c3e50;
-  font-size: 1.1rem;
+  flex: 1;
 }
 
 .scheduleNote {
@@ -628,53 +670,63 @@
   margin-top: 3rem;
   padding: 1.5rem;
   background: white;
-  border-radius: 15px;
-  max-width: 800px;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
+  max-width: 900px;
   margin: 3rem auto 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 .scheduleNote p {
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
-  color: #34495e;
-  font-size: 1.1rem;
+  color: #4a5568;
+  font-size: 1rem;
 }
 
-/* Accommodation Section */
-.accommodationSection {
-  padding: 5rem 0;
-  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+.scheduleNote strong {
+  color: #C41E3A;
+  font-weight: 600;
 }
 
+/* ==================== ROOM OPTIONS ==================== */
 .roomOptions {
   margin-bottom: 3rem;
 }
 
 .roomOptions h4 {
-  color: #2c3e50;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
 }
 
 .roomCard {
   background: white;
-  border-radius: 15px;
   padding: 1.8rem;
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #C41E3A;
+  border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
   margin-bottom: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #e74c3c;
 }
 
 .roomCard h5 {
-  color: #2c3e50;
-  margin-bottom: 0.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
 }
 
 .roomCard > p {
-  color: #7f8c8d;
-  margin-bottom: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
+  color: #4a5568;
+  margin-bottom: 1.2rem;
 }
 
 .roomCard ul {
@@ -684,90 +736,120 @@
 }
 
 .roomCard li {
-  padding: 0.4rem 0;
-  color: #34495e;
-  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.5rem 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
+.roomCard li:last-child {
+  border-bottom: none;
+}
+
+/* ==================== FOOD SECTION ==================== */
 .foodSection h4 {
-  color: #2c3e50;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
 }
 
 .foodSection > p {
-  color: #34495e;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.7;
   margin-bottom: 2rem;
-  line-height: 1.6;
 }
 
 .mealCard {
   background: white;
-  border-radius: 15px;
   padding: 1.5rem;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
   margin-bottom: 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .mealTime {
-  background: #27ae60;
+  background: #C41E3A;
   color: white;
   padding: 0.5rem 1.2rem;
-  border-radius: 20px;
-  font-weight: 600;
+  border-radius: 3px;
+  font-family: 'Philosopher', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
   min-width: 100px;
   text-align: center;
-  margin-right: 1.5rem;
+  flex-shrink: 0;
 }
 
 .mealDescription {
+  font-family: 'Quicksand', sans-serif;
   flex: 1;
-  color: #34495e;
-  font-size: 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .dietaryNote {
   margin-top: 2rem;
   padding: 1.2rem;
-  background: #e8f6f3;
-  border-radius: 10px;
-  border-left: 4px solid #27ae60;
+  background: white;
+  border-radius: 0;
+  border-left: 4px solid #C41E3A;
+  border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 .dietaryNote p {
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
-  color: #2c3e50;
-  font-size: 1rem;
+  color: #4a5568;
+  font-size: 0.95rem;
 }
 
+.dietaryNote strong {
+  color: #C41E3A;
+  font-weight: 600;
+}
+
+/* ==================== FACILITIES ==================== */
 .facilities {
   margin-top: 4rem;
   padding-top: 3rem;
-  border-top: 2px solid #ecf0f1;
+  border-top: 2px solid #E5E5E5;
 }
 
 .facilities h4 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2d3748;
   text-align: center;
-  color: #2c3e50;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
 }
 
 .facilityItem {
   text-align: center;
   padding: 1.5rem 0.5rem;
   background: white;
-  border-radius: 10px;
+  border-radius: 0;
+  border: 1px solid #E5E5E5;
   margin-bottom: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
 .facilityItem:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.1);
 }
 
 .facilityIcon {
@@ -777,57 +859,63 @@
 }
 
 .facilityItem span:last-child {
-  color: #2c3e50;
+  font-family: 'Quicksand', sans-serif;
+  color: #4a5568;
   font-weight: 500;
   font-size: 0.95rem;
 }
 
-/* Included & Excluded */
-.includedSection {
-  padding: 5rem 0;
-  background: linear-gradient(180deg, #f7d9e3, #fffafc);
-}
-
-.includedCard, .excludedCard {
+/* ==================== INCLUDED/EXCLUDED CARDS ==================== */
+.includedCard,
+.excludedCard {
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
   height: 100%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .includedTitle {
-  color: #27ae60;
-  margin-bottom: 1.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #27ae60;
+  border-bottom: 2px solid #C41E3A;
 }
 
 .excludedTitle {
-  color: #e74c3c;
-  margin-bottom: 1.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #e74c3c;
+  border-bottom: 2px solid #4a5568;
 }
 
-.includedCard ul, .excludedCard ul {
+.includedCard ul,
+.excludedCard ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.includedCard li, .excludedCard li {
-  padding: 0.8rem 0;
+.includedCard li,
+.excludedCard li {
+  font-family: 'Quicksand', sans-serif;
+  padding: 0.7rem 0;
   padding-left: 2rem;
   position: relative;
-  color: #34495e;
-  font-size: 1rem;
-  border-bottom: 1px solid #f1f2f6;
+  color: #4a5568;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 
-.includedCard li:last-child, .excludedCard li:last-child {
+.includedCard li:last-child,
+.excludedCard li:last-child {
   border-bottom: none;
 }
 
@@ -835,120 +923,134 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #27ae60;
-  font-weight: bold;
+  color: #C41E3A;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .excludedCard li::before {
   content: '✗';
   position: absolute;
   left: 0;
-  color: #e74c3c;
-  font-weight: bold;
+  color: #4a5568;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
+/* ==================== TOTAL INVESTMENT ==================== */
 .totalInvestment {
   background: white;
-  border-radius: 20px;
   padding: 2.5rem;
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E5E5;
   margin-top: 3rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
 .totalInvestment h4 {
-  color: #2c3e50;
-  font-size: 2rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
   margin-bottom: 1rem;
 }
 
 .price {
-  color: #e74c3c;
-  font-weight: 800;
+  color: #C41E3A;
+  font-weight: 700;
 }
 
 .totalInvestment p {
-  color: #7f8c8d;
+  font-family: 'Quicksand', sans-serif;
+  color: #4a5568;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .paymentOptions {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-wrap: wrap;
   padding-top: 1.5rem;
-  border-top: 1px solid #ecf0f1;
+  border-top: 1px solid #E5E5E5;
 }
 
 .paymentOptions span {
+  font-family: 'Quicksand', sans-serif;
   padding: 0.5rem 1.2rem;
-  background: #f8f9fa;
-  border-radius: 20px;
-  color: #34495e;
-  font-size: 0.95rem;
+  background: #f0f0f0;
+  border-radius: 3px;
+  color: #4a5568;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
-/* FAQ Section */
-.faqSection {
-  padding: 5rem 0;
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
-}
-
+/* ==================== FAQ ITEMS ==================== */
 .faqItem {
   background: white;
-  border-radius: 15px;
   padding: 1.8rem;
+  border-radius: 0;
   margin-bottom: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #C41E3A;
+  border-right: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  transition: all 0.3s ease;
 }
 
 .faqItem:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
 }
 
 .faqItem h5 {
-  color: #2c3e50;
-  margin-bottom: 1rem;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .faqItem p {
-  color: #34495e;
-  line-height: 1.6;
-  margin: 0;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.8;
+  margin: 0;
 }
 
-/* Final CTA */
+/* ==================== FINAL CTA ==================== */
 .finalCta {
-  padding: 5rem 0;
-  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #C41E3A 0%, #8B1538 100%);
   color: white;
   text-align: center;
 }
 
 .ctaContainer {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .ctaContainer h2 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 1.5rem;
 }
 
 .ctaContainer > p {
-  font-size: 1.3rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.15rem;
   margin-bottom: 3rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  line-height: 1.7;
 }
 
 .ctaStats {
@@ -964,152 +1066,206 @@
 }
 
 .ctaStat span {
+  font-family: 'Philosopher', sans-serif;
   display: block;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1;
   color: white;
 }
 
 .ctaStat small {
+  font-family: 'Quicksand', sans-serif;
   display: block;
-  font-size: 1rem;
-  opacity: 0.8;
+  font-size: 0.95rem;
+  opacity: 0.9;
   margin-top: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .applyNowBtn {
-  background: #e74c3c;
-  color: white;
+  background: white;
+  color: #C41E3A;
   padding: 1.2rem 3rem;
-  border-radius: 30px;
+  border-radius: 3px;
   border: none;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
   transition: all 0.3s ease;
   display: inline-block;
   margin-bottom: 1.5rem;
 }
 
 .applyNowBtn:hover {
-  background: #c0392b;
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(231, 76, 60, 0.3);
+  background: #f5f0ff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
-.ctaNote {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
-}
+/* ==================== RESPONSIVE DESIGN ==================== */
 
-.contactInfo {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.contactInfo p {
-  margin: 0.5rem 0;
-  opacity: 0.9;
-  font-size: 1.1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
+/* Tablet */
+@media (max-width: 991px) {
   .mainTitle {
-    font-size: 2.8rem;
-  }
-  
-  .subTitle {
-    font-size: 1.5rem;
-  }
-  
-  .sectionTitle {
     font-size: 2.2rem;
   }
-  
+
+  .subTitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.9rem;
+  }
+
   .heroStats {
-    justify-content: center;
-  }
-  
-  .timeline::before {
-    left: 30px;
-  }
-  
-  .timelineItem {
-    flex-direction: row !important;
     justify-content: flex-start;
   }
-  
-  .timelineItem::before {
-    left: 30px;
-  }
-  
-  .timeSlot {
-    min-width: 100px;
-    margin-right: 1.5rem;
-  }
-}
 
-@media (max-width: 768px) {
-  .mainTitle {
-    font-size: 2.2rem;
+  .timelineItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
-  
-  .sectionTitle {
-    font-size: 1.8rem;
+
+  .timeSlot {
+    min-width: auto;
   }
-  
+
   .tabHeader {
     flex-direction: column;
   }
-  
+
   .tabButton {
     width: 100%;
   }
-  
-  .ctaContainer h2 {
-    font-size: 2.2rem;
-  }
-  
-  .heroBanner {
-    padding: 3rem 0;
-  }
-  
-  .floatingYogi,
-  .floatingLotus,
-  .floatingOm {
-    display: none;
-  }
 }
 
-@media (max-width: 576px) {
-  .heroStats {
-    gap: 1rem;
+/* Mobile */
+@media (max-width: 767px) {
+  .heroBanner {
+    padding: 2rem 1rem;
+    min-height: 400px;
   }
-  
+
+  .heroContent {
+    padding-left: 1rem;
+    padding-top: 2rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+    max-width: 100%;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .overviewSection,
+  .highlightsSection,
+  .curriculumSection,
+  .scheduleSection,
+  .accommodationSection,
+  .includedSection,
+  .faqSection {
+    padding: 3rem 1rem;
+  }
+
+  .heroStats {
+    gap: 0.5rem;
+  }
+
   .statBox {
     min-width: 100px;
-    padding: 1rem;
+    padding: 0.8rem 1rem;
   }
-  
+
   .statNumber {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
-  
+
   .ctaButtons {
     flex-direction: column;
   }
-  
+
   .primaryBtn,
   .secondaryBtn {
     width: 100%;
   }
-  
+
+  .contentCard,
+  .whyRishikesh,
+  .highlightCard,
+  .detailedSubjects,
+  .includedCard,
+  .excludedCard,
+  .totalInvestment {
+    padding: 1.5rem;
+  }
+
+  .ctaContainer h2 {
+    font-size: 1.9rem;
+  }
+
+  .ctaContainer > p {
+    font-size: 1rem;
+  }
+
+  .ctaStats {
+    gap: 2rem;
+  }
+
+  .ctaStat span {
+    font-size: 2.5rem;
+  }
+
+  .mealCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .mealTime {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .subTitle {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroDescription {
+    font-size: 0.95rem;
+  }
+
+  .timelineItem {
+    padding: 1rem 1.2rem;
+  }
+
+  .timeSlot {
+    font-size: 1rem;
+  }
+
   .activity {
-    margin: 0 1rem;
+    font-size: 0.95rem;
   }
 }

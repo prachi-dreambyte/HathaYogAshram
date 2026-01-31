@@ -9,33 +9,6 @@ const ContactForm = () => {
         <div className={styles.heroImage}>
           <img src={bannerImg} alt="Connect With Inner Peace" />
         </div>
-        {/* <div className={styles.heroOverlay}>
-          <div className={styles.heroContent}>
-            <div className={styles.lotusIcon}>
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M50 20 C30 30, 20 50, 20 70 Q20 80, 30 85 Q40 90, 50 90 Q60 90, 70 85 Q80 80, 80 70 C80 50, 70 30, 50 20Z"
-                  fill="currentColor"
-                  opacity="0.3"
-                />
-                <path
-                  d="M50 25 C35 35, 28 52, 28 68 Q28 76, 35 80 Q42 84, 50 84 Q58 84, 65 80 Q72 76, 72 68 C72 52, 65 35, 50 25Z"
-                  fill="currentColor"
-                  opacity="0.5"
-                />
-                <circle cx="50" cy="50" r="8" fill="currentColor" />
-              </svg>
-            </div>
-            <h1 className={styles.heroTitle}>
-              <span className={styles.titleLine1}>Begin Your</span>
-              <span className={styles.titleLine2}>Sacred Journey</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Where ancient wisdom meets modern awakening
-            </p>
-            <div className={styles.heroDivider}></div>
-          </div>
-        </div> */}
         <div className={styles.heroGradient}></div>
       </section>
 
@@ -258,7 +231,7 @@ const ContactForm = () => {
         </div>
       </section>
 
-      {/* DECORATIVE SECTION */}
+      {/* DECORATIVE FOOTER */}
       <div className={styles.decorativeFooter}>
         <div className={styles.mantraText}>
           <p>ॐ नमः शिवाय</p>

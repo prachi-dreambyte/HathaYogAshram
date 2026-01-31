@@ -1,33 +1,25 @@
-/* ===================================================
-   PREMIUM YOGA CONTACT FORM - ZEN AESTHETIC
-   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/* ==================== ROOT VARIABLES ==================== */
 :root {
-  --primary-green: #2d5f4e;
-  --primary-light: #4a8c73;
-  --primary-dark: #1a3d2f;
-  --accent-gold: #d4af37;
-  --accent-copper: #b87333;
-  --bg-cream: #faf8f4;
+  --primary-red: #C41E3A;
+  --primary-dark: #8B1538;
+  --bg-cream: #FAFAFA;
   --bg-white: #ffffff;
-  --text-primary: #1a1a1a;
-  --text-secondary: #5a5a5a;
-  --text-light: #8a8a8a;
-  --border-light: #e8e3dc;
-  --shadow-sm: 0 2px 8px rgba(45, 95, 78, 0.08);
-  --shadow-md: 0 8px 24px rgba(45, 95, 78, 0.12);
-  --shadow-lg: 0 16px 48px rgba(45, 95, 78, 0.15);
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-light: #7f8c8d;
+  --border-light: #E5E5E5;
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 6px 20px rgba(196, 30, 58, 0.15);
 }
 
-/* ===================================================
-   HERO SECTION
-   ================================================ */
-
+/* ==================== HERO SECTION ==================== */
 .hero {
   position: relative;
-  min-height: 600px;
+  min-height: 520px;
   overflow: hidden;
-
 }
 
 .heroImage {
@@ -40,17 +32,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
 }
 
 .heroOverlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  display: none;
 }
 
 .heroGradient {
@@ -58,157 +43,27 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 200px;
+  height: 150px;
   background: linear-gradient(to top, var(--bg-cream), transparent);
   z-index: 3;
   pointer-events: none;
 }
 
-.heroContent {
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  padding: 0 24px;
-  animation: heroFadeIn 1.2s ease-out;
-}
-
-@keyframes heroFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.lotusIcon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 32px;
-  color: var(--accent-gold);
-  animation: lotusFloat 6s ease-in-out infinite;
-}
-
-@keyframes lotusFloat {
-
-  0%,
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-10px) rotate(5deg);
-  }
-}
-
-.heroTitle {
-  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
-  font-weight: 300;
-  margin: 0;
-  line-height: 1.1;
-  letter-spacing: 2px;
-}
-
-.titleLine1 {
-  display: block;
-  font-size: 48px;
-  opacity: 0.9;
-  margin-bottom: 8px;
-  animation: titleSlideIn 0.8s ease-out 0.3s both;
-}
-
-.titleLine2 {
-  display: block;
-  font-size: 72px;
-  font-weight: 400;
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent-gold) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: titleSlideIn 0.8s ease-out 0.5s both;
-}
-
-@keyframes titleSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.heroSubtitle {
-  font-family: 'Lato', 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin: 24px 0 32px;
-  opacity: 0.85;
-  animation: subtitleFade 1s ease-out 0.7s both;
-}
-
-@keyframes subtitleFade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 0.85;
-  }
-}
-
+.heroContent,
+.lotusIcon,
+.heroTitle,
+.titleLine1,
+.titleLine2,
+.heroSubtitle,
 .heroDivider {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(90deg,
-      transparent 0%,
-      var(--accent-gold) 50%,
-      transparent 100%);
-  margin: 0 auto;
-  animation: dividerExpand 1s ease-out 0.9s both;
+  display: none;
 }
 
-@keyframes dividerExpand {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 120px;
-  }
-}
-
-/* ===================================================
-   CONTACT SECTION
-   ================================================ */
-
+/* ==================== CONTACT SECTION ==================== */
 .contactSection {
   background: var(--bg-cream);
-  padding: 20px 24px 80px 24px;
+  padding: 4rem 2rem;
   position: relative;
-}
-
-.contactSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1px;
-  height: 100%;
-  background: linear-gradient(to bottom,
-      transparent 0%,
-      var(--border-light) 10%,
-      var(--border-light) 90%,
-      transparent 100%);
-  opacity: 0.5;
 }
 
 .contactContainer {
@@ -216,154 +71,142 @@
   margin: 0 auto;
 }
 
-/* ===================================================
-   SECTION HEADER
-   ================================================ */
-
+/* ==================== SECTION HEADER ==================== */
 .sectionHeader {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 80px;
+  max-width: 800px;
+  margin: 0 auto 4rem;
 }
 
 .sectionLabel {
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 3px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--primary-green);
-  margin-bottom: 16px;
+  color: var(--primary-red);
+  margin-bottom: 1rem;
 }
 
 .sectionTitle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 56px;
-  font-weight: 300;
+  font-family: 'Philosopher', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
   line-height: 1.2;
-  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--primary-red);
+  border-radius: 2px;
 }
 
 .sectionDesc {
-  font-family: 'Lato', sans-serif;
-  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-secondary);
-  font-weight: 300;
+  font-weight: 400;
+  margin-top: 2rem;
 }
 
-/* ===================================================
-   GRID LAYOUT
-   ================================================ */
-
+/* ==================== GRID LAYOUT ==================== */
 .contactGrid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
+  gap: 3rem;
   align-items: start;
 }
 
-/* ===================================================
-   FORM CARD
-   ================================================ */
-
+/* ==================== FORM CARD ==================== */
 .formCard {
   background: var(--bg-white);
-  padding: 56px;
-  border-radius: 2px;
-  box-shadow: var(--shadow-lg);
-  border-top: 4px solid var(--primary-green);
+  padding: 3rem;
+  border-radius: 0;
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--primary-red);
+  border-right: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   position: relative;
-  overflow: hidden;
-}
-
-.formCard::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle,
-      rgba(212, 175, 55, 0.03) 0%,
-      transparent 70%);
-  pointer-events: none;
 }
 
 .formHeader {
-  margin-bottom: 40px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 .formHeader h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 32px;
-  font-weight: 400;
+  font-family: 'Philosopher', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin: 0 0 8px;
-  letter-spacing: 0.5px;
+  margin: 0 0 0.5rem;
 }
 
 .formHeader p {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
   color: var(--text-light);
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-/* ===================================================
-   FORM ELEMENTS
-   ================================================ */
-
+/* ==================== FORM ELEMENTS ==================== */
 .form {
   position: relative;
-  z-index: 1;
 }
 
 .formRow {
-  margin-bottom: 28px;
+  margin-bottom: 1.5rem;
 }
 
 .inputGroup label {
   display: block;
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   color: var(--text-primary);
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .input,
 .textarea {
   width: 100%;
-  padding: 16px 20px;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  padding: 0.9rem 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
   color: var(--text-primary);
   background: var(--bg-cream);
-  border: 2px solid transparent;
-  border-radius: 2px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid var(--border-light);
+  border-radius: 0;
+  transition: all 0.3s ease;
   outline: none;
 }
 
 .input::placeholder,
 .textarea::placeholder {
   color: var(--text-light);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .input:focus,
 .textarea:focus {
   background: var(--bg-white);
-  border-color: var(--primary-green);
-  box-shadow: 0 0 0 4px rgba(45, 95, 78, 0.08);
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
 }
 
 .textarea {
@@ -372,18 +215,15 @@
   line-height: 1.6;
 }
 
-/* ===================================================
-   CHECKBOX
-   ================================================ */
-
+/* ==================== CHECKBOX ==================== */
 .checkboxWrapper {
-  margin: 32px 0;
+  margin: 2rem 0;
 }
 
 .checkboxLabel {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
   cursor: pointer;
   user-select: none;
 }
@@ -396,25 +236,25 @@
 
 .checkmark {
   position: relative;
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border: 2px solid var(--border-light);
-  border-radius: 2px;
+  border-radius: 0;
   background: var(--bg-white);
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
-.checkboxLabel input:checked~.checkmark {
-  background: var(--primary-green);
-  border-color: var(--primary-green);
+.checkboxLabel input:checked ~ .checkmark {
+  background: var(--primary-red);
+  border-color: var(--primary-red);
 }
 
 .checkmark::after {
   content: '';
   position: absolute;
-  left: 6px;
-  top: 2px;
+  left: 5px;
+  top: 1px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -423,37 +263,35 @@
   transition: transform 0.2s ease;
 }
 
-.checkboxLabel input:checked~.checkmark::after {
+.checkboxLabel input:checked ~ .checkmark::after {
   transform: rotate(45deg) scale(1);
 }
 
 .checkboxText {
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
-/* ===================================================
-   SUBMIT BUTTON
-   ================================================ */
-
+/* ==================== SUBMIT BUTTON ==================== */
 .submitButton {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 18px 48px;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #ffffff;
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--primary-light) 100%);
+  background: var(--primary-red);
   border: none;
-  border-radius: 2px;
+  border-radius: 0;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 16px rgba(45, 95, 78, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -477,8 +315,9 @@
 }
 
 .submitButton:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(45, 95, 78, 0.3);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.3);
 }
 
 .submitButton:active {
@@ -486,8 +325,8 @@
 }
 
 .buttonIcon {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   transition: transform 0.3s ease;
 }
 
@@ -495,29 +334,24 @@
   transform: translateX(4px);
 }
 
-/* ===================================================
-   INFO CARD
-   ================================================ */
-
+/* ==================== INFO CARD ==================== */
 .infoCard {
   background: var(--bg-white);
-  border-radius: 2px;
+  border-radius: 0;
   box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
   overflow: hidden;
   position: sticky;
   top: 24px;
 }
 
-/* ===================================================
-   LOCATION INFO
-   ================================================ */
-
+/* ==================== LOCATION INFO ==================== */
 .locationInfo {
-  padding: 40px;
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-red) 100%);
   color: #ffffff;
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
   align-items: start;
 }
 
@@ -525,39 +359,36 @@
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: var(--accent-gold);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .locationInfo h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 24px;
-  font-weight: 400;
-  margin: 0 0 8px;
+  font-family: 'Philosopher', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
   letter-spacing: 0.5px;
 }
 
 .locationInfo p {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  margin: 4px 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  margin: 0.25rem 0;
   opacity: 0.9;
-  font-weight: 300;
+  font-weight: 400;
 }
 
-/* ===================================================
-   CONTACT DETAILS
-   ================================================ */
-
+/* ==================== CONTACT DETAILS ==================== */
 .contactDetails {
-  padding: 40px;
+  padding: 2.5rem;
   background: var(--bg-white);
 }
 
 .detailItem {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: start;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid var(--border-light);
 }
 
@@ -574,12 +405,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(45, 95, 78, 0.1) 0%, rgba(74, 140, 115, 0.1) 100%);
+  background: rgba(196, 30, 58, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--primary-green);
+  color: var(--primary-red);
 }
 
 .detailIcon svg {
@@ -588,27 +419,24 @@
 }
 
 .detailLabel {
-  font-family: 'Lato', sans-serif;
-  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text-light);
-  margin: 0 0 4px;
+  margin: 0 0 0.25rem;
 }
 
 .detailValue {
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--text-primary);
   margin: 0;
 }
 
-/* ===================================================
-   MAP
-   ================================================ */
-
+/* ==================== MAP ==================== */
 .mapContainer {
   position: relative;
   height: 320px;
@@ -619,56 +447,54 @@
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(20%) contrast(1.1);
+  filter: grayscale(20%);
   transition: filter 0.3s ease;
 }
 
 .mapContainer:hover .map {
-  filter: grayscale(0%) contrast(1);
+  filter: grayscale(0%);
 }
 
 .mapOverlay {
   position: absolute;
-  bottom: 24px;
+  bottom: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
 
 .mapButton {
-  padding: 12px 28px;
-  font-family: 'Lato', sans-serif;
-  font-size: 13px;
+  padding: 0.75rem 1.75rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  color: var(--primary-green);
+  color: var(--primary-red);
   background: rgba(255, 255, 255, 0.95);
-  border: 2px solid var(--primary-green);
-  border-radius: 2px;
+  border: 2px solid var(--primary-red);
+  border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .mapButton:hover {
-  background: var(--primary-green);
+  background: var(--primary-red);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(45, 95, 78, 0.3);
+  box-shadow: 0 6px 16px rgba(196, 30, 58, 0.3);
 }
 
-/* ===================================================
-   DECORATIVE FOOTER
-   ================================================ */
-
+/* ==================== DECORATIVE FOOTER ==================== */
 .decorativeFooter {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-green) 100%);
-  padding: 60px 24px;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-red) 100%);
+  padding: 4rem 2rem;
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .decorativeFooter::before {
@@ -677,10 +503,10 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(90deg,
       transparent 0%,
-      var(--accent-gold) 50%,
+      rgba(255, 255, 255, 0.3) 50%,
       transparent 100%);
 }
 
@@ -690,43 +516,40 @@
 }
 
 .mantraText p:first-child {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 48px;
-  font-weight: 300;
-  color: var(--accent-gold);
-  margin: 0 0 12px;
-  letter-spacing: 4px;
-  opacity: 0.9;
+  font-family: 'Philosopher', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 0.75rem;
+  letter-spacing: 3px;
 }
 
 .mantraTranslation {
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 4px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
-/* ===================================================
-   RESPONSIVE DESIGN
-   ================================================ */
+/* ==================== RESPONSIVE DESIGN ==================== */
 
 @media (max-width: 1200px) {
   .contactGrid {
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   .formCard {
-    padding: 44px;
+    padding: 2.5rem;
   }
 }
 
 @media (max-width: 992px) {
   .contactGrid {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 3rem;
   }
 
   .infoCard {
@@ -734,76 +557,52 @@
     top: 0;
   }
 
-  .titleLine1 {
-    font-size: 40px;
-  }
-
-  .titleLine2 {
-    font-size: 60px;
-  }
-
   .sectionTitle {
-    font-size: 48px;
+    font-size: 2.2rem;
   }
 }
 
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
-    min-height: 500px;
-  }
-
-  .titleLine1 {
-    font-size: 32px;
-  }
-
-  .titleLine2 {
-    font-size: 48px;
-  }
-
-  .heroSubtitle {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .lotusIcon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 24px;
+    min-height: 400px;
   }
 
   .contactSection {
-    padding: 80px 24px;
+    padding: 3rem 1rem;
   }
 
   .sectionHeader {
-    margin-bottom: 60px;
+    margin-bottom: 3rem;
   }
 
   .sectionTitle {
-    font-size: 40px;
+    font-size: 2rem;
+  }
+
+  .sectionDesc {
+    font-size: 1rem;
   }
 
   .formCard {
-    padding: 32px;
+    padding: 2rem;
   }
 
   .formHeader h3 {
-    font-size: 28px;
+    font-size: 1.6rem;
   }
 
   .locationInfo {
-    padding: 32px;
+    padding: 2rem;
     flex-direction: column;
     text-align: center;
   }
 
   .locationInfo h4 {
-    font-size: 22px;
+    font-size: 1.3rem;
   }
 
   .contactDetails {
-    padding: 32px;
+    padding: 2rem;
   }
 
   .mapContainer {
@@ -811,41 +610,46 @@
   }
 
   .mantraText p:first-child {
-    font-size: 36px;
+    font-size: 2.2rem;
+  }
+
+  .mantraTranslation {
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 450px;
-  }
-
-  .titleLine1 {
-    font-size: 28px;
-  }
-
-  .titleLine2 {
-    font-size: 40px;
-  }
-
-  .heroSubtitle {
-    font-size: 12px;
+    min-height: 350px;
   }
 
   .contactSection {
-    padding: 60px 16px;
+    padding: 2.5rem 1rem;
   }
 
   .sectionTitle {
-    font-size: 32px;
+    font-size: 1.8rem;
   }
 
   .sectionDesc {
-    font-size: 16px;
+    font-size: 0.95rem;
   }
 
   .formCard {
-    padding: 24px;
+    padding: 1.5rem;
+  }
+
+  .formHeader {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .formHeader h3 {
+    font-size: 1.4rem;
+  }
+
+  .formRow {
+    margin-bottom: 1.25rem;
   }
 
   .submitButton {
@@ -855,14 +659,38 @@
 
   .locationInfo,
   .contactDetails {
-    padding: 24px;
+    padding: 1.5rem;
+  }
+
+  .locationInfo h4 {
+    font-size: 1.2rem;
   }
 
   .mantraText p:first-child {
-    font-size: 28px;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
   }
 
   .mantraTranslation {
-    font-size: 12px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .decorativeFooter {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .formCard {
+    padding: 1.25rem;
+  }
+
+  .mantraText p:first-child {
+    font-size: 1.5rem;
   }
 }

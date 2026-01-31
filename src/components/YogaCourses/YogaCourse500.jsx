@@ -5,24 +5,25 @@ import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
 
-
 export default function YogaCourse500() {
   return (
     <div className={styles.yogaPage}>
-       {/* Banners */}
-        <div>
-           <img src={heroVideo} alt="img"/>
-        </div>
+      {/* Banner Image */}
+      <div>
+        <img src={heroVideo} alt="500 Hour Yoga Teacher Training"/>
+      </div>
+
       {/* Hero Banner */}
       <section className={styles.heroBanner}>
         <div className={styles.overlay}></div>
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className={styles.heroContent}>
                 <span className={styles.certBadge}>Yoga Alliance RYT-500 Certified</span>
                 <h1 className={styles.mainTitle}>500 Hour Yoga Teacher Training Course</h1>
                 <h2 className={styles.subTitle}>Transformative 56-Day Immersion in Rishikesh, India</h2>
+                
                 <div className={styles.heroStats}>
                   <div className={styles.statBox}>
                     <span className={styles.statNumber}>56</span>
@@ -41,34 +42,20 @@ export default function YogaCourse500() {
                     <span className={styles.statLabel}>Himalayas</span>
                   </div>
                 </div>
+                
                 <p className={styles.heroDescription}>
                   The <strong>500 Hour Yoga Teacher Training Course</strong> is a comprehensive, residential program designed for beginners and practitioners who want to deepen their practice and become certified yoga teachers. This month-long immersive experience in Rishikesh, the yoga capital of the world, combines traditional teachings with modern methodology.
                 </p>
+                
                 <div className={styles.ctaButtons}>
                   <button className={`btn ${styles.primaryBtn}`}>Download Brochure</button>
                   <button className={`btn ${styles.secondaryBtn}`}>Apply Now</button>
                 </div>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className={styles.yogaElements}>
-                <div className={styles.floatingYogi}>🧘‍♀️</div>
-                <div className={styles.courseCard}>
-                  <h4>Course Details</h4>
-                  <ul>
-                    <li><strong>Duration:</strong> 56 Days</li>
-                    <li><strong>Level:</strong> Beginner to Advanced</li>
-                    <li><strong>Certification:</strong> Yoga Alliance USA</li>
-                    <li><strong>Location:</strong> Rishikesh, India</li>
-                    <li><strong>Next Batch:</strong> April 2024</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
-      <Refund/>
 
       {/* Overview Section */}
       <section className={styles.overviewSection}>
@@ -184,6 +171,7 @@ export default function YogaCourse500() {
           </div>
         </div>
       </section>
+
       <Hours24/>
 
       {/* Curriculum Details */}
@@ -543,6 +531,9 @@ export default function YogaCourse500() {
           </div>
         </div>
       </section>
+
+      <Refund/>
+
       <TeacherHours/>
 
       {/* FAQs */}
@@ -612,6 +603,8 @@ export default function YogaCourse500() {
                 <small>Satisfaction</small>
               </div>
             </div>
+            
+            <button className={styles.applyNowBtn}>Apply Now</button>
           </div>
         </div>
       </section>

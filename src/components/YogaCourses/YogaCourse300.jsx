@@ -1,33 +1,11 @@
 import React from 'react';
-import styles from '../../assets/styles/YogaCourse/100Hours.module.css';
+import styles from '../../assets/styles/YogaCourse/300Hours.module.css';
 import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/300hrs.webp';
 
 export default function YogaCourse300() {
-  // const schools = [
-  //   {
-  //     name: 'Himalayan Yoga Institute',
-  //     image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
-  //     description: 'Premier yoga school offering advanced 300-hour teacher training in Rishikesh.'
-  //   },
-  //   {
-  //     name: 'Rishikesh Yogpeeth',
-  //     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-  //     description: 'Traditional ashram with 20+ years of excellence in advanced yoga teacher training.'
-  //   },
-  //   {
-  //     name: 'Sivananda Ashram',
-  //     image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop',
-  //     description: 'World-renowned center for authentic Sivananda advanced yoga training.'
-  //   },
-  //   {
-  //     name: 'Parmarth Niketan',
-  //     image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&h=400&fit=crop',
-  //     description: 'Largest ashram in Rishikesh offering comprehensive RYT-300 certification.'
-  //   }
-  // ];
 
   const whyRishikesh = [
     {
@@ -52,25 +30,14 @@ export default function YogaCourse300() {
     }
   ];
 
-  // const courseFeatures = [
-  //   { icon: '🎓', title: 'Yoga Alliance RYT-300', desc: 'Advanced globally recognized certification' },
-  //   { icon: '👨‍🏫', title: 'Lineage-Holding Masters', desc: '20-40+ years teaching experience' },
-  //   { icon: '📚', title: 'Advanced Curriculum', desc: '300+ hours of specialized training' },
-  //   { icon: '🏠', title: 'Ashram Living', desc: 'Traditional residential immersion' },
-  //   { icon: '🥗', title: 'Sattvic Vegetarian Meals', desc: '3 organic meals daily' },
-  //   { icon: '👥', title: 'Small Group Size', desc: 'Maximum 12 students per batch' },
-  //   { icon: '🔄', title: 'RYT-500 Pathway', desc: 'Complete your 500-hour registration' },
-  //   { icon: '✈️', title: 'Airport Pickup', desc: 'Free pickup from Dehradun airport' }
-  // ];
-
   const curriculumBreakdown = [
-    { subject: 'Advanced Asana & Techniques', hours: 80, color: '#8B4789' },
-    { subject: 'Teaching Methodology', hours: 50, color: '#D4A5D4' },
-    { subject: 'Yoga Philosophy', hours: 50, color: '#9C6B9A' },
-    { subject: 'Anatomy & Yoga Therapy', hours: 45, color: '#B48CB2' },
-    { subject: 'Pranayama & Energy Work', hours: 35, color: '#8B4789' },
-    { subject: 'Meditation & Mindfulness', hours: 30, color: '#D4A5D4' },
-    { subject: 'Specialized Workshops', hours: 20, color: '#9C6B9A' }
+    { subject: 'Advanced Asana & Techniques', hours: 80, color: '#C41E3A' },
+    { subject: 'Teaching Methodology', hours: 50, color: '#8B1538' },
+    { subject: 'Yoga Philosophy', hours: 50, color: '#C41E3A' },
+    { subject: 'Anatomy & Yoga Therapy', hours: 45, color: '#8B1538' },
+    { subject: 'Pranayama & Energy Work', hours: 35, color: '#C41E3A' },
+    { subject: 'Meditation & Mindfulness', hours: 30, color: '#8B1538' },
+    { subject: 'Specialized Workshops', hours: 20, color: '#C41E3A' }
   ];
 
   const detailedCurriculum = [
@@ -155,27 +122,6 @@ export default function YogaCourse300() {
     { time: '7:30 PM', activity: 'Light Dinner' },
     { time: '8:30 PM', activity: 'Self-Study / Integration / Satsang (Discourse)' }
   ];
-
-  // const teachers = [
-  //   {
-  //     name: 'Yogacharya Ramesh',
-  //     title: 'Lead Instructor | E-RYT 500',
-  //     image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w-600&h=400&fit=crop',
-  //     bio: '25+ years teaching experience, specializes in Ashtanga, advanced adjustments, and therapeutic applications.'
-  //   },
-  //   {
-  //     name: 'Dr. Anjali Sharma',
-  //     title: 'Philosophy & Yoga Therapy Expert',
-  //     image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w-600&h=400&fit=crop',
-  //     bio: 'PhD in Yoga Philosophy, certified yoga therapist, author of five books on advanced yogic sciences.'
-  //   },
-  //   {
-  //     name: 'Swami Devananda',
-  //     title: 'Meditation & Pranayama Master',
-  //     image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w-600&h=400&fit=crop',
-  //     bio: '40+ years in meditation practice, expert in Himalayan meditation and advanced pranayama techniques.'
-  //   }
-  // ];
 
   const roomOptions = [
     {
@@ -293,55 +239,45 @@ export default function YogaCourse300() {
 
   return (
     <div className={styles.yogaPage}>
-       {/* Banners */}
-        <div>
-           <img src={heroVideo} alt="img"/>
-        </div>
+      {/* Banner Image */}
+      <div>
+        <img src={heroVideo} alt="300 Hour Yoga Teacher Training"/>
+      </div>
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h1 className={styles.heroTitle}>
-                300-Hour Advanced Yoga Teacher Training in Rishikesh, India
-              </h1>
-              <p className={styles.heroSubtitle}>
-                Deepen Your Practice & Master the Art of Teaching
-              </p>
-              <div className={styles.heroBadges}>
-                <span className={styles.badgeItem}>📜 Yoga Alliance USA RYT-300</span>
-                <span className={styles.badgeItem}>⏱️ 28 Days Intensive</span>
-                <span className={styles.badgeItem}>📍 Rishikesh, Himalayas</span>
-                <span className={styles.badgeItem}>🎓 RYT-500 Pathway</span>
-              </div>
-              <div className="d-flex flex-wrap gap-3 mt-4">
-                <button className={`${styles.ctaButton} ${styles.primary}`}>Apply Now for 2024</button>
-                <button className={`${styles.ctaButton} ${styles.secondary}`}>Download Advanced Brochure</button>
-              </div>
+          <div className={styles.heroContent}>
+            <p className={styles.heroSubtitle}>
+              Deepen Your Practice & Master the Art of Teaching
+            </p>
+            <h1 className={styles.heroTitle}>
+              300-Hour Advanced Yoga Teacher Training in Rishikesh, India
+            </h1>
+            <div className={styles.heroBadges}>
+              <span className={styles.badgeItem}>📜 Yoga Alliance USA RYT-300</span>
+              <span className={styles.badgeItem}>⏱️ 28 Days Intensive</span>
+              <span className={styles.badgeItem}>📍 Rishikesh, Himalayas</span>
+              <span className={styles.badgeItem}>🎓 RYT-500 Pathway</span>
             </div>
-            <div className="col-lg-6 mt-5 mt-lg-0">
-              <div className={styles.heroImageWrapper}>
-                <img 
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop" 
-                  alt="300-Hour Advanced Yoga Teacher Training Rishikesh" 
-                  className={styles.heroImage}
-                />
-              </div>
+            <div className="d-flex flex-wrap gap-3 mt-4">
+              <button className={`${styles.ctaButton} ${styles.primary}`}>Apply Now for 2024</button>
+              <button className={`${styles.ctaButton} ${styles.secondary}`}>Download Advanced Brochure</button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Course Overview */}
+      {/* 1. COURSE OVERVIEW - Most Important First */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🧘‍♂️ Course Overview</h2>
+            <h2 className={styles.sectionTitle}>Course Overview</h2>
             <p className={styles.sectionSubtitle}>Transformative advanced residential program for dedicated teachers</p>
           </div>
           
           <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <p className={styles.leadText}>
                 The <strong>300-Hour Advanced Yoga Teacher Training Course</strong> is a comprehensive residential program 
                 designed for certified teachers and dedicated practitioners seeking mastery. This immersive 28-day experience 
@@ -383,7 +319,7 @@ export default function YogaCourse300() {
           </div>
 
           <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <div className={styles.infoBox}>
                 <h4>What You Will Gain:</h4>
                 <ul className={styles.curriculumList}>
@@ -399,76 +335,17 @@ export default function YogaCourse300() {
           </div>
         </div>
       </section>
-      <Refund/>
 
-      {/* Why Choose Our Advanced School */}
-      <section className={styles.section}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>✨ Why Choose Our Advanced Training?</h2>
-            <p className={styles.sectionSubtitle}>From competent teacher to masterful guide</p>
-          </div>
-          
-          <div className="row g-4">
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>🏫</div>
-                <h4>Lineage-Based Mastery</h4>
-                <p>Learn from Indian masters carrying forward authentic traditions, combined with modern therapeutic understanding for today's students.</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>📚</div>
-                <h4>Depth Over Breadth</h4>
-                <p>300+ hours focused on mastery, specialization, and deep understanding rather than just covering more topics.</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>👥</div>
-                <h4>Therapeutic Focus</h4>
-                <p>Strong emphasis on yoga therapy, anatomy, and creating therapeutic sequences for real-world applications.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Rishikesh for Advanced Training */}
+      {/* 2. DETAILED ADVANCED CURRICULUM */}
       <section className={`${styles.section} ${styles.sectionPeach}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🏔️ Why Rishikesh for Advanced Study?</h2>
-            <p className={styles.sectionSubtitle}>The living classroom for deep transformation</p>
-          </div>
-          <div className="row g-4">
-            {whyRishikesh.map((item, index) => (
-              <div key={index} className="col-lg-3 col-md-6">
-                <div className={styles.featureCard}>
-                  <div className={styles.iconBox}>{item.icon}</div>
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 28-Day Journey */}
-      <Hours24/>
-    
-      {/* Detailed Advanced Curriculum */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>📚 Advanced Curriculum</h2>
+            <h2 className={styles.sectionTitle}>Advanced Curriculum</h2>
             <p className={styles.sectionSubtitle}>300+ hours of specialized mastery training</p>
           </div>
           
           <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <div className={styles.curriculumBreakdown}>
                 <h4 className="mb-4">Curriculum Hours Breakdown</h4>
                 {curriculumBreakdown.map((subject, index) => (
@@ -509,11 +386,66 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Advanced Daily Schedule */}
+      {/* 3. WHY CHOOSE OUR ADVANCED TRAINING */}
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <div className="container">
+          <div className={`${styles.sectionHeader} text-center mb-5`}>
+            <h2 className={styles.sectionTitle}>Why Choose Our Advanced Training?</h2>
+            <p className={styles.sectionSubtitle}>From competent teacher to masterful guide</p>
+          </div>
+          
+          <div className="row g-4">
+            <div className="col-lg-4">
+              <div className={styles.featureCard}>
+                <div className={styles.iconBox}>🏫</div>
+                <h4>Lineage-Based Mastery</h4>
+                <p>Learn from Indian masters carrying forward authentic traditions, combined with modern therapeutic understanding for today's students.</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.featureCard}>
+                <div className={styles.iconBox}>📚</div>
+                <h4>Depth Over Breadth</h4>
+                <p>300+ hours focused on mastery, specialization, and deep understanding rather than just covering more topics.</p>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className={styles.featureCard}>
+                <div className={styles.iconBox}>👥</div>
+                <h4>Therapeutic Focus</h4>
+                <p>Strong emphasis on yoga therapy, anatomy, and creating therapeutic sequences for real-world applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. WHY RISHIKESH */}
       <section className={`${styles.section} ${styles.sectionPeach}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>⏰ Daily Schedule</h2>
+            <h2 className={styles.sectionTitle}>Why Rishikesh for Advanced Study?</h2>
+            <p className={styles.sectionSubtitle}>The living classroom for deep transformation</p>
+          </div>
+          <div className="row g-4">
+            {whyRishikesh.map((item, index) => (
+              <div key={index} className="col-lg-3 col-md-6">
+                <div className={styles.featureCard}>
+                  <div className={styles.iconBox}>{item.icon}</div>
+                  <h4>{item.title}</h4>
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. DAILY SCHEDULE */}
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
+        <div className="container">
+          <div className={`${styles.sectionHeader} text-center mb-5`}>
+            <h2 className={styles.sectionTitle}>Daily Schedule</h2>
             <p className={styles.sectionSubtitle}>A day in your advanced transformative journey</p>
           </div>
           <div className="row justify-content-center">
@@ -530,14 +462,15 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Meet Our Advanced Teachers */}
+      <Hours24/>
+
       <TeacherHours/>
 
-      {/* Accommodation */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
+      {/* 6. ACCOMMODATION & FACILITIES */}
+      <section className={`${styles.section} ${styles.sectionPeach}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🏠 Accommodation & Facilities</h2>
+            <h2 className={styles.sectionTitle}>Accommodation & Facilities</h2>
             <p className={styles.sectionSubtitle}>Your serene home for advanced study in the Himalayas</p>
           </div>
           
@@ -560,7 +493,7 @@ export default function YogaCourse300() {
           </div>
           
           <div className="row">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <div className={styles.infoBox}>
                 <h4>Advanced Training Facilities Include:</h4>
                 <div className="row">
@@ -587,11 +520,11 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Advanced Meal Plan */}
-      <section className={`${styles.section} ${styles.sectionPeach}`}>
+      {/* 7. MEAL PLAN */}
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🥗 Nourishing Sattvic Meals</h2>
+            <h2 className={styles.sectionTitle}>Nourishing Sattvic Meals</h2>
             <p className={styles.sectionSubtitle}>Food as medicine for advanced practice</p>
           </div>
           
@@ -609,7 +542,7 @@ export default function YogaCourse300() {
           </div>
           
           <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <div className={styles.infoBox}>
                 <h4>Our Advanced Food Philosophy</h4>
                 <p>For advanced practice, nutrition is crucial. Our kitchen prepares fresh, nutrient-dense vegetarian meals following sattvic and Ayurvedic principles. Meals are specifically designed to support intense practice, enhance mental clarity, and promote healing.</p>
@@ -620,11 +553,11 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
+      {/* 8. WHAT'S INCLUDED */}
+      <section className={`${styles.section} ${styles.sectionPeach}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>✅ What's Included</h2>
+            <h2 className={styles.sectionTitle}>What's Included</h2>
             <p className={styles.sectionSubtitle}>Complete package for advanced transformation</p>
           </div>
           <div className="row justify-content-center">
@@ -644,11 +577,11 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Advanced Investment Options */}
-      <section className={styles.section}>
+      {/* 9. INVESTMENT OPTIONS */}
+      <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>💰 Investment & Payment Options</h2>
+            <h2 className={styles.sectionTitle}>Investment & Payment Options</h2>
             <p className={styles.sectionSubtitle}>Choose your path to mastery</p>
           </div>
           
@@ -677,7 +610,7 @@ export default function YogaCourse300() {
           </div>
           
           <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
+            <div className="col-lg-10 mx-auto">
               <div className={styles.infoBox}>
                 <h4>Advanced Training Payment Information</h4>
                 <p><strong>Early Bird:</strong> $200 off if booked 90+ days in advance</p>
@@ -691,11 +624,11 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Advanced Testimonials */}
+      {/* 10. TESTIMONIALS */}
       <section className={`${styles.section} ${styles.sectionPeach}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>📢 What Our Advanced Graduates Say</h2>
+            <h2 className={styles.sectionTitle}>What Our Advanced Graduates Say</h2>
             <p className={styles.sectionSubtitle}>From teachers who transformed into guides</p>
           </div>
           <div className="row g-4">
@@ -718,11 +651,13 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Advanced FAQ */}
+      <Refund/>
+
+      {/* 11. FAQ */}
       <section className={`${styles.section} ${styles.sectionAlt}`}>
         <div className="container">
           <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>❓ Advanced Training FAQs</h2>
+            <h2 className={styles.sectionTitle}>Advanced Training FAQs</h2>
             <p className={styles.sectionSubtitle}>Answers for dedicated teachers</p>
           </div>
           <div className="row justify-content-center">
@@ -738,10 +673,10 @@ export default function YogaCourse300() {
         </div>
       </section>
 
-      {/* Final Advanced CTA */}
+      {/* 12. FINAL CTA */}
       <section className={`${styles.section} ${styles.ctaSection}`}>
         <div className="container text-center">
-          <h2 className={styles.ctaTitle}>🎓 Your Journey to Mastery Awaits</h2>
+          <h2 className={styles.ctaTitle}>Your Journey to Mastery Awaits</h2>
           <p className={styles.ctaSubtitle}>
             This 300-hour advanced training is your evolution from teacher to guide. 
             You'll leave not just with an advanced certificate, but with the depth, confidence, 

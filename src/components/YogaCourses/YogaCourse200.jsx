@@ -1,33 +1,11 @@
 import React from 'react';
-import styles from '../../assets/styles/YogaCourse/100Hours.module.css';
+import styles from '../../assets/styles/YogaCourse/200Hours.module.css';
 import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/200hrs.webp';
 
 export default function YogaCourse200() {
-  // const schools = [
-  //   {
-  //     name: 'Himalayan Yoga Institute',
-  //     image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
-  //     description: 'Premier yoga school offering authentic 200-hour teacher training in Rishikesh.'
-  //   },
-  //   {
-  //     name: 'Rishikesh Yogpeeth',
-  //     image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-  //     description: 'Traditional ashram with 15+ years of excellence in yoga teacher training.'
-  //   },
-  //   {
-  //     name: 'Sivananda Ashram',
-  //     image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop',
-  //     description: 'World-renowned center for authentic Sivananda yoga training.'
-  //   },
-  //   {
-  //     name: 'Parmarth Niketan',
-  //     image: 'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&h=400&fit=crop',
-  //     description: 'Largest ashram in Rishikesh offering comprehensive yoga certification.'
-  //   }
-  // ];
 
   const whyRishikesh = [
     {
@@ -52,30 +30,20 @@ export default function YogaCourse200() {
     }
   ];
 
-  // const courseFeatures = [
-  //   { icon: '🎓', title: 'Yoga Alliance RYT-200', desc: 'Globally recognized certification' },
-  //   { icon: '👨‍🏫', title: 'Expert Indian Masters', desc: '15-30+ years teaching experience' },
-  //   { icon: '📚', title: 'Comprehensive Curriculum', desc: '200+ hours of intensive training' },
-  //   { icon: '🏠', title: 'Ashram Living', desc: 'Traditional residential experience' },
-  //   { icon: '🥗', title: 'Sattvic Vegetarian Meals', desc: '3 organic meals daily' },
-  //   { icon: '👥', title: 'Small Group Size', desc: 'Maximum 15 students per batch' },
-  //   { icon: '🔄', title: 'Lifetime Support', desc: 'Alumni community & job assistance' },
-  //   { icon: '✈️', title: 'Airport Pickup', desc: 'Free pickup from Dehradun airport' }
-  // ];
-
   const curriculumBreakdown = [
-    { subject: 'Asana Practice', hours: 60, color: '#8B4789' },
-    { subject: 'Teaching Methodology', hours: 30, color: '#D4A5D4' },
-    { subject: 'Yoga Philosophy', hours: 30, color: '#9C6B9A' },
-    { subject: 'Anatomy & Physiology', hours: 25, color: '#B48CB2' },
-    { subject: 'Pranayama & Breathwork', hours: 20, color: '#8B4789' },
-    { subject: 'Meditation & Mindfulness', hours: 20, color: '#D4A5D4' },
-    { subject: 'Special Workshops', hours: 15, color: '#9C6B9A' }
+    { subject: 'Asana Practice', hours: 60, color: '#C41E3A' },
+    { subject: 'Teaching Methodology', hours: 30, color: '#D2691E' },
+    { subject: 'Yoga Philosophy', hours: 30, color: '#C41E3A' },
+    { subject: 'Anatomy & Physiology', hours: 25, color: '#D2691E' },
+    { subject: 'Pranayama & Breathwork', hours: 20, color: '#C41E3A' },
+    { subject: 'Meditation & Mindfulness', hours: 20, color: '#D2691E' },
+    { subject: 'Special Workshops', hours: 15, color: '#C41E3A' }
   ];
 
   const detailedCurriculum = [
     {
-      category: 'Asana Mastery (60 Hours)',
+      category: 'Asana Mastery',
+      hours: '60 Hours',
       items: [
         'Hatha Yoga: 140+ traditional postures',
         'Ashtanga Vinyasa: Primary series',
@@ -86,7 +54,8 @@ export default function YogaCourse200() {
       ]
     },
     {
-      category: 'Teaching Methodology (30 Hours)',
+      category: 'Teaching Methodology',
+      hours: '30 Hours',
       items: [
         'Class planning & sequencing',
         'Effective cueing & demonstration',
@@ -97,7 +66,8 @@ export default function YogaCourse200() {
       ]
     },
     {
-      category: 'Yoga Philosophy (30 Hours)',
+      category: 'Yoga Philosophy',
+      hours: '30 Hours',
       items: [
         'Yoga Sutras of Patanjali',
         'Bhagavad Gita teachings',
@@ -108,7 +78,8 @@ export default function YogaCourse200() {
       ]
     },
     {
-      category: 'Anatomy & Physiology (25 Hours)',
+      category: 'Anatomy & Physiology',
+      hours: '25 Hours',
       items: [
         'Skeletal & muscular systems',
         'Respiratory & circulatory systems',
@@ -119,7 +90,8 @@ export default function YogaCourse200() {
       ]
     },
     {
-      category: 'Pranayama (20 Hours)',
+      category: 'Pranayama',
+      hours: '20 Hours',
       items: [
         'Fundamental breathing techniques',
         'Advanced pranayama practices',
@@ -130,7 +102,8 @@ export default function YogaCourse200() {
       ]
     },
     {
-      category: 'Meditation (20 Hours)',
+      category: 'Meditation',
+      hours: '20 Hours',
       items: [
         'Himalayan meditation techniques',
         'Yoga Nidra (yogic sleep)',
@@ -155,27 +128,6 @@ export default function YogaCourse200() {
     { time: '6:30 PM', activity: 'Dinner' },
     { time: '7:30 PM', activity: 'Satsang / Kirtan / Meditation' }
   ];
-
-  // const teachers = [
-  //   {
-  //     name: 'Yogacharya Ramesh',
-  //     title: 'Lead Instructor | E-RYT 500',
-  //     image: 'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w-600&h=400&fit=crop',
-  //     bio: '15+ years teaching experience, trained in Himalayan tradition, specializes in Hatha and Ashtanga yoga.'
-  //   },
-  //   {
-  //     name: 'Dr. Anjali Sharma',
-  //     title: 'Philosophy & Anatomy Expert',
-  //     image: 'https://images.unsplash.com/photo-1594381898411-846e7d193883?w-600&h=400&fit=crop',
-  //     bio: 'PhD in Yoga Philosophy, certified yoga therapist, author of three books on yogic sciences.'
-  //   },
-  //   {
-  //     name: 'Swami Devananda',
-  //     title: 'Meditation & Pranayama Master',
-  //     image: 'https://images.unsplash.com/photo-1546833999-b9f581a1996d?w-600&h=400&fit=crop',
-  //     bio: '30+ years in meditation practice, trained in traditional Himalayan meditation techniques.'
-  //   }
-  // ];
 
   const roomOptions = [
     {
@@ -290,207 +242,209 @@ export default function YogaCourse200() {
   ];
 
   return (
-    <div className={styles.yogaPage}>
-      {/* Banners */}
-        <div>
-           <img src={heroVideo} alt="img"/>
-        </div>
+    <div className={styles.container}>
+      {/* Banner Image */}
+      <div className={styles.bannerWrapper}>
+        <img src={heroVideo} alt="200 Hour Yoga Teacher Training" className={styles.bannerImage} />
+      </div>
+
       {/* Hero Section */}
       <section className={styles.heroSection}>
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h1 className={styles.heroTitle}>
-                200-Hour Yoga Teacher Training in Rishikesh, India
-              </h1>
-              <p className={styles.heroSubtitle}>
-                Yoga Alliance Certified (RYT-200) | Residential Program | Beginner to Intermediate
-              </p>
-              <div className={styles.heroBadges}>
-                <span className={styles.badgeItem}>📜 Yoga Alliance USA RYT-200</span>
-                <span className={styles.badgeItem}>⏱️ 24 Days Intensive</span>
-                <span className={styles.badgeItem}>📍 Rishikesh, Himalayas</span>
+        <div className={styles.heroContent}>
+          <p className={styles.quoteText}>
+            Yoga Alliance Certified (RYT-200) | Residential Program | Beginner to Intermediate
+          </p>
+          <h1 className={styles.mainTitle}>
+            200-Hour Yoga Teacher Training in Rishikesh, India
+          </h1>
+          <div className={styles.breadcrumb}>
+            <span className={styles.breadcrumbLink}>Home</span>
+            <span className={styles.breadcrumbSeparator}>/</span>
+            <span>200 Hour YTTC</span>
+          </div>
+        </div>
+      </section>
+
+      {/* 1. COURSE OVERVIEW - Most Important First */}
+      <section className={styles.overviewSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Course Overview</p>
+          <h2 className={styles.sectionTitle}>
+            Transformative Residential Program for Aspiring Yoga Teachers
+          </h2>
+          <div className={styles.decorativeLine}></div>
+          <p className={styles.sectionDescription}>
+            The <strong>200-Hour Yoga Teacher Training Course</strong> is a comprehensive residential program 
+            designed for beginners and practitioners seeking to deepen their practice and become certified yoga teachers. 
+            This immersive 24-day experience in Rishikesh—the yoga capital of the world—blends ancient teachings with modern methodology.
+          </p>
+        </div>
+
+        {/* Info Grid */}
+        <div className={styles.infoGrid}>
+          <div className={styles.infoCard}>
+            <div className={styles.infoContent}>
+              <h3 className={styles.infoCardTitle}>Duration</h3>
+              <div className={styles.infoTags}>
+                <span className={styles.infoTag}>24 Days Intensive</span>
               </div>
-              <div className="d-flex flex-wrap gap-3 mt-4">
-                <button className={`${styles.ctaButton} ${styles.primary}`}>Apply Now for 2024</button>
-                <button className={`${styles.ctaButton} ${styles.secondary}`}>Download 2024 Brochure</button>
+              <div className={styles.infoDetails}>
+                <p>📅 24 Days intensive residential program</p>
               </div>
             </div>
-            <div className="col-lg-6 mt-5 mt-lg-0">
-              <div className={styles.heroImageWrapper}>
-                <img 
-                  src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&h=600&fit=crop" 
-                  alt="200-Hour Yoga Teacher Training Rishikesh" 
-                  className={styles.heroImage}
-                />
+            <div className={styles.infoImageSection}>
+              <div className={styles.infoIcon}>📅</div>
+            </div>
+          </div>
+
+          <div className={styles.infoCard}>
+            <div className={styles.infoContent}>
+              <h3 className={styles.infoCardTitle}>Level</h3>
+              <div className={styles.infoTags}>
+                <span className={styles.infoTag}>Beginner to Intermediate</span>
               </div>
+              <div className={styles.infoDetails}>
+                <p>📊 Suitable for all levels of practitioners</p>
+              </div>
+            </div>
+            <div className={styles.infoImageSection}>
+              <div className={styles.infoIcon}>📊</div>
+            </div>
+          </div>
+
+          <div className={styles.infoCard}>
+            <div className={styles.infoContent}>
+              <h3 className={styles.infoCardTitle}>Certification</h3>
+              <div className={styles.infoTags}>
+                <span className={styles.infoTag}>Yoga Alliance RYT-200</span>
+              </div>
+              <div className={styles.infoDetails}>
+                <p>🏆 Globally recognized certification</p>
+              </div>
+            </div>
+            <div className={styles.infoImageSection}>
+              <div className={styles.infoIcon}>🏆</div>
+            </div>
+          </div>
+
+          <div className={styles.infoCard}>
+            <div className={styles.infoContent}>
+              <h3 className={styles.infoCardTitle}>Location</h3>
+              <div className={styles.infoTags}>
+                <span className={styles.infoTag}>Rishikesh, Himalayas</span>
+              </div>
+              <div className={styles.infoDetails}>
+                <p>📍 Yoga capital of the world</p>
+              </div>
+            </div>
+            <div className={styles.infoImageSection}>
+              <div className={styles.infoIcon}>📍</div>
+            </div>
+          </div>
+        </div>
+
+        {/* What You Will Gain */}
+        <div className={styles.gainsSection}>
+          <h3 className={styles.gainsTitle}>What You Will Gain</h3>
+          <div className={styles.gainsList}>
+            <div className={styles.gainItem}>
+              <span className={styles.gainIcon}>✓</span>
+              <p>Globally recognized Yoga Alliance RYT-200 certification</p>
+            </div>
+            <div className={styles.gainItem}>
+              <span className={styles.gainIcon}>✓</span>
+              <p>Deep understanding of yoga philosophy, anatomy, and teaching methodology</p>
+            </div>
+            <div className={styles.gainItem}>
+              <span className={styles.gainIcon}>✓</span>
+              <p>Mastery of Hatha, Ashtanga, and Vinyasa Flow yoga styles</p>
+            </div>
+            <div className={styles.gainItem}>
+              <span className={styles.gainIcon}>✓</span>
+              <p>Personal transformation in a serene Himalayan setting</p>
+            </div>
+            <div className={styles.gainItem}>
+              <span className={styles.gainIcon}>✓</span>
+              <p>Skills to teach confidently anywhere in the world</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Course Overview */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🧘‍♂️ Course Overview</h2>
-            <p className={styles.sectionSubtitle}>Transformative residential program for aspiring yoga teachers</p>
-          </div>
-          
-          <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
-              <p className={styles.leadText}>
-                The <strong>200-Hour Yoga Teacher Training Course</strong> is a comprehensive residential program 
-                designed for beginners and practitioners seeking to deepen their practice and become certified yoga teachers. 
-                This immersive 24-day experience in Rishikesh—the yoga capital of the world—blends ancient teachings with modern methodology.
-              </p>
-            </div>
-          </div>
-          
-          <div className="row g-4 mb-5">
-            <div className="col-md-3 col-sm-6">
-              <div className={styles.infoBox}>
-                <div className={styles.infoIcon}>📅</div>
-                <h4>Duration</h4>
-                <p>24 Days Intensive</p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className={styles.infoBox}>
-                <div className={styles.infoIcon}>📊</div>
-                <h4>Level</h4>
-                <p>Beginner to Intermediate</p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className={styles.infoBox}>
-                <div className={styles.infoIcon}>🏆</div>
-                <h4>Certification</h4>
-                <p>Yoga Alliance RYT-200</p>
-              </div>
-            </div>
-            <div className="col-md-3 col-sm-6">
-              <div className={styles.infoBox}>
-                <div className={styles.infoIcon}>📍</div>
-                <h4>Location</h4>
-                <p>Rishikesh, Himalayas</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
-              <div className={styles.infoBox}>
-                <h4>What You Will Gain:</h4>
-                <ul className={styles.curriculumList}>
-                  <li>Globally recognized Yoga Alliance RYT-200 certification</li>
-                  <li>Deep understanding of yoga philosophy, anatomy, and teaching methodology</li>
-                  <li>Mastery of Hatha, Ashtanga, and Vinyasa Flow yoga styles</li>
-                  <li>Personal transformation in a serene Himalayan setting</li>
-                  <li>Skills to teach confidently anywhere in the world</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      {/* 2. WHY RISHIKESH - Location Benefits */}
+      <section className={styles.whyRishikeshSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Why Rishikesh?</p>
+          <h2 className={styles.sectionTitle}>
+            More Than a Location - A Transformative Experience
+          </h2>
+          <div className={styles.decorativeLine}></div>
         </div>
-      </section>
-      <Refund/>
 
-      {/* Why Choose Our School */}
-      <section className={styles.section}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>✨ Why Choose Our School?</h2>
-            <p className={styles.sectionSubtitle}>Authentic teaching in the heart of yoga's birthplace</p>
-          </div>
-          
-          <div className="row g-4">
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>🏫</div>
-                <h4>Authentic Teaching</h4>
-                <p>Learn directly from experienced Indian masters in Rishikesh, where yoga originated. Our teachers carry forward traditions passed down through generations.</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>📚</div>
-                <h4>Comprehensive Curriculum</h4>
-                <p>200+ hours covering asana, pranayama, philosophy, anatomy, teaching methodology, meditation, and special workshops.</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className={styles.featureCard}>
-                <div className={styles.iconBox}>👥</div>
-                <h4>Supportive Environment</h4>
-                <p>Small class sizes for personalized attention. Peaceful ashram setting for deep learning and self-discovery.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Rishikesh */}
-      <section className={`${styles.section} ${styles.sectionPeach}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🏔️ Why Rishikesh?</h2>
-            <p className={styles.sectionSubtitle}>More than a location - a transformative experience</p>
-          </div>
-          <div className="row g-4">
-            {whyRishikesh.map((item, index) => (
-              <div key={index} className="col-lg-3 col-md-6">
-                <div className={styles.featureCard}>
-                  <div className={styles.iconBox}>{item.icon}</div>
-                  <h4>{item.title}</h4>
+        <div className={styles.contentGrid}>
+          {whyRishikesh.map((item, index) => (
+            <div key={index} className={styles.contentCard}>
+              <div className={styles.contentInfo}>
+                <h3 className={styles.contentCardTitle}>{item.title}</h3>
+                <div className={styles.contentTags}>
+                  <span className={styles.contentTag}>{item.icon}</span>
+                </div>
+                <div className={styles.contentDescription}>
                   <p>{item.description}</p>
+                </div>
+              </div>
+              <div className={styles.contentIconSection}>
+                <div className={styles.largeIcon}>{item.icon}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 3. DETAILED CURRICULUM - What You'll Learn */}
+      <section className={styles.curriculumSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Detailed Curriculum</p>
+          <h2 className={styles.sectionTitle}>
+            200+ Hours of Comprehensive Yoga Education
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        {/* Curriculum Breakdown */}
+        <div className={styles.breakdownSection}>
+          <h3 className={styles.breakdownTitle}>Curriculum Hours Breakdown</h3>
+          <div className={styles.breakdownGrid}>
+            {curriculumBreakdown.map((subject, index) => (
+              <div key={index} className={styles.breakdownItem}>
+                <div className={styles.breakdownInfo}>
+                  <span className={styles.subjectName}>{subject.subject}</span>
+                  <span className={styles.subjectHours}>{subject.hours} Hours</span>
+                </div>
+                <div className={styles.progressBar}>
+                  <div 
+                    className={styles.progressFill} 
+                    style={{ 
+                      width: `${(subject.hours / 200) * 100}%`,
+                      backgroundColor: subject.color
+                    }}
+                  ></div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
-      {/* 24-Day Journey */}
-      <Hours24/>
-    
-      {/* Detailed Curriculum */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>📚 Detailed Curriculum</h2>
-            <p className={styles.sectionSubtitle}>200+ hours of comprehensive yoga education</p>
-          </div>
-          
-          <div className="row mb-5">
-            <div className="col-lg-8 mx-auto">
-              <div className={styles.curriculumBreakdown}>
-                <h4 className="mb-4">Curriculum Hours Breakdown</h4>
-                {curriculumBreakdown.map((subject, index) => (
-                  <div key={index} className="mb-3">
-                    <div className="d-flex justify-content-between">
-                      <span>{subject.subject}</span>
-                      <span className={styles.subjectHours}>{subject.hours} Hours</span>
-                    </div>
-                    <div className={styles.progressBar}>
-                      <div 
-                        className={styles.progressFill} 
-                        style={{ 
-                          width: `${(subject.hours / 200) * 100}%`,
-                          backgroundColor: subject.color
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className="row g-4">
-            {detailedCurriculum.map((item, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div className={styles.curriculumCard}>
-                  <h3 className={styles.curriculumTitle}>{item.category}</h3>
+
+        {/* Detailed Curriculum Cards */}
+        <div className={styles.curriculumGrid}>
+          {detailedCurriculum.map((item, index) => (
+            <div key={index} className={styles.curriculumCard}>
+              <div className={styles.curriculumInfo}>
+                <h3 className={styles.curriculumTitle}>{item.category}</h3>
+                <div className={styles.curriculumHours}>
+                  <span className={styles.hoursTag}>{item.hours}</span>
+                </div>
+                <div className={styles.curriculumContent}>
                   <ul className={styles.curriculumList}>
                     {item.items.map((point, idx) => (
                       <li key={idx}>{point}</li>
@@ -498,251 +452,363 @@ export default function YogaCourse200() {
                   </ul>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Daily Schedule */}
-      <section className={`${styles.section} ${styles.sectionPeach}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>⏰ Daily Schedule</h2>
-            <p className={styles.sectionSubtitle}>A typical day in your transformative journey</p>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              {dailySchedule.map((item, index) => (
-                <div key={index} className={styles.scheduleItem}>
-                  <div className={styles.scheduleTime}>{item.time}</div>
-                  <div className={styles.scheduleActivity}>{item.activity}</div>
+      {/* 4. DAILY SCHEDULE */}
+      <section className={styles.scheduleSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Daily Schedule</p>
+          <h2 className={styles.sectionTitle}>
+            A Typical Day in Your Transformative Journey
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.scheduleGrid}>
+          {dailySchedule.map((item, index) => (
+            <div key={index} className={styles.scheduleCard}>
+              <div className={styles.scheduleInfo}>
+                <h3 className={styles.scheduleTime}>{item.time}</h3>
+                <div className={styles.scheduleActivity}>
+                  <p>{item.activity}</p>
                 </div>
-              ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* 5. WHY CHOOSE OUR SCHOOL */}
+      <section className={styles.whySchoolSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Why Choose Our School?</p>
+          <h2 className={styles.sectionTitle}>
+            Authentic Teaching in the Heart of Yoga's Birthplace
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.contentGrid}>
+          <div className={styles.contentCard}>
+            <div className={styles.contentInfo}>
+              <h3 className={styles.contentCardTitle}>Authentic Teaching</h3>
+              <div className={styles.contentTags}>
+                <span className={styles.contentTag}>🏫</span>
+              </div>
+              <div className={styles.contentDescription}>
+                <p>Learn directly from experienced Indian masters in Rishikesh, where yoga originated. Our teachers carry forward traditions passed down through generations.</p>
+              </div>
+            </div>
+            <div className={styles.contentIconSection}>
+              <div className={styles.largeIcon}>🏫</div>
+            </div>
+          </div>
+
+          <div className={styles.contentCard}>
+            <div className={styles.contentInfo}>
+              <h3 className={styles.contentCardTitle}>Comprehensive Curriculum</h3>
+              <div className={styles.contentTags}>
+                <span className={styles.contentTag}>📚</span>
+              </div>
+              <div className={styles.contentDescription}>
+                <p>200+ hours covering asana, pranayama, philosophy, anatomy, teaching methodology, meditation, and special workshops.</p>
+              </div>
+            </div>
+            <div className={styles.contentIconSection}>
+              <div className={styles.largeIcon}>📚</div>
+            </div>
+          </div>
+
+          <div className={styles.contentCard}>
+            <div className={styles.contentInfo}>
+              <h3 className={styles.contentCardTitle}>Supportive Environment</h3>
+              <div className={styles.contentTags}>
+                <span className={styles.contentTag}>👥</span>
+              </div>
+              <div className={styles.contentDescription}>
+                <p>Small class sizes for personalized attention. Peaceful ashram setting for deep learning and self-discovery.</p>
+              </div>
+            </div>
+            <div className={styles.contentIconSection}>
+              <div className={styles.largeIcon}>👥</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Meet Our Teachers */}
-      <TeacherHours/>
+      <Hours24 />
 
-      {/* Accommodation */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🏠 Accommodation & Facilities</h2>
-            <p className={styles.sectionSubtitle}>Your comfortable home in the Himalayas</p>
-          </div>
-          
-          <div className="row g-4 mb-5">
-            {roomOptions.map((room, index) => (
-              <div key={index} className="col-lg-6">
-                <div className={styles.roomOption}>
-                  <img src={room.image} alt={room.type} className={styles.roomImage} />
-                  <div className={styles.roomDetails}>
-                    <h4 className={styles.roomType}>{room.type} - {room.price}</h4>
-                    <ul className={styles.roomFeatures}>
-                      {room.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
+      <TeacherHours />
+
+      {/* 6. ACCOMMODATION & FACILITIES */}
+      <section className={styles.accommodationSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Accommodation & Facilities</p>
+          <h2 className={styles.sectionTitle}>
+            Your Comfortable Home in the Himalayas
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.roomsGrid}>
+          {roomOptions.map((room, index) => (
+            <div key={index} className={styles.roomCard}>
+              <div className={styles.roomInfo}>
+                <h3 className={styles.roomType}>{room.type}</h3>
+                <div className={styles.roomPrice}>
+                  <span className={styles.priceTag}>{room.price}</span>
+                </div>
+                <div className={styles.roomFeatures}>
+                  <ul>
+                    {room.features.map((feature, idx) => (
+                      <li key={idx}>{feature}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="row">
-            <div className="col-lg-8 mx-auto">
-              <div className={styles.infoBox}>
-                <h4>Ashram Facilities Include:</h4>
-                <div className="row">
-                  <div className="col-md-6">
-                    <ul className={styles.curriculumList}>
-                      <li>Spacious yoga shalas with natural light</li>
-                      <li>Meditation halls & outdoor spaces</li>
-                      <li>Library with yoga texts</li>
-                      <li>Organic garden</li>
-                    </ul>
-                  </div>
-                  <div className="col-md-6">
-                    <ul className={styles.curriculumList}>
-                      <li>24/7 security & support</li>
-                      <li>Wi-Fi access throughout</li>
-                      <li>Laundry service</li>
-                      <li>Ayurvedic consultation</li>
-                    </ul>
-                  </div>
-                </div>
+              <div className={styles.roomImageSection}>
+                <img
+                  src={room.image}
+                  alt={room.type}
+                  className={styles.roomImage}
+                />
               </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Ashram Facilities */}
+        <div className={styles.facilitiesSection}>
+          <h3 className={styles.facilitiesTitle}>Ashram Facilities Include</h3>
+          <div className={styles.facilitiesGrid}>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Spacious yoga shalas with natural light</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Meditation halls & outdoor spaces</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Library with yoga texts</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Organic garden</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>24/7 security & support</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Wi-Fi access throughout</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Laundry service</p>
+            </div>
+            <div className={styles.facilityItem}>
+              <span className={styles.facilityIcon}>✓</span>
+              <p>Ayurvedic consultation</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Meal Plan */}
-      <section className={`${styles.section} ${styles.sectionPeach}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>🥗 Nourishing Sattvic Meals</h2>
-            <p className={styles.sectionSubtitle}>Food is medicine - fresh, organic, vegetarian meals</p>
-          </div>
-          
-          <div className="row g-4">
-            {mealPlan.map((meal, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div className={styles.menuCard}>
-                  <h4 className={styles.mealTime}>{meal.time}</h4>
+      {/* 7. MEAL PLAN */}
+      <section className={styles.mealSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Nourishing Sattvic Meals</p>
+          <h2 className={styles.sectionTitle}>
+            Food is Medicine - Fresh, Organic, Vegetarian Meals
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.mealGrid}>
+          {mealPlan.map((meal, index) => (
+            <div key={index} className={styles.mealCard}>
+              <div className={styles.mealInfo}>
+                <h3 className={styles.mealTime}>{meal.time}</h3>
+                <div className={styles.mealItems}>
                   {meal.items.map((item, idx) => (
-                    <div key={idx} className={styles.menuItem}>{item}</div>
+                    <div key={idx} className={styles.menuItem}>
+                      <span className={styles.menuIcon}>•</span>
+                      <span>{item}</span>
+                    </div>
                   ))}
                 </div>
               </div>
-            ))}
-          </div>
-          
-          <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
-              <div className={styles.infoBox}>
-                <h4>Our Food Philosophy</h4>
-                <p>We believe food is medicine. Our kitchen prepares fresh, nutritious vegetarian meals following sattvic principles. All meals are designed to support yoga practice, enhance digestion, and promote clarity of mind.</p>
-                <p className="mt-3"><strong>Special diets accommodated:</strong> Vegan, gluten-free, dairy-free, and allergy-specific meals available with advance notice.</p>
-              </div>
             </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Food Philosophy */}
+        <div className={styles.philosophySection}>
+          <h3 className={styles.philosophyTitle}>Our Food Philosophy</h3>
+          <p className={styles.philosophyText}>
+            We believe food is medicine. Our kitchen prepares fresh, nutritious vegetarian meals following sattvic principles. 
+            All meals are designed to support yoga practice, enhance digestion, and promote clarity of mind.
+          </p>
+          <p className={styles.philosophyNote}>
+            <strong>Special diets accommodated:</strong> Vegan, gluten-free, dairy-free, and allergy-specific meals available with advance notice.
+          </p>
         </div>
       </section>
 
-      {/* What's Included */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>✅ What's Included</h2>
-            <p className={styles.sectionSubtitle}>Complete package for a transformative experience</p>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="row g-3">
-                {includedItems.map((item, index) => (
-                  <div key={index} className="col-md-6">
-                    <div className={styles.includedItem}>
-                      <span className={styles.checkIcon}>✓</span>
-                      <span>{item}</span>
-                    </div>
-                  </div>
-                ))}
+      {/* 8. WHAT'S INCLUDED */}
+      <section className={styles.includedSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>What's Included</p>
+          <h2 className={styles.sectionTitle}>
+            Complete Package for a Transformative Experience
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.includedGrid}>
+          {includedItems.map((item, index) => (
+            <div key={index} className={styles.includedCard}>
+              <div className={styles.includedInfo}>
+                <div className={styles.includedIcon}>✓</div>
+                <p className={styles.includedText}>{item}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Investment Options */}
-      <section className={styles.section}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>💰 Investment & Payment Options</h2>
-            <p className={styles.sectionSubtitle}>Choose the plan that works for you</p>
-          </div>
-          
-          <div className="row g-4">
-            {investmentOptions.map((option, index) => (
-              <div key={index} className="col-lg-4">
-                <div className={`${styles.investmentCard} ${option.featured ? styles.featured : ''}`}>
-                  {option.badge && <div className={styles.paymentBadge}>{option.badge}</div>}
-                  <h4>{option.type}</h4>
-                  <div className={styles.price}>
-                    <sup className={styles.priceCurrency}>$</sup>
-                    {option.price}
-                    <sub className={styles.pricePeriod}>/{option.period}</sub>
+      {/* 9. TESTIMONIALS */}
+      <section className={styles.testimonialsSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>What Our Graduates Say</p>
+          <h2 className={styles.sectionTitle}>
+            Hear from Those Who Transformed Their Lives
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.testimonialsGrid}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className={styles.testimonialCard}>
+              <div className={styles.testimonialInfo}>
+                <h3 className={styles.testimonialName}>{testimonial.name}</h3>
+                <div className={styles.testimonialTags}>
+                  <span className={styles.testimonialTag}>{testimonial.country}</span>
+                </div>
+                <div className={styles.testimonialText}>
+                  <p>{testimonial.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Refund />
+
+      {/* 10. INVESTMENT OPTIONS */}
+      <section className={styles.investmentSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Investment & Payment Options</p>
+          <h2 className={styles.sectionTitle}>
+            Choose the Plan That Works for You
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.investmentGrid}>
+          {investmentOptions.map((option, index) => (
+            <div key={index} className={`${styles.investmentCard} ${option.featured ? styles.featured : ''}`}>
+              <div className={styles.investmentInfo}>
+                {option.badge && (
+                  <div className={styles.badgeWrapper}>
+                    <span className={styles.investmentBadge}>{option.badge}</span>
                   </div>
-                  <ul className={styles.curriculumList}>
+                )}
+                <h3 className={styles.planType}>{option.type}</h3>
+                <div className={styles.priceSection}>
+                  <span className={styles.currency}>$</span>
+                  <span className={styles.amount}>{option.price}</span>
+                  <span className={styles.period}>/{option.period}</span>
+                </div>
+                <div className={styles.planFeatures}>
+                  <ul>
                     {option.features.map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
                   </ul>
-                  <button className={`${styles.ctaButton} ${styles.primary} mt-3`}>
-                    Book This Option
-                  </button>
                 </div>
+                <button className={styles.bookButton}>Book This Option</button>
               </div>
-            ))}
-          </div>
-          
-          <div className="row mt-5">
-            <div className="col-lg-8 mx-auto">
-              <div className={styles.infoBox}>
-                <h4>Payment Information</h4>
-                <p><strong>Early Bird:</strong> $150 off if booked 90+ days in advance</p>
-                <p><strong>Payment Plans:</strong> Available - pay in installments</p>
-                <p><strong>Deposit:</strong> $300 secures your spot (non-refundable)</p>
-                <p><strong>Final Payment:</strong> Due 30 days before course start</p>
-              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Payment Information */}
+        <div className={styles.paymentInfo}>
+          <h3 className={styles.paymentTitle}>Payment Information</h3>
+          <div className={styles.paymentGrid}>
+            <div className={styles.paymentItem}>
+              <strong>Early Bird:</strong> $150 off if booked 90+ days in advance
+            </div>
+            <div className={styles.paymentItem}>
+              <strong>Payment Plans:</strong> Available - pay in installments
+            </div>
+            <div className={styles.paymentItem}>
+              <strong>Deposit:</strong> $300 secures your spot (non-refundable)
+            </div>
+            <div className={styles.paymentItem}>
+              <strong>Final Payment:</strong> Due 30 days before course start
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className={`${styles.section} ${styles.sectionPeach}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>📢 What Our Graduates Say</h2>
-            <p className={styles.sectionSubtitle}>Hear from those who transformed their lives</p>
-          </div>
-          <div className="row g-4">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="col-lg-4 col-md-6">
-                <div className={styles.testimonialCard}>
-                  <div className={styles.quoteIcon}>"</div>
-                  <p className={styles.testimonialText}>{testimonial.text}</p>
-                  <div className={styles.testimonialAuthor}>
-                    <div className={styles.authorAvatar}></div>
-                    <div>
-                      <h5 className={styles.authorName}>{testimonial.name}</h5>
-                      <small className={styles.authorCountry}>{testimonial.country}</small>
-                    </div>
-                  </div>
+      {/* 11. FAQ */}
+      <section className={styles.faqSection}>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionTag}>Frequently Asked Questions</p>
+          <h2 className={styles.sectionTitle}>
+            Get Answers to Common Questions
+          </h2>
+          <div className={styles.decorativeLine}></div>
+        </div>
+
+        <div className={styles.faqGrid}>
+          {faqs.map((faq, index) => (
+            <div key={index} className={styles.faqCard}>
+              <div className={styles.faqInfo}>
+                <h3 className={styles.faqQuestion}>{faq.q}</h3>
+                <div className={styles.faqAnswer}>
+                  <p>{faq.a}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className={`${styles.section} ${styles.sectionAlt}`}>
-        <div className="container">
-          <div className={`${styles.sectionHeader} text-center mb-5`}>
-            <h2 className={styles.sectionTitle}>❓ Frequently Asked Questions</h2>
-            <p className={styles.sectionSubtitle}>Get answers to common questions</p>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              {faqs.map((faq, index) => (
-                <div key={index} className={styles.faqItem}>
-                  <h4 className={styles.faqQuestion}>{faq.q}</h4>
-                  <p className={styles.faqAnswer}>{faq.a}</p>
-                </div>
-              ))}
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className={`${styles.section} ${styles.ctaSection}`}>
-        <div className="container text-center">
-          <h2 className={styles.ctaTitle}>🎓 Your Transformation Awaits</h2>
+      {/* 12. FINAL CTA */}
+      <section className={styles.ctaSection}>
+        <div className={styles.ctaContent}>
+          <h2 className={styles.ctaTitle}>Your Transformation Awaits</h2>
           <p className={styles.ctaSubtitle}>
             This 200-hour training is more than a course—it's the beginning of a lifelong journey. 
             You'll leave not just with a certificate, but with confidence, community, and memories of a transformative experience.
           </p>
-          <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <button className={`${styles.ctaButton} ${styles.primary} ${styles.large}`}>Apply Now for 2024</button>
-            <button className={`${styles.ctaButton} ${styles.secondary} ${styles.large}`}>Schedule a Call</button>
+          <div className={styles.ctaButtons}>
+            <button className={styles.ctaButton}>Apply Now for 2024</button>
+            <button className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}>Schedule a Call</button>
           </div>
-          <p className="mt-4">📅 <strong>Upcoming Batches:</strong> March 1–24 | April 1–24 | May 1–24</p>
+          <p className={styles.batchInfo}>
+            📅 <strong>Upcoming Batches:</strong> March 1–24 | April 1–24 | May 1–24
+          </p>
         </div>
       </section>
     </div>
