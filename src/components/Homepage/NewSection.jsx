@@ -63,7 +63,6 @@ const YogaTeachersSection = () => {
 
   return (
     <section className={styles.yogaTeachersSection}>
-      <div className={styles.parallaxBg}></div>
       
       <div className={styles.sectionContent}>
         <div className={styles.sectionHeader}>

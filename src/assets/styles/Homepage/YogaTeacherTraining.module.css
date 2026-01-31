@@ -1,7 +1,6 @@
 .section {
   padding: 80px 0;
-  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
-  background: linear-gradient(180deg, #f7d9e3, #fffafc);
+  background-image: url("../../images/grid3.png");
 }
 
 /* Heading */
@@ -14,10 +13,11 @@
   font-size: 36px;
   font-weight: 700;
   color: #000000;
+  font-family: Philosopher, sans-serif;
 }
 
 .heading span {
-  color: #6f027edf;
+  color: #bd0005;
 }
 
 
@@ -50,10 +50,11 @@
 
 .card h3 {
   font-size: 22px;
-  color: #6f027edf;
+  color: #bd0005;
   text-align: center;
   font-weight: 600;
   margin: 15px 0;
+  font-family: Philosopher, sans-serif;
 }
 
 /* Info List */
@@ -70,7 +71,8 @@
   font-size: 16px;
   padding: 8px 0;
   border-bottom: 1px solid #e6e6e6;
-  color: #333;
+  color: #000;
+  font-family: Quicksand, sans-serif;
 }
 
 .infoList li svg {
@@ -90,8 +92,8 @@
   width: 100%;
   padding: 10px 12px;
   background: transparent;
-  border: 2px solid #0a0a5c;
-  color: #0a0a5c;
+  border: 2px solid #bd0005;
+  color: #bd0005;
   font-weight: 600;
   border-radius: 6px;
   cursor: pointer;
@@ -99,7 +101,7 @@
 }
 
 .outlineBtn:hover {
-  background: #6f027edf;
+  background: #bd0005;
   color: #fff;
 }
 

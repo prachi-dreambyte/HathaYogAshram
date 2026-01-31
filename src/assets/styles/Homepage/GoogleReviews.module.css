@@ -1,6 +1,7 @@
 .reviewsSection {
   padding: 80px 0;
-  background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+  /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
+  background: #fff;
 }
 
 .inner {

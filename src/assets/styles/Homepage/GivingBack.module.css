@@ -1,8 +1,7 @@
 .section {
   position: relative;
   padding: 140px 20px;
-  /* background: #fff6f2; */
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+    background-image: url("../../images/grid1.png");
   overflow: hidden;
 }
 

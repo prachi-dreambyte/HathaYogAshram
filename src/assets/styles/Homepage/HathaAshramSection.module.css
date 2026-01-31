@@ -1,7 +1,9 @@
 .section {
-  background: linear-gradient(1deg, #ffdfc5, #fff4f4);
+  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
+  background-image: linear-gradient(to right, #fff, #f8e4e4);
   padding-bottom: 20px;
   padding-top: 40px;
+  /* background: #fff; */
 }
 
 /* ===== HEADING ===== */
@@ -13,7 +15,7 @@
 .headingWrapper h2 {
   font-size: 30px;
   font-weight: 600;
-  color: #6f027edf;
+  color: #bd0005;
 }
 
 .divider {

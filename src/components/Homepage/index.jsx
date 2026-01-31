@@ -44,9 +44,9 @@ export const Homepage = () => {
     <WhatWeOffer/>
     <VideoHero/>
     <FaqSection/>
-    <HowToReach/>
    <GoogleReviews/>
     <GivingBack/>
+    <HowToReach/>
     </>
   )
 }
