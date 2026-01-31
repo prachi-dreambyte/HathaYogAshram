@@ -32,7 +32,7 @@
 .sectionHeader {
   text-align: center;
   margin-bottom: 5rem;
-  color: white;
+  color: #bd0005;
 }
 
 .sectionTitle {
@@ -40,8 +40,9 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.10em;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+   font-family: "Philosopher" , sans-serif ;
 }
 
 .sectionSubtitle {
@@ -51,6 +52,8 @@
   max-width: 50rem;
   margin: 0 auto;
   line-height: 1.8;
+  color:#000;
+  font-family: "Quicksand", sans-serif;
 }
 
 .teachersGrid {
@@ -115,11 +118,12 @@
 .teacherName {
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: #bd0005;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(0);
   transition: all 0.3s ease;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .teacherItem:hover .teacherName {
@@ -128,13 +132,14 @@
 }
 
 .teacherSpecialty {
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
   opacity: 1;
+   font-family: "Quicksand", sans-serif;
   transition: all 0.3s ease;
 }
 
@@ -142,18 +147,6 @@
   color: #ffd700;
   letter-spacing: 0.15em;
 }
-
-.teacherDescription {
-  color: white;
-  line-height: 1.6;
-  font-size: 0.95rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 0;
-  overflow: hidden;
-}
-
 .teacherItem:hover .teacherDescription {
   opacity: 1;
   transform: translateY(0);

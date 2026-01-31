@@ -1,6 +1,6 @@
 .section {
   padding: 90px 0;
-  background: linear-gradient(180deg, #ffffff, #ffffff);
+  background-image: url("../../images/grid1.png");
 }
 
 /* Headings */
@@ -8,7 +8,7 @@
   text-align: center;
   font-size: 36px;
   font-weight: 600;
-  color: #750313df;
+  color: #bd0005;
   font-family: "Philosopher" , sans-serif ;
 }
 
@@ -33,7 +33,7 @@
 .rating {
   text-align: center;
   font-size: 19px;
-  color: #555;
+  color: #000;
   margin-bottom: 30px;
   font-family: "Philosopher" , sans-serif ;
 }
@@ -51,7 +51,7 @@
   height: 200px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 2px solid #5a0037;
+  border: 2px solid #bd0005;
   padding: 20px;
 
   display: flex;
@@ -64,7 +64,7 @@
 }
 
 .infoCircle:hover {
-  background: #5a0037;
+  background: #bd0005;
   color: #fff;
 }
 
@@ -90,20 +90,21 @@
   font-size: 18px;
   line-height: 1.8;
   margin-bottom: 16px;
-  color: #333;
+  color: #000;
 }
 
 .innerHeading {
   font-size: 20px;
   font-weight: 600;
-  color: #6f027edf;
+  color: #bd0005;
   margin-bottom: 10px;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .highlightText {
   font-size: 15px;
   font-weight: 500;
-  color: #7a004a;
+  color: #bd0005;
   margin-bottom: 18px;
 }
 
@@ -113,7 +114,7 @@
 }
 
 .buttons button {
-  background: #6f027edf;
+  background: #bd0005;
   color: #fff;
   border: none;
   padding: 10px 18px;
@@ -125,7 +126,8 @@
 }
 
 .buttons button:hover {
-  background: #7a004a;
+  background: #fff;
+   color:#bd0005;
 }
 
 /* IMAGES */
