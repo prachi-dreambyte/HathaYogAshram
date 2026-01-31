@@ -85,12 +85,14 @@
   font-weight: 600;
   margin-bottom: 10px;
   color: #bd0005;
+  font-family: "Philosopher", sans-serif;  
 }
 
 .subText {
   font-size: 17px;
   color: #000;
   margin-bottom: 30px;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* FAQ List */
@@ -121,6 +123,7 @@
   align-items: center;
   font-size: 17px;
   font-weight: 500;
+  font-family: "Philosopher", sans-serif;  
 }
 
 .icon {
@@ -146,6 +149,7 @@
   font-size: 17px;
   color: #000;
   line-height: 1.6;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Active */

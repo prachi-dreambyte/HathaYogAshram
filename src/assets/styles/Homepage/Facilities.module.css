@@ -27,6 +27,7 @@
   font-size: clamp(28px, 4vw, 42px);
   margin-bottom: 12px;
   line-height: 1.3;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .headingLine {
@@ -101,10 +102,12 @@
 
 .textCard.purple .cardTitle {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .textCard.purple .toggleButton span {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Blue Theme */
@@ -120,10 +123,12 @@
 
 .textCard.blue .cardTitle {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .textCard.blue .toggleButton span {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Green Theme */
@@ -139,10 +144,12 @@
 
 .textCard.green .cardTitle {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .textCard.green .toggleButton span {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Orange Theme */
@@ -158,10 +165,12 @@
 
 .textCard.orange .cardTitle {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .textCard.orange .toggleButton span {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 /* Indigo Theme */
@@ -177,10 +186,12 @@
 
 .textCard.indigo .cardTitle {
   color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
 }
 
 .textCard.indigo .toggleButton span {
   color: #bd0005;
+  vfont-family: "Philosopher" , sans-serif ;
 }
 
 /* =====================

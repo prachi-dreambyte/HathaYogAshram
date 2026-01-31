@@ -7,11 +7,13 @@
 
 /* ===== HEADING ===== */
 .heading {
+  font-family: "Philosopher" , sans-serif ;
   text-align: center;
   font-size: 34px;
   font-weight: 600;
   color: #bd0005;
   margin-bottom: 60px;
+
 }
 
 /* ===== GRID ===== */

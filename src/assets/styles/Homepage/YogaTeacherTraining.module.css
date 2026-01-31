@@ -13,7 +13,7 @@
   font-size: 36px;
   font-weight: 700;
   color: #000000;
-  font-family: Philosopher, sans-serif;
+ font-family: "Philosopher" , sans-serif ;
 }
 
 .heading span {
@@ -54,7 +54,7 @@
   text-align: center;
   font-weight: 600;
   margin: 15px 0;
-  font-family: Philosopher, sans-serif;
+  font-family: "Philosopher", sans-serif;
 }
 
 /* Info List */
@@ -72,7 +72,7 @@
   padding: 8px 0;
   border-bottom: 1px solid #e6e6e6;
   color: #000;
-  font-family: Quicksand, sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 .infoList li svg {
