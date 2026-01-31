@@ -1,6 +1,8 @@
 .hero {
   padding: 80px 0;
-  background: #fff5eb;
+  /* background: #fff5eb; */
+   background-image: url("../../images/grid3.png");
+/* background-image: linear-gradient(to right, #fff, #f8e4e4); */
 }
 
 .container {
@@ -18,8 +20,8 @@
 }
 
 .subTitle {
-  font-size: 14px;
-  color: #666;
+  font-size: 25px;
+  color: #000;
   margin-bottom: 12px;
   display: block;
 }
@@ -27,21 +29,22 @@
 .title {
   font-size: 46px;
   font-weight: 800;
-  color: #0a0a3c;
+  color: #000;
   line-height: 1.2;
 }
 
 .title span {
-  color: #ff2fa4;
+  color: #bd0005;
 }
 
 .boldText {
   margin: 14px 0;
   font-weight: 600;
+  font-size: 21px;
 }
 
 .desc {
-  font-size: 15px;
+  font-size: 18px;
   color: #555;
   line-height: 1.7;
 }

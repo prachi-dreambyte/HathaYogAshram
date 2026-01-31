@@ -1,7 +1,8 @@
 .section {
   /* background: linear-gradient(2deg, #ffdfc5, #fff4f4); */
   /* background: linear-gradient(180deg, #f7d9e3, #fffafc); */
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+  /* background: linear-gradient(180deg, #e6ffcc, #fffff0); */
+   background-image: url("../../images/grid2.png");
   padding: 50px;
   text-align: center;
 }
@@ -9,8 +10,9 @@
 .heading {
   font-size: 36px;
   margin-bottom: 80px;
-  color: #6f027edf;
+  color: #bd0005;
   font-weight: 600;
+   font-family: Philosopher, sans-serif;
 }
 
 /* WRAPPER */
@@ -38,20 +40,21 @@
 
 .om {
   font-size: 40px;
-  color: #b58a9d;
+  color: #bd0005;
   margin-bottom: 16px;
 }
 
 .centerContent h3 {
   font-size: 24px;
-  color: #4b1f36;
+  color: #bd0005;
   margin-bottom: 12px;
+   font-family: Philosopher, sans-serif;
 }
 
 .centerContent p {
   font-size: 15px;
   line-height: 1.9;
-  color: #444;
+  color: #000;
   max-width: 360px;
 }
 
@@ -81,7 +84,7 @@
 .node span {
   font-size: 16px;
   font-weight: 600;
-  color: #6f027edf;
+  color: #bd0005;
 }
 
 /* MOBILE */
@@ -91,8 +94,8 @@
 
 /* ACTIVE RADIAL NODE */
 .activeNode {
-  background: linear-gradient(135deg, #6f027e, #b58a9d);
-  box-shadow: 0 25px 60px rgba(111, 2, 126, 0.35);
+  background: #bd0005;
+  box-shadow: 0 25px 60px #bd0005
 }
 
 .activeNode span {
@@ -129,7 +132,7 @@
   }
 
   .mobileNav button {
-    border: 1px solid #5b2245;
+    border: 1px solid #bd0005;
     background: transparent;
     padding: 10px 16px;
     border-radius: 20px;
@@ -138,7 +141,7 @@
   }
 
   .mobileNav .active {
-    background: #5b2245;
+    background: #bd0005;
     color: #ffffff;
   }
 }

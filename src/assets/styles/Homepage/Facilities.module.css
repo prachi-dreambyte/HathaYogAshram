@@ -3,8 +3,8 @@
 ===================== */
 .facilitiesSection {
   padding: 80px 0;
-  /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
-  background: linear-gradient(180deg, #f7d9e3, #fffafc);
+  /* background: #fff; */ 
+  background-image: linear-gradient(#f3f3f3, #fff);
 }
 
 .container {
@@ -22,7 +22,7 @@
 }
 
 .heading {
-  color: #6a1b4d;
+  color: #bd0005;
   font-weight: 700;
   font-size: clamp(28px, 4vw, 42px);
   margin-bottom: 12px;
@@ -100,11 +100,11 @@
 }
 
 .textCard.purple .cardTitle {
-  color: #6a1b4d;
+  color: #bd0005;
 }
 
 .textCard.purple .toggleButton span {
-  color: #a855f7;
+  color: #bd0005;
 }
 
 /* Blue Theme */
@@ -119,11 +119,11 @@
 }
 
 .textCard.blue .cardTitle {
-  color: #1e40af;
+  color: #bd0005;
 }
 
 .textCard.blue .toggleButton span {
-  color: #3b82f6;
+  color: #bd0005;
 }
 
 /* Green Theme */
@@ -138,11 +138,11 @@
 }
 
 .textCard.green .cardTitle {
-  color: #047857;
+  color: #bd0005;
 }
 
 .textCard.green .toggleButton span {
-  color: #10b981;
+  color: #bd0005;
 }
 
 /* Orange Theme */
@@ -157,11 +157,11 @@
 }
 
 .textCard.orange .cardTitle {
-  color: #c2410c;
+  color: #bd0005;
 }
 
 .textCard.orange .toggleButton span {
-  color: #f97316;
+  color: #bd0005;
 }
 
 /* Indigo Theme */
@@ -176,11 +176,11 @@
 }
 
 .textCard.indigo .cardTitle {
-  color: #4338ca;
+  color: #bd0005;
 }
 
 .textCard.indigo .toggleButton span {
-  color: #6366f1;
+  color: #bd0005;
 }
 
 /* =====================

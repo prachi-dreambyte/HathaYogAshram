@@ -1,8 +1,8 @@
 /* Section */
 .reachSection {
   padding: 90px 0;
-  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
-  background: linear-gradient(135deg, #f5e6d3bf, #fffdf7);
+    background-image: linear-gradient(to right, #fff, #f8e4e4);
+
 }
 
 /* Content */
@@ -13,7 +13,7 @@
 .title {
   font-size: 34px;
   font-weight: 700;
-  color: #8b008b;
+  color: #bd0005;
   margin-bottom: 40px;
 }
 
@@ -44,7 +44,7 @@
 .iconBox {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #7b2a84, #b25bc9);
+  background: linear-gradient(135deg, #bd0005, #bd0006);
   border-radius: 50%;
   display: flex;
   align-items: center;

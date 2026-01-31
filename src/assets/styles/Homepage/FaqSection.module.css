@@ -1,32 +1,96 @@
 .faqSection {
   padding: 80px 0;
-  background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+  background-image: linear-gradient(to right, #fff, #f8e4e4);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Elements */
+.faqSection::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(189, 0, 5, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.faqSection::after {
+  content: '';
+  position: absolute;
+  width: 199px;
+  height: 199px;
+  background: radial-gradient(circle, rgba(189, 0, 5, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -300px;
+  right: -75px;
+  z-index: 0;
+}
+
+/* Additional decorative circles */
+.faqSection > div {
+  position: relative;
+  z-index: 1;
 }
 
 /* Image */
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(189, 0, 5, 0.1);
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+  z-index: -1;
+}
+
 .imageWrapper img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 50px;
   object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 /* Content */
 .faqContent {
   padding-left: 40px;
+  position: relative;
+}
+
+.faqContent::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(189, 0, 5, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  z-index: -1;
 }
 
 .faqContent h2 {
   font-size: 34px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #8b008b;
+  color: #bd0005;
 }
 
 .subText {
   font-size: 17px;
-  color: #666;
+  color: #000;
   margin-bottom: 30px;
-
 }
 
 /* FAQ List */
@@ -34,6 +98,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: relative;
 }
 
 .faqItem {
@@ -42,6 +107,8 @@
   padding: 16px 18px;
   cursor: pointer;
   transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .faqItem:hover {
@@ -59,6 +126,12 @@
 .icon {
   font-size: 22px;
   line-height: 1;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.faqItem.active .icon {
+  color: #bd0005;
 }
 
 /* Answer */
@@ -71,7 +144,7 @@
 .answer p {
   margin-top: 12px;
   font-size: 17px;
-  color: #555;
+  color: #000;
   line-height: 1.6;
 }
 
@@ -89,33 +162,17 @@
   .faqContent h2 {
     font-size: 26px;
   }
-}
 
-.faqItem {
-  cursor: pointer;
-  overflow: hidden;
-}
+  .faqSection::before {
+    width: 300px;
+    height: 300px;
+  }
 
-.question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  .faqSection::after {
+    width: 350px;
+    height: 350px;
+  }
 }
-
-.icon {
-  font-size: 24px;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.faqItem.active .icon {
-  color: #5f2c82;
-}
-
-.answer {
-  overflow: hidden;
-}
-
 
 @media (max-width: 576px) {
   .faqSection {
@@ -128,5 +185,30 @@
 
   .question {
     font-size: 14px;
+  }
+
+  .faqSection::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .faqSection::after {
+    width: 250px;
+    height: 250px;
+    bottom: -75px;
+    right: -75px;
+  }
+
+  .imageWrapper::before {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: -20px;
+  }
+
+  .faqContent::before {
+    display: none;
   }
 }

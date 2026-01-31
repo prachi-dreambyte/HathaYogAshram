@@ -1,9 +1,7 @@
 .section {
   padding: 50px 0px 50px 0px;
-  /* background: linear-gradient(1deg, #ffdfc5, #fff4f4); */
-  background: linear-gradient(180deg, #e6ffcc, #fffff0);
+  background-image: url("../../images/grid5.png");
 }
-
 .headingWrapper {
   text-align: center;
   margin-bottom: 60px;
@@ -12,9 +10,9 @@
 .heading {
   font-size: 42px;
   font-weight: 600;
-  color: #8b008b;
+  color: #bd0005;
   margin-bottom: 16px;
-  font-family: "Playfair Display", serif;
+  font-family: "", serif;
 }
 
 /* Divider */
@@ -73,7 +71,7 @@
 
 .icon {
   font-size: 36px;
-  color: #b100c6;
+  color: #bd0005;
 }
 
 /* Text */
@@ -81,7 +79,7 @@
 .cardTitle {
   font-size: 26px;
   font-weight: 600;
-  color: #8b008b;
+  color:#bd0005;
   margin-bottom: 16px;
   line-height: 1.2;
 
@@ -90,12 +88,12 @@
 .cardText {
   font-size: 17px;
   line-height: 1.8;
-  color: #2d2d2d;
+  color: #000;
 }
 
 /* Card hover effects for icon & title */
 .card:hover .iconWrapper {
-  background: #e41cd7db;
+  background: #bd0005;
 }
 
 .card:hover .icon {

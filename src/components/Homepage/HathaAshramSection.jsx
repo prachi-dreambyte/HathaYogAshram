@@ -47,6 +47,7 @@ const HathaAshramSection = () => {
       whileInView="visible"
       viewport={{ once: true }}
     >
+      
       <div className="container">
 
         {/* ===== HEADING ===== */}
@@ -138,7 +139,11 @@ const HathaAshramSection = () => {
         </motion.div>
 
       </div>
+      <svg viewBox="0 0 1400 200" xmlns="http://www.w3.org/2000/svg"><path d="M0,100 Q350,50 700,100 T1400,100 L1400,200 L0,200 Z" fill="#FFE5E5"  opacity="0.6"/><path d="M0,120 Q350,80 700,120 T1400,120 L1400,200 L0,200 Z" 
+        fill="#FFB8B8" 
+        opacity="0.5"/></svg>
     </motion.section>
+    
   );
 };
 
