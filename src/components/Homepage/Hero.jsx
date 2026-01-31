@@ -5,7 +5,7 @@ import styles from '../../assets/styles/Homepage/Hero.module.css';
 // Slider Images
 import hero1 from '../../assets/images/HomeBanner_V01.webp';
 import hero2 from '../../assets/images/HomeBanner_V02.webp';
-import hero3 from '../../assets/images/Accommodation_Banner_V01.png';
+import hero3 from '../../assets/images/HomeBanner_V03.webp';
 
 const Hero = () => {
   const images = [hero1, hero2, hero3];

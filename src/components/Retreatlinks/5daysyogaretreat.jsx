@@ -94,36 +94,42 @@ const YogaRetreat = () => {
     },
   ];
 
-  const faqs = [
-    {
-      question: '1. What can I expect from a 5-day yoga retreat in Rishikesh?',
-      answer:
-        'During a 5-day yoga retreat in Rishikesh at Hatha Yogashram, anticipate daily yoga sessions, guided meditation, pranayama, and sattvic vegetarian meals, complemented by cultural experiences like Ganges aarti and nature walks. This holistic program fosters relaxation and personal growth.',
-    },
-    {
-      question: '2. Is a 5-day yoga retreat enough to feel a transformation?',
-      answer: '',
-    },
-    {
-      question: '3. What is the daily schedule like during the 5-day retreat?',
-      answer: '',
-    },
-    {
-      question:
-        '4. How do I prepare mentally and physically for a 5-day yoga retreat?',
-      answer: '',
-    },
-    {
-      question:
-        '5. Will I receive a certificate after completing the 5-day retreat?',
-      answer: '',
-    },
-    {
-      question:
-        '6. Is accommodation and food included in the 5-day yoga retreat package?',
-      answer: '',
-    },
-  ];
+ const faqs = [
+  {
+    question: '1. What can I expect from a 5-day yoga retreat in Rishikesh?',
+    answer:
+      'During a 5-day yoga retreat in Rishikesh at Hatha Yogashram, you can expect daily yoga asana classes, guided meditation sessions, pranayama practices, and nourishing sattvic vegetarian meals. The retreat also includes spiritual and cultural experiences such as Ganga Aarti, nature walks, and quiet reflection time, helping you relax, recharge, and reconnect with yourself.',
+  },
+  {
+    question: '2. Is a 5-day yoga retreat enough to feel a transformation?',
+    answer:
+      'Yes, a 5-day yoga retreat can create a noticeable shift in your mental clarity, energy levels, and emotional balance. While deeper transformations take time, even a short retreat helps release stress, improve mindfulness, and offer a fresh perspective on your daily routine.',
+  },
+  {
+    question: '3. What is the daily schedule like during the 5-day retreat?',
+    answer:
+      'The daily schedule typically begins with morning meditation and pranayama, followed by yoga asana practice. After breakfast, there may be philosophy sessions, workshops, or free time for rest and self-reflection. Evening activities often include gentle yoga, meditation, or cultural programs, creating a balanced and structured day.',
+  },
+  {
+    question:
+      '4. How do I prepare mentally and physically for a 5-day yoga retreat?',
+    answer:
+      'To prepare, try to maintain a light and balanced diet, stay hydrated, and gradually reduce caffeine or processed foods. Mentally, come with an open mind and a willingness to slow down. No advanced yoga experience is required—just a positive intention to learn and grow.',
+  },
+  {
+    question:
+      '5. Will I receive a certificate after completing the 5-day retreat?',
+    answer:
+      'Most 5-day yoga retreats focus on relaxation and personal well-being rather than formal certification. However, a participation certificate may be provided by Hatha Yogashram upon request. For certified courses, longer yoga teacher training programs are recommended.',
+  },
+  {
+    question:
+      '6. Is accommodation and food included in the 5-day yoga retreat package?',
+    answer:
+      'Yes, the 5-day yoga retreat package generally includes comfortable accommodation and three daily sattvic vegetarian meals. Herbal teas and purified drinking water are also provided, allowing you to focus fully on your practice and inner journey.',
+  },
+];
+
 
   return (
     <div className={styles.container}>
@@ -144,18 +150,7 @@ const YogaRetreat = () => {
           alt="Yoga Retreat"
           className={styles.heroImage}
         />
-        {/* <div className={styles.heroContent}>
-          <div className={styles.heroTopLine}></div>
-          <h1 className={styles.heroTitle}>5 Days Yoga Retreat</h1>
-          <p className={styles.heroSubtitle}>
-            in <span className={styles.heroHighlight}>Rishikesh</span>
-          </p>
-          <p className={styles.heroDescription}>
-            Embark on a Transformative Journey: 5-Days Yoga and Meditation
-            Retreat in Rishikesh, India
-          </p>
-          <div className={styles.heroBottomLine}></div>
-        </div> */}
+        
       </section>
 
       {/* Main Content */}

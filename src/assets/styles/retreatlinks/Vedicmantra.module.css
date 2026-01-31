@@ -1,44 +1,25 @@
-/* Vedic Mantra Chanting Page - Spiritual Design */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
-
-:root {
-  --primary-purple: #9B4D96;
-  --deep-navy: #1A1A3E;
-  --gold-accent: #D4AF37;
-  --soft-cream: #FFF8F0;
-  --om-orange: #FF6B35;
-  --sacred-saffron: #FF9933;
-  --peaceful-white: #FFFFFF;
-  --text-dark: #2C2C2C;
-  --text-light: #666666;
-  --border-light: #E8E8E8;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ========================================
+   WRAPPER & CONTAINER
+   ======================================== */
 .container {
   min-height: 100vh;
-  background: var(--peaceful-white);
-  font-family: 'Lato', sans-serif;
-  color: var(--text-dark);
-  overflow-x: hidden;
+  background: #FAFAFA;
+  font-family: 'Quicksand', sans-serif;
 }
 
-/* Hero Section */
+/* ========================================
+   HERO HEADER SECTION
+   ======================================== */
 .hero {
   position: relative;
-  height: 60vh;
+  padding: 4rem 2rem 3rem;
+  background: url('../../images/Vedicmantra.webp') center/cover;
+  min-height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../images/Vedicmantra.webp");
-  background-size: cover;
-  background-position: center;
   overflow: hidden;
   opacity: 0;
   transform: translateY(30px);
@@ -48,6 +29,21 @@
 .hero.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath d='M150 50 Q180 100 150 150 Q120 100 150 50 M150 150 Q180 200 150 250 Q120 200 150 150 M100 200 Q130 230 100 260 Q70 230 100 200 M200 200 Q230 230 200 260 Q170 230 200 200' stroke='%23D4AF37' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .heroOverlay {
@@ -61,118 +57,125 @@
 }
 
 @keyframes pulse {
-
-  0%,
-  100% {
+  0%, 100% {
     opacity: 0.5;
   }
-
   50% {
     opacity: 0.8;
   }
 }
 
 .heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   text-align: center;
 }
 
-.heroTitle {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.vedic {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+.topLabel {
+  color: white;
   font-weight: 600;
-  color: var(--primary-purple);
-  letter-spacing: 0.15em;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-  animation: fadeInLeft 1s ease-out 0.3s both;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
 }
 
-.chanting {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 400;
-  color: var(--peaceful-white);
-  letter-spacing: 0.1em;
-  animation: fadeInRight 1s ease-out 0.6s both;
+.pageTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 
-.omSymbol {
-  font-size: clamp(4rem, 8vw, 6rem);
-  color: var(--gold-accent);
-  margin-top: 2rem;
-  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
-  animation: omGlow 3s ease-in-out infinite;
+.breadcrumb {
+  background: white;
+  color: #C41E3A;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.breadcrumb span {
+  margin: 0 0.6rem;
+  color: #C41E3A;
 }
 
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.contentSection {
+  min-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
-@keyframes omGlow {
-
-  0%,
-  100% {
-    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
-    transform: scale(1);
-  }
-
-  50% {
-    filter: drop-shadow(0 0 40px rgba(212, 175, 55, 1));
-    transform: scale(1.05);
-  }
-}
-
-/* Section Titles */
+/* ========================================
+   SECTION TITLES
+   ======================================== */
 .sectionTitle {
-  font-family: 'Cinzel', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 600;
-  color: var(--deep-navy);
-  text-align: center;
-  margin-bottom: 2rem;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
   position: relative;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 .sectionTitle::after {
   content: '';
-  display: block;
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--primary-purple), transparent);
-  margin: 1rem auto 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #C41E3A 0%, #1A1A3E 100%);
+  border-radius: 2px;
 }
 
-/* What Section */
+.subTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin: 2.5rem 0 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.subTitle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 70%;
+  background: #C41E3A;
+  border-radius: 3px;
+}
+
+/* ========================================
+   WHAT SECTION
+   ======================================== */
 .whatSection {
-  padding: 5rem 2rem;
-  background: var(--soft-cream);
+  padding:  2rem;
+  background: #FFF8F0;
 }
 
 .contentGrid {
@@ -189,18 +192,19 @@
 }
 
 .paragraph {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: #444;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
 .highlight {
-  color: var(--primary-purple);
+  color: #C41E3A;
   font-weight: 600;
   text-decoration: underline;
-  text-decoration-color: var(--gold-accent);
+  text-decoration-color: #D4AF37;
   text-decoration-thickness: 2px;
 }
 
@@ -208,40 +212,57 @@
   position: relative;
 }
 
-.mantराImage {
+.mantraImage {
   position: relative;
-  border: 4px solid var(--deep-navy);
-  box-shadow: 15px 15px 0 var(--primary-purple);
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
+  aspect-ratio: 4/3;
+  background: #F5F5F5;
 }
 
-.mantराImage:hover {
-  transform: translate(5px, 5px);
-  box-shadow: 10px 10px 0 var(--primary-purple);
+.mantraImage:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
-.mantराImage img {
+.mantraImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mantraImage:hover::after {
+  opacity: 1;
+}
+
+.mantraImage img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.mantराImage:hover img {
-  transform: scale(1.05);
+.mantraImage:hover img {
+  transform: scale(1.08);
 }
 
-/* Why Section */
+/* ========================================
+   WHY SECTION
+   ======================================== */
 .whySection {
-  padding: 5rem 2rem;
-  background: var(--peaceful-white);
+  padding: 2rem;
+  background: white;
 }
 
 .omCard {
   background: linear-gradient(135deg, #C9A961 0%, #D4AF37 50%, #8B7355 100%);
   padding: 3rem;
-  border-radius: 0;
+  border-radius: 3px;
   position: relative;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -262,7 +283,6 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
@@ -284,13 +304,10 @@
 }
 
 @keyframes omPulse {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
     filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));
   }
-
   50% {
     transform: scale(1.1);
     filter: drop-shadow(0 0 50px rgba(255, 255, 255, 1));
@@ -298,7 +315,7 @@
 }
 
 .sanskritText {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.1rem;
   line-height: 2;
@@ -316,24 +333,43 @@
 }
 
 .benefitItem {
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border-light);
-  line-height: 1.7;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  background: white;
+  border-radius: 3px;
+  border-left: 4px solid #C41E3A;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
-.benefitItem:last-child {
-  border-bottom: none;
+.benefitItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.15);
+  border-left-color: #1A1A3E;
+}
+
+.benefitItem::before {
+  content: '✦';
+  color: #C41E3A;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
 .benefitItem strong {
-  color: var(--primary-purple);
+  color: #C41E3A;
   font-weight: 600;
 }
 
-/* Types Section */
+/* ========================================
+   TYPES SECTION
+   ======================================== */
 .typesSection {
-  padding: 5rem 2rem;
-  background: var(--soft-cream);
+  padding: 2rem;
+  background: #FFF8F0;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -341,15 +377,16 @@
 .typesParagraph {
   max-width: 1000px;
   margin: 0 auto 1.5rem;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
   text-align: center;
-  color: var(--text-dark);
+  color: #444;
 }
 
 .mantraGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 3rem;
   max-width: 1200px;
@@ -358,12 +395,14 @@
 }
 
 .mantraCard {
-  background: var(--peaceful-white);
+  background: white;
   padding: 2rem 1.5rem;
+  border-radius: 0px 0px 0px 50px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid var(--border-light);
+  border-top: 4px solid #C41E3A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
 }
@@ -375,7 +414,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(155, 77, 150, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(196, 30, 58, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -384,22 +423,23 @@
 }
 
 .mantraCard:hover {
-  border-color: var(--primary-purple);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: #1A1A3E;
 }
 
 .mantraName {
-  font-family: 'Cinzel', serif;
-  font-size: 1.1rem;
-  color: var(--deep-navy);
+  font-family: 'Philosopher', sans-serif;
+  font-size: 1.2rem;
+  color: #2C2C2C;
   margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .mantraDetails {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid #E8E8E8;
   animation: slideDown 0.3s ease-out;
 }
 
@@ -408,7 +448,6 @@
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -416,24 +455,27 @@
 }
 
 .sanskrit {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
-  color: var(--primary-purple);
+  color: #C41E3A;
   margin-bottom: 0.5rem;
   line-height: 1.6;
 }
 
 .transliteration {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: #666;
   font-style: italic;
   line-height: 1.5;
 }
 
-/* Gayatri Section */
+/* ========================================
+   GAYATRI SECTION
+   ======================================== */
 .gayatriSection {
-  padding: 5rem 2rem;
-  background: var(--peaceful-white);
+  padding: 2rem;
+  background: white;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -449,11 +491,11 @@
 .videoPlaceholder {
   width: 100%;
   height: 400px;
-  background: linear-gradient(135deg, var(--deep-navy), var(--primary-purple));
+  background: linear-gradient(135deg, #1A1A3E, #C41E3A);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 4px solid var(--deep-navy);
+  border-radius: 0px 0px 0px 50px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
@@ -472,14 +514,11 @@
 }
 
 @keyframes radiateGlow {
-
-  0%,
-  100% {
+  0%, 100% {
     width: 300px;
     height: 300px;
     opacity: 0.5;
   }
-
   50% {
     width: 400px;
     height: 400px;
@@ -496,7 +535,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  color: var(--primary-purple);
+  color: #C41E3A;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 2;
@@ -514,49 +553,53 @@
 }
 
 .gayatriTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .gayatriList {
   list-style: none;
   margin: 1rem 0;
-  padding-left: 1.5rem;
+  padding-left: 0;
 }
 
 .gayatriList li {
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 1.5rem;
   position: relative;
-  color: var(--text-dark);
+  color: #444;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .gayatriList li::before {
   content: '•';
-  color: var(--primary-purple);
+  color: #C41E3A;
   font-size: 1.5rem;
   position: absolute;
-  left: -1.5rem;
+  left: 0;
 }
 
 .gayatriDesc {
   margin: 1.5rem 0;
   line-height: 1.7;
-  color: var(--text-dark);
+  color: #444;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .gayatriSanskrit {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
-  color: var(--primary-purple);
+  color: #C41E3A;
   margin: 1rem 0;
   line-height: 1.8;
 }
 
 .gayatriTranslation {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
-  color: var(--text-light);
+  color: #666;
   font-style: italic;
   margin: 1rem 0;
   line-height: 1.6;
@@ -571,44 +614,50 @@
 
 .category {
   padding: 0.8rem 1.5rem;
-  background: var(--soft-cream);
-  border-left: 3px solid var(--primary-purple);
+  background: #FFF8F0;
+  border-left: 3px solid #C41E3A;
   font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
   transition: all 0.3s ease;
   cursor: pointer;
+  border-radius: 3px;
 }
 
 .category:hover {
-  background: var(--primary-purple);
+  background: #C41E3A;
   color: white;
   transform: translateX(5px);
 }
 
 .bookButton {
   padding: 1rem 3rem;
-  background: var(--deep-navy);
+  background: #a51b11;
   color: white;
-  border: 2px solid var(--deep-navy);
-  font-family: 'Cinzel', serif;
+  border: 2px solid #1A1A3E;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1.5rem;
   text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 .bookButton:hover {
   background: transparent;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Benefits Section */
+/* ========================================
+   BENEFITS SECTION
+   ======================================== */
 .benefitsSection {
-  padding: 5rem 2rem;
-  background: var(--soft-cream);
+  padding: 2rem;
+  background: #FFF8F0;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -617,9 +666,10 @@
   max-width: 900px;
   margin: 0 auto 3rem;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: #444;
 }
 
 .benefitsGrid {
@@ -632,17 +682,28 @@
 
 .benefitsImage {
   position: relative;
-  border: 4px solid var(--deep-navy);
-  box-shadow: -15px 15px 0 var(--primary-purple);
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 2rem;
+  transition: all 0.4s ease;
+}
+
+.benefitsImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .benefitsImage img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.benefitsImage:hover img {
+  transform: scale(1.05);
 }
 
 .benefitsContent {
@@ -652,27 +713,32 @@
 }
 
 .benefitCard {
-  background: var(--peaceful-white);
+  background: white;
   padding: 1.5rem;
-  border-left: 4px solid var(--primary-purple);
+  border-left: 4px solid #C41E3A;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
 
 .benefitCard:hover {
   transform: translateX(10px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-left-color: #1A1A3E;
 }
 
 .benefitTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 
 .benefitDesc {
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.7;
-  color: var(--text-dark);
+  color: #444;
 }
 
 .contactButtonContainer {
@@ -682,28 +748,32 @@
 
 .contactButton {
   padding: 1.2rem 4rem;
-  background: var(--deep-navy);
+  background: #a51b11;
   color: white;
-  border: 2px solid var(--deep-navy);
-  font-family: 'Cinzel', serif;
+  border: 2px solid #1A1A3E;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
+  border-radius: 3px;
+  font-weight: 600;
 }
 
 .contactButton:hover {
   background: transparent;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Course Section */
+/* ========================================
+   COURSE SECTION
+   ======================================== */
 .courseSection {
-  padding: 5rem 2rem;
-  background: var(--peaceful-white);
+  padding: 2rem;
+  background: white;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -712,9 +782,10 @@
   max-width: 900px;
   margin: 0 auto 2rem;
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: #444;
 }
 
 .courseIcon {
@@ -729,24 +800,22 @@
 }
 
 @keyframes float {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
 
 .certificationTitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
-  color: var(--deep-navy);
+  color: #1A1A3E;
   text-align: center;
   margin: 2rem 0 3rem;
   font-style: italic;
+  font-weight: 600;
 }
 
 .courseGrid {
@@ -758,24 +827,27 @@
 }
 
 .donationCard {
-  background: var(--soft-cream);
+  background: #FFF8F0;
   padding: 0;
-  border: 3px solid var(--deep-navy);
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #1A1A3E;
 }
 
 .donationTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   text-align: center;
   padding: 1.5rem;
-  background: var(--peaceful-white);
-  border-bottom: 3px solid var(--deep-navy);
+  background: white;
+  border-bottom: 3px solid #C41E3A;
+  font-weight: 700;
 }
 
 .priceTag {
-  background: var(--deep-navy);
+  background: #a51b11;
   color: white;
   text-align: center;
   padding: 2rem;
@@ -791,31 +863,38 @@
 }
 
 .amount {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 4rem;
   font-weight: 700;
 }
 
 .courseDetails {
   padding: 2rem;
-  background: var(--peaceful-white);
+  background: white;
 }
 
 .courseDetails p {
   margin: 1rem 0;
   line-height: 1.7;
-  color: var(--text-dark);
+  color: #444;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .courseDetails strong {
-  color: var(--primary-purple);
+  color: #C41E3A;
   font-weight: 600;
 }
 
 .teacherImage {
-  border: 4px solid var(--deep-navy);
-  box-shadow: 15px 15px 0 var(--primary-purple);
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.teacherImage:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .teacherImage img {
@@ -829,10 +908,12 @@
   transform: scale(1.05);
 }
 
-/* Rules Section */
+/* ========================================
+   RULES SECTION
+   ======================================== */
 .rulesSection {
-  padding: 5rem 2rem;
-  background: var(--soft-cream);
+  padding: 2rem;
+  background: #FFF8F0;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -840,7 +921,7 @@
 .divider {
   text-align: center;
   font-size: 2rem;
-  color: var(--gold-accent);
+  color: #D4AF37;
   margin: 2rem 0;
 }
 
@@ -849,53 +930,60 @@
 }
 
 .rulesSubtitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   margin: 2rem 0 1rem;
+  font-weight: 600;
 }
 
 .rulesParagraph {
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.8;
-  color: var(--text-dark);
+  color: #444;
   margin-bottom: 1.5rem;
   text-align: justify;
 }
 
 .linkText {
-  color: var(--primary-purple);
+  color: #C41E3A;
   text-decoration: underline;
   cursor: pointer;
+  font-weight: 600;
 }
 
-/* Contact Section */
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
 .contactSection {
-  padding: 5rem 2rem;
-  background: var(--peaceful-white);
+  padding: 2rem;
+  background: white;
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .contactTitle {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 2.5rem;
-  color: var(--deep-navy);
+  color: #1A1A3E;
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .phoneNumber {
-  font-family: 'Cinzel', serif;
+  font-family: 'Philosopher', sans-serif;
   font-size: 2.5rem;
-  color: var(--primary-purple);
+  color: #C41E3A;
   text-decoration: none;
   display: inline-block;
   margin: 1rem 0 2rem;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .phoneNumber:hover {
-  color: var(--deep-navy);
+  color: #1A1A3E;
   transform: scale(1.05);
 }
 
@@ -903,13 +991,12 @@
   margin: 3rem 0;
 }
 
-
 .mapWrapper {
   width: 100%;
   height: 400px;
-  border: 3px solid var(--deep-navy);
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
-  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .mapIframe {
@@ -918,28 +1005,171 @@
   border: 0;
 }
 
-
 .address {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
-  color: var(--text-dark);
+  color: #444;
   margin: 1.5rem 0;
   line-height: 1.6;
 }
 
 .email a {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
-  color: var(--primary-purple);
+  color: #C41E3A;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 600;
 }
 
 .email a:hover {
-  color: var(--deep-navy);
+  color: #1A1A3E;
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .heroContent,
+  .whatSection .contentGrid,
+  .whySection .contentGrid,
+  .typesSection,
+  .gayatriSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection {
+    max-width: 1400px;
+  }
+
+  .pageTitle {
+    font-size: 3.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 1140px;
+  }
+
+  .heroContent,
+  .whatSection .contentGrid,
+  .whySection .contentGrid,
+  .typesSection,
+  .gayatriSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection {
+    max-width: 1140px;
+  }
+}
+
+/* Laptop/Tablet Landscape - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 960px;
+  }
+
+  .hero {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .pageTitle {
+    font-size: 2.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .subTitle {
+    font-size: 1.6rem;
+  }
+
+  .mantraGrid,
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    gap: 2.5rem;
+  }
+
+  .videoPlaceholder {
+    height: 380px;
+  }
+
+  .omLarge {
+    font-size: 7rem;
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 720px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1.5rem 2.5rem;
+    min-height: 320px;
+  }
+
+  .hero::before {
+    width: 40%;
+    opacity: 0.25;
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .topLabel {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+  }
+
+  .sectionTitle::after {
+    width: 70px;
+    height: 3px;
+  }
+
+  .subTitle {
+    font-size: 1.6rem;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph {
+    font-size: 1rem;
+  }
 
   .contentGrid,
   .gayatriSection,
@@ -952,23 +1182,252 @@
   .benefitsImage {
     position: static;
   }
+
+  .mantraGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  .videoPlaceholder {
+    height: 350px;
+  }
+
+  .omLarge {
+    font-size: 6rem;
+  }
+
+  .omCard {
+    padding: 2.5rem;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.9rem 1.3rem;
+  }
+
+  .mantraCard {
+    padding: 1.7rem 1.3rem;
+  }
+
+  .amount {
+    font-size: 3.5rem;
+  }
+
+  .mapWrapper {
+    height: 350px;
+  }
 }
 
-@media (max-width: 768px) {
+/* Mobile Landscape - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 100%;
+    padding: 2rem 1.2rem;
+  }
+
   .hero {
-    height: 50vh;
+    padding: 2.5rem 1.5rem 2rem;
+    min-height: 300px;
   }
 
-  .vedic {
-    font-size: 2.5rem;
+  .hero::before {
+    width: 35%;
+    opacity: 0.2;
   }
 
-  .chanting {
+  .topLabel {
+    font-size: 0.9rem;
+  }
+
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+
+  .breadcrumb {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+  }
+
+  .sectionTitle::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .subTitle {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    padding-left: 1.2rem;
+  }
+
+  .subTitle::before {
+    width: 4px;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .benefitsImage {
+    position: static;
+  }
+
+  .mantraGrid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .mantraCard {
+    padding: 1.5rem 1.2rem;
+    border-radius: 0px 0px 0px 40px;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.85rem 1.2rem;
+    margin-bottom: 0.9rem;
+    gap: 0.9rem;
+  }
+
+  .benefitItem::before {
+    font-size: 1.1rem;
+  }
+
+  .videoPlaceholder {
+    height: 300px;
+  }
+
+  .omLarge {
+    font-size: 5rem;
+  }
+
+  .omCard {
+    padding: 2rem;
+  }
+
+  .gayatriTitle {
+    font-size: 1.4rem;
+  }
+
+  .category {
+    padding: 0.7rem 1.3rem;
+  }
+
+  .bookButton,
+  .contactButton {
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  .amount {
+    font-size: 3.5rem;
+  }
+
+  .donationCard,
+  .teacherImage,
+  .mantraImage,
+  .benefitsImage,
+  .mapWrapper {
+    border-radius: 0px 0px 0px 40px;
+  }
+
+  .mapWrapper {
+    height: 300px;
+  }
+
+  .phoneNumber {
+    font-size: 2.2rem;
+  }
+
+  .contactTitle {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile Portrait - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 100%;
+    padding: 1.8rem 1rem;
+  }
+
+  .hero {
+    padding: 2.2rem 1rem 1.8rem;
+    min-height: 280px;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  .topLabel {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pageTitle {
     font-size: 2rem;
   }
 
-  .omSymbol {
-    font-size: 4rem;
+  .breadcrumb {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.82rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .sectionTitle::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .subTitle {
+    font-size: 1.4rem;
+    margin: 1.8rem 0 1rem;
+    padding-left: 1rem;
+  }
+
+  .subTitle::before {
+    width: 4px;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: left;
   }
 
   .whatSection,
@@ -981,46 +1440,892 @@
     padding: 3rem 1rem;
   }
 
+  .gayatriSection {
+    padding: 3rem 1rem;
+  }
+
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .benefitsImage {
+    position: static;
+  }
+
   .mantraGrid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin: 1.5rem 0 2.2rem;
+  }
+
+  .mantraCard {
+    padding: 1.4rem 1.1rem;
+    border-radius: 0px 0px 0px 35px;
+    border-top-width: 3px;
+  }
+
+  .mantraName {
+    font-size: 1.1rem;
+  }
+
+  .sanskrit {
+    font-size: 1rem;
+  }
+
+  .transliteration {
+    font-size: 0.85rem;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.8rem 1.1rem;
+    margin-bottom: 0.8rem;
+    gap: 0.8rem;
+    border-left-width: 3px;
+  }
+
+  .benefitItem::before {
+    font-size: 1rem;
+  }
+
+  .benefitItem strong,
+  .benefitTitle {
+    font-size: 0.95rem;
   }
 
   .videoPlaceholder {
-    height: 300px;
+    height: 280px;
+    border-radius: 0px 0px 0px 35px;
   }
 
   .omLarge {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
-  .mapPlaceholder {
-    height: 300px;
+  .omCard {
+    padding: 1.5rem;
+  }
+
+  .sanskritText {
+    font-size: 1rem;
+  }
+
+  .gayatriTitle {
+    font-size: 1.3rem;
+  }
+
+  .gayatriSanskrit {
+    font-size: 1rem;
+  }
+
+  .gayatriTranslation {
+    font-size: 0.9rem;
+  }
+
+  .category {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .bookButton,
+  .contactButton {
+    padding: 0.85rem 2rem;
+    font-size: 0.92rem;
+  }
+
+  .certificationTitle {
+    font-size: 1.5rem;
+  }
+
+  .meditationIcon {
+    font-size: 3.5rem;
+  }
+
+  .donationTitle {
+    font-size: 1.8rem;
+    padding: 1.3rem;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+
+  .currency {
+    font-size: 1.8rem;
+  }
+
+  .courseDetails {
+    padding: 1.5rem;
+  }
+
+  .courseDetails p {
+    font-size: 0.95rem;
+  }
+
+  .donationCard,
+  .teacherImage,
+  .mantraImage,
+  .benefitsImage,
+  .mapWrapper {
+    border-radius: 0px 0px 0px 35px;
+  }
+
+  .rulesSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .divider {
+    margin: 2.5rem 0;
+  }
+
+  .mapWrapper {
+    height: 280px;
+  }
+
+  .phoneNumber {
+    font-size: 2rem;
+  }
+
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+  .address,
+  .email a {
+    font-size: 1rem;
   }
 }
 
-@media (max-width: 480px) {
-  .sectionTitle {
+/* Small Mobile - 375px to 479px */
+@media (min-width: 375px) and (max-width: 479px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 100%;
+    padding: 1.5rem 0.8rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem 1.5rem;
+    min-height: 260px;
+  }
+
+  .topLabel {
+    font-size: 0.82rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .pageTitle {
     font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .sectionTitle::after {
+    width: 50px;
+    height: 2.5px;
+  }
+
+  .subTitle {
+    font-size: 1.3rem;
+    margin: 1.7rem 0 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .subTitle::before {
+    width: 3px;
   }
 
   .paragraph,
   .typesParagraph,
   .benefitsIntro,
-  .courseIntro {
-    font-size: 1rem;
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.3rem;
+  }
+
+  .whatSection,
+  .whySection,
+  .typesSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .gayatriSection {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefitsImage {
+    position: static;
   }
 
   .mantraGrid {
-    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.3rem 0 2rem;
   }
 
-  .priceTag {
-    flex-direction: column;
-    gap: 0;
+  .mantraCard {
+    padding: 1.3rem 1rem;
+    border-radius: 0px 0px 0px 30px;
+    border-top-width: 3px;
+  }
+
+  .mantraName {
+    font-size: 1.05rem;
+  }
+
+  .sanskrit {
+    font-size: 0.98rem;
+  }
+
+  .transliteration {
+    font-size: 0.82rem;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
+    gap: 0.75rem;
+    border-left-width: 3px;
+  }
+
+  .benefitItem::before {
+    font-size: 0.95rem;
+  }
+
+  .benefitItem strong {
+    font-size: 0.92rem;
+  }
+
+  .benefitTitle {
+    font-size: 1.1rem;
+  }
+
+  .videoPlaceholder {
+    height: 250px;
+    border-radius: 0px 0px 0px 30px;
+  }
+
+  .playButton {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+
+  .omLarge {
+    font-size: 4rem;
+  }
+
+  .omCard {
+    padding: 1.4rem;
+  }
+
+  .sanskritText {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .gayatriTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .gayatriList li {
+    padding: 0.4rem 0 0.4rem 1.3rem;
+    font-size: 0.92rem;
+  }
+
+  .gayatriList li::before {
+    font-size: 1.3rem;
+  }
+
+  .gayatriSanskrit {
+    font-size: 0.98rem;
+  }
+
+  .gayatriTranslation {
+    font-size: 0.85rem;
+  }
+
+  .category {
+    padding: 0.65rem 1.1rem;
+    font-size: 0.92rem;
+  }
+
+  .bookButton,
+  .contactButton {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .certificationTitle {
+    font-size: 1.4rem;
+  }
+
+  .meditationIcon {
+    font-size: 3rem;
+  }
+
+  .donationTitle {
+    font-size: 1.7rem;
+    padding: 1.2rem;
   }
 
   .amount {
+    font-size: 2.8rem;
+  }
+
+  .currency {
+    font-size: 1.6rem;
+  }
+
+  .courseDetails {
+    padding: 1.4rem;
+  }
+
+  .courseDetails p {
+    font-size: 0.92rem;
+  }
+
+  .donationCard,
+  .teacherImage,
+  .mantraImage,
+  .benefitsImage,
+  .mapWrapper {
+    border-radius: 0px 0px 0px 30px;
+  }
+
+  .rulesSubtitle {
+    font-size: 1.15rem;
+    margin: 1.8rem 0 0.9rem;
+  }
+
+  .divider {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+  }
+
+  .mapWrapper {
+    height: 250px;
+  }
+
+  .phoneNumber {
+    font-size: 1.9rem;
+  }
+
+  .contactTitle {
+    font-size: 1.9rem;
+  }
+
+  .address,
+  .email a {
+    font-size: 0.98rem;
+  }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (min-width: 320px) and (max-width: 374px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 100%;
+    padding: 1.3rem 0.7rem;
+  }
+
+  .hero {
+    padding: 1.8rem 0.8rem 1.3rem;
+    min-height: 240px;
+  }
+
+  .topLabel {
+    font-size: 0.78rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+
+  .breadcrumb {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .sectionTitle::after {
+    width: 45px;
+    height: 2.5px;
+  }
+
+  .subTitle {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+    padding-left: 0.9rem;
+  }
+
+  .subTitle::before {
+    width: 3px;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  .whatSection,
+  .whySection,
+  .typesSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection {
+    padding: 2.2rem 0.7rem;
+  }
+
+  .gayatriSection {
+    padding: 2.2rem 0.7rem;
+  }
+
+  .contentGrid,
+  .gayatriSection,
+  .benefitsGrid,
+  .courseGrid {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .benefitsImage {
+    position: static;
+  }
+
+  .mantraGrid {
+    gap: 0.9rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+
+  .mantraCard {
+    padding: 1.2rem 0.9rem;
+    border-radius: 0px 0px 0px 25px;
+  }
+
+  .mantraName {
+    font-size: 1rem;
+  }
+
+  .sanskrit {
+    font-size: 0.92rem;
+  }
+
+  .transliteration {
+    font-size: 0.78rem;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.7rem;
+    gap: 0.7rem;
+  }
+
+  .benefitItem::before {
+    font-size: 0.9rem;
+  }
+
+  .benefitItem strong {
+    font-size: 0.88rem;
+  }
+
+  .benefitTitle {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .videoPlaceholder {
+    height: 220px;
+    border-radius: 0px 0px 0px 25px;
+  }
+
+  .playButton {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .omLarge {
+    font-size: 3.5rem;
+  }
+
+  .omCard {
+    padding: 1.2rem;
+  }
+
+  .sanskritText {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .gayatriTitle {
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .gayatriList li {
+    padding: 0.35rem 0 0.35rem 1.2rem;
+    font-size: 0.88rem;
+  }
+
+  .gayatriList li::before {
+    font-size: 1.2rem;
+  }
+
+  .gayatriSanskrit {
+    font-size: 0.92rem;
+  }
+
+  .gayatriTranslation {
+    font-size: 0.8rem;
+  }
+
+  .category {
+    padding: 0.6rem 1rem;
+    font-size: 0.88rem;
+    border-left-width: 2.5px;
+  }
+
+  .bookButton,
+  .contactButton {
+    padding: 0.75rem 1.6rem;
+    font-size: 0.85rem;
+  }
+
+  .certificationTitle {
+    font-size: 1.3rem;
+  }
+
+  .meditationIcon {
+    font-size: 2.8rem;
+  }
+
+  .donationTitle {
+    font-size: 1.5rem;
+    padding: 1.1rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+
+  .currency {
+    font-size: 1.4rem;
+  }
+
+  .priceTag {
+    padding: 1.7rem;
+  }
+
+  .courseDetails {
+    padding: 1.2rem;
+  }
+
+  .courseDetails p {
+    font-size: 0.88rem;
+    margin: 0.9rem 0;
+  }
+
+  .donationCard,
+  .teacherImage,
+  .mantraImage,
+  .benefitsImage,
+  .mapWrapper {
+    border-radius: 0px 0px 0px 25px;
+  }
+
+  .rulesSubtitle {
+    font-size: 1.1rem;
+    margin: 1.6rem 0 0.8rem;
+  }
+
+  .divider {
+    margin: 1.8rem 0;
+    font-size: 1.6rem;
+  }
+
+  .mapWrapper {
+    height: 220px;
+  }
+
+  .phoneNumber {
+    font-size: 1.7rem;
+    margin: 0.8rem 0 1.8rem;
+  }
+
+  .contactTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .address,
+  .email a {
+    font-size: 0.92rem;
+  }
+
+  .address {
+    margin: 1.2rem 0;
+  }
+}
+
+/* Ultra Small Mobile - below 320px */
+@media (max-width: 319px) {
+  .contentSection {
+    min-width: auto;
+    max-width: 100%;
+    padding: 1.1rem 0.6rem;
+  }
+
+  .hero {
+    padding: 1.5rem 0.6rem 1.2rem;
+    min-height: 220px;
+  }
+
+  .topLabel {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pageTitle {
+    font-size: 1.4rem;
+  }
+
+  .breadcrumb {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .sectionTitle::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  .subTitle {
+    font-size: 1.1rem;
+    margin: 1.3rem 0 0.7rem;
+    padding-left: 0.8rem;
+  }
+
+  .paragraph,
+  .typesParagraph,
+  .benefitsIntro,
+  .courseIntro,
+  .gayatriDesc,
+  .benefitDesc,
+  .rulesParagraph,
+  .courseDetails p {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .whatSection,
+  .whySection,
+  .typesSection,
+  .benefitsSection,
+  .courseSection,
+  .rulesSection,
+  .contactSection,
+  .gayatriSection {
+    padding: 2rem 0.6rem;
+  }
+
+  .mantraGrid {
+    gap: 0.8rem;
+    margin: 1rem 0 1.6rem;
+  }
+
+  .mantraCard {
+    padding: 1rem 0.8rem;
+    border-radius: 0px 0px 0px 20px;
+  }
+
+  .mantraName {
+    font-size: 0.95rem;
+  }
+
+  .sanskrit {
+    font-size: 0.85rem;
+  }
+
+  .transliteration {
+    font-size: 0.75rem;
+  }
+
+  .benefitItem,
+  .benefitCard {
+    padding: 0.6rem 0.8rem;
+    gap: 0.6rem;
+  }
+
+  .benefitItem strong,
+  .benefitTitle {
+    font-size: 0.82rem;
+  }
+
+  .videoPlaceholder {
+    height: 200px;
+    border-radius: 0px 0px 0px 20px;
+  }
+
+  .playButton {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+
+  .omLarge {
     font-size: 3rem;
+  }
+
+  .omCard {
+    padding: 1rem;
+  }
+
+  .sanskritText {
+    font-size: 0.85rem;
+  }
+
+  .gayatriTitle {
+    font-size: 1.05rem;
+  }
+
+  .gayatriList li {
+    font-size: 0.82rem;
+    padding: 0.3rem 0 0.3rem 1.1rem;
+  }
+
+  .gayatriSanskrit {
+    font-size: 0.85rem;
+  }
+
+  .gayatriTranslation {
+    font-size: 0.75rem;
+  }
+
+  .category {
+    padding: 0.55rem 0.9rem;
+    font-size: 0.82rem;
+  }
+
+  .bookButton,
+  .contactButton {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.8rem;
+  }
+
+  .certificationTitle {
+    font-size: 1.2rem;
+  }
+
+  .meditationIcon {
+    font-size: 2.5rem;
+  }
+
+  .donationTitle {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+
+  .amount {
+    font-size: 2.2rem;
+  }
+
+  .currency {
+    font-size: 1.2rem;
+  }
+
+  .priceTag {
+    padding: 1.5rem;
+  }
+
+  .courseDetails {
+    padding: 1rem;
+  }
+
+  .donationCard,
+  .teacherImage,
+  .mantraImage,
+  .benefitsImage,
+  .mapWrapper {
+    border-radius: 0px 0px 0px 20px;
+  }
+
+  .rulesSubtitle {
+    font-size: 1rem;
+  }
+
+  .divider {
+    margin: 1.6rem 0;
+    font-size: 1.4rem;
+  }
+
+  .mapWrapper {
+    height: 200px;
+  }
+
+  .phoneNumber {
+    font-size: 1.5rem;
+  }
+
+  .contactTitle {
+    font-size: 1.6rem;
+  }
+
+  .address,
+  .email a {
+    font-size: 0.85rem;
   }
 }

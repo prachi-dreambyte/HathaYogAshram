@@ -1,21 +1,26 @@
-/* ============================================
-   BASE STYLES
-   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* ========================================
+   WRAPPER & CONTAINER
+   ======================================== */
 .container {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(180deg, #ffdfc5, #fff4f4);
-  color: #000000;
   min-height: 100vh;
-  font-weight: 500;
+  background: #FAFAFA;
+  font-family: 'Quicksand', sans-serif;
 }
 
-/* ============================================
+/* ========================================
    HERO SECTION
-   ============================================ */
+   ======================================== */
 .heroSection {
   position: relative;
-  padding: 120px 20px 80px;
-  text-align: center;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(135deg, rgba(196, 30, 58, 0.9) 0%, rgba(210, 105, 30, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80') center/cover;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -25,10 +30,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)),
-    url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80');
-  background-size: cover;
-  background-position: center;
   z-index: 1;
 }
 
@@ -38,29 +39,44 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(236, 72, 153, 0.2));
+  background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2), transparent 70%);
+}
 
+.heroSection::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath d='M150 50 Q180 100 150 150 Q120 100 150 50 M150 150 Q180 200 150 250 Q120 200 150 150 M100 200 Q130 230 100 260 Q70 230 100 200 M200 200 Q230 230 200 260 Q170 230 200 200' stroke='%23FFE4D6' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .heroContent {
-  position: relative;
-  z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .heroBadge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: 12px 24px;
   border-radius: 50px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   color: #ffffff;
 }
 
@@ -69,27 +85,25 @@
 }
 
 .heroTitle {
-  font-size: 4.5rem;
-  font-weight: 800;
-  line-height: 1.1;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #f0abfc, #c084fc, #22d3ee);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: white;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 
 .highlight {
-  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #D4AF37;
+  text-shadow: 2px 2px 12px rgba(212, 175, 55, 0.5);
 }
 
 .heroSubtitle {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.25rem;
   line-height: 1.6;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 800px;
   margin: 0 auto 40px;
   color: #ffffff;
@@ -108,19 +122,19 @@
 }
 
 .statNumber {
+  font-family: 'Philosopher', sans-serif;
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, #22d3ee, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #D4AF37;
   line-height: 1;
   margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .statLabel {
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  opacity: 0.8;
+  opacity: 0.9;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ffffff;
@@ -134,11 +148,12 @@
 }
 
 .primaryButton {
-  background: linear-gradient(135deg, #7c3aed, #c026d3);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
   border: none;
   padding: 18px 45px;
-  border-radius: 12px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -146,20 +161,21 @@
   align-items: center;
   gap: 12px;
   transition: all 0.3s ease;
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
 }
 
 .primaryButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.6);
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.6);
 }
 
 .secondaryButton {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.15);
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 18px 35px;
-  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 16px 35px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -171,34 +187,31 @@
 }
 
 .secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-.buttonArrow {
+.buttonArrow,
+.playIcon {
   width: 20px;
   height: 20px;
 }
 
-.playIcon {
-  width: 18px;
-  height: 18px;
-}
-
-/* ============================================
+/* ========================================
    NAVIGATION MENU
-   ============================================ */
+   ======================================== */
 .navMenu {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: white;
+  border-bottom: 2px solid #E5E5E5;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .navContainer {
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -211,7 +224,8 @@
   padding: 20px 25px;
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: #2C2C2C;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
@@ -221,11 +235,11 @@
 }
 
 .navItem:hover {
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .activeNav {
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .activeNav::after {
@@ -235,13 +249,13 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(135deg, #f0abfc, #c084fc);
+  background: linear-gradient(90deg, #C41E3A, #D2691E);
   border-radius: 3px 3px 0 0;
 }
 
-/* ============================================
+/* ========================================
    MAIN CONTENT
-   ============================================ */
+   ======================================== */
 .mainContent {
   max-width: 1200px;
   margin: 0 auto;
@@ -268,7 +282,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -282,10 +295,11 @@
 
 .sectionBadge {
   display: inline-block;
-  background: linear-gradient(135deg, #000000, #c084fc);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
   padding: 8px 20px;
   border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -294,48 +308,63 @@
 }
 
 .sectionTitle {
-  font-size: 3rem;
-  font-weight: 800;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin-bottom: 15px;
-  background: linear-gradient(135deg, #000000, #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #2C2C2C;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #C41E3A, #D2691E);
+  border-radius: 2px;
 }
 
 .sectionSubtitle {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
   opacity: 0.8;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  color: #444;
 }
 
-/* ============================================
+/* ========================================
    OVERVIEW SECTION
-   ============================================ */
+   ======================================== */
 .overviewGrid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
 }
 
-@media (max-width: 968px) {
-  .overviewGrid {
-    grid-template-columns: 1fr;
-  }
+.overviewCard {
+  background: white;
+  border-radius: 0px 0px 0px 50px;
+  overflow: hidden;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
 }
 
-.overviewCard {
-  background: rgb(165 38 38 / 8%);
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.overviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .overviewImage {
   height: 300px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('https://images.unsplash.com/photo-1545389336-cf090a2b3d6c?w=800&q=80');
   background-size: cover;
   background-position: center;
@@ -346,10 +375,11 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #1e293b;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2C2C2C;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 14px;
 }
@@ -359,24 +389,28 @@
 }
 
 .overviewText p {
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   line-height: 1.8;
-  opacity: 0.9;
+  color: #444;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
 .whyChooseCard {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
-  border-radius: 20px;
+  background: #FFF8F0;
+  border-radius: 0px 0px 0px 50px;
   padding: 40px;
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(196, 30, 58, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .whyChooseTitle {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .whyChooseGrid {
@@ -389,6 +423,16 @@
   display: flex;
   gap: 15px;
   align-items: flex-start;
+  padding: 1rem;
+  background: white;
+  border-radius: 3px;
+  border-left: 4px solid #C41E3A;
+  transition: all 0.3s ease;
+}
+
+.whyChooseItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.15);
 }
 
 .whyChooseIcon {
@@ -398,42 +442,45 @@
 }
 
 .whyChooseItem h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #22d3ee;
+  color: #2C2C2C;
 }
 
 .whyChooseItem p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
-  opacity: 0.8;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* ============================================
+/* ========================================
    HIGHLIGHTS SECTION
-   ============================================ */
+   ======================================== */
 .highlightsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
 }
 
 .highlightCard {
-  background: rgb(247 0 0 / 6%);
-  border-radius: 15px;
+  background: white;
+  border-radius: 0px 0px 0px 30px;
   padding: 25px;
   display: flex;
   align-items: flex-start;
   gap: 20px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #C41E3A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .highlightCard:hover {
   transform: translateY(-5px);
-  border-color: #f0abfc;
-  background: rgba(124, 58, 237, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: #D2691E;
 }
 
 .highlightIcon {
@@ -442,33 +489,35 @@
 }
 
 .highlightText {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.9;
+  color: #444;
 }
 
-/* ============================================
+/* ========================================
    SCHEDULE SECTION
-   ============================================ */
+   ======================================== */
 .scheduleContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
 }
 
 .scheduleDay {
-  background: rgb(255 0 0 / 5%);
-  border-radius: 20px;
+  background: white;
+  border-radius: 0px 0px 0px 30px;
   padding: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #C41E3A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .scheduleDay:hover {
-  transform: translateY(-10px);
-  border-color: #22d3ee;
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: #D2691E;
 }
 
 .dayHeader {
@@ -476,10 +525,12 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #E5E5E5;
 }
 
 .dayNumber {
-  background: linear-gradient(135deg, #f0abfc, #c084fc);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
   width: 60px;
   height: 60px;
@@ -487,15 +538,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .dayTitle {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #000000;
+  color: #2C2C2C;
   margin: 0;
 }
 
@@ -507,39 +560,45 @@
 
 .activityItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 15px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
+  background: #FFF8F0;
+  border-radius: 3px;
   transition: all 0.3s ease;
+  border-left: 3px solid #C41E3A;
 }
 
 .activityItem:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(196, 30, 58, 0.05);
   transform: translateX(5px);
 }
 
 .activityTime {
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
-  color: #22d3ee;
-  min-width: 120px;
+  color: #C41E3A;
+  min-width: 100px;
   flex-shrink: 0;
+  font-size: 0.9rem;
 }
 
 .activityText {
-  opacity: 0.9;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
   flex: 1;
+  line-height: 1.5;
 }
 
 .scheduleNote {
-  background: rgba(251, 191, 36, 0.1);
-  border-radius: 15px;
+  background: linear-gradient(135deg, #FFF5F0 0%, #FFE4D6 100%);
+  border-radius: 3px;
   padding: 25px;
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  border-left: 4px solid #fbbf24;
+  border-left: 5px solid #C41E3A;
+  box-shadow: 0 3px 12px rgba(196, 30, 58, 0.1);
 }
 
 .noteIcon {
@@ -548,20 +607,22 @@
 }
 
 .scheduleNote h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #fbbf24;
+  color: #C41E3A;
 }
 
 .scheduleNote p {
-  opacity: 0.9;
-  line-height: 1.6;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+  line-height: 1.7;
 }
 
-/* ============================================
+/* ========================================
    ACCOMMODATION SECTION
-   ============================================ */
+   ======================================== */
 .accommodationGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -569,47 +630,52 @@
   align-items: center;
 }
 
-@media (max-width: 968px) {
-  .accommodationGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .accommodationImage {
   height: 400px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('https://images.unsplash.com/photo-1584466994536-893cf6e43a4d?w=800&q=80');
   background-size: cover;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 0px 0px 0px 50px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.accommodationImage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .imageBadge {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #1e293b;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2C2C2C;
   padding: 10px 20px;
-  border-radius: 8px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 14px;
 }
 
 .accommodationDetails h3 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .accommodationDetails p {
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   line-height: 1.8;
-  opacity: 0.9;
+  color: #444;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .featuresGrid {
@@ -624,21 +690,23 @@
   align-items: center;
   gap: 12px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 8px;
+  background: #FFF8F0;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
   transition: all 0.3s ease;
+  border-left: 3px solid #C41E3A;
 }
 
 .featureItem:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(196, 30, 58, 0.05);
   transform: translateX(5px);
 }
 
 .checkIcon {
   width: 20px;
   height: 20px;
-  color: #22d3ee;
+  color: #C41E3A;
   flex-shrink: 0;
 }
 
@@ -650,66 +718,67 @@
 }
 
 .roomOption {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  background: white;
+  border-radius: 0px 0px 0px 30px;
   padding: 25px;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #C41E3A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .roomOption:hover {
   transform: translateY(-5px);
-  border-color: #22d3ee;
-  box-shadow: 0 15px 30px rgba(34, 211, 238, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: #D2691E;
 }
 
 .roomOption h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #f0abfc;
+  color: #2C2C2C;
 }
 
 .roomOption p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: #555;
   margin-bottom: 15px;
 }
 
 .roomPrice {
+  font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #22d3ee;
+  color: #C41E3A;
 }
 
-/* ============================================
+/* ========================================
    FOOD SECTION
-   ============================================ */
+   ======================================== */
 .foodGrid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
 }
 
-@media (max-width: 968px) {
-  .foodGrid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .foodContent h3 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .foodContent p {
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   line-height: 1.8;
-  opacity: 0.9;
+  color: #444;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .foodFeatures {
@@ -724,13 +793,14 @@
   align-items: center;
   gap: 12px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
+  background: #FFF8F0;
+  border-radius: 3px;
   transition: all 0.3s ease;
+  border-left: 3px solid #C41E3A;
 }
 
 .foodFeature:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(196, 30, 58, 0.05);
   transform: translateX(5px);
 }
 
@@ -740,13 +810,14 @@
 }
 
 .chefMessage {
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(14, 165, 233, 0.1));
-  border-radius: 15px;
+  background: linear-gradient(135deg, #FFF5F0 0%, #FFE4D6 100%);
+  border-radius: 3px;
   padding: 30px;
   display: flex;
   gap: 25px;
   align-items: flex-start;
-  border-left: 4px solid #22d3ee;
+  border-left: 5px solid #C41E3A;
+  box-shadow: 0 3px 12px rgba(196, 30, 58, 0.1);
 }
 
 .chefAvatar {
@@ -755,16 +826,18 @@
 }
 
 .chefText h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 15px;
-  color: #22d3ee;
+  color: #C41E3A;
 }
 
 .chefText p {
+  font-family: 'Quicksand', sans-serif;
   font-style: italic;
-  opacity: 0.9;
-  line-height: 1.6;
+  color: #444;
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -776,69 +849,82 @@
 
 .galleryItem {
   height: 200px;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url('https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80');
   background-size: cover;
   background-position: center;
-  border-radius: 15px;
+  border-radius: 0px 0px 0px 30px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
 .galleryBadge {
   position: absolute;
   bottom: 15px;
   left: 15px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #1e293b;
+  background: rgba(255, 255, 255, 0.95);
+  color: #2C2C2C;
   padding: 8px 15px;
-  border-radius: 8px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 12px;
 }
 
-/* ============================================
+/* ========================================
    TESTIMONIALS SECTION
-   ============================================ */
+   ======================================== */
 .ratingBadge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(251, 191, 36, 0.1);
+  background: #FFF8F0;
   padding: 12px 25px;
   border-radius: 50px;
   margin-top: 15px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
+  border: 2px solid rgba(196, 30, 58, 0.2);
 }
 
 .ratingStars {
-  color: #fbbf24;
+  color: #D4AF37;
   font-size: 1.2rem;
 }
 
 .ratingText {
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
+  color: #2C2C2C;
 }
 
 .testimonialsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   margin: 40px 0;
 }
 
 .testimonialCard {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  background: white;
+  border-radius: 0px 0px 0px 30px;
   padding: 25px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #C41E3A;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
 .testimonialCard:hover {
   transform: translateY(-5px);
-  border-color: #f0abfc;
-  box-shadow: 0 15px 30px rgba(240, 171, 252, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-top-color: #D2691E;
 }
 
 .testimonialHeader {
@@ -851,91 +937,102 @@
 .avatar {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #f0abfc, #c084fc);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Philosopher', sans-serif;
   font-weight: 700;
   color: white;
   font-size: 1.2rem;
 }
 
 .testimonialName {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #f0abfc;
+  color: #2C2C2C;
 }
 
 .testimonialMeta {
   display: flex;
   gap: 15px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.85rem;
-  opacity: 0.7;
+  color: #666;
 }
 
 .country {
-  background: rgba(124, 58, 237, 0.2);
+  background: #FFF8F0;
   padding: 3px 10px;
   border-radius: 12px;
+  color: #C41E3A;
+  font-weight: 500;
 }
 
 .stars {
-  color: #fbbf24;
+  color: #D4AF37;
   font-size: 1rem;
   margin-bottom: 15px;
 }
 
 .testimonialText {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.9;
+  line-height: 1.7;
+  color: #444;
   font-style: italic;
 }
 
 .showMoreButton {
-  background: rgb(237 0 0 / 67%);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 15px 30px;
-  border-radius: 10px;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
   display: block;
   margin: 40px auto 0;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
 }
 
 .showMoreButton:hover {
-  background: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
 }
 
-/* ============================================
+/* ========================================
    FAQ SECTION
-   ============================================ */
+   ======================================== */
 .faqContainer {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
 .faqItem {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
+  background: white;
+  border-radius: 3px;
   margin-bottom: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #E5E5E5;
   overflow: hidden;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .faqItem:hover {
-  border-color: #f0abfc;
+  border-color: #C41E3A;
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.1);
 }
 
 .faqOpen {
-  border-color: #f0abfc;
-  box-shadow: 0 10px 30px rgba(240, 171, 252, 0.2);
+  border-color: #C41E3A;
+  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
 }
 
 .faqQuestion {
@@ -944,17 +1041,23 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #fdd7b8;
+  background: white;
   border: none;
-  color: white;
-  font-size: 1.1rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
   font-weight: 600;
   text-align: left;
   width: 100%;
+  color: #2C2C2C;
+}
+
+.faqQuestion:hover {
+  background: #FFF8F0;
 }
 
 .questionNumber {
-  color: #22d3ee;
+  color: #C41E3A;
+  font-family: 'Philosopher', sans-serif;
   font-weight: 700;
   min-width: 25px;
 }
@@ -962,7 +1065,6 @@
 .questionText {
   flex: 1;
   text-align: left;
-  color: #000000;
 }
 
 .arrowIcon {
@@ -970,6 +1072,7 @@
   height: 20px;
   transition: transform 0.3s ease;
   flex-shrink: 0;
+  color: #C41E3A;
 }
 
 .faqOpen .arrowIcon {
@@ -986,7 +1089,6 @@
     opacity: 0;
     transform: translateY(-10px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -994,59 +1096,56 @@
 }
 
 .faqAnswer p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
-  line-height: 1.7;
-  opacity: 0.9;
+  line-height: 1.8;
+  color: #444;
 }
 
-/* ============================================
+/* ========================================
    BOOKING SECTION
-   ============================================ */
+   ======================================== */
 .bookingSection {
   margin-top: 100px;
 }
 
 .bookingCard {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(236, 72, 153, 0.1));
-  border-radius: 25px;
+  background: linear-gradient(135deg, #FFF5F0 0%, #FFE4D6 100%);
+  border-radius: 0px 0px 0px 50px;
   padding: 50px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
-  border: 1px solid rgba(124, 58, 237, 0.3);
-}
-
-@media (max-width: 968px) {
-  .bookingCard {
-    grid-template-columns: 1fr;
-    padding: 30px;
-  }
+  border: 2px solid rgba(196, 30, 58, 0.2);
+  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.1);
 }
 
 .bookingBadge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(196, 30, 58, 0.1);
+  color: #C41E3A;
   padding: 10px 20px;
   border-radius: 50px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 .bookingTitle {
+  font-family: 'Philosopher', sans-serif;
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 20px;
-
-  background-clip: text;
-  color: #000000;
+  color: #2C2C2C;
 }
 
 .bookingText {
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
-  opacity: 0.9;
+  color: #444;
   margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .bookingSteps {
@@ -1060,40 +1159,54 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 1rem;
+  background: white;
+  border-radius: 3px;
+  border-left: 4px solid #C41E3A;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.15);
 }
 
 .stepNumber {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #f0abfc, #c084fc);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   flex-shrink: 0;
 }
 
 .step h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #22d3ee;
+  color: #2C2C2C;
 }
 
 .step p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: #555;
 }
 
 .bookNowButton {
-  background: linear-gradient(135deg, #7c3aed, #c026d3);
+  background: linear-gradient(135deg, #C41E3A, #D2691E);
   color: white;
   border: none;
   padding: 20px 50px;
-  border-radius: 12px;
+  border-radius: 3px;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
@@ -1101,12 +1214,12 @@
   align-items: center;
   gap: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 8px 24px rgba(196, 30, 58, 0.4);
 }
 
 .bookNowButton:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.6);
+  box-shadow: 0 12px 32px rgba(196, 30, 58, 0.6);
 }
 
 .bookArrow {
@@ -1115,10 +1228,11 @@
 }
 
 .locationInfo h3 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #f0abfc;
+  color: #C41E3A;
 }
 
 .locationDetails {
@@ -1133,8 +1247,15 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  background: white;
+  border-radius: 3px;
+  border-left: 3px solid #C41E3A;
+  transition: all 0.3s ease;
+}
+
+.locationItem:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 16px rgba(196, 30, 58, 0.15);
 }
 
 .locationIcon {
@@ -1143,15 +1264,17 @@
 }
 
 .locationItem h4 {
+  font-family: 'Philosopher', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #22d3ee;
+  color: #2C2C2C;
 }
 
 .locationItem p {
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: #555;
   margin: 0;
 }
 
@@ -1165,25 +1288,155 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #f0abfc;
+  color: #C41E3A;
   text-decoration: none;
-  font-weight: 500;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
   transition: all 0.3s ease;
   padding: 10px;
-  border-radius: 8px;
+  border-radius: 3px;
 }
 
 .contactLink:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: rgba(196, 30, 58, 0.05);
   transform: translateX(5px);
 }
 
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
-@media (max-width: 768px) {
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .heroContent,
+  .mainContent {
+    max-width: 1400px;
+  }
+
+  .heroTitle {
+    font-size: 4rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.8rem;
+  }
+}
+
+/* Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .heroContent,
+  .mainContent {
+    max-width: 1140px;
+  }
+}
+
+/* Laptop/Tablet Landscape - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .heroContent,
+  .mainContent {
+    max-width: 960px;
+  }
+
+  .heroSection {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .overviewGrid,
+  .accommodationGrid,
+  .foodGrid,
+  .bookingCard {
+    gap: 30px;
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .heroSection {
+    padding: 3rem 1.5rem 2.5rem;
+    min-height: 400px;
+  }
+
+  .heroSection::before {
+    width: 40%;
+    opacity: 0.25;
+  }
+
   .heroTitle {
     font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .heroStats {
+    gap: 40px;
+  }
+
+  .statNumber {
+    font-size: 2.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionTitle::after {
+    width: 70px;
+    height: 3px;
+  }
+
+  .overviewGrid,
+  .accommodationGrid,
+  .foodGrid,
+  .bookingCard {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .whyChooseCard {
+    padding: 30px;
+  }
+
+  .scheduleContainer,
+  .highlightsGrid,
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .navItem {
+    padding: 15px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Landscape - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+  .heroSection {
+    padding: 2.5rem 1.5rem 2rem;
+    min-height: 350px;
+  }
+
+  .heroSection::before {
+    width: 35%;
+    opacity: 0.2;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
   }
 
   .heroStats {
@@ -1194,49 +1447,9 @@
     font-size: 2.2rem;
   }
 
-  .sectionTitle {
-    font-size: 2.2rem;
-  }
-
-  .navContainer {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .navItem {
-    padding: 15px 20px;
-    font-size: 0.85rem;
-  }
-
-  .highlightsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .scheduleContainer {
-    grid-template-columns: 1fr;
-  }
-
-  .testimonialsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .bookingTitle {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .heroTitle {
-    font-size: 2rem;
-  }
-
-  .heroSubtitle {
-    font-size: 1.1rem;
-  }
-
   .ctaButtons {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
   .primaryButton,
@@ -1245,8 +1458,311 @@
     justify-content: center;
   }
 
-  .overviewText,
-  .whyChooseCard {
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .overviewGrid,
+  .accommodationGrid,
+  .foodGrid,
+  .bookingCard {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .scheduleContainer,
+  .highlightsGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .whyChooseCard,
+  .overviewText {
     padding: 25px;
+  }
+
+  .accommodationImage,
+  .overviewImage {
+    height: 300px;
+  }
+
+  .galleryItem {
+    height: 180px;
+  }
+}
+
+/* Mobile Portrait - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .heroSection {
+    padding: 2.2rem 1rem 1.8rem;
+    min-height: 320px;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .heroBadge {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .heroStats {
+    gap: 25px;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 12px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+  }
+
+  .sectionBadge {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .overviewGrid,
+  .accommodationGrid,
+  .foodGrid,
+  .bookingCard {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .scheduleContainer,
+  .highlightsGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .whyChooseCard,
+  .overviewText,
+  .scheduleDay {
+    padding: 20px;
+  }
+
+  .accommodationImage,
+  .overviewImage {
+    height: 280px;
+  }
+
+  .galleryItem {
+    height: 160px;
+  }
+
+  .bookingCard {
+    padding: 30px 20px;
+  }
+
+  .bookingTitle {
+    font-size: 2rem;
+  }
+
+  .navItem {
+    padding: 12px 15px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile - 375px to 479px */
+@media (min-width: 375px) and (max-width: 479px) {
+  .heroSection {
+    padding: 2rem 1rem 1.5rem;
+    min-height: 300px;
+  }
+
+  .heroBadge {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .heroStats {
+    gap: 20px;
+  }
+
+  .statNumber {
+    font-size: 1.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .whyChooseCard,
+  .overviewText,
+  .scheduleDay {
+    padding: 18px;
+  }
+
+  .accommodationImage,
+  .overviewImage {
+    height: 250px;
+  }
+
+  .bookingTitle {
+    font-size: 1.8rem;
+  }
+
+  .overviewGrid{
+    display: inline-block;
+  }
+  .bookingCard{
+    display: inline-block;
+  }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+  .heroSection {
+    padding: 1.8rem 0.8rem 1.3rem;
+    min-height: 280px;
+  }
+
+  .heroBadge {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .heroStats {
+    gap: 18px;
+  }
+
+  .statNumber {
+    font-size: 1.6rem;
+  }
+
+  .statLabel {
+    font-size: 11px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionBadge {
+    font-size: 11px;
+    padding: 5px 14px;
+  }
+
+  .whyChooseCard,
+  .overviewText,
+  .scheduleDay {
+    padding: 15px;
+  }
+
+  .accommodationImage,
+  .overviewImage {
+    height: 220px;
+  }
+
+  .galleryItem {
+    height: 140px;
+  }
+
+  .bookingCard {
+    padding: 25px 15px;
+  }
+
+  .bookingTitle {
+    font-size: 1.6rem;
+  }
+
+  .navItem {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  .overviewGrid{
+    display: inline-block;
+  }
+  .bookingCard{
+    display: inline-block;
+  }
+}
+
+/* Ultra Small Mobile - below 320px */
+@media (max-width: 319px) {
+  .heroSection {
+    padding: 1.5rem 0.6rem 1.2rem;
+    min-height: 260px;
+  }
+
+  .heroTitle {
+    font-size: 1.4rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .whyChooseCard,
+  .overviewText,
+  .scheduleDay {
+    padding: 12px;
+  }
+
+  .bookingTitle {
+    font-size: 1.4rem;
+  }
+  .overviewGrid{
+    display: inline-block;
+  }
+  .bookingCard{
+    display: inline-block;
   }
 }
