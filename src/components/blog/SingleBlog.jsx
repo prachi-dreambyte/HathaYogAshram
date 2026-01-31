@@ -4,42 +4,31 @@ import blogImg from '../../assets/images/blog/Sheetkari-.webp';
 const SingleBlog = () => {
   return (
     <section className={styles.wrapper}>
-      {/* HERO SECTION */}
-      <div className={styles.hero}>
-        <img
-          src={blogImg}
-          alt="Sheetkari Pranayama"
-          className={styles.heroImage}
+      {/* ================= HERO HEADER ================= */}
+      <div className={styles.heroSection}>
+        <img 
+          src={blogImg} 
+          alt="Sheetkari Pranayama" 
+          className={styles.heroBackgroundImage}
         />
-        <div className={styles.overlay}>
-          <div className={styles.heroContent}>
-            <div className={styles.badge}>Pranayama Guide</div>
-            <h1 className={styles.heroTitle}>Sheetkari Pranayama</h1>
-            <p className={styles.heroSubtitle}>
-              Benefits and Techniques for Daily Yoga
-            </p>
-            <div className={styles.scrollIndicator}>
-              <span>Scroll to explore</span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M12 5v14m0 0l7-7m-7 7l-7-7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+        <div className={styles.heroContent}>
+          <span className={styles.badge}>Pranayama Guide</span>
+          <h1 className={styles.pageTitle}>Sheetkari Pranayama</h1>
+          <p className={styles.heroSubtitle}>
+            Benefits and Techniques for Daily Yoga
+          </p>
+          <div className={styles.breadcrumb}>
+            Blog <span>/</span> Pranayama
           </div>
         </div>
       </div>
 
-      {/* MAIN CONTENT */}
-      <div className={styles.container}>
+      {/* ================= MAIN CONTENT ================= */}
+      <div className={styles.contentSection}>
         <article className={styles.contentCard}>
+
           {/* INTRO */}
           <div className={styles.introSection}>
-            <div className={styles.decorativeElement}></div>
             <p className={styles.intro}>
               If you're looking to bring a wave of calm and coolness into your
               daily yoga practice, Sheetkari Pranayama, also known as the
@@ -64,7 +53,6 @@ const SingleBlog = () => {
           {/* WHAT IS SECTION */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleNumber}>01</span>
               What is Sheetkari Pranayama?
             </h2>
             <div className={styles.sectionContent}>
@@ -76,7 +64,7 @@ const SingleBlog = () => {
                 Sanskrit, meaning "cooling" or "soothing," reflecting its
                 ability to lower body temperature and calm the nervous system.
               </p>
-              <p style={{ marginTop: '16px' }}>
+              <p>
                 As part of the History of Yoga, this practice is a staple in
                 Hatha Yoga, designed to balance energy, reduce stress, and
                 complement yoga asanas. We teach Sheetkari Pranayama in our{' '}
@@ -93,7 +81,6 @@ const SingleBlog = () => {
           {/* HOW TO PRACTICE */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleNumber}>02</span>
               How to Practice Sheetkari Pranayama
             </h2>
             <p className={styles.sectionIntro}>
@@ -178,8 +165,7 @@ const SingleBlog = () => {
           {/* BENEFITS */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleNumber}>03</span>5 Key Benefits of
-              Sheetkari Pranayama
+              5 Key Benefits of Sheetkari Pranayama
             </h2>
             <p className={styles.sectionIntro}>
               Sheetkari Pranayama is a powerhouse for yoga practitioners,
@@ -245,57 +231,54 @@ const SingleBlog = () => {
             </div>
           </div>
 
+          <div className={styles.divider}></div>
+
           {/* RISHIKESH HIGHLIGHT */}
           <div className={styles.highlightSection}>
-            <div className={styles.highlightContent}>
-              <h2>Why Practice Sheetkari Pranayama in Rishikesh?</h2>
-              <p>
-                Rishikesh, the <strong>Yoga Capital of the World</strong>, is
-                the ideal place to learn Sheetkari Pranayama, with its serene
-                Ganges River and Himalayan energy. At Hatha Yogashram, our{' '}
-                <strong>Yoga Teacher Training in India</strong> integrates this
-                cooling breathing technique into daily practice, amplifying its
-                effects in the spiritual hub of Yoga in India. The tranquil
-                setting of our yoga retreat centre in Rishikesh makes every
-                breath feel sacred, connecting you to the History of Yoga. Even
-                in our <strong>Online Yoga Teacher Training Course</strong>, we
-                bring Rishikesh's essence to you through guided sessions and
-                virtual ashram vibes.
-              </p>
-            </div>
-            <div className={styles.highlightDecor}></div>
+            <h2>Why Practice Sheetkari Pranayama in Rishikesh?</h2>
+            <p>
+              Rishikesh, the <strong>Yoga Capital of the World</strong>, is
+              the ideal place to learn Sheetkari Pranayama, with its serene
+              Ganges River and Himalayan energy. At Hatha Yogashram, our{' '}
+              <strong>Yoga Teacher Training in India</strong> integrates this
+              cooling breathing technique into daily practice, amplifying its
+              effects in the spiritual hub of Yoga in India. The tranquil
+              setting of our yoga retreat centre in Rishikesh makes every
+              breath feel sacred, connecting you to the History of Yoga. Even
+              in our <strong>Online Yoga Teacher Training Course</strong>, we
+              bring Rishikesh's essence to you through guided sessions and
+              virtual ashram vibes.
+            </p>
           </div>
 
           {/* WHO SHOULD PRACTICE */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleNumber}>04</span>
               Who Should Practice Sheetkari Pranayama?
             </h2>
-            <div className={styles.audienceGrid}>
-              <div className={styles.audienceTag}>
-                <span>✓</span> Beginners: New yoga practitioners exploring Yoga
+            <ul className={styles.audienceList}>
+              <li>
+                <strong>Beginners:</strong> New yoga practitioners exploring Yoga
                 in India or Online Yoga Teacher Training Programs
-              </div>
-              <div className={styles.audienceTag}>
-                <span>✓</span> Stressed-Out Souls: Anyone needing calm amidst
+              </li>
+              <li>
+                <strong>Stressed-Out Souls:</strong> Anyone needing calm amidst
                 busy schedules or emotional challenges
-              </div>
-              <div className={styles.audienceTag}>
-                <span>✓</span> Yoga Teachers: Those in 200-Hour, 300-Hour or
+              </li>
+              <li>
+                <strong>Yoga Teachers:</strong> Those in 200-Hour, 300-Hour or
                 500-Hour Yoga Teacher Training, looking to enrich their teaching
-              </div>
-              <div className={styles.audienceTag}>
-                <span>✓</span> Hot-Climate Yogis: Practitioners seeking cooling
+              </li>
+              <li>
+                <strong>Hot-Climate Yogis:</strong> Practitioners seeking cooling
                 breathing techniques to balance body heat
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
           {/* DAILY INTEGRATION */}
           <div className={styles.section}>
             <h2 className={styles.sectionTitle}>
-              <span className={styles.titleNumber}>05</span>
               How to Integrate Sheetkari Pranayama into Daily Yoga?
             </h2>
             <div className={styles.integrationList}>
@@ -328,7 +311,7 @@ const SingleBlog = () => {
                 </p>
               </div>
             </div>
-            <p className={styles.integrationTip}>
+            <p className={styles.integrationNote}>
               <strong>Hatha Yogashram Tip:</strong> Combine with gentle yoga
               asanas like Seated Forward Bend for a soothing daily ritual.
             </p>
@@ -336,26 +319,23 @@ const SingleBlog = () => {
 
           {/* PRECAUTION */}
           <div className={styles.warningBox}>
-            <div className={styles.warningIcon}>⚠</div>
-            <div className={styles.warningContent}>
-              <h3>Precautions for Sheetkari Pranayama</h3>
-              <ul className={styles.warningList}>
-                <li>
-                  Avoid if you have <strong>low blood pressure</strong>,{' '}
-                  <strong>respiratory issues</strong>, or{' '}
-                  <strong>chronic colds</strong>, as the cooling effect may
-                  aggravate these conditions.
-                </li>
-                <li>
-                  Stop if you feel dizzy or uncomfortable, and consult a teacher
-                  from our Yoga Teacher Training in India.
-                </li>
-                <li>
-                  Practice in a clean, well-ventilated space for optimal
-                  benefits.
-                </li>
-              </ul>
-            </div>
+            <h3>Precautions for Sheetkari Pranayama</h3>
+            <ul className={styles.warningList}>
+              <li>
+                Avoid if you have <strong>low blood pressure</strong>,{' '}
+                <strong>respiratory issues</strong>, or{' '}
+                <strong>chronic colds</strong>, as the cooling effect may
+                aggravate these conditions.
+              </li>
+              <li>
+                Stop if you feel dizzy or uncomfortable, and consult a teacher
+                from our Yoga Teacher Training in India.
+              </li>
+              <li>
+                Practice in a clean, well-ventilated space for optimal
+                benefits.
+              </li>
+            </ul>
           </div>
 
           {/* WHY HATHA YOGASHRAM */}
@@ -486,9 +466,6 @@ const SingleBlog = () => {
           </div>
         </article>
       </div>
-
-      {/* FOOTER DECORATION */}
-      <div className={styles.footerWave}></div>
     </section>
   );
 };

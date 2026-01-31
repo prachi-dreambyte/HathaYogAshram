@@ -3,6 +3,7 @@
   width: 100%;
   aspect-ratio: 1920 / 620;
   overflow: hidden;
+  background-color: #ffffff;
 }
 
 /* ================= Background Image ================= */
@@ -12,6 +13,7 @@
   z-index: 1;
   background-size: cover;
   background-position: center;
+  transition: background-image 0.6s ease-in-out;
 }
 
 /* ================= Button Wrapper ================= */

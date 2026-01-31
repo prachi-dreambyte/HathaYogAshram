@@ -1,165 +1,1022 @@
-.gallery {
-  padding: 60px 20px;
-  max-width: 1300px;
-  margin: auto;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ========================================
+   WRAPPER & CONTAINER
+   ======================================== */
+.wrapper {
+  min-height: 100vh;
+  background: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* FILTER TABS */
-.tabs {
+/* ========================================
+   HERO HEADER SECTION
+   ======================================== */
+.heroSection {
+  position: relative;
+  padding: 4rem 2rem 3rem;
+  background: linear-gradient(135deg, rgba(212, 105, 30, 0.9) 0%, rgba(196, 30, 58, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600') center/cover;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 400'%3E%3Cpath d='M150 50 Q180 100 150 150 Q120 100 150 50 M150 150 Q180 200 150 250 Q120 200 150 150 M100 200 Q130 230 100 260 Q70 230 100 200 M200 200 Q230 230 200 260 Q170 230 200 200' stroke='%23FFE4D6' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.topLabel {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.95;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+}
+
+.breadcrumb {
+  background: white;
+  color: #C41E3A;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  border-radius: 3px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.breadcrumb span {
+  margin: 0 0.6rem;
+  color: #C41E3A;
+}
+
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
+.contentSection {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* ========================================
+   SECTION TITLE
+   ======================================== */
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #D2691E 0%, #C41E3A 100%);
+  border-radius: 2px;
+}
+
+/* ========================================
+   DESCRIPTION
+   ======================================== */
+.description {
+  max-width: 900px;
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
+/* ========================================
+   FILTER TABS
+   ======================================== */
+.filterTabs {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-bottom: 40px;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2.5rem 0 3rem;
   flex-wrap: wrap;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
-.tab {
+.filterTab {
   background: transparent;
   border: none;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
-  padding-bottom: 6px;
+  padding: 0.7rem 1.5rem;
   color: #555;
   position: relative;
+  transition: all 0.3s ease;
+  border-radius: 3px;
 }
 
-.tab::after {
-  content: "";
+.filterTab::after {
+  content: '';
   position: absolute;
-  left: 0;
+  left: 50%;
   bottom: 0;
+  transform: translateX(-50%);
   width: 0%;
-  height: 2px;
-  background: #000;
-  transition: 0.3s;
+  height: 3px;
+  background: linear-gradient(90deg, #D2691E 0%, #C41E3A 100%);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
-.tab:hover::after,
-.active::after {
-  width: 100%;
+.filterTab:hover {
+  color: #C41E3A;
+  background: #FFF5F0;
 }
 
-.active {
-  color: #000;
+.filterTab:hover::after {
+  width: 70%;
+}
+
+.activeTab {
+  color: #C41E3A;
   font-weight: 600;
+  background: linear-gradient(135deg, #FFF5F0 0%, #FFE4D6 100%);
 }
 
-/* GRID */
-.grid {
+.activeTab::after {
+  width: 70%;
+}
+
+/* ========================================
+   IMAGE GRID
+   ======================================== */
+.imageGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 3rem;
 }
 
-.card {
+.imageCard {
   position: relative;
+  border-radius: 0px 0px 0px 50px;
   overflow: hidden;
-  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  aspect-ratio: 4/3;
+  background: #F5F5F5;
   cursor: pointer;
 }
 
-.card img {
+.imageCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.imageCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.card:hover img {
+.imageCard:hover img {
   transform: scale(1.08);
 }
 
-/* HOVER OVERLAY */
+/* ========================================
+   HOVER OVERLAY
+   ======================================== */
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  color: #fff;
-  font-size: 16px;
+  background: linear-gradient(135deg, rgba(212, 105, 30, 0.85) 0%, rgba(196, 30, 58, 0.9) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: 0.3s;
+  transition: opacity 0.4s ease;
 }
 
-.card:hover .overlay {
+.imageCard:hover .overlay {
   opacity: 1;
 }
 
-/* MODAL */
+.viewText {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.imageCard:hover .viewText {
+  background: white;
+  color: #C41E3A;
+}
+
+/* ========================================
+   MODAL
+   ======================================== */
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.92);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modalImg {
-  max-width: 85%;
+  max-width: 90%;
   max-height: 85%;
-  border-radius: 10px;
+  border-radius: 3px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
 }
 
-/* CONTROLS */
-.close {
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   MODAL CONTROLS
+   ======================================== */
+.closeBtn {
   position: absolute;
-  top: 25px;
-  right: 30px;
-  font-size: 35px;
-  color: #fff;
+  top: 30px;
+  right: 40px;
+  font-size: 45px;
+  color: white;
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 300;
+  line-height: 1;
 }
 
-.prev,
-.next {
+.closeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.prevBtn,
+.nextBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
   font-size: 50px;
   cursor: pointer;
-  padding: 10px;
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  font-weight: 300;
+  line-height: 1;
+  backdrop-filter: blur(10px);
 }
 
-.prev {
-  left: 30px;
+.prevBtn:hover,
+.nextBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.next {
-  right: 30px;
+.prevBtn {
+  left: 40px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
+.nextBtn {
+  right: 40px;
+}
+
+/* ========================================
+   MODAL CAPTION
+   ======================================== */
+.modalCaption {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: #2C2C2C;
+  padding: 0.8rem 2rem;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+  .heroContent,
+  .contentSection {
+    max-width: 1400px;
+  }
+
+  .pageTitle {
+    font-size: 3.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 }
 
-@media (max-width: 768px) {
-  .grid {
+/* Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .heroContent,
+  .contentSection {
+    max-width: 1140px;
+  }
+}
+
+/* Laptop/Tablet Landscape - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .heroContent,
+  .contentSection {
+    max-width: 960px;
+  }
+
+  .heroSection {
+    padding: 3.5rem 1.5rem 3rem;
+  }
+
+  .pageTitle {
+    font-size: 2.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .filterTabs {
+    gap: 1.2rem;
+  }
+
+  .filterTab {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.3rem;
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .heroSection {
+    padding: 3rem 1.5rem 2.5rem;
+    min-height: 320px;
+  }
+
+  .heroSection::before {
+    width: 40%;
+    opacity: 0.25;
+  }
+
+  .pageTitle {
+    font-size: 2.5rem;
+  }
+
+  .topLabel {
+    font-size: 0.95rem;
+  }
+
+  .contentSection {
+    max-width: 720px;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.9rem;
+    margin-top: 2.5rem;
+  }
+
+  .sectionTitle::after {
+    width: 70px;
+    height: 3px;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .filterTabs {
+    gap: 1rem;
+    padding: 1.3rem;
+    margin: 2rem 0 2.5rem;
+  }
+
+  .filterTab {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .imageGrid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
   }
 
-  .prev,
-  .next {
+  .modalImg {
+    max-width: 85%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 45px;
+    padding: 0.9rem 1.3rem;
+  }
+
+  .prevBtn {
+    left: 30px;
+  }
+
+  .nextBtn {
+    right: 30px;
+  }
+
+  .closeBtn {
     font-size: 40px;
+    width: 45px;
+    height: 45px;
+    top: 25px;
+    right: 30px;
   }
 }
 
-@media (max-width: 480px) {
-  .grid {
+/* Mobile Landscape - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+  .heroSection {
+    padding: 2.5rem 1.5rem 2rem;
+    min-height: 300px;
+  }
+
+  .heroSection::before {
+    width: 35%;
+    opacity: 0.2;
+  }
+
+  .topLabel {
+    font-size: 0.9rem;
+  }
+
+  .pageTitle {
+    font-size: 2.2rem;
+  }
+
+  .breadcrumb {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .contentSection {
+    padding: 2rem 1.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    padding-bottom: 0.8rem;
+  }
+
+  .sectionTitle::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .description {
+    font-size: 0.98rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .filterTabs {
+    gap: 0.9rem;
+    padding: 1.2rem;
+    margin: 1.8rem 0 2.2rem;
+  }
+
+  .filterTab {
+    font-size: 0.88rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  .imageGrid {
     grid-template-columns: 1fr;
+    gap: 1.2rem;
+    margin: 1.8rem 0 2.5rem;
+  }
+
+  .imageCard {
+    border-radius: 0px 0px 0px 40px;
+  }
+
+  .viewText {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+
+  .modalImg {
+    max-width: 88%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 40px;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .prevBtn {
+    left: 20px;
+  }
+
+  .nextBtn {
+    right: 20px;
+  }
+
+  .closeBtn {
+    font-size: 38px;
+    width: 42px;
+    height: 42px;
+    top: 20px;
+    right: 25px;
+  }
+
+  .modalCaption {
+    bottom: 25px;
+    padding: 0.7rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Portrait - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .heroSection {
+    padding: 2.2rem 1rem 1.8rem;
+    min-height: 280px;
+  }
+
+  .heroSection::before {
+    display: none;
+  }
+
+  .topLabel {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .breadcrumb {
+    padding: 0.45rem 1.1rem;
+    font-size: 0.82rem;
+  }
+
+  .contentSection {
+    padding: 1.8rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.7rem;
+    margin-top: 2.2rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.7rem;
+  }
+
+  .sectionTitle::after {
+    width: 55px;
+    height: 3px;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+    text-align: left;
+  }
+
+  .filterTabs {
+    gap: 0.7rem;
+    padding: 1rem;
+    margin: 1.5rem 0 2rem;
+    flex-direction: row;
+  }
+
+  .filterTab {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .filterTab::after {
+    height: 2px;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    margin: 1.5rem 0 2.2rem;
+  }
+
+  .imageCard {
+    border-radius: 0px 0px 0px 35px;
+  }
+
+  .viewText {
+    font-size: 0.95rem;
+    padding: 0.65rem 1.2rem;
+  }
+
+  .modalImg {
+    max-width: 92%;
+    max-height: 80%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 35px;
+    padding: 0.7rem 1rem;
+    border-width: 1.5px;
+  }
+
+  .prevBtn {
+    left: 15px;
+  }
+
+  .nextBtn {
+    right: 15px;
+  }
+
+  .closeBtn {
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+    top: 18px;
+    right: 20px;
+  }
+
+  .modalCaption {
+    bottom: 20px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile - 375px to 479px */
+@media (min-width: 375px) and (max-width: 479px) {
+  .heroSection {
+    padding: 2rem 1rem 1.5rem;
+    min-height: 260px;
+  }
+
+  .topLabel {
+    font-size: 0.82rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumb {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .contentSection {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .sectionTitle::after {
+    width: 50px;
+    height: 2.5px;
+  }
+
+  .description {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 1.6rem;
+  }
+
+  .filterTabs {
+    gap: 0.6rem;
+    padding: 0.9rem;
+    margin: 1.3rem 0 1.8rem;
+  }
+
+  .filterTab {
+    font-size: 0.82rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .imageGrid {
+    gap: 1rem;
+    margin: 1.3rem 0 2rem;
+  }
+
+  .imageCard {
+    border-radius: 0px 0px 0px 30px;
+  }
+
+  .viewText {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.1rem;
+    letter-spacing: 0.5px;
   }
 
   .modalImg {
     max-width: 95%;
+    max-height: 75%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 32px;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .prevBtn {
+    left: 12px;
+  }
+
+  .nextBtn {
+    right: 12px;
+  }
+
+  .closeBtn {
+    font-size: 32px;
+    width: 38px;
+    height: 38px;
+    top: 15px;
+    right: 18px;
+  }
+
+  .modalCaption {
+    bottom: 18px;
+    padding: 0.55rem 1.3rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+  .heroSection {
+    padding: 1.8rem 0.8rem 1.3rem;
+    min-height: 240px;
+  }
+
+  .topLabel {
+    font-size: 0.78rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+
+  .breadcrumb {
+    padding: 0.35rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .contentSection {
+    padding: 1.3rem 0.7rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .sectionTitle::after {
+    width: 45px;
+    height: 2.5px;
+  }
+
+  .description {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 1.4rem;
+  }
+
+  .filterTabs {
+    gap: 0.5rem;
+    padding: 0.8rem;
+    margin: 1.2rem 0 1.6rem;
+  }
+
+  .filterTab {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .filterTab::after {
+    height: 2px;
+  }
+
+  .imageGrid {
+    gap: 0.9rem;
+    margin: 1.2rem 0 1.8rem;
+  }
+
+  .imageCard {
+    border-radius: 0px 0px 0px 25px;
+  }
+
+  .viewText {
+    font-size: 0.85rem;
+    padding: 0.55rem 1rem;
+    border-width: 1.5px;
+  }
+
+  .modalImg {
+    max-width: 96%;
+    max-height: 70%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 28px;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .prevBtn {
+    left: 10px;
+  }
+
+  .nextBtn {
+    right: 10px;
+  }
+
+  .closeBtn {
+    font-size: 30px;
+    width: 35px;
+    height: 35px;
+    top: 12px;
+    right: 15px;
+  }
+
+  .modalCaption {
+    bottom: 15px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.78rem;
+  }
+}
+
+/* Ultra Small Mobile - below 320px */
+@media (max-width: 319px) {
+  .heroSection {
+    padding: 1.5rem 0.6rem 1.2rem;
+    min-height: 220px;
+  }
+
+  .pageTitle {
+    font-size: 1.4rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+
+  .description,
+  .filterTab {
+    font-size: 0.82rem;
+  }
+
+  .contentSection {
+    padding: 1.1rem 0.6rem;
+  }
+
+  .filterTabs {
+    padding: 0.7rem;
+    gap: 0.4rem;
+  }
+
+  .filterTab {
+    padding: 0.35rem 0.7rem;
+  }
+
+  .viewText {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .modalImg {
+    max-width: 98%;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    font-size: 25px;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .closeBtn {
+    font-size: 28px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .modalCaption {
+    font-size: 0.75rem;
+    padding: 0.45rem 1rem;
   }
 }
