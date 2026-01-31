@@ -11,9 +11,10 @@
 .heroSection {
   position: relative;
   padding: 3rem 2rem 2rem;
-
+  min-height: 620px;
   /* 👇 Image + gradient together */
-  background-image:url('../../../assets/images/ourteacher.jpeg'); /* 👈 your image path */
+  background-image: url('../../../assets/images/ourteacher.jpeg');
+  /* 👈 your image path */
 
   background-size: cover;
   background-position: center;
@@ -39,38 +40,75 @@
 .heroContent {
   max-width: 1200px;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* 👈 UP side */
+
+  padding-left: 2rem;            /* 👈 LEFT aligned */
+  padding-top: 4rem;             /* 👈 thoda UP se neeche */
+  padding-bottom: 0;
+
   position: relative;
   z-index: 2;
 }
 
+
+
 .quoteText {
   font-size: 1.1rem;
-  color: #D2691E;
+  color: #C41E3A;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-style: italic;
+  max-width: 420px;
+}
+
+.quoteText {
+  margin-top: auto;
 }
 
 .mainTitle {
-  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
   font-weight: 600;
-  color: #2C2C2C;
-  margin-bottom: 1rem;
-  line-height: 1.2;
+  color: #1f1f1f;
+  line-height: 1.25;
+
+  max-width: 560px;
+  margin-bottom: 1.2rem;
+
+  position: relative;
+}
+
+
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background: #C41E3A;
 }
 
 .breadcrumb {
-  display: flex;
+  display: inline-flex;          /* ✅ important */
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
+
   background: #C41E3A;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  display: inline-flex;
+  color: #fff;
+
+  padding: 0.4rem 0.9rem;        /* 👈 tight padding */
   border-radius: 3px;
-  font-size: 0.9rem;
+
+  font-size: 0.8rem;
   margin-top: 1rem;
+
+  width: fit-content;            /* 👈 content jitna hi */
 }
+
 
 .breadcrumbLink {
   color: white;
@@ -235,7 +273,7 @@
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
-   padding-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
   border-bottom: 1px solid black;
 }
 
@@ -1149,13 +1187,11 @@
 
   /* subtle patterned background */
   background-color: #f6f4f2;
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.03) 0,
-    rgba(0, 0, 0, 0.03) 1px,
-    transparent 1px,
-    transparent 24px
-  );
+  background-image: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0.03) 0,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 24px);
 }
 
 .content {
@@ -1196,6 +1232,7 @@
   background: #c00000;
   color: #fff;
 }
+
 .section {
   padding: 70px 5%;
   background: #fff;
@@ -1245,7 +1282,8 @@
 .card iframe {
   width: 100%;
   height: 420px;
-  pointer-events: none; /* clean look like reels */
+  pointer-events: none;
+  /* clean look like reels */
 }
 
 /* 🔴 Shorts Logo */
@@ -1288,6 +1326,7 @@
   .videoGrid {
     grid-template-columns: 1fr;
   }
+
   .card iframe {
     height: 480px;
   }

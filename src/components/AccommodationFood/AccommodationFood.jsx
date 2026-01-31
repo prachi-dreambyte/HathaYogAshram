@@ -26,20 +26,25 @@ const foodImages = [
 const AccommodationFood = () => {
   return (
     <section className={styles.wrapper}>
-      <div className="container">
-        {/* ================= HEADER ================= */}
-        <span className={styles.topLabel}>
-          Say Hello To Your Home Away From Home!
-        </span>
+      {/* ================= HERO HEADER ================= */}
+      <div className={styles.heroSection}>
+        <div className={styles.heroContent}>
+          <span className={styles.topLabel}>
+            Say Hello To Your Home Away From Home!
+          </span>
 
-        <h1 className={styles.pageTitle}>
-          Accommodation & Food At Rishikesh Yogkulam®
-        </h1>
+          <h1 className={styles.pageTitle}>
+            Accommodation & Food At Rishikesh Yogkulam®
+          </h1>
 
-        <div className={styles.breadcrumb}>
-          Home <span>/</span> Accommodation
+          <div className={styles.breadcrumb}>
+            Home <span>/</span> Accommodation
+          </div>
         </div>
+      </div>
 
+      {/* ================= MAIN CONTENT ================= */}
+      <div className={styles.contentSection}>
         {/* ================= ACCOMMODATION ================= */}
         <h2 className={styles.sectionTitle}>
           Experience the Best Accommodation at Rishikesh Yogkulam
@@ -76,7 +81,7 @@ const AccommodationFood = () => {
         <div className={styles.imageGrid}>
           {building1Images.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Accommodation" />
+              <img src={img} alt="Accommodation Building 1" />
             </div>
           ))}
         </div>
@@ -89,7 +94,7 @@ const AccommodationFood = () => {
         <div className={styles.imageGrid}>
           {building2Images.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Accommodation" />
+              <img src={img} alt="Accommodation Building 2" />
             </div>
           ))}
         </div>
@@ -98,6 +103,8 @@ const AccommodationFood = () => {
           <strong>Note:</strong> Buildings assigned to each course may be
           interchanged depending on availability.
         </p>
+
+        <div className={styles.divider}></div>
 
         {/* ================= FOOD ================= */}
         <h2 className={styles.sectionTitle}>
@@ -123,7 +130,7 @@ const AccommodationFood = () => {
         <div className={styles.imageGrid}>
           {foodImages.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Food" />
+              <img src={img} alt="Vegetarian Food" />
             </div>
           ))}
         </div>
