@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* ===================================================
-   KUNDALINI 300 HOUR YTT - RED THEME (MATCHING 200HR)
+   YIN YOGA - RED THEME (MATCHING KUNDALINI DESIGN)
    ================================================ */
 
 /* Page Container */
@@ -57,7 +57,7 @@
 }
 
 .heroSection::before {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   right: 10%;
   top: 50%;
@@ -67,17 +67,17 @@
   font-weight: 700;
   pointer-events: none;
   z-index: 2;
-  animation: omPulse 6s ease-in-out infinite;
+  animation: yinYangPulse 6s ease-in-out infinite;
 }
 
-@keyframes omPulse {
+@keyframes yinYangPulse {
   0%, 100% {
     opacity: 0.1;
-    transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) rotate(0deg);
   }
   50% {
     opacity: 0.15;
-    transform: translateY(-50%) scale(1.05);
+    transform: translateY(-50%) rotate(180deg);
   }
 }
 
@@ -246,7 +246,7 @@
 }
 
 .floatingSection::before {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   top: 50%;
   right: -70px;
@@ -257,6 +257,15 @@
   pointer-events: none;
   z-index: 0;
   animation: slowRotate 30s linear infinite;
+}
+
+@keyframes slowRotate {
+  from {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
 }
 
 .floatingSection::after {
@@ -320,9 +329,10 @@
    ================================================ */
 
 .overviewSection,
-.chakrasSection,
+.schoolsSection,
+.meridiansSection,
 .curriculumSection,
-.scheduleSection,
+.practicesSection,
 .pricingSection,
 .faqSection {
   padding: 80px 24px;
@@ -404,7 +414,7 @@
 }
 
 .overviewSection::before {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   top: 50%;
   left: -80px;
@@ -415,15 +425,6 @@
   pointer-events: none;
   z-index: 0;
   animation: slowRotate 30s linear infinite;
-}
-
-@keyframes slowRotate {
-  from {
-    transform: translateY(-50%) rotate(-15deg);
-  }
-  to {
-    transform: translateY(-50%) rotate(345deg);
-  }
 }
 
 .overviewSection::after {
@@ -565,20 +566,126 @@
 }
 
 /* ===================================================
-   CHAKRAS SECTION
+   SCHOOLS SECTION
    ================================================ */
 
-.chakrasSection {
+.schoolsSection {
   background: #f8f6f3;
   position: relative;
   overflow: hidden;
 }
 
-.chakrasSection::before {
+.schoolsSection::before {
+  content: '☯';
+  position: absolute;
+  top: -50px;
+  right: -80px;
+  font-size: 320px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  animation: slowRotate 40s linear infinite;
+}
+
+.schoolsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.schoolCard {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 3px solid transparent;
+}
+
+.schoolCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+}
+
+.schoolCardActive {
+  border-color: #C41E3A;
+  transform: scale(1.02);
+}
+
+.schoolImage {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.schoolOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.schoolBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #C41E3A;
+  color: white;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 3px;
+}
+
+.schoolInfo {
+  padding: 24px;
+}
+
+.schoolInfo h3 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 8px;
+}
+
+.schoolTagline {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #C41E3A;
+  font-style: italic;
+  margin: 0 0 8px;
+}
+
+.schoolLocation {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+/* ===================================================
+   MERIDIANS SECTION
+   ================================================ */
+
+.meridiansSection {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.meridiansSection::before {
   content: '';
   position: absolute;
   top: 50%;
-  right: -100px;
+  left: -100px;
   transform: translateY(-50%);
   width: 400px;
   height: 400px;
@@ -587,23 +694,13 @@
   opacity: 0.6;
   pointer-events: none;
   z-index: 0;
-  animation: floatMeditation 6s ease-in-out infinite;
 }
 
-@keyframes floatMeditation {
-  0%, 100% {
-    transform: translateY(-50%);
-  }
-  50% {
-    transform: translateY(-55%);
-  }
-}
-
-.chakrasSection::after {
-  content: 'ॐ';
+.meridiansSection::after {
+  content: '☯';
   position: absolute;
   bottom: 5%;
-  left: -60px;
+  right: -60px;
   font-size: 280px;
   color: rgba(196, 30, 58, 0.04);
   font-weight: 700;
@@ -612,9 +709,9 @@
   transform: rotate(15deg);
 }
 
-.chakrasList {
-  display: flex;
-  flex-direction: column;
+.meridiansList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   max-width: 1000px;
   margin: 0 auto;
@@ -622,62 +719,51 @@
   z-index: 1;
 }
 
-.chakraItem {
+.meridianItem {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   align-items: flex-start;
-  padding: 32px;
-  background: white;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  padding: 28px;
+  background: #f8f6f3;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
 }
 
-.chakraItem:hover {
+.meridianItem:hover {
   transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
   border-left-color: #C41E3A;
+  background: white;
 }
 
-.chakraCircle {
+.meridianIcon {
+  font-size: 40px;
   flex-shrink: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0 5px 15px rgba(196, 30, 58, 0.3));
 }
 
-.chakraNumber {
+.meridianContent h3 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: white;
-}
-
-.chakraContent h3 {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #2C2C2C;
-  margin: 0 0 4px;
+  margin: 0 0 8px;
 }
 
-.chakraLabel {
+.meridianElement {
   font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #C41E3A;
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 }
 
-.chakraContent p {
+.meridianOrgans {
   font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: #666;
   line-height: 1.7;
   margin: 0;
@@ -688,7 +774,7 @@
    ================================================ */
 
 .curriculumSection {
-  background: white;
+  background: #f8f6f3;
   position: relative;
   overflow: hidden;
 }
@@ -719,7 +805,7 @@
 }
 
 .curriculumSection::after {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   bottom: 5%;
   right: -70px;
@@ -773,7 +859,7 @@
 }
 
 .tabContent {
-  background: #f8f6f3;
+  background: white;
   padding: 50px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   min-height: 400px;
@@ -789,6 +875,14 @@
   padding-bottom: 12px;
 }
 
+.tabPane h4 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C41E3A;
+  margin: 24px 0 16px;
+}
+
 .curriculumGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -797,7 +891,7 @@
 
 .curriculumCard {
   padding: 28px;
-  background: white;
+  background: #f8f6f3;
   border-left: 4px solid #C41E3A;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -806,6 +900,7 @@
 .curriculumCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+  background: white;
 }
 
 .curriculumCard h4 {
@@ -850,120 +945,136 @@
   font-size: 14px;
 }
 
+.asanaColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 32px;
+}
+
+.asanaColumn h4 {
+  margin-top: 0;
+}
+
+.asanaNote {
+  margin-top: 32px;
+  padding: 24px;
+  background: rgba(196, 30, 58, 0.05);
+  border-radius: 10px;
+  border-left: 4px solid #C41E3A;
+}
+
+.asanaNote p {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 16px;
+}
+
+.asanaNote ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.asanaNote li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #666;
+  padding: 8px 0 8px 24px;
+  position: relative;
+}
+
+.asanaNote li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #C41E3A;
+  font-weight: 700;
+}
+
 /* ===================================================
-   SCHEDULE SECTION
+   PRACTICES SECTION
    ================================================ */
 
-.scheduleSection {
-  background: #f8f6f3;
+.practicesSection {
+  background: white;
   position: relative;
   overflow: hidden;
 }
 
-.scheduleSection::before {
-  content: '';
+.practicesSection::before {
+  content: '☯';
   position: absolute;
-  top: 5%;
-  right: -60px;
-  width: 300px;
-  height: 300px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Prayer Hands Namaste --%3E%3Cpath d='M80 60 L80 120 Q80 130 85 135 L95 145 L100 150' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='rgba(196,30,58,0.05)' stroke-linecap='round'/%3E%3Cpath d='M120 60 L120 120 Q120 130 115 135 L105 145 L100 150' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='rgba(196,30,58,0.05)' stroke-linecap='round'/%3E%3Cpath d='M95 145 L100 150 L105 145' fill='rgba(196,30,58,0.08)' stroke='rgba(196,30,58,0.12)' stroke-width='2'/%3E%3Cpath d='M85 70 Q80 60 80 50 Q80 40 90 40' stroke='rgba(196,30,58,0.1)' stroke-width='2' fill='none'/%3E%3Cpath d='M115 70 Q120 60 120 50 Q120 40 110 40' stroke='rgba(196,30,58,0.1)' stroke-width='2' fill='none'/%3E%3Ccircle cx='100' cy='30' r='8' fill='rgba(196,30,58,0.1)'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.scheduleSection::after {
-  content: 'ॐ';
-  position: absolute;
-  bottom: -40px;
-  left: -70px;
-  font-size: 320px;
+  top: -50px;
+  left: -60px;
+  font-size: 300px;
   color: rgba(196, 30, 58, 0.04);
   font-weight: 700;
   pointer-events: none;
   z-index: 0;
-  transform: rotate(25deg);
 }
 
-.scheduleTimeline {
-  max-width: 900px;
+.practicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
-.scheduleTimeline::before {
-  content: '';
-  position: absolute;
-  left: 80px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background: #C41E3A;
-}
-
-.scheduleItem {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 32px;
-  position: relative;
-  align-items: flex-start;
-}
-
-.scheduleItem::before {
-  content: '';
-  position: absolute;
-  left: 72px;
-  top: 8px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #C41E3A;
-  border: 4px solid #f8f6f3;
-  box-shadow: 0 0 0 2px #C41E3A;
-  z-index: 2;
-}
-
-.scheduleTime {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #C41E3A;
-  min-width: 70px;
-  text-align: right;
-  padding-top: 4px;
-}
-
-.scheduleContent {
-  flex: 1;
-  background: white;
-  padding: 20px 28px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+.practiceCard {
+  padding: 40px;
+  background: #f8f6f3;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
 
-.scheduleContent:hover {
-  transform: translateX(8px);
-  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+.practiceCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+  background: white;
 }
 
-.scheduleContent h4 {
+.practiceIcon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 5px 15px rgba(196, 30, 58, 0.3));
+}
+
+.practiceCard h3 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
   color: #2C2C2C;
-  margin: 0 0 8px;
+  margin: 0 0 24px;
 }
 
-.scheduleContent p {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 14px;
-  color: #666;
-  line-height: 1.7;
+.practiceCard ul {
+  list-style: none;
+  padding: 0;
   margin: 0;
+}
+
+.practiceCard li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  padding: 8px 0 8px 24px;
+  position: relative;
+}
+
+.practiceCard li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #C41E3A;
+  font-size: 14px;
 }
 
 /* ===================================================
@@ -971,13 +1082,13 @@
    ================================================ */
 
 .pricingSection {
-  background: white;
+  background: #f8f6f3;
   position: relative;
   overflow: hidden;
 }
 
 .pricingSection::before {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   top: 10%;
   left: -90px;
@@ -1162,7 +1273,7 @@
    ================================================ */
 
 .faqSection {
-  background: #f8f6f3;
+  background: white;
   position: relative;
   overflow: hidden;
 }
@@ -1193,7 +1304,7 @@
 }
 
 .faqSection::after {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   bottom: -30px;
   right: -80px;
@@ -1214,7 +1325,7 @@
 
 .faqItem {
   margin-bottom: 16px;
-  background: white;
+  background: #f8f6f3;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   overflow: hidden;
   border-left: 4px solid transparent;
@@ -1224,6 +1335,7 @@
 .faqItem:hover {
   border-left-color: #C41E3A;
   box-shadow: 0 10px 30px rgba(196, 30, 58, 0.1);
+  background: white;
 }
 
 .faqQuestion {
@@ -1296,7 +1408,7 @@
 }
 
 .ctaSection::before {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   top: 10%;
   left: 5%;
@@ -1313,12 +1425,12 @@
     transform: translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateY(-20px) rotate(5deg);
+    transform: translateY(-20px) rotate(180deg);
   }
 }
 
 .ctaSection::after {
-  content: 'ॐ';
+  content: '☯';
   position: absolute;
   bottom: 10%;
   right: 5%;
@@ -1423,6 +1535,18 @@
   .pricingCard.featured {
     transform: scale(1);
   }
+
+  .schoolsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .meridiansList {
+    grid-template-columns: 1fr;
+  }
+
+  .practicesGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1461,25 +1585,16 @@
     grid-template-columns: 1fr;
   }
 
+  .asanaColumns {
+    grid-template-columns: 1fr;
+  }
+
   .tabButtons {
     flex-direction: column;
   }
 
   .tabBtn {
     width: 100%;
-  }
-
-  .scheduleTimeline::before {
-    left: 60px;
-  }
-
-  .scheduleItem::before {
-    left: 52px;
-  }
-
-  .scheduleTime {
-    min-width: 50px;
-    font-size: 16px;
   }
 
   .ctaContent h2 {
@@ -1504,14 +1619,9 @@
     padding: 32px 24px;
   }
 
-  .chakraItem {
-    padding: 24px;
-    gap: 20px;
-  }
-
-  .chakraCircle {
-    width: 60px;
-    height: 60px;
+  .meridianItem {
+    padding: 20px;
+    gap: 16px;
   }
 
   .tabContent {

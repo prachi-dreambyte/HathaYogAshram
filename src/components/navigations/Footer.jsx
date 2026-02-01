@@ -82,7 +82,7 @@ const Footer = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/AboutUs">About Us</Link>
+                <Link to="/about-us">About Us</Link>
               </li>
               <li>
                 <Link to="/teachers">Our Teachers</Link>
@@ -118,8 +118,13 @@ const Footer = () => {
             <ul className={styles.list}>
               <li>
                 {' '}
+                <Link to="/YinYoga">Yin Yoga</Link>
+              </li>
+              <li>
+                {' '}
                 <Link to="/vedic-mantra">Vedic mantra</Link>
               </li>
+
               <li>
                 <Link to="/YogaCourse100">100 Hour Yoga TTC</Link>
               </li>
@@ -177,34 +182,33 @@ const Footer = () => {
             </ul>
 
             <div className={styles.socials}>
-  <motion.a
-    whileHover={{ scale: 1.2 }}
-    href="https://www.facebook.com/profile.php?id=100095297992781"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaFacebookF />
-  </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.facebook.com/profile.php?id=100095297992781"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF />
+              </motion.a>
 
-  <motion.a
-    whileHover={{ scale: 1.2 }}
-    href="https://www.instagram.com/hathayogashram/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaInstagram />
-  </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.instagram.com/hathayogashram/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
+              </motion.a>
 
-  <motion.a
-    whileHover={{ scale: 1.2 }}
-    href="https://www.youtube.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <FaYoutube />
-  </motion.a>
-</div>
-
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaYoutube />
+              </motion.a>
+            </div>
           </motion.div>
         </motion.div>
 

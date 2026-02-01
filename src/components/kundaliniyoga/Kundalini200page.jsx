@@ -10,66 +10,34 @@ const Kundalini200Page = () => {
   };
 
   return (
-    <div className={styles.page}>
+    <div className={styles.container}>
       {/* HERO SECTION */}
-      <section className={styles.hero}>
+      <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
           <img
             src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80"
             alt="Kundalini Meditation"
           />
-          <div className={styles.heroOverlay}></div>
         </div>
 
         <div className={styles.heroContent}>
-          <div className={styles.heroAnimation}>
-            <div className={styles.chakraCircle}></div>
-            <div className={styles.energyFlow}></div>
-          </div>
-
-          <div className={styles.heroText}>
-            <span className={styles.heroLabel}>Awaken Your Inner Power</span>
-            <h1 className={styles.heroTitle}>
-              <span className={styles.titleLine1}>200 Hour</span>
-              <span className={styles.titleLine2}>Kundalini Yoga</span>
-              <span className={styles.titleLine3}>Teacher Training</span>
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Transform through ancient wisdom • Rise your consciousness •
-              Awaken dormant energy
-            </p>
-
-            <div className={styles.heroActions}>
-              <button className={styles.primaryBtn}>
-                <span>Begin Your Journey</span>
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M5 12h14M12 5l7 7-7 7"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-              <button className={styles.secondaryBtn}>
-                <svg viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  />
-                  <path d="M10 8l6 4-6 4V8z" fill="currentColor" />
-                </svg>
-                <span>Watch Video</span>
-              </button>
-            </div>
+          <p className={styles.quoteText}>
+            Awaken Your Inner Power
+          </p>
+          <h1 className={styles.mainTitle}>
+            200 Hour Kundalini Yoga Teacher Training
+          </h1>
+          <div className={styles.breadcrumb}>
+            <span className={styles.breadcrumbLink}>Home</span>
+            <span className={styles.breadcrumbSeparator}>/</span>
+            <span>Kundalini YTT</span>
           </div>
         </div>
+      </section>
 
-        <div className={styles.heroStats}>
+      {/* HERO STATS */}
+      <section className={styles.heroStats}>
+        <div className={styles.statsContainer}>
           <div className={styles.stat}>
             <div className={styles.statIcon}>🧘</div>
             <div className={styles.statValue}>200+</div>
@@ -132,6 +100,7 @@ const Kundalini200Page = () => {
               Discover the Power Within
             </span>
             <h2 className={styles.sectionTitle}>What is Kundalini Yoga?</h2>
+            <div className={styles.decorativeLine}></div>
           </div>
 
           <div className={styles.overviewGrid}>
@@ -199,6 +168,7 @@ const Kundalini200Page = () => {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Energy Centers</span>
             <h2 className={styles.sectionTitle}>The Seven Chakras</h2>
+            <div className={styles.decorativeLine}></div>
             <p className={styles.sectionDesc}>
               Awaken and balance the seven major energy centers along your spine
             </p>
@@ -354,6 +324,7 @@ const Kundalini200Page = () => {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Complete Training</span>
             <h2 className={styles.sectionTitle}>Course Curriculum</h2>
+            <div className={styles.decorativeLine}></div>
           </div>
 
           <div className={styles.tabsContainer}>
@@ -560,6 +531,7 @@ const Kundalini200Page = () => {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Your Daily Rhythm</span>
             <h2 className={styles.sectionTitle}>Daily Schedule</h2>
+            <div className={styles.decorativeLine}></div>
             <p className={styles.sectionDesc}>
               Immerse yourself in yogic discipline with our carefully structured
               daily routine
@@ -674,6 +646,7 @@ const Kundalini200Page = () => {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Investment in Yourself</span>
             <h2 className={styles.sectionTitle}>Course Pricing</h2>
+            <div className={styles.decorativeLine}></div>
           </div>
 
           <div className={styles.pricingCards}>
@@ -687,13 +660,13 @@ const Kundalini200Page = () => {
                 <p className={styles.priceDesc}>Per Person</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>✓ 25 Days / 24 Nights Accommodation</li>
-                <li>✓ Shared Room with Private Bathroom</li>
-                <li>✓ 3 Vegetarian Meals Daily</li>
-                <li>✓ All Course Materials & Books</li>
-                <li>✓ Weekend Excursions</li>
-                <li>✓ RYT-200 Certification</li>
-                <li>✓ Airport Pickup (Dehradun)</li>
+                <li>25 Days / 24 Nights Accommodation</li>
+                <li>Shared Room with Private Bathroom</li>
+                <li>3 Vegetarian Meals Daily</li>
+                <li>All Course Materials & Books</li>
+                <li>Weekend Excursions</li>
+                <li>RYT-200 Certification</li>
+                <li>Airport Pickup (Dehradun)</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
             </div>
@@ -709,15 +682,15 @@ const Kundalini200Page = () => {
                 <p className={styles.priceDesc}>Single Occupancy</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>✓ 25 Days / 24 Nights Accommodation</li>
-                <li>✓ Private Room with Ensuite Bathroom</li>
-                <li>✓ 3 Vegetarian Meals Daily</li>
-                <li>✓ All Course Materials & Books</li>
-                <li>✓ Weekend Excursions</li>
-                <li>✓ RYT-200 Certification</li>
-                <li>✓ Airport Pickup (Dehradun)</li>
-                <li>✓ Full Body Massage Session</li>
-                <li>✓ Priority Support</li>
+                <li>25 Days / 24 Nights Accommodation</li>
+                <li>Private Room with Ensuite Bathroom</li>
+                <li>3 Vegetarian Meals Daily</li>
+                <li>All Course Materials & Books</li>
+                <li>Weekend Excursions</li>
+                <li>RYT-200 Certification</li>
+                <li>Airport Pickup (Dehradun)</li>
+                <li>Full Body Massage Session</li>
+                <li>Priority Support</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
             </div>
@@ -732,16 +705,16 @@ const Kundalini200Page = () => {
                 <p className={styles.priceDesc}>Premium Experience</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>✓ 25 Days / 24 Nights Accommodation</li>
-                <li>✓ Deluxe Private Room with AC</li>
-                <li>✓ 3 Vegetarian Meals Daily</li>
-                <li>✓ All Course Materials & Books</li>
-                <li>✓ Weekend Excursions</li>
-                <li>✓ RYT-200 Certification</li>
-                <li>✓ Airport Pickup (Delhi or Dehradun)</li>
-                <li>✓ 3 Full Body Massage Sessions</li>
-                <li>✓ Ayurvedic Consultation</li>
-                <li>✓ Private Meditation Sessions</li>
+                <li>25 Days / 24 Nights Accommodation</li>
+                <li>Deluxe Private Room with AC</li>
+                <li>3 Vegetarian Meals Daily</li>
+                <li>All Course Materials & Books</li>
+                <li>Weekend Excursions</li>
+                <li>RYT-200 Certification</li>
+                <li>Airport Pickup (Delhi or Dehradun)</li>
+                <li>3 Full Body Massage Sessions</li>
+                <li>Ayurvedic Consultation</li>
+                <li>Private Meditation Sessions</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
             </div>
@@ -755,6 +728,7 @@ const Kundalini200Page = () => {
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>Common Questions</span>
             <h2 className={styles.sectionTitle}>Frequently Asked Questions</h2>
+            <div className={styles.decorativeLine}></div>
           </div>
 
           <div className={styles.faqList}>
@@ -818,32 +792,14 @@ const Kundalini200Page = () => {
       {/* CTA SECTION */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
-          <div className={styles.ctaAnimation}>
-            <div className={styles.energyRing}></div>
-            <div className={styles.energyRing}></div>
-            <div className={styles.energyRing}></div>
-          </div>
           <h2>Ready to Awaken Your Kundalini?</h2>
           <p>
             Join us in Rishikesh for a life-transforming journey of spiritual
             awakening
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.ctaPrimary}>
-              <span>Apply Now</span>
-              <svg viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M5 12h14M12 5l7 7-7 7"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button className={styles.ctaSecondary}>
-              <span>Download Brochure</span>
-            </button>
+            <button className={styles.ctaPrimary}>Apply Now</button>
+            <button className={styles.ctaSecondary}>Download Brochure</button>
           </div>
         </div>
       </section>

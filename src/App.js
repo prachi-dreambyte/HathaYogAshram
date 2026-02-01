@@ -28,6 +28,8 @@ import YogaCourse300 from 'components/YogaCourses/YogaCourse300';
 import YogaCourse500 from 'components/YogaCourses/YogaCourse500';
 import Founders from 'components/Aboutfounder/AboutFounder';
 import AccommodationFood from 'components/AccommodationFood/AccommodationFood';
+import YinYoga from 'components/YogaCourses/Yinyoga';
+import AboutUs from 'components/AboutUs/AboutUs';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -55,6 +57,7 @@ export default function Main() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/blog" element={<BlogList />} />
         <Route path="/blog/:slug" element={<SingleBlog />} />
+        <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactForm />} />
         <Route path="/kundalini-200" element={<Kundalini200Page />} />
         <Route path="/kundalini-300" element={<Kundalini300 />} />
@@ -71,6 +74,7 @@ export default function Main() {
         <Route path="/YogaCourse200" element={<YogaCourse200 />} />
         <Route path="/YogaCourse300" element={<YogaCourse300 />} />
         <Route path="/YogaCourse500" element={<YogaCourse500 />} />
+         <Route path="/YinYoga" element={<YinYoga />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}
