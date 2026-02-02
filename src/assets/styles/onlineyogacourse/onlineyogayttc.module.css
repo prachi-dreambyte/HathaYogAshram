@@ -1,0 +1,1329 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-red: #C41E3A;
+  --deep-red: #8B0000;
+  --light-red: #DC143C;
+  --soft-red: #FFE4E1;
+  --gold: #D4AF37;
+  --dark-gray: #2C2C2C;
+  --light-gray: #F5F5F5;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--white);
+  position: relative;
+}
+
+/* ========== DECORATIVE ELEMENTS ========== */
+.omDecor1,
+.omDecor2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  color: var(--soft-red);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.omDecor1 {
+  top: 100px;
+  left: -50px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.omDecor2 {
+  bottom: 100px;
+  right: -50px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(196, 30, 58, 0.85) 0%,
+    rgba(139, 0, 0, 0.75) 50%,
+    rgba(196, 30, 58, 0.85) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  text-align: center;
+  color: var(--white);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.omSymbol {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: var(--gold);
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.welcomeText {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.heroTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.highlight {
+  color: var(--gold);
+  display: block;
+  font-style: italic;
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+}
+
+.heroSubtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
+  animation: fadeIn 1.5s ease-out 0.6s both;
+}
+
+.ctaButton {
+  background: var(--gold);
+  color: var(--deep-red);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+  animation: fadeInUp 1s ease-out 0.9s both;
+}
+
+.ctaButton svg {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.6);
+}
+
+.ctaButton:hover svg {
+  transform: translateX(5px);
+}
+
+.swastikDecor {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 150px;
+  height: 150px;
+  color: var(--gold);
+  opacity: 0.2;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ========== SECTION HEADERS ========== */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionLabel {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+.titleUnderline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--primary-red), transparent);
+  margin: 0 auto;
+  position: relative;
+}
+
+.titleUnderline::before,
+.titleUnderline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-red);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.titleUnderline::before { left: -20px; }
+.titleUnderline::after { right: -20px; }
+
+.sectionDescription {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #666;
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+/* ========== COURSES SECTION ========== */
+.coursesSection {
+  padding: 6rem 2rem;
+  background: var(--light-gray);
+  position: relative;
+}
+
+.coursesGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.courseCard {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.courseCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.2);
+}
+
+.courseImageWrapper {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+}
+
+.courseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.courseCard:hover .courseImage {
+  transform: scale(1.1);
+}
+
+.courseOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 30, 58, 0) 0%,
+    rgba(196, 30, 58, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.courseCard:hover .courseOverlay {
+  opacity: 1;
+}
+
+.courseOm {
+  width: 80px;
+  height: 80px;
+  color: var(--gold);
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.8));
+}
+
+.courseContent {
+  padding: 2rem;
+}
+
+.courseTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.courseDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  padding: 0.75rem;
+  background: var(--light-gray);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-red);
+  transition: all 0.3s ease;
+}
+
+.detailItem:hover {
+  background: var(--soft-red);
+  transform: translateX(5px);
+}
+
+.detailItem svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary-red);
+  flex-shrink: 0;
+}
+
+/* ========== BOOKING SECTION ========== */
+.bookingSection {
+  padding: 6rem 2rem;
+  background: var(--white);
+  position: relative;
+}
+
+.bookingGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 3rem;
+}
+
+.bookingCard {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.bookingCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.25);
+}
+
+.newBadge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--deep-red);
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.bookingImageWrapper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.bookingImageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.bookingCard:hover .bookingImageWrapper img {
+  transform: scale(1.15) rotate(2deg);
+}
+
+.bookingContent {
+  padding: 2rem;
+}
+
+.courseLabel {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-red);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.bookingTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1.5rem;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.oldPrice {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.newPrice {
+  font-family: "Philosopher", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-red);
+}
+
+.addToCartBtn {
+  width: 100%;
+  background: var(--primary-red);
+  color: var(--white);
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.addToCartBtn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.addToCartBtn:hover {
+  background: var(--deep-red);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.4);
+}
+
+/* ========== TESTIMONIALS SECTION ========== */
+.testimonialsSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--soft-red) 0%, var(--light-gray) 100%);
+}
+
+.testimonialsGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.testimonialCard {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.testimonialCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-family: "Philosopher", serif;
+  font-size: 6rem;
+  color: var(--primary-red);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(196, 30, 58, 0.3);
+}
+
+.reviewerName {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+.reviewTime {
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.stars svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+}
+
+.testimonialText {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ========== WHY US SECTION ========== */
+.whyUsSection {
+  padding: 6rem 2rem;
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.whyUsContent .sectionLabel,
+.whyUsContent .sectionTitle,
+.whyUsContent .titleUnderline {
+  text-align: left;
+  margin-left: 0;
+}
+
+.whyUsIntro {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin: 2rem 0 3rem;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.benefitItem {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.benefitIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--primary-red);
+  flex-shrink: 0;
+  padding: 8px;
+  background: var(--soft-red);
+  border-radius: 50%;
+}
+
+.benefitTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
+
+.benefitDescription {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.whyUsImage {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.whyUsImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageDecor {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  color: var(--gold);
+  opacity: 0.3;
+}
+
+/* ========== CERTIFICATION SECTION ========== */
+.certificationSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--soft-red) 0%, var(--white) 50%, var(--soft-red) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.certLogos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease-out;
+}
+
+.certLogo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15);
+  transition: all 0.4s ease;
+ 
+}
+
+.certLogo:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 15px 40px rgba(196, 30, 58, 0.3);
+  border-color: var(--gold);
+}
+
+.certContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.certText {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #555;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+
+.certText strong {
+  color: var(--primary-red);
+  font-weight: 700;
+}
+
+.lotusLeft,
+.lotusRight {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  color: var(--primary-red);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.lotusLeft {
+  top: 10%;
+  left: -50px;
+  transform: rotate(-15deg);
+}
+
+.lotusRight {
+  bottom: 10%;
+  right: -50px;
+  transform: rotate(15deg);
+}
+
+/* ========== HOW IT WORKS SECTION ========== */
+.howItWorksSection {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--soft-red) 100%);
+}
+
+.stepsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  position: relative;
+}
+
+.stepCard {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.2);
+}
+
+.stepNumber {
+  font-family: "Philosopher", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-red);
+  opacity: 0.2;
+  margin-bottom: 1rem;
+}
+
+.stepTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+.stepDescription {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+}
+
+.stepConnector {
+  display: none;
+}
+
+/* ========== FINAL CTA SECTION ========== */
+.finalCta {
+  padding: 8rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--deep-red) 0%,
+    var(--primary-red) 50%,
+    var(--deep-red) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.finalCta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.ctaOm {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 2rem;
+  color: var(--gold);
+  filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6));
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.ctaTitle {
+  font-family: "Philosopher", sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.ctaText {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  opacity: 0.95;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Extra Large Desktop - 1920px+ */
+@media (min-width: 1920px) {
+  .heroTitle { font-size: 5.5rem; }
+  .sectionTitle { font-size: 4rem; }
+  .ctaTitle { font-size: 4.5rem; }
+}
+
+/* Large Desktop - 1440px to 1919px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .heroTitle { font-size: 4.5rem; }
+  .sectionTitle { font-size: 3.5rem; }
+}
+
+/* Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .heroTitle { font-size: 4rem; }
+  .sectionTitle { font-size: 3.2rem; }
+  .whyUsSection { gap: 3rem; }
+}
+
+/* Laptop - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero { min-height: 90vh; }
+  .heroTitle { font-size: 3.5rem; }
+  .heroSubtitle { font-size: 1.1rem; }
+  .sectionTitle { font-size: 2.8rem; }
+  .whyUsSection {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .whyUsImage { height: 500px; }
+  .whyUsContent .sectionLabel,
+  .whyUsContent .sectionTitle,
+  .whyUsContent .titleUnderline {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .certificationSection { padding: 5rem 1.5rem; }
+  .certLogos { gap: 2rem; }
+  .certLogo { width: 100px; height: 100px; }
+  .certText { font-size: 1rem; padding: 0 1.5rem; }
+}
+
+/* Tablet Landscape - 900px to 1023px */
+@media (min-width: 900px) and (max-width: 1023px) {
+  .hero { min-height: 80vh; padding: 1.5rem; }
+  .heroTitle { font-size: 3.2rem; }
+  .heroSubtitle { font-size: 1rem; }
+  .omSymbol { width: 60px; height: 60px; }
+  
+  .sectionTitle { font-size: 2.5rem; }
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 5rem 1.5rem; }
+  
+  .coursesGrid,
+  .bookingGrid,
+  .testimonialsGrid { gap: 2rem; }
+  
+  .whyUsSection {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem;
+  }
+  .whyUsImage { height: 450px; }
+  
+  .certificationSection { padding: 4.5rem 1.5rem; }
+  .certLogos { gap: 1.75rem; }
+  .certLogo { width: 95px; height: 95px; padding: 12px; }
+  .certText { font-size: 0.98rem; }
+}
+
+/* Tablet Portrait - 768px to 899px */
+@media (min-width: 768px) and (max-width: 899px) {
+  .hero { min-height: 75vh; padding: 1.5rem; }
+  .heroTitle { font-size: 2.8rem; }
+  .heroSubtitle { font-size: 1rem; max-width: 600px; }
+  .omSymbol { width: 60px; height: 60px; }
+  .ctaButton {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+  
+  .sectionTitle { font-size: 2.3rem; }
+  .sectionDescription { font-size: 1rem; }
+  
+  .coursesGrid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .bookingGrid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+  .testimonialsGrid { grid-template-columns: 1fr; }
+  
+  .whyUsSection {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+  }
+  .whyUsImage { height: 400px; }
+  
+  .stepsContainer { grid-template-columns: repeat(2, 1fr); }
+  .finalCta { padding: 6rem 1.5rem; }
+  .ctaTitle { font-size: 3rem; }
+  
+  .certificationSection { padding: 4rem 1.5rem; }
+  .certLogos { gap: 1.5rem; }
+  .certLogo { width: 90px; height: 90px; }
+  .certText { font-size: 0.95rem; padding: 0 1rem; }
+  .lotusLeft,
+  .lotusRight { width: 200px; height: 200px; }
+}
+
+/* Mobile Landscape - 640px to 767px */
+@media (min-width: 640px) and (max-width: 767px) {
+  .hero { min-height: 70vh; padding: 1.5rem; }
+  .heroTitle { font-size: 2.5rem; }
+  .heroSubtitle { font-size: 0.95rem; }
+  .omSymbol { width: 50px; height: 50px; }
+  .welcomeText { font-size: 1rem; }
+  .ctaButton {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+  }
+  
+  .sectionTitle { font-size: 2rem; }
+  .sectionLabel { font-size: 0.85rem; }
+  
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 4rem 1.5rem; }
+  
+  .coursesGrid { grid-template-columns: 1fr; }
+  .bookingGrid { grid-template-columns: 1fr; }
+  .stepsContainer { grid-template-columns: 1fr; }
+  
+  .whyUsSection {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
+  }
+  .whyUsImage { height: 350px; }
+  
+  .courseTitle { font-size: 1.8rem; }
+  .bookingTitle { font-size: 2rem; }
+  
+  .finalCta { padding: 5rem 1.5rem; }
+  .ctaTitle { font-size: 2.5rem; }
+  .ctaText { font-size: 1.1rem; }
+  
+  .certificationSection { padding: 3.5rem 1.5rem; }
+  .certLogos { gap: 1.25rem; }
+  .certLogo { width: 80px; height: 80px; padding: 10px; }
+  .certText { font-size: 0.9rem; padding: 0 1rem; }
+  .lotusLeft,
+  .lotusRight { width: 150px; height: 150px; }
+}
+
+/* Mobile Portrait - 480px to 639px */
+@media (min-width: 480px) and (max-width: 639px) {
+  .hero { min-height: 65vh; padding: 1.25rem; }
+  .heroTitle { font-size: 2.2rem; line-height: 1.3; }
+  .heroSubtitle { font-size: 0.9rem; }
+  .omSymbol { width: 45px; height: 45px; }
+  .welcomeText { font-size: 0.9rem; letter-spacing: 1.5px; }
+  .ctaButton {
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+  }
+  .swastikDecor { width: 100px; height: 100px; }
+  
+  .sectionTitle { font-size: 1.8rem; }
+  .sectionLabel { font-size: 0.8rem; }
+  .sectionDescription { font-size: 0.95rem; }
+  
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 3.5rem 1.25rem; }
+  
+  .courseCard { border-radius: 15px; }
+  .courseImageWrapper { height: 240px; }
+  .courseTitle { font-size: 1.6rem; }
+  .detailItem { font-size: 0.9rem; padding: 0.6rem; }
+  
+  .bookingCard { border-radius: 15px; }
+  .bookingImageWrapper { height: 260px; }
+  .bookingTitle { font-size: 1.8rem; }
+  .newPrice { font-size: 2.2rem; }
+  .addToCartBtn { padding: 1rem; font-size: 0.95rem; }
+  
+  .testimonialCard { padding: 2rem; }
+  .avatar { width: 50px; height: 50px; font-size: 1.5rem; }
+  .reviewerName { font-size: 1.1rem; }
+  .testimonialText { font-size: 0.95rem; }
+  
+  .whyUsSection { padding: 3.5rem 1.25rem; }
+  .whyUsImage { height: 300px; border-radius: 15px; }
+  .benefitTitle { font-size: 1.3rem; }
+  .benefitDescription { font-size: 0.95rem; }
+  
+  .stepCard { padding: 2rem; border-radius: 15px; }
+  .stepNumber { font-size: 3rem; }
+  .stepTitle { font-size: 1.5rem; }
+  .stepDescription { font-size: 0.95rem; }
+  
+  .finalCta { padding: 4.5rem 1.25rem; }
+  .ctaOm { width: 80px; height: 80px; }
+  .ctaTitle { font-size: 2.2rem; }
+  .ctaText { font-size: 1rem; }
+  
+  .omDecor1,
+  .omDecor2 { width: 200px; height: 200px; }
+  
+  .certificationSection { padding: 3.5rem 1.25rem; }
+  .certLogos { gap: 1rem; }
+  .certLogo { width: 75px; height: 75px; padding: 8px; }
+  .certText { font-size: 0.9rem; padding: 0 0.5rem; }
+}
+
+/* Small Mobile - 375px to 479px */
+@media (min-width: 375px) and (max-width: 479px) {
+  .hero { min-height: 60vh; padding: 1rem; }
+  .heroTitle { font-size: 1.9rem; }
+  .heroSubtitle { font-size: 0.85rem; line-height: 1.6; }
+  .omSymbol { width: 40px; height: 40px; }
+  .welcomeText { font-size: 0.85rem; letter-spacing: 1px; }
+  .ctaButton {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+  .swastikDecor { width: 80px; height: 80px; }
+  
+  .sectionTitle { font-size: 1.6rem; }
+  .sectionLabel { font-size: 0.75rem; letter-spacing: 2px; }
+  .sectionDescription { font-size: 0.9rem; }
+  .titleUnderline { width: 80px; height: 3px; }
+  
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 3rem 1rem; }
+  
+  .coursesGrid,
+  .bookingGrid,
+  .testimonialsGrid { gap: 1.5rem; }
+  
+  .courseCard { border-radius: 12px; }
+  .courseImageWrapper { height: 220px; }
+  .courseContent { padding: 1.5rem; }
+  .courseTitle { font-size: 1.5rem; }
+  .detailItem {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    gap: 0.75rem;
+  }
+  
+  .bookingCard { border-radius: 12px; }
+  .bookingImageWrapper { height: 240px; }
+  .bookingContent { padding: 1.5rem; }
+  .bookingTitle { font-size: 1.6rem; }
+  .newPrice { font-size: 2rem; }
+  .oldPrice { font-size: 1.1rem; }
+  .addToCartBtn {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+  .newBadge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1.2rem;
+  }
+  
+  .testimonialCard { padding: 1.75rem; border-radius: 15px; }
+  .quoteIcon { font-size: 5rem; top: -15px; left: 20px; }
+  .avatar { width: 45px; height: 45px; font-size: 1.3rem; }
+  .reviewerName { font-size: 1rem; }
+  .reviewTime { font-size: 0.85rem; }
+  .testimonialText { font-size: 0.9rem; }
+  
+  .whyUsSection { padding: 3rem 1rem; }
+  .whyUsIntro { font-size: 0.95rem; margin: 1.5rem 0 2rem; }
+  .whyUsImage { height: 280px; }
+  .benefitItem { gap: 1rem; }
+  .benefitIcon { width: 35px; height: 35px; }
+  .benefitTitle { font-size: 1.2rem; }
+  .benefitDescription { font-size: 0.9rem; }
+  
+  .stepCard { padding: 1.75rem; }
+  .stepNumber { font-size: 2.5rem; }
+  .stepTitle { font-size: 1.3rem; }
+  .stepDescription { font-size: 0.9rem; }
+  
+  .finalCta { padding: 4rem 1rem; }
+  .ctaOm { width: 70px; height: 70px; }
+  .ctaTitle { font-size: 2rem; }
+  .ctaText { font-size: 0.95rem; }
+  
+  .omDecor1,
+  .omDecor2 { width: 150px; height: 150px; }
+  
+  .certificationSection { padding: 3rem 1rem; }
+  .certLogos { gap: 0.85rem; }
+  .certLogo { 
+    width: 65px; 
+    height: 65px; 
+    padding: 6px; 
+    border-width: 2px;
+  }
+  .certText { 
+    font-size: 0.85rem; 
+    padding: 0 0.5rem; 
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .lotusLeft,
+  .lotusRight { width: 120px; height: 120px; }
+}
+
+/* Extra Small Mobile - 320px to 374px */
+@media (max-width: 374px) {
+  .hero { min-height: 55vh; padding: 0.875rem; }
+  .heroTitle { font-size: 1.7rem; }
+  .heroSubtitle { font-size: 0.8rem; }
+  .omSymbol { width: 35px; height: 35px; }
+  .welcomeText { font-size: 0.8rem; margin-bottom: 1rem; }
+  .ctaButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.8rem;
+  }
+  .swastikDecor { display: none; }
+  
+  .sectionTitle { font-size: 1.4rem; }
+  .sectionLabel { font-size: 0.7rem; }
+  .sectionDescription { font-size: 0.85rem; }
+  
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 2.5rem 0.875rem; }
+  
+  .courseImageWrapper { height: 200px; }
+  .courseContent { padding: 1.25rem; }
+  .courseTitle { font-size: 1.35rem; }
+  .detailItem { font-size: 0.8rem; }
+  
+  .bookingImageWrapper { height: 220px; }
+  .bookingContent { padding: 1.25rem; }
+  .bookingTitle { font-size: 1.45rem; }
+  .newPrice { font-size: 1.85rem; }
+  .addToCartBtn { font-size: 0.85rem; }
+  
+  .testimonialCard { padding: 1.5rem; }
+  .avatar { width: 40px; height: 40px; font-size: 1.2rem; }
+  .reviewerName { font-size: 0.95rem; }
+  .testimonialText { font-size: 0.85rem; }
+  
+  .whyUsImage { height: 260px; }
+  .benefitTitle { font-size: 1.1rem; }
+  .benefitDescription { font-size: 0.85rem; }
+  
+  .stepCard { padding: 1.5rem; }
+  .stepNumber { font-size: 2.2rem; }
+  .stepTitle { font-size: 1.2rem; }
+  .stepDescription { font-size: 0.85rem; }
+  
+  .finalCta { padding: 3.5rem 0.875rem; }
+  .ctaOm { width: 60px; height: 60px; }
+  .ctaTitle { font-size: 1.8rem; }
+  .ctaText { font-size: 0.9rem; }
+  
+  .omDecor1,
+  .omDecor2 { width: 120px; height: 120px; }
+  
+  .certificationSection { padding: 2.5rem 0.875rem; }
+  .certLogos { 
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+  .certLogo { 
+    width: 60px; 
+    height: 60px; 
+    padding: 5px; 
+    border-width: 2px;
+  }
+  .certText { 
+    font-size: 0.8rem; 
+    padding: 0 0.25rem; 
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+  .lotusLeft { left: -30px; }
+  .lotusRight { right: -30px; }
+}
+
+/* Ultra Small - below 320px */
+@media (max-width: 319px) {
+  .hero { min-height: 50vh; padding: 0.75rem; }
+  .heroTitle { font-size: 1.5rem; }
+  .heroSubtitle { font-size: 0.75rem; }
+  .omSymbol { width: 30px; height: 30px; }
+  .ctaButton { padding: 0.65rem 1rem; font-size: 0.75rem; }
+  
+  .sectionTitle { font-size: 1.25rem; }
+  .coursesSection,
+  .bookingSection,
+  .testimonialsSection,
+  .howItWorksSection { padding: 2rem 0.75rem; }
+  
+  .courseTitle,
+  .bookingTitle { font-size: 1.2rem; }
+  .newPrice { font-size: 1.6rem; }
+  
+  .finalCta { padding: 3rem 0.75rem; }
+  .ctaTitle { font-size: 1.6rem; }
+  
+  .certificationSection { padding: 2rem 0.75rem; }
+  .certLogos { gap: 0.6rem; }
+  .certLogo { 
+    width: 55px; 
+    height: 55px; 
+    padding: 4px;
+  }
+  .certText { font-size: 0.75rem; line-height: 1.6; }
+  .lotusLeft,
+  .lotusRight { display: none; }
+}

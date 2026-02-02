@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/YogaCourse/Yinyoga.module.css';
+import banner1 from '../../assets/images/Yin_Banner_V01.webp'
 
 export default function YinYoga() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -42,7 +43,7 @@ export default function YinYoga() {
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
           <img
-            src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1920&q=80"
+            src={banner1}
             alt="Yin Yoga Practice"
           />
         </div>

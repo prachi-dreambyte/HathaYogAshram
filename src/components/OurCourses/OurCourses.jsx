@@ -1,27 +1,48 @@
 import React from 'react';
 import styles from '../../assets/styles/OurCourses/OurCourses.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const OurCourses = () => {
-  const courses = [
-    {
-      id: 1,
-      title: "100 Hour Teachers Training Course",
-      description: "Be a Part of USA Yoga Alliance Registered as a 100 Hour Yoga Teacher Training with Hatha Yogashram, Rishikesh India, and become a professional International Yoga Teacher.",
-      image: "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=80"
-    },
-    {
-      id: 2,
-      title: "300 Hour Teachers Training Course",
-      description: "On the path of Yoga, knowledge is very vast and deep. To achieve it we have to be ready to learn continuously. We 'Hatha Yogashram' are ready to offer you an Advanced Level Yoga program i.e 300 Hour Yoga Teacher Training in Rishikesh.",
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80"
-    },
-    {
-      id: 3,
-      title: "500 Hour Teachers Training Course",
-      description: "Be a Part of USA Yoga Alliance Registered as (RYT500) 500 Hour Yoga Teacher Training with Hatha Yogashram, Rishikesh India, and become a professional by an International Yoga Teacher.",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
-    }
-  ];
+  const navigate = useNavigate();
+const courses = [
+  {
+    id: 1,
+    title: "100 Hour Teachers Training Course",
+    description:
+      "Be a part of USA Yoga Alliance registered 100 Hour Yoga Teacher Training with Hatha Yogashram, Rishikesh, India. This foundational course is ideal for beginners who want to explore yogic philosophy, asana practice, pranayama, and meditation while building a strong base for a yogic lifestyle.",
+    image:
+      "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=80", // beginner yoga
+    link: "/YogaCourse100",
+  },
+  {
+    id: 2,
+    title: "200 Hour Teachers Training Course",
+    description:
+      "The 200 Hour Yoga Teacher Training Course is a complete and immersive program registered with USA Yoga Alliance (RYT 200). This course is designed to deepen your understanding of yoga through asana alignment, pranayama, meditation, anatomy, philosophy, and teaching methodology",
+    image:
+      "https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=800&q=80", // yoga class teaching
+    link: "/YogaCourse200",
+  },
+  {
+    id: 3,
+    title: "300 Hour Teachers Training Course",
+    description:
+      "The 300 Hour Yoga Teacher Training Course is an advanced-level program for students who have completed 200 hours of training. It focuses on refined teaching skills, advanced asana practices, in-depth yoga philosophy, therapeutic applications, and self-transformation on a deeper spiritual level.",
+    image:
+      "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80", // advanced yoga pose
+    link: "/YogaCourse300",
+  },
+  {
+    id: 4,
+    title: "500 Hour Teachers Training Course",
+    description:
+      "The 500 Hour Yoga Teacher Training Course is a master-level program registered with USA Yoga Alliance (RYT 500). This intensive course combines both 200 and 300 hour teachings, offering complete mastery in traditional yoga practices, advanced philosophy, anatomy, and professional teaching excellence.",
+    image:
+      "https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=800&q=80", // meditation + mastery
+    link: "/YogaCourse500",
+  },
+];
+
 
   return (
     <section className={styles.coursesSection}>
@@ -51,7 +72,12 @@ const OurCourses = () => {
               </div>
               <div className={styles.courseContent}>
                 <p className={styles.courseDescription}>{course.description}</p>
-                <button className={styles.courseBtn}>Learn More</button>
+                <button
+  className={styles.courseBtn}
+  onClick={() => navigate(course.link)}
+>
+  Learn More
+</button>
               </div>
             </div>
           ))}

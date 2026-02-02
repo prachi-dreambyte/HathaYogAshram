@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/Yoga10DaysRetreat.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Yoga10DaysRetreat = () => {
   const [selectedYoga, setSelectedYoga] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const activities = [
     'Everyday Yoga Classes',
@@ -235,7 +236,7 @@ const Yoga10DaysRetreat = () => {
             <p className={styles.bannerSubtitle}>
               Rejuvenate your mind, body & soul with authentic yogic practices
             </p>
-            <Link to="/contact" className={styles.bannerButton}>
+            <Link to="/BookingForm" className={styles.bannerButton}>
               Enquire Now →
             </Link>
           </div>
@@ -302,7 +303,7 @@ const Yoga10DaysRetreat = () => {
               </div>
             </div>
 
-            <button className={styles.bookButton}>
+            <button className={styles.bookButton} onClick={() => navigate("/BookingForm")}>
               <span>Book Your Spot Now</span>
               <span className={styles.buttonArrow}>→</span>
             </button>
@@ -584,11 +585,11 @@ const Yoga10DaysRetreat = () => {
 
             {/* Buttons */}
             <div className={styles.retreatButtons}>
-              <Link to="/5-days-retreat" className={styles.retreatButton}>
+              <Link to="/5-days-yoga-retreat" className={styles.retreatButton}>
                 <span>5 Day Yoga Retreat</span>
                 <span className={styles.buttonArrow}>→</span>
               </Link>
-              <Link to="/20-days-retreat" className={styles.retreatButton}>
+              <Link to="/20-days-yoga-retreat" className={styles.retreatButton}>
                 <span>20 Day Yoga Retreat</span>
                 <span className={styles.buttonArrow}>→</span>
               </Link>
@@ -609,7 +610,7 @@ const Yoga10DaysRetreat = () => {
                 Embark on your yogic journey with India's most trusted yoga
                 teacher training school in Rishikesh
               </p>
-              <button className={styles.ctaButton}>
+              <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>
                 <span>Book Your Retreat Now</span>
                 <svg
                   className={styles.ctaButtonIcon}

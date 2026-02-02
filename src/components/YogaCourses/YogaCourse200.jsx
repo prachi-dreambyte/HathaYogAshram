@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/YogaCourse/200Hours.module.css';
 import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
@@ -6,6 +7,8 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/200hrs.webp';
 
 export default function YogaCourse200() {
+
+  const navigate = useNavigate();
 
   const whyRishikesh = [
     {
@@ -803,8 +806,8 @@ export default function YogaCourse200() {
             You'll leave not just with a certificate, but with confidence, community, and memories of a transformative experience.
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.ctaButton}>Apply Now for 2024</button>
-            <button className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}>Schedule a Call</button>
+            <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>Apply Now</button>
+            <button className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`} onClick={() => navigate("/contact-us")}>Schedule a Call</button>
           </div>
           <p className={styles.batchInfo}>
             📅 <strong>Upcoming Batches:</strong> March 1–24 | April 1–24 | May 1–24

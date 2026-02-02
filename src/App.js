@@ -31,6 +31,8 @@ import AccommodationFood from 'components/AccommodationFood/AccommodationFood';
 import YinYoga from 'components/YogaCourses/Yinyoga';
 import AboutUs from 'components/AboutUs/AboutUs';
 import BookingForm from 'components/Bookingform/Bookingformred';
+import OnlineYTTC from 'components/onlineyogacourse/onlineyogayttc';
+import OnlineYoga from 'components/onlineyogacourse/Onlineyoga';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -77,6 +79,8 @@ export default function Main() {
         <Route path="/YogaCourse500" element={<YogaCourse500 />} />
          <Route path="/YinYoga" element={<YinYoga />} />
          <Route path="/BookingForm" element={<BookingForm />} />
+         <Route path="/Online-YTTC" element={<OnlineYTTC />} />
+          <Route path="/Yoga-Online" element={<OnlineYoga />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

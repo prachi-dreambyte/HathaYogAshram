@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/Yoga20DaysRetreat.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Yoga20DaysRetreat = () => {
   const [selectedYoga, setSelectedYoga] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const activities = [
     'Daily Yoga Classes',
@@ -412,7 +413,7 @@ const Yoga20DaysRetreat = () => {
                       ))}
                     </ul>
 
-                    <button className={styles.packageButton}>
+                    <button className={styles.packageButton} onClick={() => navigate("/BookingForm")}>
                       Book {pkg.type}
                       <span className={styles.buttonArrow}>→</span>
                     </button>
@@ -421,7 +422,7 @@ const Yoga20DaysRetreat = () => {
               </div>
             </div>
 
-            <button className={styles.bookButton}>
+            <button className={styles.bookButton} onClick={() => navigate("/BookingForm")}>
               <span>Reserve Your Spot Now</span>
               <span className={styles.buttonArrow}>→</span>
             </button>
@@ -852,7 +853,7 @@ const Yoga20DaysRetreat = () => {
             </div>
 
             <div className={styles.retreatButtons}>
-              <Link to="/10-days-retreat" className={styles.retreatButton}>
+              <Link to="/10-days-yoga-retreat" className={styles.retreatButton}>
                 <span>10 Day Yoga Retreat</span>
                 <span className={styles.buttonArrow}>→</span>
               </Link>
@@ -880,7 +881,7 @@ const Yoga20DaysRetreat = () => {
                 soul forever. Experience the Indian science of wellness Ayurveda
                 in its purest form.
               </p>
-              <button className={styles.ctaButton}>
+              <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>
                 <span>Book Your 20-Day Retreat</span>
                 <svg
                   className={styles.ctaButtonIcon}

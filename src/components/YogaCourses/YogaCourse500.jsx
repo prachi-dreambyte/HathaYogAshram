@@ -4,8 +4,12 @@ import heroVideo from '../../assets/images/500.webp';
 import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
+import { useNavigate } from 'react-router-dom';
 
 export default function YogaCourse500() {
+
+   const navigate = useNavigate();
+
   return (
     <div className={styles.yogaPage}>
       {/* Banner Image */}
@@ -604,7 +608,7 @@ export default function YogaCourse500() {
               </div>
             </div>
             
-            <button className={styles.applyNowBtn}>Apply Now</button>
+            <button className={styles.applyNowBtn} onClick={() => navigate("/BookingForm")}>Apply Now</button>
           </div>
         </div>
       </section>
