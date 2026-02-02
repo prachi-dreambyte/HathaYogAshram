@@ -40,8 +40,8 @@
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 5rem;
-  color: #000000;
+  margin-bottom: 30px;
+  color: #bd0005;
 }
 
 .sectionTitle {
@@ -55,12 +55,11 @@
 }
 
 .sectionSubtitle {
-  font-size: 1.5rem;
-  font-weight: 500;
-  opacity: 0.95;
+  font-size: 25px;
+  font-weight: 600;
   max-width: 50rem;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.5;
   color:#000;
   font-family: "Quicksand", sans-serif;
 }
@@ -145,7 +144,18 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 0.875rem;
+  font-size: 18px;
+  margin-bottom: 0.75rem;
+  opacity: 1;
+   font-family: "Quicksand", sans-serif;
+  transition: all 0.3s ease;
+}
+.teacherDescription{
+   color: #fff;
+  font-weight: 700;
+  
+  letter-spacing: 1px;
+  font-size: 16px;
   margin-bottom: 0.75rem;
   opacity: 1;
    font-family: "Quicksand", sans-serif;
@@ -169,8 +179,8 @@
 }
 
 .teacherExperience {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 18px;
   font-style: italic;
   opacity: 0;
   transform: translateY(20px);

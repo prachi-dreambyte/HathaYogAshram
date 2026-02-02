@@ -163,7 +163,7 @@ export default function YogaCourse100() {
   ];
 
   return (
-    <div className={styles.container}>
+    <>
       {/* Banner Image */}
       <div className={styles.bannerWrapper}>
         <img src={heroVideo} alt="100 Hour Yoga Teacher Training" className={styles.bannerImage} />
@@ -351,7 +351,7 @@ export default function YogaCourse100() {
       </section>
 
       {/* Course Features Section */}
-      <section className={styles.featuresSection}>
+      <section className={styles.FeaturesSection}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionTag}>Course Features</p>
           <h2 className={styles.sectionTitle}>
@@ -515,6 +515,6 @@ export default function YogaCourse100() {
 
         </div>
       </section>
-    </div>
+      </>
   );
 }

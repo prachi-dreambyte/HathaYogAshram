@@ -19,7 +19,7 @@ body {
 .journeySection {
   position: relative;
   padding: 100px 20px;
-  background: linear-gradient(135deg, #c2383e 0%, #3e1623 50%, #600f1a 100%);
+   background-image: url("../../images/grid7.png");
   overflow: hidden;
 }
 
@@ -80,15 +80,18 @@ body {
 }
 
 .title {
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 15px;
-  font-weight: 700;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
+  margin-bottom: 15px
 }
 
 .subtitle {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.8);
+ font-size: 22px;
+  font-weight: 600;
+  font-family: "Philosopher" , sans-serif ;
+  color:#000;
 }
 
 .timelineWrapper {
@@ -194,7 +197,7 @@ body {
   background: rgba(255, 255, 255, 0.05);
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid #000;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -226,29 +229,33 @@ body {
 
 .weekTitle {
   font-size: 1.8rem;
-  color: white;
+  color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .weekText {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  color:#000;
+  font-size: 18px;
+  font-weight:600;
   line-height: 1.7;
 }
 
 /* Features Section */
 .featuresSection {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 70px 20px;
+  background: #fff;
 }
 
 .sectionTitle {
   text-align: center;
-  font-size: 3rem;
-  color: #1a1a2e;
-  margin-bottom: 60px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 50px;
   font-weight: 700;
+  color: #bd0005;
+  line-height: 1.25;
+  margin-bottom: 60px;
 }
 
 .featuresGrid {
@@ -260,7 +267,7 @@ body {
 }
 
 .featureCard {
-  background: white;
+  border:1px solid #bd0005;
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
@@ -279,16 +286,17 @@ body {
 }
 
 .featureCard h3 {
-  font-size: 1.5rem;
-  color: #1a1a2e;
+  font-size: 25px;
+  color: #bd0005;
+   font-family: 'Philosopher', sans-serif;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
 .featureCard p {
-  color: #666;
+  color: #000;
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 18px;
 }
 
 /* Responsive */

@@ -18,6 +18,7 @@
   position: relative;
   padding: 3rem 2rem 2rem;
   min-height: 520px;
+  background-image:url("../../images/background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,9 +54,9 @@
 
 .heroTitle {
   font-family: 'Philosopher', sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #1f1f1f;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   line-height: 1.25;
   max-width: 680px;
   margin-bottom: 1rem;
@@ -69,13 +70,13 @@
   bottom: -10px;
   width: 100px;
   height: 3px;
-  background: #C41E3A;
+  background: #bd0005;
 }
 
 .heroSubtitle {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.3rem;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
   margin-bottom: 1.5rem;
   max-width: 580px;
@@ -89,7 +90,7 @@
 }
 
 .badgeItem {
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   padding: 0.5rem 1.1rem;
   border-radius: 3px;
@@ -106,15 +107,15 @@
 
 /* ==================== SECTION STYLES ==================== */
 .section {
-  padding: 4rem 2rem;
+  padding:110px 30px;
 }
 
 .sectionAlt {
-  background: white;
+  background-image:url("../../images/grid6.png");
 }
 
 .sectionPeach {
-  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+  background-image:url("../../images/grid4.png");
 }
 
 .sectionHeader {
@@ -124,9 +125,9 @@
 
 .sectionTitle {
   font-family: 'Philosopher', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 0.8rem;
   position: relative;
   display: inline-block;
@@ -140,25 +141,25 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: #C41E3A;
+  background: #bd0005;
   border-radius: 2px;
 }
 
 .sectionSubtitle {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.1rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
   font-weight: 500;
   max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .leadText {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #4a5568;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #000;
   text-align: justify;
 }
 
@@ -174,7 +175,7 @@
 
 .infoBox:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.12);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.12);
 }
 
 .infoIcon {
@@ -184,9 +185,9 @@
 
 .infoBox h4 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid #f0f0f0;
@@ -194,14 +195,14 @@
 
 .infoBox p {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
   line-height: 1.7;
   margin-bottom: 0.8rem;
 }
 
 .infoBox strong {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
 }
 
@@ -219,8 +220,8 @@
 
 .featureCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
-  border-color: rgba(196, 30, 58, 0.3);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.15);
+  border-color: rgba(189, 0, 5, 0.3);
 }
 
 .iconBox {
@@ -231,16 +232,16 @@
 
 .featureCard h4 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1rem;
 }
 
 .featureCard p {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
   line-height: 1.7;
   margin: 0;
 }
@@ -256,9 +257,9 @@
 
 .curriculumBreakdown h4 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -268,7 +269,7 @@
 .subjectHours {
   font-family: 'Philosopher', sans-serif;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   font-size: 1.05rem;
 }
 
@@ -284,7 +285,7 @@
   height: 100%;
   border-radius: 0;
   transition: width 0.5s ease;
-  background: #C41E3A;
+  background: #bd0005;
 }
 
 .curriculumCard {
@@ -292,7 +293,7 @@
   padding: 2.5rem;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -302,15 +303,15 @@
 
 .curriculumCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.15);
   border-left-width: 6px;
 }
 
 .curriculumTitle {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #f0f0f0;
@@ -325,8 +326,8 @@
 .curriculumList li {
   padding: 0.7rem 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.95rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
   line-height: 1.7;
   border-bottom: 1px solid #f0f0f0;
   display: flex;
@@ -340,7 +341,7 @@
 
 .curriculumList li::before {
   content: '●';
-  color: #C41E3A;
+  color: #bd0005;
   font-size: 0.7rem;
   margin-top: 0.5rem;
   flex-shrink: 0;
@@ -356,7 +357,7 @@
   border-radius: 0;
   margin-bottom: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -365,22 +366,23 @@
 
 .scheduleItem:hover {
   transform: translateX(8px);
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
+  box-shadow: 0 4px 15px rgba(189, 0, 5, 0.12);
 }
 
 .scheduleTime {
   font-family: 'Philosopher', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   min-width: 120px;
   flex-shrink: 0;
 }
 
 .scheduleActivity {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.05rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
   font-weight: 500;
   flex: 1;
 }
@@ -398,7 +400,7 @@
 
 .roomOption:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.15);
 }
 
 .roomImage {
@@ -418,9 +420,9 @@
 
 .roomType {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #f0f0f0;
@@ -435,8 +437,9 @@
 .roomFeatures li {
   padding: 0.65rem 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.95rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
@@ -449,7 +452,7 @@
 
 .roomFeatures li::before {
   content: '✓';
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
   font-size: 1.1rem;
   flex-shrink: 0;
@@ -468,14 +471,14 @@
 
 .menuCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.12);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.12);
 }
 
 .mealTime {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #f0f0f0;
@@ -485,8 +488,9 @@
 .menuItem {
   padding: 0.6rem 0;
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.95rem;
-  color: #4a5568;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
   border-bottom: 1px solid #f0f0f0;
   display: flex;
   align-items: flex-start;
@@ -499,7 +503,7 @@
 
 .menuItem::before {
   content: '•';
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
   font-size: 1.1rem;
   flex-shrink: 0;
@@ -520,11 +524,11 @@
 
 .includedItem:hover {
   transform: translateX(5px);
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.1);
+  box-shadow: 0 4px 15px rgba(189, 0, 5, 0.1);
 }
 
 .checkIcon {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
   font-size: 1.2rem;
   flex-shrink: 0;
@@ -532,9 +536,9 @@
 
 .includedItem span:last-child {
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.95rem;
-  color: #4a5568;
-  line-height: 1.6;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
 }
 
 /* ==================== INVESTMENT CARDS ==================== */
@@ -552,14 +556,14 @@
 
 .investmentCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.15);
 }
 
 .investmentCard.featured {
-  border-color: #C41E3A;
+  border-color: #bd0005;
   border-width: 3px;
   transform: scale(1.03);
-  box-shadow: 0 8px 25px rgba(196, 30, 58, 0.2);
+  box-shadow: 0 8px 25px rgba(189, 0, 5, 0.2);
 }
 
 .investmentCard.featured:hover {
@@ -567,7 +571,7 @@
 }
 
 .paymentBadge {
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   padding: 0.45rem 1.1rem;
   border-radius: 3px;
@@ -582,9 +586,9 @@
 
 .investmentCard h4 {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1.5rem;
 }
 
@@ -596,14 +600,14 @@
 .priceCurrency {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   vertical-align: super;
 }
 
 .price {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
 }
 
 .pricePeriod {
@@ -627,7 +631,7 @@
 
 .testimonialCard:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(196, 30, 58, 0.15);
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.15);
 }
 
 .quoteIcon {
@@ -642,9 +646,9 @@
 
 .testimonialText {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.05rem;
-  color: #4a5568;
-  line-height: 1.8;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
   margin: 2rem 0;
   position: relative;
   z-index: 1;
@@ -663,21 +667,21 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #C41E3A, #D4A5D4);
+  background: linear-gradient(135deg, #bd0005, #D4A5D4);
 }
 
 .authorName {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin: 0;
 }
 
 .authorCountry {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 500;
 }
 
@@ -688,7 +692,7 @@
   border-radius: 0;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -697,42 +701,42 @@
 
 .faqItem:hover {
   transform: translateX(8px);
-  box-shadow: 0 4px 15px rgba(196, 30, 58, 0.12);
+  box-shadow: 0 4px 15px rgba(189, 0, 5, 0.12);
 }
 
 .faqQuestion {
   font-family: 'Philosopher', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 0.8rem;
 }
 
 .faqAnswer {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
-  color: #4a5568;
-  line-height: 1.8;
+  font-size: 18px;
+  color: #000;
+  line-height: 1.7;
   margin: 0;
 }
 
 /* ==================== CTA SECTION ==================== */
 .ctaSection {
-  background: linear-gradient(135deg, #C41E3A 0%, #8B1538 100%);
+background-image: url("../../images/grid5.png");
   padding: 5rem 2rem;
 }
 
 .ctaTitle {
   font-family: 'Philosopher', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
   margin-bottom: 1.5rem;
 }
 
 .ctaSubtitle {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1.15rem;
+  font-size: 18px;
   color: rgba(255, 255, 255, 0.95);
   max-width: 800px;
   margin: 0 auto 2.5rem;
@@ -741,12 +745,12 @@
 
 .ctaSection p {
   font-family: 'Quicksand', sans-serif;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   font-size: 1.05rem;
 }
 
 .ctaSection strong {
-  color: white;
+  color: #bd0005;
   font-weight: 700;
 }
 
@@ -765,9 +769,9 @@
 }
 
 .ctaButton.primary {
-  background: white;
-  color: #C41E3A;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+  background: #bd0005;
+  color: white;
+  box-shadow: 0 4px 15px rgba(189, 0, 5, 0.3);
 }
 
 .ctaButton.primary:hover {
@@ -778,13 +782,13 @@
 
 .ctaButton.secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #000;
+  border: 2px solid #000;
 }
 
 .ctaButton.secondary:hover {
   background: white;
-  color: #C41E3A;
+  color: #bd0005;
   transform: translateY(-3px);
 }
 
@@ -798,7 +802,7 @@
 /* Tablet */
 @media (max-width: 991px) {
   .heroTitle {
-    font-size: 2.2rem;
+    font-size: 36px;
   }
 
   .heroSubtitle {
@@ -806,7 +810,7 @@
   }
 
   .sectionTitle {
-    font-size: 1.9rem;
+    font-size: 36px;
   }
 
   .scheduleItem {
@@ -833,7 +837,7 @@
   }
 
   .heroTitle {
-    font-size: 1.8rem;
+    font-size: 36px;
     max-width: 100%;
   }
 
@@ -842,7 +846,7 @@
   }
 
   .sectionTitle {
-    font-size: 1.7rem;
+    font-size: 36px;
   }
 
   .section {
@@ -873,11 +877,11 @@
   }
 
   .ctaTitle {
-    font-size: 1.9rem;
+    font-size: 36px;
   }
 
   .ctaSubtitle {
-    font-size: 1rem;
+    font-size: 18px;
   }
 
   .leadText {
@@ -887,7 +891,7 @@
 
 @media (max-width: 575px) {
   .heroTitle {
-    font-size: 1.5rem;
+    font-size: 36px;
   }
 
   .heroSubtitle {
@@ -895,7 +899,7 @@
   }
 
   .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 36px;
   }
 
   .price {
