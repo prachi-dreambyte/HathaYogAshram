@@ -267,7 +267,8 @@ export default function YogaCourse200() {
 
       {/* 1. COURSE OVERVIEW - Most Important First */}
       <section className={styles.overviewSection}>
-        <div className={styles.sectionHeader}>
+        <div className='container'>
+           <div className={styles.sectionHeader}>
           <p className={styles.sectionTag}>Course Overview</p>
           <h2 className={styles.sectionTitle}>
             Transformative Residential Program for Aspiring Yoga Teachers
@@ -278,8 +279,7 @@ export default function YogaCourse200() {
             designed for beginners and practitioners seeking to deepen their practice and become certified yoga teachers. 
             This immersive 24-day experience in Rishikesh—the yoga capital of the world—blends ancient teachings with modern methodology.
           </p>
-        </div>
-
+        </div>       
         {/* Info Grid */}
         <div className={styles.infoGrid}>
           <div className={styles.infoCard}>
@@ -369,6 +369,7 @@ export default function YogaCourse200() {
             </div>
           </div>
         </div>
+          </div>
       </section>
 
       {/* 2. WHY RISHIKESH - Location Benefits */}
@@ -545,6 +546,7 @@ export default function YogaCourse200() {
 
       {/* 6. ACCOMMODATION & FACILITIES */}
       <section className={styles.accommodationSection}>
+       
         <div className={styles.sectionHeader}>
           <p className={styles.sectionTag}>Accommodation & Facilities</p>
           <h2 className={styles.sectionTitle}>
@@ -552,7 +554,7 @@ export default function YogaCourse200() {
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
-
+         <div className='Container'>
         <div className={styles.roomsGrid}>
           {roomOptions.map((room, index) => (
             <div key={index} className={styles.roomCard}>
@@ -617,6 +619,7 @@ export default function YogaCourse200() {
               <p>Ayurvedic consultation</p>
             </div>
           </div>
+        </div>
         </div>
       </section>
 

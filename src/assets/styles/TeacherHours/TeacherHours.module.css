@@ -1,8 +1,8 @@
 /* Teachers Section */
 .teachersSection {
   position: relative;
-  padding: 120px 20px;
- background: linear-gradient(135deg, #b5333e 0%, #694ba2 100%);
+  padding: 40px 20px;
+ background-image:url("../../images/grid3.png");
   overflow: hidden;
   min-height: 100vh;
 }
@@ -157,7 +157,8 @@
   display: inline-block;
   padding: 10px 30px;
   background: rgba(255, 255, 255, 0.2);
-  color: white;
+  color: #bd0005;
+   font-family: 'Philosopher', sans-serif;
   border-radius: 50px;
   font-size: 14px;
   font-weight: 600;
@@ -171,7 +172,8 @@
 .sectionTitle {
   font-size: 56px;
   font-weight: 800;
-  color: white;
+  color:#bd0005;
+   font-family: 'Philosopher', sans-serif;
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   animation: fadeInDown 0.8s ease-out 0.2s backwards;
@@ -179,7 +181,7 @@
 
 .sectionSubtitle {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   max-width: 600px;
   margin: 0 auto;
   animation: fadeInDown 0.8s ease-out 0.4s backwards;
@@ -269,7 +271,7 @@
   left: 0;
   width: 0;
   height: 5px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #bd0005, #764ba2);
   transition: width 0.6s ease;
 }
 
@@ -280,20 +282,20 @@
 .teacherName {
   font-size: 26px;
   font-weight: 700;
-  color: #2d3748;
+  color: #bd0005;
   margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
 .teacherCard:hover .teacherName {
-  color: #667eea;
+  color: #000;
   transform: translateX(5px);
 }
 
 .teacherTitle {
   font-size: 13px;
   font-weight: 600;
-  color: #667eea;
+  color: #000;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 16px;
@@ -305,7 +307,7 @@
 }
 
 .teacherCard:hover .teacherTitle {
-  background: rgba(102, 126, 234, 0.2);
+  background: #bd0005;
   transform: translateX(5px);
 }
 
@@ -318,7 +320,7 @@
 }
 
 .teacherCard:hover .teacherBio {
-  color: #2d3748;
+  color: #bd0005;
   transform: translateX(5px);
 }
 
@@ -334,8 +336,8 @@
 .cornerTopRight {
   top: 0;
   right: 0;
-  border-top: 3px solid #667eea;
-  border-right: 3px solid #667eea;
+  border-top: 3px solid #bd0005;
+  border-right: 3px solid #bd0005;
   border-top-right-radius: 24px;
 }
 
@@ -404,7 +406,7 @@
   gap: 12px;
   padding: 18px 50px;
   background: white;
-  color: #667eea;
+  color: #bd0005;
   font-size: 16px;
   font-weight: 700;
   border: none;
@@ -422,7 +424,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg, #bd0005, #764ba2);
   transition: left 0.5s ease;
   z-index: 0;
 }
