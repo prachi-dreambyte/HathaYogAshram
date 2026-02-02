@@ -171,7 +171,7 @@ const Header = () => {
             <Link to="/" onClick={closeAll}>Online Courses</Link>
             <Link to="/" onClick={closeAll}>Payment</Link>
             <Link to="/contact-us" onClick={closeAll}>Contact</Link>
-            <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
+            <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>
               Apply Today
             </Link>
           </nav>
@@ -273,7 +273,7 @@ const Header = () => {
       <Link to="/" onClick={closeAll}>Payment</Link>
       <Link to="/contact-us" onClick={closeAll}>Contact</Link>
 
-      <Link to="/apply" className={styles.applyBtn} onClick={closeAll}>
+      <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>
         Apply Today
       </Link>
     </motion.div>

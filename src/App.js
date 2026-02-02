@@ -30,6 +30,7 @@ import Founders from 'components/Aboutfounder/AboutFounder';
 import AccommodationFood from 'components/AccommodationFood/AccommodationFood';
 import YinYoga from 'components/YogaCourses/Yinyoga';
 import AboutUs from 'components/AboutUs/AboutUs';
+import BookingForm from 'components/Bookingform/Bookingformred';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -75,6 +76,7 @@ export default function Main() {
         <Route path="/YogaCourse300" element={<YogaCourse300 />} />
         <Route path="/YogaCourse500" element={<YogaCourse500 />} />
          <Route path="/YinYoga" element={<YinYoga />} />
+         <Route path="/BookingForm" element={<BookingForm />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

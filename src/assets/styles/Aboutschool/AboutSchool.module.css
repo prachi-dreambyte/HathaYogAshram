@@ -14,22 +14,23 @@
    ======================================== */
 .hero {
   position: relative;
-  padding: 4rem 2rem 3rem;
-  background-image: url('../../../assets/images/ourteacher.jpeg');
+  padding: 4rem 2rem;
+  background-image: url('../../../assets/images/ourschoolBanner_V01.webp');
   background-size: cover;
-  background-position: center;
+  background-position: center top; /* top important */
   background-repeat: no-repeat;
-  min-height: 400px;
+  min-height: 60vh; /* full screen */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(212, 105, 30, 0.85) 0%, rgba(196, 30, 58, 0.75) 100%);
+  
 }
 
 .hero::after {
@@ -57,7 +58,7 @@
 
 .heroIcon {
   margin-bottom: 1.5rem;
-  color: white;
+  color: #d72a2a;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
   animation: float 3s ease-in-out infinite;
 }
@@ -71,7 +72,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #c41e3a;
   margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
@@ -79,7 +80,7 @@
 
 .heroSubtitle {
   font-size: 1.2rem;
-  color: white;
+  color: rgb(0, 0, 0);
   opacity: 0.95;
   font-weight: 400;
   max-width: 700px;
@@ -90,7 +91,7 @@
 .heroOm {
   font-size: 4rem;
   margin-top: 1.5rem;
-  color: white;
+  color: #d72a2a;
   opacity: 0.3;
   animation: rotate 20s linear infinite;
   font-family: serif;
@@ -112,6 +113,7 @@
   top: 0;
   z-index: 100;
   border-bottom: 3px solid #D2691E;
+  margin-top: 2rem;
 }
 
 .tabContainer {

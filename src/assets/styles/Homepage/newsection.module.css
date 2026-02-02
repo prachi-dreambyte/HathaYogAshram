@@ -4,13 +4,14 @@
   min-height: 100vh;
   padding: 80px 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(212, 105, 30, 0.35) 0%,
-      rgba(196, 30, 58, 0.28) 100%
-    ),
-    url('../../images/Back_Banner_V01.png');
+ background:
+  linear-gradient(
+    135deg,
+    rgba(212, 105, 30, 0.18) 0%,
+    rgba(196, 30, 58, 0.15) 100%
+  ),
+  url('../../images/Back_Banner_V01.png');
+
 
   background-size: cover;
   background-position: center;
@@ -40,7 +41,7 @@
 .sectionHeader {
   text-align: center;
   margin-bottom: 5rem;
-  color: #bd0005;
+  color: #000000;
 }
 
 .sectionTitle {
@@ -55,7 +56,7 @@
 
 .sectionSubtitle {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 500;
   opacity: 0.95;
   max-width: 50rem;
   margin: 0 auto;
@@ -119,14 +120,14 @@
 }
 
 .teacherItem:hover .teacherOverlay {
-  background: linear-gradient(to top, rgb(68 68 68 / 33%) 0%, rgb(10 10 10) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.33) 0%, rgb(49, 49, 49) 100%);
   padding: 40px 30px;
 }
 
 .teacherName {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #bd0005;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transform: translateY(0);
@@ -151,6 +152,10 @@
   transition: all 0.3s ease;
 }
 
+.teacherDescription{
+  font-weight: 600;
+}
+
 .teacherItem:hover .teacherSpecialty {
   color: #ffd700;
   letter-spacing: 0.15em;
@@ -160,11 +165,12 @@
   transform: translateY(0);
   max-height: 200px;
   margin-bottom: 0.75rem;
+  color: #ffffff;
 }
 
 .teacherExperience {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.875rem;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
   font-style: italic;
   opacity: 0;
   transform: translateY(20px);

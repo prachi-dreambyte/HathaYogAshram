@@ -151,24 +151,26 @@ const YogaTeacherTraining = () => {
                 </li>
               </ul>
 
-              <div className={styles.buttonGroup}>
-                <motion.button
-                  className={styles.outlineBtn}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                   onClick={() => navigate(`${item.path}`)}
-                >
-                  Course Details
-                </motion.button>
+             <div className={styles.buttonGroup}>
+  <motion.button
+    className={styles.outlineBtn}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => navigate(item.path)}
+  >
+    Course Details
+  </motion.button>
 
-                <motion.button
-                  className={styles.outlineBtn}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Book Now
-                </motion.button>
-              </div>
+  <motion.button
+    className={styles.outlineBtn}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => navigate('/BookingForm')}
+  >
+    Book Now
+  </motion.button>
+</div>
+
             </motion.div>
           ))}
         </motion.div>
