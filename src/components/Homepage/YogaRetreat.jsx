@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaRetreat.module.css";
@@ -6,26 +7,32 @@ import img1 from "../../assets/images/courses/1.png";
 import img2 from "../../assets/images/courses/2.png";
 import img3 from "../../assets/images/courses/3.png";
 
+
+
 const retreats = [
   {
     days: "5 Days Yoga Retreat",
     img: img1,
     private: "₹22,500 ($261)",
     shared: "₹15,500 ($180)",
+    path: "/5-days-yoga-retreat",
   },
   {
     days: "10 Days Yoga Retreat",
     img: img2,
     private: "₹40,000 ($464)",
     shared: "₹31,000 ($359)",
+    path: "/10-days-yoga-retreat",
   },
   {
     days: "20 Days Yoga Retreat",
     img: img3,
     private: "₹85,000 ($985)",
     shared: "₹64,000 ($742)",
+    path: "/20-days-yoga-retreat",
   },
 ];
+
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -59,7 +66,10 @@ const cardVariant = {
   },
 };
 
+
 const YogaRetreat = () => {
+
+   const navigate = useNavigate(); 
   return (
     <motion.section
       className={styles.section}
@@ -124,25 +134,28 @@ const YogaRetreat = () => {
               </p>
 
               <div className={styles.btnGroup}>
-                <motion.button
-                  className={styles.outlineBtn}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Course
-                  <br />
-                  Details
-                </motion.button>
+                 <motion.button
+    className={styles.outlineBtn}
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => navigate(item.path)}
+  >
+    Course
+    <br />
+    Details
+  </motion.button>
 
                 <motion.button
-                  className={styles.outlineBtn}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Book
-                  <br />
-                  Now
-                </motion.button>
+  className={styles.outlineBtn}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => navigate('/BookingForm')}
+>
+  <span className={styles.btnText}>
+    Book
+    <span>Now</span>
+  </span>
+</motion.button>
               </div>
             </motion.div>
           ))}

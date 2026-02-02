@@ -1,65 +1,76 @@
-import styles from '../../assets/styles/Homepage/newsection.module.css';
 import React from 'react';
+import styles from '../../assets/styles/Homepage/newsection.module.css';
+import teacher1 from '../../assets/images/ourteachers/teacher-dheeru.webp';
+import teacher2 from '../../assets/images/ourteachers/teacher-Prahlad.webp';
+import teacher3 from '../../assets/images/ourteachers/teacher-amit.webp';
+import teacher4 from '../../assets/images/ourteachers/teacher-ella.webp';
+import teacher5 from '../../assets/images/ourteachers/teacher-jitender.webp';
+import teacher6 from '../../assets/images/ourteachers/teacher-mandeep.webp';
+import teacher7 from '../../assets/images/ourteachers/teacher-hemlata.webp';
+import teacher8 from '../../assets/images/ourteachers/teacher-sadhushri.webp';
+
+
 
 const YogaTeachersSection = () => {
   const teachers = [
-    {
-      name: "Sarah Johnson",
-      specialty: "Hatha Yoga",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&q=80",
-      description: "Passionate about helping students find balance through traditional Hatha practices.",
-      experience: "12 years experience"
-    },
-    {
-      name: "Maya Patel",
-      specialty: "Vinyasa Flow",
-      image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=400&q=80",
-      description: "Dynamic flow sequences that connect breath with movement for transformative practice.",
-      experience: "8 years experience"
-    },
-    {
-      name: "David Chen",
-      specialty: "Yin Yoga",
-      image: "https://images.unsplash.com/photo-1593810450967-f9c42742e326?w=400&q=80",
-      description: "Specializing in deep stretching and meditation for inner peace and flexibility.",
-      experience: "10 years experience"
-    },
-    {
-      name: "Emma Williams",
-      specialty: "Ashtanga",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80",
-      description: "Dedicated to the disciplined practice of Ashtanga, building strength and focus.",
-      experience: "15 years experience"
-    },
-    {
-      name: "Michael Brown",
-      specialty: "Power Yoga",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=80",
-      description: "High-energy classes that build strength, stamina, and confidence.",
-      experience: "9 years experience"
-    },
-    {
-      name: "Priya Sharma",
-      specialty: "Restorative",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&q=80",
-      description: "Gentle healing practices focused on deep relaxation and stress relief.",
-      experience: "11 years experience"
-    },
-    {
-      name: "James Taylor",
-      specialty: "Kundalini",
-      image: "https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=400&q=80",
-      description: "Awakening spiritual energy through breathwork, meditation, and dynamic movement.",
-      experience: "13 years experience"
-    },
-    {
-      name: "Lisa Anderson",
-      specialty: "Prenatal Yoga",
-      image: "https://images.unsplash.com/photo-1573590330099-d6c7355ec595?w=400&q=80",
-      description: "Supporting mothers-to-be with safe, nurturing practices for pregnancy wellness.",
-      experience: "7 years experience"
-    }
-  ];
+  {
+    name: "Dhirendra Ji",
+    specialty: "Hatha Yoga",
+    image: teacher1,
+    description: "Himalayan-born spiritual guide rooted in Ganga-side yogic traditions.",
+    experience: "12+ years experience"
+  },
+  {
+    name: "Prahlad Ji",
+    specialty: "Hatha Yoga",
+    image: teacher2,
+    description: "Energetic Hatha Yoga teacher blending academics with deep practice.",
+    experience: "5+ years experience"
+  },
+  {
+    name: "Amit Ji",
+    specialty: "Hatha Yoga",
+    image: teacher3,
+    description: "Warm and disciplined teacher dedicated to authentic yogic teachings.",
+    experience: "10 years experience"
+  },
+  {
+    name: "Ella Ji",
+    specialty: "Ashtanga",
+    image: teacher4,
+    description: "Ashtanga teacher whose yoga journey transformed life and purpose.",
+    experience: "10+ years experience"
+  },
+  {
+    name: "Jitender Ji",
+    specialty: "Hatha Yoga",
+    image: teacher5,
+    description: "Traditional Hatha Yoga teacher carrying classical yogic wisdom.",
+    experience: "9 years experience"
+  },
+  {
+    name: "Mandeep Ji",
+    specialty: "Mantra Chanting",
+    image: teacher6,
+    description: "Experienced mantra teacher deeply rooted in Ganga-side yogic discipline.",
+    experience: "18 years experience"
+  },
+  {
+    name: "Dr. Hemlata Ji",
+    specialty: "Kundalini",
+    image: teacher7,
+    description: "Expert in Kundalini, anatomy, and therapeutic yogic sciences.",
+    experience: "20+ years experience"
+  },
+  {
+    name: "Sadhushri Ji",
+    specialty: "Meditation",
+    image: teacher8,
+    description: "Indian philosophy teacher blending ancient wisdom with daily life.",
+    experience: "10+ years experience"
+  }
+];
+
 
   return (
     <section className={styles.yogaTeachersSection}>

@@ -163,18 +163,11 @@ const Yoga10DaysRetreat = () => {
   return (
     <div className={styles.container}>
       <section className={styles.pageBanner}>
+        
+      </section>
+      <section className={styles.bxox}>
         <div className="container">
-          <div className={styles.bannerContent}>
-            <h2 className={styles.bannerTitle}>
-              10 Days Yoga Retreat in Rishikesh
-            </h2>
-            <p className={styles.bannerSubtitle}>
-              Rejuvenate your mind, body & soul with authentic yogic practices
-            </p>
-            <Link to="/contact" className={styles.bannerButton}>
-              Enquire Now →
-            </Link>
-          </div>
+         
         </div>
       </section>
 
@@ -235,10 +228,17 @@ const Yoga10DaysRetreat = () => {
               <span>Rishikesh, India - World Capital of Yoga</span>
             </div>
 
-            <h1 className={styles.heroTitle}>
-              10 Days Yoga Retreat
-              <span className={styles.heroHighlight}> in India</span>
-            </h1>
+            <div className={styles.bannerContent}>
+            <h2 className={styles.bannerTitle}>
+              10 Days Yoga Retreat in Rishikesh
+            </h2>
+            <p className={styles.bannerSubtitle}>
+              Rejuvenate your mind, body & soul with authentic yogic practices
+            </p>
+            <Link to="/contact" className={styles.bannerButton}>
+              Enquire Now →
+            </Link>
+          </div>
 
             <p className={styles.heroDescription}>
               Experience rejuvenation in just 10 days at{' '}

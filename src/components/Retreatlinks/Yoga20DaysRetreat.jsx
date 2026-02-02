@@ -272,21 +272,9 @@ const Yoga20DaysRetreat = () => {
     <div className={styles.container}>
       {/* Page Banner */}
       <section className={styles.pageBanner}>
-        <div className="container">
-          <div className={styles.bannerContent}>
-            <h2 className={styles.bannerTitle}>
-              20 Days Yoga Retreat in Rishikesh
-            </h2>
-            <p className={styles.bannerSubtitle}>
-              Deep transformation through extended yogic practices in the
-              Himalayas
-            </p>
-            <Link to="/contact" className={styles.bannerButton}>
-              Enquire Now →
-            </Link>
-          </div>
-        </div>
+       
       </section>
+       
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -337,6 +325,13 @@ const Yoga20DaysRetreat = () => {
               20 Days Transformative
               <span className={styles.heroHighlight}> Yoga Retreat</span>
             </h1>
+             <p className={styles.bannerSubtitle}>
+              Deep transformation through extended yogic practices in the
+              Himalayas
+            </p>
+            <Link to="/contact" className={styles.bannerButton}>
+              Enquire Now →
+            </Link>
 
             <p className={styles.heroDescription}>
               Experience complete rejuvenation in 20 days at{' '}

@@ -17,7 +17,7 @@
     position: relative;
     padding: 3rem 2rem 2rem;
     min-height: 620px;
-    background-image: url("https://images.pexels.com/photos/3822621/pexels-photo-3822621.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    background-image: url("../../images/10_Days.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,12 +40,11 @@
 
 .bannerContent {
     
-    margin: 0 auto;
+    
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-left: 2rem;
-    padding-top: 4rem;
+    
     position: relative;
     z-index: 2;
     color: #1f1f1f;
@@ -137,7 +136,7 @@
 .heroLeft {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 0.5rem;
     order: 1;
     padding-top: 0;
 }
@@ -173,6 +172,7 @@
     line-height: 1.8;
     margin: 1.5rem 0;
     text-align: justify;
+    border-top: 2px solid #E5E5E5;
 }
 
 .heroLink {
