@@ -50,7 +50,7 @@
   text-align: left;
 
   padding-top: 4rem;
-  padding-left: 3rem;     /* 👈 aur left push */
+ 
 
   position: relative;
   z-index: 2;
@@ -542,6 +542,8 @@
   .ctaSection h3 {
     font-size: 1.8rem;
   }
+
+  
 }
 
 /* Mobile Landscape - 640px to 767px */
@@ -811,6 +813,7 @@
     padding: 0.85rem 2rem;
     font-size: 0.92rem;
   }
+  
 }
 
 /* Small Mobile - 375px to 479px */

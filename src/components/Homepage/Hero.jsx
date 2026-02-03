@@ -12,25 +12,24 @@ const Hero = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrent((prev) => (prev + 1) % images.length);
-  }, 5000);
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 5000);
 
-  return () => clearInterval(interval);
-}, [images.length]);
-
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <section className={styles.hero}>
-      {/* Background Slider */}
-      <div
-        className={styles.bgImage}
-        style={{
-          backgroundImage: `url(${images[current]})`,
-        }}
-      />
+      {/* Render all images with opacity transitions */}
+      {images.map((img, index) => (
+        <div
+          key={index}
+          className={`${styles.bgImage} ${index === current ? styles.active : ''}`}
+          style={{ backgroundImage: `url(${img})` }}
+        />
+      ))}
 
-      {/* Button */}
       <div className={styles.cardsWrapper}>
         <div className="container">
           <div className="row">

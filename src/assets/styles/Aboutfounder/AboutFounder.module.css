@@ -10,7 +10,7 @@
   --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-gold: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  --gradient-gold: linear-gradient(135deg, #850707 0%, #230d07 100%);
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
@@ -127,7 +127,7 @@
 
 .heroDescription {
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
   margin-bottom: 2rem;
   line-height: 1.8;
   animation: fadeInUp 1.6s ease-out;
@@ -916,6 +916,10 @@
   .secondaryBtn {
     width: 100%;
     justify-content: center;
+  }
+
+  .heroSection{
+    padding: 2rem;
   }
 }
 
