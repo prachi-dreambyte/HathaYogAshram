@@ -720,7 +720,8 @@
   .classesSection,
   .benefitsSection { padding: 4rem 1rem; }
   
-  .classesGrid { gap: 1.5rem; }
+  .classesGrid { gap: 1.5rem;
+  display: contents; }
   .classCard { border-radius: 14px; }
   .classImageWrapper { height: 240px; }
   .classContent { padding: 1.5rem; }
@@ -729,7 +730,8 @@
   .classPrice { font-size: 1.1rem; }
   .bookButton { padding: 0.9rem 1.75rem; font-size: 0.95rem; }
   
-  .benefitsContainer { gap: 2.5rem; }
+  .benefitsContainer { gap: 2.5rem;
+  display: contents; }
   .benefitsImg { height: 350px; }
   .benefitsContent { padding: 1.5rem; }
   .benefitsTitle { font-size: 1.85rem; }
@@ -771,6 +773,8 @@
   
   .classImageWrapper { height: 220px; }
   .classContent { padding: 1.25rem; }
+  .classesGrid { gap: 1.5rem;
+  display: contents; }
   .classTitle { font-size: 1.35rem; }
   .classTime { font-size: 0.9rem; }
   .classPrice { font-size: 1rem; }
@@ -789,6 +793,8 @@
   .omDecor2 { width: 140px; height: 140px; }
   .mandalaLeft { left: -80px; }
   .mandalaRight { right: -80px; }
+  .benefitsContainer { gap: 2.5rem;
+  display: contents; }
 }
 
 /* Ultra Small - below 320px */
@@ -802,6 +808,8 @@
   .sectionTitle { font-size: 1.5rem; }
   .classesSection,
   .benefitsSection { padding: 3rem 0.75rem; }
+  .classesGrid { gap: 1.5rem;
+  display: contents; }
   
   .classTitle,
   .benefitsTitle { font-size: 1.25rem; }
@@ -813,4 +821,6 @@
   .omDecor2,
   .mandalaLeft,
   .mandalaRight { display: none; }
+  .benefitsContainer { gap: 2.5rem;
+  display: contents; }
 }
