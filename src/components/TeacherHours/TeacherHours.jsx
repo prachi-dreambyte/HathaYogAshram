@@ -45,7 +45,7 @@ const TeacherHours = () => {
         {/* Section Header */}
         <div className={styles.sectionHeader}>
           <div className={styles.sectionBadge}>Our Experts</div>
-          <h2 className={styles.sectionTitle}>👨‍🏫 Meet Our Teachers</h2>
+          <h2 className={styles.sectionTitle}>Meet Our Teachers</h2>
           <p className={styles.sectionSubtitle}>
             Learn from certified masters with decades of experience
           </p>
