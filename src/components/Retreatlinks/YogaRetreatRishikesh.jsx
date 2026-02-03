@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/retreatlinks/YogaRetreatRishikesh.module.css';
 
 const YogaRetreatRishikesh = () => {
   const [activeSection, setActiveSection] = useState('overview');
   const [openFaq, setOpenFaq] = useState(null);
   const [showMoreTestimonials, setShowMoreTestimonials] = useState(false);
+  const navigate = useNavigate();
 
   const testimonials = [
     {
@@ -272,7 +274,7 @@ const YogaRetreatRishikesh = () => {
           </div>
 
           <div className={styles.ctaButtons}>
-            <button className={styles.primaryButton}>
+            <button className={styles.primaryButton} onClick={() => navigate("/BookingForm")}>
               <span>Book Your Spot Now</span>
               <svg className={styles.buttonArrow} viewBox="0 0 24 24">
                 <path
@@ -679,7 +681,7 @@ const YogaRetreatRishikesh = () => {
                 </div>
               </div>
 
-              <button className={styles.bookNowButton}>
+              <button className={styles.bookNowButton} onClick={() => navigate("/BookingForm")}>
                 <span>Apply Now</span>
                 <svg className={styles.bookArrow} viewBox="0 0 24 24">
                   <path

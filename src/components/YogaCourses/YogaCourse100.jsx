@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/YogaCourse/100Hours.module.css';
 import Refund from 'components/Refund/refund';
 import OurCourses from 'components/OurCourses/OurCourses';
@@ -6,6 +7,8 @@ import Hours24 from 'components/Hours24/Hours24';
 import heroVideo from '../../assets/images/100hrs.webp';
 
 export default function YogaCourse100() {
+
+  const navigate = useNavigate();
 
   const schools = [
     {
@@ -494,10 +497,22 @@ export default function YogaCourse100() {
           <p className={styles.ctaSubtitle}>
             Transform your life through yoga. Join us in Rishikesh for an unforgettable experience.
           </p>
-          <div className={styles.ctaButtons}>
-            <button className={styles.ctaButton}>Apply Now</button>
-            <button className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}>Contact Us</button>
-          </div>
+         <div className={styles.ctaButtons}>
+  <button
+    className={styles.ctaButton}
+    onClick={() => navigate("/BookingForm")}
+  >
+    Apply Now
+  </button>
+
+  <button
+    className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
+    onClick={() => navigate("/contact-us")}
+  >
+    Contact Us
+  </button>
+</div>
+
         </div>
       </section>
       </>

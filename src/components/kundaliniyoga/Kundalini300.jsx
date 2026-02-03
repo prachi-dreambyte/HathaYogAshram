@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/kundalini_yoga/Kundalini300.module.css';
+import banner from "../../assets/images/300_Banner_V01.webp"
 
 export default function Kundalini300() {
   const [activeTab, setActiveTab] = useState('overview');
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -15,7 +18,7 @@ export default function Kundalini300() {
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
           <img
-            src="https://images.unsplash.com/photo-1545389336-cf090694435e?w=1920&q=80"
+            src={banner}
             alt="Kundalini Meditation"
           />
         </div>
@@ -789,7 +792,7 @@ export default function Kundalini300() {
             Join us in Rishikesh for an advanced journey of spiritual awakening and energy transformation
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.ctaPrimary}>Apply Now</button>
+            <button className={styles.ctaPrimary} onClick={() => navigate("/BookingForm")}>Apply Now</button>
             <button className={styles.ctaSecondary}>Download Brochure</button>
           </div>
         </div>

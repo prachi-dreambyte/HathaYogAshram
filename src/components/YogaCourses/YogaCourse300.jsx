@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/YogaCourse/300Hours.module.css';
 import Refund from 'components/Refund/refund';
 import Hours24 from 'components/Hours24/Hours24';
@@ -6,6 +7,8 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/300hrs.webp';
 
 export default function YogaCourse300() {
+
+   const navigate = useNavigate();
 
   const whyRishikesh = [
     {
@@ -683,8 +686,8 @@ export default function YogaCourse300() {
             and wisdom to facilitate profound transformation in yourself and others.
           </p>
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <button className={`${styles.ctaButton} ${styles.primary} ${styles.large}`}>Apply Now for 2024</button>
-            <button className={`${styles.ctaButton} ${styles.secondary} ${styles.large}`}>Schedule a Call</button>
+            <button className={`${styles.ctaButton} ${styles.primary} ${styles.large}`} onClick={() => navigate("/BookingForm")}>Apply Now for 2024</button>
+            <button className={`${styles.ctaButton} ${styles.secondary} ${styles.large}`} onClick={() => navigate("/contact-us")}>Schedule a Call</button>
             <button className={`${styles.ctaButton} ${styles.secondary} ${styles.large}`}>Download Syllabus</button>
           </div>
           <p className="mt-4">📅 <strong>Upcoming Advanced Batches:</strong> March 1–28 | April 1–28 | May 1–28</p>

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/VedicMantraCourse.module.css";
 import mantraImg from "../../assets/images/IMG_130.jpeg";
+import { useNavigate } from "react-router-dom";
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -48,6 +49,7 @@ const fadeUp = {
 };
 
 const VedicMantraCourse = () => {
+  const navigate = useNavigate();
   return (
     <motion.section
       className={styles.section}
@@ -106,20 +108,23 @@ const VedicMantraCourse = () => {
 
             <motion.div className={styles.btnGroup} variants={fadeUp}>
               <motion.button
-                className={styles.outlineBtn}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                More Details
-              </motion.button>
+  className={styles.outlineBtn}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => navigate("/vedic-mantra")}
+>
+  More Details
+</motion.button>
 
-              <motion.button
-                className={styles.fillBtn}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Book Now
-              </motion.button>
+<motion.button
+  className={styles.fillBtn}
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => navigate("/BookingForm")}
+>
+  Book Now
+</motion.button>
+
             </motion.div>
           </motion.div>
 

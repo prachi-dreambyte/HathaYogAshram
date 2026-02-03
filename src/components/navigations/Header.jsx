@@ -168,7 +168,31 @@ const Header = () => {
 
           {/* RIGHT MENU */}
           <nav className={styles.desktopNav}>
-            <Link to="/" onClick={closeAll}>Online Courses</Link>
+           <div
+  className={styles.dropdownWrap}
+  onMouseEnter={() => setOpenDropdown("online")}
+  onMouseLeave={() => setOpenDropdown(null)}
+>
+  <button onClick={() => toggleDropdown("online")}>
+    Online Courses ▾
+  </button>
+
+  <AnimatePresence>
+    {openDropdown === "online" && (
+      <motion.div
+        className={styles.dropdown}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 10 }}
+      >
+        <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
+        <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
+       
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
+
             <Link to="/" onClick={closeAll}>Payment</Link>
             <Link to="/contact-us" onClick={closeAll}>Contact</Link>
             <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/retreatlinks/5daysyogaretreat.module.css';
 import bannerimage from "../../assets/images/5DaysYogaRetreat.webp"
 
 const YogaRetreat = () => {
+  const navigate = useNavigate();
+
   const features = [
     'Everyday Yoga Classes',
     'Everyday Mantra Recitation and Relaxation',
@@ -391,7 +394,7 @@ const YogaRetreat = () => {
               Embark Your Yogic Journey with Yoga Alliance® Certified Yoga
               Teacher Training School in Rishikesh, India
             </h2>
-            <button className={styles.ctaButton}>
+            <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>
               <span>Book Now</span>
               <svg
                 className={styles.ctaButtonIcon}

@@ -14,15 +14,14 @@
    ======================================== */
 .heroSection {
   position: relative;
-  padding: 4rem 2rem 3rem;
-  background: linear-gradient(135deg, rgba(212, 105, 30, 0.9) 0%, rgba(196, 30, 58, 0.85) 100%),
-              url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600') center/cover;
-  min-height: 350px;
+  padding: 3rem 2rem 2rem;
+  background: url('../../images/AccommodationBanner.webp') center/cover;
+  min-height: 520px;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  align-items: flex-start;   /* 👈 upar se */
 }
+
 
 .heroSection::before {
   content: '';
@@ -41,14 +40,25 @@
 
 .heroContent {
   max-width: 1200px;
-  margin: 0 auto;
+
+  margin-left: 0;          /* 👈 left stick */
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+
+  padding-top: 4rem;
+ 
+
   position: relative;
   z-index: 2;
-  text-align: center;
 }
 
+
 .topLabel {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 1rem;
   display: block;
@@ -56,30 +66,38 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   opacity: 0.95;
+  max-width: 420px;
 }
 
 .pageTitle {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: rgb(179 68 54);
   margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  max-width: 560px;
 }
 
 .breadcrumb {
-  background: white;
-  color: #C41E3A;
   display: inline-flex;
   align-items: center;
-  padding: 0.6rem 1.5rem;
+  gap: 0.4rem;
+
+  background: #fff;
+  color: #C41E3A;
+
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+
+  width: fit-content;   /* 👈 jitna text */
   margin-top: 1rem;
-  font-size: 0.9rem;
+
   border-radius: 3px;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
+
 
 .breadcrumb span {
   margin: 0 0.6rem;
@@ -92,7 +110,7 @@
 .contentSection {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
 }
 
 /* ========================================
@@ -524,6 +542,8 @@
   .ctaSection h3 {
     font-size: 1.8rem;
   }
+
+  
 }
 
 /* Mobile Landscape - 640px to 767px */
@@ -793,6 +813,7 @@
     padding: 0.85rem 2rem;
     font-size: 0.92rem;
   }
+  
 }
 
 /* Small Mobile - 375px to 479px */
