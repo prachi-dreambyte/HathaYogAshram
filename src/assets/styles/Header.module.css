@@ -275,7 +275,7 @@ button {
   }
 
   .logo img {
-    height: 80px;
+    height: 100px;
   }
 
   .mobileMenu .applyBtn {
@@ -288,4 +288,12 @@ button {
   .topHeader {
     display: none;
   }
+}
+
+@media (max-width: 767px){
+  .logo img {
+    height: 100px;
+    left: 20%;
+  }
+
 }
