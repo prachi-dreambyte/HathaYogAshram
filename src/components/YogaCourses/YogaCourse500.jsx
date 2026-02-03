@@ -535,11 +535,8 @@ export default function YogaCourse500() {
           </div>
         </div>
       </section>
-
-      <Refund/>
-
       <TeacherHours/>
-
+ <Refund/>
       {/* FAQs */}
       <section className={styles.faqSection}>
         <div className="container">
