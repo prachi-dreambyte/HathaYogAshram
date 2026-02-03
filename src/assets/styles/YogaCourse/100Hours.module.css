@@ -1,5 +1,3 @@
-
-
 /* ==================== BANNER ==================== */
 .bannerWrapper {
   width: 100%;
@@ -17,7 +15,7 @@
   position: relative;
   padding: 3rem 2rem 2rem;
   min-height: 520px;
-  background-image:url("../../images/background.png");
+ background-image: linear-gradient(to right, #fff, #f8e4e4);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +56,6 @@
   font-weight: 500;
   margin-bottom: 0.8rem;
   font-style: italic;
-  max-width: 520px;
 }
 
 .mainTitle {
@@ -67,7 +64,6 @@
   font-weight: 700;
   color: #bd0005;
   line-height: 1.25;
-  max-width: 450px;
   margin-bottom: 1.2rem;
   position: relative;
 }
@@ -111,7 +107,8 @@
   background: #fff;
   padding: 70px 30px;
   max-width: 1200px;
-      margin-left: 260px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sectionHeader {
@@ -855,39 +852,83 @@ padding: 70px 30px;
   color: white;
 }
 
+
 /* ========================================
    RESPONSIVE BREAKPOINTS
+   1920px → 1440px → 1200px → 1024px →
+   768px  →  640px  →  480px  → 375px  →
+   340px  (minimum supported)
    ======================================== */
 
-/* Large Desktop - 1440px and above */
-@media (min-width: 1440px) {
+/* ─── Ultra-wide / Large Desktop ≥ 1920px ─── */
+@media (min-width: 1920px) {
+  .overviewSection {
+    max-width: 1600px;
+  }
+
+  .heroSection {
+    min-height: 600px;
+  }
+
+  .mainTitle {
+    font-size: 58px;
+    
+  }
+
+  .quoteText {
+    font-size: 20px;
+  }
+
+  .sectionTitle {
+    font-size: 42px;
+  }
+
+  .sectionDescription,
+  .infoDetails p,
+  .contentDescription p,
+  .schoolDescription p,
+  .featureDescription p,
+  .curriculumList li,
+  .scheduleActivity p,
+  .includedText,
+  .testimonialText p,
+  .faqAnswer p {
+    font-size: 19px;
+  }
+
+  .contentGrid,
+  .schoolsGrid,
+  .curriculumGrid,
+  .testimonialsGrid,
+  .faqGrid,
+  .includedGrid,
+  .scheduleGrid {
+    max-width: 1400px;
+  }
+
+  .FeaturesSection {
+    padding: 70px 180px;
+  }
+}
+
+/* ─── Large Desktop  1440px – 1919px ─── */
+@media (min-width: 1440px) and (max-width: 1919px) {
   .heroContent,
-  .overviewSection{
+  .overviewSection {
     max-width: 1400px;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 52px;
+    
+  }
 
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 40px;
+  }
 }
 
-/* Desktop - 1200px to 1439px */
+/* ─── Desktop  1200px – 1439px ─── */
 @media (min-width: 1200px) and (max-width: 1439px) {
   .heroContent {
     max-width: 1140px;
@@ -898,9 +939,17 @@ padding: 70px 30px;
   .includedSection {
     max-width: 1140px;
   }
+
+  .mainTitle {
+    font-size: 48px;
+  }
+
+  .sectionTitle {
+    font-size: 38px;
+  }
 }
 
-/* Laptop/Tablet Landscape - 1024px to 1199px */
+/* ─── Laptop / Tablet Landscape  1024px – 1199px ─── */
 @media (min-width: 1024px) and (max-width: 1199px) {
   .heroContent {
     max-width: 960px;
@@ -913,44 +962,32 @@ padding: 70px 30px;
     padding: 2.5rem 1.5rem;
   }
 
+  .mainTitle {
+    font-size: 44px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
   .schoolCard {
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr 280px;
   }
 
   .schoolCard:nth-child(even) {
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 1fr;
   }
 
   .schoolImage {
-    max-width: 300px;
+    max-width: 280px;
   }
-
-  .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
-
-  .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
 
   .featuresGrid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* Tablet - 768px to 1023px */
+/* ─── Tablet  768px – 1023px ─── */
 @media (min-width: 768px) and (max-width: 1023px) {
   .heroSection {
     padding: 2.5rem 1.5rem 2rem;
@@ -969,18 +1006,13 @@ padding: 70px 30px;
 
   .quoteText {
     font-size: 1rem;
+    max-width: 100%;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 40px;
+  
+  }
 
   .breadcrumb {
     padding: 0.45rem 1.2rem;
@@ -994,25 +1026,24 @@ padding: 70px 30px;
     padding: 2.5rem 1.5rem;
   }
 
+  .whyRishikeshSection,
+  .schoolsSection,
+  .curriculumSection,
+  .scheduleSection,
+  .testimonialsSection,
+  .faqSection {
+    padding: 2.5rem 1.5rem;
+  }
+
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 34px;
+  }
 
   .sectionDescription {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 1rem;
+  }
 
+  /* Grids → single column or 2-col where appropriate */
   .infoGrid {
     grid-template-columns: 1fr;
   }
@@ -1021,6 +1052,7 @@ padding: 70px 30px;
     grid-template-columns: 1fr;
   }
 
+  /* School cards stack: image on top */
   .schoolCard {
     grid-template-columns: 1fr;
   }
@@ -1070,15 +1102,23 @@ padding: 70px 30px;
   }
 
   .scheduleTime {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-}
+    font-size: 1.4rem;
+  }
+
+  .ctaSection {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 30px;
+  }
+
+  .ctaSubtitle {
+    font-size: 1rem;
+  }
 }
 
-/* Mobile Landscape - 640px to 767px */
+/* ─── Mobile Landscape  640px – 767px ─── */
 @media (min-width: 640px) and (max-width: 767px) {
   .heroSection {
     padding: 2rem 1.5rem;
@@ -1096,18 +1136,12 @@ padding: 70px 30px;
 
   .quoteText {
     font-size: 0.95rem;
+    max-width: 100%;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 36px;
+  }
 
   .breadcrumb {
     padding: 0.4rem 1rem;
@@ -1131,40 +1165,25 @@ padding: 70px 30px;
   }
 
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 30px;
+  }
 
   .decorativeLine {
     width: 50px;
   }
 
   .sectionDescription {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 1rem;
+  }
 
-  .infoGrid {
+  .infoGrid,
+  .contentGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
   .infoCard {
     grid-template-columns: 1fr 100px;
-  }
-
-  .contentGrid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .schoolsGrid {
@@ -1178,6 +1197,28 @@ padding: 70px 30px;
 
   .schoolCard:nth-child(even) {
     grid-template-columns: 1fr;
+  }
+
+  .schoolInfo {
+    order: 2;
+  }
+
+  .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolCard:nth-child(even) .schoolInfo {
+    order: 2;
+  }
+
+  .schoolCard:nth-child(even) .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 
   .featuresGrid {
@@ -1199,25 +1240,30 @@ padding: 70px 30px;
     gap: 1.5rem;
   }
 
+  .scheduleInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .scheduleTime {
+    font-size: 1.3rem;
+  }
+
+  .ctaSection {
+    padding: 3.5rem 1.5rem;
+  }
+
   .ctaTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 28px;
+  }
 
   .ctaSubtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 1rem;
+  }
 }
 
-/* Mobile Portrait - 480px to 639px */
+/* ─── Mobile Portrait  480px – 639px ─── */
 @media (min-width: 480px) and (max-width: 639px) {
   .heroSection {
     padding: 1.75rem 1rem;
@@ -1235,18 +1281,12 @@ padding: 70px 30px;
 
   .quoteText {
     font-size: 0.9rem;
+    max-width: 100%;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 32px;
+  }
 
   .breadcrumb {
     padding: 0.4rem 1rem;
@@ -1270,13 +1310,8 @@ padding: 70px 30px;
   }
 
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 26px;
+  }
 
   .decorativeLine {
     width: 45px;
@@ -1290,15 +1325,10 @@ padding: 70px 30px;
   }
 
   .sectionDescription {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.95rem;
+  }
 
+  /* Cards go single-column, icon stacks on top */
   .infoGrid,
   .contentGrid {
     grid-template-columns: 1fr;
@@ -1339,6 +1369,32 @@ padding: 70px 30px;
     gap: 1.5rem;
   }
 
+  .schoolCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .schoolInfo {
+    order: 2;
+  }
+
+  .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolCard:nth-child(even) .schoolInfo {
+    order: 2;
+  }
+
+  .schoolCard:nth-child(even) .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
   .featuresGrid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1359,6 +1415,10 @@ padding: 70px 30px;
     gap: 0.5rem;
   }
 
+  .scheduleTime {
+    font-size: 1.2rem;
+  }
+
   .includedGrid {
     grid-template-columns: 1fr;
   }
@@ -1373,47 +1433,35 @@ padding: 70px 30px;
   }
 
   .ctaTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 24px;
+  }
 
   .ctaSubtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.95rem;
+  }
 
   .ctaButtons {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
   }
 
   .ctaButton {
-  background: #bd0005;
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Quicksand', sans-serif;
-}
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
 }
 
-/* Small Mobile - 375px to 479px */
+/* ─── Small Mobile  375px – 479px ─── */
 @media (min-width: 375px) and (max-width: 479px) {
   .heroSection {
     padding: 1.5rem 1rem;
     min-height: 320px;
+  }
+
+  .heroSection::before {
+    display: none;
   }
 
   .heroContent {
@@ -1423,18 +1471,13 @@ padding: 70px 30px;
 
   .quoteText {
     font-size: 0.85rem;
+    max-width: 100%;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 28px;
+    max-width: 100%;
+  }
 
   .breadcrumb {
     padding: 0.35rem 0.9rem;
@@ -1458,13 +1501,8 @@ padding: 70px 30px;
   }
 
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 22px;
+  }
 
   .decorativeLine {
     width: 40px;
@@ -1475,6 +1513,9 @@ padding: 70px 30px;
   .decorativeLine::after {
     width: 6px;
     height: 6px;
+  }
+
+  .decorativeLine::before {
     left: -12px;
   }
 
@@ -1483,14 +1524,8 @@ padding: 70px 30px;
   }
 
   .sectionDescription {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.9rem;
+  }
 
   .infoGrid,
   .contentGrid,
@@ -1507,41 +1542,87 @@ padding: 70px 30px;
   .schoolCard,
   .curriculumCard {
     padding: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schoolCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .schoolInfo {
+    order: 2;
+  }
+
+  .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolCard:nth-child(even) .schoolInfo {
+    order: 2;
+  }
+
+  .schoolCard:nth-child(even) .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .infoImageSection {
+    order: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .infoContent {
+    order: 2;
+  }
+
+  .contentIconSection {
+    order: 1;
+    margin-bottom: 0.75rem;
+  }
+
+  .contentInfo {
+    order: 2;
   }
 
   .infoCardTitle,
   .contentCardTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 1.2rem;
+  }
 
   .schoolName {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #E5E5E5;
-  padding-bottom: 1rem;
-}
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
 
   .curriculumTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 1.2rem;
+  }
 
   .scheduleCard {
     padding: 1rem 1.25rem;
   }
 
+  .scheduleInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .scheduleTime {
+    font-size: 1.1rem;
+  }
+
   .testimonialCard {
     padding: 1.5rem;
+  }
+
+  .testimonialName {
+    font-size: 1.1rem;
   }
 
   .faqCard {
@@ -1549,41 +1630,45 @@ padding: 70px 30px;
   }
 
   .faqQuestion {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
+    font-size: 1rem;
+  }
 
   .ctaSection {
     padding: 3rem 1rem;
   }
 
   .ctaTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 22px;
+  }
 
   .ctaSubtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.9rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
-/* Extra Small Mobile - 320px to 374px */
-@media (max-width: 374px) {
+/* ─── Extra-Small Mobile  340px – 374px ─── */
+@media (min-width: 340px) and (max-width: 374px) {
   .heroSection {
     padding: 1.25rem 0.75rem;
     min-height: 300px;
+  }
+
+  .heroSection::before {
+    display: none;
   }
 
   .heroContent {
@@ -1593,18 +1678,18 @@ padding: 70px 30px;
 
   .quoteText {
     font-size: 0.8rem;
+    max-width: 100%;
   }
 
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .mainTitle::after {
+    width: 50px;
+    height: 2px;
+  }
 
   .breadcrumb {
     padding: 0.3rem 0.8rem;
@@ -1628,13 +1713,8 @@ padding: 70px 30px;
   }
 
   .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+    font-size: 20px;
+  }
 
   .decorativeLine {
     width: 35px;
@@ -1655,14 +1735,18 @@ padding: 70px 30px;
   }
 
   .sectionDescription {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  text-align: center;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.85rem;
+  }
+
+  .infoGrid,
+  .contentGrid,
+  .featuresGrid,
+  .curriculumGrid,
+  .includedGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 
   .infoCard,
   .contentCard,
@@ -1674,125 +1758,166 @@ padding: 70px 30px;
   .testimonialCard,
   .faqCard {
     padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schoolCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .schoolInfo {
+    order: 2;
+  }
+
+  .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolCard:nth-child(even) .schoolInfo {
+    order: 2;
+  }
+
+  .schoolCard:nth-child(even) .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .infoImageSection {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .infoContent {
+    order: 2;
+  }
+
+  .contentIconSection {
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .contentInfo {
+    order: 2;
   }
 
   .infoCardTitle,
   .contentCardTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 1.1rem;
+  }
 
   .schoolName {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #E5E5E5;
-  padding-bottom: 1rem;
-}
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
 
   .curriculumTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 1.1rem;
+  }
+
+  .scheduleInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
 
   .scheduleTime {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-}
+    font-size: 1rem;
+  }
 
   .testimonialName {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-}
+    font-size: 1rem;
+  }
 
   .faqQuestion {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
+    font-size: 0.95rem;
+  }
 
   .ctaSection {
     padding: 2.5rem 0.75rem;
   }
 
   .ctaTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 20px;
+  }
 
   .ctaSubtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.85rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 0.85rem;
+    align-items: center;
+  }
 
   .ctaButton {
-  background: #bd0005;
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Quicksand', sans-serif;
-}
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .includedText {
+    font-size: 0.9rem;
+  }
+
+  .curriculumList li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+  }
+
+  .infoDetails p,
+  .contentDescription p,
+  .schoolDescription p,
+  .featureDescription p,
+  .scheduleActivity p,
+  .testimonialText p,
+  .faqAnswer p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
 }
 
-/* Ultra Small Mobile - below 320px */
-@media (max-width: 319px) {
+/* ─── Ultra-Small fallback  below 340px ─── */
+@media (max-width: 339px) {
   .heroSection {
     padding: 1rem 0.5rem;
     min-height: 280px;
   }
 
+  .heroSection::before {
+    display: none;
+  }
+
+  .heroContent {
+    padding-left: 0.4rem;
+    padding-top: 1rem;
+  }
+
+  .quoteText {
+    font-size: 0.75rem;
+    max-width: 100%;
+  }
+
   .mainTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  line-height: 1.25;
-  max-width: 650px;
-  margin-bottom: 1.2rem;
-  position: relative;
-}
+    font-size: 20px;
+    max-width: 100%;
+  }
 
-  .sectionTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
+  .mainTitle::after {
+    width: 40px;
+    height: 2px;
+  }
 
-  .decorativeLine {
-    width: 30px;
+  .breadcrumb {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.6rem;
   }
 
   .overviewSection,
@@ -1807,6 +1932,46 @@ padding: 70px 30px;
     padding: 1rem 0.5rem;
   }
 
+  .sectionTag {
+    font-size: 0.6rem;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+  }
+
+  .decorativeLine {
+    width: 30px;
+  }
+
+  .decorativeLine::before,
+  .decorativeLine::after {
+    width: 5px;
+    height: 5px;
+  }
+
+  .decorativeLine::before {
+    left: -9px;
+  }
+
+  .decorativeLine::after {
+    right: -9px;
+  }
+
+  .sectionDescription {
+    font-size: 0.82rem;
+  }
+
+  .infoGrid,
+  .contentGrid,
+  .featuresGrid,
+  .curriculumGrid,
+  .includedGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
   .infoCard,
   .contentCard,
   .schoolCard,
@@ -1817,6 +1982,83 @@ padding: 70px 30px;
   .testimonialCard,
   .faqCard {
     padding: 0.85rem;
+    grid-template-columns: 1fr;
+  }
+
+  .schoolCard:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .schoolInfo {
+    order: 2;
+  }
+
+  .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolCard:nth-child(even) .schoolInfo {
+    order: 2;
+  }
+
+  .schoolCard:nth-child(even) .schoolImageSection {
+    order: 1;
+  }
+
+  .schoolImage {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .infoImageSection {
+    order: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .infoContent {
+    order: 2;
+  }
+
+  .contentIconSection {
+    order: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .contentInfo {
+    order: 2;
+  }
+
+  .infoCardTitle,
+  .contentCardTitle {
+    font-size: 1rem;
+  }
+
+  .schoolName {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .curriculumTitle {
+    font-size: 1rem;
+  }
+
+  .scheduleInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .scheduleTime {
+    font-size: 0.95rem;
+  }
+
+  .testimonialName {
+    font-size: 0.95rem;
+  }
+
+  .faqQuestion {
+    font-size: 0.9rem;
   }
 
   .ctaSection {
@@ -1824,33 +2066,59 @@ padding: 70px 30px;
   }
 
   .ctaTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 36px;
-  font-weight: 600;
-  color: #bd0005;
-  margin-bottom: 1rem;
-}
+    font-size: 18px;
+  }
 
   .ctaSubtitle {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #000;
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  font-family: 'Quicksand', sans-serif;
-}
+    font-size: 0.8rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
 
   .ctaButton {
-  background: #bd0005;
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-family: 'Quicksand', sans-serif;
-}
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .includedText {
+    font-size: 0.85rem;
+  }
+
+  .curriculumList li {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+  }
+
+  .infoDetails p,
+  .contentDescription p,
+  .schoolDescription p,
+  .featureDescription p,
+  .scheduleActivity p,
+  .testimonialText p,
+  .faqAnswer p {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .infoIcon,
+  .largeIcon {
+    font-size: 2rem;
+  }
+
+  .featureIcon {
+    font-size: 2.2rem;
+  }
+
+  .infoTag,
+  .testimonialTag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.6rem;
+  }
 }
