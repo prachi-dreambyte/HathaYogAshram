@@ -9,33 +9,82 @@ import logo from '../../assets/images/logo.png';
 const Header = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
   const navRef = useRef(null);
-
-  const toggleDropdown = (name) => {
-    setOpenDropdown(openDropdown === name ? null : name);
-  };
 
   const closeAll = () => {
     setOpenDropdown(null);
     setMobileOpen(false);
+    setMobileDropdown(null);
   };
 
-  // Close dropdown on outside click
+  // Mobile toggle — only one open at a time
+  const toggleMobile = (name) => {
+    setMobileDropdown(mobileDropdown === name ? null : name);
+  };
+
+  // Close desktop dropdown on outside click
   useEffect(() => {
-  const handleClickOutside = (e) => {
-    if (navRef.current && !navRef.current.contains(e.target)) {
-      setOpenDropdown(null); // ✅ sirf subtab band
-    }
-  };
+    const handleClickOutside = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) {
+        setOpenDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
 
-  document.addEventListener("mousedown", handleClickOutside);
-  document.addEventListener("touchstart", handleClickOutside);
+  // ===== Reusable Desktop Dropdown =====
+  const DesktopDropdown = ({ name, label, children }) => (
+    <div
+      className={styles.dropdownWrap}
+      onMouseEnter={() => setOpenDropdown(name)}
+      onMouseLeave={() => setOpenDropdown(null)}
+    >
+      <button className={styles.dropdownBtn}>{label} ▾</button>
 
-  return () => {
-    document.removeEventListener("mousedown", handleClickOutside);
-    document.removeEventListener("touchstart", handleClickOutside);
-  };
-}, []);
+      {/* Bridge — invisible box that covers the gap between button and dropdown */}
+      {openDropdown === name && <div className={styles.bridge} />}
+
+      <AnimatePresence>
+        {openDropdown === name && (
+          <motion.div
+            className={styles.dropdown}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.2 }}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+
+  // ===== Reusable Mobile Accordion =====
+  const MobileAccordion = ({ name, label, children }) => (
+    <>
+      <div
+        className={styles.mobileTitle}
+        onClick={() => toggleMobile(name)}
+      >
+        <span>{label}</span>
+        <span className={styles.arrow}>{mobileDropdown === name ? "▴" : "▾"}</span>
+      </div>
+
+      {/* Simple conditional render — no height animation, no overflow issues */}
+      {mobileDropdown === name && (
+        <div className={styles.subMenu}>
+          {children}
+        </div>
+      )}
+    </>
+  );
 
   return (
     <>
@@ -46,22 +95,13 @@ const Header = () => {
             <span>📍 Manzil Balaknath Road Upper Tapovan Rishikesh</span>
             <span>📞 +91 9335606336</span>
           </div>
-
           <div className={styles.topRight}>
             <span className={styles.yogaId}>Yoga Alliance ID: 401771</span>
             <div className={styles.social}>
-              <a
-                href="https://www.facebook.com/profile.php?id=100095297992781"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.facebook.com/profile.php?id=100095297992781" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF />
               </a>
-              <a
-                href="https://www.instagram.com/hathayogashram/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://www.instagram.com/hathayogashram/" target="_blank" rel="noopener noreferrer">
                 <FaInstagram />
               </a>
             </div>
@@ -73,90 +113,30 @@ const Header = () => {
       <header className={styles.header}>
         <div className={styles.container} ref={navRef}>
 
-          {/* LEFT MENU */}
+          {/* LEFT NAV — DESKTOP */}
           <nav className={styles.desktopNav}>
             <Link to="/" onClick={closeAll}>Home</Link>
 
-            {/* ABOUT */}
-            <div
-              className={styles.dropdownWrap}
-              onMouseEnter={() => setOpenDropdown('about')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button onClick={() => toggleDropdown('about')}>
-                About ▾
-              </button>
+            <DesktopDropdown name="about" label="About">
+              <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
+              <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
+              <Link to="/Our-School" onClick={closeAll}>Our School</Link>
+              <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
+              <Link to="/blog" onClick={closeAll}>Blog</Link>
+              <Link to="/gallery" onClick={closeAll}>Gallery</Link>
+            </DesktopDropdown>
 
-              <AnimatePresence>
-                {openDropdown === 'about' && (
-                  <motion.div
-                    className={styles.dropdown}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                  >
-                    <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
-                    <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
-                    <Link to="/Our-School" onClick={closeAll}>Our School</Link>
-                    <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
-                     <Link to="/blog" onClick={closeAll}>Blog</Link>
-                    <Link to="/gallery" onClick={closeAll}>Gallery</Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <DesktopDropdown name="rishikesh" label="Rishikesh TTC">
+              <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
+              <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
+              <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
+              <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+            </DesktopDropdown>
 
-            {/* RISHIKESH TTC */}
-            <div
-              className={styles.dropdownWrap}
-              onMouseEnter={() => setOpenDropdown('rishikesh')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button onClick={() => toggleDropdown('rishikesh')}>
-                Rishikesh TTC ▾
-              </button>
-
-              <AnimatePresence>
-                {openDropdown === 'rishikesh' && (
-                  <motion.div
-                    className={styles.dropdown}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                  >
-                    <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
-                    <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
-                    <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
-                    <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            {/* SHORT COURSE */}
-            <div
-              className={styles.dropdownWrap}
-              onMouseEnter={() => setOpenDropdown('short')}
-              onMouseLeave={() => setOpenDropdown(null)}
-            >
-              <button onClick={() => toggleDropdown('short')}>
-                Short Course ▾
-              </button>
-
-              <AnimatePresence>
-                {openDropdown === 'short' && (
-                  <motion.div
-                    className={styles.dropdown}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                  >
-                    <Link to="/" onClick={closeAll}>Meditation</Link>
-                    <Link to="/" onClick={closeAll}>Pranayama</Link>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+            <DesktopDropdown name="short" label="Short Course">
+              <Link to="/" onClick={closeAll}>Meditation</Link>
+              <Link to="/" onClick={closeAll}>Pranayama</Link>
+            </DesktopDropdown>
           </nav>
 
           {/* LOGO */}
@@ -166,143 +146,68 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* RIGHT MENU */}
+          {/* RIGHT NAV — DESKTOP */}
           <nav className={styles.desktopNav}>
-           <div
-  className={styles.dropdownWrap}
-  onMouseEnter={() => setOpenDropdown("online")}
-  onMouseLeave={() => setOpenDropdown(null)}
->
-  <button onClick={() => toggleDropdown("online")}>
-    Online Courses ▾
-  </button>
+            <DesktopDropdown name="online" label="Online Courses">
+              <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
+              <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
+            </DesktopDropdown>
 
-  <AnimatePresence>
-    {openDropdown === "online" && (
-      <motion.div
-        className={styles.dropdown}
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 10 }}
-      >
-        <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
-        <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
-       
-      </motion.div>
-    )}
-  </AnimatePresence>
-</div>
-
-            <Link to="/" onClick={closeAll}>Payment</Link>
+            <Link to="/payment" onClick={closeAll}>Payment</Link>
             <Link to="/contact-us" onClick={closeAll}>Contact</Link>
-            <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>
-              Apply Today
-            </Link>
+            <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Apply Today</Link>
           </nav>
 
           {/* HAMBURGER */}
-         <div
-  className={styles.hamburger}
-  onClick={() => setMobileOpen(!mobileOpen)}
->
-  ☰
-</div>
+          <div className={styles.hamburger} onClick={() => setMobileOpen(!mobileOpen)}>
+            {mobileOpen ? "✕" : "☰"}
+          </div>
         </div>
 
-        
-       {/* ===== MOBILE MENU ===== */}
-<AnimatePresence>
-  {mobileOpen && (
-    <motion.div
-      className={styles.mobileMenu}
-      initial={{ height: 0, opacity: 0 }}
-      animate={{ height: "auto", opacity: 1 }}
-      exit={{ height: 0, opacity: 0 }}
-    >
-      <Link to="/" onClick={closeAll}>Home</Link>
+        {/* ===== MOBILE MENU ===== */}
+        <AnimatePresence>
+          {mobileOpen && (
+            <motion.div
+              className={styles.mobileMenu}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.25 }}
+            >
+              <Link to="/" onClick={closeAll} className={styles.mobileLink}>Home</Link>
 
-      {/* ===== ABOUT DROPDOWN ===== */}
-      <div
-        className={styles.mobileTitle}
-        onClick={() => toggleDropdown("about")}
-      >
-        About ▾
-      </div>
+              <MobileAccordion name="about" label="About">
+                <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
+                <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
+                <Link to="/Our-School" onClick={closeAll}>Our School</Link>
+                <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
+                <Link to="/blog" onClick={closeAll}>Blog</Link>
+                <Link to="/gallery" onClick={closeAll}>Gallery</Link>
+              </MobileAccordion>
 
-      <AnimatePresence>
-        {openDropdown === "about" && (
-          <motion.div
-            className={styles.subMenu}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-          >
-            <Link to="/Our-Founder" onClick={closeAll}>Founder</Link>
-            <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
-            <Link to="/Our-School" onClick={closeAll}>Our School</Link>
-            <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
-            <Link to="/blog" onClick={closeAll}>Blog</Link>
-            <Link to="/gallery" onClick={closeAll}>Gallery</Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <MobileAccordion name="rishikesh" label="Rishikesh TTC">
+                <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
+                <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
+                <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
+                <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+              </MobileAccordion>
 
-      {/* ===== RISHIKESH TTC ===== */}
-      <div
-        className={styles.mobileTitle}
-        onClick={() => toggleDropdown("rishikesh")}
-      >
-        Rishikesh TTC ▾
-      </div>
+              <MobileAccordion name="short" label="Short Course">
+                <Link to="/" onClick={closeAll}>Meditation</Link>
+                <Link to="/" onClick={closeAll}>Pranayama</Link>
+              </MobileAccordion>
 
-      <AnimatePresence>
-        {openDropdown === "rishikesh" && (
-          <motion.div
-            className={styles.subMenu}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-          >
-            <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
-            <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
-            <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
-            <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <MobileAccordion name="online" label="Online Courses">
+                <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
+                <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
+              </MobileAccordion>
 
-      {/* ===== SHORT COURSE ===== */}
-      <div
-        className={styles.mobileTitle}
-        onClick={() => toggleDropdown("short")}
-      >
-        Short Course ▾
-      </div>
-
-      <AnimatePresence>
-        {openDropdown === "short" && (
-          <motion.div
-            className={styles.subMenu}
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-          >
-            <Link to="/" onClick={closeAll}>Meditation</Link>
-            <Link to="/" onClick={closeAll}>Pranayama</Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <Link to="/" onClick={closeAll}>Online Courses</Link>
-      <Link to="/" onClick={closeAll}>Payment</Link>
-      <Link to="/contact-us" onClick={closeAll}>Contact</Link>
-
-      <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>
-        Apply Today
-      </Link>
-    </motion.div>
-  )}
-</AnimatePresence>
+              <Link to="/payment" onClick={closeAll} className={styles.mobileLink}>Payment</Link>
+              <Link to="/contact-us" onClick={closeAll} className={styles.mobileLink}>Contact</Link>
+              <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Apply Today</Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </header>
     </>
   );
