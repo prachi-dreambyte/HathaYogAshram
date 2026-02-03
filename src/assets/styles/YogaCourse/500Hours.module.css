@@ -53,7 +53,7 @@
 
 .certBadge {
   display: inline-block;
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   padding: 0.5rem 1.1rem;
   border-radius: 3px;
@@ -84,13 +84,13 @@
   bottom: -10px;
   width: 100px;
   height: 3px;
-  background: #C41E3A;
+  background: #bd0005;
 }
 
 .subTitle {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.3rem;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
   margin-bottom: 1.5rem;
   max-width: 580px;
@@ -124,7 +124,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   line-height: 1;
 }
 
@@ -149,7 +149,7 @@
 }
 
 .heroDescription strong {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
 }
 
@@ -161,7 +161,7 @@
 }
 
 .primaryBtn {
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   padding: 0.9rem 2.2rem;
   border-radius: 3px;
@@ -183,10 +183,10 @@
 
 .secondaryBtn {
   background: transparent;
-  color: #C41E3A;
+  color: #bd0005;
   padding: 0.9rem 2.2rem;
   border-radius: 3px;
-  border: 2px solid #C41E3A;
+  border: 2px solid #bd0005;
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -197,7 +197,7 @@
 }
 
 .secondaryBtn:hover {
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   transform: translateY(-3px);
 }
@@ -226,31 +226,31 @@
 }
 
 .overviewSection {
-  background: white;
+  background-image:url("../../images/grid4.png");
 }
 
 .highlightsSection {
-  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+  background: #fff;
 }
 
 .curriculumSection {
-  background: white;
+ background-image:url("../../images/grid3.png");
 }
 
 .scheduleSection {
-  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+  background-image:url("../../images/grid6.png");
 }
 
 .accommodationSection {
-  background: white;
+  background-image:url("../../images/grid9.png");
 }
 
 .includedSection {
-  background: linear-gradient(135deg, #fff5f7 0%, #f5f0ff 100%);
+ background: #fff;
 }
 
 .faqSection {
-  background: white;
+  background-image:url("../../images/grid2.png");
 }
 
 .sectionHeader {
@@ -262,7 +262,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 0.8rem;
   position: relative;
   display: inline-block;
@@ -276,14 +276,14 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: #C41E3A;
+  background: #bd0005;
   border-radius: 2px;
 }
 
 .sectionSubtitle {
   font-family: 'Quicksand', sans-serif;
   font-size: 1.1rem;
-  color: #4a5568;
+  color: #000;
   font-weight: 500;
   max-width: 700px;
   margin: 0 auto;
@@ -304,7 +304,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #bd0005;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #f0f0f0;
@@ -313,7 +313,7 @@
 .contentCard p {
   font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
-  color: #4a5568;
+  color: #000;
   line-height: 1.8;
   margin-bottom: 1.5rem;
 }
@@ -344,14 +344,14 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #bd0005;
   margin-bottom: 0.5rem;
 }
 
 .featureItem p {
   font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
-  color: #4a5568;
+  color: #000;
   line-height: 1.7;
   margin: 0;
 }
@@ -370,7 +370,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #f0f0f0;
@@ -408,7 +408,7 @@
   padding: 2.5rem;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -437,7 +437,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -497,13 +497,13 @@
 
 .tabButton:hover {
   background: white;
-  color: #C41E3A;
+  color: #bd0005;
 }
 
 .tabButton.active {
   background: white;
-  color: #C41E3A;
-  border-bottom: 3px solid #C41E3A;
+  color: #bd0005;
+  border-bottom: 3px solid #bd0005;
 }
 
 .tabContent {
@@ -530,7 +530,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1rem;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid #f0f0f0;
@@ -554,7 +554,7 @@
 
 .subjectCard li::before {
   content: '●';
-  color: #C41E3A;
+  color: #bd0005;
   font-size: 0.7rem;
   margin-top: 0.5rem;
   flex-shrink: 0;
@@ -573,7 +573,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -588,7 +588,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -617,7 +617,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 2rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -636,7 +636,7 @@
   border-radius: 0;
   margin-bottom: 1rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -652,7 +652,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   min-width: 120px;
   flex-shrink: 0;
 }
@@ -685,7 +685,7 @@
 }
 
 .scheduleNote strong {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
 }
 
@@ -698,7 +698,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 2rem;
 }
 
@@ -707,7 +707,7 @@
   padding: 1.8rem;
   border-radius: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -718,7 +718,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -752,7 +752,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1.5rem;
 }
 
@@ -777,7 +777,7 @@
 }
 
 .mealTime {
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   padding: 0.5rem 1.2rem;
   border-radius: 3px;
@@ -802,7 +802,7 @@
   padding: 1.2rem;
   background: white;
   border-radius: 0;
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -816,13 +816,12 @@
 }
 
 .dietaryNote strong {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 600;
 }
 
 /* ==================== FACILITIES ==================== */
 .facilities {
-  margin-top: 4rem;
   padding-top: 3rem;
   border-top: 2px solid #E5E5E5;
 }
@@ -831,18 +830,17 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .facilityItem {
   text-align: center;
-  padding: 1.5rem 0.5rem;
+  padding: 10px;
   background: white;
   border-radius: 0;
   border: 1px solid #E5E5E5;
-  margin-bottom: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
 }
@@ -868,7 +866,7 @@
 /* ==================== INCLUDED/EXCLUDED CARDS ==================== */
 .includedCard,
 .excludedCard {
-  background: white;
+background-image:url("../../images/grid8.png");
   padding: 2.5rem;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -880,17 +878,17 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 2px solid #C41E3A;
+  border-bottom: 2px solid #bd0005;
 }
 
 .excludedTitle {
   font-family: 'Philosopher', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 2px solid #4a5568;
@@ -923,7 +921,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -939,7 +937,7 @@
 
 /* ==================== TOTAL INVESTMENT ==================== */
 .totalInvestment {
-  background: white;
+ background-image:url("../../images/grid8.png");
   padding: 2.5rem;
   border-radius: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -952,12 +950,12 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 1rem;
 }
 
 .price {
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
 }
 
@@ -994,7 +992,7 @@
   border-radius: 0;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   border-right: 1px solid #E5E5E5;
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
@@ -1010,7 +1008,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #2d3748;
+  color: #000;
   margin-bottom: 0.8rem;
   display: flex;
   align-items: center;
@@ -1028,8 +1026,8 @@
 /* ==================== FINAL CTA ==================== */
 .finalCta {
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #C41E3A 0%, #8B1538 100%);
-  color: white;
+  background-color: #fff;
+  color: #bd0005;
   text-align: center;
 }
 
@@ -1042,6 +1040,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
+  color:#bd0005;
   margin-bottom: 1.5rem;
 }
 
@@ -1051,6 +1050,7 @@
   margin-bottom: 3rem;
   opacity: 0.95;
   line-height: 1.7;
+  color: #000;
 }
 
 .ctaStats {
@@ -1058,6 +1058,7 @@
   justify-content: center;
   gap: 3rem;
   margin: 3rem 0;
+  color: yellow;
   flex-wrap: wrap;
 }
 
@@ -1071,7 +1072,7 @@
   font-size: 3rem;
   font-weight: 700;
   line-height: 1;
-  color: white;
+  color: #bd0005;
 }
 
 .ctaStat small {
@@ -1082,14 +1083,15 @@
   margin-top: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color:#000;
 }
 
 .applyNowBtn {
   background: white;
-  color: #C41E3A;
+  color: #bd0005;
   padding: 1.2rem 3rem;
-  border-radius: 3px;
-  border: none;
+  border-radius: 10px;
+  border: 2px solid #bd0005;
   font-family: 'Quicksand', sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
