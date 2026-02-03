@@ -1624,8 +1624,11 @@
     .foodAccommodationGrid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        display: inline-block;
     }
-
+.yogaStyleButtons{
+    margin-top: 20px;
+}
     .heroRight,
     .infoColumn,
     .yogaVideoWrapper {

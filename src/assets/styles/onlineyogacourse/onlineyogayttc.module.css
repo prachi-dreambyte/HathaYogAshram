@@ -49,8 +49,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-30px) rotate(5deg); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
 }
 
 /* ========== HERO SECTION ========== */
@@ -79,12 +86,10 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(196, 30, 58, 0.85) 0%,
-    rgba(139, 0, 0, 0.75) 50%,
-    rgba(196, 30, 58, 0.85) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(196, 30, 58, 0.85) 0%,
+      rgba(139, 0, 0, 0.75) 50%,
+      rgba(196, 30, 58, 0.85) 100%);
 }
 
 .heroContent {
@@ -101,6 +106,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -116,8 +122,17 @@
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
 }
 
 .welcomeText {
@@ -206,8 +221,13 @@
 }
 
 @keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ========== SECTION HEADERS ========== */
@@ -257,8 +277,13 @@
   transform: translateY(-50%);
 }
 
-.titleUnderline::before { left: -20px; }
-.titleUnderline::after { right: -20px; }
+.titleUnderline::before {
+  left: -20px;
+}
+
+.titleUnderline::after {
+  right: -20px;
+}
 
 .sectionDescription {
   font-family: "Quicksand", sans-serif;
@@ -319,11 +344,9 @@
 .courseOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(196, 30, 58, 0) 0%,
-    rgba(196, 30, 58, 0.7) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(196, 30, 58, 0) 0%,
+      rgba(196, 30, 58, 0.7) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,8 +456,15 @@
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .bookingImageWrapper {
@@ -735,7 +765,7 @@
   background: var(--white);
   box-shadow: 0 5px 20px rgba(196, 30, 58, 0.15);
   transition: all 0.4s ease;
- 
+
 }
 
 .certLogo:hover {
@@ -849,12 +879,10 @@
 /* ========== FINAL CTA SECTION ========== */
 .finalCta {
   padding: 8rem 2rem;
-  background: linear-gradient(
-    135deg,
-    var(--deep-red) 0%,
-    var(--primary-red) 50%,
-    var(--deep-red) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--deep-red) 0%,
+      var(--primary-red) 50%,
+      var(--deep-red) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -904,35 +932,72 @@
 
 /* Extra Large Desktop - 1920px+ */
 @media (min-width: 1920px) {
-  .heroTitle { font-size: 5.5rem; }
-  .sectionTitle { font-size: 4rem; }
-  .ctaTitle { font-size: 4.5rem; }
+  .heroTitle {
+    font-size: 5.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 4rem;
+  }
+
+  .ctaTitle {
+    font-size: 4.5rem;
+  }
 }
 
 /* Large Desktop - 1440px to 1919px */
 @media (min-width: 1440px) and (max-width: 1919px) {
-  .heroTitle { font-size: 4.5rem; }
-  .sectionTitle { font-size: 3.5rem; }
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 3.5rem;
+  }
 }
 
 /* Desktop - 1200px to 1439px */
 @media (min-width: 1200px) and (max-width: 1439px) {
-  .heroTitle { font-size: 4rem; }
-  .sectionTitle { font-size: 3.2rem; }
-  .whyUsSection { gap: 3rem; }
+  .heroTitle {
+    font-size: 4rem;
+  }
+
+  .sectionTitle {
+    font-size: 3.2rem;
+  }
+
+  .whyUsSection {
+    gap: 3rem;
+  }
 }
 
 /* Laptop - 1024px to 1199px */
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .hero { min-height: 90vh; }
-  .heroTitle { font-size: 3.5rem; }
-  .heroSubtitle { font-size: 1.1rem; }
-  .sectionTitle { font-size: 2.8rem; }
+  .hero {
+    min-height: 90vh;
+  }
+
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.8rem;
+  }
+
   .whyUsSection {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .whyUsImage { height: 500px; }
+
+  .whyUsImage {
+    height: 500px;
+  }
+
   .whyUsContent .sectionLabel,
   .whyUsContent .sectionTitle,
   .whyUsContent .titleUnderline {
@@ -940,390 +1005,1009 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
-  .certificationSection { padding: 5rem 1.5rem; }
-  .certLogos { gap: 2rem; }
-  .certLogo { width: 100px; height: 100px; }
-  .certText { font-size: 1rem; padding: 0 1.5rem; }
+
+  .certificationSection {
+    padding: 5rem 1.5rem;
+  }
+
+  .certLogos {
+    gap: 2rem;
+  }
+
+  .certLogo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .certText {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
 }
 
 /* Tablet Landscape - 900px to 1023px */
 @media (min-width: 900px) and (max-width: 1023px) {
-  .hero { min-height: 80vh; padding: 1.5rem; }
-  .heroTitle { font-size: 3.2rem; }
-  .heroSubtitle { font-size: 1rem; }
-  .omSymbol { width: 60px; height: 60px; }
-  
-  .sectionTitle { font-size: 2.5rem; }
+  .hero {
+    min-height: 80vh;
+    padding: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 3.2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .omSymbol {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 5rem 1.5rem; }
-  
+  .howItWorksSection {
+    padding: 5rem 1.5rem;
+  }
+
   .coursesGrid,
   .bookingGrid,
-  .testimonialsGrid { gap: 2rem; }
-  
+  .testimonialsGrid {
+    gap: 2rem;
+  }
+
   .whyUsSection {
     grid-template-columns: 1fr;
     padding: 5rem 1.5rem;
   }
-  .whyUsImage { height: 450px; }
-  
-  .certificationSection { padding: 4.5rem 1.5rem; }
-  .certLogos { gap: 1.75rem; }
-  .certLogo { width: 95px; height: 95px; padding: 12px; }
-  .certText { font-size: 0.98rem; }
+
+  .whyUsImage {
+    height: 450px;
+  }
+
+  .certificationSection {
+    padding: 4.5rem 1.5rem;
+  }
+
+  .certLogos {
+    gap: 1.75rem;
+  }
+
+  .certLogo {
+    width: 95px;
+    height: 95px;
+    padding: 12px;
+  }
+
+  .certText {
+    font-size: 0.98rem;
+  }
 }
 
 /* Tablet Portrait - 768px to 899px */
 @media (min-width: 768px) and (max-width: 899px) {
-  .hero { min-height: 75vh; padding: 1.5rem; }
-  .heroTitle { font-size: 2.8rem; }
-  .heroSubtitle { font-size: 1rem; max-width: 600px; }
-  .omSymbol { width: 60px; height: 60px; }
+  .hero {
+    min-height: 75vh;
+    padding: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+
+  .omSymbol {
+    width: 60px;
+    height: 60px;
+  }
+
   .ctaButton {
     padding: 1rem 2.5rem;
     font-size: 1rem;
   }
-  
-  .sectionTitle { font-size: 2.3rem; }
-  .sectionDescription { font-size: 1rem; }
-  
-  .coursesGrid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-  .bookingGrid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-  .testimonialsGrid { grid-template-columns: 1fr; }
-  
+
+  .sectionTitle {
+    font-size: 2.3rem;
+  }
+
+  .sectionDescription {
+    font-size: 1rem;
+  }
+
+  .coursesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .bookingGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+
   .whyUsSection {
     grid-template-columns: 1fr;
     padding: 4rem 1.5rem;
   }
-  .whyUsImage { height: 400px; }
-  
-  .stepsContainer { grid-template-columns: repeat(2, 1fr); }
-  .finalCta { padding: 6rem 1.5rem; }
-  .ctaTitle { font-size: 3rem; }
-  
-  .certificationSection { padding: 4rem 1.5rem; }
-  .certLogos { gap: 1.5rem; }
-  .certLogo { width: 90px; height: 90px; }
-  .certText { font-size: 0.95rem; padding: 0 1rem; }
+
+  .whyUsImage {
+    height: 400px;
+  }
+
+  .stepsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .finalCta {
+    padding: 6rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 3rem;
+  }
+
+  .certificationSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .certLogos {
+    gap: 1.5rem;
+  }
+
+  .certLogo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .certText {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
   .lotusLeft,
-  .lotusRight { width: 200px; height: 200px; }
+  .lotusRight {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* Mobile Landscape - 640px to 767px */
 @media (min-width: 640px) and (max-width: 767px) {
-  .hero { min-height: 70vh; padding: 1.5rem; }
-  .heroTitle { font-size: 2.5rem; }
-  .heroSubtitle { font-size: 0.95rem; }
-  .omSymbol { width: 50px; height: 50px; }
-  .welcomeText { font-size: 1rem; }
+  .hero {
+    min-height: 70vh;
+    padding: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .omSymbol {
+    width: 50px;
+    height: 50px;
+  }
+
+  .welcomeText {
+    font-size: 1rem;
+  }
+
   .ctaButton {
     padding: 1rem 2rem;
     font-size: 0.95rem;
   }
-  
-  .sectionTitle { font-size: 2rem; }
-  .sectionLabel { font-size: 0.85rem; }
-  
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .sectionLabel {
+    font-size: 0.85rem;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 4rem 1.5rem; }
-  
-  .coursesGrid { grid-template-columns: 1fr; }
-  .bookingGrid { grid-template-columns: 1fr; }
-  .stepsContainer { grid-template-columns: 1fr; }
-  
+  .howItWorksSection {
+    padding: 4rem 1.5rem;
+  }
+
+  .coursesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .stepsContainer {
+    grid-template-columns: 1fr;
+  }
+
   .whyUsSection {
     grid-template-columns: 1fr;
     padding: 4rem 1.5rem;
     gap: 2rem;
+    display: inline-block;
   }
-  .whyUsImage { height: 350px; }
-  
-  .courseTitle { font-size: 1.8rem; }
-  .bookingTitle { font-size: 2rem; }
-  
-  .finalCta { padding: 5rem 1.5rem; }
-  .ctaTitle { font-size: 2.5rem; }
-  .ctaText { font-size: 1.1rem; }
-  
-  .certificationSection { padding: 3.5rem 1.5rem; }
-  .certLogos { gap: 1.25rem; }
-  .certLogo { width: 80px; height: 80px; padding: 10px; }
-  .certText { font-size: 0.9rem; padding: 0 1rem; }
+
+  .whyUsImage {
+    height: 350px;
+  }
+
+  .courseTitle {
+    font-size: 1.8rem;
+  }
+
+  .bookingTitle {
+    font-size: 2rem;
+  }
+
+  .finalCta {
+    padding: 5rem 1.5rem;
+  }
+
+  .ctaTitle {
+    font-size: 2.5rem;
+  }
+
+  .ctaText {
+    font-size: 1.1rem;
+  }
+
+  .certificationSection {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .certLogos {
+    gap: 1.25rem;
+  }
+
+  .certLogo {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+
+  .certText {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
   .lotusLeft,
-  .lotusRight { width: 150px; height: 150px; }
+  .lotusRight {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Mobile Portrait - 480px to 639px */
 @media (min-width: 480px) and (max-width: 639px) {
-  .hero { min-height: 65vh; padding: 1.25rem; }
-  .heroTitle { font-size: 2.2rem; line-height: 1.3; }
-  .heroSubtitle { font-size: 0.9rem; }
-  .omSymbol { width: 45px; height: 45px; }
-  .welcomeText { font-size: 0.9rem; letter-spacing: 1.5px; }
+  .hero {
+    min-height: 65vh;
+    padding: 1.25rem;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .heroSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .omSymbol {
+    width: 45px;
+    height: 45px;
+  }
+
+  .welcomeText {
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+  }
+
   .ctaButton {
     padding: 0.9rem 1.8rem;
     font-size: 0.9rem;
   }
-  .swastikDecor { width: 100px; height: 100px; }
-  
-  .sectionTitle { font-size: 1.8rem; }
-  .sectionLabel { font-size: 0.8rem; }
-  .sectionDescription { font-size: 0.95rem; }
-  
+
+  .swastikDecor {
+    width: 100px;
+    height: 100px;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+
+  .sectionLabel {
+    font-size: 0.8rem;
+  }
+
+  .sectionDescription {
+    font-size: 0.95rem;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 3.5rem 1.25rem; }
-  
-  .courseCard { border-radius: 15px; }
-  .courseImageWrapper { height: 240px; }
-  .courseTitle { font-size: 1.6rem; }
-  .detailItem { font-size: 0.9rem; padding: 0.6rem; }
-  
-  .bookingCard { border-radius: 15px; }
-  .bookingImageWrapper { height: 260px; }
-  .bookingTitle { font-size: 1.8rem; }
-  .newPrice { font-size: 2.2rem; }
-  .addToCartBtn { padding: 1rem; font-size: 0.95rem; }
-  
-  .testimonialCard { padding: 2rem; }
-  .avatar { width: 50px; height: 50px; font-size: 1.5rem; }
-  .reviewerName { font-size: 1.1rem; }
-  .testimonialText { font-size: 0.95rem; }
-  
-  .whyUsSection { padding: 3.5rem 1.25rem; }
-  .whyUsImage { height: 300px; border-radius: 15px; }
-  .benefitTitle { font-size: 1.3rem; }
-  .benefitDescription { font-size: 0.95rem; }
-  
-  .stepCard { padding: 2rem; border-radius: 15px; }
-  .stepNumber { font-size: 3rem; }
-  .stepTitle { font-size: 1.5rem; }
-  .stepDescription { font-size: 0.95rem; }
-  
-  .finalCta { padding: 4.5rem 1.25rem; }
-  .ctaOm { width: 80px; height: 80px; }
-  .ctaTitle { font-size: 2.2rem; }
-  .ctaText { font-size: 1rem; }
-  
+  .howItWorksSection {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .courseCard {
+    border-radius: 15px;
+  }
+
+  .courseImageWrapper {
+    height: 240px;
+  }
+
+  .courseTitle {
+    font-size: 1.6rem;
+  }
+
+  .detailItem {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .bookingCard {
+    border-radius: 15px;
+  }
+
+  .bookingImageWrapper {
+    height: 260px;
+  }
+
+  .bookingTitle {
+    font-size: 1.8rem;
+  }
+
+  .newPrice {
+    font-size: 2.2rem;
+  }
+
+  .addToCartBtn {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .testimonialCard {
+    padding: 2rem;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .reviewerName {
+    font-size: 1.1rem;
+  }
+
+  .testimonialText {
+    font-size: 0.95rem;
+  }
+
+  .whyUsSection {
+    padding: 3.5rem 1.25rem;
+    display: inline-block;
+  }
+
+  .whyUsImage {
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  .benefitTitle {
+    font-size: 1.3rem;
+  }
+
+  .benefitDescription {
+    font-size: 0.95rem;
+  }
+
+  .stepCard {
+    padding: 2rem;
+    border-radius: 15px;
+  }
+
+  .stepNumber {
+    font-size: 3rem;
+  }
+
+  .stepTitle {
+    font-size: 1.5rem;
+  }
+
+  .stepDescription {
+    font-size: 0.95rem;
+  }
+
+  .finalCta {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .ctaOm {
+    width: 80px;
+    height: 80px;
+  }
+
+  .ctaTitle {
+    font-size: 2.2rem;
+  }
+
+  .ctaText {
+    font-size: 1rem;
+  }
+
   .omDecor1,
-  .omDecor2 { width: 200px; height: 200px; }
-  
-  .certificationSection { padding: 3.5rem 1.25rem; }
-  .certLogos { gap: 1rem; }
-  .certLogo { width: 75px; height: 75px; padding: 8px; }
-  .certText { font-size: 0.9rem; padding: 0 0.5rem; }
+  .omDecor2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .certificationSection {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .certLogos {
+    gap: 1rem;
+  }
+
+  .certLogo {
+    width: 75px;
+    height: 75px;
+    padding: 8px;
+  }
+
+  .certText {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
 }
 
 /* Small Mobile - 375px to 479px */
 @media (min-width: 375px) and (max-width: 479px) {
-  .hero { min-height: 60vh; padding: 1rem; }
-  .heroTitle { font-size: 1.9rem; }
-  .heroSubtitle { font-size: 0.85rem; line-height: 1.6; }
-  .omSymbol { width: 40px; height: 40px; }
-  .welcomeText { font-size: 0.85rem; letter-spacing: 1px; }
+  .hero {
+    min-height: 60vh;
+    padding: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 1.9rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .omSymbol {
+    width: 40px;
+    height: 40px;
+  }
+
+  .welcomeText {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
+
   .ctaButton {
     padding: 0.85rem 1.5rem;
     font-size: 0.85rem;
     gap: 0.5rem;
   }
-  .swastikDecor { width: 80px; height: 80px; }
-  
-  .sectionTitle { font-size: 1.6rem; }
-  .sectionLabel { font-size: 0.75rem; letter-spacing: 2px; }
-  .sectionDescription { font-size: 0.9rem; }
-  .titleUnderline { width: 80px; height: 3px; }
-  
+
+  .swastikDecor {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+  }
+
+  .sectionLabel {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+  }
+
+  .sectionDescription {
+    font-size: 0.9rem;
+  }
+
+  .titleUnderline {
+    width: 80px;
+    height: 3px;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 3rem 1rem; }
-  
+  .howItWorksSection {
+    padding: 3rem 1rem;
+  }
+
   .coursesGrid,
   .bookingGrid,
-  .testimonialsGrid { gap: 1.5rem; }
-  
-  .courseCard { border-radius: 12px; }
-  .courseImageWrapper { height: 220px; }
-  .courseContent { padding: 1.5rem; }
-  .courseTitle { font-size: 1.5rem; }
+  .testimonialsGrid {
+    gap: 1.5rem;
+  }
+
+  .courseCard {
+    border-radius: 12px;
+  }
+
+  .courseImageWrapper {
+    height: 220px;
+  }
+
+  .courseContent {
+    padding: 1.5rem;
+  }
+
+  .courseTitle {
+    font-size: 1.5rem;
+  }
+
   .detailItem {
     font-size: 0.85rem;
     padding: 0.5rem;
     gap: 0.75rem;
   }
-  
-  .bookingCard { border-radius: 12px; }
-  .bookingImageWrapper { height: 240px; }
-  .bookingContent { padding: 1.5rem; }
-  .bookingTitle { font-size: 1.6rem; }
-  .newPrice { font-size: 2rem; }
-  .oldPrice { font-size: 1.1rem; }
+
+  .bookingCard {
+    border-radius: 12px;
+  }
+
+  .bookingImageWrapper {
+    height: 240px;
+  }
+
+  .bookingContent {
+    padding: 1.5rem;
+  }
+
+  .bookingTitle {
+    font-size: 1.6rem;
+  }
+
+  .newPrice {
+    font-size: 2rem;
+  }
+
+  .oldPrice {
+    font-size: 1.1rem;
+  }
+
   .addToCartBtn {
     padding: 0.9rem;
     font-size: 0.9rem;
   }
+
   .newBadge {
     font-size: 0.75rem;
     padding: 0.4rem 1.2rem;
   }
-  
-  .testimonialCard { padding: 1.75rem; border-radius: 15px; }
-  .quoteIcon { font-size: 5rem; top: -15px; left: 20px; }
-  .avatar { width: 45px; height: 45px; font-size: 1.3rem; }
-  .reviewerName { font-size: 1rem; }
-  .reviewTime { font-size: 0.85rem; }
-  .testimonialText { font-size: 0.9rem; }
-  
-  .whyUsSection { padding: 3rem 1rem; }
-  .whyUsIntro { font-size: 0.95rem; margin: 1.5rem 0 2rem; }
-  .whyUsImage { height: 280px; }
-  .benefitItem { gap: 1rem; }
-  .benefitIcon { width: 35px; height: 35px; }
-  .benefitTitle { font-size: 1.2rem; }
-  .benefitDescription { font-size: 0.9rem; }
-  
-  .stepCard { padding: 1.75rem; }
-  .stepNumber { font-size: 2.5rem; }
-  .stepTitle { font-size: 1.3rem; }
-  .stepDescription { font-size: 0.9rem; }
-  
-  .finalCta { padding: 4rem 1rem; }
-  .ctaOm { width: 70px; height: 70px; }
-  .ctaTitle { font-size: 2rem; }
-  .ctaText { font-size: 0.95rem; }
-  
+
+  .testimonialCard {
+    padding: 1.75rem;
+    border-radius: 15px;
+  }
+
+  .quoteIcon {
+    font-size: 5rem;
+    top: -15px;
+    left: 20px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .reviewerName {
+    font-size: 1rem;
+  }
+
+  .reviewTime {
+    font-size: 0.85rem;
+  }
+
+  .testimonialText {
+    font-size: 0.9rem;
+  }
+
+  .whyUsSection {
+    padding: 3rem 1rem;
+    display: inline-block;
+  }
+
+  .whyUsIntro {
+    font-size: 0.95rem;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .whyUsImage {
+    height: 280px;
+  }
+
+  .benefitItem {
+    gap: 1rem;
+  }
+
+  .benefitIcon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .benefitTitle {
+    font-size: 1.2rem;
+  }
+
+  .benefitDescription {
+    font-size: 0.9rem;
+  }
+
+  .stepCard {
+    padding: 1.75rem;
+  }
+
+  .stepNumber {
+    font-size: 2.5rem;
+  }
+
+  .stepTitle {
+    font-size: 1.3rem;
+  }
+
+  .stepDescription {
+    font-size: 0.9rem;
+  }
+
+  .finalCta {
+    padding: 4rem 1rem;
+  }
+
+  .ctaOm {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ctaTitle {
+    font-size: 2rem;
+  }
+
+  .ctaText {
+    font-size: 0.95rem;
+  }
+
   .omDecor1,
-  .omDecor2 { width: 150px; height: 150px; }
-  
-  .certificationSection { padding: 3rem 1rem; }
-  .certLogos { gap: 0.85rem; }
-  .certLogo { 
-    width: 65px; 
-    height: 65px; 
-    padding: 6px; 
+  .omDecor2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .certificationSection {
+    padding: 3rem 1rem;
+  }
+
+  .certLogos {
+    gap: 0.85rem;
+  }
+
+  .certLogo {
+    width: 65px;
+    height: 65px;
+    padding: 6px;
     border-width: 2px;
   }
-  .certText { 
-    font-size: 0.85rem; 
-    padding: 0 0.5rem; 
+
+  .certText {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
     line-height: 1.7;
     margin-bottom: 1.25rem;
   }
+
   .lotusLeft,
-  .lotusRight { width: 120px; height: 120px; }
+  .lotusRight {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 /* Extra Small Mobile - 320px to 374px */
 @media (max-width: 374px) {
-  .hero { min-height: 55vh; padding: 0.875rem; }
-  .heroTitle { font-size: 1.7rem; }
-  .heroSubtitle { font-size: 0.8rem; }
-  .omSymbol { width: 35px; height: 35px; }
-  .welcomeText { font-size: 0.8rem; margin-bottom: 1rem; }
+  .hero {
+    min-height: 55vh;
+    padding: 0.875rem;
+  }
+
+  .heroTitle {
+    font-size: 1.7rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.8rem;
+  }
+
+  .omSymbol {
+    width: 35px;
+    height: 35px;
+  }
+
+  .welcomeText {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
   .ctaButton {
     padding: 0.75rem 1.25rem;
     font-size: 0.8rem;
   }
-  .swastikDecor { display: none; }
-  
-  .sectionTitle { font-size: 1.4rem; }
-  .sectionLabel { font-size: 0.7rem; }
-  .sectionDescription { font-size: 0.85rem; }
-  
+
+  .swastikDecor {
+    display: none;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .sectionLabel {
+    font-size: 0.7rem;
+  }
+
+  .sectionDescription {
+    font-size: 0.85rem;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 2.5rem 0.875rem; }
-  
-  .courseImageWrapper { height: 200px; }
-  .courseContent { padding: 1.25rem; }
-  .courseTitle { font-size: 1.35rem; }
-  .detailItem { font-size: 0.8rem; }
-  
-  .bookingImageWrapper { height: 220px; }
-  .bookingContent { padding: 1.25rem; }
-  .bookingTitle { font-size: 1.45rem; }
-  .newPrice { font-size: 1.85rem; }
-  .addToCartBtn { font-size: 0.85rem; }
-  
-  .testimonialCard { padding: 1.5rem; }
-  .avatar { width: 40px; height: 40px; font-size: 1.2rem; }
-  .reviewerName { font-size: 0.95rem; }
-  .testimonialText { font-size: 0.85rem; }
-  
-  .whyUsImage { height: 260px; }
-  .benefitTitle { font-size: 1.1rem; }
-  .benefitDescription { font-size: 0.85rem; }
-  
-  .stepCard { padding: 1.5rem; }
-  .stepNumber { font-size: 2.2rem; }
-  .stepTitle { font-size: 1.2rem; }
-  .stepDescription { font-size: 0.85rem; }
-  
-  .finalCta { padding: 3.5rem 0.875rem; }
-  .ctaOm { width: 60px; height: 60px; }
-  .ctaTitle { font-size: 1.8rem; }
-  .ctaText { font-size: 0.9rem; }
-  
+  .howItWorksSection {
+    padding: 2.5rem 0.875rem;
+  }
+
+  .courseImageWrapper {
+    height: 200px;
+  }
+
+  .courseContent {
+    padding: 1.25rem;
+  }
+
+  .courseTitle {
+    font-size: 1.35rem;
+  }
+
+  .detailItem {
+    font-size: 0.8rem;
+  }
+
+  .bookingImageWrapper {
+    height: 220px;
+  }
+
+  .bookingContent {
+    padding: 1.25rem;
+  }
+
+  .bookingTitle {
+    font-size: 1.45rem;
+  }
+
+  .newPrice {
+    font-size: 1.85rem;
+  }
+
+  .addToCartBtn {
+    font-size: 0.85rem;
+  }
+
+  .testimonialCard {
+    padding: 1.5rem;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .reviewerName {
+    font-size: 0.95rem;
+  }
+
+  .testimonialText {
+    font-size: 0.85rem;
+  }
+
+  .whyUsImage {
+    height: 260px;
+  }
+
+  .benefitTitle {
+    font-size: 1.1rem;
+  }
+
+  .benefitDescription {
+    font-size: 0.85rem;
+  }
+
+  .stepCard {
+    padding: 1.5rem;
+  }
+
+  .stepNumber {
+    font-size: 2.2rem;
+  }
+
+  .stepTitle {
+    font-size: 1.2rem;
+  }
+
+  .stepDescription {
+    font-size: 0.85rem;
+  }
+
+  .finalCta {
+    padding: 3.5rem 0.875rem;
+  }
+
+  .ctaOm {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ctaTitle {
+    font-size: 1.8rem;
+  }
+
+  .ctaText {
+    font-size: 0.9rem;
+  }
+
   .omDecor1,
-  .omDecor2 { width: 120px; height: 120px; }
-  
-  .certificationSection { padding: 2.5rem 0.875rem; }
-  .certLogos { 
+  .omDecor2 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .certificationSection {
+    padding: 2.5rem 0.875rem;
+  }
+
+  .certLogos {
     gap: 0.75rem;
     margin-bottom: 2.5rem;
   }
-  .certLogo { 
-    width: 60px; 
-    height: 60px; 
-    padding: 5px; 
+
+  .certLogo {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
     border-width: 2px;
   }
-  .certText { 
-    font-size: 0.8rem; 
-    padding: 0 0.25rem; 
+
+  .certText {
+    font-size: 0.8rem;
+    padding: 0 0.25rem;
     line-height: 1.65;
     margin-bottom: 1rem;
   }
-  .lotusLeft { left: -30px; }
-  .lotusRight { right: -30px; }
+
+  .lotusLeft {
+    left: -30px;
+  }
+
+  .lotusRight {
+    right: -30px;
+  }
+  .whyUsContent{
+    display: inline-block;
+  }
+  .whyUsSection{
+    display: inline-block;
+  }
 }
 
 /* Ultra Small - below 320px */
 @media (max-width: 319px) {
-  .hero { min-height: 50vh; padding: 0.75rem; }
-  .heroTitle { font-size: 1.5rem; }
-  .heroSubtitle { font-size: 0.75rem; }
-  .omSymbol { width: 30px; height: 30px; }
-  .ctaButton { padding: 0.65rem 1rem; font-size: 0.75rem; }
-  
-  .sectionTitle { font-size: 1.25rem; }
+  .hero {
+    min-height: 50vh;
+    padding: 0.75rem;
+  }
+
+  .heroTitle {
+    font-size: 1.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 0.75rem;
+  }
+
+  .omSymbol {
+    width: 30px;
+    height: 30px;
+  }
+
+  .ctaButton {
+    padding: 0.65rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
   .coursesSection,
   .bookingSection,
   .testimonialsSection,
-  .howItWorksSection { padding: 2rem 0.75rem; }
-  
+  .howItWorksSection {
+    padding: 2rem 0.75rem;
+  }
+
   .courseTitle,
-  .bookingTitle { font-size: 1.2rem; }
-  .newPrice { font-size: 1.6rem; }
-  
-  .finalCta { padding: 3rem 0.75rem; }
-  .ctaTitle { font-size: 1.6rem; }
-  
-  .certificationSection { padding: 2rem 0.75rem; }
-  .certLogos { gap: 0.6rem; }
-  .certLogo { 
-    width: 55px; 
-    height: 55px; 
+  .bookingTitle {
+    font-size: 1.2rem;
+  }
+
+  .newPrice {
+    font-size: 1.6rem;
+  }
+
+  .finalCta {
+    padding: 3rem 0.75rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.6rem;
+  }
+
+  .certificationSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .certLogos {
+    gap: 0.6rem;
+  }
+
+  .certLogo {
+    width: 55px;
+    height: 55px;
     padding: 4px;
   }
-  .certText { font-size: 0.75rem; line-height: 1.6; }
+
+  .certText {
+    font-size: 0.75rem;
+    line-height: 1.6;
+  }
+
   .lotusLeft,
-  .lotusRight { display: none; }
+  .lotusRight {
+    display: none;
+  }
 }

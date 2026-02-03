@@ -1019,6 +1019,9 @@
   .swastikBottom {
     font-size: 40px;
   }
+  .contentWrapper{
+    display: inline-block;
+  }
 }
 
 /* Small Mobile Devices (376px to 480px) */
@@ -1029,6 +1032,7 @@
   
   .contentWrapper {
     border-radius: 14px;
+    display: inline-block;
   }
   
   .imageSection {
@@ -1191,6 +1195,7 @@
   
   .contentWrapper {
     border-radius: 12px;
+    display: inline-block;
   }
   
   .imageSection {
@@ -1417,5 +1422,9 @@
   .cornerDecorBR {
     width: 38px;
     height: 38px;
+  }
+  .contentWrapper {
+    border-radius: 12px;
+    display: inline-block;
   }
 }
