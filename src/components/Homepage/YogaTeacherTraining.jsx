@@ -50,6 +50,22 @@ const courses = [
     sharedRoom: "$1900",
     path: "/YogaCourse500",
   },
+  {
+    image: img4,
+    title: "200 Kundlani Yoga Teacher Training",
+    duration: "56 Days",
+    privateRoom: "$2350",
+    sharedRoom: "$1900",
+    path: "/kundalini-200",
+  },
+  {
+    image: img4,
+    title: "300 Kundlani Yoga Teacher Training",
+    duration: "56 Days",
+    privateRoom: "$2350",
+    sharedRoom: "$1900",
+    path: "/kundalini-300",
+  },
 ];
 
 

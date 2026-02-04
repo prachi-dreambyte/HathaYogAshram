@@ -1,33 +1,43 @@
-/* =====================
-   FACILITIES SECTION
-===================== */
+/* Facilities Design 3: Full Height with Slide-up Content */
+
 .facilitiesSection {
+  position: relative;
+  min-height: 100vh;
   padding: 80px 0;
-  /* background: #fff; */ 
-  background-image: linear-gradient(#f3f3f3, #fff);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 105, 30, 0.18) 0%,
+    rgba(196, 30, 58, 0.15) 100%
+  ),
+  url('../../images/BackBanner_V02.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.container {
-  max-width: 1200px;
+.sectionContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
-/* =====================
-   HEADING
-===================== */
 .headingWrapper {
   text-align: center;
   margin-bottom: 60px;
 }
 
 .heading {
-  color: #bd0005;
+  font-size: 4rem;
   font-weight: 700;
-  font-size: clamp(28px, 4vw, 42px);
-  margin-bottom: 12px;
-  line-height: 1.3;
-  font-family: "Philosopher" , sans-serif ;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  color: #bd0005;
+  font-family: "Philosopher", sans-serif;
+  line-height: 1.2;
 }
 
 .headingLine {
@@ -38,222 +48,172 @@
   margin: 16px auto 0;
 }
 
-/* =====================
-   ROW LAYOUT
-===================== */
-.row {
+/* Grid Layout */
+.facilitiesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
 }
 
-/* =====================
-   TEXT CARDS
-===================== */
-.textCard {
+/* Facility Card */
+.facilityItem {
   position: relative;
-  padding: 40px 32px;
+  height: 500px;
   border-radius: 20px;
-  min-height: 420px;
-  background: white;
-  box-shadow: 0 10px 40px rgba(106, 27, 77, 0.08);
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-  cursor: pointer;
   overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.textCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 50px rgba(106, 27, 77, 0.15);
+.facilityItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(189, 0, 5, 0.3);
 }
 
-.textCard.expanded {
-  min-height: auto;
-}
-
-/* Decorative Blur Element */
-.decorativeBlur {
+/* Background Image */
+.facilityImageWrapper {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  opacity: 0.5;
-  filter: blur(40px);
-  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
-/* =====================
-   COLOR THEMES
-===================== */
-/* Purple Theme */
-.textCard.purple {
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #a855f7, #ec4899);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.textCard.purple .decorativeBlur {
-  background: linear-gradient(135deg, #f0e7ff, #ffe7f3);
-}
-
-.textCard.purple .cardTitle {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-.textCard.purple .toggleButton span {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-/* Blue Theme */
-.textCard.blue {
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #3b82f6, #06b6d4);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.textCard.blue .decorativeBlur {
-  background: linear-gradient(135deg, #dbeafe, #cffafe);
-}
-
-.textCard.blue .cardTitle {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-.textCard.blue .toggleButton span {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-/* Green Theme */
-.textCard.green {
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #10b981, #14b8a6);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.textCard.green .decorativeBlur {
-  background: linear-gradient(135deg, #d1fae5, #ccfbf1);
-}
-
-.textCard.green .cardTitle {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-.textCard.green .toggleButton span {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-/* Orange Theme */
-.textCard.orange {
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #f97316, #ef4444);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.textCard.orange .decorativeBlur {
-  background: linear-gradient(135deg, #fed7aa, #fecaca);
-}
-
-.textCard.orange .cardTitle {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-.textCard.orange .toggleButton span {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-/* Indigo Theme */
-.textCard.indigo {
-  background-image: linear-gradient(white, white), linear-gradient(135deg, #6366f1, #8b5cf6);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-}
-
-.textCard.indigo .decorativeBlur {
-  background: linear-gradient(135deg, #e0e7ff, #ede9fe);
-}
-
-.textCard.indigo .cardTitle {
-  color: #bd0005;
-  font-family: "Philosopher" , sans-serif ;
-}
-
-.textCard.indigo .toggleButton span {
-  color: #bd0005;
-  vfont-family: "Philosopher" , sans-serif ;
-}
-
-/* =====================
-   CARD CONTENT
-===================== */
-.cardTitle {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 18px;
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.cardText {
-  font-size: 15px;
-  line-height: 1.8;
-  color: #4a4a4a;
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.toggleButton {
-  text-align: center;
-  margin-top: 24px;
-  position: relative;
-  z-index: 2;
-}
-
-.toggleButton span {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-/* =====================
-   IMAGE CARDS
-===================== */
-.imageWrapper {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  min-height: 420px;
-}
-
-.image {
+.facilityImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
-.image:hover {
-  transform: scale(1.05);
+.facilityItem:hover .facilityImage {
+  transform: scale(1.1);
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
+/* Dark Overlay */
+.facilityImageWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  transition: background 0.4s ease;
+}
+
+.facilityItem:hover .facilityImageWrapper::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+}
+
+/* Content Container */
+.facilityContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.facilityTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Philosopher", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.facilityItem:hover .facilityTitle {
+  color: #ffd700;
+  transform: translateY(-10px);
+}
+
+/* Title Underline */
+.facilityTitle::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  margin-top: 10px;
+  transition: width 0.4s ease;
+}
+
+.facilityItem:hover .facilityTitle::after {
+  width: 100px;
+}
+
+/* Description Text */
+.facilityText {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.facilityItem:hover .facilityText {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* Decorative Corner Element */
+.facilityItem::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-top: 4px solid rgba(255, 215, 0, 0.6);
+  border-right: 4px solid rgba(255, 215, 0, 0.6);
+  z-index: 3;
+  opacity: 0;
+  transform: translate(10px, -10px);
+  transition: all 0.4s ease;
+}
+
+.facilityItem:hover::before {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .facilitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+  }
+
+  .facilityItem {
+    height: 450px;
+  }
+}
+
 @media (max-width: 768px) {
   .facilitiesSection {
     padding: 60px 0;
@@ -263,37 +223,89 @@
     margin-bottom: 40px;
   }
 
-  .row {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    margin-bottom: 20px;
+  .heading {
+    font-size: 2.5rem;
+    letter-spacing: 0.08em;
   }
 
-  .textCard {
-    padding: 30px 24px;
-    min-height: 350px;
+  .facilitiesGrid {
+    gap: 1.75rem;
   }
 
-  .imageWrapper {
-    min-height: 300px;
+  .sectionContent {
+    padding: 0 1.5rem;
   }
 
-  .cardTitle {
-    font-size: 20px;
+  .facilityItem {
+    height: 400px;
   }
 
-  .cardText {
+  .facilityTitle {
+    font-size: 1.6rem;
+  }
+
+  .facilityContent {
+    padding: 24px;
+  }
+
+  .facilityText {
     font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
-  .textCard {
-    padding: 24px 20px;
-    min-height: 320px;
+@media (max-width: 576px) {
+  .facilitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
-  .imageWrapper {
-    min-height: 250px;
+  .heading {
+    font-size: 2rem;
+  }
+
+  .facilityItem {
+    height: 450px;
+  }
+
+  .facilityContent {
+    padding: 24px 20px;
+  }
+
+  .facilityTitle {
+    font-size: 1.5rem;
+  }
+
+  /* Show text by default on mobile */
+  .facilityText {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  .facilitiesSection {
+    padding: 40px 0;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  .sectionContent {
+    padding: 0 1rem;
+  }
+
+  .facilityItem {
+    height: 420px;
+  }
+
+  .facilityTitle {
+    font-size: 1.3rem;
+  }
+
+  .facilityText {
+    font-size: 13px;
   }
 }
