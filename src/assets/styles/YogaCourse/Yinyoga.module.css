@@ -30,7 +30,6 @@
 .heroSection {
   position: relative;
   padding: 3rem 2rem 2rem;
-  min-height: 620px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -153,12 +152,10 @@
 .breadcrumb {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
   background: #ffffff;
-  color: #C41E3A;
-  padding: 0.4rem 0.9rem;
+  color: #bd0005;
   border-radius: 3px;
-  font-size: 0.8rem;
+  font-size: 20px;
   margin-top: 1rem;
   width: fit-content;
   font-family: 'Quicksand', sans-serif;
@@ -166,12 +163,12 @@
 }
 
 .breadcrumbLink {
-  color: #C41E3A;
+  color: #bd0005;
   text-decoration: none;
 }
 
 .breadcrumbSeparator {
-  color: #C41E3A;
+  color: #bd0005;
   margin: 0 0.3rem;
 }
 
@@ -181,7 +178,7 @@
 
 .heroStats {
   background: white;
-  padding: 0;
+  padding: 90px;
   position: relative;
   z-index: 10;
 }
@@ -221,18 +218,18 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 42px;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   margin-bottom: 8px;
   letter-spacing: 1px;
 }
 
 .statLabel {
   font-family: 'Quicksand', sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #666;
+  color: #000;
 }
 
 /* ===================================================
@@ -243,6 +240,7 @@
   padding: 80px 24px;
   position: relative;
   overflow: hidden;
+  background-image: linear-gradient(to right, #fff, #f8e4e4) !important;
 }
 
 .floatingSection::before {
@@ -299,7 +297,7 @@
 .floatCard:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
-  border-top-color: #C41E3A;
+  border-top-color: #bd0005;
 }
 
 .cardIcon {
@@ -312,7 +310,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 16px;
 }
 
@@ -349,11 +347,11 @@
 .sectionLabel {
   display: inline-block;
   font-family: 'Quicksand', sans-serif;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #C41E3A;
+  color: #bd0005;
   margin-bottom: 16px;
 }
 
@@ -361,7 +359,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 42px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 24px;
   line-height: 1.2;
 }
@@ -369,7 +367,7 @@
 .decorativeLine {
   width: 60px;
   height: 3px;
-  background: #C41E3A;
+  background: #bd0005;
   margin: 1rem auto;
   position: relative;
 }
@@ -380,7 +378,7 @@
   position: absolute;
   width: 8px;
   height: 8px;
-  background: #C41E3A;
+  background: #bd0005;
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
@@ -494,14 +492,14 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #bd0005;
   margin: 0 0 8px;
 }
 
 .highlight p {
   font-family: 'Quicksand', sans-serif;
   font-size: 15px;
-  color: #666;
+  color: #000;
   line-height: 1.7;
   margin: 0;
 }
@@ -614,7 +612,7 @@
 }
 
 .schoolCardActive {
-  border-color: #C41E3A;
+  border-color: #bd0005;
   transform: scale(1.02);
 }
 
@@ -635,7 +633,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   font-family: 'Philosopher', sans-serif;
   font-size: 14px;
@@ -652,14 +650,14 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 22px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 8px;
 }
 
 .schoolTagline {
   font-family: 'Quicksand', sans-serif;
   font-size: 14px;
-  color: #C41E3A;
+  color: #bd0005;
   font-style: italic;
   margin: 0 0 8px;
 }
@@ -733,7 +731,7 @@
 .meridianItem:hover {
   transform: translateX(8px);
   box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
-  border-left-color: #C41E3A;
+  border-left-color: #bd0005;
   background: white;
 }
 
@@ -747,7 +745,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 8px;
 }
 
@@ -757,7 +755,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #C41E3A;
+  color: #bd0005;
   margin: 0 0 8px;
 }
 
@@ -847,15 +845,15 @@
 }
 
 .tabBtn:hover {
-  color: #C41E3A;
-  border-color: #C41E3A;
+  color: #bd0005;
+  border-color: #bd0005;
   background: rgba(196, 30, 58, 0.05);
 }
 
 .tabBtn.active {
   color: white;
-  border-color: #C41E3A;
-  background: #C41E3A;
+  border-color: #bd0005;
+  background: #bd0005;
 }
 
 .tabContent {
@@ -869,9 +867,9 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 28px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 32px;
-  border-bottom: 2px solid #C41E3A;
+  border-bottom: 2px solid #bd0005;
   padding-bottom: 12px;
 }
 
@@ -879,7 +877,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   margin: 24px 0 16px;
 }
 
@@ -892,7 +890,7 @@
 .curriculumCard {
   padding: 28px;
   background: #f8f6f3;
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
@@ -907,7 +905,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 12px;
 }
 
@@ -941,7 +939,7 @@
   content: '●';
   position: absolute;
   left: 0;
-  color: #C41E3A;
+  color: #bd0005;
   font-size: 14px;
 }
 
@@ -961,14 +959,14 @@
   padding: 24px;
   background: rgba(196, 30, 58, 0.05);
   border-radius: 10px;
-  border-left: 4px solid #C41E3A;
+  border-left: 4px solid #bd0005;
 }
 
 .asanaNote p {
   font-family: 'Philosopher', sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 16px;
 }
 
@@ -990,7 +988,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
 }
 
@@ -1032,6 +1030,7 @@
   border-radius: 15px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  border:2px solid #bd0005;
 }
 
 .practiceCard:hover {
@@ -1050,7 +1049,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 24px;
 }
 
@@ -1073,7 +1072,7 @@
   content: '●';
   position: absolute;
   left: 0;
-  color: #C41E3A;
+  color: #bd0005;
   font-size: 14px;
 }
 
@@ -1147,11 +1146,11 @@
 .pricingCard:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
-  border-color: #C41E3A;
+  border-color: #bd0005;
 }
 
 .pricingCard.featured {
-  border-color: #C41E3A;
+  border-color: #bd0005;
   transform: scale(1.05);
 }
 
@@ -1163,7 +1162,7 @@
   position: absolute;
   top: -16px;
   right: 32px;
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-size: 11px;
@@ -1185,7 +1184,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   margin: 0 0 20px;
 }
 
@@ -1201,7 +1200,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 28px;
   font-weight: 700;
-  color: #C41E3A;
+  color: #bd0005;
   margin-top: 8px;
 }
 
@@ -1209,7 +1208,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 64px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
   line-height: 1;
 }
 
@@ -1242,7 +1241,7 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #C41E3A;
+  color: #bd0005;
   font-weight: 700;
   font-size: 16px;
 }
@@ -1255,16 +1254,16 @@
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: #C41E3A;
+  background: #bd0005;
   color: white;
-  border: 2px solid #C41E3A;
+  border: 2px solid #bd0005;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .priceBtn:hover {
   background: white;
-  color: #C41E3A;
+  color: #bd0005;
   transform: translateY(-2px);
 }
 
@@ -1333,7 +1332,7 @@
 }
 
 .faqItem:hover {
-  border-left-color: #C41E3A;
+  border-left-color: #bd0005;
   box-shadow: 0 10px 30px rgba(196, 30, 58, 0.1);
   background: white;
 }
@@ -1356,17 +1355,17 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 17px;
   font-weight: 700;
-  color: #2C2C2C;
+  color: #000;
 }
 
 .faqQuestion:hover span {
-  color: #C41E3A;
+  color: #bd0005;
 }
 
 .faqIcon {
   width: 24px;
   height: 24px;
-  color: #C41E3A;
+  color: #bd0005;
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
@@ -1401,7 +1400,7 @@
 
 .ctaSection {
   padding: 100px 24px;
-  background: linear-gradient(135deg, #C41E3A 0%, #8B1F3F 100%);
+  background: url("../../images/grid8.png");
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1453,7 +1452,7 @@
   font-family: 'Philosopher', sans-serif;
   font-size: 48px;
   font-weight: 700;
-  color: white;
+  color: #bd0005;
   margin: 0 0 20px;
 }
 
@@ -1461,7 +1460,7 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
   margin: 0 0 40px;
   line-height: 1.8;
 }
@@ -1486,26 +1485,26 @@
 }
 
 .ctaPrimary {
-  background: white;
-  color: #C41E3A;
-  border: 2px solid white;
+  background: #f8e4e4;
+  color: #bd0005;
+  border: 2px solid #bd0005;
 }
 
 .ctaPrimary:hover {
   background: transparent;
-  color: white;
+  color: #bd0005;
   transform: translateY(-4px);
 }
 
 .ctaSecondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: #bd0005;
+  border: 2px solid #bd0005;
 }
 
 .ctaSecondary:hover {
-  background: white;
-  color: #C41E3A;
+  background: #f8e4e4;
+  color: #bd0005;
   transform: translateY(-4px);
 }
 
