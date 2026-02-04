@@ -4,7 +4,7 @@ import transportationImg from "../../assets/images/library.jpg";
 import libraryImg from "../../assets/images/excursion.jpg";
 import excursionsImg from "../../assets/images/station.jpg";
 import foodImg from "../../assets/images/food.jpg";
-import supportImg from "../../assets/images/food.jpg";
+import supportImg from "../../assets/images/24to7avavlible.jpg";
 
 const FacilitiesDesign4 = () => {
   const facilities = [
