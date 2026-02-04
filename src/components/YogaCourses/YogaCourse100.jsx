@@ -432,8 +432,11 @@ export default function YogaCourse100() {
           ))}
         </div>
       </section>
-
+ 
       <Hours24 />
+      
+
+      
 
       {/* Testimonials Section */}
       <section className={styles.testimonialsSection}>

@@ -27,7 +27,9 @@ export const Homepage = () => {
     <>
     <Hero/>
     <YogaSchool/>
-    <YogaTeachersSection/>
+   
+     <YogaTeacherTraining/>
+      <YogaTeachersSection/>
     <YogaAlliance/>
     <YogaIntro/>
     <YogaOverview/>
@@ -37,7 +39,7 @@ export const Homepage = () => {
     <WhyChooseUs/>
     <Testimonials/>
     <StudentReviews/>
-    <YogaTeacherTraining/>
+   
     <ReviewsSection/>
     <YogaRetreat/>
     <VedicMantraCourse/>

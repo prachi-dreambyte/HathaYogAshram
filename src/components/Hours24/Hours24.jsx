@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../assets/styles/Hours24/24hours.module.css';
+import YogaTeacherTraining from 'components/Homepage/YogaTeacherTraining';
 
 export default function Hours24() {
   const weekJourney = [
@@ -74,7 +75,7 @@ export default function Hours24() {
           </div>
         </div>
       </section>
-
+<YogaTeacherTraining/>
       {/* Features */}
       <section className={styles.featuresSection}>
         <div className={styles.container}>
