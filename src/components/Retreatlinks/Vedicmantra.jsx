@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../assets/styles/retreatlinks/Vedicmantra.module.css';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 const VedicMantra = () => {
   const [activeMantra, setActiveMantra] = useState(null);
@@ -222,6 +223,8 @@ const VedicMantra = () => {
           </div>
         </div>
       </section>
+
+      <BooksSection />
 
       {/* Types of Vedic Mantras */}
       <section className={styles.typesSection}>

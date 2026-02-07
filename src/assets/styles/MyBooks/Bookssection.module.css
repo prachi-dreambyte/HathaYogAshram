@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Books Section */
+.booksSection {
+  padding: 4rem 2rem;
+  background: #FAFAFA;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 0.9rem;
+  color: #D2691E;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 0.5rem;
+}
+
+.decorativeLine {
+  width: 60px;
+  height: 3px;
+  background: #D2691E;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #D2691E;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decorativeLine::before {
+  left: -15px;
+}
+
+.decorativeLine::after {
+  right: -15px;
+}
+
+.sectionDescription {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+  text-align: center;
+}
+
+/* Books Grid - 4 columns */
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bookCard {
+  background: white;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bookCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #C41E3A;
+}
+
+.bookCover {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.bookCover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.bookCard:hover .bookCover img {
+  transform: scale(1.05);
+}
+
+.bookOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(196, 30, 58, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bookCard:hover .bookOverlay {
+  opacity: 1;
+}
+
+.viewText {
+  background: white;
+  color: #C41E3A;
+  padding: 0.8rem 1.5rem;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bookInfo {
+  padding: 1.25rem;
+}
+
+.bookCategory {
+  display: inline-block;
+  background: #C41E3A;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8rem;
+}
+
+.bookTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.6rem;
+}
+
+.bookAuthor {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.bookMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.metaSeparator {
+  color: #ddd;
+}
+
+.downloadButton {
+  background: #C41E3A;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.downloadButton:hover {
+  background: #a01830;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
+}
+
+/* View More Button */
+.viewMoreContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.viewMoreBtn {
+  background: transparent;
+  border: 2px solid #C41E3A;
+  color: #C41E3A;
+  padding: 0.9rem 2.5rem;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.viewMoreBtn:hover {
+  background: #C41E3A;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 30, 58, 0.3);
+}
+
+.viewMoreBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.viewMoreBtn:hover svg {
+  transform: translateX(5px);
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Desktop - 1200px to 1439px */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .booksGrid {
+    gap: 1.5rem;
+  }
+
+  .bookCover {
+    height: 300px;
+  }
+}
+
+/* Laptop - 1024px to 1199px */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .booksGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bookCover {
+    height: 280px;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .booksSection {
+    padding: 3rem 1.5rem;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.6rem;
+  }
+
+  .booksGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .bookCover {
+    height: 280px;
+  }
+}
+
+/* Mobile - below 768px */
+@media (max-width: 767px) {
+  .booksSection {
+    padding: 2.5rem 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.8rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionDescription {
+    font-size: 0.88rem;
+  }
+
+  .booksGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .bookCover {
+    height: 320px;
+  }
+
+  .viewMoreBtn {
+    padding: 0.8rem 2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra Small Mobile - below 480px */
+@media (max-width: 479px) {
+  .booksSection {
+    padding: 2rem 0.75rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 1.3rem;
+  }
+
+  .bookCover {
+    height: 280px;
+  }
+
+  .bookTitle {
+    font-size: 1rem;
+  }
+
+  .viewMoreBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}

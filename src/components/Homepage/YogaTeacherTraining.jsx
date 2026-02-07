@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaTeacherTraining.module.css";
@@ -19,55 +19,136 @@ import img4 from "../../assets/images/courses/4.png";
 
 const courses = [
   {
-    image: img1,
+    images: [img1, img2, img3, img4],
     title: "100 Hours Yoga Teacher Training",
     duration: "10 Days",
     privateRoom: "$612",
     sharedRoom: "$400",
+    certification: "Yoga Alliance USA",
+    style: "Multi-Style Hatha",
     path: "/YogaCourse100",
   },
   {
-    image: img2,
+    images: [img2, img1, img3, img4],
     title: "200 Hours Yoga Teacher Training",
     duration: "24 Days",
     privateRoom: "$1270",
     sharedRoom: "$980",
+    certification: "RYT-200 Certified",
+    style: "Hatha & Ashtanga",
     path: "/YogaCourse200",
   },
   {
-    image: img3,
+    images: [img3, img2, img1, img4],
     title: "300 Hours Yoga Teacher Training",
     duration: "28 Days",
     privateRoom: "$1480",
     sharedRoom: "$1150",
+    certification: "RYT-300 Certified",
+    style: "Advanced Multi-Style",
     path: "/YogaCourse300",
   },
   {
-    image: img4,
+    images: [img4, img1, img2, img3],
     title: "500 Hours Yoga Teacher Training",
     duration: "56 Days",
     privateRoom: "$2350",
     sharedRoom: "$1900",
+    certification: "RYT-500 Certified",
+    style: "Complete Mastery",
     path: "/YogaCourse500",
   },
   {
-    image: img4,
-    title: "200 Kundlani Yoga Teacher Training",
-    duration: "56 Days",
-    privateRoom: "$2350",
-    sharedRoom: "$1900",
+    images: [img1, img3, img2, img4],
+    title: "100 Hour Kundalini Yoga Training",
+    duration: "14 Days",
+    privateRoom: "$749",
+    sharedRoom: "$599",
+    certification: "Foundation Certificate",
+    style: "Kundalini Energy",
+    path: "/kundalini-100",
+  },
+  {
+    images: [img2, img4, img1, img3],
+    title: "200 Hour Kundalini Yoga Training",
+    duration: "25 Days",
+    privateRoom: "$1199",
+    sharedRoom: "$999",
+    certification: "RYT-200 Kundalini",
+    style: "Chakra Awakening",
     path: "/kundalini-200",
   },
   {
-    image: img4,
-    title: "300 Kundlani Yoga Teacher Training",
-    duration: "56 Days",
-    privateRoom: "$2350",
-    sharedRoom: "$1900",
+    images: [img3, img1, img4, img2],
+    title: "300 Hour Kundalini Yoga Training",
+    duration: "28 Days",
+    privateRoom: "$1699",
+    sharedRoom: "$1399",
+    certification: "RYT-300 Kundalini",
+    style: "Advanced Kundalini",
     path: "/kundalini-300",
+  },
+  {
+    images: [img4, img2, img3, img1],
+    title: "Vedic Mantra Chanting Course",
+    duration: "7 Days",
+    privateRoom: "$450",
+    sharedRoom: "$350",
+    certification: "Mantra Certificate",
+    style: "Sacred Chanting",
+    path: "/vedic-mantra",
   },
 ];
 
+/* ===================== */
+/* Image Slider Component */
+/* ===================== */
+const ImageSlider = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const timeoutRef = useRef(null);
+
+  useEffect(() => {
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    // Set new timeout for next slide
+    timeoutRef.current = setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    // Cleanup function
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [currentIndex, images.length]);
+
+  return (
+    <div className={styles.sliderContainer}>
+      <div className={styles.sliderWrapper}>
+        <div
+          className={styles.sliderTrack}
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+          }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className={styles.slide}>
+              <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className={styles.sliderImage}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -112,12 +193,8 @@ const YogaTeacherTraining = () => {
       viewport={{ once: true }}
     >
       <div className="container">
-
         {/* Heading */}
-        <motion.div
-          className={styles.headingWrapper}
-          variants={headingVariant}
-        >
+        <motion.div className={styles.headingWrapper} variants={headingVariant}>
           <h2 className={styles.heading}>
             <span>Yoga Teacher</span> Training Certification*
           </h2>
@@ -127,10 +204,7 @@ const YogaTeacherTraining = () => {
         </motion.div>
 
         {/* Cards */}
-        <motion.div
-          className={styles.cardGrid}
-          variants={gridVariant}
-        >
+        <motion.div className={styles.cardGrid} variants={gridVariant}>
           {courses.map((item, index) => (
             <motion.div
               className={styles.card}
@@ -142,7 +216,7 @@ const YogaTeacherTraining = () => {
               }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <img src={item.image} alt={item.title} />
+              <ImageSlider images={item.images} />
 
               <h3>{item.title}</h3>
 
@@ -157,40 +231,38 @@ const YogaTeacherTraining = () => {
                   <FaDollarSign /> Shared Room: {item.sharedRoom}
                 </li>
                 <li>
-                  <FaCertificate /> Certification: Yoga Alliance USA
+                  <FaCertificate /> Certification: {item.certification}
                 </li>
                 <li>
-                  <FaUser /> Style: Multi-Style
+                  <FaUser /> Style: {item.style}
                 </li>
                 <li>
                   <FaCalendarAlt /> Date: 2nd of every month
                 </li>
               </ul>
 
-             <div className={styles.buttonGroup}>
-  <motion.button
-    className={styles.outlineBtn}
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    onClick={() => navigate(item.path)}
-  >
-    Course Details
-  </motion.button>
+              <div className={styles.buttonGroup}>
+                <motion.button
+                  className={styles.outlineBtn}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate(item.path)}
+                >
+                  Course Details
+                </motion.button>
 
-  <motion.button
-    className={styles.outlineBtn}
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    onClick={() => navigate('/BookingForm')}
-  >
-    Book Now
-  </motion.button>
-</div>
-
+                <motion.button
+                  className={styles.outlineBtn}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate("/BookingForm")}
+                >
+                  Book Now
+                </motion.button>
+              </div>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </motion.section>
   );

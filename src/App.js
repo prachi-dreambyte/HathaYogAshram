@@ -33,6 +33,9 @@ import AboutUs from 'components/AboutUs/AboutUs';
 import BookingForm from 'components/Bookingform/Bookingformred';
 import OnlineYTTC from 'components/onlineyogacourse/onlineyogayttc';
 import OnlineYoga from 'components/onlineyogacourse/Onlineyoga';
+import Kundalini100 from 'components/kundaliniyoga/Kundalini100';
+import Books from 'components/MyBooks/Books';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -62,6 +65,7 @@ export default function Main() {
         <Route path="/blog/:slug" element={<SingleBlog />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactForm />} />
+        <Route path="/kundalini-100" element={<Kundalini100 />} />
         <Route path="/kundalini-200" element={<Kundalini200Page />} />
         <Route path="/kundalini-300" element={<Kundalini300 />} />
         <Route path="/teachers" element={<Teachers />} />
@@ -77,10 +81,13 @@ export default function Main() {
         <Route path="/YogaCourse200" element={<YogaCourse200 />} />
         <Route path="/YogaCourse300" element={<YogaCourse300 />} />
         <Route path="/YogaCourse500" element={<YogaCourse500 />} />
-         <Route path="/YinYoga" element={<YinYoga />} />
-         <Route path="/BookingForm" element={<BookingForm />} />
-         <Route path="/Online-YTTC" element={<OnlineYTTC />} />
-          <Route path="/Yoga-Online" element={<OnlineYoga />} />
+        <Route path="/YinYoga" element={<YinYoga />} />
+        <Route path="/BookingForm" element={<BookingForm />} />
+        <Route path="/Online-YTTC" element={<OnlineYTTC />} />
+        <Route path="/Yoga-Online" element={<OnlineYoga />} />
+        <Route path="/Yoga-Books" element={<Books />} />
+        <Route path="/Booksection" element={<BooksSection />} />
+
       </Routes>
 
       {showHeaderFooter && <Footer />}

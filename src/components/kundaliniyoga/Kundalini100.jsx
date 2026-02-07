@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from '../../assets/styles/kundalini_yoga/Kundalini300.module.css';
-import banner from '../../assets/images/300_Banner_V01.webp';
+import styles from '../../assets/styles/kundalini_yoga/Kundalini100.module.css';
+import banner from '../../assets/images/200_Banner_V02.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 
-export default function Kundalini300() {
+export default function Kundalini100() {
   const [activeTab, setActiveTab] = useState('overview');
   const [openFaq, setOpenFaq] = useState(null);
   const navigate = useNavigate();
@@ -18,18 +18,18 @@ export default function Kundalini300() {
       {/* HERO SECTION */}
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
-          <img src={banner} alt="Kundalini Meditation" />
+          <img src={banner} alt="Kundalini Yoga Introduction" />
         </div>
 
         <div className={styles.heroContent}>
-          <p className={styles.quoteText}>Deepen Your Spiritual Journey</p>
+          <p className={styles.quoteText}>Begin Your Spiritual Journey</p>
           <h1 className={styles.mainTitle}>
-            300 Hour Kundalini Yoga Teacher Training
+            100 Hour Kundalini Yoga Foundation Course
           </h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
             <span className={styles.breadcrumbSeparator}>/</span>
-            <span>Kundalini 300 YTT</span>
+            <span>Kundalini 100 YTT</span>
           </div>
         </div>
       </section>
@@ -39,23 +39,23 @@ export default function Kundalini300() {
         <div className={styles.statsContainer}>
           <div className={styles.stat}>
             <div className={styles.statIcon}>🧘</div>
-            <div className={styles.statValue}>300+</div>
+            <div className={styles.statValue}>100+</div>
             <div className={styles.statLabel}>Hours Training</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statIcon}>🌟</div>
-            <div className={styles.statValue}>28</div>
-            <div className={styles.statLabel}>Days Intensive</div>
+            <div className={styles.statValue}>14</div>
+            <div className={styles.statLabel}>Days Immersion</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statIcon}>🏔️</div>
-            <div className={styles.statValue}>Advanced</div>
-            <div className={styles.statLabel}>Level Training</div>
+            <div className={styles.statValue}>Foundation</div>
+            <div className={styles.statLabel}>Level Course</div>
           </div>
           <div className={styles.stat}>
             <div className={styles.statIcon}>✨</div>
-            <div className={styles.statValue}>RYT-300</div>
-            <div className={styles.statLabel}>Certified</div>
+            <div className={styles.statValue}>Certified</div>
+            <div className={styles.statLabel}>Completion</div>
           </div>
         </div>
       </section>
@@ -66,23 +66,25 @@ export default function Kundalini300() {
           <div className={styles.floatingCards}>
             <div className={styles.floatCard}>
               <div className={styles.cardIcon}>🕉️</div>
-              <h3>Sacred Tradition</h3>
+              <h3>Sacred Beginning</h3>
               <p>
-                Advanced Kundalini practices from authentic Himalayan lineage
+                Start your Kundalini journey in Rishikesh, the yoga capital of
+                the world
               </p>
             </div>
             <div className={styles.floatCard}>
               <div className={styles.cardIcon}>👨‍🏫</div>
-              <h3>Expert Guidance</h3>
+              <h3>Experienced Teachers</h3>
               <p>
-                Learn from masters with 30+ years in Kundalini and Tantra yoga
+                Learn from certified instructors with deep knowledge of
+                Kundalini yoga
               </p>
             </div>
             <div className={styles.floatCard}>
               <div className={styles.cardIcon}>📜</div>
-              <h3>Advanced Certification</h3>
+              <h3>Foundation Certificate</h3>
               <p>
-                Internationally recognized RYT-300 certification upon completion
+                Recognized completion certificate for your spiritual journey
               </p>
             </div>
           </div>
@@ -94,10 +96,10 @@ export default function Kundalini300() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <span className={styles.sectionLabel}>
-              Advanced Spiritual Practice
+              Introduction to Inner Power
             </span>
             <h2 className={styles.sectionTitle}>
-              What is 300 Hour Kundalini Yoga?
+              What is 100 Hour Kundalini Yoga?
             </h2>
             <div className={styles.decorativeLine}></div>
           </div>
@@ -105,42 +107,42 @@ export default function Kundalini300() {
           <div className={styles.overviewGrid}>
             <div className={styles.overviewContent}>
               <p className={styles.leadText}>
-                The 300-hour Kundalini yoga teacher training is an advanced
-                program designed for those who have completed their 200-hour
-                training and seek deeper spiritual awakening. This intensive
-                course focuses on the ascension of inner latent energy - the
-                rise of Shakti to unite with Shiva consciousness, opening our
-                hearts to live authentically.
+                The 100-hour Kundalini yoga foundation course is designed for
+                beginners who want to explore the transformative power of
+                Kundalini energy. This introductory program gently awakens your
+                awareness of the dormant energy within, teaching you fundamental
+                practices to cleanse your body and mind, preparing you for
+                deeper spiritual exploration.
               </p>
 
               <div className={styles.highlights}>
                 <div className={styles.highlight}>
                   <div className={styles.highlightIcon}>⚡</div>
                   <div>
-                    <h4>Advanced Kriyas</h4>
+                    <h4>Gentle Awakening</h4>
                     <p>
-                      Master complex Kundalini kriyas for complete chakra
-                      awakening and energy transformation
+                      Safe introduction to Kundalini energy practices suitable
+                      for beginners
                     </p>
                   </div>
                 </div>
                 <div className={styles.highlight}>
                   <div className={styles.highlightIcon}>🌈</div>
                   <div>
-                    <h4>Complete Mastery</h4>
+                    <h4>Holistic Foundation</h4>
                     <p>
-                      Deep dive into pranayama, meditation, bandhas, mudras and
-                      Tantra philosophy
+                      Basic asanas, breathing techniques, meditation and yogic
+                      philosophy
                     </p>
                   </div>
                 </div>
                 <div className={styles.highlight}>
                   <div className={styles.highlightIcon}>💫</div>
                   <div>
-                    <h4>Spiritual Awakening</h4>
+                    <h4>Inner Peace</h4>
                     <p>
-                      Experience profound inner transformation and connection
-                      with your true self
+                      Experience stress relief, mental clarity and beginning of
+                      self-awareness
                     </p>
                   </div>
                 </div>
@@ -150,7 +152,7 @@ export default function Kundalini300() {
             <div className={styles.overviewImage}>
               <img
                 src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80"
-                alt="Advanced Meditation Practice"
+                alt="Beginner Meditation Practice"
               />
               <div className={styles.imageOverlay}>
                 <div className={styles.mantraBox}>
@@ -167,12 +169,14 @@ export default function Kundalini300() {
       <section className={styles.chakrasSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionLabel}>Energy Mastery</span>
-            <h2 className={styles.sectionTitle}>Advanced Chakra Awakening</h2>
+            <span className={styles.sectionLabel}>Energy Introduction</span>
+            <h2 className={styles.sectionTitle}>
+              Understanding the Seven Chakras
+            </h2>
             <div className={styles.decorativeLine}></div>
             <p className={styles.sectionDesc}>
-              Deep dive into the seven major chakras and learn advanced
-              techniques to awaken and balance each energy center
+              Learn about the seven major energy centers and basic awareness
+              practices
             </p>
           </div>
 
@@ -191,9 +195,8 @@ export default function Kundalini300() {
                 <h3>Muladhara</h3>
                 <p className={styles.chakraLabel}>Root Chakra</p>
                 <p>
-                  Foundation of physical and spiritual being, connecting Sattva,
-                  Rajas, and Tamas at the base of spine. Learn advanced
-                  grounding techniques and root chakra activation.
+                  Foundation chakra at the base of spine - learn grounding
+                  techniques and basic awareness of your physical foundation
                 </p>
               </div>
             </div>
@@ -212,9 +215,8 @@ export default function Kundalini300() {
                 <h3>Swadhishthana</h3>
                 <p className={styles.chakraLabel}>Sacral Chakra</p>
                 <p>
-                  Center of procreative and sexual energy below the navel,
-                  responsible for life formation and creative power. Master
-                  techniques for creative energy channeling.
+                  Creative energy center - introduction to emotional balance and
+                  creative expression
                 </p>
               </div>
             </div>
@@ -233,9 +235,8 @@ export default function Kundalini300() {
                 <h3>Manipura</h3>
                 <p className={styles.chakraLabel}>Solar Plexus Chakra</p>
                 <p>
-                  The power seat controlling physical and physiological
-                  wellbeing. Advanced practices for personal power and
-                  transformation.
+                  Personal power center - basic practices for confidence and
+                  digestive wellness
                 </p>
               </div>
             </div>
@@ -254,9 +255,8 @@ export default function Kundalini300() {
                 <h3>Anahata</h3>
                 <p className={styles.chakraLabel}>Heart Chakra</p>
                 <p>
-                  Center of emotions in the chest, opening deep happiness and
-                  peace when awakened. Learn heart-opening kriyas and compassion
-                  meditation.
+                  Center of love and compassion - learn basic heart-opening
+                  exercises and loving-kindness
                 </p>
               </div>
             </div>
@@ -275,9 +275,8 @@ export default function Kundalini300() {
                 <h3>Vishuddhi</h3>
                 <p className={styles.chakraLabel}>Throat Chakra</p>
                 <p>
-                  Chakra of purity behind throat, awakening brings sweet voice
-                  and divine communication. Master mantra chanting and truth
-                  expression.
+                  Communication center - introduction to authentic expression
+                  and basic chanting
                 </p>
               </div>
             </div>
@@ -296,9 +295,8 @@ export default function Kundalini300() {
                 <h3>Ajna</h3>
                 <p className={styles.chakraLabel}>Third Eye Chakra</p>
                 <p>
-                  Command center between eyebrows providing visions, light
-                  flashes and deep stillness. Advanced Trataka and intuition
-                  development.
+                  Intuition center - basic awareness practices and introduction
+                  to inner vision
                 </p>
               </div>
             </div>
@@ -317,8 +315,8 @@ export default function Kundalini300() {
                 <h3>Sahasrara</h3>
                 <p className={styles.chakraLabel}>Crown Chakra</p>
                 <p>
-                  Supreme state at top of skull - the lotus with multiple
-                  petals, opening tremendous powers and divine trance state.
+                  Spiritual connection - understanding divine consciousness and
+                  basic meditation
                 </p>
               </div>
             </div>
@@ -330,7 +328,7 @@ export default function Kundalini300() {
       <section className={styles.curriculumSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionLabel}>Advanced Training</span>
+            <span className={styles.sectionLabel}>Foundation Training</span>
             <h2 className={styles.sectionTitle}>Course Curriculum</h2>
             <div className={styles.decorativeLine}></div>
           </div>
@@ -344,16 +342,16 @@ export default function Kundalini300() {
                 Overview
               </button>
               <button
-                className={`${styles.tabBtn} ${activeTab === 'kriyas' ? styles.active : ''}`}
-                onClick={() => setActiveTab('kriyas')}
-              >
-                Kriyas
-              </button>
-              <button
                 className={`${styles.tabBtn} ${activeTab === 'asanas' ? styles.active : ''}`}
                 onClick={() => setActiveTab('asanas')}
               >
                 Asanas
+              </button>
+              <button
+                className={`${styles.tabBtn} ${activeTab === 'pranayama' ? styles.active : ''}`}
+                onClick={() => setActiveTab('pranayama')}
+              >
+                Pranayama
               </button>
               <button
                 className={`${styles.tabBtn} ${activeTab === 'meditation' ? styles.active : ''}`}
@@ -372,215 +370,141 @@ export default function Kundalini300() {
             <div className={styles.tabContent}>
               {activeTab === 'overview' && (
                 <div className={styles.tabPane}>
-                  <h3>What You Will Master</h3>
+                  <h3>What You Will Learn</h3>
                   <div className={styles.curriculumGrid}>
                     <div className={styles.curriculumCard}>
-                      <h4>🔥 Advanced Kundalini Kriyas</h4>
+                      <h4>🧘 Introduction to Kundalini</h4>
                       <p>
-                        Master complex kriyas for chakra awakening, energy
-                        channeling and Shiva-Shakti union
+                        Understanding Kundalini energy, chakras and basic energy
+                        awareness
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
-                      <h4>🧘 140+ Yoga Asanas</h4>
+                      <h4>🌬️ Basic Pranayama</h4>
                       <p>
-                        Complete practice including advanced inversions, arm
-                        balances and Hatha yoga mastery
+                        Fundamental breathing techniques for energy balance and
+                        relaxation
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
-                      <h4>🌬️ Advanced Pranayama</h4>
+                      <h4>🎵 Mantra Chanting</h4>
                       <p>
-                        15+ breathing techniques including Sushumna breathing
-                        and advanced retention practices
+                        Introduction to sacred sounds and simple mantra
+                        practices
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
-                      <h4>🧠 Deep Meditation</h4>
+                      <h4>🧠 Beginner Meditation</h4>
                       <p>
-                        Himalayan meditation, Trataka, Vipassana, chakra
-                        awareness and Kundalini active meditation
+                        Simple meditation techniques for mental peace and focus
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
-                      <h4>🙏 Bandhas & Mudras</h4>
+                      <h4>📚 Yoga Philosophy</h4>
                       <p>
-                        Energy locks and 20+ spiritual mudras for energy saving
-                        and transformation
+                        Introduction to yogic lifestyle and basic spiritual
+                        concepts
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
-                      <h4>💫 Yoga Nidra Mastery</h4>
+                      <h4>🧘‍♀️ Foundation Asanas</h4>
                       <p>
-                        Psychic sleep techniques, chakra awareness nidra and
-                        31-point relaxation
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>✨ Shatkarma Cleansing</h4>
-                      <p>
-                        Complete detoxification practices including Jala Neti,
-                        Kunjal Kriya and Agnisar
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>📚 Tantra Philosophy</h4>
-                      <p>
-                        Deep understanding of chakras, nadis, Kundalini anatomy
-                        and energy body systems
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>🎵 Mantra & Kirtan</h4>
-                      <p>
-                        Sacred chanting including Om, Shiva Mantra, Gayatri
-                        Mantra and Bija Mantras
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>🌿 Ayurveda Integration</h4>
-                      <p>
-                        5 element theory, doshas, chakra massage and energy
-                        system balancing
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>👥 Teaching Methodology</h4>
-                      <p>
-                        Professional skills for class sequencing, verbal cues,
-                        alignment and student safety
-                      </p>
-                    </div>
-                    <div className={styles.curriculumCard}>
-                      <h4>⚡ Energy Transmission</h4>
-                      <p>
-                        Mantra Diksha, Shaktipat initiation and sound healing
-                        sessions with Guru
+                        Basic yoga postures for flexibility and body awareness
                       </p>
                     </div>
                   </div>
                 </div>
               )}
 
-              {activeTab === 'kriyas' && (
+              {activeTab === 'asanas' && (
                 <div className={styles.tabPane}>
-                  <h3>Kundalini Kriyas & Energy Practices</h3>
+                  <h3>Foundation Asana Practice</h3>
                   <ul className={styles.curriculumList}>
                     <li>
-                      Advanced Kundalini awakening kriyas for all 7 chakras
+                      Basic standing postures - Mountain Pose, Standing Forward
+                      Bend
                     </li>
-                    <li>Chakra Sadhana - systematic activation practices</li>
                     <li>
-                      Energy channeling through Ida, Pingala, Sushumna nadis
+                      Simple Warrior Poses (Virabhadrasana I, II) - Building
+                      strength
                     </li>
-                    <li>Bindu awakening practices and light visualization</li>
-                    <li>Shiva-Shakti union meditation and tantric practices</li>
-                    <li>Kundalini fire meditation for transformation</li>
-                    <li>Granthis piercing - removing energy blockages</li>
-                    <li>Advanced spinal breathing techniques</li>
-                    <li>Sushumna activation for spiritual awakening</li>
-                    <li>Kundalini Shakti transmission practices</li>
+                    <li>
+                      Cobra Pose (Bhujangasana) - Gentle backbend introduction
+                    </li>
+                    <li>Child's Pose (Balasana) - Resting and grounding</li>
+                    <li>Cat-Cow Pose - Spinal flexibility and warm-up</li>
+                    <li>Bridge Pose (Setu Bandhasana) - Basic backbend</li>
+                    <li>Simple seated postures for meditation</li>
+                    <li>
+                      Basic forward bends - Seated and standing variations
+                    </li>
+                    <li>Gentle twists for spinal health</li>
+                    <li>Relaxation poses - Savasana and variations</li>
+                    <li>30+ foundational yoga postures</li>
                   </ul>
                 </div>
               )}
 
-              {activeTab === 'asanas' && (
+              {activeTab === 'pranayama' && (
                 <div className={styles.tabPane}>
-                  <h3>Advanced Hatha Yoga Asana Practice</h3>
+                  <h3>Basic Breathing Practices</h3>
                   <ul className={styles.curriculumList}>
-                    <li>140+ traditional yoga asanas and variations</li>
-                    <li>Surya Namaskar (Sun Salutation) - 12 steps mastery</li>
-                    <li>Chandra Namaskar (Moon Salutation) variations</li>
-                    <li>Advanced Warrior poses (Virabhadrasana I, II, III)</li>
                     <li>
-                      Inversions: Headstand, Shoulder Stand, Handstand
-                      progressions
+                      Deep Abdominal Breathing - Foundation of all pranayama
                     </li>
-                    <li>Arm Balances: Crow Pose, Side Crow, Flying Pigeon</li>
-                    <li>Deep backbends: Wheel, Camel, King Pigeon, Bow Pose</li>
                     <li>
-                      Forward bends: Paschimottanasana, Uttanasana variations
+                      Nadi Shodhana - Alternate nostril breathing for balance
                     </li>
-                    <li>Spinal twists: Ardha Matsyendrasana and variations</li>
-                    <li>Core strengthening: Boat Pose, Plank variations</li>
-                    <li>Hip openers: Pigeon, Lizard, Frog Pose</li>
-                    <li>Balance poses: Tree, Eagle, Dancer's Pose</li>
-                    <li>Alignment, assists and adjustment techniques</li>
-                    <li>Contraindications and modifications for safety</li>
+                    <li>Ujjayi Breath - Ocean breath for calming mind</li>
+                    <li>Bhramari - Humming bee breath for relaxation</li>
+                    <li>Kapalbhati - Gentle skull cleansing breath</li>
+                    <li>Simple breath awareness meditation</li>
+                    <li>Introduction to breath retention (Kumbhaka)</li>
+                    <li>Cooling breath techniques (Shitali)</li>
                   </ul>
                 </div>
               )}
 
               {activeTab === 'meditation' && (
                 <div className={styles.tabPane}>
-                  <h3>Advanced Meditation & Consciousness</h3>
+                  <h3>Beginner Meditation & Mindfulness</h3>
                   <ul className={styles.curriculumList}>
-                    <li>Himalayan meditation practices from ancient lineage</li>
+                    <li>Breath Awareness Meditation - Foundation practice</li>
+                    <li>Body Scan Relaxation - Deep physical awareness</li>
                     <li>
-                      Chakra Awareness Meditation - deep energy center
-                      activation
+                      Simple Chakra Visualization - Introduction to energy
+                      centers
                     </li>
-                    <li>
-                      Kundalini Active Meditation - awakening dormant energy
-                    </li>
-                    <li>Trataka (Candle Gazing) - third eye activation</li>
-                    <li>Vipassana - insight meditation and mindfulness</li>
-                    <li>Nada Meditation - inner sound awareness</li>
-                    <li>Ajapa Meditation - spontaneous breath awareness</li>
-                    <li>Yoga Nidra - psychic sleep for deep healing</li>
-                    <li>Chakra visualization and color meditation</li>
-                    <li>Mantra Meditation - sacred sound vibrations</li>
-                    <li>
-                      Silent Meditation - one day Mauna (silence) practice
-                    </li>
-                    <li>Kirtan - devotional chanting evenings</li>
-                    <li>Ganga beach meditation at sunrise</li>
-                    <li>Walking meditation in Himalayan nature</li>
+                    <li>Trataka - Candle gazing for concentration</li>
+                    <li>Basic Mantra Meditation - Om chanting</li>
+                    <li>Guided Yoga Nidra - Deep relaxation technique</li>
+                    <li>Walking Meditation - Mindful movement</li>
+                    <li>Loving-Kindness Meditation - Opening the heart</li>
+                    <li>Silent sitting practice - Building meditation habit</li>
+                    <li>Evening Kirtan sessions - Group chanting experience</li>
                   </ul>
                 </div>
               )}
 
               {activeTab === 'philosophy' && (
                 <div className={styles.tabPane}>
-                  <h3>Kundalini Tantra & Yoga Philosophy</h3>
+                  <h3>Introduction to Yoga Philosophy</h3>
                   <ul className={styles.curriculumList}>
+                    <li>What is Kundalini? - Understanding dormant energy</li>
+                    <li>Seven Chakras - Basic introduction and location</li>
+                    <li>Understanding Prana - Life force energy</li>
+                    <li>Introduction to Yoga Sutras - Eight limbs overview</li>
+                    <li>Yamas and Niyamas - Ethical foundations of yoga</li>
                     <li>
-                      Understanding Kundalini Shakti - The Divine Feminine
-                      Energy
+                      Sattvic Living - Introduction to yogic diet and lifestyle
                     </li>
+                    <li>Mind-Body Connection - Understanding how yoga works</li>
+                    <li>Karma and Dharma - Basic spiritual concepts</li>
                     <li>
-                      Seven Chakras - detailed study of location, qualities,
-                      awakening methods
+                      Benefits of Regular Practice - Physical and mental
+                      wellness
                     </li>
-                    <li>
-                      Nadis - 72,000 energy channels, focus on Ida, Pingala,
-                      Sushumna
-                    </li>
-                    <li>
-                      Granthis - three psychic knots (Brahma, Vishnu, Rudra)
-                      blocking energy flow
-                    </li>
-                    <li>
-                      Kundalini Awakening Process - safe practices, signs and
-                      precautions
-                    </li>
-                    <li>
-                      Shiva-Shakti Union - merger of consciousness and energy
-                    </li>
-                    <li>Pancha Kosha - five sheaths of existence</li>
-                    <li>Yoga Sutras of Patanjali - eight limbs foundation</li>
-                    <li>
-                      Tantra Tradition - ancient practices of energy
-                      transformation
-                    </li>
-                    <li>
-                      Kundalini Anatomy - subtle body systems and energy
-                      pathways
-                    </li>
-                    <li>Guru-Disciple relationship in spiritual tradition</li>
-                    <li>Understanding prana, apana and the five vayus</li>
-                    <li>Karma, dharma and spiritual evolution</li>
-                    <li>Bhagavad Gita wisdom for yoga practitioners</li>
+                    <li>Creating a Home Practice - Building daily routine</li>
                   </ul>
                 </div>
               )}
@@ -593,79 +517,77 @@ export default function Kundalini300() {
       <section className={styles.scheduleSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionLabel}>Your Daily Rhythm</span>
+            <span className={styles.sectionLabel}>Your Daily Journey</span>
             <h2 className={styles.sectionTitle}>Daily Schedule</h2>
             <div className={styles.decorativeLine}></div>
             <p className={styles.sectionDesc}>
-              Immerse yourself in advanced yogic discipline designed to deepen
-              your spiritual practice
+              A gentle introduction to yogic lifestyle and daily spiritual
+              practice
             </p>
           </div>
 
           <div className={styles.scheduleTimeline}>
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>05:30</div>
+              <div className={styles.scheduleTime}>06:30</div>
               <div className={styles.scheduleContent}>
-                <h4>Morning Bell & Herbal Tea</h4>
-                <p>
-                  Wake up to temple bells and prepare for the sacred day ahead
-                </p>
+                <h4>Morning Wake Up & Herbal Tea</h4>
+                <p>Gentle awakening with herbal tea and light stretching</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>06:00</div>
+              <div className={styles.scheduleTime}>07:00</div>
               <div className={styles.scheduleContent}>
-                <h4>Kundalini Kriya & Meditation</h4>
-                <p>Advanced awakening practices and deep chakra meditation</p>
+                <h4>Meditation & Pranayama</h4>
+                <p>Simple breathing exercises and guided meditation</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>07:30</div>
-              <div className={styles.scheduleContent}>
-                <h4>Pranayama & Shatkarma</h4>
-                <p>Advanced breathing exercises and cleansing practices</p>
-              </div>
-            </div>
-
-            <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>09:00</div>
+              <div className={styles.scheduleTime}>08:30</div>
               <div className={styles.scheduleContent}>
                 <h4>Breakfast</h4>
-                <p>Nutritious sattvic vegetarian meal with herbal tea</p>
+                <p>Healthy vegetarian breakfast with fresh fruits</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>10:30</div>
+              <div className={styles.scheduleTime}>10:00</div>
               <div className={styles.scheduleContent}>
-                <h4>Hatha Yoga Asana Practice</h4>
-                <p>Advanced postures, inversions and alignment practice</p>
+                <h4>Foundation Yoga Asana Practice</h4>
+                <p>Basic postures and gentle stretching exercises</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
               <div className={styles.scheduleTime}>12:00</div>
               <div className={styles.scheduleContent}>
-                <h4>Theory Class</h4>
-                <p>Kundalini philosophy, anatomy and teaching methodology</p>
+                <h4>Lunch Break</h4>
+                <p>Nutritious vegetarian meal with rest time</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>13:00</div>
+              <div className={styles.scheduleTime}>14:00</div>
               <div className={styles.scheduleContent}>
-                <h4>Lunch & Rest</h4>
-                <p>Main meal of the day with self-study time</p>
+                <h4>Philosophy & Theory Class</h4>
+                <p>Introduction to Kundalini yoga concepts and chakras</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
               <div className={styles.scheduleTime}>16:00</div>
               <div className={styles.scheduleContent}>
-                <h4>Advanced Kundalini Practice</h4>
-                <p>Kriyas, bandhas, mudras and energy channeling</p>
+                <h4>Free Time / Self Practice</h4>
+                <p>Personal time for rest, study or exploration</p>
+              </div>
+            </div>
+
+            <div className={styles.scheduleItem}>
+              <div className={styles.scheduleTime}>17:30</div>
+              <div className={styles.scheduleContent}>
+                <h4>Evening Tea & Snacks</h4>
+                <p>Light refreshments and group discussions</p>
               </div>
             </div>
 
@@ -673,7 +595,7 @@ export default function Kundalini300() {
               <div className={styles.scheduleTime}>18:00</div>
               <div className={styles.scheduleContent}>
                 <h4>Mantra Chanting & Kirtan</h4>
-                <p>Sacred mantras and devotional singing</p>
+                <p>Simple chanting and devotional singing</p>
               </div>
             </div>
 
@@ -681,23 +603,15 @@ export default function Kundalini300() {
               <div className={styles.scheduleTime}>19:00</div>
               <div className={styles.scheduleContent}>
                 <h4>Dinner</h4>
-                <p>Light evening meal for optimal digestion</p>
+                <p>Light evening meal</p>
               </div>
             </div>
 
             <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>20:00</div>
+              <div className={styles.scheduleTime}>20:30</div>
               <div className={styles.scheduleContent}>
-                <h4>Satsang & Self Study</h4>
-                <p>Spiritual discourse and personal practice</p>
-              </div>
-            </div>
-
-            <div className={styles.scheduleItem}>
-              <div className={styles.scheduleTime}>21:30</div>
-              <div className={styles.scheduleContent}>
-                <h4>Yoga Nidra & Lights Out</h4>
-                <p>Deep relaxation and early sleep</p>
+                <h4>Yoga Nidra & Rest</h4>
+                <p>Guided relaxation and early sleep</p>
               </div>
             </div>
           </div>
@@ -708,7 +622,7 @@ export default function Kundalini300() {
       <section className={styles.pricingSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionLabel}>Investment in Yourself</span>
+            <span className={styles.sectionLabel}>Begin Your Journey</span>
             <h2 className={styles.sectionTitle}>Course Pricing</h2>
             <div className={styles.decorativeLine}></div>
           </div>
@@ -719,19 +633,18 @@ export default function Kundalini300() {
                 <h3>Shared Room</h3>
                 <div className={styles.price}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>1399</span>
+                  <span className={styles.amount}>599</span>
                 </div>
                 <p className={styles.priceDesc}>Per Person</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>28 Days / 27 Nights Accommodation</li>
+                <li>14 Days / 13 Nights Accommodation</li>
                 <li>Shared Room with Private Bathroom</li>
                 <li>3 Vegetarian Meals Daily</li>
                 <li>All Course Materials & Books</li>
-                <li>Weekend Excursions</li>
-                <li>RYT-300 Certification</li>
+                <li>Weekend Sightseeing</li>
+                <li>Completion Certificate</li>
                 <li>Airport Pickup (Dehradun)</li>
-                <li>Yoga Books & Notebooks</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
             </div>
@@ -742,20 +655,19 @@ export default function Kundalini300() {
                 <h3>Private Room</h3>
                 <div className={styles.price}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>1699</span>
+                  <span className={styles.amount}>749</span>
                 </div>
                 <p className={styles.priceDesc}>Single Occupancy</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>28 Days / 27 Nights Accommodation</li>
+                <li>14 Days / 13 Nights Accommodation</li>
                 <li>Private Room with Ensuite Bathroom</li>
                 <li>3 Vegetarian Meals Daily</li>
                 <li>All Course Materials & Books</li>
-                <li>Weekend Excursions</li>
-                <li>RYT-300 Certification</li>
+                <li>Weekend Sightseeing</li>
+                <li>Completion Certificate</li>
                 <li>Airport Pickup (Dehradun)</li>
-                <li>2 Full Body Massage Sessions</li>
-                <li>Himalayan Sightseeing Trip</li>
+                <li>1 Ayurvedic Massage Session</li>
                 <li>Priority Support</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
@@ -766,29 +678,27 @@ export default function Kundalini300() {
                 <h3>Private Deluxe</h3>
                 <div className={styles.price}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>1999</span>
+                  <span className={styles.amount}>899</span>
                 </div>
                 <p className={styles.priceDesc}>Premium Experience</p>
               </div>
               <ul className={styles.priceIncludes}>
-                <li>28 Days / 27 Nights Accommodation</li>
+                <li>14 Days / 13 Nights Accommodation</li>
                 <li>Deluxe Private Room with AC</li>
                 <li>3 Vegetarian Meals Daily</li>
                 <li>All Course Materials & Books</li>
-                <li>Weekend Excursions</li>
-                <li>RYT-300 Certification</li>
+                <li>Weekend Sightseeing</li>
+                <li>Completion Certificate</li>
                 <li>Airport Pickup (Delhi or Dehradun)</li>
-                <li>4 Full Body Massage Sessions</li>
+                <li>2 Ayurvedic Massage Sessions</li>
                 <li>Ayurvedic Consultation</li>
-                <li>Private Meditation Sessions</li>
-                <li>Sound Healing Session</li>
+                <li>Yoga Props Kit</li>
               </ul>
               <button className={styles.priceBtn}>Select Plan</button>
             </div>
           </div>
         </div>
       </section>
-
       <BooksSection />
 
       {/* FAQ SECTION */}
@@ -803,28 +713,28 @@ export default function Kundalini300() {
           <div className={styles.faqList}>
             {[
               {
-                q: 'How is Kundalini different from other styles of yoga?',
-                a: 'Kundalini yoga is more spiritual than physical. While it includes asanas, the main focus is on awakening dormant energy through breathing, mantra, and meditation. Unlike Vinyasa or Hatha which focus mainly on physical postures, Kundalini is highly precise, repetitive, and works faster for spiritual development.',
+                q: 'Is this course suitable for complete beginners?',
+                a: 'Absolutely! The 100-hour foundation course is specifically designed for beginners with no prior yoga experience. Our experienced teachers will guide you gently through each practice, ensuring you build a strong foundation safely.',
               },
               {
-                q: 'Can a beginner in yoga learn Kundalini?',
-                a: 'The 300-hour course is designed for those who have completed 200-hour YTT and have at least 6 months of regular yoga practice. While beginners can benefit from Kundalini, this advanced training requires foundational knowledge of Hatha yoga, pranayama, and meditation.',
+                q: 'Do I need to be flexible to join?',
+                a: "No, flexibility is not required! Yoga helps you become more flexible over time. We teach modifications for all postures so everyone can practice comfortably at their own level. It's about the journey, not perfection.",
               },
               {
-                q: 'What are chakras and how do we awaken them?',
-                a: 'Chakras are energy centers along the spine. To awaken them, you need strong focus, elimination of distractions, practice of pranayama, meditation, and guidance from an experienced teacher. Our course teaches systematic and safe methods to activate each chakra.',
+                q: 'What is the difference between 100 and 200 hour courses?',
+                a: 'The 100-hour is a gentle introduction focused on understanding basics - simple asanas, basic pranayama, and introductory meditation. The 200-hour goes deeper into Kundalini awakening practices, advanced techniques, and qualifies you for teaching certification.',
               },
               {
-                q: 'Is 300-Hour training eligible for RYT-300 certification?',
-                a: "Yes! Upon successful completion, you'll receive RYT-300 certification recognized by Yoga Alliance International, allowing you to teach yoga anywhere in the world with advanced credentials.",
-              },
-              {
-                q: 'What is the eligibility for 300-Hour training?',
-                a: 'Best for: students who completed 200-hour training; those wanting comprehensive Kundalini knowledge; practitioners with 6+ months regular practice; anyone committed to spiritual growth and self-transformation; teachers wanting to deepen their expertise.',
+                q: 'Will I receive a certificate?',
+                a: "Yes! You'll receive a completion certificate from our school. While this is not a Yoga Alliance RYT certification (which requires 200 hours), it's recognized as foundational training and can be credited toward future 200-hour certification.",
               },
               {
                 q: 'What is included in the course fee?',
-                a: 'All accommodation, 3 daily meals, course materials, weekend excursions, certification, airport pickup from Dehradun, yoga books, cleansing kits, and temple visits are included. Only visa, flights, air-conditioning ($150 extra), and personal expenses are not covered.',
+                a: 'All accommodation, 3 daily vegetarian meals, course materials, excursions, completion certificate, and airport pickup from Dehradun are included. Only visa, flights, and personal expenses are not covered.',
+              },
+              {
+                q: 'What should I bring to the course?',
+                a: 'Comfortable yoga clothes (modest and breathable), personal toiletries, notebook for notes, water bottle, and an open mind. We provide yoga mats, props, and all study materials.',
               },
             ].map((faq, index) => (
               <div key={index} className={styles.faqItem}>
@@ -861,10 +771,10 @@ export default function Kundalini300() {
       {/* CTA SECTION */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
-          <h2>Ready to Master Kundalini Yoga?</h2>
+          <h2>Ready to Begin Your Yoga Journey?</h2>
           <p>
-            Join us in Rishikesh for an advanced journey of spiritual awakening
-            and energy transformation
+            Join us in Rishikesh for a transformative introduction to Kundalini
+            yoga and spiritual wellness
           </p>
           <div className={styles.ctaButtons}>
             <button

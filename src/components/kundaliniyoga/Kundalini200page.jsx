@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/kundalini_yoga/Kundalini200page.module.css';
-import homebanner from '../../assets/images/200_Banner_V02.webp'
+import homebanner from '../../assets/images/200_Banner_V02.webp';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 const Kundalini200Page = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -17,16 +18,11 @@ const Kundalini200Page = () => {
       {/* HERO SECTION */}
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
-          <img
-            src={homebanner}
-            alt="Kundalini Meditation"
-          />
+          <img src={homebanner} alt="Kundalini Meditation" />
         </div>
 
         <div className={styles.heroContent}>
-          <p className={styles.quoteText}>
-            Awaken Your Inner Power
-          </p>
+          <p className={styles.quoteText}>Awaken Your Inner Power</p>
           <h1 className={styles.mainTitle}>
             200 Hour Kundalini Yoga Teacher Training
           </h1>
@@ -724,6 +720,7 @@ const Kundalini200Page = () => {
           </div>
         </div>
       </section>
+      <BooksSection />
 
       {/* FAQ SECTION */}
       <section className={styles.faqSection}>
@@ -801,7 +798,12 @@ const Kundalini200Page = () => {
             awakening
           </p>
           <div className={styles.ctaButtons}>
-            <button className={styles.ctaPrimary} onClick={() => navigate("/BookingForm")}>Apply Now</button>
+            <button
+              className={styles.ctaPrimary}
+              onClick={() => navigate('/BookingForm')}
+            >
+              Apply Now
+            </button>
             <button className={styles.ctaSecondary}>Download Brochure</button>
           </div>
         </div>

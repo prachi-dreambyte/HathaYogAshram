@@ -59,7 +59,7 @@ const navigate = useNavigate();
       <div className="container">
         {/* Heading */}
         <motion.h2 className={styles.heading} variants={fadeUp}>
-          Namaste <br /> Welcome to Hatha Yoga Ashram
+          Namaste <br /> Welcome to Hatha Yog Ashram
         </motion.h2>
 
         <motion.h3 className={styles.subTitle} variants={fadeUp}>

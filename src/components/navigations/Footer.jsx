@@ -104,6 +104,9 @@ const Footer = () => {
             <h5 className={styles.title}>Kundalini Links</h5>
             <ul className={styles.list}>
               <li>
+                <Link to="/kundalini-100">100 Hour Kundalini</Link>
+              </li>
+              <li>
                 <Link to="/kundalini-200">200 Hour Kundalini</Link>
               </li>
               <li>
@@ -223,8 +226,13 @@ const Footer = () => {
 
         {/* BOTTOM */}
         <motion.div className={styles.bottom} variants={columnItem}>
-          © {new Date().getFullYear()} Hatha Yoga Ashram. All Rights Reserved.
-        </motion.div>
+  © {new Date().getFullYear()} Hatha Yoga Ashram
+ 
+  comming under yog ashram
+ 
+  All Rights Reserved.
+</motion.div>
+
       </div>
     </motion.footer>
   );

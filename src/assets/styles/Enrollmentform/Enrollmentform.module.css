@@ -1,0 +1,2179 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Container with Sky Background */
+.enrollmentContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, 
+    #f35a5ab3 0%,
+    #9c5b55 40%,
+    #FFE4D6 70%,
+    #FFF8F0 100%
+  );
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* Animated Clouds */
+.cloudBackground {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Confetti Animation */
+.confettiContainer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(45deg, #FF6B6B, #4ECDC4, #FFE66D, #95E1D3);
+  top: -10px;
+  left: 50%;
+  animation: confettiFall 3s linear forwards;
+  opacity: 0;
+}
+
+.confetti:nth-child(odd) {
+  background: #FF6B6B;
+}
+
+.confetti:nth-child(even) {
+  background: #4ECDC4;
+}
+
+.confetti:nth-child(3n) {
+  background: #FFE66D;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(var(--confetti-x, 100px)) translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti:nth-child(1) { left: 10%; --confetti-x: -50px; animation-delay: 0s; }
+.confetti:nth-child(2) { left: 20%; --confetti-x: 30px; animation-delay: 0.1s; }
+.confetti:nth-child(3) { left: 30%; --confetti-x: -70px; animation-delay: 0.2s; }
+.confetti:nth-child(4) { left: 40%; --confetti-x: 50px; animation-delay: 0.3s; }
+.confetti:nth-child(5) { left: 50%; --confetti-x: -30px; animation-delay: 0.4s; }
+.confetti:nth-child(6) { left: 60%; --confetti-x: 70px; animation-delay: 0.5s; }
+.confetti:nth-child(7) { left: 70%; --confetti-x: -50px; animation-delay: 0.6s; }
+.confetti:nth-child(8) { left: 80%; --confetti-x: 40px; animation-delay: 0.7s; }
+.confetti:nth-child(9) { left: 90%; --confetti-x: -60px; animation-delay: 0.8s; }
+
+/* Decorative Elements */
+.decorativeElements {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.yogaPose1 {
+  position: absolute;
+  left: 5%;
+  top: 15%;
+  font-size: 80px;
+  opacity: 0.15;
+  animation: floatYoga 6s ease-in-out infinite;
+}
+
+.yogaPose2 {
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
+  font-size: 80px;
+  opacity: 0.15;
+  animation: floatYoga 6s ease-in-out infinite reverse;
+}
+
+.meditation {
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
+  font-size: 60px;
+  opacity: 0.2;
+  animation: spin 20s linear infinite;
+}
+
+@keyframes floatYoga {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.lotusLeft {
+  position: absolute;
+  left: -80px;
+  top: 30%;
+  width: 250px;
+  height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  animation: floatLeft 20s ease-in-out infinite;
+}
+
+.lotusRight {
+  position: absolute;
+  right: -60px;
+  bottom: 25%;
+  width: 220px;
+  height: 220px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  animation: floatRight 18s ease-in-out infinite;
+}
+
+.omSymbol {
+  position: absolute;
+  right: 8%;
+  top: 8%;
+  font-size: 100px;
+  color: #C41E3A;
+  opacity: 0.1;
+  font-weight: 700;
+  animation: rotate 30s linear infinite;
+}
+
+.sparkle1, .sparkle2, .sparkle3 {
+  position: absolute;
+  font-size: 30px;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.sparkle1 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle2 {
+  top: 40%;
+  right: 15%;
+  animation-delay: 0.7s;
+}
+
+.sparkle3 {
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 1.4s;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.3); }
+}
+
+@keyframes floatLeft {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+@keyframes floatRight {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(30px) rotate(-5deg); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Icons */
+.floatingIcons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.floatIcon {
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  animation: floatUpDown 4s ease-in-out infinite;
+  bottom: 0;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Form Wrapper */
+.formWrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 25px 70px rgba(196, 30, 58, 0.2);
+  overflow: hidden;
+  z-index: 1;
+  animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Two Column Layout */
+.twoColumnLayout {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  min-height: 600px;
+}
+
+.leftPanel {
+  background: linear-gradient(135deg, #C41E3A 0%, #8B1429 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.rightPanel {
+  background: white;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 100%;
+}
+
+/* Yoga Images Section */
+.yogaImagesSection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 35px 25px;
+  justify-content: space-between;
+}
+
+.imagesHeader {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.excitementBadge {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #8B0000;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+  animation: excitementPulse 2s ease-in-out infinite;
+  border: 3px solid white;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+@keyframes excitementPulse {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+  }
+  50% { 
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.mainHeading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subHeading {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Yoga Gallery Grid */
+.yogaGallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex: 1;
+}
+
+.galleryItem {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 140px;
+  max-height: 180px;
+}
+
+.galleryItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 12px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover .imageOverlay {
+  transform: translateY(0);
+}
+
+.overlayText {
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Urgency Section */
+.urgencySection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.urgencyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1.2px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+  font-size: 1rem;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* Seat Counter */
+.seatCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: white;
+  padding: 25px 35px;
+  border-radius: 20px;
+  margin: 25px auto 0;
+  max-width: 450px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.seatCounter:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.normalSeats {
+  border: 4px solid #4CAF50;
+}
+
+.lowSeats {
+  border: 4px solid #FF9800;
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
+.criticalSeats {
+  border: 4px solid #F44336;
+  animation: criticalPulse 1s ease-in-out infinite;
+}
+
+@keyframes warningPulse {
+  0%, 100% { 
+    box-shadow: 0 15px 40px rgba(255, 152, 0, 0.4);
+    border-color: #FF9800;
+  }
+  50% { 
+    box-shadow: 0 20px 50px rgba(255, 152, 0, 0.7);
+    border-color: #FF5722;
+  }
+}
+
+@keyframes criticalPulse {
+  0%, 100% { 
+    box-shadow: 0 15px 40px rgba(244, 67, 54, 0.5);
+    border-color: #F44336;
+  }
+  50% { 
+    box-shadow: 0 20px 50px rgba(244, 67, 54, 0.9);
+    border-color: #D32F2F;
+  }
+}
+
+.seatIcon {
+  font-size: 3rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.seatInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seatLabel {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seatNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #C41E3A;
+  line-height: 1;
+  margin: 5px 0;
+  text-shadow: 2px 2px 4px rgba(196, 30, 58, 0.2);
+}
+
+.seatWarning {
+  background: linear-gradient(135deg, #C41E3A 0%, #8B1429 100%);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(196, 30, 58, 0.3);
+}
+
+/* Form Section */
+.enrollmentForm {
+  padding: 40px 30px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.formTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.formTitle h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-bottom: 8px;
+}
+
+.formTitle p {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevents overflow */
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.formInput,
+.formSelect {
+  padding: 14px 16px;
+  border: 2px solid #E5E5E5;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  background: white;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  outline: none;
+  border-color: #C41E3A;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+  transform: translateY(-2px);
+}
+
+.formInput::placeholder {
+  color: #999;
+}
+
+.formSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 45px;
+}
+
+/* Course Info Box */
+.courseInfoBox {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFE4D6 100%);
+  border-left: 4px solid #C41E3A;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.courseInfoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.courseInfoIcon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.courseInfoLabel {
+  display: block;
+  font-size: 0.82rem;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.courseInfoValue {
+  display: block;
+  font-size: 0.95rem;
+  color: #2C2C2C;
+  font-weight: 700;
+}
+
+/* Submit Button */
+.submitBtn {
+  width: 100%;
+  background: linear-gradient(135deg, #FF6B35 0%, #C41E3A 50%, #8B1429 100%);
+  color: white;
+  padding: 18px 32px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(196, 30, 58, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.submitBtn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(196, 30, 58, 0.5);
+}
+
+.submitBtn:active {
+  transform: translateY(-1px);
+}
+
+.btnText {
+  position: relative;
+  z-index: 1;
+}
+
+.btnIcon {
+  font-size: 1.4rem;
+  animation: spinSlow 4s linear infinite;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Trust Indicators */
+.trustIndicators {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid #F0F0F0;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #555;
+  font-weight: 600;
+  padding: 8px 12px;
+  background: #F8F8F8;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.trustItem:hover {
+  background: #FFE4D6;
+  transform: translateY(-2px);
+}
+
+.trustIcon {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #4CAF50 0%, #45A049 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(76, 175, 80, 0.3);
+  flex-shrink: 0;
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large Desktop (1200px - 1400px) */
+@media (max-width: 1400px) {
+  .formWrapper {
+    max-width: 1100px;
+  }
+  
+  .yogaGallery {
+    gap: 10px;
+  }
+  
+  .galleryItem {
+    min-height: 130px;
+    max-height: 170px;
+  }
+}
+
+/* Desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .formWrapper {
+    max-width: 1000px;
+  }
+  
+  .twoColumnLayout {
+    grid-template-columns: 46% 54%;
+  }
+  
+  .yogaImagesSection {
+    padding: 30px 20px;
+  }
+  
+  .mainHeading {
+    font-size: 1.8rem;
+  }
+  
+  .excitementBadge {
+    font-size: 1.1rem;
+    padding: 9px 26px;
+  }
+  
+  .yogaGallery {
+    gap: 10px;
+  }
+  
+  .galleryItem {
+    min-height: 120px;
+    max-height: 160px;
+  }
+  
+  .enrollmentForm {
+    padding: 35px 25px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablet Landscape (900px - 1023px) */
+@media (max-width: 1023px) {
+  .enrollmentContainer {
+    padding: 50px 18px;
+  }
+  
+  .formWrapper {
+    max-width: 850px;
+  }
+  
+  .twoColumnLayout {
+    grid-template-columns: 44% 56%;
+  }
+  
+  .yogaImagesSection {
+    padding: 28px 18px;
+  }
+  
+  .excitementBadge {
+    font-size: 1rem;
+    padding: 8px 22px;
+  }
+  
+  .mainHeading {
+    font-size: 1.7rem;
+  }
+  
+  .subHeading {
+    font-size: 0.88rem;
+  }
+  
+  .yogaGallery {
+    gap: 8px;
+  }
+  
+  .galleryItem {
+    min-height: 110px;
+    max-height: 150px;
+  }
+  
+  .seatCounter {
+    padding: 18px 22px;
+    gap: 12px;
+  }
+  
+  .seatIcon {
+    font-size: 2.3rem;
+  }
+  
+  .seatNumber {
+    font-size: 2.3rem;
+  }
+  
+  .enrollmentForm {
+    padding: 32px 22px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.5rem;
+  }
+  
+  .submitBtn {
+    font-size: 1rem;
+    padding: 16px 28px;
+  }
+}
+
+/* Tablet Portrait (768px - 899px) */
+@media (max-width: 899px) {
+  .twoColumnLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .leftPanel {
+    border-radius: 25px 25px 0 0;
+  }
+  
+  .rightPanel {
+    border-radius: 0 0 25px 25px;
+  }
+  
+  .formWrapper {
+    max-width: 700px;
+  }
+  
+  .yogaImagesSection {
+    padding: 35px 28px;
+  }
+  
+  .yogaGallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .galleryItem {
+    min-height: 100px;
+    max-height: 130px;
+  }
+  
+  .enrollmentForm {
+    padding: 38px 28px;
+  }
+  
+  .mainHeading {
+    font-size: 1.9rem;
+  }
+  
+  .seatCounter {
+    max-width: 380px;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 60px;
+  }
+  
+  .omSymbol {
+    font-size: 80px;
+  }
+  
+  .meditation {
+    font-size: 50px;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+  .enrollmentContainer {
+    padding: 35px 12px;
+  }
+  
+  .formWrapper {
+    border-radius: 18px;
+    max-width: 100%;
+  }
+  
+  .yogaImagesSection {
+    padding: 25px 18px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.88rem;
+    padding: 7px 18px;
+    letter-spacing: 1px;
+  }
+  
+  .mainHeading {
+    font-size: 1.5rem;
+  }
+  
+  .subHeading {
+    font-size: 0.82rem;
+  }
+  
+  .yogaGallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .galleryItem {
+    min-height: 120px;
+    max-height: 150px;
+  }
+  
+  .urgencyBadge {
+    font-size: 0.72rem;
+    padding: 7px 16px;
+  }
+  
+  .seatCounter {
+    padding: 16px 18px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  
+  .seatIcon {
+    font-size: 2rem;
+  }
+  
+  .seatNumber {
+    font-size: 2rem;
+  }
+  
+  .seatLabel {
+    font-size: 0.8rem;
+  }
+  
+  .seatWarning {
+    font-size: 0.72rem;
+    padding: 5px 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .enrollmentForm {
+    padding: 28px 18px;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.35rem;
+  }
+  
+  .formTitle p {
+    font-size: 0.88rem;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 13px 14px;
+    font-size: 0.92rem;
+  }
+  
+  .submitBtn {
+    padding: 15px 25px;
+    font-size: 0.98rem;
+    letter-spacing: 1px;
+  }
+  
+  .trustIndicators {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .trustItem {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .courseInfoBox {
+    padding: 16px;
+  }
+  
+  .lotusLeft,
+  .lotusRight {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 50px;
+  }
+  
+  .omSymbol {
+    font-size: 60px;
+  }
+  
+  .meditation {
+    font-size: 40px;
+  }
+  
+  .floatIcon {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Medium (480px - 575px) */
+@media (max-width: 575px) {
+  .enrollmentContainer {
+    padding: 28px 10px;
+  }
+  
+  .formWrapper {
+    border-radius: 16px;
+  }
+  
+  .yogaImagesSection {
+    padding: 22px 15px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.78rem;
+    padding: 6px 16px;
+  }
+  
+  .mainHeading {
+    font-size: 1.35rem;
+  }
+  
+  .subHeading {
+    font-size: 0.78rem;
+    margin-bottom: 18px;
+  }
+  
+  .yogaGallery {
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+  
+  .galleryItem {
+    min-height: 110px;
+    max-height: 140px;
+  }
+  
+  .overlayText {
+    font-size: 0.72rem;
+    padding: 10px;
+  }
+  
+  .urgencySection {
+    gap: 12px;
+  }
+  
+  .seatCounter {
+    padding: 14px 16px;
+    gap: 10px;
+  }
+  
+  .seatIcon {
+    font-size: 1.85rem;
+  }
+  
+  .seatNumber {
+    font-size: 1.85rem;
+  }
+  
+  .enrollmentForm {
+    padding: 24px 16px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.25rem;
+  }
+  
+  .formGrid {
+    gap: 14px;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 12px 13px;
+    font-size: 0.88rem;
+  }
+  
+  .submitBtn {
+    padding: 14px 22px;
+    font-size: 0.92rem;
+  }
+  
+  .btnIcon {
+    font-size: 1.25rem;
+  }
+  
+  .courseInfoBox {
+    padding: 14px;
+  }
+  
+  .courseInfoIcon {
+    font-size: 1.25rem;
+  }
+  
+  .trustItem {
+    font-size: 0.82rem;
+    padding: 7px 10px;
+  }
+}
+
+/* Mobile Small (375px - 479px) */
+@media (max-width: 479px) {
+  .enrollmentContainer {
+    padding: 18px 8px;
+  }
+  
+  .formWrapper {
+    border-radius: 14px;
+  }
+  
+  .yogaImagesSection {
+    padding: 18px 12px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.7rem;
+    padding: 5px 14px;
+    letter-spacing: 0.5px;
+  }
+  
+  .mainHeading {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+  
+  .subHeading {
+    font-size: 0.7rem;
+    margin-bottom: 14px;
+  }
+  
+  .yogaGallery {
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .galleryItem {
+    min-height: 95px;
+    max-height: 120px;
+  }
+  
+  .overlayText {
+    font-size: 0.68rem;
+  }
+  
+  .urgencyBadge {
+    font-size: 0.62rem;
+    padding: 5px 10px;
+    gap: 5px;
+  }
+  
+  .pulse {
+    font-size: 0.88rem;
+  }
+  
+  .seatCounter {
+    padding: 11px 13px;
+    gap: 8px;
+  }
+  
+  .seatIcon {
+    font-size: 1.65rem;
+  }
+  
+  .seatNumber {
+    font-size: 1.65rem;
+  }
+  
+  .seatLabel {
+    font-size: 0.7rem;
+  }
+  
+  .seatWarning {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+  
+  .enrollmentForm {
+    padding: 18px 13px;
+  }
+  
+  .formTitle {
+    margin-bottom: 22px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.15rem;
+  }
+  
+  .formTitle p {
+    font-size: 0.8rem;
+  }
+  
+  .formGrid {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  
+  .formLabel {
+    font-size: 0.82rem;
+    gap: 5px;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 11px 12px;
+    font-size: 0.82rem;
+  }
+  
+  .submitBtn {
+    padding: 13px 20px;
+    font-size: 0.85rem;
+    gap: 7px;
+  }
+  
+  .btnIcon {
+    font-size: 1.15rem;
+  }
+  
+  .courseInfoBox {
+    padding: 11px;
+    gap: 10px;
+  }
+  
+  .courseInfoIcon {
+    font-size: 1.15rem;
+  }
+  
+  .courseInfoLabel {
+    font-size: 0.75rem;
+  }
+  
+  .courseInfoValue {
+    font-size: 0.85rem;
+  }
+  
+  .trustIndicators {
+    margin-top: 22px;
+    padding-top: 18px;
+    gap: 8px;
+  }
+  
+  .trustItem {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  
+  .trustIcon {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 40px;
+  }
+  
+  .omSymbol {
+    font-size: 50px;
+  }
+  
+  .meditation {
+    font-size: 35px;
+  }
+  
+  .lotusLeft,
+  .lotusRight {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .floatIcon {
+    font-size: 35px;
+  }
+  
+  .sparkle1, .sparkle2, .sparkle3 {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Extra Small (< 375px) */
+@media (max-width: 374px) {
+  .enrollmentContainer {
+    padding: 14px 6px;
+  }
+  
+  .yogaImagesSection {
+    padding: 15px 10px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.65rem;
+    padding: 4px 12px;
+  }
+  
+  .mainHeading {
+    font-size: 1.05rem;
+  }
+  
+  .subHeading {
+    font-size: 0.65rem;
+  }
+  
+  .yogaGallery {
+    gap: 5px;
+  }
+  
+  .galleryItem {
+    min-height: 85px;
+    max-height: 110px;
+  }
+  
+  .seatCounter {
+    padding: 9px 11px;
+  }
+  
+  .seatIcon {
+    font-size: 1.45rem;
+  }
+  
+  .seatNumber {
+    font-size: 1.5rem;
+  }
+  
+  .enrollmentForm {
+    padding: 16px 11px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.05rem;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 10px 11px;
+    font-size: 0.78rem;
+  }
+  
+  .submitBtn {
+    padding: 11px 18px;
+    font-size: 0.8rem;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 35px;
+  }
+  
+  .omSymbol {
+    font-size: 45px;
+  }
+}
+
+/* Landscape Mode for Small Devices */
+@media (max-height: 600px) and (orientation: landscape) {
+  .enrollmentContainer {
+    padding: 18px 12px;
+  }
+  
+  .yogaImagesSection {
+    padding: 18px 22px;
+  }
+  
+  .yogaGallery {
+    margin-bottom: 12px;
+  }
+  
+  .galleryItem {
+    min-height: 70px;
+    max-height: 90px;
+  }
+  
+  .mainHeading {
+    font-size: 1.25rem;
+  }
+  
+  .subHeading {
+    font-size: 0.75rem;
+    margin-bottom: 12px;
+  }
+  
+  .seatCounter {
+    padding: 9px 18px;
+  }
+  
+  .urgencySection {
+    gap: 10px;
+  }
+  
+  .enrollmentForm {
+    padding: 18px 22px;
+  }
+  
+  .formGrid {
+    gap: 12px;
+  }
+  
+  .yogaPose1, .yogaPose2,
+  .omSymbol,
+  .meditation {
+    display: none;
+  }
+}
+
+/* Desktop (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .formWrapper {
+    max-width: 1000px;
+  }
+  
+  .twoColumnLayout {
+    grid-template-columns: 42% 58%;
+  }
+  
+  .yogaImagesSection {
+    padding: 35px 25px;
+  }
+  
+  .mainHeading {
+    font-size: 2rem;
+  }
+  
+  .excitementBadge {
+    font-size: 1.1rem;
+    padding: 10px 28px;
+  }
+  
+  .yogaGallery {
+    gap: 12px;
+  }
+  
+  .galleryImage {
+    min-height: 150px;
+  }
+  
+  .overlayText {
+    font-size: 0.85rem;
+  }
+  
+  .enrollmentForm {
+    padding: 35px 25px;
+  }
+}
+
+/* Tablet Landscape (900px - 1023px) */
+@media (max-width: 1023px) {
+  .enrollmentContainer {
+    padding: 60px 20px;
+  }
+  
+  .formWrapper {
+    max-width: 850px;
+  }
+  
+  .twoColumnLayout {
+    grid-template-columns: 40% 60%;
+  }
+  
+  .yogaImagesSection {
+    padding: 30px 20px;
+  }
+  
+  .excitementBadge {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+  
+  .mainHeading {
+    font-size: 1.8rem;
+  }
+  
+  .subHeading {
+    font-size: 0.9rem;
+  }
+  
+  .yogaGallery {
+    gap: 10px;
+  }
+  
+  .galleryImage {
+    min-height: 130px;
+  }
+  
+  .seatCounter {
+    padding: 20px 25px;
+    gap: 15px;
+  }
+  
+  .seatIcon {
+    font-size: 2.5rem;
+  }
+  
+  .seatNumber {
+    font-size: 2.5rem;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.6rem;
+  }
+  
+  .submitBtn {
+    font-size: 1.1rem;
+    padding: 18px 30px;
+  }
+}
+
+/* Tablet Portrait (768px - 899px) */
+@media (max-width: 899px) {
+  .twoColumnLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .leftPanel {
+    border-radius: 25px 25px 0 0;
+  }
+  
+  .rightPanel {
+    border-radius: 0 0 25px 25px;
+  }
+  
+  .formWrapper {
+    max-width: 700px;
+  }
+  
+  .yogaImagesSection {
+    padding: 35px 30px;
+  }
+  
+  .yogaGallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+  
+  .galleryImage {
+    min-height: 120px;
+  }
+  
+  .enrollmentForm {
+    padding: 40px 30px;
+  }
+  
+  .mainHeading {
+    font-size: 2rem;
+  }
+  
+  .seatCounter {
+    max-width: 400px;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 60px;
+  }
+  
+  .omSymbol {
+    font-size: 80px;
+  }
+  
+  .meditation {
+    font-size: 50px;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+  .enrollmentContainer {
+    padding: 40px 15px;
+  }
+  
+  .formWrapper {
+    border-radius: 20px;
+    max-width: 100%;
+  }
+  
+  .yogaImagesSection {
+    padding: 30px 20px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.9rem;
+    padding: 8px 22px;
+    letter-spacing: 1px;
+  }
+  
+  .mainHeading {
+    font-size: 1.6rem;
+  }
+  
+  .subHeading {
+    font-size: 0.85rem;
+  }
+  
+  .yogaGallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .galleryImage {
+    min-height: 140px;
+  }
+  
+  .urgencyBadge {
+    font-size: 0.75rem;
+    padding: 8px 18px;
+  }
+  
+  .seatCounter {
+    padding: 18px 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  
+  .seatIcon {
+    font-size: 2.2rem;
+  }
+  
+  .seatNumber {
+    font-size: 2.2rem;
+  }
+  
+  .seatLabel {
+    font-size: 0.85rem;
+  }
+  
+  .seatWarning {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .enrollmentForm {
+    padding: 30px 20px;
+  }
+  
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.4rem;
+  }
+  
+  .formTitle p {
+    font-size: 0.9rem;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .submitBtn {
+    padding: 16px 28px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  
+  .trustIndicators {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .trustItem {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .courseInfoBox {
+    padding: 18px;
+  }
+  
+  .lotusLeft,
+  .lotusRight {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 50px;
+  }
+  
+  .omSymbol {
+    font-size: 60px;
+  }
+  
+  .meditation {
+    font-size: 40px;
+  }
+  
+  .floatIcon {
+    font-size: 40px;
+  }
+}
+
+/* Mobile Medium (480px - 575px) */
+@media (max-width: 575px) {
+  .enrollmentContainer {
+    padding: 30px 12px;
+  }
+  
+  .formWrapper {
+    border-radius: 18px;
+  }
+  
+  .yogaImagesSection {
+    padding: 25px 18px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.8rem;
+    padding: 7px 18px;
+  }
+  
+  .mainHeading {
+    font-size: 1.4rem;
+  }
+  
+  .subHeading {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .yogaGallery {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .galleryImage {
+    min-height: 120px;
+  }
+  
+  .overlayText {
+    font-size: 0.75rem;
+    padding: 10px;
+  }
+  
+  .urgencySection {
+    gap: 15px;
+  }
+  
+  .seatCounter {
+    padding: 15px 18px;
+    gap: 12px;
+  }
+  
+  .seatIcon {
+    font-size: 2rem;
+  }
+  
+  .seatNumber {
+    font-size: 2rem;
+  }
+  
+  .enrollmentForm {
+    padding: 25px 18px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.3rem;
+  }
+  
+  .formGrid {
+    gap: 16px;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 13px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .submitBtn {
+    padding: 15px 25px;
+    font-size: 0.95rem;
+  }
+  
+  .btnIcon {
+    font-size: 1.3rem;
+  }
+  
+  .courseInfoBox {
+    padding: 15px;
+  }
+  
+  .courseInfoIcon {
+    font-size: 1.3rem;
+  }
+  
+  .trustItem {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile Small (375px - 479px) */
+@media (max-width: 479px) {
+  .enrollmentContainer {
+    padding: 20px 10px;
+  }
+  
+  .formWrapper {
+    border-radius: 15px;
+  }
+  
+  .yogaImagesSection {
+    padding: 20px 15px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.75rem;
+    padding: 6px 15px;
+    letter-spacing: 0.5px;
+  }
+  
+  .mainHeading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .subHeading {
+    font-size: 0.75rem;
+    margin-bottom: 15px;
+  }
+  
+  .yogaGallery {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+  
+  .galleryImage {
+    min-height: 100px;
+  }
+  
+  .overlayText {
+    font-size: 0.7rem;
+  }
+  
+  .urgencyBadge {
+    font-size: 0.65rem;
+    padding: 6px 12px;
+    gap: 6px;
+  }
+  
+  .pulse {
+    font-size: 0.9rem;
+  }
+  
+  .seatCounter {
+    padding: 12px 15px;
+    gap: 10px;
+  }
+  
+  .seatIcon {
+    font-size: 1.8rem;
+  }
+  
+  .seatNumber {
+    font-size: 1.8rem;
+  }
+  
+  .seatLabel {
+    font-size: 0.75rem;
+  }
+  
+  .seatWarning {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+  
+  .enrollmentForm {
+    padding: 20px 15px;
+  }
+  
+  .formTitle {
+    margin-bottom: 25px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.2rem;
+  }
+  
+  .formTitle p {
+    font-size: 0.85rem;
+  }
+  
+  .formGrid {
+    gap: 14px;
+    margin-bottom: 25px;
+  }
+  
+  .formLabel {
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+  
+  .submitBtn {
+    padding: 14px 22px;
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+  
+  .btnIcon {
+    font-size: 1.2rem;
+  }
+  
+  .courseInfoBox {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .courseInfoIcon {
+    font-size: 1.2rem;
+  }
+  
+  .courseInfoLabel {
+    font-size: 0.8rem;
+  }
+  
+  .courseInfoValue {
+    font-size: 0.9rem;
+  }
+  
+  .trustIndicators {
+    margin-top: 25px;
+    padding-top: 20px;
+    gap: 10px;
+  }
+  
+  .trustItem {
+    font-size: 0.8rem;
+    padding: 7px 10px;
+  }
+  
+  .trustIcon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 40px;
+  }
+  
+  .omSymbol {
+    font-size: 50px;
+  }
+  
+  .meditation {
+    font-size: 35px;
+  }
+  
+  .lotusLeft,
+  .lotusRight {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .floatIcon {
+    font-size: 35px;
+  }
+  
+  .sparkle1, .sparkle2, .sparkle3 {
+    font-size: 20px;
+  }
+}
+
+/* Mobile Extra Small (< 375px) */
+@media (max-width: 374px) {
+  .enrollmentContainer {
+    padding: 15px 8px;
+  }
+  
+  .yogaImagesSection {
+    padding: 18px 12px;
+  }
+  
+  .excitementBadge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+  
+  .mainHeading {
+    font-size: 1.1rem;
+  }
+  
+  .subHeading {
+    font-size: 0.7rem;
+  }
+  
+  .yogaGallery {
+    gap: 5px;
+  }
+  
+  .galleryImage {
+    min-height: 90px;
+  }
+  
+  .seatCounter {
+    padding: 10px 12px;
+  }
+  
+  .seatIcon {
+    font-size: 1.5rem;
+  }
+  
+  .seatNumber {
+    font-size: 1.6rem;
+  }
+  
+  .enrollmentForm {
+    padding: 18px 12px;
+  }
+  
+  .formTitle h3 {
+    font-size: 1.1rem;
+  }
+  
+  .formInput,
+  .formSelect {
+    padding: 11px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .submitBtn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .yogaPose1, .yogaPose2 {
+    font-size: 35px;
+  }
+  
+  .omSymbol {
+    font-size: 45px;
+  }
+}
+
+/* Landscape Mode for Small Devices */
+@media (max-height: 600px) and (orientation: landscape) {
+  .enrollmentContainer {
+    padding: 20px 15px;
+  }
+  
+  .yogaImagesSection {
+    padding: 20px 25px;
+  }
+  
+  .yogaGallery {
+    margin-bottom: 15px;
+  }
+  
+  .galleryImage {
+    min-height: 80px;
+  }
+  
+  .mainHeading {
+    font-size: 1.3rem;
+  }
+  
+  .subHeading {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .seatCounter {
+    padding: 10px 20px;
+  }
+  
+  .urgencySection {
+    gap: 12px;
+  }
+  
+  .enrollmentForm {
+    padding: 20px 25px;
+  }
+  
+  .formGrid {
+    gap: 15px;
+  }
+  
+  .yogaPose1, .yogaPose2,
+  .omSymbol,
+  .meditation {
+    display: none;
+  }
+}
