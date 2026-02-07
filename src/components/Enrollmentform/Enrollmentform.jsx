@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import countries from "world-countries";
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import countries from 'world-countries';
 import styles from '../../assets/styles/Enrollmentform/Enrollmentform.module.css';
 
 const EnrollmentForm = () => {
@@ -8,38 +8,42 @@ const EnrollmentForm = () => {
     email: '',
     mobile: '',
     country: '',
-    course: ''
+    course: '',
   });
 
   const [showConfetti, setShowConfetti] = useState(false);
 
   // Course details with start dates and initial seats
-  const courseDetails = {
-    '100 Hour YTTC': { 
-      startDate: '2025-03-01', 
-      initialSeats: 50 
+  const courseDetails = useMemo(
+  () => ({
+    '100 Hour YTTC': {
+      startDate: '2025-03-01',
+      initialSeats: 50,
     },
-    '200 Hour YTTC': { 
-      startDate: '2025-03-15', 
-      initialSeats: 50 
+    '200 Hour YTTC': {
+      startDate: '2025-03-15',
+      initialSeats: 50,
     },
-    '300 Hour YTTC': { 
-      startDate: '2025-04-01', 
-      initialSeats: 50 
+    '300 Hour YTTC': {
+      startDate: '2025-04-01',
+      initialSeats: 50,
     },
-    '500 Hour YTTC': { 
-      startDate: '2025-04-15', 
-      initialSeats: 50 
+    '500 Hour YTTC': {
+      startDate: '2025-04-15',
+      initialSeats: 50,
     },
-    'Prenatal Yoga TTC': { 
-      startDate: '2025-03-10', 
-      initialSeats: 50 
+    'Prenatal Yoga TTC': {
+      startDate: '2025-03-10',
+      initialSeats: 50,
     },
-    'Yin Yoga TTC': { 
-      startDate: '2025-03-20', 
-      initialSeats: 50 
-    }
-  };
+    'Yin Yoga TTC': {
+      startDate: '2025-03-20',
+      initialSeats: 50,
+    },
+  }),
+  [],
+);
+
 
   const courses = Object.keys(courseDetails);
 
@@ -48,7 +52,8 @@ const EnrollmentForm = () => {
     .sort((a, b) => a.localeCompare(b));
 
   // Seat countdown logic based on selected course
-  const calculateAvailableSeats = (courseName) => {
+ const calculateAvailableSeats = useCallback(
+  (courseName) => {
     if (!courseName || !courseDetails[courseName]) {
       return 50;
     }
@@ -58,13 +63,15 @@ const EnrollmentForm = () => {
     const MINIMUM_SEATS = 3;
     const startDate = new Date(courseInfo.startDate);
     const currentDate = new Date();
-    
+
     if (currentDate < startDate) {
       return INITIAL_SEATS;
     }
-    
-    const weeksPassed = Math.floor((currentDate - startDate) / (7 * 24 * 60 * 60 * 1000));
-    
+
+    const weeksPassed = Math.floor(
+      (currentDate - startDate) / (7 * 24 * 60 * 60 * 1000),
+    );
+
     let availableSeats = INITIAL_SEATS;
     for (let i = 0; i < weeksPassed; i++) {
       availableSeats = Math.floor(availableSeats / 2);
@@ -73,25 +80,28 @@ const EnrollmentForm = () => {
         break;
       }
     }
-    
+
     return availableSeats;
-  };
+  },
+  [courseDetails],
+);
+
 
   const [availableSeats, setAvailableSeats] = useState(50);
 
-  useEffect(() => {
-    if (formData.course) {
-      setAvailableSeats(calculateAvailableSeats(formData.course));
-    }
-  }, [formData.course]);
+ useEffect(() => {
+  if (formData.course) {
+    setAvailableSeats(calculateAvailableSeats(formData.course));
+  }
+}, [formData.course, calculateAvailableSeats]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
-    
+
     if (name === 'course') {
       setAvailableSeats(calculateAvailableSeats(value));
     }
@@ -102,13 +112,15 @@ const EnrollmentForm = () => {
     setShowConfetti(true);
     setTimeout(() => setShowConfetti(false), 3000);
     console.log('Form submitted:', formData);
-    alert('🎉 Congratulations! Your seat is reserved! We will contact you soon.');
+    alert(
+      '🎉 Congratulations! Your seat is reserved! We will contact you soon.',
+    );
     setFormData({
       name: '',
       email: '',
       mobile: '',
       country: '',
-      course: ''
+      course: '',
     });
   };
 
@@ -152,10 +164,30 @@ const EnrollmentForm = () => {
 
       {/* Floating Yoga Icons */}
       <div className={styles.floatingIcons}>
-        <div className={styles.floatIcon} style={{left: '5%', animationDelay: '0s'}}>🧘</div>
-        <div className={styles.floatIcon} style={{left: '15%', animationDelay: '2s'}}>🪷</div>
-        <div className={styles.floatIcon} style={{left: '85%', animationDelay: '1s'}}>🕉️</div>
-        <div className={styles.floatIcon} style={{left: '95%', animationDelay: '3s'}}>✨</div>
+        <div
+          className={styles.floatIcon}
+          style={{ left: '5%', animationDelay: '0s' }}
+        >
+          🧘
+        </div>
+        <div
+          className={styles.floatIcon}
+          style={{ left: '15%', animationDelay: '2s' }}
+        >
+          🪷
+        </div>
+        <div
+          className={styles.floatIcon}
+          style={{ left: '85%', animationDelay: '1s' }}
+        >
+          🕉️
+        </div>
+        <div
+          className={styles.floatIcon}
+          style={{ left: '95%', animationDelay: '3s' }}
+        >
+          ✨
+        </div>
       </div>
 
       <div className={styles.formWrapper}>
@@ -169,9 +201,7 @@ const EnrollmentForm = () => {
                 <div className={styles.excitementBadge}>
                   🔥 SPECIAL OFFER 🔥
                 </div>
-                <h2 className={styles.mainHeading}>
-                  🌟 Book Your Seat Now 🌟
-                </h2>
+                <h2 className={styles.mainHeading}>🌟 Book Your Seat Now 🌟</h2>
                 <p className={styles.subHeading}>
                   ✨ Transform Your Life with Authentic Yoga Training ✨
                 </p>
@@ -180,8 +210,8 @@ const EnrollmentForm = () => {
               {/* Image Gallery Grid */}
               <div className={styles.yogaGallery}>
                 <div className={styles.galleryItem}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80" 
+                  <img
+                    src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&q=80"
                     alt="Yoga Meditation"
                     className={styles.galleryImage}
                   />
@@ -191,8 +221,8 @@ const EnrollmentForm = () => {
                 </div>
 
                 <div className={styles.galleryItem}>
-                  <img 
-                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80" 
+                  <img
+                    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&q=80"
                     alt="Yoga Asanas"
                     className={styles.galleryImage}
                   />
@@ -200,9 +230,6 @@ const EnrollmentForm = () => {
                     <span className={styles.overlayText}>Asanas</span>
                   </div>
                 </div>
-
-                
-               
               </div>
 
               {/* Urgency Section */}
@@ -222,7 +249,9 @@ const EnrollmentForm = () => {
                     <span className={styles.seatLabel}>Seats Left!</span>
                   </div>
                   <div className={styles.seatWarning}>
-                    {availableSeats <= 5 ? '🚨 Almost Full!' : '⏰ Filling Fast!'}
+                    {availableSeats <= 5
+                      ? '🚨 Almost Full!'
+                      : '⏰ Filling Fast!'}
                   </div>
                 </div>
               </div>
@@ -328,7 +357,14 @@ const EnrollmentForm = () => {
                     <option value="">Choose your training course</option>
                     {courses.map((course, index) => (
                       <option key={index} value={course}>
-                        {course} - Starting {new Date(courseDetails[course].startDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        {course} - Starting{' '}
+                        {new Date(
+                          courseDetails[course].startDate,
+                        ).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                          year: 'numeric',
+                        })}
                       </option>
                     ))}
                   </select>
@@ -341,13 +377,17 @@ const EnrollmentForm = () => {
                       <div className={styles.courseInfoItem}>
                         <span className={styles.courseInfoIcon}>📅</span>
                         <div>
-                          <span className={styles.courseInfoLabel}>Course Starts:</span>
+                          <span className={styles.courseInfoLabel}>
+                            Course Starts:
+                          </span>
                           <span className={styles.courseInfoValue}>
-                            {new Date(courseDetails[formData.course].startDate).toLocaleDateString('en-US', { 
+                            {new Date(
+                              courseDetails[formData.course].startDate,
+                            ).toLocaleDateString('en-US', {
                               weekday: 'long',
-                              month: 'long', 
-                              day: 'numeric', 
-                              year: 'numeric' 
+                              month: 'long',
+                              day: 'numeric',
+                              year: 'numeric',
                             })}
                           </span>
                         </div>
@@ -355,8 +395,12 @@ const EnrollmentForm = () => {
                       <div className={styles.courseInfoItem}>
                         <span className={styles.courseInfoIcon}>🪑</span>
                         <div>
-                          <span className={styles.courseInfoLabel}>Available Seats:</span>
-                          <span className={styles.courseInfoValue}>{availableSeats} seats remaining</span>
+                          <span className={styles.courseInfoLabel}>
+                            Available Seats:
+                          </span>
+                          <span className={styles.courseInfoValue}>
+                            {availableSeats} seats remaining
+                          </span>
                         </div>
                       </div>
                     </div>
