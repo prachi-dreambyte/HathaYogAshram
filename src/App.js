@@ -33,6 +33,16 @@ import AboutUs from 'components/AboutUs/AboutUs';
 import BookingForm from 'components/Bookingform/Bookingformred';
 import OnlineYTTC from 'components/onlineyogacourse/onlineyogayttc';
 import OnlineYoga from 'components/onlineyogacourse/Onlineyoga';
+import AsanaPage from 'components/HomepageOverview/Asana';
+import PranayamaPage from 'components/HomepageOverview/Pranayama';
+import EthicsLifestylePage from 'components/HomepageOverview/YogicEthics&Lifestyle';
+import ChakrasEnergyPage from 'components/HomepageOverview/Chakras&Energy';
+import AyurvedaNutritionPage from 'components/HomepageOverview/Ayurveda&Nutrition';
+import MantrasChantingPage from 'components/HomepageOverview/Mantras&Chanting';
+import MeditationCleansingPage from 'components/HomepageOverview/Meditation';
+import TeachingMethodologyPage from 'components/HomepageOverview/TeachingMethodology';
+import YogaAnatomyPage from 'components/HomepageOverview/YogaAnatomy';
+import PhilosophyPage from 'components/HomepageOverview/YogicPhilosophy';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -81,6 +91,16 @@ export default function Main() {
          <Route path="/BookingForm" element={<BookingForm />} />
          <Route path="/Online-YTTC" element={<OnlineYTTC />} />
           <Route path="/Yoga-Online" element={<OnlineYoga />} />
+           <Route path="/Asana-Page" element={<AsanaPage />} />
+            <Route path="/Pranayama-Page" element={<PranayamaPage />} />
+            <Route path="Philosophy-Page" element={<PhilosophyPage />} />
+            <Route path="/YogaAnatomy-Page" element={<YogaAnatomyPage />} />
+            <Route path="/TeachingMethodology-Page" element={<TeachingMethodologyPage />} />
+            <Route path="/MeditationCleansing-Page" element={<MeditationCleansingPage />} />
+            <Route path="/MantrasChanting-Page" element={<MantrasChantingPage/>} />
+            <Route path="/AyurvedaNutrition-Page" element={<AyurvedaNutritionPage />} />
+            <Route path="/ChakrasEnergy-Page" element={<ChakrasEnergyPage />} />
+            <Route path="/EthicsLifestyle-Page" element={<EthicsLifestylePage />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}
