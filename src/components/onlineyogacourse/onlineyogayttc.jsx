@@ -117,7 +117,7 @@ const OnlineYTTC = () => {
           </h1>
           <p className={styles.heroSubtitle}>
             Our Online Yoga Teacher Training Course (TTC) brings the
-            transformative essence of traditional Hatha Yoga directly to you, no
+            transformative essence of traditional Hatha Yog directly to you, no
             matter where you are in the world.
           </p>
           <button
@@ -346,7 +346,7 @@ const OnlineYTTC = () => {
               {
                 title: 'Authentic Teachings',
                 description:
-                  'Learn traditional Hatha Yoga from experienced instructors rooted in the lineage of Rishikesh, the Yoga Capital of the World.',
+                  'Learn traditional Hatha Yog from experienced instructors rooted in the lineage of Rishikesh, the Yoga Capital of the World.',
               },
               {
                 title: 'Flexible Learning',
@@ -438,10 +438,10 @@ const OnlineYTTC = () => {
         <div className={styles.certContent}>
           <p className={styles.certText}>
             At Hatha Yogashram, our core focus lies in the practice of
-            traditional Hatha Yoga. We are the best yoga school in India
-            regarding Hatha Yoga, as it forms a crucial foundation for balancing
+            traditional Hatha Yog. We are the best yoga school in India
+            regarding Hatha Yog, as it forms a crucial foundation for balancing
             the Nadis (energy channels). To meet certification standards, our
-            Hatha Yoga training is enriched with studies in Yoga Anatomy &
+            Hatha Yog training is enriched with studies in Yoga Anatomy &
             Physiology, Adjustment & Alignment of Asanas, Pranayama (the yogic
             art of breathing), traditional Yoga Philosophy, Meditation
             techniques, Ayurveda, and Mantra chanting.

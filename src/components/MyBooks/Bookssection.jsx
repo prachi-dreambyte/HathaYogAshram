@@ -15,7 +15,7 @@ const BooksSection = () => {
   const latestBooks = [
     {
       id: 1,
-      title: 'Hatha Yoga Pradipika',
+      title: 'Hatha Yog Pradipika',
       author: 'Swami Swatmarama',
       coverImage: book1,
       pdfUrl: '/pdfs/1766929251310.pdf',

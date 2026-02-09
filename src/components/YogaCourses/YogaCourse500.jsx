@@ -259,7 +259,7 @@ export default function YogaCourse500() {
               <div className="row">
                 <div className="col-md-6">
                   <div className={styles.subjectCard}>
-                    <h5>Hatha Yoga Foundations</h5>
+                    <h5>Hatha Yog Foundations</h5>
                     <ul>
                       <li>Pawanmuktasana Series 1-3</li>
                       <li>Surya Namaskar & Chandra Namaskar</li>
@@ -296,7 +296,7 @@ export default function YogaCourse500() {
                     <ul>
                       <li>Patanjali Yoga Sutras</li>
                       <li>Bhagavad Gita teachings</li>
-                      <li>Hatha Yoga Pradipika</li>
+                      <li>Hatha Yog Pradipika</li>
                       <li>Eight Limbs of Yoga</li>
                     </ul>
                   </div>
@@ -313,7 +313,7 @@ export default function YogaCourse500() {
                 <div className={styles.subjectList}>
                   <h6>Techniques & Practice</h6>
                   <ul>
-                    <li>Hatha Yoga Asanas</li>
+                    <li>Hatha Yog Asanas</li>
                     <li>Ashtanga Vinyasa</li>
                     <li>Pranayama</li>
                     <li>Meditation</li>

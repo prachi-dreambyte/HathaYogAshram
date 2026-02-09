@@ -59,11 +59,11 @@ const Yoga20DaysRetreat = () => {
   const yogaStyles = [
     {
       icon: '🧘',
-      title: 'Hatha Yoga',
+      title: 'Hatha Yog',
       description:
-        'Traditional Hatha Yoga for physical strength and flexibility',
+        'Traditional Hatha Yog for physical strength and flexibility',
       fullDescription:
-        'Dive deep into the traditional practice of Hatha Yoga. Our 20-day retreat focuses on asanas (postures), pranayama (breathing techniques), and meditation to bring complete harmony between body and mind. Experience transformative practices under the guidance of our master teachers.',
+        'Dive deep into the traditional practice of Hatha Yog. Our 20-day retreat focuses on asanas (postures), pranayama (breathing techniques), and meditation to bring complete harmony between body and mind. Experience transformative practices under the guidance of our master teachers.',
       image:
         'https://images.pexels.com/photos/3822945/pexels-photo-3822945.jpeg?auto=compress&cs=tinysrgb&w=1200',
     },
@@ -118,7 +118,7 @@ const Yoga20DaysRetreat = () => {
       role: 'Senior Yoga Teacher',
       experience: '15+ years teaching experience',
       certification: 'Yoga Alliance RYS*600hrs',
-      expertise: 'Hatha Yoga, Ashtanga',
+      expertise: 'Hatha Yog, Ashtanga',
     },
     {
       name: 'Sushant Yogi',
@@ -337,7 +337,7 @@ const Yoga20DaysRetreat = () => {
               <Link to="#" className={styles.heroLink}>
                 Hatha Yogashram
               </Link>{' '}
-              in Rishikesh, India. Dive deep into Hatha Yoga, Pranayama,
+              in Rishikesh, India. Dive deep into Hatha Yog, Pranayama,
               Meditation, Mudra, and Mantra Chanting for a holistic wellness
               journey that creates lasting transformation.
             </p>
@@ -619,7 +619,7 @@ const Yoga20DaysRetreat = () => {
             <span className={styles.sectionBadge}>Yogic Practices</span>
             <h2 className={styles.sectionTitle}>Yoga Styles & Practices</h2>
             <p className={styles.yogaSubtitle}>
-              Hatha Yoga • Pranayama • Meditation • Mudra • Mantra Chanting
+              Hatha Yog • Pranayama • Meditation • Mudra • Mantra Chanting
             </p>
           </div>
 

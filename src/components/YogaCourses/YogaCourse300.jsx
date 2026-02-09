@@ -75,7 +75,7 @@ export default function YogaCourse300() {
       items: [
         "Patanjali's Yoga Sutras: Vibhuti & Kaivalya Pada",
         'Bhagavad Gita: Path of Devotion & Discernment',
-        'Hatha Yoga Pradipika: Tantra & Energetics',
+        'Hatha Yog Pradipika: Tantra & Energetics',
         'Advanced Chakra & Nadis System',
         'Teaching Ethics for Advanced Teachers',
         'Philosophy as Living Practice',

@@ -22,7 +22,7 @@ export default function AboutUs() {
       role: 'Founder & Senior Teacher',
       experience: '25+ Years',
       specialty: 'Hatha & Ashtanga Yoga',
-      description: 'Master teacher with deep knowledge of traditional Hatha Yoga and Patanjali Yoga Sutras'
+      description: 'Master teacher with deep knowledge of traditional Hatha Yog and Patanjali Yoga Sutras'
     },
     {
       name: 'Dr. Priya Sharma',
@@ -192,7 +192,7 @@ export default function AboutUs() {
                   <div>
                     <h4>Traditional Wisdom</h4>
                     <p>
-                      Rooted in ancient Hatha Yoga traditions and Patanjali's Yoga Sutras
+                      Rooted in ancient Hatha Yog traditions and Patanjali's Yoga Sutras
                     </p>
                   </div>
                 </div>
@@ -381,7 +381,7 @@ export default function AboutUs() {
             <div className={styles.reasonCard}>
               <div className={styles.reasonNumber}>01</div>
               <h4>Authentic Tradition</h4>
-              <p>Learn genuine Hatha Yoga from teachers trained in traditional Himalayan lineages, preserving ancient wisdom.</p>
+              <p>Learn genuine Hatha Yog from teachers trained in traditional Himalayan lineages, preserving ancient wisdom.</p>
             </div>
             <div className={styles.reasonCard}>
               <div className={styles.reasonNumber}>02</div>

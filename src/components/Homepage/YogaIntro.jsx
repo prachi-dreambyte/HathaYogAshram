@@ -55,7 +55,7 @@ const YogaIntro = () => {
             </motion.p>
 
             <motion.h1 className={styles.heading} variants={fadeUp}>
-              Learn with Yoga Alliance® Certified School of Hatha Yoga
+              Learn with Yoga Alliance® Certified School of Hatha Yog
             </motion.h1>
 
             <motion.h2 className={styles.subHeading} variants={fadeUp}>

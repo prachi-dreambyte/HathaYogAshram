@@ -113,7 +113,7 @@ export default function YogaCourse100() {
 
   const curriculum = [
     {
-      category: 'Hatha Yoga',
+      category: 'Hatha Yog',
       items: [
         '140+ traditional asanas',
         'Surya & Chandra Namaskar',
@@ -171,7 +171,7 @@ export default function YogaCourse100() {
   const dailySchedule = [
     { time: '6:00 AM', activity: 'Morning Tea' },
     { time: '6:30 AM', activity: 'Pranayama & Meditation' },
-    { time: '8:00 AM', activity: 'Hatha Yoga Asana Practice' },
+    { time: '8:00 AM', activity: 'Hatha Yog Asana Practice' },
     { time: '10:00 AM', activity: 'Breakfast' },
     { time: '11:00 AM', activity: 'Yoga Philosophy & Ancient Texts' },
     { time: '12:30 PM', activity: 'Anatomy & Alignment' },

@@ -94,7 +94,7 @@ const YogaRetreatRishikesh = () => {
       activities: [
         '10:00 – 14:00: Arrival and check-in',
         '16:00 – 17:00: Opening Ceremony',
-        '17:30 – 18:30: Gentle Hatha Yoga',
+        '17:30 – 18:30: Gentle Hatha Yog',
         '19:00 – 20:00: Dinner',
       ],
     },
@@ -128,7 +128,7 @@ const YogaRetreatRishikesh = () => {
       day: 'Day 4',
       title: 'Emotional Healing & Stillness',
       activities: [
-        '06:30 – 07:30: Slow Hatha Yoga',
+        '06:30 – 07:30: Slow Hatha Yog',
         '07:45 – 08:45: Pranayama',
         '09:00 – 10:00: Breakfast',
         '10:30 – 12:30: Excursions',

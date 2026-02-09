@@ -95,7 +95,7 @@ const Yoga10DaysRetreat = () => {
       icon: '💚',
       title: 'Holistic Wellness',
       description:
-        'Explore Hatha Yoga, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
+        'Explore Hatha Yog, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
     },
     {
       icon: '🍽️',
@@ -243,7 +243,7 @@ const Yoga10DaysRetreat = () => {
               <Link to="#" className={styles.heroLink}>
                 Hatha Yogashram
               </Link>{' '}
-              Meditation and Yoga Retreat in Rishikesh. Dive into Hatha Yoga,
+              Meditation and Yoga Retreat in Rishikesh. Dive into Hatha Yog,
               Pranayama, Meditation, Mudra, and Mantra Chanting for a holistic
               wellness journey.
             </p>
@@ -472,7 +472,7 @@ const Yoga10DaysRetreat = () => {
             <span className={styles.sectionBadge}>Our Approach</span>
             <h2 className={styles.sectionTitle}>Yoga Styles & Practices</h2>
             <p className={styles.yogaSubtitle}>
-              Hatha Yoga • Pranayama • Meditation • Mudra • Mantra Chanting
+              Hatha Yog • Pranayama • Meditation • Mudra • Mantra Chanting
             </p>
           </div>
 

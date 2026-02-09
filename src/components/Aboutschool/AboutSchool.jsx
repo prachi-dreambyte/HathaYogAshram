@@ -416,7 +416,7 @@ const AboutSchool = () => {
                   <div className={styles.styleGrid}>
                     <div className={styles.styleCard}>
                       <Sun size={32} />
-                      <h4>Hatha Yoga</h4>
+                      <h4>Hatha Yog</h4>
                       <p>
                         Traditional practice focusing on physical postures and
                         breath control
@@ -1245,7 +1245,7 @@ const AboutSchool = () => {
                   <h3>Comprehensive Practice</h3>
                   <p>
                     Sattva Yoga path offers a unique and potent practice that
-                    includes physical postures Hatha Yoga (Static and Dynamic
+                    includes physical postures Hatha Yog (Static and Dynamic
                     variations of all poses/asanas. Principle poses of Hatha
                     with their variations, mastering of vinyasa Flows and
                     principles of Cosmic Alignment), powerful breathwork
@@ -1448,7 +1448,7 @@ const AboutSchool = () => {
                     teachings integrate radical and relevant wisdom with
                     meditation, breathwork, techniques, deepening connection and
                     devotion through Laya and Bhakti practices, the Chakra
-                    healing power of sound, free movement, and Hatha Yoga
+                    healing power of sound, free movement, and Hatha Yog
                     asanas.
                   </p>
 
@@ -2372,7 +2372,7 @@ const AboutSchool = () => {
                   <div className={styles.styleGrid}>
                     <div className={styles.styleCard}>
                       <Sun size={32} />
-                      <h4>Hatha Yoga</h4>
+                      <h4>Hatha Yog</h4>
                       <p>
                         Traditional practice with focus on alignment and holding
                       </p>

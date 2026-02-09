@@ -739,7 +739,7 @@ const Kundalini200Page = () => {
               },
               {
                 q: 'Can beginners join this course?',
-                a: "While Kundalini is intense, our course accommodates all levels. However, having basic knowledge of Hatha yoga, pranayama, and meditation is beneficial. If you're new to yoga, we recommend starting with foundation practices before Kundalini training.",
+                a: "While Kundalini is intense, our course accommodates all levels. However, having basic knowledge of Hatha yog, pranayama, and meditation is beneficial. If you're new to yoga, we recommend starting with foundation practices before Kundalini training.",
               },
               {
                 q: 'What are chakras and how do we awaken them?',

@@ -52,7 +52,7 @@ export default function YogaCourse200() {
       category: 'Asana Mastery',
       hours: '60 Hours',
       items: [
-        'Hatha Yoga: 140+ traditional postures',
+        'Hatha Yog: 140+ traditional postures',
         'Ashtanga Vinyasa: Primary series',
         'Vinyasa Flow: Creative sequencing',
         'Alignment & Adjustment techniques',
@@ -125,7 +125,7 @@ export default function YogaCourse200() {
   const dailySchedule = [
     { time: '5:30 AM', activity: 'Wake Up & Herbal Tea' },
     { time: '6:00 AM', activity: 'Pranayama & Meditation' },
-    { time: '7:30 AM', activity: 'Hatha Yoga Asana Practice' },
+    { time: '7:30 AM', activity: 'Hatha Yog Asana Practice' },
     { time: '9:30 AM', activity: 'Breakfast' },
     { time: '10:30 AM', activity: 'Yoga Philosophy / Anatomy' },
     { time: '12:30 PM', activity: 'Teaching Methodology' },

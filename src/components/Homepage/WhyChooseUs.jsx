@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className={styles.heading}>Why Choose Hatha Yoga</h2>
+          <h2 className={styles.heading}>Why Choose Hatha Yog</h2>
           <p className={styles.subText}>
             Everything you need to build a consistent, mindful yoga practice —
             guided by experts and designed for real life.

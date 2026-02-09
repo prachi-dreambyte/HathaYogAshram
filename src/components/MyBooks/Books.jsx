@@ -13,9 +13,9 @@ const Books = () => {
   const books = [
     {
       id: 1,
-      title: 'Hatha Yoga Pradipika',
+      title: 'Hatha Yog Pradipika',
       author: 'Swami Swatmarama',
-      description: 'A classical Sanskrit manual on hatha yoga, written by Swami Swatmarama in the 15th century. It is one of the most influential texts of Hatha yoga.',
+      description: 'A classical Sanskrit manual on hatha yog, written by Swami Swatmarama in the 15th century. It is one of the most influential texts of Hatha yog.',
       coverImage: book1,
       pdfUrl: '/pdfs/1766929251310.pdf', // Add your PDF URLs here
       category: 'Classical Texts',

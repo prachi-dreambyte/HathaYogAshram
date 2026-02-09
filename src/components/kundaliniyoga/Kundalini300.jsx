@@ -385,7 +385,7 @@ export default function Kundalini300() {
                       <h4>🧘 140+ Yoga Asanas</h4>
                       <p>
                         Complete practice including advanced inversions, arm
-                        balances and Hatha yoga mastery
+                        balances and Hatha yog mastery
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
@@ -486,7 +486,7 @@ export default function Kundalini300() {
 
               {activeTab === 'asanas' && (
                 <div className={styles.tabPane}>
-                  <h3>Advanced Hatha Yoga Asana Practice</h3>
+                  <h3>Advanced Hatha Yog Asana Practice</h3>
                   <ul className={styles.curriculumList}>
                     <li>140+ traditional yoga asanas and variations</li>
                     <li>Surya Namaskar (Sun Salutation) - 12 steps mastery</li>
@@ -640,7 +640,7 @@ export default function Kundalini300() {
             <div className={styles.scheduleItem}>
               <div className={styles.scheduleTime}>10:30</div>
               <div className={styles.scheduleContent}>
-                <h4>Hatha Yoga Asana Practice</h4>
+                <h4>Hatha Yog Asana Practice</h4>
                 <p>Advanced postures, inversions and alignment practice</p>
               </div>
             </div>
@@ -808,7 +808,7 @@ export default function Kundalini300() {
               },
               {
                 q: 'Can a beginner in yoga learn Kundalini?',
-                a: 'The 300-hour course is designed for those who have completed 200-hour YTT and have at least 6 months of regular yoga practice. While beginners can benefit from Kundalini, this advanced training requires foundational knowledge of Hatha yoga, pranayama, and meditation.',
+                a: 'The 300-hour course is designed for those who have completed 200-hour YTT and have at least 6 months of regular yoga practice. While beginners can benefit from Kundalini, this advanced training requires foundational knowledge of Hatha yog, pranayama, and meditation.',
               },
               {
                 q: 'What are chakras and how do we awaken them?',

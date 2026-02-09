@@ -53,7 +53,7 @@ const FacilitiesSection = () => {
           <motion.h1 variants={textFadeUp}>Join Our School</motion.h1>
 
           <motion.h2 variants={textFadeUp}>
-            Begin Your Journey with Our 200 Hour Hatha Yoga TTC
+            Begin Your Journey with Our 200 Hour Hatha Yog TTC
           </motion.h2>
 
           {/* CTA BUTTON */}

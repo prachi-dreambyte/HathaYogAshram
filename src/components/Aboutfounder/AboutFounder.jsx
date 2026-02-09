@@ -9,7 +9,7 @@ const Founders = () => {
       name: 'Guru Ashish Ji',
       role: ['Vinyasa Yogashala', 'Founder'],
       image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&h=1000&fit=crop',
-      shortTitle: 'Master of Traditional Hatha Yoga',
+      shortTitle: 'Master of Traditional Hatha Yog',
       bio: [
         "His Philosophy on yoga teaches us beyond just physical well-being; it is more about unlocking the power of our subconscious mind. It is an exploration of our inner self that seeks to bring us closer to understanding our true nature.",
         "Guru Ji has dedicated his life to the practice of yoga and its philosophy, combining ancient teachings with modern-day techniques and tools to create an inclusive environment for all.",

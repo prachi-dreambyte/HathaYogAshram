@@ -76,7 +76,7 @@ const YogaRetreat = () => {
     {
       title: 'Holistic Wellness:',
       description:
-        'Explore Hatha Yoga, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
+        'Explore Hatha Yog, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
     },
     {
       title: 'Culinary Delights:',
@@ -305,7 +305,7 @@ const YogaRetreat = () => {
             </div>
             <h2 className={styles.sectionTitle}>Yoga Style</h2>
             <p className={styles.yogaSubtitle}>
-              Hatha Yoga, Pranayama, Meditation, Mudra, and Mantra Chanting
+              Hatha Yog, Pranayama, Meditation, Mudra, and Mantra Chanting
             </p>
           </div>
 
