@@ -6,8 +6,8 @@
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(180deg, 
-    #f35a5ab3 0%,
-    #9c5b55 40%,
+    #e05353b3 0%,
+    #e9695e 40%,
     #FFE4D6 70%,
     #FFF8F0 100%
   );
@@ -290,32 +290,6 @@
   margin-bottom: 25px;
 }
 
-.excitementBadge {
-  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #8B0000;
-  padding: 10px 30px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
-  animation: excitementPulse 2s ease-in-out infinite;
-  border: 3px solid white;
-  display: inline-block;
-  margin-bottom: 18px;
-}
-
-@keyframes excitementPulse {
-  0%, 100% { 
-    transform: scale(1) rotate(0deg);
-    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
-  }
-  50% { 
-    transform: scale(1.05) rotate(-1deg);
-    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.8);
-  }
-}
 
 .mainHeading {
   font-family: 'Playfair Display', serif;

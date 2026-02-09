@@ -198,9 +198,7 @@ const EnrollmentForm = () => {
             <div className={styles.yogaImagesSection}>
               {/* Header with Badge */}
               <div className={styles.imagesHeader}>
-                <div className={styles.excitementBadge}>
-                  🔥 SPECIAL OFFER 🔥
-                </div>
+               
                 <h2 className={styles.mainHeading}>🌟 Book Your Seat Now 🌟</h2>
                 <p className={styles.subHeading}>
                   ✨ Transform Your Life with Authentic Yoga Training ✨
