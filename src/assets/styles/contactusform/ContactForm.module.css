@@ -225,7 +225,7 @@
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
-  user-select: none;
+
 }
 
 .checkboxLabel input[type="checkbox"] {
@@ -476,7 +476,6 @@
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   text-decoration: none;
   display: inline-block;
