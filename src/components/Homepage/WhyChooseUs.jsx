@@ -1,6 +1,17 @@
 import React from "react";
 import styles from "../../assets/styles/Homepage/WhyChooseUs.module.css";
-import { FaUserGraduate, FaClock, FaLeaf, FaVideo } from "react-icons/fa";
+import {FaUserGraduate, 
+  FaClock, 
+  FaLeaf, 
+  FaVideo,
+  FaHandsHelping,
+  FaMountain,
+  FaScroll,
+  FaUtensils,
+  FaSeedling,
+  FaPray,
+  FaOm,
+  FaHome } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 /* ===================== */
@@ -76,29 +87,65 @@ const WhyChooseUs = () => {
         >
           {[
             {
-              icon: FaUserGraduate,
-              title: "Expert Teachers",
-              text:
-                "Learn from certified and experienced yoga instructors who guide you with clarity and care.",
-            },
-            {
-              icon: FaClock,
-              title: "Anytime Practice",
-              text:
-                "Short or long sessions — practice whenever it fits your schedule.",
-            },
-            {
-              icon: FaLeaf,
-              title: "Mind–Body Balance",
-              text:
-                "Improve flexibility, strength, focus, and inner calm with every session.",
-            },
-            {
-              icon: FaVideo,
-              title: "On-Demand Classes",
-              text:
-                "Access a growing library of yoga, meditation, and breathwork classes.",
-            },
+      icon: FaUserGraduate,
+      title: "Expert Teachers",
+      text: "Learn from certified and experienced yoga instructors who guide you with clarity and care.",
+    },
+    {
+      icon: FaClock,
+      title: "Anytime Practice",
+      text: "Short or long sessions — practice whenever it fits your schedule.",
+    },
+    {
+      icon: FaLeaf,
+      title: "Mind–Body Balance",
+      text: "Improve flexibility, strength, focus, and inner calm with every session.",
+    },
+    {
+      icon: FaVideo,
+      title: "On-Demand Classes",
+      text: "Access a growing library of yoga, meditation, and breathwork classes.",
+    },
+    {
+      icon: FaHandsHelping,
+      title: "Teaching Approach",
+      text: "Hatha Yog is taught with patience, discipline, and personal guidance. The focus is not just on postures, but on correct alignment, breath awareness, and inner experience.",
+    },
+    {
+      icon: FaMountain,
+      title: "Strong Foundation",
+      text: "Build a solid foundation for all yoga practices. Master basic asanas, pranayama, and meditation to develop strength, stability, flexibility, and mindfulness.",
+    },
+    {
+      icon: FaScroll,
+      title: "Ancient Legacy",
+      text: "Hatha Yog carries the legacy of ancient yogis and sages. This knowledge has been passed down through generations, preserved in its pure form.",
+    },
+    {
+      icon: FaUtensils,
+      title: "Yogic Food Culture",
+      text: "Food is an essential part of yogic life. We follow a traditional yogic lifestyle that supports both body and mind.",
+    },
+    {
+      icon: FaSeedling,
+      title: "Satvik Food",
+      text: "Pure Satvik food, prepared with awareness and simplicity. Satvik meals help cleanse the body, calm the mind, and enhance spiritual growth.",
+    },
+    {
+      icon: FaPray,
+      title: "Ancient Parampara",
+      text: "Our teachings follow the ancient Guru–Shishya Parampara, where knowledge is transmitted with respect, discipline, and direct experience.",
+    },
+    {
+      icon: FaOm,
+      title: "Ancient Rules & Discipline",
+      text: "Practiced according to ancient yogic rules—including daily routine, self-discipline, simplicity, and mindful living—to support inner transformation.",
+    },
+    {
+      icon: FaHome,
+      title: "We are not Company we are Ashram",
+      text: "We are an ashram, where yoga is a way of life, not a product. Our aim is spiritual growth, self-awareness, and living in harmony with nature.",
+    },
           ].map((item, index) => (
             <motion.div
               key={index}

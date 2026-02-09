@@ -212,7 +212,8 @@ const PranayamaPage = () => {
         </div></div>
 
         {/* Call to Action */}
-        <div className="row justify-content-center mt-4">
+        <div className="container-fluid py-5">
+          <div className="row justify-content-center mt-4">
           <div className="col-lg-8 text-center">
             <div className={Styles.ctaSection}>
               <h2 className={Styles.sectionHeading}>Begin Your Journey</h2>
@@ -225,6 +226,8 @@ const PranayamaPage = () => {
             </div>
           </div>
         </div>
+        </div>
+        
       </div>
   );
 };
