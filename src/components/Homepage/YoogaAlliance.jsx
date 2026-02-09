@@ -50,7 +50,7 @@ const YogaAlliance = () => {
           variants={staggerContainer}
         >
           <motion.span className={styles.subTitle} variants={fadeUp}>
-            Learn with Yoga Alliance® Certified School of Hatha Yoga Teacher Training Rishikesh
+            Learn with Yoga Alliance® Certified School of Hatha Yog Teacher Training Rishikesh
           </motion.span>
 
           <motion.h1 className={styles.title} variants={fadeUp}>
@@ -79,12 +79,12 @@ const YogaAlliance = () => {
           </motion.p>
 
           <motion.p className={styles.desc} variants={fadeUp}>
-            Start Your Yoga Career With One Of The Oldest Hatha Yoga Teachers
+            Start Your Yoga Career With One Of The Oldest Hatha Yog Teachers
             Training School In India. Become Certified Yoga Instructor with Yoga Alliance USA Certification®.
           </motion.p>
 
           <motion.p className={styles.desc} variants={fadeUp}>
-            Hatha Yoga Ashram is a Yoga Alliance Registered Yoga School (RYS).
+            Hatha Yog Ashram is a Yoga Alliance Registered Yoga School (RYS).
             Our Teacher Training Course (TTC) follows the guidelines set by Yoga
             Alliance, USA for RYS200, as well other training courses, and our
             Advanced 300-hour Teacher Training Course (ATTC) follows the

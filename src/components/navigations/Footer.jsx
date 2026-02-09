@@ -63,9 +63,9 @@ const Footer = () => {
           {/* LOGO + DESCRIPTION */}
           <motion.div className="col-lg-4 col-md-12" variants={columnItem}>
             <div className={styles.brandWrap}>
-              <img src={logo} alt="Hatha Yoga Ashram" className={styles.logo} />
+              <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
               <p className={styles.desc}>
-                Hatha Yoga Ashram, founded in 2017 in Rishikesh, India, is one
+                Hatha Yog Ashram, founded in 2017 in Rishikesh, India, is one
                 of the most trusted yoga teacher training schools.
                 <br />
                 We offer traditional Hatha, Ashtanga, Kundalini, Meditation and
@@ -103,6 +103,9 @@ const Footer = () => {
           <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
             <h5 className={styles.title}>Kundalini Links</h5>
             <ul className={styles.list}>
+              <li>
+                <Link to="/kundalini-100">100 Hour Kundalini</Link>
+              </li>
               <li>
                 <Link to="/kundalini-200">200 Hour Kundalini</Link>
               </li>
@@ -223,8 +226,13 @@ const Footer = () => {
 
         {/* BOTTOM */}
         <motion.div className={styles.bottom} variants={columnItem}>
-          © {new Date().getFullYear()} Hatha Yoga Ashram. All Rights Reserved.
-        </motion.div>
+  © {new Date().getFullYear()} Hatha Yog Ashram
+ 
+  comming under yog ashram
+ 
+  All Rights Reserved.
+</motion.div>
+
       </div>
     </motion.footer>
   );

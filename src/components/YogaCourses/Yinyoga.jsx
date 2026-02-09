@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/YogaCourse/Yinyoga.module.css';
-import banner1 from '../../assets/images/Yin_Banner_V01.webp'
+import banner1 from '../../assets/images/Yin_Banner_V01.webp';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 export default function YinYoga() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -12,29 +13,42 @@ export default function YinYoga() {
   };
 
   const schools = {
-    'rishikesh': {
+    rishikesh: {
       name: 'Rishikesh Yoga Association',
       hours: '50 Hour',
       tagline: 'Traditional Yin Yoga Practice',
       location: 'Rishikesh, India',
       image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800',
     },
-    'vinyasa': {
+    vinyasa: {
       name: 'Vinyasa Yoga Ashram',
       hours: '100 Hour',
       tagline: 'Comprehensive Yin Training',
       location: 'Rishikesh, Uttarakhand',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
+      image:
+        'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
     },
   };
 
   const meridians = [
-    { name: 'Lung Meridian', element: 'Metal', organs: 'Lungs & Large Intestine' },
+    {
+      name: 'Lung Meridian',
+      element: 'Metal',
+      organs: 'Lungs & Large Intestine',
+    },
     { name: 'Kidney Meridian', element: 'Water', organs: 'Kidneys & Bladder' },
     { name: 'Liver Meridian', element: 'Wood', organs: 'Liver & Gallbladder' },
-    { name: 'Heart Meridian', element: 'Fire', organs: 'Heart & Small Intestine' },
+    {
+      name: 'Heart Meridian',
+      element: 'Fire',
+      organs: 'Heart & Small Intestine',
+    },
     { name: 'Spleen Meridian', element: 'Earth', organs: 'Spleen & Stomach' },
-    { name: 'Pericardium Meridian', element: 'Fire', organs: 'Pericardium & Triple Burner' },
+    {
+      name: 'Pericardium Meridian',
+      element: 'Fire',
+      organs: 'Pericardium & Triple Burner',
+    },
   ];
 
   return (
@@ -42,19 +56,14 @@ export default function YinYoga() {
       {/* HERO SECTION */}
       <section className={styles.heroSection}>
         <div className={styles.heroBackground}>
-          <img
-            src={banner1}
-            alt="Yin Yoga Practice"
-          />
+          <img src={banner1} alt="Yin Yoga Practice" />
         </div>
 
         <div className={styles.heroContent}>
           <p className={styles.quoteText}>
             Slow Down • Find Stillness • Go Deeper
           </p>
-          <h1 className={styles.mainTitle}>
-            Yin Yoga Teacher Training
-          </h1>
+          <h1 className={styles.mainTitle}>Yin Yoga Teacher Training</h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
             <span className={styles.breadcrumbSeparator}>/</span>
@@ -97,21 +106,24 @@ export default function YinYoga() {
               <div className={styles.cardIcon}>☯️</div>
               <h3>Taoist Philosophy</h3>
               <p>
-                Learn the ancient wisdom of Yin-Yang balance and Chinese meridian system
+                Learn the ancient wisdom of Yin-Yang balance and Chinese
+                meridian system
               </p>
             </div>
             <div className={styles.floatCard}>
               <div className={styles.cardIcon}>🧠</div>
               <h3>Deep Tissue Work</h3>
               <p>
-                Target connective tissues, fascia, joints and ligaments for profound release
+                Target connective tissues, fascia, joints and ligaments for
+                profound release
               </p>
             </div>
             <div className={styles.floatCard}>
               <div className={styles.cardIcon}>🎓</div>
               <h3>Certified Training</h3>
               <p>
-                Complete 50 or 100-hour programs with internationally recognized certification
+                Complete 50 or 100-hour programs with internationally recognized
+                certification
               </p>
             </div>
           </div>
@@ -122,9 +134,7 @@ export default function YinYoga() {
       <section className={styles.overviewSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <span className={styles.sectionLabel}>
-              The Art of Stillness
-            </span>
+            <span className={styles.sectionLabel}>The Art of Stillness</span>
             <h2 className={styles.sectionTitle}>What is Yin Yoga?</h2>
             <div className={styles.decorativeLine}></div>
           </div>
@@ -132,7 +142,12 @@ export default function YinYoga() {
           <div className={styles.overviewGrid}>
             <div className={styles.overviewContent}>
               <p className={styles.leadText}>
-                Yin Yoga is a slow-paced style of yoga where poses are held for longer periods - typically 3 to 5 minutes or more. Unlike dynamic Yang styles, Yin targets the deep connective tissues, fascia, ligaments, and joints rather than the muscles, promoting flexibility and circulation in the joints while calming the nervous system.
+                Yin Yoga is a slow-paced style of yoga where poses are held for
+                longer periods - typically 3 to 5 minutes or more. Unlike
+                dynamic Yang styles, Yin targets the deep connective tissues,
+                fascia, ligaments, and joints rather than the muscles, promoting
+                flexibility and circulation in the joints while calming the
+                nervous system.
               </p>
 
               <div className={styles.highlights}>
@@ -141,7 +156,8 @@ export default function YinYoga() {
                   <div>
                     <h4>Passive Practice</h4>
                     <p>
-                      Muscles are relaxed, allowing gravity to do the work in stretching connective tissues
+                      Muscles are relaxed, allowing gravity to do the work in
+                      stretching connective tissues
                     </p>
                   </div>
                 </div>
@@ -150,7 +166,8 @@ export default function YinYoga() {
                   <div>
                     <h4>Meridian System</h4>
                     <p>
-                      Stimulates energy channels based on Traditional Chinese Medicine principles
+                      Stimulates energy channels based on Traditional Chinese
+                      Medicine principles
                     </p>
                   </div>
                 </div>
@@ -159,7 +176,8 @@ export default function YinYoga() {
                   <div>
                     <h4>Meditative State</h4>
                     <p>
-                      Long holds create space for meditation, introspection and emotional release
+                      Long holds create space for meditation, introspection and
+                      emotional release
                     </p>
                   </div>
                 </div>
@@ -224,7 +242,8 @@ export default function YinYoga() {
             <h2 className={styles.sectionTitle}>The 12 Meridians</h2>
             <div className={styles.decorativeLine}></div>
             <p className={styles.sectionDesc}>
-              Understand the energy pathways that flow through your body according to Traditional Chinese Medicine
+              Understand the energy pathways that flow through your body
+              according to Traditional Chinese Medicine
             </p>
           </div>
 
@@ -234,7 +253,9 @@ export default function YinYoga() {
                 <div className={styles.meridianIcon}>☯️</div>
                 <div className={styles.meridianContent}>
                   <h3>{meridian.name}</h3>
-                  <p className={styles.meridianElement}>Element: {meridian.element}</p>
+                  <p className={styles.meridianElement}>
+                    Element: {meridian.element}
+                  </p>
                   <p className={styles.meridianOrgans}>{meridian.organs}</p>
                 </div>
               </div>
@@ -294,49 +315,57 @@ export default function YinYoga() {
                     <div className={styles.curriculumCard}>
                       <h4>🧘‍♀️ 50+ Yin Asanas</h4>
                       <p>
-                        Complete practice of all major Yin poses with variations and modifications
+                        Complete practice of all major Yin poses with variations
+                        and modifications
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>🌬️ Yin Pranayama</h4>
                       <p>
-                        Breathing techniques including heating, cooling pranayama and mudras
+                        Breathing techniques including heating, cooling
+                        pranayama and mudras
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>🦴 Fascia Training</h4>
                       <p>
-                        Deep understanding of connective tissue and its role in flexibility
+                        Deep understanding of connective tissue and its role in
+                        flexibility
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>☯️ Taoist Philosophy</h4>
                       <p>
-                        Yin-Yang principles, meridian system and Traditional Chinese Medicine
+                        Yin-Yang principles, meridian system and Traditional
+                        Chinese Medicine
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>🔬 Yin Anatomy</h4>
                       <p>
-                        Tissues, joints, compression, tension and skeletal variations
+                        Tissues, joints, compression, tension and skeletal
+                        variations
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>🧠 Meditation Practices</h4>
                       <p>
-                        Chakra awakening, breath awareness and mindfulness meditation
+                        Chakra awakening, breath awareness and mindfulness
+                        meditation
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>🌿 Ayurvedic Perspectives</h4>
                       <p>
-                        Integration of Ayurveda with Yin yoga practice and philosophy
+                        Integration of Ayurveda with Yin yoga practice and
+                        philosophy
                       </p>
                     </div>
                     <div className={styles.curriculumCard}>
                       <h4>👨‍🏫 Teaching Methodology</h4>
                       <p>
-                        Complete training on how to teach Yin yoga safely and effectively
+                        Complete training on how to teach Yin yoga safely and
+                        effectively
                       </p>
                     </div>
                   </div>
@@ -385,7 +414,9 @@ export default function YinYoga() {
                     </div>
                   </div>
                   <div className={styles.asanaNote}>
-                    <p><strong>Each pose includes:</strong></p>
+                    <p>
+                      <strong>Each pose includes:</strong>
+                    </p>
                     <ul>
                       <li>Anatomical alignments and proper technique</li>
                       <li>Variations and modifications for all levels</li>
@@ -402,18 +433,54 @@ export default function YinYoga() {
                 <div className={styles.tabPane}>
                   <h3>Yin Anatomy & Physiology</h3>
                   <ul className={styles.curriculumList}>
-                    <li><strong>Tissues:</strong> Understanding different tissue types and their response to Yin practice</li>
-                    <li><strong>Joints and Movement:</strong> Study of the 9 major joint complexes and individual variations</li>
-                    <li><strong>Systems:</strong> Musculoskeletal system and how Yin affects different body systems</li>
-                    <li><strong>Compression and Tension:</strong> How these forces work in the body during Yin postures</li>
-                    <li><strong>Connective Tissue:</strong> Deep dive into fascia, ligaments, tendons and their properties</li>
-                    <li><strong>Fascia Training:</strong> Complete anatomy of fascia and its importance in flexibility</li>
-                    <li><strong>Fascia and Emotions:</strong> Understanding emotional storage in fascia and trauma release</li>
-                    <li><strong>Joints and Hyaluronic Acid:</strong> Effect of Yin Yoga on joint health and lubrication</li>
-                    <li><strong>The Pelvic Floor:</strong> Understanding the pelvis as the house of emotions</li>
-                    <li><strong>Psoas Muscle:</strong> The soul of the body - its function and emotional connections</li>
-                    <li><strong>Stretching vs Stressing:</strong> Understanding the difference in Yin practice</li>
-                    <li><strong>Skeletal Variation:</strong> Why everyone's body is different and how to honor this</li>
+                    <li>
+                      <strong>Tissues:</strong> Understanding different tissue
+                      types and their response to Yin practice
+                    </li>
+                    <li>
+                      <strong>Joints and Movement:</strong> Study of the 9 major
+                      joint complexes and individual variations
+                    </li>
+                    <li>
+                      <strong>Systems:</strong> Musculoskeletal system and how
+                      Yin affects different body systems
+                    </li>
+                    <li>
+                      <strong>Compression and Tension:</strong> How these forces
+                      work in the body during Yin postures
+                    </li>
+                    <li>
+                      <strong>Connective Tissue:</strong> Deep dive into fascia,
+                      ligaments, tendons and their properties
+                    </li>
+                    <li>
+                      <strong>Fascia Training:</strong> Complete anatomy of
+                      fascia and its importance in flexibility
+                    </li>
+                    <li>
+                      <strong>Fascia and Emotions:</strong> Understanding
+                      emotional storage in fascia and trauma release
+                    </li>
+                    <li>
+                      <strong>Joints and Hyaluronic Acid:</strong> Effect of Yin
+                      Yoga on joint health and lubrication
+                    </li>
+                    <li>
+                      <strong>The Pelvic Floor:</strong> Understanding the
+                      pelvis as the house of emotions
+                    </li>
+                    <li>
+                      <strong>Psoas Muscle:</strong> The soul of the body - its
+                      function and emotional connections
+                    </li>
+                    <li>
+                      <strong>Stretching vs Stressing:</strong> Understanding
+                      the difference in Yin practice
+                    </li>
+                    <li>
+                      <strong>Skeletal Variation:</strong> Why everyone's body
+                      is different and how to honor this
+                    </li>
                   </ul>
                 </div>
               )}
@@ -422,23 +489,73 @@ export default function YinYoga() {
                 <div className={styles.tabPane}>
                   <h3>Yin Philosophy & Energy Systems</h3>
                   <ul className={styles.curriculumList}>
-                    <li><strong>Yin-Yang Theory:</strong> Understanding the concept of duality and balance</li>
-                    <li><strong>History of Yin Yoga:</strong> Origins and evolution of the practice</li>
-                    <li><strong>Taoist Philosophy:</strong> Ancient wisdom and principles applied to yoga</li>
-                    <li><strong>12 Meridians:</strong> Energy channels and their functions in the body</li>
-                    <li><strong>Yin and Yang Organs:</strong> Understanding organ pairs in Chinese Medicine</li>
-                    <li><strong>Body Meridian System:</strong> Detailed study of energy pathways</li>
-                    <li><strong>Tattvas of Yin:</strong> Five elements theory</li>
-                    <li><strong>Elements:</strong> Earth, Water, Fire, Air, Ether in Yin practice</li>
-                    <li><strong>Chakras:</strong> Seven energy centers and their connection to Yin</li>
-                    <li><strong>Nadis:</strong> 72,000 energy channels in yogic philosophy</li>
-                    <li><strong>3 Bodies, 5 Pranas, 7 Chakras:</strong> Complete philosophy integration</li>
-                    <li><strong>Yogic and Taoist Integration:</strong> Relationship between both philosophies</li>
-                    <li><strong>Physical and Energetic Aspects:</strong> How Yin works on both levels</li>
-                    <li><strong>Intention in Asanas:</strong> Setting proper intention for deeper practice</li>
-                    <li><strong>Applying Yin in Life:</strong> Living principles beyond the mat</li>
-                    <li><strong>Yin & Yoga Nidra:</strong> Connection between practices</li>
-                    <li><strong>Ayurvedic Perspectives:</strong> Doshas, elements and Yin practice</li>
+                    <li>
+                      <strong>Yin-Yang Theory:</strong> Understanding the
+                      concept of duality and balance
+                    </li>
+                    <li>
+                      <strong>History of Yin Yoga:</strong> Origins and
+                      evolution of the practice
+                    </li>
+                    <li>
+                      <strong>Taoist Philosophy:</strong> Ancient wisdom and
+                      principles applied to yoga
+                    </li>
+                    <li>
+                      <strong>12 Meridians:</strong> Energy channels and their
+                      functions in the body
+                    </li>
+                    <li>
+                      <strong>Yin and Yang Organs:</strong> Understanding organ
+                      pairs in Chinese Medicine
+                    </li>
+                    <li>
+                      <strong>Body Meridian System:</strong> Detailed study of
+                      energy pathways
+                    </li>
+                    <li>
+                      <strong>Tattvas of Yin:</strong> Five elements theory
+                    </li>
+                    <li>
+                      <strong>Elements:</strong> Earth, Water, Fire, Air, Ether
+                      in Yin practice
+                    </li>
+                    <li>
+                      <strong>Chakras:</strong> Seven energy centers and their
+                      connection to Yin
+                    </li>
+                    <li>
+                      <strong>Nadis:</strong> 72,000 energy channels in yogic
+                      philosophy
+                    </li>
+                    <li>
+                      <strong>3 Bodies, 5 Pranas, 7 Chakras:</strong> Complete
+                      philosophy integration
+                    </li>
+                    <li>
+                      <strong>Yogic and Taoist Integration:</strong>{' '}
+                      Relationship between both philosophies
+                    </li>
+                    <li>
+                      <strong>Physical and Energetic Aspects:</strong> How Yin
+                      works on both levels
+                    </li>
+                    <li>
+                      <strong>Intention in Asanas:</strong> Setting proper
+                      intention for deeper practice
+                    </li>
+                    <li>
+                      <strong>Applying Yin in Life:</strong> Living principles
+                      beyond the mat
+                    </li>
+                    <li>
+                      <strong>Yin & Yoga Nidra:</strong> Connection between
+                      practices
+                    </li>
+                    <li>
+                      <strong>Ayurvedic Perspectives:</strong> Doshas, elements
+                      and Yin practice
+                    </li>
                   </ul>
                 </div>
               )}
@@ -447,25 +564,82 @@ export default function YinYoga() {
                 <div className={styles.tabPane}>
                   <h3>Teaching Methodology</h3>
                   <ul className={styles.curriculumList}>
-                    <li><strong>Art of Teaching Yin:</strong> Understanding the unique approach to Yin instruction</li>
-                    <li><strong>How to Teach 50+ Poses:</strong> Detailed methodology for each asana</li>
-                    <li><strong>Building Teaching Skills:</strong> Developing confidence and expertise</li>
-                    <li><strong>Communication Skills:</strong> Clear, effective instruction techniques</li>
-                    <li><strong>Finding Your Voice:</strong> Tone, dynamics and pacing for Yin classes</li>
-                    <li><strong>Proper Instructions:</strong> How to give efficient verbal cues</li>
-                    <li><strong>Adjustments & Corrections:</strong> When and how to assist students safely</li>
-                    <li><strong>Helping Students Find Edge:</strong> Guiding to appropriate depth</li>
-                    <li><strong>Breathing Guidance:</strong> Teaching ocean breath and proper breathing in poses</li>
-                    <li><strong>Using Props:</strong> Blocks, bolsters, cushions, blankets effectively</li>
-                    <li><strong>Modifications:</strong> When and how to modify poses for different bodies</li>
-                    <li><strong>Red/Green/Orange Zones:</strong> Safety principles in practice</li>
-                    <li><strong>Understanding Limitations:</strong> Recognizing student capabilities</li>
-                    <li><strong>Structuring Classes:</strong> How to sequence a Yin yoga class</li>
-                    <li><strong>Theme Classes:</strong> Designing classes around meridians, chakras, elements</li>
-                    <li><strong>Self-Awareness During Holds:</strong> Teaching mindfulness in stillness</li>
-                    <li><strong>Preparing for Class:</strong> Planning and organization</li>
-                    <li><strong>Managing a Class:</strong> Handling different levels and needs</li>
-                    <li><strong>Overcoming Challenges:</strong> Solutions to common teaching obstacles</li>
+                    <li>
+                      <strong>Art of Teaching Yin:</strong> Understanding the
+                      unique approach to Yin instruction
+                    </li>
+                    <li>
+                      <strong>How to Teach 50+ Poses:</strong> Detailed
+                      methodology for each asana
+                    </li>
+                    <li>
+                      <strong>Building Teaching Skills:</strong> Developing
+                      confidence and expertise
+                    </li>
+                    <li>
+                      <strong>Communication Skills:</strong> Clear, effective
+                      instruction techniques
+                    </li>
+                    <li>
+                      <strong>Finding Your Voice:</strong> Tone, dynamics and
+                      pacing for Yin classes
+                    </li>
+                    <li>
+                      <strong>Proper Instructions:</strong> How to give
+                      efficient verbal cues
+                    </li>
+                    <li>
+                      <strong>Adjustments & Corrections:</strong> When and how
+                      to assist students safely
+                    </li>
+                    <li>
+                      <strong>Helping Students Find Edge:</strong> Guiding to
+                      appropriate depth
+                    </li>
+                    <li>
+                      <strong>Breathing Guidance:</strong> Teaching ocean breath
+                      and proper breathing in poses
+                    </li>
+                    <li>
+                      <strong>Using Props:</strong> Blocks, bolsters, cushions,
+                      blankets effectively
+                    </li>
+                    <li>
+                      <strong>Modifications:</strong> When and how to modify
+                      poses for different bodies
+                    </li>
+                    <li>
+                      <strong>Red/Green/Orange Zones:</strong> Safety principles
+                      in practice
+                    </li>
+                    <li>
+                      <strong>Understanding Limitations:</strong> Recognizing
+                      student capabilities
+                    </li>
+                    <li>
+                      <strong>Structuring Classes:</strong> How to sequence a
+                      Yin yoga class
+                    </li>
+                    <li>
+                      <strong>Theme Classes:</strong> Designing classes around
+                      meridians, chakras, elements
+                    </li>
+                    <li>
+                      <strong>Self-Awareness During Holds:</strong> Teaching
+                      mindfulness in stillness
+                    </li>
+                    <li>
+                      <strong>Preparing for Class:</strong> Planning and
+                      organization
+                    </li>
+                    <li>
+                      <strong>Managing a Class:</strong> Handling different
+                      levels and needs
+                    </li>
+                    <li>
+                      <strong>Overcoming Challenges:</strong> Solutions to
+                      common teaching obstacles
+                    </li>
                   </ul>
                 </div>
               )}
@@ -598,6 +772,7 @@ export default function YinYoga() {
           </div>
         </div>
       </section>
+      <BooksSection />
 
       {/* FAQ SECTION */}
       <section className={styles.faqSection}>
@@ -616,7 +791,7 @@ export default function YinYoga() {
               },
               {
                 q: 'Can beginners join Yin Yoga teacher training?',
-                a: "Yes! Yin yoga is accessible to all levels. While having some yoga experience is beneficial, the gentle nature of Yin makes it suitable for beginners. The slow pace allows time to learn proper alignment and understand the practice deeply.",
+                a: 'Yes! Yin yoga is accessible to all levels. While having some yoga experience is beneficial, the gentle nature of Yin makes it suitable for beginners. The slow pace allows time to learn proper alignment and understand the practice deeply.',
               },
               {
                 q: 'What is the meridian system in Yin Yoga?',
@@ -671,7 +846,8 @@ export default function YinYoga() {
         <div className={styles.ctaContent}>
           <h2>Ready to Slow Down & Go Deeper?</h2>
           <p>
-            Join us in Rishikesh for a transformative Yin Yoga journey of stillness, surrender and self-discovery
+            Join us in Rishikesh for a transformative Yin Yoga journey of
+            stillness, surrender and self-discovery
           </p>
           <div className={styles.ctaButtons}>
             <button className={styles.ctaPrimary}>Enroll Now</button>

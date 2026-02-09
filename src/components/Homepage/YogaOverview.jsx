@@ -25,31 +25,110 @@ import Image6 from '../../assets/images/Yoga5.jpg';
 // import Link9 from '../../components/HomepageOverview/YogicEthics&Lifestyle';
 // import Link10 from '../../components/HomepageOverview/YogicPhilosophy';
 
-
 const items = [
-  { key: 'asana', title: 'Asana', icon: asanaIcon, number: '01', Image: Image1, link: '/asana' },
-  { key: 'pranayama', title: 'Pranayama', icon: pranayamaIcon, number: '02', Image: Image2, link: '/pranayama' },
-  { key: 'anatomy', title: 'Yoga Anatomy', icon: anatomyIcon, number: '03', Image: Image3, link: '/yoga-anatomy' },
-  { key: 'philosophy', title: 'Yogic Philosophy', icon: philosophyIcon, number: '04', Image: Image4, link: '/yogic-philosophy' },
-  { key: 'teaching', title: 'Teaching Methodology', icon: teachingIcon, number: '05', Image: Image5, link: '/teaching-methodology' },
-  { key: 'meditation', title: 'Meditation & Cleansing', icon: meditationIcon, number: '06', Image: Image6, link: '/meditation' },
-  { key: 'mantras', title: 'Mantras & Chanting', icon: asanaIcon, number: '07', Image: Image1, link: '/mantras-chanting' },
-  { key: 'ayurveda', title: 'Ayurveda & Nutrition', icon: pranayamaIcon, number: '08', Image: Image2, link: '/ayurveda-nutrition' },
-  { key: 'chakras', title: 'Chakras & Energy', icon: anatomyIcon, number: '09', Image: Image3, link: '/chakras-energy' },
-  { key: 'ethics', title: 'Yogic Ethics & Lifestyle', icon: philosophyIcon, number: '10', Image: Image4, link: '/yogic-ethics' },
+  {
+    key: 'asana',
+    title: 'Asana',
+    icon: asanaIcon,
+    number: '01',
+    Image: Image1,
+    link: '/asana',
+  },
+  {
+    key: 'pranayama',
+    title: 'Pranayama',
+    icon: pranayamaIcon,
+    number: '02',
+    Image: Image2,
+    link: '/pranayama',
+  },
+  {
+    key: 'anatomy',
+    title: 'Yoga Anatomy',
+    icon: anatomyIcon,
+    number: '03',
+    Image: Image3,
+    link: '/yoga-anatomy',
+  },
+  {
+    key: 'philosophy',
+    title: 'Yogic Philosophy',
+    icon: philosophyIcon,
+    number: '04',
+    Image: Image4,
+    link: '/yogic-philosophy',
+  },
+  {
+    key: 'teaching',
+    title: 'Teaching Methodology',
+    icon: teachingIcon,
+    number: '05',
+    Image: Image5,
+    link: '/teaching-methodology',
+  },
+  {
+    key: 'meditation',
+    title: 'Meditation & Cleansing',
+    icon: meditationIcon,
+    number: '06',
+    Image: Image6,
+    link: '/meditation',
+  },
+  {
+    key: 'mantras',
+    title: 'Mantras & Chanting',
+    icon: asanaIcon,
+    number: '07',
+    Image: Image1,
+    link: '/mantras-chanting',
+  },
+  {
+    key: 'ayurveda',
+    title: 'Ayurveda & Nutrition',
+    icon: pranayamaIcon,
+    number: '08',
+    Image: Image2,
+    link: '/ayurveda-nutrition',
+  },
+  {
+    key: 'chakras',
+    title: 'Chakras & Energy',
+    icon: anatomyIcon,
+    number: '09',
+    Image: Image3,
+    link: '/chakras-energy',
+  },
+  {
+    key: 'ethics',
+    title: 'Yogic Ethics & Lifestyle',
+    icon: philosophyIcon,
+    number: '10',
+    Image: Image4,
+    link: '/yogic-ethics',
+  },
 ];
 
 const content = {
-  asana: 'Asana is a meditative discipline cultivating strength, stability, flexibility, and inner awareness. Through mindful alignment and breath coordination, practitioners prepare the body for pranayama and meditation.',
-  pranayama: 'Pranayama refines the flow of life force through conscious breathing techniques. Regular practice balances the nervous system, improves concentration, and creates inner calm.',
-  anatomy: 'Yoga Anatomy bridges modern science with yogic wisdom. Understanding the body ensures safe practice, injury prevention, and intelligent alignment.',
-  philosophy: 'Yogic philosophy provides ethical and spiritual guidance through classical texts such as the Yoga Sutras and Bhagavad Gita, helping practitioners live consciously.',
-  teaching: 'Teaching methodology develops confident, ethical yoga teachers through sequencing, cueing, hands-on adjustments, communication skills, and professional responsibility.',
-  meditation: 'Meditation and cleansing practices cultivate inner stillness, energetic purification, clarity of perception, and long-term self-awareness.',
-  mantras: 'Mantras and chanting harness the power of sacred sound vibrations to deepen meditation, elevate consciousness, and connect with ancient yogic traditions.',
-  ayurveda: 'Ayurveda and nutrition teach the ancient science of holistic health, balancing body constitution (doshas), seasonal eating, and mindful dietary practices for optimal wellbeing.',
-  chakras: 'Chakras and energy systems explore the subtle body architecture, understanding how energy centers influence physical, emotional, and spiritual health through practices and awareness.',
-  ethics: 'Yogic ethics and lifestyle embody the Yamas and Niyamas, guiding practitioners to live with integrity, compassion, self-discipline, and conscious choices both on and off the mat.',
+  asana:
+    'Asana is a meditative discipline cultivating strength, stability, flexibility, and inner awareness. Through mindful alignment and breath coordination, practitioners prepare the body for pranayama and meditation.',
+  pranayama:
+    'Pranayama refines the flow of life force through conscious breathing techniques. Regular practice balances the nervous system, improves concentration, and creates inner calm.',
+  anatomy:
+    'Yoga Anatomy bridges modern science with yogic wisdom. Understanding the body ensures safe practice, injury prevention, and intelligent alignment.',
+  philosophy:
+    'Yogic philosophy provides ethical and spiritual guidance through classical texts such as the Yoga Sutras and Bhagavad Gita, helping practitioners live consciously.',
+  teaching:
+    'Teaching methodology develops confident, ethical yoga teachers through sequencing, cueing, hands-on adjustments, communication skills, and professional responsibility.',
+  meditation:
+    'Meditation and cleansing practices cultivate inner stillness, energetic purification, clarity of perception, and long-term self-awareness.',
+  mantras:
+    'Mantras and chanting harness the power of sacred sound vibrations to deepen meditation, elevate consciousness, and connect with ancient yogic traditions.',
+  ayurveda:
+    'Ayurveda and nutrition teach the ancient science of holistic health, balancing body constitution (doshas), seasonal eating, and mindful dietary practices for optimal wellbeing.',
+  chakras:
+    'Chakras and energy systems explore the subtle body architecture, understanding how energy centers influence physical, emotional, and spiritual health through practices and awareness.',
+  ethics:
+    'Yogic ethics and lifestyle embody the Yamas and Niyamas, guiding practitioners to live with integrity, compassion, self-discipline, and conscious choices both on and off the mat.',
 };
 
 const YogaOverview5 = () => {
@@ -107,7 +186,7 @@ const YogaOverview5 = () => {
                     <img src={item.Image} alt={item.title} />
                   </div>
                 )}
-                
+
                 <div className={styles.timelineDot}>
                   <div className={styles.dotInner}></div>
                 </div>
@@ -146,7 +225,7 @@ const YogaOverview5 = () => {
               )}
             </div>
           ))}
-        </div>                                                                                                                                                                                                                                                                                                                                                                
+        </div>
       </div>
     </section>
   );

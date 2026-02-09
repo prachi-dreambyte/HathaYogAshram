@@ -6,6 +6,8 @@ import yogaAlliance from "../../assets/images/yoga-alliance.webp";
 import tripadvisor from "../../assets/images/trip-advisor-logo.png";
 import google from "../../assets/images/Google-places-logo.webp";
 import facebook from "../../assets/images/facebook-rating.webp";
+import instagram from "../../assets/images/unnamed.png";
+import youtube from "../../assets/images/YouTube_full-color_icon_(2017).svg.webp";
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -86,6 +88,18 @@ const ReviewsSection = () => {
               rating: "5/5 Star",
               stars: "★★★★★",
               title: "Facebook Review",
+            },
+            {
+              img: instagram,
+              rating: "10K+ Followers",
+              stars: "★★★★★",
+              title: "Instagram",
+            },
+            {
+              img: youtube,
+              rating: "5K+ Subscribers",
+              stars: "★★★★★",
+              title: "YouTube Channel",
             },
           ].map((item, index) => (
             <motion.div

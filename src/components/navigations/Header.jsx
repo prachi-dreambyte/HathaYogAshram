@@ -123,6 +123,7 @@ const Header = () => {
               <Link to="/Our-School" onClick={closeAll}>Our School</Link>
               <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
               <Link to="/blog" onClick={closeAll}>Blog</Link>
+              <Link to="/Yoga-Books" onClick={closeAll}>Yoga Books</Link>
               <Link to="/gallery" onClick={closeAll}>Gallery</Link>
             </DesktopDropdown>
 
@@ -181,6 +182,7 @@ const Header = () => {
                 <Link to="/teachers" onClick={closeAll}>Our Teachers</Link>
                 <Link to="/Our-School" onClick={closeAll}>Our School</Link>
                 <Link to="/Accommodation-Food" onClick={closeAll}>Accommodation</Link>
+                <Link to="/Yoga-Books" onClick={closeAll}>Yoga Books</Link>
                 <Link to="/blog" onClick={closeAll}>Blog</Link>
                 <Link to="/gallery" onClick={closeAll}>Gallery</Link>
               </MobileAccordion>

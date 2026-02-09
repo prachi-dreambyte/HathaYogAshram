@@ -12,7 +12,7 @@ const Teachers = () => {
   const teachers = [
     {
       name: 'Dhirendra Ji',
-      role: ['Hatha Yoga', 'Teaching Methodology'],
+      role: ['Hatha Yog', 'Teaching Methodology'],
       image: teacher1,
       bio: ["Born in the lap of the Holy Ganga, at the feet of the Bhootnath Shiva Temple, amidst the forests of the Himalayas, Dhirendra reveals himself as a nature lover and spiritual seeker. Having started his schooling at the tender age of 5, from one of the oldest, most iconic and traditional schools of Rishikesh, Dhirendra believes he was drawn to Yoga by a mystical force as he practiced asanas during the physical education lessons in school. He began to live the yogic way of life from that early age and embraced spirituality as his routines began with worshipping Lord Shiva and the Holy Ganga and continued with practising asanas, eating satvik food and attending music lessons.",
       "It was under the able guidance of his Guru Narender Gusain that he was able to leave all his vices and practice Yoga religiously. His dedication was such that there were times that he would practice till his body was sore, and it was around this time that he realized that the external appreciation and praise were pointless and the true meaning of Yoga was the alignment of the body, mind and soul, being able to appreciate himself from within.",
@@ -31,7 +31,7 @@ const Teachers = () => {
         "3+ years in Thailand, guiding diverse groups of practitioners"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Teaching Methodology",
@@ -59,7 +59,7 @@ const Teachers = () => {
         "432+ Yoga Teacher Training Courses taught to international students"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Functional Yoga Anatomy",
@@ -101,7 +101,7 @@ const Teachers = () => {
     },
     {
       name: 'Pankaj Ji',
-      role: ['Hatha Yoga', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
+      role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
       image: teacher4,
       bio: ["Pankaj Sharma was born and brought up in the foothills of Himalayas, Himachal Pradesh. After the completion of B.A in Sanskrit, he moved to Rishikesh and spent 8 years of his life in an ashram, learning yoga in the age-old Gurukul style leading a disciplined and yogic life. To Satiate his urge for knowledge Pankaj went on to pursue a Masters's degree in Yoga simultaneously teaching in various ashrams and Yoga schools.","Due to his early induction to ashram life, Pankaj at a very young age has carved a niche for himself in yoga with his teaching skills and knowledge in Vedas, Upanishads, and philosophy."],
       education: [
@@ -113,7 +113,7 @@ const Teachers = () => {
         "10+ years of teaching experience"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Restorative Yoga"
@@ -121,7 +121,7 @@ const Teachers = () => {
     },
      {
       name: 'Jitender Ji',
-      role: ['Hatha Yoga', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
+      role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
       image: teacher5,
       bio: ["A distinguished and time-honoured individual, Jitu ji embodies traditionalism. He completed his Bachelor's in Sanskrit from Parmarth Niketan Ashram here in Rishikesh itself and went on to pursue his Master's in Yoga from the prestigious Uttarakhand Sanskrit University. He has spent over 10 years of his life in various ashrams like Bhagirathi Dham Ashram and Anand Dham Ashram.","While he teaches Ashtanga Vinyasa at our school, his classical method of teaching brings students in, leaving them with a sense of gratitude and fulfilment."],
       education: [
@@ -133,7 +133,7 @@ const Teachers = () => {
         "10+ years of teaching experience"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Restorative Yoga"
@@ -141,9 +141,9 @@ const Teachers = () => {
     },
      {
       name: 'Prahlad Ji',
-      role: ['Hatha Yoga', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
+      role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
       image: teacher6,
-      bio: ["Dynamic, passionate, and deeply rooted in traditional Hatha Yoga, Prahlad Ji brings youthful energy and refined knowledge to every class he leads. With both a Bachelor’s and Master’s degree in Yoga, along with over five years of dedicated teaching and self-practice, he offers students a powerful blend of academic depth and personal experience.",
+      bio: ["Dynamic, passionate, and deeply rooted in traditional Hatha Yog, Prahlad Ji brings youthful energy and refined knowledge to every class he leads. With both a Bachelor’s and Master’s degree in Yoga, along with over five years of dedicated teaching and self-practice, he offers students a powerful blend of academic depth and personal experience.",
 "Known for the vibrant atmosphere he creates, his classes encourage students to challenge themselves, explore their potential, and deepen their understanding of true yogic principles. His supportive teaching style makes yoga accessible to practitioners of all levels, earning him immense appreciation from students across the globe."],
       education: [
         "Bachelor's Degree in Sanskrit",
@@ -154,7 +154,7 @@ const Teachers = () => {
         "10+ years of teaching experience"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Restorative Yoga"
@@ -162,7 +162,7 @@ const Teachers = () => {
     },
      {
       name: 'Mandeep Ji',
-      role: ['Hatha Yoga', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
+      role: ['', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
       image: teacher7,
       bio: ["Mandeep ji came to Rishikesh in 2002 and wrapped himself in the practise of Yoga by the banks of the holy river Ganga for years. Having completed his early education from the renowned Parmarth Niketan Ashram, he has been expounding his knowledge of Mantra Chanting, Yoga Philosophy and Meditation unto other seekers for more than 10 years now. Besides this, he is a learned astrologer and has been practising the same for more than 9 years.", "Not stopping there, Mandeep ji also possesses a deep interest in music and is also a sound healing expert. Indeed a maestro in his field, Mandeep ji, with a staggering 18 years of experience in Yoga practice, goes above and beyond to motivate his students to explore and realize their full potential!"],
       education: [
@@ -174,7 +174,7 @@ const Teachers = () => {
         "10+ years of teaching experience"
       ],
       expertise: [
-        "Hatha Yoga",
+        "Hatha Yog",
         "Ashtanga Vinyasa",
         "Alignment & Adjustment",
         "Restorative Yoga"
@@ -214,7 +214,7 @@ const Teachers = () => {
             A Good Teacher Doesn't Teach From The Book. A Good Teacher Teaches From The Heart
           </p>
           <h1 className={styles.mainTitle}>
-            Experienced Teachers at Hatha Yoga Ashram, Rishikesh
+            Experienced Teachers at Hatha Yog Ashram, Rishikesh
           </h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
@@ -229,11 +229,11 @@ const Teachers = () => {
         <div className={styles.facultyHeader}>
           <p className={styles.facultyTitle}>Teaching Faculty</p>
           <h2 className={styles.facultySubtitle}>
-           Teaching Faculty – Hatha Yoga Ashram, Rishikesh
+           Teaching Faculty – Hatha Yog Ashram, Rishikesh
           </h2>
           <div className={styles.decorativeLine}></div>
           <p className={styles.facultyDescription}>
-            Our teachers at Hatha Yoga Ashram are dedicated practitioners of traditional yoga,
+            Our teachers at Hatha Yog Ashram are dedicated practitioners of traditional yoga,
             sharing authentic knowledge through discipline, compassion, and lived experience.
           </p>
         </div>

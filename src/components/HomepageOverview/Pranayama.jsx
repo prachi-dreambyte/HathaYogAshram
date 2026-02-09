@@ -86,7 +86,7 @@ const PranayamaPage = () => {
               <div className={Styles.mantraBox}>
                 <em className={Styles.mantraText}>"When the breath wanders, the mind is unsteady. When the breath is still, so is the mind."</em>
                 <p className={Styles.mantraTranslation}>
-                  Hatha Yoga Pradipika
+                  Hatha Yog Pradipika
                 </p>
               </div>
             </div>

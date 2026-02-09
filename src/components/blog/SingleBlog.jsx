@@ -66,7 +66,7 @@ const SingleBlog = () => {
               </p>
               <p>
                 As part of the History of Yoga, this practice is a staple in
-                Hatha Yoga, designed to balance energy, reduce stress, and
+                Hatha Yog, designed to balance energy, reduce stress, and
                 complement yoga asanas. We teach Sheetkari Pranayama in our{' '}
                 <strong>Best Yoga Teacher Training in Rishikesh</strong> and{' '}
                 <strong>Online Yoga Teacher Training Programs</strong>, making
@@ -404,7 +404,7 @@ const SingleBlog = () => {
                 <p>
                   Sheetkari Pranayama, also known as the{' '}
                   <strong>Hissing Breath</strong>, is a cooling breathing
-                  technique in Hatha Yoga that involves inhaling through the
+                  technique in Hatha Yog that involves inhaling through the
                   teeth to create a hissing sound, followed by a nasal exhale.
                   Taught in our{' '}
                   <strong>Best Yoga Teacher Training in India</strong>, it cools

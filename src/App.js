@@ -33,6 +33,9 @@ import AboutUs from 'components/AboutUs/AboutUs';
 import BookingForm from 'components/Bookingform/Bookingformred';
 import OnlineYTTC from 'components/onlineyogacourse/onlineyogayttc';
 import OnlineYoga from 'components/onlineyogacourse/Onlineyoga';
+import Kundalini100 from 'components/kundaliniyoga/Kundalini100';
+import Books from 'components/MyBooks/Books';
+import BooksSection from 'components/MyBooks/Bookssection';
 import AsanaPage from 'components/HomepageOverview/Asana';
 import PranayamaPage from 'components/HomepageOverview/Pranayama';
 import EthicsLifestylePage from 'components/HomepageOverview/YogicEthics&Lifestyle';
@@ -72,6 +75,7 @@ export default function Main() {
         <Route path="/blog/:slug" element={<SingleBlog />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactForm />} />
+        <Route path="/kundalini-100" element={<Kundalini100 />} />
         <Route path="/kundalini-200" element={<Kundalini200Page />} />
         <Route path="/kundalini-300" element={<Kundalini300 />} />
         <Route path="/teachers" element={<Teachers />} />
@@ -87,20 +91,25 @@ export default function Main() {
         <Route path="/YogaCourse200" element={<YogaCourse200 />} />
         <Route path="/YogaCourse300" element={<YogaCourse300 />} />
         <Route path="/YogaCourse500" element={<YogaCourse500 />} />
-         <Route path="/YinYoga" element={<YinYoga />} />
-         <Route path="/BookingForm" element={<BookingForm />} />
-         <Route path="/Online-YTTC" element={<OnlineYTTC />} />
-          <Route path="/Yoga-Online" element={<OnlineYoga />} />
-           <Route path="/Asana-Page" element={<AsanaPage />} />
-            <Route path="/Pranayama-Page" element={<PranayamaPage />} />
-            <Route path="Philosophy-Page" element={<PhilosophyPage />} />
-            <Route path="/YogaAnatomy-Page" element={<YogaAnatomyPage />} />
-            <Route path="/TeachingMethodology-Page" element={<TeachingMethodologyPage />} />
-            <Route path="/MeditationCleansing-Page" element={<MeditationCleansingPage />} />
-            <Route path="/MantrasChanting-Page" element={<MantrasChantingPage/>} />
-            <Route path="/AyurvedaNutrition-Page" element={<AyurvedaNutritionPage />} />
-            <Route path="/ChakrasEnergy-Page" element={<ChakrasEnergyPage />} />
-            <Route path="/EthicsLifestyle-Page" element={<EthicsLifestylePage />} />
+        <Route path="/Yoga-Books" element={<Books />} />
+        <Route path="/Booksection" element={<BooksSection />} />
+        <Route path="/YinYoga" element={<YinYoga />} />
+        <Route path="/BookingForm" element={<BookingForm />} />
+        <Route path="/Online-YTTC" element={<OnlineYTTC />} />
+        <Route path="/Yoga-Online" element={<OnlineYoga />} />
+        <Route path="/asana" element={<AsanaPage />} />
+        <Route path="/pranayama" element={<PranayamaPage />} />
+        <Route path="/yogic-philosophy" element={<PhilosophyPage />} />
+        <Route path="/yoga-anatomy" element={<YogaAnatomyPage />} />
+        <Route
+          path="/teaching-methodology"
+          element={<TeachingMethodologyPage />}
+        />
+        <Route path="/meditation" element={<MeditationCleansingPage />} />
+        <Route path="/mantras-chanting" element={<MantrasChantingPage />} />
+        <Route path="/ayurveda-nutrition" element={<AyurvedaNutritionPage />} />
+        <Route path="/chakras-energy" element={<ChakrasEnergyPage />} />
+        <Route path="/yogic-ethics" element={<EthicsLifestylePage />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

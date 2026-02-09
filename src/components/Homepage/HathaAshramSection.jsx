@@ -55,7 +55,7 @@ const HathaAshramSection = () => {
           className={styles.headingWrapper}
           variants={fadeUp}
         >
-          <h2>Best Hatha Yoga Ashram In Rishikesh, India</h2>
+          <h2>Best Hatha Yog Ashram In Rishikesh, India</h2>
           <span className={styles.divider}>
             <img src={dividerImg} alt="divider" />
           </span>
@@ -74,7 +74,7 @@ const HathaAshramSection = () => {
           <motion.p variants={fadeUp}>
             Surrounded by the Himalayan mountains and blessed by the holy river
             Ganga, Rishikesh offers a naturally serene and powerful environment
-            for the practice of traditional Hatha Yoga.
+            for the practice of traditional Hatha Yog.
           </motion.p>
 
           <motion.p variants={fadeUp}>
@@ -83,7 +83,7 @@ const HathaAshramSection = () => {
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            Our Hatha Yoga Ashram follows the traditional Guru–Shishya
+            Our Hatha Yog Ashram follows the traditional Guru–Shishya
             (Teacher–Student) lineage, offering authentic yogic teachings rooted
             in discipline, simplicity, and awareness.
           </motion.p>
@@ -112,7 +112,7 @@ const HathaAshramSection = () => {
         >
           <motion.p variants={fadeUp}>
             The primary focus of our ashram is the systematic practice of
-            traditional Hatha Yoga.
+            traditional Hatha Yog.
           </motion.p>
 
           <motion.p variants={fadeUp}>
@@ -123,16 +123,16 @@ const HathaAshramSection = () => {
 
           <motion.p variants={fadeUp}>
             Our teachers are highly experienced practitioners dedicated to
-            preserving the purity of classical Hatha Yoga.
+            preserving the purity of classical Hatha Yog.
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            This Hatha Yoga Ashram is a place where students not only learn yoga
+            This Hatha Yog Ashram is a place where students not only learn yoga
             techniques but also experience yogic living.
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            In our Hatha Yoga Teacher Training courses in Rishikesh, India,
+            In our Hatha Yog Teacher Training courses in Rishikesh, India,
             students cultivate physical strength, mental stability, and
             spiritual awareness.
           </motion.p>

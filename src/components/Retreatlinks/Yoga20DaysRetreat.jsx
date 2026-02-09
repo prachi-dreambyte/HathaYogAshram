@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/Yoga20DaysRetreat.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 const Yoga20DaysRetreat = () => {
   const [selectedYoga, setSelectedYoga] = useState(0);
@@ -58,11 +59,11 @@ const Yoga20DaysRetreat = () => {
   const yogaStyles = [
     {
       icon: '🧘',
-      title: 'Hatha Yoga',
+      title: 'Hatha Yog',
       description:
-        'Traditional Hatha Yoga for physical strength and flexibility',
+        'Traditional Hatha Yog for physical strength and flexibility',
       fullDescription:
-        'Dive deep into the traditional practice of Hatha Yoga. Our 20-day retreat focuses on asanas (postures), pranayama (breathing techniques), and meditation to bring complete harmony between body and mind. Experience transformative practices under the guidance of our master teachers.',
+        'Dive deep into the traditional practice of Hatha Yog. Our 20-day retreat focuses on asanas (postures), pranayama (breathing techniques), and meditation to bring complete harmony between body and mind. Experience transformative practices under the guidance of our master teachers.',
       image:
         'https://images.pexels.com/photos/3822945/pexels-photo-3822945.jpeg?auto=compress&cs=tinysrgb&w=1200',
     },
@@ -117,7 +118,7 @@ const Yoga20DaysRetreat = () => {
       role: 'Senior Yoga Teacher',
       experience: '15+ years teaching experience',
       certification: 'Yoga Alliance RYS*600hrs',
-      expertise: 'Hatha Yoga, Ashtanga',
+      expertise: 'Hatha Yog, Ashtanga',
     },
     {
       name: 'Sushant Yogi',
@@ -272,10 +273,7 @@ const Yoga20DaysRetreat = () => {
   return (
     <div className={styles.container}>
       {/* Page Banner */}
-      <section className={styles.pageBanner}>
-       
-      </section>
-       
+      <section className={styles.pageBanner}></section>
 
       {/* Hero Section */}
       <section className={styles.heroSection}>
@@ -326,7 +324,7 @@ const Yoga20DaysRetreat = () => {
               20 Days Transformative
               <span className={styles.heroHighlight}> Yoga Retreat</span>
             </h1>
-             <p className={styles.bannerSubtitle}>
+            <p className={styles.bannerSubtitle}>
               Deep transformation through extended yogic practices in the
               Himalayas
             </p>
@@ -339,7 +337,7 @@ const Yoga20DaysRetreat = () => {
               <Link to="#" className={styles.heroLink}>
                 Hatha Yogashram
               </Link>{' '}
-              in Rishikesh, India. Dive deep into Hatha Yoga, Pranayama,
+              in Rishikesh, India. Dive deep into Hatha Yog, Pranayama,
               Meditation, Mudra, and Mantra Chanting for a holistic wellness
               journey that creates lasting transformation.
             </p>
@@ -413,7 +411,10 @@ const Yoga20DaysRetreat = () => {
                       ))}
                     </ul>
 
-                    <button className={styles.packageButton} onClick={() => navigate("/BookingForm")}>
+                    <button
+                      className={styles.packageButton}
+                      onClick={() => navigate('/BookingForm')}
+                    >
                       Book {pkg.type}
                       <span className={styles.buttonArrow}>→</span>
                     </button>
@@ -422,7 +423,10 @@ const Yoga20DaysRetreat = () => {
               </div>
             </div>
 
-            <button className={styles.bookButton} onClick={() => navigate("/BookingForm")}>
+            <button
+              className={styles.bookButton}
+              onClick={() => navigate('/BookingForm')}
+            >
               <span>Reserve Your Spot Now</span>
               <span className={styles.buttonArrow}>→</span>
             </button>
@@ -615,7 +619,7 @@ const Yoga20DaysRetreat = () => {
             <span className={styles.sectionBadge}>Yogic Practices</span>
             <h2 className={styles.sectionTitle}>Yoga Styles & Practices</h2>
             <p className={styles.yogaSubtitle}>
-              Hatha Yoga • Pranayama • Meditation • Mudra • Mantra Chanting
+              Hatha Yog • Pranayama • Meditation • Mudra • Mantra Chanting
             </p>
           </div>
 
@@ -881,7 +885,10 @@ const Yoga20DaysRetreat = () => {
                 soul forever. Experience the Indian science of wellness Ayurveda
                 in its purest form.
               </p>
-              <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>
+              <button
+                className={styles.ctaButton}
+                onClick={() => navigate('/BookingForm')}
+              >
                 <span>Book Your 20-Day Retreat</span>
                 <svg
                   className={styles.ctaButtonIcon}
@@ -904,7 +911,7 @@ const Yoga20DaysRetreat = () => {
             </div>
           </div>
         </section>
-
+        <BooksSection />
         {/* FAQ Section */}
         <section className={styles.faqSection}>
           <div className={styles.sectionHeader}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/Yoga10DaysRetreat.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 const Yoga10DaysRetreat = () => {
   const [selectedYoga, setSelectedYoga] = useState(0);
@@ -94,7 +95,7 @@ const Yoga10DaysRetreat = () => {
       icon: '💚',
       title: 'Holistic Wellness',
       description:
-        'Explore Hatha Yoga, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
+        'Explore Hatha Yog, Pranayama, Meditation, Mudra, and Mantra Chanting for mind-body balance.',
     },
     {
       icon: '🍽️',
@@ -163,13 +164,9 @@ const Yoga10DaysRetreat = () => {
 
   return (
     <div className={styles.container}>
-      <section className={styles.pageBanner}>
-        
-      </section>
+      <section className={styles.pageBanner}></section>
       <section className={styles.bxox}>
-        <div className="container">
-         
-        </div>
+        <div className="container"></div>
       </section>
 
       {/* Hero Section with Floating Elements */}
@@ -230,23 +227,23 @@ const Yoga10DaysRetreat = () => {
             </div>
 
             <div className={styles.bannerContent}>
-            <h2 className={styles.bannerTitle}>
-              10 Days Yoga Retreat in Rishikesh
-            </h2>
-            <p className={styles.bannerSubtitle}>
-              Rejuvenate your mind, body & soul with authentic yogic practices
-            </p>
-            <Link to="/BookingForm" className={styles.bannerButton}>
-              Enquire Now →
-            </Link>
-          </div>
+              <h2 className={styles.bannerTitle}>
+                10 Days Yoga Retreat in Rishikesh
+              </h2>
+              <p className={styles.bannerSubtitle}>
+                Rejuvenate your mind, body & soul with authentic yogic practices
+              </p>
+              <Link to="/BookingForm" className={styles.bannerButton}>
+                Enquire Now →
+              </Link>
+            </div>
 
             <p className={styles.heroDescription}>
               Experience rejuvenation in just 10 days at{' '}
               <Link to="#" className={styles.heroLink}>
                 Hatha Yogashram
               </Link>{' '}
-              Meditation and Yoga Retreat in Rishikesh. Dive into Hatha Yoga,
+              Meditation and Yoga Retreat in Rishikesh. Dive into Hatha Yog,
               Pranayama, Meditation, Mudra, and Mantra Chanting for a holistic
               wellness journey.
             </p>
@@ -303,7 +300,10 @@ const Yoga10DaysRetreat = () => {
               </div>
             </div>
 
-            <button className={styles.bookButton} onClick={() => navigate("/BookingForm")}>
+            <button
+              className={styles.bookButton}
+              onClick={() => navigate('/BookingForm')}
+            >
               <span>Book Your Spot Now</span>
               <span className={styles.buttonArrow}>→</span>
             </button>
@@ -472,7 +472,7 @@ const Yoga10DaysRetreat = () => {
             <span className={styles.sectionBadge}>Our Approach</span>
             <h2 className={styles.sectionTitle}>Yoga Styles & Practices</h2>
             <p className={styles.yogaSubtitle}>
-              Hatha Yoga • Pranayama • Meditation • Mudra • Mantra Chanting
+              Hatha Yog • Pranayama • Meditation • Mudra • Mantra Chanting
             </p>
           </div>
 
@@ -610,7 +610,10 @@ const Yoga10DaysRetreat = () => {
                 Embark on your yogic journey with India's most trusted yoga
                 teacher training school in Rishikesh
               </p>
-              <button className={styles.ctaButton} onClick={() => navigate("/BookingForm")}>
+              <button
+                className={styles.ctaButton}
+                onClick={() => navigate('/BookingForm')}
+              >
                 <span>Book Your Retreat Now</span>
                 <svg
                   className={styles.ctaButtonIcon}
@@ -632,7 +635,7 @@ const Yoga10DaysRetreat = () => {
             </div>
           </div>
         </section>
-
+        <BooksSection />
         {/* FAQ Section */}
         <section className={styles.faqSection}>
           <div className={styles.sectionHeader}>

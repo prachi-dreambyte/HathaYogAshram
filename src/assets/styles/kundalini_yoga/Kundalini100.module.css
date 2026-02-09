@@ -1,0 +1,1537 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* ===================================================
+   KUNDALINI 100 HOUR FOUNDATION - RED THEME
+   ================================================ */
+
+/* Page Container */
+.container {
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Content Container */
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+.container .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================================
+   HERO SECTION
+   ================================================ */
+
+.heroSection {
+  position: relative;
+  padding: 3rem 2rem 2rem;
+  min-height: 620px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.heroBackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroBackground::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  
+}
+
+.heroSection::before {
+  content: 'ॐ';
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 300px;
+  color: rgba(255, 255, 255, 0.1);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 2;
+  animation: omPulse 6s ease-in-out infinite;
+}
+
+@keyframes omPulse {
+  0%, 100% {
+    opacity: 0.1;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: translateY(-50%) scale(1.05);
+  }
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  left: 5%;
+  bottom: 10%;
+  width: 200px;
+  height: 200px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100 40 L100 80 M100 60 L80 80 M100 60 L120 80 M70 90 L70 130 M130 90 L130 130 M70 110 L60 120 M130 110 L140 120 M70 130 L90 150 M130 130 L110 150 M100 150 L100 170' stroke='rgba(255,255,255,0.15)' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='100' cy='30' r='15' fill='rgba(255,255,255,0.15)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 2;
+  animation: floatYoga 8s ease-in-out infinite;
+}
+
+@keyframes floatYoga {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.heroContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.quoteText {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.15rem;
+  color: #000000;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+  max-width: 420px;
+}
+
+.mainTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 2.68rem;
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.25;
+  max-width: 560px;
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background: #000000;
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #fff;
+  color: #C41E3A;
+  padding: 0.4rem 0.9rem;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  width: fit-content;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.breadcrumbLink {
+  color: #C41E3A;
+  text-decoration: none;
+}
+
+.breadcrumbSeparator {
+  color: #C41E3A;
+  margin: 0 0.3rem;
+}
+
+/* ===================================================
+   HERO STATS
+   ================================================ */
+
+.heroStats {
+  background: white;
+  padding: 0;
+ 
+  position: relative;
+  z-index: 10;
+}
+
+.statsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.stat {
+  text-align: center;
+  padding: 40px 20px;
+  border-right: 1px solid #E5E5E5;
+  transition: all 0.3s ease;
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat:hover {
+  background: #f9f9f9;
+  transform: translateY(-5px);
+}
+
+.statIcon {
+  font-size: 40px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 5px 15px rgba(196, 30, 58, 0.3));
+}
+
+.statValue {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #C41E3A;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.statLabel {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* ===================================================
+   FLOATING SECTION
+   ================================================ */
+
+.floatingSection {
+  padding: 80px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.floatingSection::before {
+  content: 'ॐ';
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  transform: translateY(-50%);
+  font-size: 280px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  animation: slowRotate 30s linear infinite;
+}
+
+.floatingSection::after {
+  content: '☸';
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 180px;
+  opacity: 0.03;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.floatingCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.floatCard {
+  background: white;
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.floatCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+  border-top-color: #C41E3A;
+}
+
+.cardIcon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 5px 15px rgba(196, 30, 58, 0.3));
+}
+
+.floatCard h3 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 16px;
+}
+
+.floatCard p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===================================================
+   SECTION COMMON STYLES
+   ================================================ */
+
+.overviewSection,
+.chakrasSection,
+.curriculumSection,
+.scheduleSection,
+.pricingSection,
+.faqSection {
+  padding: 80px 24px;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #C41E3A;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.decorativeLine {
+  width: 60px;
+  height: 3px;
+  background: #C41E3A;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.decorativeLine::before,
+.decorativeLine::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #C41E3A;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.decorativeLine::before {
+  left: -15px;
+}
+
+.decorativeLine::after {
+  right: -15px;
+}
+
+.sectionDesc {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===================================================
+   OVERVIEW SECTION
+   ================================================ */
+
+.overviewSection {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.overviewSection::before {
+  content: 'ॐ';
+  position: absolute;
+  top: 50%;
+  left: -80px;
+  transform: translateY(-50%) rotate(-15deg);
+  font-size: 350px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  animation: slowRotate 30s linear infinite;
+}
+
+@keyframes slowRotate {
+  from {
+    transform: translateY(-50%) rotate(-15deg);
+  }
+  to {
+    transform: translateY(-50%) rotate(345deg);
+  }
+}
+
+.overviewSection::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Lotus Flower --%3E%3Cpath d='M100 150 Q80 130 70 100 Q60 70 70 50 Q80 30 100 30 Q120 30 130 50 Q140 70 130 100 Q120 130 100 150' fill='rgba(196,30,58,0.05)' stroke='rgba(196,30,58,0.1)' stroke-width='2'/%3E%3Cpath d='M100 150 Q120 130 130 100 Q140 70 130 50' fill='rgba(196,30,58,0.05)' stroke='rgba(196,30,58,0.1)' stroke-width='2'/%3E%3Cpath d='M100 150 Q80 130 70 100 Q60 70 70 50' fill='rgba(196,30,58,0.05)' stroke='rgba(196,30,58,0.1)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='15' fill='rgba(196,30,58,0.08)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatLotus 8s ease-in-out infinite;
+}
+
+@keyframes floatLotus {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.overviewGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.leadText {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #444;
+  margin: 0 0 40px;
+  font-weight: 400;
+}
+
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.highlight {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.highlightIcon {
+  font-size: 40px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 5px 15px rgba(196, 30, 58, 0.3));
+}
+
+.highlight h4 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 8px;
+}
+
+.highlight p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.overviewImage {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 0px 100px;
+}
+
+.overviewImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.overviewImage:hover img {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(196, 30, 58, 0.8), transparent);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.mantraBox {
+  text-align: center;
+  width: 100%;
+}
+
+.mantraSymbol {
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.mantraBox p {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 4px;
+  font-weight: 700;
+}
+
+/* ===================================================
+   CHAKRAS SECTION
+   ================================================ */
+
+.chakrasSection {
+  background: #f8f6f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.chakrasSection::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+  animation: floatMeditation 6s ease-in-out infinite;
+}
+
+@keyframes floatMeditation {
+  0%, 100% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(-55%);
+  }
+}
+
+.chakrasSection::after {
+  content: 'ॐ';
+  position: absolute;
+  bottom: 5%;
+  left: -60px;
+  font-size: 280px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(15deg);
+}
+
+.chakrasList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.chakraItem {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 32px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.chakraItem:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+  border-left-color: #C41E3A;
+}
+
+.chakraCircle {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.chakraNumber {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.chakraContent h3 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 4px;
+}
+
+.chakraLabel {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #C41E3A;
+  margin: 0 0 12px;
+}
+
+.chakraContent p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===================================================
+   CURRICULUM SECTION
+   ================================================ */
+
+.curriculumSection {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.curriculumSection::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -80px;
+  width: 350px;
+  height: 350px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Swastik --%3E%3Cpath d='M100 50 L100 100 L150 100 L150 85 L115 85 L115 50 Z' fill='rgba(196,30,58,0.06)' stroke='rgba(196,30,58,0.08)' stroke-width='1'/%3E%3Cpath d='M150 100 L150 150 L100 150 L100 135 L135 135 L135 100 Z' fill='rgba(196,30,58,0.06)' stroke='rgba(196,30,58,0.08)' stroke-width='1'/%3E%3Cpath d='M100 150 L100 100 L50 100 L50 115 L85 115 L85 150 Z' fill='rgba(196,30,58,0.06)' stroke='rgba(196,30,58,0.08)' stroke-width='1'/%3E%3Cpath d='M50 100 L50 50 L100 50 L100 65 L65 65 L65 100 Z' fill='rgba(196,30,58,0.06)' stroke='rgba(196,30,58,0.08)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='15' fill='rgba(196,30,58,0.08)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateSwastik 40s linear infinite;
+}
+
+@keyframes rotateSwastik {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.curriculumSection::after {
+  content: 'ॐ';
+  position: absolute;
+  bottom: 5%;
+  right: -70px;
+  font-size: 300px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-20deg);
+}
+
+.tabsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tabButtons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background: transparent;
+  color: #666;
+  border: 2px solid #E5E5E5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabBtn:hover {
+  color: #C41E3A;
+  border-color: #C41E3A;
+  background: rgba(196, 30, 58, 0.05);
+}
+
+.tabBtn.active {
+  color: white;
+  border-color: #C41E3A;
+  background: #C41E3A;
+}
+
+.tabContent {
+  background: #f8f6f3;
+  padding: 50px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  min-height: 400px;
+}
+
+.tabPane h3 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 32px;
+  border-bottom: 2px solid #C41E3A;
+  padding-bottom: 12px;
+}
+
+.curriculumGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.curriculumCard {
+  padding: 28px;
+  background: white;
+  border-left: 4px solid #C41E3A;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.curriculumCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+}
+
+.curriculumCard h4 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 12px;
+}
+
+.curriculumCard p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.curriculumList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.curriculumList li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.8;
+  padding-left: 28px;
+  position: relative;
+}
+
+.curriculumList li::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #C41E3A;
+  font-size: 14px;
+}
+
+/* ===================================================
+   SCHEDULE SECTION
+   ================================================ */
+
+.scheduleSection {
+  background: #f8f6f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.scheduleSection::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Prayer Hands Namaste --%3E%3Cpath d='M80 60 L80 120 Q80 130 85 135 L95 145 L100 150' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='rgba(196,30,58,0.05)' stroke-linecap='round'/%3E%3Cpath d='M120 60 L120 120 Q120 130 115 135 L105 145 L100 150' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='rgba(196,30,58,0.05)' stroke-linecap='round'/%3E%3Cpath d='M95 145 L100 150 L105 145' fill='rgba(196,30,58,0.08)' stroke='rgba(196,30,58,0.12)' stroke-width='2'/%3E%3Cpath d='M85 70 Q80 60 80 50 Q80 40 90 40' stroke='rgba(196,30,58,0.1)' stroke-width='2' fill='none'/%3E%3Cpath d='M115 70 Q120 60 120 50 Q120 40 110 40' stroke='rgba(196,30,58,0.1)' stroke-width='2' fill='none'/%3E%3Ccircle cx='100' cy='30' r='8' fill='rgba(196,30,58,0.1)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scheduleSection::after {
+  content: 'ॐ';
+  position: absolute;
+  bottom: -40px;
+  left: -70px;
+  font-size: 320px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(25deg);
+}
+
+.scheduleTimeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.scheduleTimeline::before {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #C41E3A;
+}
+
+.scheduleItem {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 32px;
+  position: relative;
+  align-items: flex-start;
+}
+
+.scheduleItem::before {
+  content: '';
+  position: absolute;
+  left: 72px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #C41E3A;
+  border: 4px solid #f8f6f3;
+  box-shadow: 0 0 0 2px #C41E3A;
+  z-index: 2;
+}
+
+.scheduleTime {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #C41E3A;
+  min-width: 70px;
+  text-align: right;
+  padding-top: 4px;
+}
+
+.scheduleContent {
+  flex: 1;
+  background: white;
+  padding: 20px 28px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.scheduleContent:hover {
+  transform: translateX(8px);
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.15);
+}
+
+.scheduleContent h4 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 8px;
+}
+
+.scheduleContent p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===================================================
+   PRICING SECTION
+   ================================================ */
+
+.pricingSection {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricingSection::before {
+  content: 'ॐ';
+  position: absolute;
+  top: 10%;
+  left: -90px;
+  font-size: 380px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-25deg);
+  animation: slowPulse 10s ease-in-out infinite;
+}
+
+@keyframes slowPulse {
+  0%, 100% {
+    opacity: 0.04;
+  }
+  50% {
+    opacity: 0.06;
+  }
+}
+
+.pricingSection::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Warrior Pose --%3E%3Ccircle cx='100' cy='30' r='14' fill='rgba(196,30,58,0.08)' stroke='rgba(196,30,58,0.12)' stroke-width='2'/%3E%3Cpath d='M100 46 L100 100' stroke='rgba(196,30,58,0.12)' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M100 60 L130 70 L150 75' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 60 L70 80 L60 90' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 100 L110 130 L115 160' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 100 L80 120 L60 130' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pricingCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.pricingCard {
+  background: white;
+  padding: 40px 32px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid #E5E5E5;
+  position: relative;
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+  border-color: #C41E3A;
+}
+
+.pricingCard.featured {
+  border-color: #C41E3A;
+  transform: scale(1.05);
+}
+
+.pricingCard.featured:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.badge {
+  position: absolute;
+  top: -16px;
+  right: 32px;
+  background: #C41E3A;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 3px;
+}
+
+.pricingHeader {
+  text-align: center;
+  padding-bottom: 28px;
+  border-bottom: 2px solid #E5E5E5;
+  margin-bottom: 28px;
+}
+
+.pricingHeader h3 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin: 0 0 20px;
+}
+
+.price {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.currency {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #C41E3A;
+  margin-top: 8px;
+}
+
+.amount {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #2C2C2C;
+  line-height: 1;
+}
+
+.priceDesc {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.priceIncludes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.priceIncludes li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  padding-left: 28px;
+  position: relative;
+}
+
+.priceIncludes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #C41E3A;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.priceBtn {
+  width: 100%;
+  padding: 16px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #C41E3A;
+  color: white;
+  border: 2px solid #C41E3A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.priceBtn:hover {
+  background: white;
+  color: #C41E3A;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   FAQ SECTION
+   ================================================ */
+
+.faqSection {
+  background: #f8f6f3;
+  position: relative;
+  overflow: hidden;
+}
+
+.faqSection::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 320px;
+  height: 320px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Lotus Mandala --%3E%3Ccircle cx='100' cy='100' r='80' fill='none' stroke='rgba(196,30,58,0.08)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='60' fill='none' stroke='rgba(196,30,58,0.08)' stroke-width='2'/%3E%3Ccircle cx='100' cy='100' r='40' fill='none' stroke='rgba(196,30,58,0.08)' stroke-width='2'/%3E%3Cpath d='M100 20 Q110 40 100 60 Q90 40 100 20 M100 180 Q110 160 100 140 Q90 160 100 180 M20 100 Q40 110 60 100 Q40 90 20 100 M180 100 Q160 110 140 100 Q160 90 180 100' fill='rgba(196,30,58,0.06)' stroke='rgba(196,30,58,0.08)' stroke-width='1'/%3E%3Ccircle cx='100' cy='100' r='25' fill='rgba(196,30,58,0.08)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateMandalaSlow 50s linear infinite;
+}
+
+@keyframes rotateMandalaSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.faqSection::after {
+  content: 'ॐ';
+  position: absolute;
+  bottom: -30px;
+  right: -80px;
+  font-size: 300px;
+  color: rgba(196, 30, 58, 0.04);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-18deg);
+}
+
+.faqList {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.faqItem {
+  margin-bottom: 16px;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+  border-left-color: #C41E3A;
+  box-shadow: 0 10px 30px rgba(196, 30, 58, 0.1);
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 28px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faqQuestion span {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.faqQuestion:hover span {
+  color: #C41E3A;
+}
+
+.faqIcon {
+  width: 24px;
+  height: 24px;
+  color: #C41E3A;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faqQuestion.active .faqIcon {
+  transform: rotate(180deg);
+}
+
+.faqAnswer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 28px;
+}
+
+.faqAnswer.show {
+  max-height: 500px;
+  padding: 0 28px 24px;
+}
+
+.faqAnswer p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  color: #666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===================================================
+   CTA SECTION
+   ================================================ */
+
+.ctaSection {
+  padding: 100px 24px;
+  background: linear-gradient(135deg, #C41E3A 0%, #8B1F3F 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection::before {
+  content: 'ॐ';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 250px;
+  color: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 1;
+  animation: ctaFloat 8s ease-in-out infinite;
+}
+
+@keyframes ctaFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+.ctaSection::after {
+  content: 'ॐ';
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  font-size: 200px;
+  color: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+  pointer-events: none;
+  z-index: 1;
+  animation: ctaFloat 8s ease-in-out infinite 4s;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 20px;
+}
+
+.ctaContent p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 40px;
+  line-height: 1.8;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaPrimary {
+  background: white;
+  color: #C41E3A;
+  border: 2px solid white;
+}
+
+.ctaPrimary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-4px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.ctaSecondary:hover {
+  background: white;
+  color: #C41E3A;
+  transform: translateY(-4px);
+}
+
+/* ===================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+
+@media (max-width: 1200px) {
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .overviewGrid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .pricingCards {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .pricingCard.featured {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding-left: 1rem;
+    padding-top: 3rem;
+  }
+
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat {
+    border-right: none;
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .stat:nth-child(3),
+  .stat:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .floatingCards {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .curriculumGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .tabButtons {
+    flex-direction: column;
+  }
+
+  .tabBtn {
+    width: 100%;
+  }
+
+  .scheduleTimeline::before {
+    left: 60px;
+  }
+
+  .scheduleItem::before {
+    left: 52px;
+  }
+
+  .scheduleTime {
+    min-width: 50px;
+    font-size: 16px;
+  }
+
+  .ctaContent h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 1.5rem 1rem;
+  }
+
+  .mainTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .floatCard {
+    padding: 32px 24px;
+  }
+
+  .chakraItem {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .chakraCircle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tabContent {
+    padding: 32px 20px;
+  }
+
+  .pricingCard {
+    padding: 32px 24px;
+  }
+
+  .ctaContent h2 {
+    font-size: 28px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaPrimary,
+  .ctaSecondary {
+    width: 100%;
+  }
+}

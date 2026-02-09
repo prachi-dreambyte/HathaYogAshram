@@ -15,21 +15,21 @@ const YogaTeachersSection = () => {
   const teachers = [
   {
     name: "Dhirendra Ji",
-    specialty: "Hatha Yoga",
+    specialty: "Hatha Yog",
     image: teacher1,
     description: "Himalayan-born spiritual guide rooted in Ganga-side yogic traditions.",
     experience: "12+ years experience"
   },
   {
     name: "Prahlad Ji",
-    specialty: "Hatha Yoga",
+    specialty: "Hatha Yog",
     image: teacher2,
-    description: "Energetic Hatha Yoga teacher blending academics with deep practice.",
+    description: "Energetic Hatha Yog teacher blending academics with deep practice.",
     experience: "5+ years experience"
   },
   {
     name: "Amit Ji",
-    specialty: "Hatha Yoga",
+    specialty: "Hatha Yog",
     image: teacher3,
     description: "Warm and disciplined teacher dedicated to authentic yogic teachings.",
     experience: "10 years experience"
@@ -43,9 +43,9 @@ const YogaTeachersSection = () => {
   },
   {
     name: "Jitender Ji",
-    specialty: "Hatha Yoga",
+    specialty: "Hatha Yog",
     image: teacher5,
-    description: "Traditional Hatha Yoga teacher carrying classical yogic wisdom.",
+    description: "Traditional Hatha Yog teacher carrying classical yogic wisdom.",
     experience: "9 years experience"
   },
   {

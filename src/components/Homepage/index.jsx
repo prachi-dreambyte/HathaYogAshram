@@ -20,17 +20,21 @@ import GivingBack from './GivingBack';
 import GoogleReviews from './GoogleReviews';
 import YogaAlliance from './YoogaAlliance';
 import VideoHero from './VideoHero';
+import BooksSection from 'components/MyBooks/Bookssection';
+import EnrollmentForm from 'components/Enrollmentform/Enrollmentform';
 
 export const Homepage = () => {
   return (
     <>
       <Hero />
       <YogaSchool />
+      <EnrollmentForm/>
       <YogaTeacherTraining />
       <YogaRetreat />
       <VedicMantraCourse />
       <YogaTeachersSection />
       <YogaAlliance />
+      <BooksSection />
       <YogaOverview />
       <FacilitiesSection />
       <Facilities />
@@ -39,7 +43,6 @@ export const Homepage = () => {
       <Testimonials />
       <StudentReviews />
       <ReviewsSection />
-     
       <WhatWeOffer />
       <VideoHero />
       <FaqSection />

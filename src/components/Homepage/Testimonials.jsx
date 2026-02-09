@@ -18,7 +18,7 @@ const testimonials = [
     location: 'Delhi, India',
     image: user1,
     quote:
-      'Hatha Yoga transformed not just my body, but my mindset. Every session feels intentional and deeply calming.',
+      'Hatha Yog transformed not just my body, but my mindset. Every session feels intentional and deeply calming.',
   },
   {
     name: 'Rohit Mehta',
@@ -105,7 +105,7 @@ const Testimonials = () => {
           transition={{ delay: 0.3 }}
           viewport={{ once: true }}
         >
-          Thousands of people around the world trust Hatha Yoga for mindful
+          Thousands of people around the world trust Hatha Yog for mindful
           movement and inner balance.
         </motion.p>
 

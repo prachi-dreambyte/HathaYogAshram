@@ -59,7 +59,7 @@ const navigate = useNavigate();
       <div className="container">
         {/* Heading */}
         <motion.h2 className={styles.heading} variants={fadeUp}>
-          Namaste <br /> Welcome to Hatha Yoga Ashram
+          Namaste <br /> Welcome to Hatha Yog Ashram
         </motion.h2>
 
         <motion.h3 className={styles.subTitle} variants={fadeUp}>
@@ -94,7 +94,7 @@ const navigate = useNavigate();
           {/* LEFT CONTENT */}
           <motion.div className={styles.content} variants={slideLeft}>
   <h3 className={styles.innerHeading}>
-    Learn with Yoga Alliance® Certified School of Hatha Yoga Teacher
+    Learn with Yoga Alliance® Certified School of Hatha Yog Teacher
     Training in Rishikesh
   </h3>
 
@@ -104,10 +104,10 @@ const navigate = useNavigate();
   </p>
 
   <p>
-    Begin your transformational yoga journey at Hatha Yoga Ashram, one of
+    Begin your transformational yoga journey at Hatha Yog Ashram, one of
     the most respected and traditional yoga schools in Rishikesh, the Yoga
     Capital of the World. Our school is rooted in the classical teachings of
-    Hatha Yoga while embracing modern educational standards.
+    Hatha Yog while embracing modern educational standards.
   </p>
 
   <p>
@@ -118,7 +118,7 @@ const navigate = useNavigate();
   </p>
 
   <p>
-    Hatha Yoga Ashram is a Yoga Alliance USA Registered Yoga School (RYS),
+    Hatha Yog Ashram is a Yoga Alliance USA Registered Yoga School (RYS),
     offering internationally recognized certifications. Upon successful
     completion of the course, graduates are eligible to apply for
     Registered Yoga Teacher (RYT) certification with Yoga Alliance.

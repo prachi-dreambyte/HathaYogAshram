@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/retreatlinks/YogaRetreatRishikesh.module.css';
+import BooksSection from 'components/MyBooks/Bookssection';
 
 const YogaRetreatRishikesh = () => {
   const [activeSection, setActiveSection] = useState('overview');
@@ -93,7 +94,7 @@ const YogaRetreatRishikesh = () => {
       activities: [
         '10:00 – 14:00: Arrival and check-in',
         '16:00 – 17:00: Opening Ceremony',
-        '17:30 – 18:30: Gentle Hatha Yoga',
+        '17:30 – 18:30: Gentle Hatha Yog',
         '19:00 – 20:00: Dinner',
       ],
     },
@@ -127,7 +128,7 @@ const YogaRetreatRishikesh = () => {
       day: 'Day 4',
       title: 'Emotional Healing & Stillness',
       activities: [
-        '06:30 – 07:30: Slow Hatha Yoga',
+        '06:30 – 07:30: Slow Hatha Yog',
         '07:45 – 08:45: Pranayama',
         '09:00 – 10:00: Breakfast',
         '10:30 – 12:30: Excursions',
@@ -274,7 +275,10 @@ const YogaRetreatRishikesh = () => {
           </div>
 
           <div className={styles.ctaButtons}>
-            <button className={styles.primaryButton} onClick={() => navigate("/BookingForm")}>
+            <button
+              className={styles.primaryButton}
+              onClick={() => navigate('/BookingForm')}
+            >
               <span>Book Your Spot Now</span>
               <svg className={styles.buttonArrow} viewBox="0 0 24 24">
                 <path
@@ -645,7 +649,7 @@ const YogaRetreatRishikesh = () => {
             ))}
           </div>
         </section>
-
+        <BooksSection />
         {/* Booking CTA */}
         <section className={styles.bookingSection}>
           <div className={styles.bookingCard}>
@@ -681,7 +685,10 @@ const YogaRetreatRishikesh = () => {
                 </div>
               </div>
 
-              <button className={styles.bookNowButton} onClick={() => navigate("/BookingForm")}>
+              <button
+                className={styles.bookNowButton}
+                onClick={() => navigate('/BookingForm')}
+              >
                 <span>Apply Now</span>
                 <svg className={styles.bookArrow} viewBox="0 0 24 24">
                   <path
