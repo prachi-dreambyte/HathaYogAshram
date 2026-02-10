@@ -240,7 +240,7 @@ const EnrollmentForm = () => {
 
                 {/* Seat Counter */}
                 <div className={`${styles.seatCounter} ${getSeatColor()}`}>
-                  <div className={styles.seatIcon}>🪷</div>
+                  <div className={styles.seatIcon}>🕉️</div>
                   <div className={styles.seatInfo}>
                     <span className={styles.seatLabel}>Only</span>
                     <span className={styles.seatNumber}>{availableSeats}</span>
@@ -409,7 +409,7 @@ const EnrollmentForm = () => {
               {/* Submit Button */}
               <button type="submit" className={styles.submitBtn}>
                 <span className={styles.btnText}>🎉 Reserve My Seat Now</span>
-                <span className={styles.btnIcon}>🕉️</span>
+               
               </button>
 
               {/* Trust Indicators */}
