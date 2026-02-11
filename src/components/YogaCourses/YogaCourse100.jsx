@@ -6,6 +6,7 @@ import OurCourses from 'components/OurCourses/OurCourses';
 import Hours24 from 'components/Hours24/Hours24';
 import heroVideo from '../../assets/images/100hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
+import InternationalCertificate from 'components/InternationalCertificate/InternationalCertificate';
 
 export default function YogaCourse100() {
   const navigate = useNavigate();
@@ -486,7 +487,7 @@ export default function YogaCourse100() {
       </section>
 
       {/* Schools Section */}
-      <section className={styles.schoolsSection}>
+      {/* <section className={styles.schoolsSection}>
         <div className={styles.sectionHeader}>
           <p className={styles.sectionTag}>Our Partner Schools</p>
           <h2 className={styles.sectionTitle}>
@@ -514,7 +515,8 @@ export default function YogaCourse100() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
+      <InternationalCertificate/>
 
       <Hours24 />
 

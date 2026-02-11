@@ -237,7 +237,7 @@ const YogaTeacherTraining = () => {
                   <FaUser /> Style: {item.style}
                 </li>
                 <li>
-                  <FaCalendarAlt /> Date: 2nd of every month
+                  <FaCalendarAlt /> Date: 1st of every month
                 </li>
               </ul>
 

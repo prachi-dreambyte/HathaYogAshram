@@ -1,592 +1,49 @@
-/* Container.module.css - Main container and layout styles */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-.container {
-  background: #ffffff;
+.hathaYogaPage {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
-.sectionWrapper {
-  padding: 25px 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .sectionWrapper {
-    padding: 15px 0;
-  }
-}
-
-/* Hero.module.css - Hero section styles */
-
+/* Hero Section */
 .heroSection {
-  padding: 40px 20px 30px;
-  text-align: center;
   position: relative;
-  background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 50%, #fff5f5 100%);
-  border-bottom: 3px solid #bd0005;
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.lotusIcon {
-  font-size: 50px;
-  margin-bottom: 10px;
-  animation: lotus-bloom 2s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(189, 0, 5, 0.3));
-}
-
-.mainHeading {
-  font-size: 56px;
-  background: linear-gradient(135deg, #bd0005 0%, #ff0000 50%, #bd0005 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 8px;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
-
-.heroSubtitle {
-  font-size: 20px;
-  color: #bd0005;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  margin-bottom: 15px;
-  opacity: 0.9;
-  font-style: italic;
-}
-
-.heroDescription {
-  color: #333;
-  font-size: 17px;
-  line-height: 1.6;
-  max-width: 750px;
-  margin: 0 auto;
-}
-
-.animateSlideDown {
-  animation: slideDown 0.8s ease-out;
-}
-
-.animateSlideUp {
-  animation: slideUp 0.8s ease-out 0.3s both;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .mainHeading {
-    font-size: 38px;
-  }
-
-  .heroSubtitle {
-    font-size: 18px;
-  }
-
-  .heroSection {
-    padding: 30px 20px 25px;
-  }
-}
-
-@media (max-width: 576px) {
-  .mainHeading {
-    font-size: 32px;
-  }
-
-  .heroDescription {
-    font-size: 15px;
-  }
-}
-
-/* Typography.module.css - Text and heading styles */
-
-.sectionHeading {
-  font-size: 38px;
-  background: linear-gradient(to right, #8b0003, #bd0005, #ff0000, #bd0005, #8b0003);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 15px;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.sectionHeading::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #bd0005, transparent);
-}
-
-.sectionSubtitle {
-  color: #555;
-  font-size: 16px;
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
-.paragraphText {
-  color: #333;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.cardTitle {
-  font-size: 22px;
-  color: #bd0005;
-  margin-bottom: 10px;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.cardDescription {
-  color: #333;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .sectionHeading {
-    font-size: 30px;
-  }
-
-  .sectionSubtitle {
-    font-size: 15px;
-  }
-
-  .paragraphText {
-    font-size: 15px;
-  }
-
-  .cardTitle {
-    font-size: 19px;
-  }
-
-  .cardDescription {
-    font-size: 14px;
-  }
-}
-
-/* Card.module.css - Card component styles */
-
-.philosophyCard {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-  padding: 35px;
-  border-radius: 15px;
-  border: 2px solid #bd0005;
-  box-shadow: 0 8px 25px rgba(189, 0, 5, 0.15);
-  transition: all 0.3s ease;
-  position: relative;
+  background: linear-gradient(135deg, #fff 0%, #f8e4e4 50%, #fff 100%);
   overflow: hidden;
 }
 
-.philosophyCard::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(189, 0, 5, 0.05) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
-}
-
-.philosophyCard.floating {
-  animation: float 3s ease-in-out infinite;
-}
-
-.philosophyCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(189, 0, 5, 0.25);
-}
-
-.mantraBox {
-  background: linear-gradient(135deg, #bd0005 0%, #8b0003 100%);
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 20px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.mantraBox::before {
-  content: '☸️';
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 60px;
-  opacity: 0.1;
-}
-
-.mantraBox:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(189, 0, 5, 0.3);
-}
-
-.mantraText {
-  font-size: 22px;
-  color: #ffffff;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 8px;
-  font-style: italic;
-}
-
-.mantraTranslation {
-  color: #ffe8e8;
-  font-size: 15px;
-  margin: 8px 0 0 0;
-}
-
-.asanaCard {
-  background: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  border: 2px solid #f0f0f0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  opacity: 0;
-  animation: fadeInScale 0.6s ease-out forwards;
-  height: 100%;
-  position: relative;
-}
-
-.asanaCard::before {
+.heroSection::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(189, 0, 5, 0.1), transparent);
-  transition: left 0.5s;
-}
-
-.asanaCard:hover::before {
-  left: 100%;
-}
-
-.asanaCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(189, 0, 5, 0.2);
-  border-color: #bd0005;
-}
-
-.cardImageWrapper {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-  border-bottom: 2px solid #bd0005;
-}
-
-.cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
-  filter: grayscale(20%);
-}
-
-.asanaCard:hover .cardImage {
-  transform: scale(1.1);
-  filter: grayscale(0%);
-}
-
-.imageOverlay {
-  position: absolute;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(189, 0, 5, 0.95), transparent);
-  padding: 15px;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(189, 0, 5, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(189, 0, 5, 0.08) 0%, transparent 50%);
+  animation: pulseBackground 8s ease-in-out infinite;
 }
 
-.asanaCard:hover .imageOverlay {
-  transform: translateY(0);
+@keyframes pulseBackground {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
-.overlayText {
-  color: white;
-  font-size: 13px;
-  font-style: italic;
-  font-weight: 600;
-}
-
-.cardContent {
-  padding: 20px;
-}
-
-.asanaCard:hover .cardTitle {
-  color: #8b0003;
-}
-
-.benefitCard {
-  background: #ffffff;
-  padding: 25px 20px;
-  border-radius: 15px;
-  text-align: center;
-  border: 2px solid #f0f0f0;
-  transition: all 0.4s ease;
-  opacity: 0;
-  animation: fadeInScale 0.6s ease-out forwards;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.benefitCard::after {
-  content: '';
+.heroOverlay {
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(189, 0, 5, 0.05) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(248,228,228,0.3) 100%);
 }
 
-.benefitCard:hover::after {
-  opacity: 1;
-}
-
-.benefitCard:hover {
-  transform: translateY(-8px) rotate(-1deg);
-  box-shadow: 0 12px 30px rgba(189, 0, 5, 0.2);
-  border-color: #bd0005;
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-}
-
-.benefitCard.pulseOnHover:hover .benefitIcon {
-  animation: pulse 0.6s ease-in-out;
-}
-
-.benefitIcon {
-  font-size: 45px;
-  margin-bottom: 15px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-  filter: drop-shadow(0 4px 8px rgba(189, 0, 5, 0.2));
-}
-
-.benefitTitle {
-  font-size: 18px;
-  color: #bd0005;
-  margin-bottom: 10px;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-}
-
-.benefitText {
-  color: #333;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .philosophyCard {
-    padding: 25px 18px;
-  }
-
-  .cardImageWrapper {
-    height: 180px;
-  }
-}
-
-@media (max-width: 576px) {
-  .cardImageWrapper {
-    height: 180px;
-  }
-}
-
-/* Tips.module.css - Practice tips section styles */
-
-.tipsSection {
-  background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
-  padding: 35px;
-  border-radius: 15px;
-  border: 2px solid #bd0005;
-  box-shadow: 0 8px 25px rgba(189, 0, 5, 0.15);
-}
-
-.tipItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 15px;
-  background: #ffffff;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  border-left: 3px solid transparent;
-  border: 1px solid #f0f0f0;
-}
-
-.tipItem:hover {
-  transform: translateX(8px);
-  border-left-color: #bd0005;
-  box-shadow: 0 5px 15px rgba(189, 0, 5, 0.15);
-  background: linear-gradient(to right, #fff5f5, #ffffff);
-}
-
-.tipNumber {
-  min-width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, #bd0005, #8b0003);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  box-shadow: 0 4px 12px rgba(189, 0, 5, 0.3);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.tipItem:hover .tipNumber {
-  transform: rotate(360deg) scale(1.1);
-}
-
-.tipContent {
-  flex: 1;
-}
-
-.tipContent h5 {
-  font-size: 17px;
-  color: #bd0005;
-  margin-bottom: 6px;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-}
-
-.tipContent p {
-  color: #333;
-  font-size: 14px;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .tipsSection {
-    padding: 25px 18px;
-  }
-
-  .tipItem {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .tipNumber {
-    margin-bottom: 8px;
-  }
-}
-
-/* CTA.module.css - Call to action section styles */
-
-.ctaSection {
-  padding: 40px 35px;
-  border-radius: 15px;
-  box-shadow: 0 10px 35px rgba(189, 0, 5, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.ctaSection::before {
-  content: '🪷';
-  position: absolute;
-  top: -20px;
-  right: -20px;
-  font-size: 150px;
-  opacity: 0.1;
-  transform: rotate(-15deg);
-}
-
-.ctaText {
-  color: #000;
-  font-size: 17px;
-  line-height: 1.7;
-  margin-bottom: 25px;
-}
-
-.ctaButton {
-  background:#bd0005;
-  color: #fff;
-  font-family: "Philosopher", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  padding: 14px 38px;
-  border: 2px solid #ffffff;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.ctaButton::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(189, 0, 5, 0.1);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
-}
-
-.ctaButton:hover::before {
-  width: 300px;
-  height: 300px;
-}
-
-.ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-  background: #ffe8e8;
-}
-
-.ctaButton:active {
-  transform: translateY(-1px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .ctaSection {
-    padding: 30px 22px;
-  }
-
-  .ctaText {
-    font-size: 15px;
-  }
-
-  .ctaButton {
-    font-size: 16px;
-    padding: 12px 28px;
-  }
-}
-
-/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -598,7 +55,22 @@
   }
 }
 
-@keyframes slideDown {
+.heroBadge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: rgba(189, 0, 5, 0.1);
+  color: #bd0005;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border: 2px solid rgba(189, 0, 5, 0.2);
+  animation: slideInDown 0.8s ease-out;
+}
+
+@keyframes slideInDown {
   from {
     opacity: 0;
     transform: translateY(-20px);
@@ -609,18 +81,206 @@
   }
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+.heroTitle {
+  color: #000;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  text-shadow: 2px 2px 4px rgba(189, 0, 5, 0.1);
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.heroDescription {
+  color: #333;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.heroButtons {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.pulseBtn {
+  background: linear-gradient(135deg, #bd0005 0%, #8b0004 100%);
+  border: none;
+  box-shadow: 0 10px 30px rgba(189, 0, 5, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.pulseBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.pulseBtn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.pulseBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(189, 0, 5, 0.4);
+}
+
+.btnOutlineCustom {
+  color: #bd0005;
+  border: 2px solid #bd0005;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.btnOutlineCustom:hover {
+  background: #bd0005;
+  border-color: #bd0005;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(189, 0, 5, 0.3);
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.scrollArrow {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #bd0005;
+  border-radius: 25px;
+  position: relative;
+}
+
+.scrollArrow::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #bd0005;
+  border-radius: 50%;
+  animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 10px;
     opacity: 1;
-    transform: translateY(0);
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
   }
 }
 
-@keyframes float {
+/* Benefits Section */
+.benefitsSection {
+  background: linear-gradient(90deg, #fff 0%, #f8e4e4 100%);
+  position: relative;
+}
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+  display: inline-block;
+}
+
+.titleUnderline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #bd0005 0%, #000 100%);
+  margin: 20px auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+.titleUnderline::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #bd0005;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefitCard {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.benefitCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(189, 0, 5, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.benefitCard:hover::before {
+  left: 100%;
+}
+
+.benefitCard:hover {
+  transform: translateY(-15px) scale(1.05);
+  border-color: #bd0005;
+  box-shadow: 0 20px 40px rgba(189, 0, 5, 0.2);
+}
+
+.benefitCard.active {
+  background: linear-gradient(135deg, #bd0005 0%, #8b0004 100%);
+  transform: translateY(-15px) scale(1.05);
+  border-color: #bd0005;
+}
+
+.benefitCard.active .benefitIcon,
+.benefitCard.active .benefitTitle,
+.benefitCard.active .benefitDescription {
+  color: #fff;
+}
+
+.benefitIcon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: bounce 2s infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
@@ -629,33 +289,222 @@
   }
 }
 
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
+.benefitCard:hover .benefitIcon {
+  transform: scale(1.2) rotate(10deg);
+  animation: none;
+}
+
+.benefitTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.benefitDescription {
+  color: #666;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+.benefitGlow {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #bd0005, transparent);
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 50%;
+}
+
+.benefitCard:hover .benefitGlow {
+  bottom: 0;
+  opacity: 0.3;
+}
+
+/* Poses Section */
+.posesSection {
+  background: #fff;
+  position: relative;
+}
+
+.posesSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(189, 0, 5, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(189, 0, 5, 0.1) 0%, transparent 50%);
+  animation: moveBackground 10s ease-in-out infinite;
+}
+
+@keyframes moveBackground {
+  0%, 100% {
+    transform: translate(0, 0);
   }
-  to {
-    opacity: 1;
-    transform: scale(1);
+  50% {
+    transform: translate(20px, 20px);
   }
 }
 
-@keyframes pulse {
+.poseCard {
+  perspective: 1000px;
+  height: 250px;
+}
+
+.poseCardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+.poseCard:hover .poseCardInner {
+  transform: rotateY(10deg) rotateX(5deg);
+  background: linear-gradient(135deg, rgba(189, 0, 5, 0.3) 0%, rgba(189, 0, 5, 0.1) 100%);
+  border-color: #bd0005;
+  box-shadow: 0 20px 60px rgba(189, 0, 5, 0.4);
+}
+
+.poseNumber {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(189, 0, 5, 0.2);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  line-height: 1;
+  transition: all 0.6s ease;
+}
+
+.poseCard:hover .poseNumber {
+  color: rgba(189, 0, 5, 0.5);
+  transform: scale(1.2);
+}
+
+.poseName {
+  font-family: "Philosopher", sans-serif;
+  color: #bd0005;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.poseCard:hover .poseName {
+  color: #bd0005;
+  transform: translateX(10px);
+}
+
+.poseSanskrit {
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.poseCard:hover .poseSanskrit {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateX(10px);
+}
+
+.poseBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #bd0005 0%, transparent 100%);
+  transition: width 0.6s ease;
+}
+
+.poseCard:hover .poseBorder {
+  width: 100%;
+}
+
+/* Practice Section */
+.practiceSection {
+  background: linear-gradient(90deg, #fff 0%, #f8e4e4 50%, #fff 100%);
+  position: relative;
+}
+
+.practiceImageWrapper {
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+.practiceImageWrapper img{
+  width: 100% !important;
+}
+
+@keyframes float {
   0%, 100% {
-    transform: scale(1);
+    transform: translateY(0);
   }
   50% {
-    transform: scale(1.2);
+    transform: translateY(-20px);
   }
 }
 
-@keyframes lotus-bloom {
-  0%, 100% {
-    transform: scale(1);
+.practiceImageCard {
+  background: linear-gradient(135deg, #bd0005 0%, #8b0004 100%);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(189, 0, 5, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.practiceImageCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
   }
-  50% {
-    transform: scale(1.1);
+  100% {
+    transform: translateX(100%) translateY(100%);
   }
+}
+
+.practicePlaceholder {
+  aspect-ratio: 4/3;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.lotusSymbol {
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.3);
+  animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
@@ -666,16 +515,232 @@
     transform: rotate(360deg);
   }
 }
-.SectionWrapper{
-  background-image: url("../../images/grid3.png");
+
+.floatingElement {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatAround 4s ease-in-out infinite;
 }
-.SectionWhiteWrapper{
-  background-image: url("../../images/grid6.png");
+
+.element1 {
+  top: 10%;
+  left: -5%;
+  animation-delay: 0s;
 }
-.sectionPinkWrapper{
-  background-image: url("../../images/grid2.png");
-  padding: 95px 0px;
+
+.element2 {
+  top: 50%;
+  right: -5%;
+  animation-delay: 1.5s;
 }
-.SectionFounder{
-  padding:100px 0px 50px 0px;
+
+.element3 {
+  bottom: 10%;
+  left: -5%;
+  animation-delay: 3s;
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -10px) rotate(90deg);
+  }
+  50% {
+    transform: translate(20px, 0) rotate(180deg);
+  }
+  75% {
+    transform: translate(10px, 10px) rotate(270deg);
+  }
+}
+
+.practiceItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.practiceItem:hover {
+  transform: translateX(10px);
+  border-left-color: #bd0005;
+  box-shadow: 0 10px 30px rgba(189, 0, 5, 0.15);
+}
+
+.practiceIcon {
+  font-size: 2.5rem;
+  margin-right: 20px;
+  min-width: 60px;
+  transition: all 0.3s ease;
+}
+
+.practiceItem:hover .practiceIcon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.practiceItem h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.practiceItem p {
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, #000 0%, #1a0000 100%);
+  position: relative;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #bd0005 0%, #8b0004 100%);
+  padding: 60px;
+  border-radius: 30px;
+  box-shadow: 0 30px 80px rgba(189, 0, 5, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: rotateCTA 15s linear infinite;
+}
+
+@keyframes rotateCTA {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ctaButton {
+  background: #fff;
+  color: #bd0005;
+  font-weight: 700;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.footerSection {
+  background: #000;
+  border-top: 1px solid rgba(189, 0, 5, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+  
+  .practiceImageWrapper {
+    margin-bottom: 40px;
+  }
+  
+  .ctaCard {
+    padding: 40px 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.1rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .benefitCard {
+    margin-bottom: 20px;
+  }
+  
+  .poseCard {
+    height: 220px;
+  }
+  
+  .heroButtons .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .heroButtons .btn.me-3 {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .benefitIcon {
+    font-size: 3rem;
+  }
+  
+  .poseNumber {
+    font-size: 3.5rem;
+  }
+  
+  .lotusSymbol {
+    font-size: 5rem;
+  }
+  
+  .ctaCard h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8e4e4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #bd0005 0%, #000 100%);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bd0005;
 }

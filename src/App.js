@@ -36,16 +36,7 @@ import OnlineYoga from 'components/onlineyogacourse/Onlineyoga';
 import Kundalini100 from 'components/kundaliniyoga/Kundalini100';
 import Books from 'components/MyBooks/Books';
 import BooksSection from 'components/MyBooks/Bookssection';
-import AsanaPage from 'components/HomepageOverview/Asana';
-import PranayamaPage from 'components/HomepageOverview/Pranayama';
-import EthicsLifestylePage from 'components/HomepageOverview/YogicEthics&Lifestyle';
-import ChakrasEnergyPage from 'components/HomepageOverview/Chakras&Energy';
-import AyurvedaNutritionPage from 'components/HomepageOverview/Ayurveda&Nutrition';
-import MantrasChantingPage from 'components/HomepageOverview/Mantras&Chanting';
-import MeditationCleansingPage from 'components/HomepageOverview/Meditation';
-import TeachingMethodologyPage from 'components/HomepageOverview/TeachingMethodology';
-import YogaAnatomyPage from 'components/HomepageOverview/YogaAnatomy';
-import PhilosophyPage from 'components/HomepageOverview/YogicPhilosophy';
+import HathaYoga from 'components/HomepageOverview/HathaYoga(Traditional)';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -97,19 +88,7 @@ export default function Main() {
         <Route path="/BookingForm" element={<BookingForm />} />
         <Route path="/Online-YTTC" element={<OnlineYTTC />} />
         <Route path="/Yoga-Online" element={<OnlineYoga />} />
-        <Route path="/asana" element={<AsanaPage />} />
-        <Route path="/pranayama" element={<PranayamaPage />} />
-        <Route path="/yogic-philosophy" element={<PhilosophyPage />} />
-        <Route path="/yoga-anatomy" element={<YogaAnatomyPage />} />
-        <Route
-          path="/teaching-methodology"
-          element={<TeachingMethodologyPage />}
-        />
-        <Route path="/meditation" element={<MeditationCleansingPage />} />
-        <Route path="/mantras-chanting" element={<MantrasChantingPage />} />
-        <Route path="/ayurveda-nutrition" element={<AyurvedaNutritionPage />} />
-        <Route path="/chakras-energy" element={<ChakrasEnergyPage />} />
-        <Route path="/yogic-ethics" element={<EthicsLifestylePage />} />
+        <Route path="/Hatha-Yoga" element={<HathaYoga />} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

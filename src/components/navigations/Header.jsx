@@ -92,7 +92,7 @@ const Header = () => {
       <div className={styles.topHeader}>
         <div className={styles.topContainer}>
           <div className={styles.topLeft}>
-            <span>📍 Manzil Balaknath Road Upper Tapovan Rishikesh</span>
+            <span>📍 Hatha Yogashram, Balaknath Rd, Upper Tapovan, Rishikesh, Uttarakhand India 249192</span>
             <span>📞 +91 9335606336</span>
           </div>
           <div className={styles.topRight}>

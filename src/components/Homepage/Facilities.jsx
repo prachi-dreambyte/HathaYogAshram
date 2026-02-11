@@ -105,7 +105,64 @@ const FacilitiesDesign4 = () => {
       fullDescription: `While we encourage digital detox during your yoga journey, we understand the need to stay connected. High-speed fiber-optic WiFi covers the entire campus including all accommodation areas, yoga halls, dining areas, and outdoor spaces. The connection is reliable enough for video calls, streaming yoga tutorials, and uploading photos to share your experience. We've created dedicated study zones with comfortable seating, good lighting, and electrical outlets for completing course assignments, researching yoga topics, and online learning. The main common lounge features sofas, coffee tables, and a relaxed atmosphere perfect for socializing or quiet work. Each study area maintains a respectful noise level policy to ensure everyone can focus. We also have a computer station with printing services for students who need to print certificates, assignments, or travel documents. While devices are discouraged during training hours to maintain presence and focus, you're welcome to use technology during free time to document your journey, connect with family, or continue your learning beyond the mat.`,
       icon: "📶",
       modalImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
-    }
+    },
+    {
+  title: "Accommodation",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Clean and hygienic private or shared accommodation with peaceful Himalayan surroundings in Rishikesh.`,
+  fullDescription: `We provide comfortable and hygienic accommodation for the entire 24 days training program. Students can choose between private or shared rooms based on their preference. Each room includes clean bedding, blankets, pillows, attached bathroom with hot water, and access to purified drinking water. The peaceful Himalayan environment helps students focus deeply on their yoga journey and inner transformation.`,
+  icon: "🏠",
+  modalImage: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800"
+},
+{
+  title: "Nutritious Yogic Meals",
+  image:"https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `3 healthy vegetarian meals daily to support your yoga practice and overall well-being.`,
+  fullDescription: `We provide three freshly prepared vegetarian meals every day. Our yogic meals are sattvic, balanced, and designed to nourish the body and mind. Meals are prepared in a clean and hygienic kitchen using fresh ingredients. Herbal tea and purified drinking water are also available throughout the day to keep you energized during your training.`,
+  icon: "🍲",
+  modalImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800"
+},
+{
+  title: "Study Materials & Kit",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Complete learning kit including books, Shatkarma pot, T-shirt, and yoga bag.`,
+  fullDescription: `All students receive complete study materials for the 24 days training. The kit includes yoga books, printed study materials, a Shatkarma pot for cleansing practices, a training T-shirt, and a yoga bag. These resources help students understand both the practical and theoretical aspects of yoga in a structured way.`,
+  icon: "📚",
+  modalImage: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800"
+},
+{
+  title: "24 Days Intensive Training",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Comprehensive 24 days Yoga Teacher Training program in the heart of Rishikesh.`,
+  fullDescription: `Our 24 Days Yoga Teacher Training is designed to build a strong foundation in asana, pranayama, meditation, yoga philosophy, anatomy, and teaching methodology. The structured schedule ensures disciplined practice while allowing personal growth and self-discovery in the spiritual capital of yoga, Rishikesh.`,
+  icon: "🧘",
+  modalImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800"
+},
+{
+  title: "Himalayan Excursions",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Explore the beauty of Rishikesh and the Himalayas during your training.`,
+  fullDescription: `As part of the program, students enjoy guided excursions around Rishikesh and the Himalayan region. These may include visits to waterfalls, temples, mountain viewpoints, and spiritual landmarks. The excursions offer relaxation, cultural experience, and a deeper connection with nature.`,
+  icon: "🏔️",
+  modalImage: "https://images.unsplash.com/photo-1598890777032-bde835ba27c2?w=800"
+},
+{
+  title: "Evening Ganga Aarti",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Experience the sacred and spiritual Ganga Aarti ceremony in Rishikesh.`,
+  fullDescription: `Students participate in the beautiful and spiritual Ganga Aarti ceremony held on the banks of the holy River Ganga. This evening ritual includes devotional chanting, fire offerings, and meditation. It is a deeply transformative and peaceful experience that connects students to the spiritual essence of Rishikesh.`,
+  icon: "🔥",
+  modalImage: "https://images.unsplash.com/photo-1587135941948-670b381f08ce?w=800"
+},
+{
+  title: "International Certification",
+  image: "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600",
+  text: `Receive internationally recognized RYS 200 certification from Yoga Alliance USA.`,
+  fullDescription: `After successfully completing the 24 Days Yoga Teacher Training, students receive the RYS 200 certification accredited by Yoga Alliance USA. This internationally recognized certificate allows graduates to teach yoga professionally anywhere in the world.`,
+  icon: "🎓",
+  modalImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
+}
+
   ];
 
   const openModal = (facility) => {

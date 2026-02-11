@@ -29,17 +29,26 @@ const columnContainer = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.1,
     },
   },
 };
 
 const columnItem = {
-  hidden: { opacity: 0, y: 25 },
+  hidden: { opacity: 0, y: 30 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
+    transition: { duration: 0.7, ease: 'easeOut' },
+  },
+};
+
+const logoAnimation = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.8, ease: 'easeOut' },
   },
 };
 
@@ -54,165 +63,137 @@ const Footer = () => {
     >
       <div className={styles.overlay}></div>
 
-      <div className="container-fluid p-5 position-relative">
-        {/* MAIN ROW */}
+      <div className="container-fluid position-relative">
+        {/* LOGO SECTION - FULL WIDTH */}
+        <div className="row">
+          <motion.div className="col-md-12" variants={logoAnimation}>
+            <div className={styles.topSection}>
+              <div className={styles.logoContainer}>
+                <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* DIVIDER */}
+        <div className={styles.divider}></div>
+
+        {/* 6 COLUMNS SECTION */}
         <motion.div
-          className="row gy-5 gx-5 align-items-start"
+          className="row gy-4 gx-3"
           variants={columnContainer}
         >
-          {/* LOGO + DESCRIPTION */}
-          <motion.div className="col-lg-4 col-md-12" variants={columnItem}>
-            <div className={styles.brandWrap}>
-              <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
-              <p className={styles.desc}>
-                Hatha Yog Ashram, founded in 2017 in Rishikesh, India, is one
-                of the most trusted yoga teacher training schools.
-                <br />
-                We offer traditional Hatha, Ashtanga, Kundalini, Meditation and
-                Pranayama practices rooted in ancient yogic wisdom.
+           <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+            <p className={styles.tagline}>
+                Hatha Yog Ashram, founded in 2017 in Rishikesh, India, is one of the most trusted yoga teacher training schools.
+                We offer traditional Hatha, Ashtanga, Kundalini, Meditation and Pranayama practices rooted in ancient yogic wisdom.
               </p>
-            </div>
           </motion.div>
-
-          {/* QUICK LINKS */}
-          <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
+          {/* COLUMN 1 - QUICK LINKS */}
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
             <h5 className={styles.title}>Quick Links</h5>
             <ul className={styles.list}>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/teachers">Our Teachers</Link>
-              </li>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-              <li>
-                <Link to="/blog">Blog</Link>
-              </li>
-              <li>
-                <Link to="/contact-us">Contact Us</Link>
-              </li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about-us">About Us</Link></li>
+              <li><Link to="/teachers">Our Teachers</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
             </ul>
           </motion.div>
 
-          {/* KUNDALINI LINKS */}
-          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
-            <h5 className={styles.title}>Kundalini Links</h5>
-            <ul className={styles.list}>
-              <li>
-                <Link to="/kundalini-100">100 Hour Kundalini</Link>
-              </li>
-              <li>
-                <Link to="/kundalini-200">200 Hour Kundalini</Link>
-              </li>
-              <li>
-                <Link to="/kundalini-300">300 Hour Kundalini</Link>
-              </li>
-            </ul>
-          </motion.div>
-
-          {/* YOGA COURSES */}
-          <motion.div className="col-lg-2 col-md-4" variants={columnItem}>
+          {/* COLUMN 2 - YOGA COURSES */}
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
             <h5 className={styles.title}>Yoga Courses</h5>
             <ul className={styles.list}>
-              <li>
-                {' '}
-                <Link to="/YinYoga">Yin Yoga</Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/vedic-mantra">Vedic mantra</Link>
-              </li>
-
-              <li>
-                <Link to="/YogaCourse100">100 Hour Yoga TTC</Link>
-              </li>
-              <li>
-                <Link to="/YogaCourse200">200 Hour Yoga TTC</Link>
-              </li>
-              <li>
-                <Link to="/YogaCourse300">300 Hour Yoga TTC</Link>
-              </li>
-              <li>
-                <Link to="/YogaCourse500">500 Hour Yoga TTC</Link>
-              </li>
+              <li><Link to="/YinYoga">Yin Yoga</Link></li>
+              <li><Link to="/vedic-mantra">Vedic Mantra</Link></li>
+              <li><Link to="/YogaCourse100">100 Hour TTC</Link></li>
+              <li><Link to="/YogaCourse200">200 Hour TTC</Link></li>
+              <li><Link to="/YogaCourse300">300 Hour TTC</Link></li>
+              <li><Link to="/YogaCourse500">500 Hour TTC</Link></li>
             </ul>
           </motion.div>
 
-          {/* YOGA RETREATS */}
-          <motion.div className="col-lg-1 col-md-4" variants={columnItem}>
+          {/* COLUMN 3 - KUNDALINI COURSES */}
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+            <h5 className={styles.title}>Kundalini Yoga</h5>
+            <ul className={styles.list}>
+              <li><Link to="/kundalini-100">100 Hour</Link></li>
+              <li><Link to="/kundalini-200">200 Hour</Link></li>
+              <li><Link to="/kundalini-300">300 Hour</Link></li>
+            </ul>
+          </motion.div>
+
+          {/* COLUMN 4 - YOGA RETREATS */}
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
             <ul className={styles.list}>
-              <li>
-                {' '}
-                <Link to="/meditation-retreat">Yoga Retreat</Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/5-days-yoga-retreat">5 Days Retreat</Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/10-days-yoga-retreat">10 Days Retreat</Link>
-              </li>
-              <li>
-                {' '}
-                <Link to="/20-days-yoga-retreat">20 Days Retreat</Link>
-              </li>
+              <li><Link to="/meditation-retreat">Yoga Retreat</Link></li>
+              <li><Link to="/5-days-yoga-retreat">5 Days</Link></li>
+              <li><Link to="/10-days-yoga-retreat">10 Days</Link></li>
+              <li><Link to="/20-days-yoga-retreat">20 Days</Link></li>
             </ul>
-          </motion.div>
+          </motion.div>         
 
-          {/* REGISTERED OFFICE */}
-          <motion.div className="col-lg-2 col-md-12" variants={columnItem}>
-            <h5 className={styles.title}>Registered Office</h5>
+          {/* COLUMN 6 - CONTACT INFO */}
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+            <h5 className={styles.title}>Contact</h5>
             <ul className={styles.contact}>
               <li>
-                <FaMapMarkerAlt /> Upper Tapovan, Rishikesh
+                <FaMapMarkerAlt className={styles.icon} />
+                <span>Upper Tapovan</span>
               </li>
               <li>
-                <FaPhoneAlt /> +91 9335606336
+                <FaPhoneAlt className={styles.icon} />
+                <span>+91 9335606336</span>
               </li>
               <li>
-                <FaEnvelope /> info@hathayogashram.com
+                <FaEnvelope className={styles.icon} />
+                <span>info@hathayogashram.com</span>
               </li>
               <li>
-                <FaClock /> 7:00 AM – 7:00 PM
+                <FaClock className={styles.icon} />
+                <span>7AM – 7PM</span>
               </li>
             </ul>
+             {/* Social Media */}
+              <div className={styles.socials}>
+                <motion.a
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://www.facebook.com/profile.php?id=100095297992781"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                >
+                  <FaFacebookF />
+                </motion.a>
 
-            <div className={styles.socials}>
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://www.facebook.com/profile.php?id=100095297992781"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaFacebookF />
-              </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://www.instagram.com/hathayogashram/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram />
+                </motion.a>
 
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://www.instagram.com/hathayogashram/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram />
-              </motion.a>
-
-              <motion.a
-                whileHover={{ scale: 1.2 }}
-                href="https://www.youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaYoutube />
-              </motion.a>
-            </div>
+                <motion.a
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                >
+                  <FaYoutube />
+                </motion.a>
+              </div>
           </motion.div>
+         
         </motion.div>
 
         {/* KEYWORDS */}
@@ -222,17 +203,14 @@ const Footer = () => {
           <span>200 Hour Yoga TTC</span>
           <span>300 Hour Yoga TTC</span>
           <span>Yoga Retreats in India</span>
+          <span>Kundalini Awakening</span>
+          <span>Meditation Retreats</span>
         </motion.div>
 
         {/* BOTTOM */}
         <motion.div className={styles.bottom} variants={columnItem}>
-  © {new Date().getFullYear()} Hatha Yog Ashram
- 
-  comming under yog ashram
- 
-  All Rights Reserved.
-</motion.div>
-
+          <p>© {new Date().getFullYear()} Hatha Yog Ashram | Coming under Yog Ashram | All Rights Reserved.</p>
+        </motion.div>
       </div>
     </motion.footer>
   );

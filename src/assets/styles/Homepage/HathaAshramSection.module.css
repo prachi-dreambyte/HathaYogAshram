@@ -85,3 +85,13 @@
     gap: 0px !important;
   }
 }
+@media (max-width: 1399px) {
+  .certifications {
+    gap: 50px;
+  }
+}
+@media (max-width: 1199px) {
+  .certifications {
+    gap: 30px;
+  }
+}
