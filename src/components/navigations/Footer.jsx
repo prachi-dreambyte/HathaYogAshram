@@ -63,31 +63,20 @@ const Footer = () => {
     >
       <div className={styles.overlay}></div>
 
-      <div className="container-fluid position-relative">
-        {/* LOGO SECTION - FULL WIDTH */}
-        <div className="row">
-          <motion.div className="col-md-12" variants={logoAnimation}>
-            <div className={styles.topSection}>
-              <div className={styles.logoContainer}>
-                <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* DIVIDER */}
-        <div className={styles.divider}></div>
+      <div className="container-fluid">
 
         {/* 6 COLUMNS SECTION */}
         <motion.div
-          className="row gy-4 gx-3"
+          className="row"
           variants={columnContainer}
         >
-           <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
-            <p className={styles.tagline}>
+          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+           <div className="pt-3">
+             <p className={styles.tagline}>
                 Hatha Yog Ashram, founded in 2017 in Rishikesh, India, is one of the most trusted yoga teacher training schools.
                 We offer traditional Hatha, Ashtanga, Kundalini, Meditation and Pranayama practices rooted in ancient yogic wisdom.
               </p>
+           </div>
           </motion.div>
           {/* COLUMN 1 - QUICK LINKS */}
           <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
@@ -101,10 +90,30 @@ const Footer = () => {
               <li><Link to="/contact-us">Contact Us</Link></li>
             </ul>
           </motion.div>
-
+          
+           {/* <motion.div className="col-md-1 col-sm-6" variants={columnItem}>
+   
+          </motion.div> */}
+             {/* COLUMN 3 - KUNDALINI COURSES */}
+          <motion.div className="col-md-1 col-sm-6" variants={columnItem}>
+            <h5 className={styles.title}>Kundalini Yoga</h5>
+            <ul className={styles.list}>
+              <li><Link to="/kundalini-100">100 Hour</Link></li>
+              <li><Link to="/kundalini-200">200 Hour</Link></li>
+              <li><Link to="/kundalini-300">300 Hour</Link></li>
+            </ul>
+          </motion.div>
+         
           {/* COLUMN 2 - YOGA COURSES */}
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
-            <h5 className={styles.title}>Yoga Courses</h5>
+          <motion.div className="col-md-3 col-sm-6" variants={columnItem}>
+            <div className={styles.Display}>
+              <div className={styles.topSection}>
+              <div className={styles.logoContainer}>
+                <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
+              </div>
+            </div>
+            <div>
+              <h5 className={styles.title}>Yoga Courses</h5>
             <ul className={styles.list}>
               <li><Link to="/YinYoga">Yin Yoga</Link></li>
               <li><Link to="/vedic-mantra">Vedic Mantra</Link></li>
@@ -113,18 +122,9 @@ const Footer = () => {
               <li><Link to="/YogaCourse300">300 Hour TTC</Link></li>
               <li><Link to="/YogaCourse500">500 Hour TTC</Link></li>
             </ul>
+            </div>
+            </div>
           </motion.div>
-
-          {/* COLUMN 3 - KUNDALINI COURSES */}
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
-            <h5 className={styles.title}>Kundalini Yoga</h5>
-            <ul className={styles.list}>
-              <li><Link to="/kundalini-100">100 Hour</Link></li>
-              <li><Link to="/kundalini-200">200 Hour</Link></li>
-              <li><Link to="/kundalini-300">300 Hour</Link></li>
-            </ul>
-          </motion.div>
-
           {/* COLUMN 4 - YOGA RETREATS */}
           <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
@@ -195,6 +195,8 @@ const Footer = () => {
           </motion.div>
          
         </motion.div>
+         {/* DIVIDER */}
+        <div className={styles.divider}></div>
 
         {/* KEYWORDS */}
         <motion.div className={styles.keywords} variants={columnItem}>

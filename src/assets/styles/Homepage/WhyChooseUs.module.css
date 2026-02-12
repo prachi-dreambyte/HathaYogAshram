@@ -27,12 +27,12 @@
   height: 100%;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   transition: all 0.35s ease;
+  cursor: pointer;
 }
 
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
-
 }
 
 .icon {
@@ -42,10 +42,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
+  transition: transform 0.4s ease;
 }
-
-
-
 
 .card h5 {
   font-size: 18px;
@@ -62,27 +60,144 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.card {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
-}
-
-.icon {
-  transition: transform 0.4s ease;
-}
-
 .card:hover .icon {
   transform: scale(1.1);
   color: #c50101df;
 }
 
+/* ===================== */
+/* Modal Styles */
+/* ===================== */
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+ 
+}
+
+.modalContent {
+  background: #ffffff;
+  border-radius: 24px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+  color: #bd0005;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.closeButton:hover {
+  background: #bd0005;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.modalImage {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+  position: relative;
+}
+
+.modalImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modalBody {
+  padding: 40px;
+  text-align: center;
+}
+
+.modalIcon {
+  font-size: 70px;
+  color: #bd0005;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.modalBody h3 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #bd0005;
+  margin-bottom: 20px;
+  font-family: "Philosopher", sans-serif;
+}
+
+.modalDescription {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.8;
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+}
+
+/* Scrollbar Styling for Modal */
+.modalContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modalContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb {
+  background: #bd0005;
+  border-radius: 10px;
+}
+
+.modalContent::-webkit-scrollbar-thumb:hover {
+  background: #a00004;
+}
+
+/* ===================== */
 /* Responsive */
+/* ===================== */
+
 @media (max-width: 768px) {
   .heading {
     font-size: 26px;
@@ -91,5 +206,60 @@
   .icon {
     display: flex;
     justify-content: center;
+  }
+
+  .modalContent {
+    max-width: 95%;
+    max-height: 90vh;
+  }
+
+  .modalImage {
+    height: 200px;
+  }
+
+  .modalBody {
+    padding: 30px 25px;
+  }
+
+  .modalIcon {
+    font-size: 50px;
+  }
+
+  .modalBody h3 {
+    font-size: 22px;
+  }
+
+  .modalDescription {
+    font-size: 15px;
+  }
+
+  .closeButton {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalImage {
+    height: 180px;
+  }
+
+  .modalBody {
+    padding: 25px 20px;
+  }
+
+  .modalIcon {
+    font-size: 45px;
+  }
+
+  .modalBody h3 {
+    font-size: 20px;
+  }
+
+  .modalDescription {
+    font-size: 14px;
   }
 }

@@ -37,6 +37,31 @@ import Kundalini100 from 'components/kundaliniyoga/Kundalini100';
 import Books from 'components/MyBooks/Books';
 import BooksSection from 'components/MyBooks/Bookssection';
 import HathaYoga from 'components/HomepageOverview/HathaYoga(Traditional)';
+import AnatomyPhysiology from 'components/HomepageOverview/Anatomy&Physiology';
+import AshtangaYoga from 'components/HomepageOverview/AsthangaYoga';
+import Bandhas from 'components/HomepageOverview/Bandhas';
+import BasicAerialYoga from 'components/HomepageOverview/BasicArialYogasession';
+import BasicAyurvedicRemedies from 'components/HomepageOverview/BasicAyurvedicRemedies';
+import BodyAsanaAlignment from 'components/HomepageOverview/Body&AsanaAlignment';
+import FlexibilityTechniques from 'components/HomepageOverview/FlexibilityTechniques';
+import PracticeAtGanga from 'components/HomepageOverview/Ganga';
+import KundaliniYoga from 'components/HomepageOverview/KundaliniYoga';
+import MarmaTechniques from 'components/HomepageOverview/MarmaTechniques';
+import Meditation from 'components/HomepageOverview/Meditation';
+import Mudra from 'components/HomepageOverview/Mudra';
+import Pranayama from 'components/HomepageOverview/Pranayama';
+import PropsYoga from 'components/HomepageOverview/PropsYoga';
+import RYS200Certification from 'components/HomepageOverview/RYS200Internationalcertification';
+import Shatkarma from 'components/HomepageOverview/shatkarma';
+import SoundHealingSession from 'components/HomepageOverview/SoundHealingSession';
+import TeachingMethodology from 'components/HomepageOverview/TeachingMethodology';
+import TrackingSelfPractice from 'components/HomepageOverview/Tracking&SelfPractice';
+import VedantaPhilosophy from 'components/HomepageOverview/VedantaPhilosophy';
+import VedicMantraChanting from 'components/HomepageOverview/VedicMantraChanting';
+import VinyasaFlow from 'components/HomepageOverview/VinyasaFlow';
+import YogaNidra from 'components/HomepageOverview/YogaNidra';
+import YogaTherapy from 'components/HomepageOverview/YogaTherapy';
+import AncientYogicPractices from 'components/HomepageOverview/AncientYogicPractices';
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -89,6 +114,31 @@ export default function Main() {
         <Route path="/Online-YTTC" element={<OnlineYTTC />} />
         <Route path="/Yoga-Online" element={<OnlineYoga />} />
         <Route path="/Hatha-Yoga" element={<HathaYoga />} />
+        <Route path="/Anatomy-Physiology" element={<AnatomyPhysiology />} />
+        <Route path="/Ancient-Yogic-Practices" element={<AncientYogicPractices />}/>
+        <Route path="/Ashtanga-Yoga" element={<AshtangaYoga />} />
+        <Route path="/Bandhas" element={<Bandhas />} />
+        <Route path="Basic-Aerial-Yoga" element={<BasicAerialYoga />} />
+        <Route path="/Basic-Ayurvedic-Remedies" element={< BasicAyurvedicRemedies />}/>
+        <Route path="/Body-Asana-" elemenAlignmentt={<BodyAsanaAlignment />} />
+        <Route path="/Flexibility-Techniques" element={<FlexibilityTechniques />} />
+        <Route path="/Practice-at-Ganga" element={<PracticeAtGanga />}/>
+        <Route path="/Kundalini-Yoga" element={<KundaliniYoga />}/>
+        <Route path="/MarmaTechniques" element={<MarmaTechniques/>} />
+        <Route path="/Meditation" element={< Meditation/>}/>
+        <Route path="/Mudra" element={<Mudra/>}/>
+        <Route path="/Pranayama" element={<Pranayama/>}/>
+        <Route path="/Props-Yoga" element={<PropsYoga/>}/>
+        <Route path="/RYS200-Certification" element={<RYS200Certification />}/>
+        <Route path="/shatkarma" element={<Shatkarma/>}/>
+        <Route path="/Sound-Healing-Session" element={<SoundHealingSession />}/>
+        <Route path="/Teaching-Methodolog" element={<TeachingMethodology />}/>
+        <Route path="/Tracking-Self-Practice" element={<TrackingSelfPractice/>}/>
+        <Route path="/Vedanta-Philosophy" element={<VedantaPhilosophy/>}/>
+        <Route path="/Vedic-Mantra-Chanting" element={<VedicMantraChanting />}/>
+        <Route path="/Vinyasa-Flow" element={<VinyasaFlow/>}/>
+        <Route path="/Yoga-Nidra" element={<YogaNidra />}/>
+        <Route path="/Yoga-Therapy" element={<YogaTherapy />}/>
       </Routes>
 
       {showHeaderFooter && <Footer />}

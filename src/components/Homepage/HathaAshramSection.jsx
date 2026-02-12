@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/HathaAshramSection.module.css";
 import dividerImg from "../../assets/images/linedesign.png";
-import yogaAlliance from "../../assets/images/yoga-alliance-logo-1-e1725693185665.png";
-import rys200 from "../../assets/images/yoga-alliance-logo-2.png";
-import rys300 from "../../assets/images/RYS300.png";
-import yacep from "../../assets/images/images500.png";
-import rpyts from "../../assets/images/3.png";
+import yogaAlliance from "../../assets/images/brands/RCYS.webp";
+import rys200 from "../../assets/images/brands/RPYS.webp";
+import rys300 from "../../assets/images/brands/RYS200.webp";
+import yacep from "../../assets/images/brands/RYS300.webp";
+import rpyts from "../../assets/images/brands/RYS500.webp";
 
 /* ===================== */
 /* Framer Motion Variants */

@@ -38,44 +38,98 @@
   font-family: "Philosopher" , sans-serif ;
 }
 
-/* INFO CIRCLES */
+/* INFO CARDS - NEW MODERN DESIGN */
 .infoGrid {
-  display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
   margin-bottom: 50px;
+  padding: 0 20px;
+  margin-left: 100px;
 }
 
-.infoCircle {
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 2px solid #bd0005;
-  padding: 20px;
+.infoCard {
+  position: relative;
+  padding: 35px 25px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(189, 0, 5, 0.15);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px sollid #bd0005
+}
 
+.infoCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(189, 0, 5, 0.3);
+}
+
+.infoCard:hover::before {
+  opacity: 1;
+}
+
+.infoCard:nth-child(1) {
+ background: #fff;
+}
+
+.infoCard:nth-child(2) {
+  background: #fff;
+}
+
+.infoCard:nth-child(3) {
+ background: #fff;
+}
+
+.infoCard:nth-child(4) {
+ background: #fff;
+}
+
+.cardIconWrapper {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  transition: 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease;
 }
 
-.infoCircle:hover {
-  background: #bd0005;
-  color: #fff;
+.infoCard:hover .cardIconWrapper {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 255, 255, 0.3);
 }
 
-.circleIcon {
-  font-size: 34px;
-  margin-bottom: 12px;
+.cardIcon {
+  font-size: 36px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-.infoCircle p {
+.cardText {
+  color: #bd0005;
   font-size: 18px;
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* MAIN GRID */
@@ -127,7 +181,7 @@
 
 .buttons button:hover {
   background: #fff;
-   color:#bd0005;
+  color:#bd0005;
 }
 
 /* IMAGES */
@@ -146,6 +200,14 @@
 
 /* ================= RESPONSIVE ================= */
 
+/* Large Tablet */
+@media (max-width: 1200px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
 /* Tablet */
 @media (max-width: 992px) {
   .mainGrid {
@@ -153,9 +215,8 @@
     gap: 35px;
   }
 
-  .infoCircle {
-    width: 180px;
-    height: 180px;
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .heading {
@@ -174,14 +235,26 @@
 /* Mobile */
 @media (max-width: 768px) {
   .infoGrid {
-
-    gap: 20px;
-    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 10px;
   }
 
-  .infoCircle {
-    width: 170px;
-    height: 170px;
+  .infoCard {
+    padding: 30px 20px;
+  }
+
+  .cardIconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cardIcon {
+    font-size: 30px;
+  }
+
+  .cardText {
+    font-size: 15px;
   }
 
   .images {
@@ -199,18 +272,22 @@
     font-size: 15px;
   }
 
-  .infoCircle {
-    width: 150px;
-    height: 150px;
-    padding: 14px;
+  .infoCard {
+    padding: 25px 18px;
   }
 
-  .circleIcon {
-    font-size: 26px;
+  .cardIconWrapper {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
   }
 
-  .infoCircle p {
-    font-size: 12px;
+  .cardIcon {
+    font-size: 28px;
+  }
+
+  .cardText {
+    font-size: 14px;
   }
 
   .buttons button {
