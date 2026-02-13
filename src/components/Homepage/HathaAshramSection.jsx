@@ -4,9 +4,9 @@ import styles from "../../assets/styles/Homepage/HathaAshramSection.module.css";
 import dividerImg from "../../assets/images/linedesign.png";
 import yogaAlliance from "../../assets/images/brands/RCYS.webp";
 import rys200 from "../../assets/images/brands/RPYS.webp";
-import rys300 from "../../assets/images/brands/RYS200.webp";
-import yacep from "../../assets/images/brands/RYS300.webp";
-import rpyts from "../../assets/images/brands/RYS500.webp";
+import rys300 from "../../assets/images/brands/rys200.webp";
+import yacep from "../../assets/images/brands/rys300.webp";
+import rpyts from "../../assets/images/brands/rys500.webp";
 
 /* ===================== */
 /* Framer Motion Variants */
