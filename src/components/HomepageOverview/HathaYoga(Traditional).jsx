@@ -127,7 +127,7 @@ const HathaYoga = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4 mb-lg-0">
               <div className={styles.practiceImageWrapper}>
-                <img src={Practice} alt="image"/>
+               <img src={Practice} alt="Hatha yoga practitioner performing asana" />
               </div>
             </div>
             <div className="col-lg-6">

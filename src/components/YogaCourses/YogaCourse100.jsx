@@ -11,37 +11,6 @@ import InternationalCertificate from 'components/InternationalCertificate/Intern
 export default function YogaCourse100() {
   const navigate = useNavigate();
 
-  const schools = [
-    {
-      name: 'Yogkulam',
-      image:
-        'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=600&h=400&fit=crop',
-      description:
-        'Experience authentic yoga with traditional wisdom and modern teaching techniques.',
-    },
-    {
-      name: 'Hatha Yogashram',
-      image:
-        'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
-      description:
-        'Your sanctuary for authentic yoga learning in the heart of Rishikesh.',
-    },
-    {
-      name: 'Vinyasa Yogashala',
-      image:
-        'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600&h=400&fit=crop',
-      description:
-        'Perfect place to learn yoga with highly qualified international teachers.',
-    },
-    {
-      name: 'World Peace Yoga School',
-      image:
-        'https://images.unsplash.com/photo-1545389336-cf090694435e?w=600&h=400&fit=crop',
-      description:
-        'Most reputed and traditional yoga school with 15+ years in Rishikesh.',
-    },
-  ];
-
   const whyRishikesh = [
     {
       icon: '🏔️',
