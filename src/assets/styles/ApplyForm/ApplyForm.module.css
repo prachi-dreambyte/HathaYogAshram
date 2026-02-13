@@ -218,3 +218,120 @@
     margin: 12px 0 20px;
   }
 }
+
+/* ── reCAPTCHA — append karo existing CSS ke end mein ── */
+
+/* captchaBox already exists — sirf layout override */
+.captchaBox {
+  justify-content: space-between;
+  padding: 0 16px 0 12px;
+  background: #f9f9f9;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.captchaLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.captchaLabel {
+  font-size: 14px;
+  color: #333;
+  user-select: none;
+}
+
+/* Checkbox */
+.captchaCheckbox {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #c1c1c1;
+  border-radius: 2px;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.captchaCheckbox:hover  { border-color: #4a90d9; }
+.captchaCheckbox:focus  { box-shadow: 0 0 0 3px rgba(74,144,217,0.25); }
+
+.captchaChecked {
+  background: #4caf50;
+  border-color: #4caf50;
+}
+
+.captchaLoading {
+  border-color: transparent;
+  background: white;
+}
+
+/* Spinner */
+.captchaSpinner {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  animation: rcRotate 0.9s linear infinite;
+}
+
+.captchaSpinner circle {
+  stroke: #4a90d9;
+  stroke-linecap: round;
+  stroke-dasharray: 80, 200;
+  animation: rcDash 1.4s ease-in-out infinite;
+}
+
+@keyframes rcRotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes rcDash {
+  0%   { stroke-dasharray: 1, 200;  stroke-dashoffset: 0; }
+  50%  { stroke-dasharray: 89, 200; stroke-dashoffset: -35px; }
+  100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; }
+}
+
+/* Checkmark */
+.captchaMark {
+  width: 18px;
+  height: 18px;
+  animation: rcPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes rcPop {
+  0%   { transform: scale(0); opacity: 0; }
+  60%  { transform: scale(1.2); }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* Branding */
+.captchaBrand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.captchaLogo  { width: 32px; height: 32px; }
+
+.captchaText {
+  font-size: 9px;
+  color: #555;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+.captchaLinks {
+  font-size: 7.5px;
+  color: #999;
+}
