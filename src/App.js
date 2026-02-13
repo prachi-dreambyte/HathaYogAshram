@@ -121,9 +121,9 @@ export default function Main() {
         <Route path="/Ancient-Yogic-Practices" element={<AncientYogicPractices />}/>
         <Route path="/Ashtanga-Yoga" element={<AshtangaYoga />} />
         <Route path="/Bandhas" element={<Bandhas />} />
-        <Route path="Basic-Aerial-Yoga" element={<BasicAerialYoga />} />
+        <Route path="/Basic-Aerial-Yoga" element={<BasicAerialYoga />} />
         <Route path="/Basic-Ayurvedic-Remedies" element={< BasicAyurvedicRemedies />}/>
-        <Route path="/Body-Asana-" elemenAlignmentt={<BodyAsanaAlignment />} />
+        <Route path="/Body-Asana" elemenAlignmentt={<BodyAsanaAlignment />} />
         <Route path="/Flexibility-Techniques" element={<FlexibilityTechniques />} />
         <Route path="/Practice-at-Ganga" element={<PracticeAtGanga />}/>
         <Route path="/Kundalini-Yoga" element={<KundaliniYoga />}/>
@@ -135,7 +135,7 @@ export default function Main() {
         <Route path="/RYS200-Certification" element={<RYS200Certification />}/>
         <Route path="/shatkarma" element={<Shatkarma/>}/>
         <Route path="/Sound-Healing-Session" element={<SoundHealingSession />}/>
-        <Route path="/Teaching-Methodolog" element={<TeachingMethodology />}/>
+        <Route path="/Teaching-Methodology" element={<TeachingMethodology />}/>
         <Route path="/Tracking-Self-Practice" element={<TrackingSelfPractice/>}/>
         <Route path="/Vedanta-Philosophy" element={<VedantaPhilosophy/>}/>
         <Route path="/Vedic-Mantra-Chanting" element={<VedicMantraChanting />}/>

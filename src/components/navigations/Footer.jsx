@@ -12,6 +12,7 @@ import {
   FaClock,
 } from 'react-icons/fa';
 import logo from '../../assets/images/logo.png';
+import logo1 from '../../assets/images/logo1.png';
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -100,6 +101,7 @@ const Footer = () => {
               <div className={styles.topSection}>
                 <div className={styles.logoContainer}>
                   <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
+                   <img src={logo1} alt="Hatha Yog Ashram" className={styles.logo} />
                 </div>
               </div>
               <div className={styles.coursesSection}>
