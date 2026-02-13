@@ -62,6 +62,8 @@ import VinyasaFlow from 'components/HomepageOverview/VinyasaFlow';
 import YogaNidra from 'components/HomepageOverview/YogaNidra';
 import YogaTherapy from 'components/HomepageOverview/YogaTherapy';
 import AncientYogicPractices from 'components/HomepageOverview/AncientYogicPractices';
+import FloatingApplyForm from "components/ApplyForm/FloatingApplyForm";
+
 
 export default function Main() {
   const [currentTheme, setCurrentTheme] = useState(initialTheme);
@@ -76,6 +78,7 @@ export default function Main() {
   return (
     <ChakraProvider theme={currentTheme}>
       {showHeaderFooter && <Header />}
+        {showHeaderFooter && <FloatingApplyForm />}
 
       <Routes>
         <Route path="auth/*" element={<AuthLayout />} />
