@@ -61,16 +61,18 @@ const Footer = () => {
           className="row"
           variants={columnContainer}
         >
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
-           <div className="pt-3">
+          {/* COLUMN 1 - TAGLINE */}
+          <motion.div className="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12" variants={columnItem}>
+           <div className={styles.taglineWrapper}>
              <p className={styles.tagline}>
                 Hatha Yog Ashram, founded in 2017 in Rishikesh, India, is one of the most trusted yoga teacher training schools.
                 We offer traditional Hatha, Ashtanga, Kundalini, Meditation and Pranayama practices rooted in ancient yogic wisdom.
               </p>
            </div>
           </motion.div>
-          {/* COLUMN 1 - QUICK LINKS */}
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+          
+          {/* COLUMN 2 - QUICK LINKS */}
+          <motion.div className="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12" variants={columnItem}>
             <h5 className={styles.title}>Quick Links</h5>
             <ul className={styles.list}>
               <li><Link to="/">Home</Link></li>
@@ -82,11 +84,8 @@ const Footer = () => {
             </ul>
           </motion.div>
           
-           {/* <motion.div className="col-md-1 col-sm-6" variants={columnItem}>
-   
-          </motion.div> */}
-             {/* COLUMN 3 - KUNDALINI COURSES */}
-          <motion.div className="col-md-1 col-sm-6" variants={columnItem}>
+          {/* COLUMN 3 - KUNDALINI COURSES */}
+          <motion.div className="col-xl-1 col-lg-2 col-md-6 col-sm-6 col-12" variants={columnItem}>
             <h5 className={styles.title}>Kundalini Yoga</h5>
             <ul className={styles.list}>
               <li><Link to="/kundalini-100">100 Hour</Link></li>
@@ -95,29 +94,30 @@ const Footer = () => {
             </ul>
           </motion.div>
          
-          {/* COLUMN 2 - YOGA COURSES */}
-          <motion.div className="col-md-3 col-sm-6" variants={columnItem}>
+          {/* COLUMN 4 - YOGA COURSES WITH LOGO */}
+          <motion.div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12" variants={columnItem}>
             <div className={styles.Display}>
               <div className={styles.topSection}>
-              <div className={styles.logoContainer}>
-                <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
+                <div className={styles.logoContainer}>
+                  <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
+                </div>
+              </div>
+              <div className={styles.coursesSection}>
+                <h5 className={styles.title}>Yoga Courses</h5>
+                <ul className={styles.list}>
+                  <li><Link to="/YinYoga">Yin Yoga</Link></li>
+                  <li><Link to="/vedic-mantra">Vedic Mantra</Link></li>
+                  <li><Link to="/YogaCourse100">100 Hour TTC</Link></li>
+                  <li><Link to="/YogaCourse200">200 Hour TTC</Link></li>
+                  <li><Link to="/YogaCourse300">300 Hour TTC</Link></li>
+                  <li><Link to="/YogaCourse500">500 Hour TTC</Link></li>
+                </ul>
               </div>
             </div>
-            <div>
-              <h5 className={styles.title}>Yoga Courses</h5>
-            <ul className={styles.list}>
-              <li><Link to="/YinYoga">Yin Yoga</Link></li>
-              <li><Link to="/vedic-mantra">Vedic Mantra</Link></li>
-              <li><Link to="/YogaCourse100">100 Hour TTC</Link></li>
-              <li><Link to="/YogaCourse200">200 Hour TTC</Link></li>
-              <li><Link to="/YogaCourse300">300 Hour TTC</Link></li>
-              <li><Link to="/YogaCourse500">500 Hour TTC</Link></li>
-            </ul>
-            </div>
-            </div>
           </motion.div>
-          {/* COLUMN 4 - YOGA RETREATS */}
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+
+          {/* COLUMN 5 - YOGA RETREATS */}
+          <motion.div className="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12" variants={columnItem}>
             <h5 className={styles.title}>Yoga Retreats</h5>
             <ul className={styles.list}>
               <li><Link to="/meditation-retreat">Yoga Retreat</Link></li>
@@ -128,7 +128,7 @@ const Footer = () => {
           </motion.div>         
 
           {/* COLUMN 6 - CONTACT INFO */}
-          <motion.div className="col-md-2 col-sm-6" variants={columnItem}>
+          <motion.div className="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12" variants={columnItem}>
             <h5 className={styles.title}>Contact</h5>
             <ul className={styles.contact}>
               <li>
@@ -148,45 +148,47 @@ const Footer = () => {
                 <span>7AM – 7PM</span>
               </li>
             </ul>
-             {/* Social Media */}
-              <div className={styles.socials}>
-                <motion.a
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://www.facebook.com/profile.php?id=100095297992781"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <FaFacebookF />
-                </motion.a>
+            
+            {/* Social Media */}
+            <div className={styles.socials}>
+              <motion.a
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.facebook.com/profile.php?id=100095297992781"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebookF />
+              </motion.a>
 
-                <motion.a
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://www.instagram.com/hathayogashram/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <FaInstagram />
-                </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.instagram.com/hathayogashram/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </motion.a>
 
-                <motion.a
-                  whileHover={{ scale: 1.15, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                >
-                  <FaYoutube />
-                </motion.a>
-              </div>
+              <motion.a
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </motion.a>
+            </div>
           </motion.div>
          
         </motion.div>
-         {/* DIVIDER */}
+
+        {/* DIVIDER */}
         <div className={styles.divider}></div>
 
         {/* KEYWORDS */}

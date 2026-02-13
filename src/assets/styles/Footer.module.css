@@ -1,3 +1,7 @@
+/* ================================================= */
+/* ================= BASE STYLES =================== */
+/* ================================================= */
+
 .footer {
   position: relative;
   background-image: url("../images/footer2.png");
@@ -6,13 +10,9 @@
   background-position: center;
   color: #000;
   overflow: hidden;
-  padding: 50px 80px;
+  padding: 60px 100px;
 }
-.Display{
-      margin-left: 43px;
-    display: flex;
-    gap: 50px;
-}
+
 /* OVERLAY */
 .overlay {
   position: absolute;
@@ -27,10 +27,19 @@
 }
 
 /* ===================== */
-/* TOP SECTION - CENTERED */
+/* DISPLAY CONTAINER */
+/* ===================== */
+.Display {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* ===================== */
+/* TOP SECTION - LOGO AREA */
 /* ===================== */
 .topSection {
-  text-align: center;
+  flex-shrink: 0;
 }
 
 .logoContainer {
@@ -38,61 +47,35 @@
   position: relative;
 }
 
-/* .logoContainer::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(230, 200, 122, 0.15) 0%, transparent 70%);
-  border-radius: 50%;
-  z-index: -1;
-  animation: pulse 3s ease-in-out infinite;
-} */
-
-@keyframes pulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 0.8;
-  }
-}
-
 .logo {
-  width: 240px;
+  width: 180px;
   height: auto;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
   transition: transform 0.3s ease;
-  margin-top:-30px;
+  margin-top: -20px;
 }
 
 .logo:hover {
   transform: scale(1.05);
 }
 
+/* COURSES SECTION */
+.coursesSection {
+  flex: 1;
+}
+
+/* TAGLINE WRAPPER */
+.taglineWrapper {
+  padding-top: 0;
+}
+
 .tagline {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #000;
   margin-bottom: 15px;
   font-family: "Quicksand", sans-serif;
-  line-height: 30px;
-}
-
-.desc {
-  font-size: 16px;
-  line-height: 1.8;
-  opacity: 0.92;
-  margin-bottom: 25px;
-  font-family: "Quicksand", sans-serif;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 28px;
 }
 
 /* ===================== */
@@ -101,7 +84,6 @@
 .socials {
   display: flex;
   gap: 16px;
-  /* justify-content: center; */
   margin-top: 25px;
 }
 
@@ -131,8 +113,8 @@
 /* ===================== */
 .divider {
   height: 2px;
-  background:#bd0005;
-  margin: 50px auto 50px;
+  background: #bd0005;
+  margin: 50px auto;
   max-width: 80%;
   opacity: 0.5;
 }
@@ -141,7 +123,7 @@
 /* TITLES */
 /* ===================== */
 .title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 20px;
   position: relative;
@@ -180,7 +162,7 @@
 }
 
 .list li a {
-  font-size: 18px;
+  font-size: 16px;
   opacity: 0.88;
   transition: all 0.3s ease;
   font-weight: 600;
@@ -224,8 +206,8 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  font-size: 18px;
-  color:#000;
+  font-size: 16px;
+  color: #000;
   font-weight: 600;
   margin-bottom: 14px;
   line-height: 1.6;
@@ -302,48 +284,166 @@
 /* ================= RESPONSIVE ==================== */
 /* ================================================= */
 
-/* EXTRA LARGE DESKTOP (1400px and above) */
-@media (min-width: 1400px) {
+/* ULTRA WIDE (1920px and above) */
+@media (min-width: 1920px) {
+  .footer {
+    padding: 80px 150px;
+  }
+  
+  .Display {
+    gap: 60px;
+  }
+  
   .logo {
-    width: 150px;
+    width: 200px;
   }
   
   .tagline {
     font-size: 18px;
+    line-height: 32px;
   }
   
-  .desc {
+  .title {
+    font-size: 22px;
+  }
+  
+  .list li a {
     font-size: 17px;
+  }
+  
+  .contact li {
+    font-size: 17px;
+  }
+  
+  .keywords span {
+    font-size: 15px;
+    padding: 10px 20px;
   }
 }
 
-/* LARGE DESKTOP (1200px - 1399px) */
-@media (max-width: 1399px) {
+/* EXTRA LARGE DESKTOP (1600px - 1919px) */
+@media (max-width: 1919px) and (min-width: 1600px) {
+  .footer {
+    padding: 70px 120px;
+  }
   
-  .logoContainer::before {
-    width: 260px;
-    height: 260px;
+  .Display {
+    gap: 55px;
+  }
+  
+  .logo {
+    width: 190px;
+  }
+  
+  .tagline {
+    font-size: 17px;
+    line-height: 30px;
+  }
+  
+  .title {
+    font-size: 21px;
+  }
+  
+  .list li a {
+    font-size: 16px;
+  }
+  
+  .contact li {
+    font-size: 16px;
+  }
+}
+
+/* LARGE DESKTOP (1400px - 1599px) */
+@media (max-width: 1599px) and (min-width: 1400px) {
+  .footer {
+    padding: 60px 100px;
+  }
+  
+  .Display {
+    gap: 50px;
+  }
+  
+  .logo {
+    width: 180px;
+  }
+  
+  .tagline {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .list li a {
+    font-size: 16px;
+  }
+  
+  .contact li {
+    font-size: 16px;
+  }
+}
+
+/* STANDARD DESKTOP (1200px - 1399px) */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .footer {
+    padding: 55px 80px;
+  }
+  
+  .Display {
+    gap: 45px;
+  }
+  
+  .logo {
+    width: 170px;
+  }
+  
+  .tagline {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  
+  .title {
+    font-size: 19px;
+  }
+  
+  .list li a {
+    font-size: 15px;
+  }
+  
+  .contact li {
+    font-size: 15px;
+  }
+  
+  .keywords span {
+    font-size: 13px;
+    padding: 7px 16px;
   }
 }
 
 /* LAPTOP (992px - 1199px) */
-@media (max-width: 1199px) {
+@media (max-width: 1199px) and (min-width: 992px) {
+  .footer {
+    padding: 50px 60px;
+  }
   
-  .logoContainer::before {
-    width: 240px;
-    height: 240px;
+  .Display {
+    gap: 40px;
+  }
+  
+  .logo {
+    width: 160px;
+    margin-top: -15px;
   }
   
   .tagline {
-    font-size: 20px;
-  }
-  
-  .desc {
     font-size: 15px;
+    line-height: 26px;
   }
   
   .title {
-    font-size: 17px;
+    font-size: 18px;
   }
   
   .list li a {
@@ -353,27 +453,95 @@
   .contact li {
     font-size: 14px;
   }
+  
+  .contact .icon {
+    font-size: 15px;
+  }
+  
+  .socials a {
+    width: 43px;
+    height: 43px;
+    font-size: 17px;
+  }
+  
+  .divider {
+    margin: 45px auto;
+  }
+  
+  .keywords {
+    margin-top: 50px;
+  }
+  
+  .keywords span {
+    font-size: 13px;
+    padding: 7px 16px;
+  }
 }
 
 /* TABLET (768px - 991px) */
-@media (max-width: 991px) {
-  .topSection {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
+@media (max-width: 991px) and (min-width: 768px) {
+  .footer {
+    padding: 45px 40px;
   }
   
-  .logoContainer::before {
-    width: 220px;
-    height: 220px;
+  .Display {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topSection {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 150px;
+    margin-top: -10px;
   }
   
   .tagline {
-    font-size: 19px;
+    font-size: 14px;
+    line-height: 24px;
   }
   
-  .desc {
+  .title {
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .list {
+    text-align: center;
+  }
+  
+  .list li a {
     font-size: 14px;
-    padding: 0 15px;
+  }
+  
+  .list li a::before {
+    display: none;
+  }
+  
+  .list li a:hover {
+    transform: translateX(0);
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact li {
+    font-size: 14px;
+    justify-content: center;
+  }
+  
+  .socials {
+    justify-content: center;
   }
   
   .socials a {
@@ -383,69 +551,53 @@
   }
   
   .divider {
-    margin: 30px auto 40px;
-  }
-  
-  .title {
-    font-size: 16px;
-  }
-  
-  .list li a {
-    font-size: 14px;
-  }
-  
-  .contact li {
-    font-size: 14px;
+    margin: 40px auto;
   }
   
   .keywords {
-    margin-top: 50px;
+    margin-top: 45px;
+  }
+  
+  .keywords span {
+    font-size: 12px;
+    padding: 6px 14px;
   }
 }
 
 /* MOBILE LARGE (576px - 767px) */
-@media (max-width: 767px) {
-  /* .topSection {
-    margin-bottom: 35px;
-    padding-bottom: 25px;
-  }
-   */
-  .logo {
-    width: 160px;
+@media (max-width: 767px) and (min-width: 576px) {
+  .footer {
+    padding: 40px 30px;
   }
   
-  .logoContainer::before {
-    width: 200px;
-    height: 200px;
+  .Display {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topSection {
+    margin-bottom: 15px;
+  }
+  
+  .logo {
+    width: 140px;
+    margin-top: -10px;
+  }
+  
+  .taglineWrapper {
+    padding-top: 0;
   }
   
   .tagline {
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 24px;
     margin-bottom: 12px;
   }
   
-  .desc {
-    font-size: 13px;
-    line-height: 1.7;
-  }
-  
-  .socials {
-    gap: 14px;
-  }
-  
-  .socials a {
-    width: 40px;
-    height: 40px;
-    font-size: 16px;
-  }
-  
-  .divider {
-    margin: 25px auto 35px;
-    max-width: 90%;
-  }
-  
   .title {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 18px;
     text-align: center;
   }
@@ -457,6 +609,10 @@
   
   .list {
     text-align: center;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
   }
   
   .list li a {
@@ -478,6 +634,27 @@
   .contact li {
     font-size: 13px;
     justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .contact .icon {
+    font-size: 15px;
+  }
+  
+  .socials {
+    justify-content: center;
+    gap: 14px;
+  }
+  
+  .socials a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .divider {
+    margin: 35px auto;
+    max-width: 90%;
   }
   
   .keywords {
@@ -501,53 +678,81 @@
 }
 
 /* MOBILE MEDIUM (480px - 575px) */
-@media (max-width: 575px) {
-  .logo {
-    width: 140px;
+@media (max-width: 575px) and (min-width: 480px) {
+  .footer {
+    padding: 35px 25px;
   }
   
-  .logoContainer::before {
-    width: 180px;
-    height: 180px;
+  .Display {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
   }
   
-  .tagline {
-    font-size: 17px;
-  }
-  
-  .desc {
-    font-size: 12px;
-  }
-}
-
-/* MOBILE SMALL (Below 480px) */
-@media (max-width: 479px) {
   .topSection {
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   .logo {
     width: 130px;
-  }
-  
-  .logoContainer::before {
-    width: 160px;
-    height: 160px;
+    margin-top: -8px;
   }
   
   .tagline {
-    font-size: 16px;
+    font-size: 13px;
+    line-height: 22px;
     margin-bottom: 10px;
   }
   
-  .desc {
-    font-size: 11px;
-    line-height: 1.6;
-    padding: 0 10px;
+  .title {
+    font-size: 15px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+  }
+  
+  .list {
+    text-align: center;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+  }
+  
+  .list li a {
+    font-size: 13px;
+  }
+  
+  .list li a::before {
+    display: none;
+  }
+  
+  .list li a:hover {
+    transform: translateX(0);
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact li {
+    font-size: 13px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .contact .icon {
+    font-size: 14px;
   }
   
   .socials {
+    justify-content: center;
     gap: 12px;
   }
   
@@ -558,34 +763,8 @@
   }
   
   .divider {
-    margin: 20px auto 30px;
-  }
-  
-  .title {
-    font-size: 14px;
-    margin-bottom: 15px;
-  }
-  
-  .title::after {
-    width: 40px;
-    height: 2px;
-  }
-  
-  .list li {
-    margin-bottom: 10px;
-  }
-  
-  .list li a {
-    font-size: 12px;
-  }
-  
-  .contact li {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-  
-  .contact .icon {
-    font-size: 14px;
+    margin: 30px auto;
+    max-width: 90%;
   }
   
   .keywords {
@@ -608,23 +787,197 @@
   }
 }
 
-/* EXTRA SMALL MOBILE (Below 360px) */
-@media (max-width: 359px) {
-  .logo {
-    width: 110px;
+/* MOBILE SMALL (420px - 479px) */
+@media (max-width: 479px) and (min-width: 420px) {
+  .footer {
+    padding: 30px 20px;
   }
   
-  .logoContainer::before {
-    width: 140px;
-    height: 140px;
+  .Display {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topSection {
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-top: -5px;
   }
   
   .tagline {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+  }
+  
+  .list {
+    text-align: center;
+  }
+  
+  .list li {
+    margin-bottom: 10px;
+  }
+  
+  .list li a {
+    font-size: 12px;
+  }
+  
+  .list li a::before {
+    display: none;
+  }
+  
+  .list li a:hover {
+    transform: translateX(0);
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact li {
+    font-size: 12px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  .contact .icon {
+    font-size: 14px;
+  }
+  
+  .socials {
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  
+  .socials a {
+    width: 38px;
+    height: 38px;
     font-size: 15px;
   }
   
-  .desc {
-    font-size: 10px;
+  .divider {
+    margin: 25px auto;
+    max-width: 90%;
+  }
+  
+  .keywords {
+    margin-top: 30px;
+    gap: 8px;
+  }
+  
+  .keywords span {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+  
+  .bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+  }
+  
+  .bottom p {
+    font-size: 11px;
+  }
+}
+
+/* MOBILE EXTRA SMALL (360px - 419px) */
+@media (max-width: 419px) and (min-width: 360px) {
+  .footer {
+    padding: 25px 15px;
+  }
+  
+  .Display {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topSection {
+    margin-bottom: 8px;
+  }
+  
+  .logo {
+    width: 110px;
+    margin-top: -5px;
+  }
+  
+  .tagline {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .title {
+    font-size: 13px;
+    margin-bottom: 14px;
+    text-align: center;
+  }
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 2px;
+  }
+  
+  .list {
+    text-align: center;
+  }
+  
+  .list li {
+    margin-bottom: 8px;
+  }
+  
+  .list li a {
+    font-size: 12px;
+  }
+  
+  .list li a::before {
+    display: none;
+  }
+  
+  .list li a:hover {
+    transform: translateX(0);
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact li {
+    font-size: 12px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact .icon {
+    font-size: 13px;
+  }
+  
+  .socials {
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
   }
   
   .socials a {
@@ -633,8 +986,15 @@
     font-size: 14px;
   }
   
-  .title {
-    font-size: 13px;
+  .divider {
+    margin: 20px auto;
+    max-width: 90%;
+    height: 1.5px;
+  }
+  
+  .keywords {
+    margin-top: 25px;
+    gap: 6px;
   }
   
   .keywords span {
@@ -642,7 +1002,127 @@
     padding: 4px 10px;
   }
   
+  .bottom {
+    margin-top: 25px;
+    padding-top: 15px;
+  }
+  
   .bottom p {
     font-size: 10px;
+    line-height: 1.5;
+  }
+}
+
+/* MOBILE MINIMUM (Below 360px) */
+@media (max-width: 359px) {
+  .footer {
+    padding: 20px 12px;
+  }
+  
+  .Display {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .topSection {
+    margin-bottom: 5px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-top: 0;
+  }
+  
+  .tagline {
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .title {
+    font-size: 12px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+  }
+  
+  .list {
+    text-align: center;
+  }
+  
+  .list li {
+    margin-bottom: 8px;
+  }
+  
+  .list li a {
+    font-size: 11px;
+  }
+  
+  .list li a::before {
+    display: none;
+  }
+  
+  .list li a:hover {
+    transform: translateX(0);
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact li {
+    font-size: 11px;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .contact .icon {
+    font-size: 12px;
+  }
+  
+  .socials {
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+  }
+  
+  .socials a {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+  
+  .divider {
+    margin: 18px auto;
+    max-width: 90%;
+    height: 1.5px;
+  }
+  
+  .keywords {
+    margin-top: 20px;
+    gap: 5px;
+  }
+  
+  .keywords span {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+  
+  .bottom {
+    margin-top: 20px;
+    padding-top: 12px;
+  }
+  
+  .bottom p {
+    font-size: 9px;
+    line-height: 1.4;
   }
 }
