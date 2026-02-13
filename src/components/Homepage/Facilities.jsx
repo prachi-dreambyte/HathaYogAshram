@@ -3,6 +3,9 @@ import styles from "../../assets/styles/Homepage/Facilities.module.css";
 import Ganga from "../../assets/images/download.jpg";
 import Him from "../../assets/images/download1.jpg";
 import Filter from "../../assets/images/download2.jpg";
+import International from '../../assets/images/international.webp';
+import Study from "../../assets/images/study.webp";
+import Nutritious from "../../assets/images/Nutritious.webp";
 
 const FacilitiesDesign4 = () => {
   const [selectedFacility, setSelectedFacility] = useState(null);
@@ -13,7 +16,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600",
       text: `We provide complete transportation assistance to ensure a smooth and stress-free arrival for our students. For those without a direct flight to Dehradun, we arrange comfortable pickups from Dehradun Airport, Haridwar Railway Station, or even Delhi upon request.`,
       fullDescription: `Our comprehensive transportation service ensures that your journey to our yoga school is as peaceful as your practice will be. We understand that travel can be stressful, especially when arriving in a new country or region. That's why we offer door-to-door pickup services from major transport hubs including Jolly Grant Airport (Dehradun), Haridwar Railway Station, and even Indira Gandhi International Airport in Delhi for international students. Our experienced drivers are familiar with the mountain roads and will ensure your safe arrival. We also provide departure transfers and can arrange special transportation for weekend excursions. All our vehicles are well-maintained, air-conditioned, and equipped for comfortable mountain travel.`,
-      icon: "🚗",
+    
       modalImage: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800"
     },
     {
@@ -21,7 +24,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=600",
       text: `Our yoga library is a calm and inspiring space designed to deepen your learning experience. It is thoughtfully stocked with a wide collection of books covering Yoga Asanas, Pranayama, Meditation, Yoga Philosophy, Anatomy, and ancient yogic texts.`,
       fullDescription: `Step into our serene library, a sanctuary of wisdom housing over 500 carefully curated books and resources on yoga, meditation, Ayurveda, and Eastern philosophy. The collection includes rare translations of ancient Sanskrit texts like the Yoga Sutras of Patanjali, Bhagavad Gita, Hatha Yog Pradipika, and Upanishads. You'll find comprehensive guides on asana practice, pranayama techniques, meditation methods, and yoga anatomy. Modern research papers and journals on yoga therapy and neuroscience are also available. The library features comfortable reading nooks with natural lighting, making it an ideal space for self-study, research, or quiet contemplation. We also maintain a digital library with online subscriptions to international yoga journals.`,
-      icon: "📚",
+      
       modalImage: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800"
     },
     // {
@@ -37,7 +40,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
       text: `Our school serves freshly prepared Satvik vegetarian meals that support a yogic lifestyle and holistic well-being. Every dish is prepared with pure, organic ingredients to enhance mental clarity and spiritual practice.`,
       fullDescription: `Nourish your body and soul with our thoughtfully prepared Satvik cuisine, designed to complement your yoga practice and promote inner peace. All meals are 100% vegetarian, prepared with organic ingredients sourced from local farmers and our own herb garden. We follow traditional Satvik principles, avoiding onion, garlic, and processed foods, while emphasizing fresh vegetables, whole grains, lentils, nuts, fruits, and aromatic herbs like turmeric, cumin, and coriander. Our experienced cooks prepare three delicious meals daily: energizing breakfast with fresh fruits, overnight oats, and herbal teas; wholesome lunch featuring dal, sabzi, roti, and rice; light dinner with soups, salads, and steamed vegetables. Special dietary requirements including vegan, gluten-free, and allergies are accommodated with advance notice. The dining hall overlooks the mountains, creating a peaceful atmosphere for mindful eating.`,
-      icon: "🍽️",
+     
       modalImage: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800"
     },
     {
@@ -45,7 +48,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600",
       text: `Our reception desk is available 24/7 to assist students throughout their stay and ensure a peaceful experience. Whether you need medical assistance or have questions, our dedicated team is always ready to support you.`,
       fullDescription: `Your comfort and safety are our top priorities. Our multilingual reception team is available around the clock to assist with any needs or concerns. From the moment you arrive until your departure, we provide comprehensive support services. Need a doctor? We have partnerships with reputable clinics and can arrange immediate medical consultations. Having trouble adjusting to the altitude or food? Our staff can provide remedies and recommendations. Want to extend your stay or book additional workshops? We'll handle all arrangements. Lost something or need laundry service? Just let us know. We also offer travel assistance for onward journeys, currency exchange information, and local SIM card setup. Emergency contact numbers are provided to all students. Our team includes experienced yoga practitioners who understand the physical and emotional journey you're on and can offer guidance when needed.`,
-      icon: "🏨",
+     
       modalImage: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800"
     },
     {
@@ -53,7 +56,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600",
       text: `Practice in our spacious, naturally-lit yoga shalas designed according to Vastu principles. The halls feature traditional wooden floors, high ceilings, and panoramic mountain views to enhance your practice.`,
       fullDescription: `Our state-of-the-art yoga shalas are architectural marvels designed to create the perfect environment for practice and transformation. The main hall spans 3,000 square feet with soaring 20-foot ceilings that create an expansive, uplifting atmosphere. Floor-to-ceiling windows on three sides flood the space with natural light and offer breathtaking views of the Himalayas and Ganges valley. Traditional teak wood flooring provides the ideal surface for asana practice, while the acoustics are optimized for chanting and mantra meditation. We maintain separate shalas for different practice styles: a heated room for hot yoga, a meditation hall with cushioned seating, and an outdoor platform for sunrise sessions. All spaces are equipped with props including mats, blocks, bolsters, straps, and blankets. Air purification systems ensure clean air, while the layout follows Vastu Shastra principles to optimize energy flow.`,
-      icon: "🧘",
+      
       modalImage: "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800"
     },
     {
@@ -61,7 +64,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600",
       text: `Find inner peace in our beautifully landscaped meditation garden featuring lotus ponds, sacred trees, and dedicated spaces for silent contemplation and walking meditation.`,
       fullDescription: `Our meditation garden is an oasis of tranquility spanning over one acre of meticulously maintained grounds. Winding stone pathways lead through areas designed for different meditation practices. The central lotus pond, home to blooming pink and white lotuses, serves as a focal point for contemplation. Ancient Bodhi trees and fragrant flowering plants create natural sanctuaries for seated meditation. We've designated specific areas for walking meditation with circular labyrinth patterns and straight pathways lined with prayer flags. Comfortable seating areas with shade structures allow for journaling and reflection. The garden includes a rock garden inspired by Japanese Zen aesthetics, perfect for mindfulness practice. Bird feeders and butterfly plants attract wildlife, adding to the natural symphony. Early morning sessions in the garden, when mist rises from the valley and birds begin their songs, offer particularly profound experiences. Evening hours bring cooling breezes and the chance to meditate under the stars.`,
-      icon: "🌸",
+     
       modalImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
     },
     {
@@ -69,7 +72,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600",
       text: `Rejuvenate with authentic Ayurvedic treatments including Abhyanga massage, Shirodhara, and Panchakarma therapies administered by certified Ayurvedic practitioners.`,
       fullDescription: `Our authentic Ayurveda spa brings the ancient healing science to life through traditional treatments that complement your yoga practice. Certified Ayurvedic doctors conduct personalized consultations to determine your dosha (constitution) and recommend customized treatment plans. Experience Abhyanga, the traditional oil massage using warm medicated oils to balance doshas and release toxins. Shirodhara, where warm oil flows continuously over the forehead, calms the nervous system and enhances mental clarity. For deeper detoxification, we offer Panchakarma programs ranging from 7 to 21 days. Other treatments include Kati Basti for back pain, Nasya for sinus issues, and therapeutic steam baths. Our spa uses only organic, traditionally prepared herbal oils and formulations. Treatment rooms are designed for complete relaxation with soft lighting, soothing music, and aromatic herbs. We also offer Ayurvedic consultations for dietary and lifestyle recommendations to maintain balance after your course.`,
-      icon: "💆",
+     
       modalImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800"
     },
     {
@@ -77,7 +80,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600",
       text: `Access quality yoga equipment and authentic spiritual items in our well-stocked store. Purchase mats, blocks, meditation cushions, mala beads, books, and traditional Indian clothing.`,
       fullDescription: `Our on-campus yoga boutique offers everything you need for your practice and spiritual journey. We stock premium eco-friendly yoga mats from brands like Manduka and Jade, available in various thicknesses and materials. Choose from cork blocks, foam blocks, cotton straps, and supportive bolsters in beautiful colors. For meditation, we offer zafu cushions, zabuton mats, and meditation benches. Our spiritual items section features authentic rudraksha and gemstone mala beads, singing bowls, incense, essential oils, and crystals. The clothing section includes comfortable yoga wear, traditional kurtas, meditation shawls, and locally-made hemp clothing. We carry an extensive collection of books on yoga, meditation, Ayurveda, and Indian philosophy, including many titles not easily found elsewhere. All proceeds support the school and local artisan communities. Special student discounts available, and we can arrange international shipping for larger purchases.`,
-      icon: "🛍️",
+     
       modalImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800"
     },
     {
@@ -85,7 +88,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=600",
       text: `Immerse yourself in Indian culture through workshops on kirtan, classical music, Hindi language, traditional cooking, and sacred arts to deepen your understanding of yoga's roots.`,
       fullDescription: `Expand your cultural horizons through our diverse workshop offerings that illuminate yoga's rich cultural context. Join evening kirtan sessions where you'll learn devotional chanting and play traditional instruments like harmonium and tabla. Our Hindi language classes help you understand Sanskrit terms and communicate with locals. Learn to cook authentic Indian dishes in hands-on classes where you'll prepare dal, chapati, and regional specialties. Sacred arts workshops teach kolam (rangoli) floor designs, mandala painting, and henna application. Philosophy seminars delve deep into texts like the Bhagavad Gita with scholarly teachers. Classical Indian music appreciation classes introduce ragas and their connection to yoga and meditation. We also offer workshops on Vedic astrology, vastu shastra, and mudra hand gestures. Special guest teachers regularly visit to share expertise in various aspects of Indian spirituality and culture. These workshops, mostly complimentary or low-cost, occur several times weekly and greatly enrich the immersive experience.`,
-      icon: "🎵",
+      
       modalImage: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800"
     },
     {
@@ -93,7 +96,7 @@ const FacilitiesDesign4 = () => {
       image: Filter,
       text: `Stay hydrated with our advanced multi-stage water purification system providing unlimited clean drinking water throughout the campus, reducing plastic waste and ensuring your health.`,
       fullDescription: `Access to pure, safe drinking water is fundamental to your wellbeing during your stay. Our campus-wide water purification system features advanced multi-stage filtration including sediment filters, activated carbon, UV sterilization, and reverse osmosis. Water stations are conveniently located in each building, yoga hall, and accommodation area, providing unlimited fresh, cold, and room-temperature water 24/7. We encourage all students to bring reusable water bottles (also available in our store) as part of our commitment to environmental sustainability. Our system eliminates the need for plastic bottles, preventing thousands of bottles from entering the waste stream annually. Regular testing by certified laboratories ensures water quality meets international standards. The mineral-balanced water supports your practice, especially important as you adjust to the climate and physical demands of intensive yoga training. Hot water for herbal teas is available in the dining area and common spaces.`,
-      icon: "💧",
+     
       modalImage: Filter,
     },
     {
@@ -101,7 +104,7 @@ const FacilitiesDesign4 = () => {
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600",
       text: `Stay connected with high-speed WiFi throughout campus. Quiet study areas and common lounges provide comfortable spaces for homework, online research, and staying in touch with loved ones.`,
       fullDescription: `While we encourage digital detox during your yoga journey, we understand the need to stay connected. High-speed fiber-optic WiFi covers the entire campus including all accommodation areas, yoga halls, dining areas, and outdoor spaces. The connection is reliable enough for video calls, streaming yoga tutorials, and uploading photos to share your experience. We've created dedicated study zones with comfortable seating, good lighting, and electrical outlets for completing course assignments, researching yoga topics, and online learning. The main common lounge features sofas, coffee tables, and a relaxed atmosphere perfect for socializing or quiet work. Each study area maintains a respectful noise level policy to ensure everyone can focus. We also have a computer station with printing services for students who need to print certificates, assignments, or travel documents. While devices are discouraged during training hours to maintain presence and focus, you're welcome to use technology during free time to document your journey, connect with family, or continue your learning beyond the mat.`,
-      icon: "📶",
+     
       modalImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"
     },
     {
@@ -109,31 +112,31 @@ const FacilitiesDesign4 = () => {
   image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600",
   text: `Clean and hygienic private or shared accommodation with peaceful Himalayan surroundings in Rishikesh.`,
   fullDescription: `We provide comfortable and hygienic accommodation for the entire 24 days training program. Students can choose between private or shared rooms based on their preference. Each room includes clean bedding, blankets, pillows, attached bathroom with hot water, and access to purified drinking water. The peaceful Himalayan environment helps students focus deeply on their yoga journey and inner transformation.`,
-  icon: "🏠",
+ 
   modalImage: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800"
 },
 {
   title: "Nutritious Yogic Meals",
-  image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600",
+  image: Nutritious,
   text: `3 healthy vegetarian meals daily to support your yoga practice and overall well-being.`,
   fullDescription: `We provide three freshly prepared vegetarian meals every day. Our yogic meals are sattvic, balanced, and designed to nourish the body and mind. Meals are prepared in a clean and hygienic kitchen using fresh ingredients. Herbal tea and purified drinking water are also available throughout the day to keep you energized during your training.`,
-  icon: "🍲",
-  modalImage: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800"
+ 
+  modalImage: Nutritious,
 },
 {
   title: "Study Materials & Kit",
-  image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=600",
+  image: Study,
   text: `Complete learning kit including books, Shatkarma pot, T-shirt, and yoga bag.`,
   fullDescription: `All students receive complete study materials for the 24 days training. The kit includes yoga books, printed study materials, a Shatkarma pot for cleansing practices, a training T-shirt, and a yoga bag. These resources help students understand both the practical and theoretical aspects of yoga in a structured way.`,
-  icon: "📚",
-  modalImage: "https://images.unsplash.com/photo-1513258496099-48168024aec0?w=800"
+ 
+  modalImage: Study,
 },
 {
   title: "24 Days Intensive Training",
   image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=600",
   text: `Comprehensive 24 days Yoga Teacher Training program in the heart of Rishikesh.`,
   fullDescription: `Our 24 Days Yoga Teacher Training is designed to build a strong foundation in asana, pranayama, meditation, yoga philosophy, anatomy, and teaching methodology. The structured schedule ensures disciplined practice while allowing personal growth and self-discovery in the spiritual capital of yoga, Rishikesh.`,
-  icon: "🧘",
+ 
   modalImage: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800"
 },
 {
@@ -141,7 +144,7 @@ const FacilitiesDesign4 = () => {
   image: Him,
   text: `Explore the beauty of Rishikesh and the Himalayas during your training.`,
   fullDescription: `As part of the program, students enjoy guided excursions around Rishikesh and the Himalayan region. These may include visits to waterfalls, temples, mountain viewpoints, and spiritual landmarks. The excursions offer relaxation, cultural experience, and a deeper connection with nature.`,
-  icon: "🏔️",
+ 
   modalImage: Him,
 },
 {
@@ -149,15 +152,15 @@ const FacilitiesDesign4 = () => {
   image: Ganga,
   text: `Experience the sacred and spiritual Ganga Aarti ceremony in Rishikesh.`,
   fullDescription: `Students participate in the beautiful and spiritual Ganga Aarti ceremony held on the banks of the holy River Ganga. This evening ritual includes devotional chanting, fire offerings, and meditation. It is a deeply transformative and peaceful experience that connects students to the spiritual essence of Rishikesh.`,
-  icon: "🔥",
+ 
   modalImage:  Ganga,
 },
 {
   title: "International Certification",
-  image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600",
+  image: International,
   text: `Receive internationally recognized RYS 200 certification from Yoga Alliance USA.`,
   fullDescription: `After successfully completing the 24 Days Yoga Teacher Training, students receive the RYS 200 certification accredited by Yoga Alliance USA. This internationally recognized certificate allows graduates to teach yoga professionally anywhere in the world.`,
-  icon: "🎓",
+ 
   modalImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800"
 }
 

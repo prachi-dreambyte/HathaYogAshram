@@ -41,7 +41,7 @@
 /* INFO CARDS - NEW MODERN DESIGN */
 .infoGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   margin-bottom: 50px;
   padding: 0 20px;
@@ -50,14 +50,14 @@
 
 .infoCard {
   position: relative;
-  padding: 35px 25px;
+  padding: 70px 30px;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 8px 25px rgba(189, 0, 5, 0.15);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  border: 1px sollid #bd0005
+  border: 1px solid #bd0005;
 }
 
 .infoCard::before {
@@ -116,13 +116,13 @@
 }
 
 .cardIcon {
-  font-size: 36px;
+  font-size: 70px;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .cardText {
   color: #bd0005;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
   text-align: center;

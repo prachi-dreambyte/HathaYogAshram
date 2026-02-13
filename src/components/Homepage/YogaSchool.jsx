@@ -8,6 +8,8 @@ import yoga2 from '../../assets/images/about-vys2.jpg';
 import yoga3 from '../../assets/images/about-vys2.jpg';
 import yoga4 from '../../assets/images/about-vys1.jpg';
 import { useNavigate } from 'react-router-dom';
+import { FaCrown, FaAward } from "react-icons/fa";
+import { GiLotus } from "react-icons/gi";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -56,10 +58,10 @@ const imageVariant = {
 
 const YogaSchool = () => {
   const infoData = [
-    { icon: '👑', text: "India's No.1 Yoga School in Rishikesh"},
-    { icon: '🎓', text: 'Certified by Yoga Alliance USA' },
-    // { icon: '🧘', text: 'International Yoga Asana Champions' },
-    { icon: '🌍', text: 'Trusted by 13,000+ Students Worldwide' },
+    { icon: <FaCrown />, text: "India's No.1 Yoga School in Rishikesh"},
+    { icon: <FaAward />, text: 'Certified by Yoga Alliance USA' },
+    // { icon: '', text: 'International Yoga Asana Champions' },
+    { icon: <GiLotus />, text: 'Trusted by 13,000+ Students Worldwide' },
   ];
 
   const navigate = useNavigate();

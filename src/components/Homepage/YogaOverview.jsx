@@ -10,7 +10,13 @@ import teachingIcon from '../../assets/images/icons/icon5.webp';
 import meditationIcon from '../../assets/images/icons/icon6.webp';
 import International from '../../assets/images/international.webp';
 import Ganga from "../../assets/images/download.jpg";
-
+import Mudra from "../../assets/images/Mudra.webp";
+import Anatomy from "../../assets/images/Anatomy.webp";
+import VedantaPhilosophy from "../../assets/images/VedantaPhilosophy.webp";
+import YogaNidra from "../../assets/images/YogaNidra.jpg";
+import BodyAsana from "../../assets/images/Body&Asana.webp";
+import Shatkarma from "../../assets/images/Shatkarma.webp";
+import TeachingMethodology from "../../assets/images/TeachingMethodology.webp";
 const items = [
   {
     key: 'hatha',
@@ -57,7 +63,7 @@ const items = [
     title: 'Anatomy & Physiology',
     icon: meditationIcon,
     number: '06',
-    Image: 'https://images.unsplash.com/photo-1530822847156-5df684ec5ee1?w=800&q=80',
+    Image: Anatomy,
     link: '/Anatomy-Physiology',
   },
   {
@@ -73,7 +79,7 @@ const items = [
     title: 'Body & Asana Alignment',
     icon: pranayamaIcon,
     number: '08',
-    Image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=800&q=80',
+    Image: BodyAsana,
     link: '/Body-Asana-Alignment',
   },
   {
@@ -81,7 +87,7 @@ const items = [
     title: 'Shatkarma (Body cleansing Detox)',
     icon: anatomyIcon,
     number: '09',
-    Image: 'https://images.unsplash.com/photo-1603988492906-4fb0fb251cf0?w=800&q=80',
+    Image: Shatkarma,
     link: '/shatkarma',
   },
   {
@@ -89,7 +95,7 @@ const items = [
     title: 'Teaching Methodology',
     icon: philosophyIcon,
     number: '10',
-    Image: 'https://images.unsplash.com/photo-1593810450967-f9c42742e326?w=800&q=80',
+    Image: TeachingMethodology,
     link: '/Teaching-Methodolog',
   },
   {
@@ -113,7 +119,7 @@ const items = [
     title: 'Yoga Nidra',
     icon: asanaIcon,
     number: '13',
-    Image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80',
+    Image: YogaNidra,
     link: '/Yoga-Nidra',
   },
   {
@@ -129,7 +135,7 @@ const items = [
     title: 'Vedanta Philosophy MahaRishi Patanjali 8 Limbs',
     icon: anatomyIcon,
     number: '15',
-    Image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80',
+    Image: VedantaPhilosophy,
     link: '/Vedanta-Philosophy',
   },
   {
@@ -145,7 +151,7 @@ const items = [
     title: 'Sound Healing Session',
     icon: teachingIcon,
     number: '17',
-    Image: 'https://images.unsplash.com/photo-1545434013-d3641db90732?w=800&q=80',
+    Image: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800&q=80',
     link: '/Sound-Healing-Session',
   },
   {
@@ -185,7 +191,7 @@ const items = [
     title: 'Mudra',
     icon: philosophyIcon,
     number: '22',
-    Image: 'https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800&q=80',
+    Image: Mudra,
     link: '/Mudra',
   },
   {
@@ -223,7 +229,7 @@ const items = [
 ];
 
 const content = {
-  hatha: 'Traditional Hatha Yoga focuses on foundational postures, breath awareness, and stillness, building strength, balance, flexibility, and mindfulness for a stable yoga practice.',
+  hatha: 'Traditional Hatha Yog focuses on foundational postures, breath awareness, and stillness, building strength, balance, flexibility, and mindfulness for a stable yoga practice.',
   ashtanga: 'Ashtanga Yoga is a dynamic and disciplined practice combining breath, movement, and gaze to build stamina, focus, detoxification, and mental clarity.',
   kundalini: 'Kundalini Yoga awakens dormant energy through kriyas, breathwork, mantra, and meditation, enhancing awareness, emotional balance, and inner transformation.',
   props: 'Props Yoga uses tools such as chair, yoga block, strap, wheel, and wall to support alignment, accessibility, deeper awareness, and injury-free practice.',
