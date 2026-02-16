@@ -7,6 +7,7 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import { useNavigate } from 'react-router-dom';
 import BooksSection from 'components/MyBooks/Bookssection';
 import Form500 from './Form500';
+import HowToReach from 'components/Homepage/HowToReach';
 
 export default function YogaCourse500() {
   const navigate = useNavigate();
@@ -700,6 +701,7 @@ export default function YogaCourse500() {
         </div>
       </section>
       <BooksSection />
+      <HowToReach/>
       {/* Final CTA */}
       <section className={styles.finalCta}>
         <div className="container">

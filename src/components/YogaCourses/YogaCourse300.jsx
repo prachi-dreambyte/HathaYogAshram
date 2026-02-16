@@ -7,6 +7,7 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/300hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 import Form300 from './Form300';
+import HowToReach from 'components/Homepage/HowToReach';
 
 export default function YogaCourse300() {
   const navigate = useNavigate();
@@ -867,6 +868,7 @@ export default function YogaCourse300() {
         </div>
       </section>
       <BooksSection />
+      <HowToReach/>
       {/* 12. FINAL CTA */}
       <section className={`${styles.section} ${styles.ctaSection}`}>
         <div className="container text-center">

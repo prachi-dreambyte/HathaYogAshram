@@ -36,7 +36,7 @@ const FacilitiesDesign4 = () => {
     //   modalImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800"
     // },
     {
-      title: "Satvik Food",
+      title: "Satvik Yogic Meals",
       image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600",
       text: `Our school serves freshly prepared Satvik vegetarian meals that support a yogic lifestyle and holistic well-being. Every dish is prepared with pure, organic ingredients to enhance mental clarity and spiritual practice.`,
       fullDescription: `Nourish your body and soul with our thoughtfully prepared Satvik cuisine, designed to complement your yoga practice and promote inner peace. All meals are 100% vegetarian, prepared with organic ingredients sourced from local farmers and our own herb garden. We follow traditional Satvik principles, avoiding onion, garlic, and processed foods, while emphasizing fresh vegetables, whole grains, lentils, nuts, fruits, and aromatic herbs like turmeric, cumin, and coriander. Our experienced cooks prepare three delicious meals daily: energizing breakfast with fresh fruits, overnight oats, and herbal teas; wholesome lunch featuring dal, sabzi, roti, and rice; light dinner with soups, salads, and steamed vegetables. Special dietary requirements including vegan, gluten-free, and allergies are accommodated with advance notice. The dining hall overlooks the mountains, creating a peaceful atmosphere for mindful eating.`,
@@ -68,7 +68,7 @@ const FacilitiesDesign4 = () => {
       modalImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800"
     },
     {
-      title: "Ayurveda Spa",
+      title: "Ayurveda Course",
       image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600",
       text: `Rejuvenate with authentic Ayurvedic treatments including Abhyanga massage, Shirodhara, and Panchakarma therapies administered by certified Ayurvedic practitioners.`,
       fullDescription: `Our authentic Ayurveda spa brings the ancient healing science to life through traditional treatments that complement your yoga practice. Certified Ayurvedic doctors conduct personalized consultations to determine your dosha (constitution) and recommend customized treatment plans. Experience Abhyanga, the traditional oil massage using warm medicated oils to balance doshas and release toxins. Shirodhara, where warm oil flows continuously over the forehead, calms the nervous system and enhances mental clarity. For deeper detoxification, we offer Panchakarma programs ranging from 7 to 21 days. Other treatments include Kati Basti for back pain, Nasya for sinus issues, and therapeutic steam baths. Our spa uses only organic, traditionally prepared herbal oils and formulations. Treatment rooms are designed for complete relaxation with soft lighting, soothing music, and aromatic herbs. We also offer Ayurvedic consultations for dietary and lifestyle recommendations to maintain balance after your course.`,
@@ -76,7 +76,7 @@ const FacilitiesDesign4 = () => {
       modalImage: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800"
     },
     {
-      title: "Yoga Props Store",
+      title: "Yoga Props",
       image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600",
       text: `Access quality yoga equipment and authentic spiritual items in our well-stocked store. Purchase mats, blocks, meditation cushions, mala beads, books, and traditional Indian clothing.`,
       fullDescription: `Our on-campus yoga boutique offers everything you need for your practice and spiritual journey. We stock premium eco-friendly yoga mats from brands like Manduka and Jade, available in various thicknesses and materials. Choose from cork blocks, foam blocks, cotton straps, and supportive bolsters in beautiful colors. For meditation, we offer zafu cushions, zabuton mats, and meditation benches. Our spiritual items section features authentic rudraksha and gemstone mala beads, singing bowls, incense, essential oils, and crystals. The clothing section includes comfortable yoga wear, traditional kurtas, meditation shawls, and locally-made hemp clothing. We carry an extensive collection of books on yoga, meditation, Ayurveda, and Indian philosophy, including many titles not easily found elsewhere. All proceeds support the school and local artisan communities. Special student discounts available, and we can arrange international shipping for larger purchases.`,

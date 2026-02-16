@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
   const cardData = [
     {
       icon: FaUserGraduate,
-      title: "Expert Teachers",
+      title: "Experience Teachers",
       text: "Learn from certified and experienced yoga instructors who guide you with clarity and care.",
       detailedContent: "Our teachers are certified yoga instructors with years of experience in traditional Hatha Yoga. They have studied under renowned gurus and follow the authentic lineage of yoga teachings. Each instructor brings deep knowledge of anatomy, philosophy, and meditation practices to ensure you receive comprehensive guidance on your yoga journey.",
       image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80"
@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
     },
     {
       icon: FaVideo,
-      title: "On-Demand Classes",
+      title: "On-Demand Flexible Yoga TTC",
       text: "Access a growing library of yoga, meditation, and breathwork classes.",
       detailedContent: "Our extensive video library includes hundreds of classes covering various aspects of yoga practice. From beginner asanas to advanced pranayama techniques, guided meditations, yoga nidra sessions, and specialized workshops on yoga philosophy and lifestyle. New content is added regularly.",
       image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80"
@@ -159,21 +159,21 @@ const WhyChooseUs = () => {
     },
     {
       icon: FaPray,
-      title: "Ancient Parampara",
+      title: "Yogic Parampara",
       text: "Our teachings follow the ancient Guru–Shishya Parampara, where knowledge is transmitted with respect, discipline, and direct experience.",
       detailedContent: "The Guru-Shishya tradition ensures authentic transmission of yoga wisdom. This sacred relationship is built on trust, dedication, and mutual respect. The guru guides not just through words but through lived example, helping students navigate their inner journey with personalized guidance and spiritual support.",
       image: "https://images.unsplash.com/photo-1593811167562-9cef47bfc4d7?w=800&q=80"
     },
     {
       icon: FaOm,
-      title: "Ancient Rules & Discipline",
+      title: "Yogic Practice & Discipline",
       text: "Practiced according to ancient yogic rules—including daily routine, self-discipline, simplicity, and mindful living—to support inner transformation.",
       detailedContent: "We follow traditional yogic principles including brahmacharya (discipline), satya (truthfulness), ahimsa (non-violence), and santosha (contentment). Daily practices include early rising, self-study, meditation, and service. These disciplines are not restrictions but tools for liberation and self-realization.",
       image: "https://images.unsplash.com/photo-1602192509154-0b900ee1f851?w=800&q=80"
     },
     {
       icon: FaHome,
-      title: "We are not Company we are Ashram",
+      title: "We are Ashram not a Company",
       text: "We are an ashram, where yoga is a way of life, not a product. Our aim is spiritual growth, self-awareness, and living in harmony with nature.",
       detailedContent: "Unlike commercial yoga studios, our ashram is a sacred space dedicated to spiritual practice and self-discovery. We operate on principles of seva (selfless service), simple living, and community support. Here, yoga is not commodified but shared as a transformative path to inner peace and enlightenment.",
       image: "https://images.unsplash.com/photo-1545389336-cf090694435e?w=800&q=80"
@@ -202,7 +202,7 @@ const WhyChooseUs = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className={styles.heading}>Why Choose Hatha Yog</h2>
+          <h2 className={styles.heading}>Why Choose Hatha YogAshram?</h2>
           <p className={styles.subText}>
             Everything you need to build a consistent, mindful yoga practice –
             guided by experts and designed for real life.

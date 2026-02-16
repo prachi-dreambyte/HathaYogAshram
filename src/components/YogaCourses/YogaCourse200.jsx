@@ -8,6 +8,7 @@ import heroVideo from '../../assets/images/200hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 import InternationalCertificate from 'components/InternationalCertificate/InternationalCertificate';
 import Form200 from './Form200';
+import HowToReach from 'components/Homepage/HowToReach';
 
 export default function YogaCourse200() {
   const navigate = useNavigate();
@@ -904,6 +905,7 @@ export default function YogaCourse200() {
         </div>
       </section>
       <BooksSection />
+      <HowToReach/>
       {/* 12. FINAL CTA */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>

@@ -8,6 +8,7 @@ import heroVideo from '../../assets/images/100hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 import InternationalCertificate from 'components/InternationalCertificate/InternationalCertificate';
 import Form100 from './Form100';
+import HowToReach from 'components/Homepage/HowToReach';
 
 
 export default function YogaCourse100() {
@@ -551,6 +552,7 @@ export default function YogaCourse100() {
 
       <OurCourses />
       <BooksSection />
+      <HowToReach/>
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>

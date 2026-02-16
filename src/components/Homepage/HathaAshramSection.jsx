@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/HathaAshramSection.module.css";
 import dividerImg from "../../assets/images/linedesign.png";
-import yogaAlliance from "../../assets/images/brands/RCYS.webp";
 import rys200 from "../../assets/images/brands/RPYS.webp";
 import rys300 from "../../assets/images/brands/200.webp";
 import yacep from "../../assets/images/brands/300.webp";
@@ -55,7 +54,7 @@ const HathaAshramSection = () => {
           className={styles.headingWrapper}
           variants={fadeUp}
         >
-          <h2>Best Hatha Yog Ashram In Rishikesh, India</h2>
+          <h2>Best Authentic Yoga School Certified Yoga Alliance USA Hatha YogAshram Rishikesh, India</h2>
           <span className={styles.divider}>
             <img src={dividerImg} alt="divider" />
           </span>
@@ -87,6 +86,9 @@ const HathaAshramSection = () => {
             (Teacher–Student) lineage, offering authentic yogic teachings rooted
             in discipline, simplicity, and awareness.
           </motion.p>
+           <h2  className={styles.Yoga}>
+              Yoga Alliance Credential.
+           </h2>
         </motion.div>
 
         {/* ===== CERTIFICATIONS ===== */}
@@ -94,7 +96,7 @@ const HathaAshramSection = () => {
           className={styles.certifications}
           variants={staggerContainer}
         >
-          {[yogaAlliance, rys200, rys300, yacep, rpyts].map((logo, index) => (
+          {[rys200, rys300, yacep, rpyts].map((logo, index) => (
             <motion.img
               key={index}
               src={logo}
