@@ -7,6 +7,7 @@ import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/200hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 import InternationalCertificate from 'components/InternationalCertificate/InternationalCertificate';
+import Form200 from './Form200';
 
 export default function YogaCourse200() {
   const navigate = useNavigate();
@@ -559,6 +560,7 @@ export default function YogaCourse200() {
           ))}
         </div>
       </section>
+      <Form200/>
 
       {/* 5. WHY CHOOSE OUR SCHOOL */}
       <section className={styles.whySchoolSection}>

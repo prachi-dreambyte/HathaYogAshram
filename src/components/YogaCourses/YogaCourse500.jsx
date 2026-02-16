@@ -6,6 +6,7 @@ import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
 import { useNavigate } from 'react-router-dom';
 import BooksSection from 'components/MyBooks/Bookssection';
+import Form500 from './Form500';
 
 export default function YogaCourse500() {
   const navigate = useNavigate();
@@ -164,7 +165,8 @@ export default function YogaCourse500() {
           </div>
         </div>
       </section>
-
+      
+      <Form500/>
       {/* Course Highlights */}
       <section className={styles.highlightsSection}>
         <div className="container">

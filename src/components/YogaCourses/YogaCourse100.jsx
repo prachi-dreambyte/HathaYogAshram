@@ -7,6 +7,8 @@ import Hours24 from 'components/Hours24/Hours24';
 import heroVideo from '../../assets/images/100hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
 import InternationalCertificate from 'components/InternationalCertificate/InternationalCertificate';
+import Form100 from './Form100';
+
 
 export default function YogaCourse100() {
   const navigate = useNavigate();
@@ -316,6 +318,9 @@ export default function YogaCourse100() {
           </div>
         </div>
       </section>
+      
+      <Form100/>
+
 
       {/* Why Rishikesh Section */}
       <section className={styles.whyRishikeshSection}>

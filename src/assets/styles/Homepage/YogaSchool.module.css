@@ -238,6 +238,7 @@
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 0 10px;
+    margin-left: 10px;
   }
 
   .infoCard {
@@ -258,7 +259,7 @@
   }
 
   .images {
-    grid-template-columns: 1fr;
+    grid-template-columns: (2,1fr);
   }
 }
 
@@ -295,3 +296,11 @@
     margin-right: 0;
   }
 }
+@media (max-width: 360px) {
+  .infoGrid {
+    margin-left: 10px;
+  }
+   .images {
+    grid-template-columns: (2,1fr);
+  }
+};

@@ -6,6 +6,7 @@ import Hours24 from 'components/Hours24/Hours24';
 import TeacherHours from 'components/TeacherHours/TeacherHours';
 import heroVideo from '../../assets/images/300hrs.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
+import Form300 from './Form300';
 
 export default function YogaCourse300() {
   const navigate = useNavigate();
@@ -543,6 +544,7 @@ export default function YogaCourse300() {
           </div>
         </div>
       </section>
+      <Form300/>
 
       {/* 4. WHY RISHIKESH */}
       <section className={`${styles.section} ${styles.sectionPeach}`}>

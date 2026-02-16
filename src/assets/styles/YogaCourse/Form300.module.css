@@ -1,0 +1,468 @@
+/* YogaCourseUpdated.module.css */
+
+/* Container Styles */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f2;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headerTitle {
+  color: #4a1942;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.headerDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #9b59b6;
+  font-size: 1.5rem;
+}
+
+.dividerLine {
+  border-bottom: 2px solid #4a1942;
+  width: 80px;
+}
+
+.dividerIcon {
+  font-size: 2rem;
+  color: #4a1942;
+}
+
+/* Tab Buttons */
+.tabContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 12px 50px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid #4a1942;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.tabButtonActive {
+  background-color: #4a1942;
+  color: white;
+}
+
+.tabButtonInactive {
+  background-color: white;
+  color: #4a1942;
+}
+
+.tabButton:hover {
+  opacity: 0.9;
+}
+
+/* Table Wrapper */
+.tableWrapper {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+/* Table Header */
+.tableHeader {
+  background-color: #4a1942;
+  color: white;
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.headerCell {
+  text-align: center;
+}
+
+.headerTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.headerBadge {
+  background-color: white;
+  color: #4a1942;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.headerPriceSection {
+  text-align: center;
+}
+
+.headerPriceTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.headerPriceColumns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+/* Table Body */
+.tableBody {
+  background-color: white;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
+  align-items: center;
+}
+
+.tableRowBorder {
+  border-bottom: 2px dotted #ddd;
+}
+
+.dateCell {
+  text-align: center;
+}
+
+.courseDate {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.statusBadge {
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.fullyBooked {
+  background-color: #28a745;
+  color: white;
+}
+
+.seatLeft {
+  background-color: #dc3545;
+  color: white;
+}
+
+.seatsLeft {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.seatsLeftPurple {
+  background-color: #4a1942;
+  color: white;
+}
+
+.priceSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.priceCell {
+  text-align: center;
+}
+
+.priceAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.currentPrice {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.oldPrice {
+  font-size: 0.9rem;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.priceNote {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.bookCell {
+  text-align: center;
+}
+
+.bookButton {
+  background-color: #4a1942;
+  color: white;
+  padding: 12px 40px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #5a2152;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Included Section */
+.includedSection {
+  margin-top: 3rem;
+}
+
+.includedCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.includedTabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.includedTabButton {
+  padding: 1.25rem 1rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.includedTabActive {
+  background-color: #4a1942;
+  color: white;
+}
+
+.includedTabInactive {
+  background-color: white;
+  color: #333;
+}
+
+.includedTabButton:hover {
+  opacity: 0.9;
+}
+
+.tabIcon {
+  font-size: 1.2rem;
+}
+
+.includedContent {
+  padding: 3rem;
+}
+
+.includedTitle {
+  color: #4a1942;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.includedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.includedItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.includedIcon {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.includedText {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.imageContainer {
+  width: 100%;
+}
+
+.toBringImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tableHeader,
+  .tableRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .headerPriceColumns,
+  .priceSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .includedGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 1.8rem;
+  }
+
+  .tabButton {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+
+  .includedTabs {
+    grid-template-columns: 1fr;
+  }
+
+  .includedTabButton {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .includedContent {
+    padding: 2rem;
+  }
+
+  .includedTitle {
+    font-size: 1.5rem;
+  }
+
+  .currentPrice {
+    font-size: 1rem;
+  }
+
+  .oldPrice {
+    font-size: 0.8rem;
+  }
+
+  .bookButton {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 20px 0;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .dividerLine {
+    width: 50px;
+  }
+
+  .tabButton {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    margin: 0 3px;
+  }
+
+  .tableHeader,
+  .tableRow {
+    padding: 1rem 0.5rem;
+  }
+
+  .headerPriceColumns,
+  .priceSection {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .courseDate {
+    font-size: 0.9rem;
+  }
+
+  .currentPrice {
+    font-size: 0.95rem;
+  }
+
+  .oldPrice {
+    font-size: 0.75rem;
+  }
+
+  .priceNote {
+    font-size: 0.7rem;
+  }
+
+  .bookButton {
+    padding: 8px 25px;
+    font-size: 0.85rem;
+  }
+
+  .includedContent {
+    padding: 1.5rem;
+  }
+
+  .includedTitle {
+    font-size: 1.3rem;
+  }
+
+  .includedText {
+    font-size: 0.9rem;
+  }
+
+  .includedIcon {
+    font-size: 1rem;
+  }
+}

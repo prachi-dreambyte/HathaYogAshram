@@ -1,0 +1,331 @@
+/* YogaTeacherTraining.module.css */
+
+/* Container Styles */
+.container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5f2;
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.headerTitle {
+  color: #4a1942;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.headerDivider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #9b59b6;
+  font-size: 1.5rem;
+}
+
+.dividerLine {
+  border-bottom: 2px solid #9b59b6;
+  width: 50px;
+}
+
+/* Tab Buttons */
+.tabContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tabButton {
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px solid #4a1942;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabButton:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.tabButtonActive {
+  background-color: #4a1942;
+  color: white;
+}
+
+.tabButtonInactive {
+  background-color: white;
+  color: #4a1942;
+}
+
+.tabButton:hover {
+  opacity: 0.9;
+}
+
+/* Table Container */
+.tableWrapper {
+  background-color: #4a1942;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+.tableHeader {
+  background-color: #4a1942;
+  border-bottom: 2px solid rgba(255, 255, 25, 0.1);
+  padding: 1rem;
+  color: white;
+}
+
+.tableHeaderTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tableBadge {
+  background-color: white;
+  color: #4a1942;
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.priceHeader {
+  margin-bottom: 0.5rem;
+}
+
+/* Table Body */
+.tableBody {
+  background-color: white;
+}
+
+.tableRow {
+  padding: 1rem;
+  align-items: center;
+}
+
+.tableRowBorder {
+  border-bottom: 2px dotted #ddd;
+}
+
+.courseDate {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.statusBadge {
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+.statusSuccess {
+  background-color: #28a745;
+  color: white;
+}
+
+.statusWarning {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.statusPrimary {
+  background-color: #4a1942;
+  color: white;
+}
+
+.priceContainer {
+  text-align: center;
+}
+
+.currentPrice {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.oldPrice {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 8px;
+}
+
+.bookButton {
+  background-color: #4a1942;
+  color: white;
+  padding: 10px 35px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bookButton:hover {
+  background-color: #5a2152;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Included Section */
+.includedSection {
+  margin-top: 3rem;
+}
+
+.includedCard {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.includedTabs {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.includedTabButton {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.includedTabActive {
+  background-color: #4a1942;
+  color: white;
+}
+
+.includedTabInactive {
+  background-color: white;
+  color: #333;
+}
+
+.includedTabButton:hover {
+  opacity: 0.9;
+}
+
+.includedContent {
+  padding: 3rem;
+}
+
+.includedTitle {
+  color: #4a1942;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.includedItem {
+  margin-bottom: 1rem;
+}
+
+.includedItemContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.includedIcon {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  margin-top: 3px;
+}
+
+.includedText {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 1.8rem;
+  }
+
+  .tabButton {
+    padding: 8px 25px;
+    font-size: 1rem;
+  }
+
+  .currentPrice {
+    font-size: 1.1rem;
+  }
+
+  .oldPrice {
+    font-size: 0.9rem;
+  }
+
+  .bookButton {
+    padding: 8px 25px;
+    font-size: 0.9rem;
+  }
+
+  .includedContent {
+    padding: 2rem;
+  }
+
+  .includedTitle {
+    font-size: 1.5rem;
+  }
+
+  .includedTabButton {
+    font-size: 0.95rem;
+    padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 20px 0;
+  }
+
+  .headerTitle {
+    font-size: 1.5rem;
+  }
+
+  .tabButton {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+
+  .courseDate {
+    font-size: 0.9rem;
+  }
+
+  .currentPrice {
+    font-size: 1rem;
+  }
+
+  .bookButton {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .includedContent {
+    padding: 1.5rem;
+  }
+
+  .includedTitle {
+    font-size: 1.3rem;
+  }
+
+  .includedText {
+    font-size: 0.9rem;
+  }
+}
