@@ -1,0 +1,126 @@
+/* ── Floating Button ── */
+.floatingBtn {
+  position: fixed;
+  right: 0;
+  top: 45%;
+  background: #b30b0b;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+  z-index: 9999;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ── Overlay ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+/* ── Slide Panel ── */
+.panel {
+  position: fixed;
+  top: 0;
+  right: -500px;         /* hidden off-screen */
+  width: 420px;
+  height: 100vh;
+  height: 100dvh;        /* FIX: dynamic viewport — hides mobile browser bar */
+  background: #ffffff;
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease;
+  z-index: 10000;
+  overflow-y: auto;
+  overflow-x: hidden;    /* FIX: nothing leaks horizontally */
+  padding-top: 40px;
+  box-sizing: border-box;
+}
+
+.active {
+  right: 0;
+}
+
+/* ── Close Button ── */
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #c70b0b;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+
+/* ══════════════════════════════════════════
+   MOBILE  ≤ 480px
+   Panel = full screen width, full height
+   ══════════════════════════════════════════ */
+@media (max-width: 480px) {
+  /* Button moves to bottom-right corner */
+  .floatingBtn {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 30px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  /* Panel takes full viewport */
+  .panel {
+    width: 100%;          /* FIX: full screen width */
+    right: -100%;         /* FIX: hide = slide full width off-screen */
+    padding-top: 50px;    /* slightly more room for close button */
+  }
+
+  .active {
+    right: 0;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   SMALL TABLETS  481px – 767px
+   Panel = 85% width, still comfortable
+   ══════════════════════════════════════════ */
+@media (min-width: 481px) and (max-width: 767px) {
+  .panel {
+    width: 85%;
+    right: -85%;
+  }
+
+  .active {
+    right: 0;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   TABLETS  768px – 1023px
+   Panel = 420px (original), comfortable fit
+   ══════════════════════════════════════════ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .panel {
+    width: 420px;
+    right: -420px;
+  }
+
+  .active {
+    right: 0;
+  }
+}
