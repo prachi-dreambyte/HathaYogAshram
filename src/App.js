@@ -63,6 +63,7 @@ import YogaNidra from 'components/HomepageOverview/YogaNidra';
 import YogaTherapy from 'components/HomepageOverview/YogaTherapy';
 import AncientYogicPractices from 'components/HomepageOverview/AncientYogicPractices';
 import FloatingApplyForm from "components/ApplyForm/FloatingApplyForm";
+import WhatsAppButton from 'components/whatsappbutton/WhatsAppButton';
 
 
 export default function Main() {
@@ -79,6 +80,7 @@ export default function Main() {
     <ChakraProvider theme={currentTheme}>
       {showHeaderFooter && <Header />}
         {showHeaderFooter && <FloatingApplyForm />}
+        {showHeaderFooter && <WhatsAppButton />}
 
       <Routes>
         <Route path="auth/*" element={<AuthLayout />} />
