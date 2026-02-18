@@ -64,6 +64,7 @@ import YogaTherapy from 'components/HomepageOverview/YogaTherapy';
 import AncientYogicPractices from 'components/HomepageOverview/AncientYogicPractices';
 import FloatingApplyForm from "components/ApplyForm/FloatingApplyForm";
 import WhatsAppButton from 'components/whatsappbutton/WhatsAppButton';
+import AyurvedaPage from 'components/Ayurveda/Ayurveda';
 
 
 export default function Main() {
@@ -144,6 +145,7 @@ export default function Main() {
         <Route path="/Vinyasa-Flow" element={<VinyasaFlow/>}/>
         <Route path="/Yoga-Nidra" element={<YogaNidra />}/>
         <Route path="/Yoga-Therapy" element={<YogaTherapy />}/>
+        <Route path="/Ayurveda-Page" element={<AyurvedaPage />}/>
       </Routes>
 
       {showHeaderFooter && <Footer />}

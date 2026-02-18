@@ -149,6 +149,7 @@ const Header = () => {
 
           {/* RIGHT NAV — DESKTOP */}
           <nav className={styles.desktopNav}>
+             <Link to="/Ayurveda-Page" onClick={closeAll}>Ayurveda</Link>
             <DesktopDropdown name="online" label="Online Courses">
               <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
               <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
@@ -203,7 +204,7 @@ const Header = () => {
                 <Link to="/Online-YTTC" onClick={closeAll}>Online YTTC</Link>
                 <Link to="/Yoga-Online" onClick={closeAll}>Yoga Online</Link>
               </MobileAccordion>
-
+              <Link to="/Ayurveda-Page" onClick={closeAll} className={styles.mobileLink}>Ayurveda</Link>
               <Link to="/payment" onClick={closeAll} className={styles.mobileLink}>Payment</Link>
               <Link to="/contact-us" onClick={closeAll} className={styles.mobileLink}>Contact</Link>
               <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Apply Today</Link>
