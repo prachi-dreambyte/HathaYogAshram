@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/retreatlinks/YogaRetreatRishikesh.module.css';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 const YogaRetreatRishikesh = () => {
   const [activeSection, setActiveSection] = useState('overview');
@@ -701,50 +702,13 @@ const YogaRetreatRishikesh = () => {
               </button>
             </div>
 
-            <div className={styles.locationInfo}>
-              <h3>Reach Us</h3>
-              <div className={styles.locationDetails}>
-                <div className={styles.locationItem}>
-                  <span className={styles.locationIcon}>✈️</span>
-                  <div>
-                    <h4>Nearest Airport</h4>
-                    <p>Dehradun (Jolly Grant Airport) - 35km</p>
-                  </div>
-                </div>
-                <div className={styles.locationItem}>
-                  <span className={styles.locationIcon}>🚖</span>
-                  <div>
-                    <h4>Taxi Service</h4>
-                    <p>Complimentary airport pickup included</p>
-                  </div>
-                </div>
-                <div className={styles.locationItem}>
-                  <span className={styles.locationIcon}>📍</span>
-                  <div>
-                    <h4>Location</h4>
-                    <p>Jonk Village, near Ram Jhula, Rishikesh</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className={styles.contactInfo}>
-                <a
-                  href="mailto:rishikeshyogkulam@gmail.com"
-                  className={styles.contactLink}
-                >
-                  ✉️ rishikeshyogkulam@gmail.com
-                </a>
-                <a
-                  href="https://wa.me/919368154123"
-                  className={styles.contactLink}
-                >
-                  📱 +91 9368154123
-                </a>
-              </div>
-            </div>
+          
           </div>
         </section>
+        
+
       </main>
+       <HowToReach/>
     </div>
   );
 };

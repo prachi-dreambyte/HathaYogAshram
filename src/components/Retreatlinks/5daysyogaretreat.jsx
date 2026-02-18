@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/retreatlinks/5daysyogaretreat.module.css';
 import bannerimage from '../../assets/images/5DaysYogaRetreat.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 const YogaRetreat = () => {
   const navigate = useNavigate();
@@ -442,7 +443,10 @@ const YogaRetreat = () => {
             ))}
           </div>
         </section>
+
+        
       </main>
+       <HowToReach/>
     </div>
   );
 };

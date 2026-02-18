@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../../assets/styles/kundalini_yoga/Kundalini200page.module.css';
 import homebanner from '../../assets/images/200_Banner_V02.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 const Kundalini200Page = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -788,6 +789,7 @@ const Kundalini200Page = () => {
           </div>
         </div>
       </section>
+      <HowToReach />
 
       {/* CTA SECTION */}
       <section className={styles.ctaSection}>

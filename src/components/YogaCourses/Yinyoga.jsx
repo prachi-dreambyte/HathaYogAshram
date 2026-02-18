@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from '../../assets/styles/YogaCourse/Yinyoga.module.css';
 import banner1 from '../../assets/images/Yin_Banner_V01.webp';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 export default function YinYoga() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -840,6 +841,8 @@ export default function YinYoga() {
           </div>
         </div>
       </section>
+       <HowToReach/>
+
 
       {/* CTA SECTION */}
       <section className={styles.ctaSection}>

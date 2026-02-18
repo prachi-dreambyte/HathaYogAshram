@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../assets/styles/retreatlinks/Vedicmantra.module.css';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 const VedicMantra = () => {
   const [activeMantra, setActiveMantra] = useState(null);
@@ -451,33 +452,7 @@ const VedicMantra = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className={styles.contactSection}>
-        <h2 className={styles.contactTitle}>Contact Us</h2>
-        <a href="tel:+919335606336" className={styles.phoneNumber}>
-          +91 9335606336
-        </a>
-
-        <div className={styles.mapContainer}>
-          <div className={styles.mapWrapper}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d32745.512986799895!2d78.3201528!3d30.1319763!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1a92133223b%3A0x5769fde72c39e6f5!2sHatha%20Yogashram!5e1!3m2!1sen!2sin!4v1769063094440!5m2!1sen!2sin"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className={styles.mapIframe}
-              title="Hatha Yogashram Location"
-            />
-          </div>
-        </div>
-
-        <p className={styles.address}>
-          Manzil, Balaknath Rd, Upper Tapovan, Rishikesh, Uttarakhand 249192
-        </p>
-        <p className={styles.email}>
-          <a href="mailto:support@yogashram.co.in">support@yogashram.co.in</a>
-        </p>
-      </section>
+       <HowToReach/>
     </div>
   );
 };
