@@ -199,9 +199,9 @@ const EnrollmentForm = () => {
               {/* Header with Badge */}
               <div className={styles.imagesHeader}>
                
-                <h2 className={styles.mainHeading}>🌟 Book Your Seat Now 🌟</h2>
+                <h2 className={styles.mainHeading}> Book Your Seat Now</h2>
                 <p className={styles.subHeading}>
-                  ✨ Transform Your Life with Authentic Yoga Training ✨
+                   Transform Your Life with Authentic Yoga Training
                 </p>
               </div>
 
@@ -248,8 +248,8 @@ const EnrollmentForm = () => {
                   </div>
                   <div className={styles.seatWarning}>
                     {availableSeats <= 5
-                      ? '🚨 Almost Full!'
-                      : '⏰ Filling Fast!'}
+                      ? ' Almost Full!'
+                      : ' Filling Fast!'}
                   </div>
                 </div>
               </div>
@@ -261,7 +261,7 @@ const EnrollmentForm = () => {
             {/* Form Section */}
             <form onSubmit={handleSubmit} className={styles.enrollmentForm}>
               <div className={styles.formTitle}>
-                <h3>🎯 Secure Your Spot Today!</h3>
+                <h3> Secure Your Spot Today!</h3>
                 <p>Join the journey to inner peace and wellness</p>
               </div>
 
@@ -269,7 +269,7 @@ const EnrollmentForm = () => {
                 {/* Name Field */}
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.formLabel}>
-                    👤 Full Name *
+                    Full Name *
                   </label>
                   <input
                     type="text"
@@ -286,7 +286,7 @@ const EnrollmentForm = () => {
                 {/* Email Field */}
                 <div className={styles.formGroup}>
                   <label htmlFor="email" className={styles.formLabel}>
-                    📧 Email Address *
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -303,7 +303,7 @@ const EnrollmentForm = () => {
                 {/* Mobile Field */}
                 <div className={styles.formGroup}>
                   <label htmlFor="mobile" className={styles.formLabel}>
-                    📱 Mobile Number *
+                     Mobile Number *
                   </label>
                   <input
                     type="tel"
@@ -320,7 +320,7 @@ const EnrollmentForm = () => {
                 {/* Country Field */}
                 <div className={styles.formGroup}>
                   <label htmlFor="country" className={styles.formLabel}>
-                    🌍 Country *
+                     Country *
                   </label>
                   <select
                     id="country"
@@ -342,7 +342,7 @@ const EnrollmentForm = () => {
                 {/* Course Field */}
                 <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                   <label htmlFor="course" className={styles.formLabel}>
-                    🎓 Select Your Course *
+                  Select Your Course *
                   </label>
                   <select
                     id="course"
@@ -366,6 +366,20 @@ const EnrollmentForm = () => {
                       </option>
                     ))}
                   </select>
+                </div>
+                <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+                  <label htmlFor="course" className={styles.formLabel}>
+                    Where did you find us?
+                  </label>
+                  <select
+                    className={styles.formSelect}
+                    required
+                  >
+                    <option value="">Others</option>
+                            <option>Google</option>
+                            <option>Instagram</option>
+                            <option>Facebook</option>
+                          </select>
                 </div>
 
                 {/* Course Info Display */}

@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import styles from '../../assets/styles/Homepage/YogaSchool.module.css';
 
 import ornament from '../../assets/images/linedesign.png';
-import yoga1 from '../../assets/images/about-vys1.jpg';
-import yoga2 from '../../assets/images/about-vys2.jpg';
-import yoga3 from '../../assets/images/about-vys2.jpg';
-import yoga4 from '../../assets/images/about-vys1.jpg';
+import yoga1 from '../../assets/images/owner.webp';
+import yoga2 from '../../assets/images/Mudra.webp';
+import yoga3 from '../../assets/images/TeachingMethodology.webp';
+import yoga4 from '../../assets/images/Anatomy.webp';
 import { useNavigate } from 'react-router-dom';
 import { FaCrown, FaAward } from "react-icons/fa";
 import { GiLotus } from "react-icons/gi";

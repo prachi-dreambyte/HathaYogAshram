@@ -27,18 +27,19 @@
 .panel {
   position: fixed;
   top: 0;
-  right: -500px;         /* hidden off-screen */
-  width: 420px;
+  right: -563px;         /* hidden off-screen */
+  width: 560px;
   height: 100vh;
   height: 100dvh;        /* FIX: dynamic viewport — hides mobile browser bar */
-  background: #ffffff;
+  /* background: #ffffff; */
   box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
   transition: right 0.4s ease;
   z-index: 10000;
   overflow-y: auto;
   overflow-x: hidden;    /* FIX: nothing leaks horizontally */
-  padding-top: 40px;
+  padding-top: 0px;
   box-sizing: border-box;
+      margin-top: 118px;
 }
 
 .active {

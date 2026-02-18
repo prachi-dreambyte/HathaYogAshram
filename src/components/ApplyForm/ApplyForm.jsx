@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../assets/styles/ApplyForm/ApplyForm.module.css";
+
+// Bootstrap loaded via CDN (add to index.html if not already present)
+// <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
 /* ── reCAPTCHA Component ── */
 const ReCaptcha = () => {
@@ -79,48 +82,65 @@ const ApplyForm = () => {
       <h3 className={styles.subHeading}>Apply Today!</h3>
 
       <form className={styles.form}>
-        <div className={styles.inputGroup}>
-          <label>Name</label>
-          <input type="text" placeholder="E.g. John Doe" />
+        {/* ── Name + Email on same row using Bootstrap grid ── */}
+        <div className="row g-3 mb-0">
+          <div className="col-12 col-sm-6">
+            <div className={styles.inputGroup}>
+              <label>Name</label>
+              <input type="text" placeholder="Full Name" />
+            </div>
+          </div>
+          <div className="col-12 col-sm-6">
+            <div className={styles.inputGroup}>
+              <label>Email Address *</label>
+              <input type="email" placeholder="Email Address" />
+            </div>
+          </div>
         </div>
 
-        <div className={styles.inputGroup}>
-          <label>Email Address *</label>
-          <input type="email" placeholder="E.g. john@doe.com" />
-        </div>
-
+         <div className="row g-3 mb-0">
+          <div className="col-12 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Phone *</label>
           <div className={styles.phoneInput}>
             <span className={styles.flag}>🇺🇸 +1</span>
-            <input type="tel" placeholder="E.g. +1 300 400 5000" />
+            <input type="tel" placeholder="Enter Mobile Number" />
           </div>
         </div>
-
+        </div>
+        <div className="col-12 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Street Address</label>
-          <input type="text" placeholder="E.g. 42 Wallaby Way" />
+          <input type="text" placeholder="Enter Full Address" />
         </div>
-
-        <div className={styles.inputGroup}>
+        </div>
+        </div>
+       <div className="row g-3 mb-0">
+          <div className="col-12 col-sm-6">
+       <div className={styles.inputGroup}>
           <label>Country</label>
           <select>
-            <option>Select country</option>
+            <option>Select country*</option>
             <option>India</option>
             <option>USA</option>
             <option>UK</option>
           </select>
         </div>
-
+        </div>
+        <div className="col-12 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Select Course</label>
           <select>
+            <option>Others*</option>
             <option>100 Hour Yoga Teacher Training</option>
             <option>200 Hour Yoga Teacher Training</option>
             <option>300 Hour Yoga Teacher Training</option>
           </select>
         </div>
-
+        </div>
+        </div>
+        <div className="row g-3 mb-0">
+          <div className="col-12 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Duration</label>
           <select>
@@ -128,17 +148,21 @@ const ApplyForm = () => {
             <option>1st November 2025</option>
           </select>
         </div>
-
+        </div>
+        <div className="col-12 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Where did you find us?</label>
           <select>
+            <option>Others*</option>
             <option>Google</option>
             <option>Instagram</option>
             <option>Facebook</option>
           </select>
         </div>
+        </div>
+        </div>
 
-        {/* reCAPTCHA — real interactive */}
+        {/* reCAPTCHA */}
         <ReCaptcha />
 
         <button type="submit" className={styles.submitBtn}>

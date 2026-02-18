@@ -1,17 +1,17 @@
 .wrapper {
-  max-width: 420px;
+  /* ── WIDER FORM: increased from 420px to 700px ── */
+  max-width: 700px;
+  width: 100%;
   margin: auto;
-  padding: 30px 20px;
+  padding: 40px 36px;
   background: #f5f5f5;
   font-family: "Poppins", sans-serif;
-  /* FIX: full width on mobile, box-sizing prevents overflow */
-  width: 100%;
   box-sizing: border-box;
 }
 
 .topHeading {
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   color: #d4081c;
   font-weight: 600;
 }
@@ -22,7 +22,7 @@
 
 .subHeading {
   text-align: center;
-  font-size: 28px;
+  font-size: 30px;
   color: #5f0a15;
   margin: 15px 0 25px;
   font-weight: 600;
@@ -35,7 +35,6 @@
 
 .inputGroup {
   margin-bottom: 18px;
-  /* FIX: ensures group never overflows wrapper */
   width: 100%;
   box-sizing: border-box;
 }
@@ -47,8 +46,6 @@
   color: #666;
 }
 
-/* FIX: scoped to .inputGroup so global input/select styles don't bleed
-   into other parts of the app */
 .inputGroup input,
 .inputGroup select {
   width: 100%;
@@ -59,11 +56,8 @@
   outline: none;
   background: white;
   font-family: "Poppins", sans-serif;
-  /* FIX: keeps padding inside the declared width */
   box-sizing: border-box;
-  /* FIX: prevents flex / grid children from overflowing */
   min-width: 0;
-  /* FIX: removes native select arrow (replaced below with custom) */
   -webkit-appearance: none;
   appearance: none;
 }
@@ -73,7 +67,6 @@
   border-color: #6a0dad;
 }
 
-/* FIX: custom chevron replaces browser-native select arrow */
 .inputGroup select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -88,7 +81,6 @@
   background: white;
   border-radius: 10px;
   border: 1px solid #ddd;
-  /* FIX: full width + no internal overflow */
   width: 100%;
   box-sizing: border-box;
   overflow: hidden;
@@ -101,7 +93,6 @@
 .phoneInput input {
   border: none !important;
   flex: 1;
-  /* FIX: critical — stops the input from pushing the flag off-screen */
   min-width: 0;
   padding: 12px 10px;
 }
@@ -109,23 +100,23 @@
 .flag {
   padding: 0 10px;
   font-size: 14px;
-  /* FIX: flag never shrinks or wraps */
   flex-shrink: 0;
   white-space: nowrap;
 }
 
 .captchaBox {
   height: 70px;
-  background: white;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 16px 0 12px;
   margin-bottom: 20px;
   font-size: 14px;
   color: #666;
-  /* FIX */
   width: 100%;
   box-sizing: border-box;
 }
@@ -140,7 +131,6 @@
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: 0.3s;
-  /* FIX: full width button */
   width: 100%;
   box-sizing: border-box;
 }
@@ -149,87 +139,7 @@
   background: #00004d;
 }
 
-
-/* ─────────────────────────────────────────────
-   MOBILE BREAKPOINTS
-   ───────────────────────────────────────────── */
-
-/* Very small phones — under 360px */
-@media (max-width: 359px) {
-  .wrapper {
-    padding: 20px 14px;
-  }
-
-  .topHeading {
-    font-size: 18px;
-  }
-
-  .subHeading {
-    font-size: 22px;
-    margin: 12px 0 18px;
-  }
-
-  .inputGroup label {
-    font-size: 13px;
-  }
-
-  .inputGroup input,
-  .inputGroup select {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  .inputGroup select {
-    padding-right: 32px;
-  }
-
-  .flag {
-    font-size: 13px;
-    padding: 0 8px;
-  }
-
-  .phoneInput input {
-    padding: 10px 8px;
-  }
-
-  .captchaBox {
-    height: 60px;
-    font-size: 13px;
-  }
-
-  .submitBtn {
-    padding: 11px;
-    font-size: 14px;
-  }
-}
-
-/* Normal phones — 360px to 480px */
-@media (min-width: 360px) and (max-width: 480px) {
-  .wrapper {
-    padding: 24px 16px;
-  }
-
-  .topHeading {
-    font-size: 20px;
-  }
-
-  .subHeading {
-    font-size: 25px;
-    margin: 12px 0 20px;
-  }
-}
-
-/* ── reCAPTCHA — append karo existing CSS ke end mein ── */
-
-/* captchaBox already exists — sirf layout override */
-.captchaBox {
-  justify-content: space-between;
-  padding: 0 16px 0 12px;
-  background: #f9f9f9;
-  border: 1px solid #d3d3d3;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
+/* ─── reCAPTCHA ─── */
 
 .captchaLeft {
   display: flex;
@@ -244,7 +154,6 @@
   user-select: none;
 }
 
-/* Checkbox */
 .captchaCheckbox {
   width: 28px;
   height: 28px;
@@ -274,7 +183,6 @@
   background: white;
 }
 
-/* Spinner */
 .captchaSpinner {
   width: 22px;
   height: 22px;
@@ -299,7 +207,6 @@
   100% { stroke-dasharray: 89, 200; stroke-dashoffset: -124px; }
 }
 
-/* Checkmark */
 .captchaMark {
   width: 18px;
   height: 18px;
@@ -312,7 +219,6 @@
   100% { transform: scale(1);   opacity: 1; }
 }
 
-/* Branding */
 .captchaBrand {
   display: flex;
   flex-direction: column;
@@ -334,4 +240,25 @@
 .captchaLinks {
   font-size: 7.5px;
   color: #999;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 575px) {
+  .wrapper {
+    padding: 24px 16px;
+  }
+
+  .topHeading { font-size: 20px; }
+  .subHeading { font-size: 24px; }
+}
+
+@media (max-width: 359px) {
+  .topHeading { font-size: 18px; }
+  .subHeading { font-size: 20px; }
+
+  .inputGroup input,
+  .inputGroup select {
+    padding: 10px;
+    font-size: 13px;
+  }
 }
