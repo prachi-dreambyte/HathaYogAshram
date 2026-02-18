@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: #000;
+  color: #000000;
   overflow: hidden;
   padding: 60px 100px;
 }
@@ -27,44 +27,8 @@
 }
 
 /* ===================== */
-/* DISPLAY CONTAINER */
-/* ===================== */
-.Display {
-  display: flex;
-  gap: 50px;
-  align-items: flex-start;
-}
-
-/* ===================== */
-/* TOP SECTION - LOGO AREA */
-/* ===================== */
-.topSection {
-  flex-shrink: 0;
-}
-
-.logoContainer {
-  display: inline-block;
-  position: relative;
-}
-
-.logo {
-  width: 140px;
-  height: auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
-  margin-top: -20px;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-}
-
-/* COURSES SECTION */
-.coursesSection {
-  flex: 1;
-}
-
 /* TAGLINE WRAPPER */
+/* ===================== */
 .taglineWrapper {
   padding-top: 0;
 }
@@ -72,10 +36,40 @@
 .tagline {
   font-size: 16px;
   font-weight: 600;
-  color: #000;
+  color: rgba(0, 0, 0, 0.85);
   margin-bottom: 15px;
   font-family: "Quicksand", sans-serif;
   line-height: 28px;
+}
+
+/* ===================== */
+/* LOGO WRAPPER — centers logo horizontally in its column */
+/* Works on desktop AND all responsive breakpoints       */
+/* ===================== */
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* COURSES SECTION */
+/* ===================== */
+.coursesSection {
+  flex: 1;
 }
 
 /* ===================== */
@@ -85,26 +79,29 @@
   display: flex;
   gap: 16px;
   margin-top: 25px;
+  justify-content: center;
 }
 
 .socials a {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #000;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #000000;
   font-size: 18px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(230, 200, 122, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .socials a:hover {
-  background: #000;
-  color: #fff;
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  background: #bd0005;
+  border-color: #bd0005;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(189, 0, 5, 0.4);
   transform: translateY(-3px);
 }
 
@@ -167,7 +164,7 @@
   transition: all 0.3s ease;
   font-weight: 600;
   font-family: "Quicksand", sans-serif;
-  color: #000;
+  color: rgba(0, 0, 0, 0.88);
   text-decoration: none;
   display: inline-block;
   position: relative;
@@ -200,6 +197,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 0;
 }
 
 .contact li {
@@ -207,7 +205,7 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 16px;
-  color: #000;
+  color: rgba(0, 0, 0, 0.88);
   font-weight: 600;
   margin-bottom: 14px;
   line-height: 1.6;
@@ -247,19 +245,21 @@
   font-size: 14px;
   padding: 8px 18px;
   background: transparent;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.35);
   border-radius: 25px;
   white-space: nowrap;
+  color: rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
 }
 
 .keywords span:hover {
-  background: rgba(230, 200, 122, 0.25);
-  border-color: rgba(230, 200, 122, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #bd0005;
+  color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(230, 200, 122, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* ===================== */
@@ -267,14 +267,14 @@
 /* ===================== */
 .bottom {
   margin-top: 50px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding-top: 25px;
   text-align: center;
 }
 
 .bottom p {
   font-size: 14px;
-  opacity: 0.8;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0;
   font-family: "Quicksand", sans-serif;
   letter-spacing: 0.5px;
@@ -289,32 +289,28 @@
   .footer {
     padding: 80px 150px;
   }
-  
-  .Display {
-    gap: 60px;
-  }
-  
+
   .logo {
-    width: 140px;
+    width: 174px;
   }
-  
+
   .tagline {
     font-size: 18px;
     line-height: 32px;
   }
-  
+
   .title {
     font-size: 22px;
   }
-  
+
   .list li a {
     font-size: 17px;
   }
-  
+
   .contact li {
     font-size: 17px;
   }
-  
+
   .keywords span {
     font-size: 15px;
     padding: 10px 20px;
@@ -326,28 +322,24 @@
   .footer {
     padding: 70px 120px;
   }
-  
-  .Display {
-    gap: 55px;
-  }
-  
+
   .logo {
     width: 140px;
   }
-  
+
   .tagline {
     font-size: 17px;
     line-height: 30px;
   }
-  
+
   .title {
     font-size: 21px;
   }
-  
+
   .list li a {
     font-size: 16px;
   }
-  
+
   .contact li {
     font-size: 16px;
   }
@@ -358,28 +350,24 @@
   .footer {
     padding: 60px 100px;
   }
-  
-  .Display {
-    gap: 50px;
-  }
-  
+
   .logo {
     width: 140px;
   }
-  
+
   .tagline {
     font-size: 16px;
     line-height: 28px;
   }
-  
+
   .title {
     font-size: 20px;
   }
-  
+
   .list li a {
     font-size: 16px;
   }
-  
+
   .contact li {
     font-size: 16px;
   }
@@ -390,32 +378,28 @@
   .footer {
     padding: 55px 80px;
   }
-  
-  .Display {
-    gap: 45px;
-  }
-  
+
   .logo {
     width: 140px;
   }
-  
+
   .tagline {
     font-size: 15px;
     line-height: 26px;
   }
-  
+
   .title {
     font-size: 19px;
   }
-  
+
   .list li a {
     font-size: 15px;
   }
-  
+
   .contact li {
     font-size: 15px;
   }
-  
+
   .keywords span {
     font-size: 13px;
     padding: 7px 16px;
@@ -427,51 +411,46 @@
   .footer {
     padding: 50px 60px;
   }
-  
-  .Display {
-    gap: 40px;
-  }
-  
+
   .logo {
-    width: 140px;
-    margin-top: -15px;
+    width: 130px;
   }
-  
+
   .tagline {
     font-size: 15px;
     line-height: 26px;
   }
-  
+
   .title {
     font-size: 18px;
   }
-  
+
   .list li a {
     font-size: 14px;
   }
-  
+
   .contact li {
     font-size: 14px;
   }
-  
+
   .contact .icon {
     font-size: 15px;
   }
-  
+
   .socials a {
     width: 43px;
     height: 43px;
     font-size: 17px;
   }
-  
+
   .divider {
     margin: 45px auto;
   }
-  
+
   .keywords {
     margin-top: 50px;
   }
-  
+
   .keywords span {
     font-size: 13px;
     padding: 7px 16px;
@@ -483,81 +462,76 @@
   .footer {
     padding: 45px 40px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .topSection {
-    margin-bottom: 20px;
-  }
-  
+
   .logo {
-    width: 140px;
-    margin-top: -10px;
+    width: 130px;
   }
-  
+
+  /* logoWrapper already centers via flexbox — no extra override needed */
+
   .tagline {
     font-size: 14px;
     line-height: 24px;
+    text-align: center;
   }
-  
+
+  .taglineWrapper {
+    text-align: center;
+  }
+
   .title {
     font-size: 17px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li a {
     font-size: 14px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 14px;
     justify-content: center;
   }
-  
+
   .socials {
     justify-content: center;
   }
-  
+
   .socials a {
     width: 42px;
     height: 42px;
     font-size: 17px;
   }
-  
+
   .divider {
     margin: 40px auto;
   }
-  
+
   .keywords {
     margin-top: 45px;
   }
-  
+
   .keywords span {
     font-size: 12px;
     padding: 6px 14px;
@@ -569,109 +543,98 @@
   .footer {
     padding: 40px 30px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 25px;
-    align-items: center;
+
+  .logo {
+    width: 130px;
+  }
+
+  .taglineWrapper {
     text-align: center;
   }
-  
-  .topSection {
-    margin-bottom: 15px;
-  }
-  
-  .logo {
-    width: 140px;
-    margin-top: -10px;
-  }
-  
-  .taglineWrapper {
-    padding-top: 0;
-  }
-  
+
   .tagline {
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 12px;
+    text-align: center;
   }
-  
+
   .title {
     font-size: 16px;
     margin-bottom: 18px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li {
     margin-bottom: 10px;
   }
-  
+
   .list li a {
     font-size: 13px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 13px;
     justify-content: center;
     margin-bottom: 12px;
   }
-  
+
   .contact .icon {
     font-size: 15px;
   }
-  
+
   .socials {
     justify-content: center;
     gap: 14px;
   }
-  
+
   .socials a {
     width: 40px;
     height: 40px;
     font-size: 16px;
   }
-  
+
   .divider {
     margin: 35px auto;
     max-width: 90%;
   }
-  
+
   .keywords {
     margin-top: 40px;
     gap: 10px;
   }
-  
+
   .keywords span {
     font-size: 12px;
     padding: 6px 14px;
   }
-  
+
   .bottom {
     margin-top: 40px;
     padding-top: 20px;
   }
-  
+
   .bottom p {
     font-size: 12px;
   }
@@ -682,106 +645,99 @@
   .footer {
     padding: 35px 25px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+
+  .logo {
+    width: 120px;
+  }
+
+  .taglineWrapper {
     text-align: center;
   }
-  
-  .topSection {
-    margin-bottom: 10px;
-  }
-  
-  .logo {
-    width: 130px;
-    margin-top: -8px;
-  }
-  
+
   .tagline {
     font-size: 13px;
     line-height: 22px;
     margin-bottom: 10px;
+    text-align: center;
   }
-  
+
   .title {
     font-size: 15px;
     margin-bottom: 16px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
     width: 45px;
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li {
     margin-bottom: 10px;
   }
-  
+
   .list li a {
     font-size: 13px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 13px;
     justify-content: center;
     margin-bottom: 12px;
   }
-  
+
   .contact .icon {
     font-size: 14px;
   }
-  
+
   .socials {
     justify-content: center;
     gap: 12px;
   }
-  
+
   .socials a {
     width: 38px;
     height: 38px;
     font-size: 15px;
   }
-  
+
   .divider {
     margin: 30px auto;
     max-width: 90%;
   }
-  
+
   .keywords {
     margin-top: 35px;
     gap: 8px;
   }
-  
+
   .keywords span {
     font-size: 11px;
     padding: 5px 12px;
   }
-  
+
   .bottom {
     margin-top: 35px;
     padding-top: 18px;
   }
-  
+
   .bottom p {
     font-size: 11px;
   }
@@ -792,108 +748,101 @@
   .footer {
     padding: 30px 20px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+
+  .logo {
+    width: 110px;
+  }
+
+  .taglineWrapper {
     text-align: center;
   }
-  
-  .topSection {
-    margin-bottom: 10px;
-  }
-  
-  .logo {
-    width: 120px;
-    margin-top: -5px;
-  }
-  
+
   .tagline {
     font-size: 13px;
     line-height: 22px;
     margin-bottom: 10px;
+    text-align: center;
   }
-  
+
   .title {
     font-size: 14px;
     margin-bottom: 15px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li {
     margin-bottom: 10px;
   }
-  
+
   .list li a {
     font-size: 12px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 12px;
     justify-content: center;
     margin-bottom: 12px;
   }
-  
+
   .contact .icon {
     font-size: 14px;
   }
-  
+
   .socials {
     justify-content: center;
     gap: 12px;
     margin-top: 20px;
   }
-  
+
   .socials a {
     width: 38px;
     height: 38px;
     font-size: 15px;
   }
-  
+
   .divider {
     margin: 25px auto;
     max-width: 90%;
   }
-  
+
   .keywords {
     margin-top: 30px;
     gap: 8px;
   }
-  
+
   .keywords span {
     font-size: 11px;
     padding: 5px 12px;
   }
-  
+
   .bottom {
     margin-top: 30px;
     padding-top: 15px;
   }
-  
+
   .bottom p {
     font-size: 11px;
   }
@@ -904,109 +853,102 @@
   .footer {
     padding: 25px 15px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
+
+  .logo {
+    width: 100px;
+  }
+
+  .taglineWrapper {
     text-align: center;
   }
-  
-  .topSection {
-    margin-bottom: 8px;
-  }
-  
-  .logo {
-    width: 110px;
-    margin-top: -5px;
-  }
-  
+
   .tagline {
     font-size: 12px;
     line-height: 20px;
     margin-bottom: 8px;
+    text-align: center;
   }
-  
+
   .title {
     font-size: 13px;
     margin-bottom: 14px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
     width: 35px;
     height: 2px;
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li {
     margin-bottom: 8px;
   }
-  
+
   .list li a {
     font-size: 12px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 12px;
     justify-content: center;
     margin-bottom: 10px;
   }
-  
+
   .contact .icon {
     font-size: 13px;
   }
-  
+
   .socials {
     justify-content: center;
     gap: 10px;
     margin-top: 18px;
   }
-  
+
   .socials a {
     width: 36px;
     height: 36px;
     font-size: 14px;
   }
-  
+
   .divider {
     margin: 20px auto;
     max-width: 90%;
     height: 1.5px;
   }
-  
+
   .keywords {
     margin-top: 25px;
     gap: 6px;
   }
-  
+
   .keywords span {
     font-size: 10px;
     padding: 4px 10px;
   }
-  
+
   .bottom {
     margin-top: 25px;
     padding-top: 15px;
   }
-  
+
   .bottom p {
     font-size: 10px;
     line-height: 1.5;
@@ -1018,109 +960,102 @@
   .footer {
     padding: 20px 12px;
   }
-  
-  .Display {
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+
+  .logo {
+    width: 90px;
+  }
+
+  .taglineWrapper {
     text-align: center;
   }
-  
-  .topSection {
-    margin-bottom: 5px;
-  }
-  
-  .logo {
-    width: 100px;
-    margin-top: 0;
-  }
-  
+
   .tagline {
     font-size: 11px;
     line-height: 18px;
     margin-bottom: 8px;
+    text-align: center;
   }
-  
+
   .title {
     font-size: 12px;
     margin-bottom: 12px;
     text-align: center;
   }
-  
+
   .title::after {
     left: 50%;
     transform: translateX(-50%);
     width: 30px;
     height: 2px;
   }
-  
+
   .list {
     text-align: center;
   }
-  
+
   .list li {
     margin-bottom: 8px;
   }
-  
+
   .list li a {
     font-size: 11px;
   }
-  
+
   .list li a::before {
     display: none;
   }
-  
+
   .list li a:hover {
     transform: translateX(0);
   }
-  
+
   .contact {
     text-align: center;
   }
-  
+
   .contact li {
     font-size: 11px;
     justify-content: center;
     margin-bottom: 10px;
   }
-  
+
   .contact .icon {
     font-size: 12px;
   }
-  
+
   .socials {
     justify-content: center;
     gap: 8px;
     margin-top: 15px;
   }
-  
+
   .socials a {
     width: 34px;
     height: 34px;
     font-size: 13px;
   }
-  
+
   .divider {
     margin: 18px auto;
     max-width: 90%;
     height: 1.5px;
   }
-  
+
   .keywords {
     margin-top: 20px;
     gap: 5px;
   }
-  
+
   .keywords span {
     font-size: 9px;
     padding: 4px 8px;
   }
-  
+
   .bottom {
     margin-top: 20px;
     padding-top: 12px;
   }
-  
+
   .bottom p {
     font-size: 9px;
     line-height: 1.4;
