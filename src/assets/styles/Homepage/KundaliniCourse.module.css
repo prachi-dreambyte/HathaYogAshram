@@ -1,0 +1,309 @@
+/* ================================== */
+/* KundaliniCourses.module.css        */
+/* Single card — 100hr / 200hr / 300hr */
+/* ================================== */
+
+.section {
+  padding: 80px 0px 60px 0px;
+  background: #fff;
+}
+
+.cardWrapper {
+  max-width: 1260px;
+}
+
+/* ---- Main Card ---- */
+.card {
+  display: flex;
+  background: linear-gradient(180deg, #f7d9e3, #fffafc);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ---- Left Image ---- */
+.imageBox {
+  flex: 0 0 340px;
+  min-height: 540px;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---- Right Content ---- */
+.contentBox {
+  flex: 1;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+/* Header */
+.mainTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #bd0005;
+  margin-bottom: 5px;
+  font-family: "Philosopher", sans-serif;
+}
+
+.mainSubtitle {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.mainDescription {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Horizontal divider */
+.divider {
+  border: none;
+  border-top: 1px solid #e0b0bb;
+  margin: 22px 0;
+}
+
+/* ---- Three course columns ---- */
+.coursesRow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  flex: 1;
+}
+
+.courseCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 18px;
+  min-width: 0;
+}
+
+.courseCol:first-child {
+  padding-left: 0;
+}
+
+.courseCol:last-child {
+  padding-right: 0;
+}
+
+/* Vertical divider */
+.verticalDivider {
+  width: 1px;
+  background-color: #e0b0bb;
+  align-self: stretch;
+  flex-shrink: 0;
+  margin: 0 2px;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.badgeBeginner {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badgePopular {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.badgeAdvanced {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+/* Course heading */
+.courseTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #bd0005;
+  margin-bottom: 4px;
+  font-family: "Philosopher", sans-serif;
+  line-height: 1.3;
+}
+
+.courseLabel {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Price */
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #bd0005;
+  margin-bottom: 14px;
+}
+
+.price span {
+  font-size: 20px;
+}
+
+/* Info rows */
+.infoRow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  margin-bottom: 7px;
+  font-family: "Quicksand", sans-serif;
+  color: #333;
+}
+
+.icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btnGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.outlineBtn {
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #000;
+  color: #bd0005;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.outlineBtn:hover {
+  background: #bd0005;
+  color: #fff;
+  border-color: #bd0005;
+}
+
+.fillBtn {
+  padding: 8px 14px;
+  background: #bd0005;
+  border: 1px solid #bd0005;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.fillBtn:hover {
+  background: transparent;
+  color: #bd0005;
+}
+
+/* ======================== */
+/* Responsive               */
+/* ======================== */
+
+@media (max-width: 1100px) {
+  .imageBox {
+    flex: 0 0 280px;
+  }
+  .courseTitle {
+    font-size: 15px;
+  }
+  .price {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .imageBox {
+    flex: none;
+    height: 300px;
+    min-height: unset;
+  }
+
+  .contentBox {
+    padding: 28px;
+  }
+
+  .coursesRow {
+    gap: 0;
+  }
+
+  .courseCol {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 680px) {
+  .coursesRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .verticalDivider {
+    display: none;
+  }
+
+  .courseCol {
+    padding: 20px 0;
+    border-bottom: 1px solid #e0b0bb;
+  }
+
+  .courseCol:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .courseCol:first-child {
+    padding-top: 0;
+  }
+
+  .btnGroup {
+    flex-direction: row;
+  }
+
+  .outlineBtn,
+  .fillBtn {
+    flex: 1;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btnGroup {
+    flex-direction: column;
+  }
+}
