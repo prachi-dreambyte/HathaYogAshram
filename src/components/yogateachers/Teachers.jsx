@@ -11,94 +11,99 @@ import teacher7 from '../../assets/images/ourteachers/teacher-mandeep.webp';
 const Teachers = () => {
   const teachers = [
     {
-      name: 'Dhirendra Ji',
-      role: ['Hatha Yog', 'Teaching Methodology'],
-      image: teacher1,
-      bio: ["Born in the lap of the Holy Ganga, at the feet of the Bhootnath Shiva Temple, amidst the forests of the Himalayas, Dhirendra reveals himself as a nature lover and spiritual seeker. Having started his schooling at the tender age of 5, from one of the oldest, most iconic and traditional schools of Rishikesh, Dhirendra believes he was drawn to Yoga by a mystical force as he practiced asanas during the physical education lessons in school. He began to live the yogic way of life from that early age and embraced spirituality as his routines began with worshipping Lord Shiva and the Holy Ganga and continued with practising asanas, eating satvik food and attending music lessons.",
-      "It was under the able guidance of his Guru Narender Gusain that he was able to leave all his vices and practice Yoga religiously. His dedication was such that there were times that he would practice till his body was sore, and it was around this time that he realized that the external appreciation and praise were pointless and the true meaning of Yoga was the alignment of the body, mind and soul, being able to appreciate himself from within.",
-       "The next part of his training came under Guru Nalin Sharma, under whom he learned Yogic Philosophy and spiritual growth and finally under Guru Roshan Singh, Dhirendra underwent lessons on personal growth. When his three Gurus thought he was ready, Dhirendra started the Yoga school with one goal - helping other seekers on their yogic journey to explore their full potential."],
-      education: [
-        "Bachelor's Degree in Science",
-        "Diploma in Mechanical Engineering",
-        "Master's Degree in Yoga",
-        "E-RYT 500 (Experienced Registered Yoga Teacher)",
-        "RPYT - Registered Prenatal Yoga Teacher",
-        "Early education is spiritual foundation from Parmarth Niketan Ashram, Rishikesh"
-      ],
-      experience: [
-        "12+ years of teaching experience across traditional and modern yogic disciplines",
-        "5+ years of teaching in China, sharing classical Indian yoga with international communities",
-        "3+ years in Thailand, guiding diverse groups of practitioners"
-      ],
-      expertise: [
-        "Hatha Yog",
-        "Ashtanga Vinyasa",
-        "Alignment & Adjustment",
-        "Teaching Methodology",
-        "Pranayama",
-        "Restorative Yoga",
-        "Prenatal Yoga"
-      ]
-    },
-    {
-      name: 'Amit Ji',
-      role: ['Yoga Anatomy', 'Teaching Methodology'],
-      image: teacher2,
-      bio: ["Amit Payal, the founder of Rishikesh Rishikesh Yogkulam®, is an E-RYT 500-Hour Yoga instructor with a Master's degree in Yoga Science. He is a well-known, appreciated and celebrated Yoga master in Rishikesh, India. With several specialisations like Alignment, Adjustment, Hatha and Ashtanga Yoga, Yoga philosophy, Anatomy and Pranayama, Amit ensures that his pupils , whether teachers or students, push their limits, test their boundaries and achieve their goals.As warm as he is passionate about Yoga, he makes sure each and every person that comes through his school leaves there, confident about their capabilities and with a feeling of oneness and family.", "He has been conducting teacher training courses regularly for more than five years and has taught more than 100 YTTC's to seekers from across the globe. His experience, skill and warmth help all his students journey into their minds and bodies as he adeptly schools them in breath control and movement - the pillars of a Yoga practice. Amit believes it vital that his teachings convey the profound, authentic and ancient knowledge of Yoga and it's millennia-old traditions."],
-      education: [
-        "Bachelor's Degree in Mechanical Engineering",
-        "Master's Degree in Yoga Science",
-        "Diploma in Yoga",
-        "E-RYT 500 (Experienced Registered Yoga Teacher)",
-        "RPYT - Registered Prenatal Yoga Teacher",
-        "Traditional Ashtanga Vinyasa Training under Guru BKS Iyengar, the direct disciple of T. Krishnamacharya",
-        "Certified in Functional Yoga Anatomy & Alignment techniques"
-      ],
-      experience: [
-        "12+ years of teaching experience in Teacher Training Courses (TTCs)",
-        "432+ Yoga Teacher Training Courses taught to international students"
-      ],
-      expertise: [
-        "Hatha Yog",
-        "Ashtanga Vinyasa",
-        "Alignment & Adjustment",
-        "Functional Yoga Anatomy",
-        "Teaching Methodology",
-        "Pranayama",
-        "Restorative Yoga",
-        "Prenatal Yoga"
-      ]
-    },
-    {
-      name: 'Ella Ji',
-      role: ['Yin Yoga', 'Meditation'],
-      image: teacher3,
-      bio: ["Ella is an ex marketing manager who has always been very curios about the human mind and the holistic approaches, which led her to study Neuro Linguistic Programming and Aromatherapy. Her journey into yoga begun in a period were she was experiencing a deep depression and she couldn't find a purpose to live. Moved by an inner call, she decided to go to India and enroll in a yoga course and that's when her life had a turn point.", "After short, she healed completely from depression, and inspired by the incredible change yoga brought into her life she decided to continue to deepen her studies by taking teacher training courses, retreats and workshop specializing herself in Yin Yoga, meditation techniques (especially Buddhist, Osho, yoga nidra), Pranayama, and Reiki. For her Yin Yoga practice she takes inspiration from Sarah Powers, with whom she did a course in London; and Paul Grilley. Her classes are focused to release the blockages from the body, both mental and physical. In her cueing, you can find many anatomical as psychological and spiritual aspects."," She always puts great emphasis on breathing techniques during the class and meditation, both before and after the practice. Since her passion for music and naturopathy, she also likes to add mantra chanting, sound healing and aromatherapy in her classes. Her favourite motto is 'Change is hardest at the beginning, messiest in the middle and best at the end."],
-      education: [
-        "E-RYT 500 (Experienced Registered Yoga Teacher)",
-        "RPYT - Registered Prenatal Yoga Teacher",
-        "Yin Yoga Certifications from Paul Grilley",
-        "Yin Yoga Certification & Traditional Chinese Medicine (TCM) under Jo Phee",
-        "Traditional Chinese Medicine & Acupuncture - University of Shanghai",
-        "Reiki Healing Certification",
-        "Pranic Healing Certification",
-        "Aromatherapy Studies",
-        "Neuro-Linguistic Programming (NLP) Studies",
-        "Buddhist Philosophy Studies"
-      ],
-      experience: [
-        "10+ years of teaching experience",
-        "Worked with students from multiple countries across teacher trainings, workshops, & retreats",
-        "Leads specialized classes in meditation, yin yoga, & energy healing"
-      ],
-      expertise: [
-        "Yin Yoga",
-        "Meditation (Buddhist, Osho, Yoga Nidra)",
-        "Reiki Healing",
-        "Aromatherapy",
-        "Prenatal Yoga"
-      ]
-    },
+  name: 'Gagan Bhandari Ji',
+  role: ['Hatha Yoga', 'Teaching Methodology'],
+  image: teacher1,
+  bio: [
+    "Gagan Bhandari ji is a dedicated yoga teacher from Rishikesh, Uttarakhand, with over 12 years of teaching experience. He began practicing yoga at a young age and later completed his formal training at Rishikesh Gurus. He holds a Master’s Degree in Yoga (2021) and is a USA Yoga Alliance Certified Teacher.",
+    "He specializes in Hatha, Shivananda, Ashtanga, Iyengar, and Power Yoga. His empathetic teaching style helps students connect deeply and achieve their physical and emotional wellness goals."
+  ],
+  education: [
+    "Master’s Degree in Yoga – 2021",
+    "Formal Training at Rishikesh Gurus",
+    "USA Yoga Alliance Certified Teacher"
+  ],
+  experience: [
+    "12+ years of yoga teaching experience",
+    "Conducted online and offline classes",
+    "Led workshops, retreats, and teacher training programs",
+    "Taught Indian and international students"
+  ],
+  expertise: [
+    "Hatha Yoga",
+    "Ashtanga Yoga",
+    "Shivananda Yoga",
+    "Iyengar Yoga",
+    "Power Yoga",
+    "Pranayama & Breathwork",
+    "Yoga Therapy",
+    "Sanskrit Mantra Chanting",
+    "Alignment & Teaching Methodology"
+  ]
+}
+,
+{
+  name: 'Dilwar',
+  role: ['Senior Yoga Teacher', 'Hatha Yoga', 'Ashtanga Vinyasa'],
+  image: teacher2,
+  bio: [
+    "Dilwar was born and raised in Rishikesh, India, known as the birthplace of yoga. Growing up in a spiritual environment surrounded by ashrams and traditional teachers, yoga naturally became part of his daily life from an early age.",
+    "He began teaching professionally in 2018 and has since worked with students from many countries, sharing traditional yoga practices in a simple, practical, and accessible way. His teaching emphasizes patience, awareness, and steady progress."
+  ],
+  education: [
+    "Traditional Yoga Training in Rishikesh",
+    "Deep study under traditional yoga teachers",
+    "Continuous self-practice and advanced training"
+  ],
+  experience: [
+    "Teaching yoga professionally since 2018",
+    "Conducted retreats, workshops, and teacher trainings",
+    "Worked with international students",
+    "Experience teaching beginners to advanced practitioners"
+  ],
+  expertise: [
+    "Classical Hatha Yoga",
+    "Advanced Hatha Yoga",
+    "Ashtanga Vinyasa Yoga",
+    "Pranayama & Breath Awareness",
+    "Meditation",
+    "Shatkarma (Yogic Cleansing)",
+    "Alignment & Mindful Movement"
+  ]
+}
+,
+{
+  name: 'Yogi Sri Sachidananda',
+  role: ['Kundalini Yoga Master', 'Spiritual Teacher', 'Meditation Guide'],
+  image: teacher3,
+  bio: [
+    "Yogi Sri Sachidananda, born in 1972 into a spiritual family, developed a deep interest in spirituality from a young age. His inquisitive nature led him to study various spiritual scriptures and explore life’s deeper truths.",
+    "With over 15 years of teaching experience, he shares a unique approach that blends traditional yogic wisdom with scientific understanding, guiding students worldwide toward inner transformation and self-awareness."
+  ],
+  education: [
+    "Master’s Degree in Geography",
+    "Master’s Degree in Naturopathy & Yogic Science",
+    "Advanced Meditation Training – Brahma Kumaris (Raja Yoga)",
+    "12 Years Spiritual Study – Sri Aurobindo Ashram",
+    "20 Years Training – Bihar School of Yoga",
+    "Yoga Alliance USA Certified Instructor – 2017"
+  ],
+  experience: [
+    "15+ years teaching spiritual seekers worldwide",
+    "Expert in Kundalini Yoga training and workshops",
+    "Guided international retreats and meditation programs",
+    "Long-term traditional training under renowned spiritual institutions"
+  ],
+  expertise: [
+    "Kundalini Yoga",
+    "Meditation & Consciousness Practices",
+    "Pranayama & Energy Awakening",
+    "Spiritual Philosophy",
+    "Raja Yoga",
+    "Mind-Body Healing",
+    "Traditional Yogic Lifestyle Guidance"
+  ]
+},
     {
       name: 'Pankaj Ji',
       role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],

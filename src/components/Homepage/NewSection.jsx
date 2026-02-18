@@ -14,25 +14,25 @@ import teacher8 from '../../assets/images/ourteachers/teacher-sadhushri.webp';
 const YogaTeachersSection = () => {
   const teachers = [
   {
-    name: "Dhirendra Ji",
+    name: "Gagan Bhandari",
     specialty: "Hatha Yog",
     image: teacher1,
-    description: "Himalayan-born spiritual guide rooted in Ganga-side yogic traditions.",
+    description:'Gagan Bhandari ji is a dedicated yoga teacher from Rishikesh, Uttarakhand, with over 12 years of teaching experience. He began practicing yoga at a young age and later completed his formal training at Rishikesh Gurus. He holds a Master’s Degree in Yoga (2021) and is a USA Yoga Alliance Certified Teacher.',
     experience: "12+ years experience"
   },
   {
-    name: "Prahlad Ji",
+    name: "Dilwar",
     specialty: "Hatha Yog",
     image: teacher2,
-    description: "Energetic Hatha Yog teacher blending academics with deep practice.",
-    experience: "5+ years experience"
+    description: "Dilwar was born and raised in Rishikesh, India, known as the birthplace of yoga. Growing up in a spiritual environment surrounded by ashrams and traditional teachers, yoga naturally became part of his daily life from an early age.",
+    experience:  "Teaching yoga professionally since 2018",
   },
   {
-    name: "Amit Ji",
+    name: "Yogi Sri Sachidananda",
     specialty: "Hatha Yog",
     image: teacher3,
-    description: "Warm and disciplined teacher dedicated to authentic yogic teachings.",
-    experience: "10 years experience"
+    description:  "Yogi Sri Sachidananda, born in 1972 into a spiritual family, developed a deep interest in spirituality from a young age. His inquisitive nature led him to study various spiritual scriptures and explore life’s deeper truths.",
+    experience: "15+ years teaching spiritual seekers worldwide",
   },
   {
     name: "Ella Ji",
