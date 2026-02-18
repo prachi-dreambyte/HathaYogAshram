@@ -916,6 +916,7 @@
   background: #FFF8F0;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .divider {
@@ -952,80 +953,7 @@
   font-weight: 600;
 }
 
-/* ========================================
-   CONTACT SECTION
-   ======================================== */
-.contactSection {
-  padding: 2rem;
-  background: white;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
 
-.contactTitle {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 2.5rem;
-  color: #1A1A3E;
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.phoneNumber {
-  font-family: 'Philosopher', sans-serif;
-  font-size: 2.5rem;
-  color: #C41E3A;
-  text-decoration: none;
-  display: inline-block;
-  margin: 1rem 0 2rem;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-
-.phoneNumber:hover {
-  color: #1A1A3E;
-  transform: scale(1.05);
-}
-
-.mapContainer {
-  margin: 3rem 0;
-}
-
-.mapWrapper {
-  width: 100%;
-  height: 400px;
-  border-radius: 0px 0px 0px 50px;
-  overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.mapIframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-.address {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.1rem;
-  color: #444;
-  margin: 1.5rem 0;
-  line-height: 1.6;
-}
-
-.email a {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 1.1rem;
-  color: #C41E3A;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 600;
-}
-
-.email a:hover {
-  color: #1A1A3E;
-  text-decoration: underline;
-}
 
 /* ========================================
    RESPONSIVE BREAKPOINTS

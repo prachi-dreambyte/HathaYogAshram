@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from '../../assets/styles/retreatlinks/Yoga20DaysRetreat.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import BooksSection from 'components/MyBooks/Bookssection';
+import HowToReach from 'components/Homepage/HowToReach';
 
 const Yoga20DaysRetreat = () => {
   const [selectedYoga, setSelectedYoga] = useState(0);
@@ -957,7 +958,10 @@ const Yoga20DaysRetreat = () => {
             ))}
           </div>
         </section>
+
+        
       </main>
+       <HowToReach/>
     </div>
   );
 };
