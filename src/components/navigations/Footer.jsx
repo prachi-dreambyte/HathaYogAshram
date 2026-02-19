@@ -77,7 +77,7 @@ const Footer = () => {
             <div className={styles.logoWrapper}>
               <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
             </div>
-             <p className={styles.trustText}>All Rights Reserved with YogAshram Trust.</p> 
+             <p className={styles.trustText}>YogAshram Trust.</p> 
           </motion.div>
 
           {/* COLUMN 2 - QUICK LINKS */}
