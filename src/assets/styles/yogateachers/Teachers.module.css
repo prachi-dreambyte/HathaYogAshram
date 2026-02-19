@@ -4,7 +4,6 @@
 .container {
   min-height: 100vh;
   background: #FAFAFA;
-  font-family: 'Poppins', sans-serif;
 }
 
 /* Hero Section - Exact as your image */
@@ -143,9 +142,10 @@
 }
 
 .facultySubtitle {
-  font-size: 1.8rem;
+  font-size: 34px;
   font-weight: 600;
-  color: #2C2C2C;
+  color: #bd0005;
+  font-family: "Philosopher" , sans-serif ;
   margin-bottom: 0.5rem;
 }
 
@@ -180,10 +180,12 @@
 .facultyDescription {
   max-width: 800px;
   margin: 0 auto;
-  font-size: 0.95rem;
+  font-size: 18px;
   line-height: 1.7;
-  color: #666;
+  color: #000;
+  font-weight:600;
   text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 
 /* Teacher Cards Grid */
@@ -198,7 +200,7 @@
   display: grid;
   grid-template-columns: 1fr 380px;
   gap: 2rem;
-  background: white;
+ background-image: linear-gradient(#f3f3f3, #fff);
   border: 1px solid #E5E5E5;
   padding: 2.5rem;
   align-items: start;

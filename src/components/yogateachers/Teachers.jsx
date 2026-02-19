@@ -222,7 +222,7 @@ const Teachers = () => {
             A Good Teacher Doesn't Teach From The Book. A Good Teacher Teaches From The Heart
           </p>
           <h1 className={styles.mainTitle}>
-            Experienced Teachers at Hatha Yog Ashram, Rishikesh
+            Experienced Teachers at Hatha Yogashram, Rishikesh
           </h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
@@ -237,11 +237,11 @@ const Teachers = () => {
         <div className={styles.facultyHeader}>
           <p className={styles.facultyTitle}>Teaching Faculty</p>
           <h2 className={styles.facultySubtitle}>
-           Teaching Faculty – Hatha Yog Ashram, Rishikesh
+           Teaching Faculty – Hatha Yogashram, Rishikesh
           </h2>
           <div className={styles.decorativeLine}></div>
           <p className={styles.facultyDescription}>
-            Our teachers at Hatha Yog Ashram are dedicated practitioners of traditional yoga,
+            Our teachers at Hatha Yogashram are dedicated practitioners of traditional yoga,
             sharing authentic knowledge through discipline, compassion, and lived experience.
           </p>
         </div>
