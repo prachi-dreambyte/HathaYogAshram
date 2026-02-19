@@ -30,6 +30,11 @@ const FloatingApplyForm = () => {
     return () => window.removeEventListener("resize", detectHeader);
   }, []);
 
+  // Auto-open the form when user visits or refreshes the page
+  useEffect(() => {
+    setOpen(true);
+  }, []);
+
   // Prevent body scroll when modal is open
   useEffect(() => {
     if (open) {
@@ -61,7 +66,7 @@ const FloatingApplyForm = () => {
         </button>
       )}
 
-      {/* Full-Screen Overlay / Modal */}
+      {/* Full-Screen Overlay — starts BELOW header */}
       {(open || closing) && (
         <div
           className={`${styles.fullscreenOverlay} ${closing ? styles.overlayClosing : styles.overlayOpening}`}
