@@ -109,7 +109,7 @@ const KundaliniCourses = () => {
 
             {/* Header */}
             <motion.h2 className={styles.mainTitle} variants={fadeUp}>
-               Hatha Kundalini Courses Rishikesh No.1
+               200 Hour Hatha Kundalini Yoga Teacher Training Course
             </motion.h2>
             <motion.p className={styles.mainSubtitle} variants={fadeUp}>
               Teacher Training Courses
