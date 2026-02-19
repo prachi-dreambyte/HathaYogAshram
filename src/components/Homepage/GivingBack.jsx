@@ -13,12 +13,12 @@ const GivingBack = () => {
           <span className={styles.tag}>Seva & Conscious Living</span>
 
           <h2>
-            Hatha Yog Ashram <br />
+            Hatha Yogashram <br />
             <span>Giving Back to Society</span>
           </h2>
 
           <p>
-            At Hatha Yog Ashram, yoga is not just a practice on the mat —  
+            At Hatha Yogashram, yoga is not just a practice on the mat —  
             it is a way of living with awareness, compassion, and responsibility.
           </p>
 
@@ -38,7 +38,7 @@ const GivingBack = () => {
 
         {/* Right Image */}
         <div className={styles.imageCard}>
-          <img src={img3} alt="Hatha Yog Ashram social initiative" />
+          <img src={img3} alt="Hatha Yogashram social initiative" />
           <span className={styles.imageLabel}>
             Yoga • Seva • Transformation
           </span>

@@ -54,7 +54,7 @@ const HathaAshramSection = () => {
           className={styles.headingWrapper}
           variants={fadeUp}
         >
-          <h2>Best Authentic Yoga School Certified Yoga Alliance USA Hatha YogAshram Rishikesh, India</h2>
+          <h2>Best Authentic Yoga School Certified Yoga Alliance USA Hatha Yogashram Rishikesh, India</h2>
           <span className={styles.divider}>
             <img src={dividerImg} alt="divider" />
           </span>
@@ -82,7 +82,7 @@ const HathaAshramSection = () => {
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            Our Hatha Yog Ashram follows the traditional Guru–Shishya
+            Our Hatha Yogashram follows the traditional Guru–Shishya
             (Teacher–Student) lineage, offering authentic yogic teachings rooted
             in discipline, simplicity, and awareness.
           </motion.p>
@@ -129,7 +129,7 @@ const HathaAshramSection = () => {
           </motion.p>
 
           <motion.p variants={fadeUp}>
-            This Hatha Yog Ashram is a place where students not only learn yoga
+            This Hatha Yogashram is a place where students not only learn yoga
             techniques but also experience yogic living.
           </motion.p>
 

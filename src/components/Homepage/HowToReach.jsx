@@ -143,7 +143,7 @@ const HowToReach = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      aria-label="How to Reach Rishikesh Yoga Ashram"
+      aria-label="How to Reach Rishikesh Yogashram"
     >
       {/* Decorative Blobs */}
       <div className={styles.blob1} aria-hidden="true" />
@@ -162,7 +162,7 @@ const HowToReach = () => {
           <span className={styles.badge}>✦ Travel Guide</span>
           <h2 className={styles.mainTitle}>How to Reach Us</h2>
           <p className={styles.subTitle}>
-            Easy &amp; Comfortable Travel Options to Reach Our Yoga Ashram in Rishikesh —
+            Easy &amp; Comfortable Travel Options to Reach Our Yogashram in Rishikesh —
             Delhi to Rishikesh travel options by air, train &amp; bus.
           </p>
         </motion.div>
@@ -192,7 +192,7 @@ const HowToReach = () => {
             icon={<FaTrain />}
             title="By Train"
             subtitle="Affordable & Comfortable"
-            desc="Travel from New Delhi Railway Station to Rishikesh or <strong>Haridwar Junction</strong> (25 km from Rishikesh). Taxis and auto-rickshaws are always available for the onward journey to our yoga ashram in Rishikesh."
+            desc="Travel from New Delhi Railway Station to Rishikesh or <strong>Haridwar Junction</strong> (25 km from Rishikesh). Taxis and auto-rickshaws are always available for the onward journey to our yogashram in Rishikesh."
             headers={["Train", "Departs", "Arrives", "Via"]}
             rows={trains}
             btnText="Book Train on IRCTC"
@@ -232,7 +232,7 @@ const HowToReach = () => {
               onChange={() => setPickupOpen(!pickupOpen)}
             />
             <span className={styles.checkboxText}>
-              🚖 Need Yoga Ashram Pickup &amp; Drop Facility?
+              🚖 Need Yogashram Pickup &amp; Drop Facility?
             </span>
           </label>
 

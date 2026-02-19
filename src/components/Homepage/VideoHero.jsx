@@ -1,5 +1,5 @@
 import styles from "../../assets/styles/Homepage/VideoHero.module.css";
-import bgVideo from "../../assets/videos/videohero.mp4";
+import bgVideo from "../../assets/images/risikesh.mp4";
 
 const VideoHero = () => {
   return (
