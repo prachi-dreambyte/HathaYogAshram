@@ -1,127 +1,446 @@
-/* ── Floating Button ── */
+/* ══════════════════════════════════════════
+   FLOATING BUTTON
+   ══════════════════════════════════════════ */
 .floatingBtn {
   position: fixed;
   right: 0;
   top: 45%;
-  background: #b30b0b;
+  background: linear-gradient(135deg, #b30b0b, #6b1019);
   color: white;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 10px 0 0 10px;
   cursor: pointer;
   z-index: 9999;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 14px;
   white-space: nowrap;
   font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  box-shadow: -4px 4px 20px rgba(179, 11, 11, 0.4);
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  animation: btnEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
-/* ── Overlay ── */
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
+@keyframes btnEntrance {
+  from { transform: rotate(180deg) translateX(60px); opacity: 0; }
+  to   { transform: rotate(180deg) translateX(0);    opacity: 1; }
 }
 
-/* ── Slide Panel ── */
-.panel {
+.floatingBtn:hover {
+  padding: 14px 26px;
+  box-shadow: -6px 4px 28px rgba(179, 11, 11, 0.6);
+}
+
+/* ══════════════════════════════════════════
+   OVERLAY — OPEN STATE
+   ══════════════════════════════════════════ */
+.fullscreenOverlay {
   position: fixed;
   top: 0;
-  right: -563px;         /* hidden off-screen */
-  width: 560px;
-  height: 100vh;
-  height: 100dvh;        /* FIX: dynamic viewport — hides mobile browser bar */
-  /* background: #ffffff; */
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.2);
-  transition: right 0.4s ease;
-  z-index: 10000;
-  overflow-y: auto;
-  overflow-x: hidden;    /* FIX: nothing leaks horizontally */
-  padding-top: 0px;
-  box-sizing: border-box;
-      margin-top: 118px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  display: flex;
+  flex-direction: row;
 }
 
-.active {
-  right: 0;
+.overlayOpening {
+  animation: overlayFadeIn 0.4s ease forwards;
 }
+
+.overlayClosing {
+  animation: overlayFadeOut 0.45s ease forwards;
+}
+
+@keyframes overlayFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes overlayFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* ══════════════════════════════════════════
+   LEFT PANEL — OPEN & CLOSE
+   ══════════════════════════════════════════ */
+.leftPanel {
+  width: 40%;
+  min-width: 280px;
+  background: linear-gradient(145deg, #6b1019 0%, #3d0008 40%, #1a0003 100%);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  animation: leftSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.leftPanelClosing {
+  animation: leftSlideOut 0.45s cubic-bezier(0.55, 0, 0.78, 0) both !important;
+}
+
+@keyframes leftSlideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes leftSlideOut {
+  from { transform: translateX(0);     opacity: 1; }
+  to   { transform: translateX(-100%); opacity: 0; }
+}
+
+/* Left content staggered entrance */
+.leftContent {
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 320px;
+  animation: contentRise 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.15s both;
+}
+
+.leftContentClosing {
+  animation: contentSink 0.3s ease forwards !important;
+}
+
+@keyframes contentRise {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes contentSink {
+  from { transform: translateY(0);   opacity: 1; }
+  to   { transform: translateY(20px); opacity: 0; }
+}
+
+/* ══════════════════════════════════════════
+   LEFT PANEL INNER & DECORATIONS
+   ══════════════════════════════════════════ */
+.leftPanelInner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  box-sizing: border-box;
+}
+
+.decorCircle1 {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  top: -140px;
+  right: -140px;
+  pointer-events: none;
+  animation: circleSpin 18s linear infinite;
+}
+
+.decorCircle2 {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.06);
+  bottom: -80px;
+  left: -80px;
+  pointer-events: none;
+  animation: circleSpin 24s linear infinite reverse;
+}
+
+.decorCircle3 {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(179,11,11,0.25) 0%, transparent 70%);
+  top: 55%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: pulsate 3s ease-in-out infinite;
+}
+
+@keyframes circleSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulsate {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.6; }
+  50%       { transform: translate(-50%, -50%) scale(1.4); opacity: 1; }
+}
+
+.logoMark svg {
+  width: 52px;
+  height: 52px;
+  display: block;
+  animation: logoSpin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s both;
+}
+
+@keyframes logoSpin {
+  from { transform: scale(0) rotate(-180deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0deg);    opacity: 1; }
+}
+
+.leftHeading {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: clamp(24px, 2.8vw, 38px);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.3px;
+}
+
+.leftHeading em {
+  font-style: italic;
+  color: #f5c2c2;
+}
+
+.leftSub {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statNum {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.statLabel {
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════
+   RIGHT PANEL — OPEN & CLOSE
+   ══════════════════════════════════════════ */
+.rightPanel {
+  flex: 1;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  animation: rightSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.07s both;
+}
+
+.rightPanelClosing {
+  animation: rightSlideOut 0.45s cubic-bezier(0.55, 0, 0.78, 0) both !important;
+}
+
+@keyframes rightSlideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+@keyframes rightSlideOut {
+  from { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
+
+.rightScroll {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  animation: formFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+@keyframes formFadeUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* Scrollbar styling */
+.rightScroll::-webkit-scrollbar        { width: 5px; }
+.rightScroll::-webkit-scrollbar-track  { background: #eee; }
+.rightScroll::-webkit-scrollbar-thumb  { background: #c0c0c0; border-radius: 10px; }
 
 /* ── Close Button ── */
 .closeBtn {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #c70b0b;
-  color: white;
-  border: none;
-  width: 30px;
-  height: 30px;
+  top: 16px;
+  right: 16px;
+  background: white;
+  color: #555;
+  border: 1px solid #e0e0e0;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  line-height: 1;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: closeBtnPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.35s both;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
 
+@keyframes closeBtnPop {
+  from { transform: scale(0) rotate(-90deg); opacity: 0; }
+  to   { transform: scale(1) rotate(0deg);   opacity: 1; }
+}
+
+.closeBtn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: #b30b0b;
+  color: white;
+  border-color: #b30b0b;
+  transform: rotate(90deg) scale(1.1);
+}
 
 /* ══════════════════════════════════════════
-   MOBILE  ≤ 480px
-   Panel = full screen width, full height
+   MOBILE  ≤ 600px
    ══════════════════════════════════════════ */
-@media (max-width: 480px) {
-  /* Button moves to bottom-right corner */
+@media (max-width: 600px) {
   .floatingBtn {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
     top: auto;
     bottom: 20px;
     right: 20px;
     border-radius: 30px;
-    padding: 10px 16px;
-    font-size: 14px;
+    padding: 11px 20px;
+    font-size: 13px;
+    animation: btnEntranceMobile 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   }
 
-  /* Panel takes full viewport */
-  .panel {
-    width: 100%;          /* FIX: full screen width */
-    right: -100%;         /* FIX: hide = slide full width off-screen */
-    padding-top: 50px;    /* slightly more room for close button */
+  @keyframes btnEntranceMobile {
+    from { transform: translateY(60px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
   }
 
-  .active {
-    right: 0;
+  .fullscreenOverlay {
+    flex-direction: column;
+  }
+
+  .leftPanel {
+    width: 100%;
+    min-width: unset;
+    flex-shrink: 0;
+    min-height: 200px;
+    animation: topSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both !important;
+  }
+
+  .leftPanelClosing {
+    animation: topSlideOut 0.4s cubic-bezier(0.55, 0, 0.78, 0) both !important;
+  }
+
+  @keyframes topSlideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to   { transform: translateY(0);     opacity: 1; }
+  }
+
+  @keyframes topSlideOut {
+    from { transform: translateY(0);      opacity: 1; }
+    to   { transform: translateY(-100%);  opacity: 0; }
+  }
+
+  .rightPanel {
+    flex: 1;
+    animation: bottomSlideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.07s both !important;
+  }
+
+  .rightPanelClosing {
+    animation: bottomSlideOut 0.4s cubic-bezier(0.55, 0, 0.78, 0) both !important;
+  }
+
+  @keyframes bottomSlideIn {
+    from { transform: translateY(60px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+
+  @keyframes bottomSlideOut {
+    from { transform: translateY(0);   opacity: 1; }
+    to   { transform: translateY(60px); opacity: 0; }
+  }
+
+  .leftPanelInner {
+    padding: 28px 24px;
+    align-items: flex-start;
+  }
+
+  .leftContent {
+    gap: 14px;
+    max-width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .leftHeading { font-size: 18px; }
+  .leftSub     { display: none; }
+
+  .statsRow {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .closeBtn {
+    top: 10px;
+    right: 10px;
   }
 }
 
-
 /* ══════════════════════════════════════════
-   SMALL TABLETS  481px – 767px
-   Panel = 85% width, still comfortable
+   MEDIUM TABLETS  601px – 900px
    ══════════════════════════════════════════ */
-@media (min-width: 481px) and (max-width: 767px) {
-  .panel {
-    width: 85%;
-    right: -85%;
+@media (min-width: 601px) and (max-width: 900px) {
+  .leftPanel {
+    width: 34%;
+    min-width: 220px;
   }
 
-  .active {
-    right: 0;
-  }
-}
+  .leftHeading { font-size: 22px; }
 
-
-/* ══════════════════════════════════════════
-   TABLETS  768px – 1023px
-   Panel = 420px (original), comfortable fit
-   ══════════════════════════════════════════ */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .panel {
-    width: 420px;
-    right: -420px;
-  }
-
-  .active {
-    right: 0;
-  }
+  .statsRow    { flex-direction: column; gap: 8px; align-items: flex-start; }
+  .statDivider { width: 40px; height: 1px; }
 }

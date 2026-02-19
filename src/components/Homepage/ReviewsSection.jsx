@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/ReviewsSection.module.css";
 
-import yogaAlliance from "../../assets/images/yoga-alliance.webp";
+import yogaAlliance from "../../assets/images/YogaAlliance.webp";
 import tripadvisor from "../../assets/images/trip-advisor-logo.png";
 import google from "../../assets/images/Google-places-logo.webp";
 import facebook from "../../assets/images/facebook-rating.webp";

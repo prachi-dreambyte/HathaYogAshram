@@ -77,6 +77,7 @@ const Footer = () => {
             <div className={styles.logoWrapper}>
               <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
             </div>
+             <p className={styles.trustText}>All Rights Reserved with YogAshram Trust.</p> 
           </motion.div>
 
           {/* COLUMN 2 - QUICK LINKS */}
@@ -151,7 +152,7 @@ const Footer = () => {
             </ul>
             {/* logo1 centered below contact list */}
             <div className={styles.logoWrapper}>
-              <img src={logo1} alt="Hatha Yog Ashram" className={styles.logo} />
+              <img src={logo1} alt="Hatha Yog Ashram" className={styles.logo1} />
             </div>
             {/* Social Media */}
             <div className={styles.socials}>

@@ -65,6 +65,7 @@ import AncientYogicPractices from 'components/HomepageOverview/AncientYogicPract
 import FloatingApplyForm from "components/ApplyForm/FloatingApplyForm";
 import WhatsAppButton from 'components/whatsappbutton/WhatsAppButton';
 import AyurvedaPage from 'components/Ayurveda/Ayurveda';
+import NotFound from 'components/Error404/Error404';
 
 
 export default function Main() {
@@ -146,6 +147,7 @@ export default function Main() {
         <Route path="/Yoga-Nidra" element={<YogaNidra />}/>
         <Route path="/Yoga-Therapy" element={<YogaTherapy />}/>
         <Route path="/Ayurveda-Page" element={<AyurvedaPage />}/>
+         <Route path="*" element={<NotFound/>} />
       </Routes>
 
       {showHeaderFooter && <Footer />}

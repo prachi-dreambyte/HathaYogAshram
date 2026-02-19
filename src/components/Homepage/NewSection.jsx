@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../../assets/styles/Homepage/newsection.module.css';
-import teacher1 from '../../assets/images/ourteachers/teacher-dheeru.webp';
-import teacher2 from '../../assets/images/ourteachers/teacher-Prahlad.webp';
-import teacher3 from '../../assets/images/ourteachers/teacher-amit.webp';
+import teacher1 from '../../assets/images/ourteachers/teacher1.jpeg';
+import teacher2 from '../../assets/images/ourteachers/teacher2.jpeg';
+import teacher3 from '../../assets/images/ourteachers/teacher3.jpeg';
 import teacher4 from '../../assets/images/ourteachers/teacher-ella.webp';
-import teacher5 from '../../assets/images/ourteachers/teacher-jitender.webp';
+import teacher5 from '../../assets/images/ourteachers/teacher4.jpeg';
 import teacher6 from '../../assets/images/ourteachers/teacher-mandeep.webp';
 import teacher7 from '../../assets/images/ourteachers/teacher-hemlata.webp';
 import teacher8 from '../../assets/images/ourteachers/teacher-sadhushri.webp';
@@ -17,21 +17,21 @@ const YogaTeachersSection = () => {
     name: "Gagan Bhandari",
     specialty: "Hatha Yog",
     image: teacher1,
-    description:'Gagan Bhandari ji is a dedicated yoga teacher from Rishikesh, Uttarakhand, with over 12 years of teaching experience. He began practicing yoga at a young age and later completed his formal training at Rishikesh Gurus. He holds a Master’s Degree in Yoga (2021) and is a USA Yoga Alliance Certified Teacher.',
+    description:'Gagan Bhandari is a Rishikesh-based yoga teacher with 12+ years experience, a Master’s in Yoga, and USA Yoga Alliance certification.',
     experience: "12+ years experience"
   },
   {
     name: "Dilwar",
     specialty: "Hatha Yog",
     image: teacher2,
-    description: "Dilwar was born and raised in Rishikesh, India, known as the birthplace of yoga. Growing up in a spiritual environment surrounded by ashrams and traditional teachers, yoga naturally became part of his daily life from an early age.",
+    description: "Dilwar, born in Rishikesh, grew up in a spiritual environment surrounded by ashrams, where yoga naturally became part of his life.",
     experience:  "Teaching yoga professionally since 2018",
   },
   {
     name: "Yogi Sri Sachidananda",
     specialty: "Hatha Yog",
     image: teacher3,
-    description:  "Yogi Sri Sachidananda, born in 1972 into a spiritual family, developed a deep interest in spirituality from a young age. His inquisitive nature led him to study various spiritual scriptures and explore life’s deeper truths.",
+    description:  "Yogi Sri Sachidananda, born in 1972, developed early spiritual interest and studied scriptures deeply to explore life’s deeper truths.",
     experience: "15+ years teaching spiritual seekers worldwide",
   },
   {
@@ -42,11 +42,11 @@ const YogaTeachersSection = () => {
     experience: "10+ years experience"
   },
   {
-    name: "Jitender Ji",
+    name: "Dipendra Tripathi  ",
     specialty: "Hatha Yog",
     image: teacher5,
-    description: "Traditional Hatha Yog teacher carrying classical yogic wisdom.",
-    experience: "9 years experience"
+    description: "Dipendra Tripathi, raised in Swami Rama’s ashram in Rishikesh, is a yoga teacher specializing in Kundalini, Yin Yoga, meditation, and yoga therapy.",
+    experience: "Years of teaching in schools, private sessions, and yoga training programs"
   },
   {
     name: "Mandeep Ji",

@@ -1,0 +1,211 @@
+/* NotFound.module.css */
+
+.wrapper {
+  min-height: 100vh;
+background-image:url("../../images/grid6.png");
+  border: 1px solid rgba(189, 0, 5, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 12px 60px rgba(189, 0, 5, 0.08), 0 2px 10px rgba(0,0,0,0.06);
+  padding: 80px 48px 80px;
+  text-align: center;
+  /* max-width: 520px; */
+  position: relative;
+  z-index: 1;
+  animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Decorative lotus petals background */
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(189,0,5,0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(247,217,227,0.6) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.card {
+   background-image:url("../../images/grid6.png");
+  border: 1px solid rgba(189, 0, 5, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 12px 60px rgba(189, 0, 5, 0.08), 0 2px 10px rgba(0,0,0,0.06);
+  padding: 80px 48px 80px;
+  text-align: center;
+  /* max-width: 520px; */
+  width: 60%;
+  position: relative;
+  z-index: 1;
+  animation: fadeSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Om / Lotus Icon */
+.iconWrap {
+  margin-bottom: 20px;
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50%       { transform: scale(1.07); opacity: 1; }
+}
+
+.omSymbol {
+  font-size: 72px;
+  line-height: 1;
+  color: #bd0005;
+  display: inline-block;
+  filter: drop-shadow(0 4px 12px rgba(189,0,5,0.2));
+}
+
+/* Error code */
+.errorCode {
+  font-family: "Philosopher", sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: #bd0005;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #bd0005 30%, #ff6b6b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeSlideUp 0.9s 0.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mainTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #bd0005;
+  margin-bottom: 5px;
+  font-family: "Philosopher", sans-serif;
+  animation: fadeSlideUp 0.9s 0.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #bd0005, #f7a8b8);
+  border-radius: 99px;
+  margin: 14px auto 20px;
+  animation: fadeSlideUp 0.9s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.subText {
+  font-size: 20px;
+  color: #5a3535;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  animation: fadeSlideUp 0.9s 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mantra {
+  font-family: "Philosopher", sans-serif;
+  font-size: 16px;
+  color: #bd0005;
+  opacity: 0.75;
+  font-style: italic;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
+  animation: fadeSlideUp 0.9s 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Buttons */
+.btnGroup {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeSlideUp 0.9s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #bd0005, #e8474c);
+  color: #fff !important;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(189,0,5,0.3);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(189,0,5,0.38);
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: #bd0005 !important;
+  border: 2px solid #bd0005;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.22s ease, background 0.22s ease, color 0.22s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSecondary:hover {
+  background: #bd0005;
+  color: #fff !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Floating petals */
+.petal {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 60%;
+  background: rgba(189, 0, 5, 0.12);
+  animation: floatPetal linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatPetal {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}

@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../../assets/styles/yogateachers/Teachers.module.css';
-import teacher1 from '../../assets/images/ourteachers/teacher-dheeru.webp';
-import teacher2 from '../../assets/images/ourteachers/teacher-amit.webp';
-import teacher3 from '../../assets/images/ourteachers/teacher-ella.webp';
-import teacher4 from '../../assets/images/ourteachers/teacher-pankaj.webp';
+import teacher1 from '../../assets/images/ourteachers/teacher1.jpeg';
+import teacher2 from '../../assets/images/ourteachers/teacher2.jpeg';
+import teacher3 from '../../assets/images/ourteachers/teacher3.jpeg';
+import teacher4 from '../../assets/images/ourteachers/teacher4.jpeg';
 import teacher5 from '../../assets/images/ourteachers/teacher-jitender.webp';
 import teacher6 from '../../assets/images/ourteachers/teacher-Prahlad.webp';
 import teacher7 from '../../assets/images/ourteachers/teacher-mandeep.webp';
@@ -105,25 +105,28 @@ const Teachers = () => {
   ]
 },
     {
-      name: 'Pankaj Ji',
-      role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
-      image: teacher4,
-      bio: ["Pankaj Sharma was born and brought up in the foothills of Himalayas, Himachal Pradesh. After the completion of B.A in Sanskrit, he moved to Rishikesh and spent 8 years of his life in an ashram, learning yoga in the age-old Gurukul style leading a disciplined and yogic life. To Satiate his urge for knowledge Pankaj went on to pursue a Masters's degree in Yoga simultaneously teaching in various ashrams and Yoga schools.","Due to his early induction to ashram life, Pankaj at a very young age has carved a niche for himself in yoga with his teaching skills and knowledge in Vedas, Upanishads, and philosophy."],
-      education: [
-        "Bachelor's Degree in Sanskrit",
-        "Master's Degree in Yoga",
-        "E-RYT 500 (Experienced Registered Yoga Teacher)"
-      ],
-      experience: [
-        "10+ years of teaching experience"
-      ],
-      expertise: [
-        "Hatha Yog",
-        "Ashtanga Vinyasa",
-        "Alignment & Adjustment",
-        "Restorative Yoga"
-      ]
-    },
+  name: 'Dipendra Tripathi',
+  role: ['Yoga Teacher'],
+  image: teacher4,
+  bio: [
+    'Raised in Swami Rama’s ashram in Rishikesh, Dipendra specializes in Kundalini Yoga, Yin Yoga, meditation, and yoga therapy.'
+  ],
+  education: [
+    'M.A. in Yoga',
+    'M.Sc. in Chemistry'
+  ],
+  experience: [
+    'Years of teaching in schools, private sessions, and yoga training programs'
+  ],
+  expertise: [
+    'Kundalini Yoga',
+    'Yin Yoga',
+    'Meditation',
+    'Yoga Nidra',
+    'Yoga Therapy',
+    'Anatomy & Relaxation Techniques'
+  ]
+},
      {
       name: 'Jitender Ji',
       role: ['Hatha Yog', 'Ashtanga Vinyasa', 'Alignment & Adjustment'],
