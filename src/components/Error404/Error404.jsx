@@ -2,17 +2,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../../assets/styles/Error404/Error404.module.css";
 
-// Floating petals data
-const PETALS = [
-  { left: "10%",  size: 14, delay: 0,    duration: 8  },
-  { left: "25%",  size: 20, delay: 1.5,  duration: 11 },
-  { left: "45%",  size: 12, delay: 3,    duration: 9  },
-  { left: "60%",  size: 18, delay: 0.8,  duration: 13 },
-  { left: "78%",  size: 10, delay: 2.2,  duration: 7  },
-  { left: "88%",  size: 16, delay: 4,    duration: 10 },
-  { left: "5%",   size: 9,  delay: 5,    duration: 12 },
-  { left: "55%",  size: 22, delay: 1,    duration: 14 },
-];
+
 
     const NotFound = () => {
   const navigate = useNavigate();
