@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/KundaliniCourse.module.css";
-import kundalini200Img from "../../assets/images/Yoga2.jpg"; // replace with actual image
 import kundaliniImg from "../../assets/images/Yoga1.jpg"; // replace with actual image
 import { useNavigate } from "react-router-dom";
 /* ======================== */
