@@ -31,6 +31,8 @@ const courses = [
   { id: 12, name: "20 Days Yoga Retreat", price: "$69.99",  seats: 18, img: img12 , link:'/20-days-yoga-retreat', FormLink:''},
   { id: 13, name: "Meditation", price: "$114.99", seats: 0,  img: img13 , link:'/Meditation', FormLink:''},
   { id: 14, name: "Pranayama",  price: "$84.99",  seats: 11,  img: img14 , link:'/Pranayama', FormLink:''},
+  { id: 15, name: "Ayurveda",  price: "$100.99",  seats: 11,  img: img12 , link:'/Ayurveda', FormLink:''},
+  { id: 16, name: "Online Courses",  price: "$99.99",  seats: 11,  img: img1 , link:'/Pranayama', FormLink:''},
 ];
 
 export default function CourseCards() {
