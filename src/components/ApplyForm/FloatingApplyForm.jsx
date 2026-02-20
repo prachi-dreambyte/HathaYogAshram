@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom"; // <-- import useLocation
 import ApplyForm from "./ApplyForm";
 import styles from "../../assets/styles/ApplyForm/FloatingApplyForm.module.css";
 
@@ -6,6 +7,7 @@ const FloatingApplyForm = () => {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
+  const location = useLocation(); // <-- get current location
 
   // Detect sticky/fixed header height
   useEffect(() => {
@@ -30,10 +32,10 @@ const FloatingApplyForm = () => {
     return () => window.removeEventListener("resize", detectHeader);
   }, []);
 
-  // Auto-open the form when user visits or refreshes the page
+  // Auto-open the form on initial mount AND on every route change
   useEffect(() => {
     setOpen(true);
-  }, []);
+  }, [location.pathname]); // <-- dependency on pathname
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -54,6 +56,13 @@ const FloatingApplyForm = () => {
     }, 480);
   };
 
+  // Click on overlay (backdrop) closes the form
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   return (
     <>
       {/* Floating Apply Button */}
@@ -71,9 +80,13 @@ const FloatingApplyForm = () => {
         <div
           className={`${styles.fullscreenOverlay} ${closing ? styles.overlayClosing : styles.overlayOpening}`}
           style={{ top: headerHeight > 0 ? `${headerHeight}px` : 0 }}
+          onClick={handleOverlayClick}
         >
-          {/* Right form panel */}
-          <div className={`${styles.rightPanel} ${closing ? styles.rightPanelClosing : ""}`}>
+          {/* Right form panel — stop click propagation */}
+          <div
+            className={`${styles.rightPanel} ${closing ? styles.rightPanelClosing : ""}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               className={styles.closeBtn}
               onClick={handleClose}
