@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React from "react";
 import styles from "../../assets/styles/Homepage/CourseCards.module.css";
 import img1 from "../../assets/images/images.jpg";
 import img2 from "../../assets/images/international.webp";
