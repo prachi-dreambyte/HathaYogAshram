@@ -14,7 +14,6 @@ import WhatWeOffer from './WhatWeOffer';
 import YogaTeacherTraining from './YogaTeacherTraining';
 import VedicMantraCourse from './VedicMantraCourse';
 import YogaRetreat from './YogaRetreat';
-
 import YogaTeachersSection from './NewSection';
 import YogaOverview from './YogaOverview';
 import GivingBack from './GivingBack';
@@ -22,7 +21,6 @@ import GoogleReviews from './GoogleReviews';
 import YogaAlliance from './YoogaAlliance';
 import VideoHero from './VideoHero';
 import BooksSection from 'components/MyBooks/Bookssection';
-import EnrollmentForm from 'components/Enrollmentform/Enrollmentform';
 import KundaliniCourses from './KundaliniCourse';
 import AyurvedaTeaser from './Ayurveda';
 import CourseCards from './CourseCards';
