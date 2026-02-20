@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
 import styles from "../../assets/styles/Homepage/Ayurveda.module.css";
 // Adjust the image import path as needed
-import AyurvedaTeaserImg from "../../assets/images/Yoga5.jpg";
+import AyurvedaTeaserImg from "../../assets/images/course1.JPG";
 
 const AyurvedaTeaser = () => {
   return (
@@ -23,7 +23,7 @@ const AyurvedaTeaser = () => {
           <div className={styles.textColumn}>
             <h2 className={styles.title}>
               <FaLeaf className={styles.titleIcon} />
-              Discover Ayurveda
+               Shirodhara & Panchakarma
             </h2>
             <p className={styles.lead}>
               Ayurveda, the ancient “science of life,” offers a holistic path to

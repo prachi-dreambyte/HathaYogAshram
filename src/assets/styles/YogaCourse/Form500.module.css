@@ -1,5 +1,7 @@
 /* YogaCourse2Month.module.css */
-
+html {
+  scroll-behavior: smooth;
+}
 /* Container Styles */
 .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

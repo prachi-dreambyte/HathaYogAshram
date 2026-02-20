@@ -82,7 +82,7 @@ const Form100 = () => {
         </div>
 
         {/* Table */}
-        <div className={styles.tableWrapper}>
+        <div className={styles.tableWrapper} id="course-dates">
           {/* Table Header */}
           <div className={`row ${styles.tableHeader}`}>
             <div className="col-md-3 text-center">

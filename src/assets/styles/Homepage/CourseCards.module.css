@@ -1,0 +1,251 @@
+.page {
+  min-height: 100vh;
+   background-image: linear-gradient(to right, #fff, #d3bfbf);
+  padding: 48px 20px;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.headerBadge {
+  display: inline-block;
+  background: #bd0005;
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.headerTitle {
+   font-family: 'Philosopher', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #bd0005;
+  line-height: 1.15;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.accentSpan {
+  background: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.headerSub {
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+/* ── Grid ── */
+.gridWrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ── Card ── */
+.card {
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(247, 151, 30, 0.25);
+  border-color: rgba(247, 151, 30, 0.5);
+}
+
+/* ── Image ── */
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.08);
+}
+
+.categoryTag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffd200;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 210, 0, 0.3);
+}
+
+/* ── Card Body ── */
+.cardBody {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.courseName {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #bd0005;
+  line-height: 1.4;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Meta Row ── */
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.price {
+  background: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+
+/* ── Seats Badge ── */
+.seatsBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.seatsBadgeAvailable {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+}
+
+.seatsBadgeFull {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.dotGreen {
+  background: #10b981;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.dotRed {
+  background: #ef4444;
+  box-shadow: 0 0 6px #ef4444;
+}
+
+/* ── Divider ── */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin-bottom: 16px;
+}
+
+/* ── Buttons ── */
+.btnGroup {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btnBook {
+  flex: 1;
+  background: linear-gradient(90deg, #f7971e, #ffd200);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 0;
+  font-family: inherit;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  text-align: center;
+}
+
+.btnBook:hover {
+  opacity: 0.82;
+}
+
+.btnDetail {
+  flex: 1;
+  background: transparent;
+  color: #bd0005;
+  border: 1px solid #bd0005;
+  border-radius: 10px;
+  padding: 9px 0;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  text-align: center;
+}
+
+.btnDetail:hover {
+  border-color:  #bd0005;
+  color:  #bd0005;
+}
+
+/* ── Responsive ── */
+@media (max-width: 576px) {
+  .page {
+    padding: 32px 12px;
+  }
+  .headerTitle {
+    font-size: 1.8rem;
+  }
+}

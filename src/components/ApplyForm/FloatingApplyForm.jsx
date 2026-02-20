@@ -72,50 +72,6 @@ const FloatingApplyForm = () => {
           className={`${styles.fullscreenOverlay} ${closing ? styles.overlayClosing : styles.overlayOpening}`}
           style={{ top: headerHeight > 0 ? `${headerHeight}px` : 0 }}
         >
-          {/* Left decorative panel */}
-          <div className={`${styles.leftPanel} ${closing ? styles.leftPanelClosing : ""}`}>
-            <div className={styles.leftPanelInner}>
-              <div className={styles.decorCircle1} />
-              <div className={styles.decorCircle2} />
-              <div className={styles.decorCircle3} />
-              <div className={`${styles.leftContent} ${closing ? styles.leftContentClosing : ""}`}>
-                <div className={styles.logoMark}>
-                  <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="30" cy="30" r="28" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
-                    <path d="M30 10 C30 10, 20 22, 20 30 C20 38, 30 50, 30 50 C30 50, 40 38, 40 30 C40 22, 30 10, 30 10Z" fill="rgba(255,255,255,0.9)"/>
-                    <circle cx="30" cy="30" r="5" fill="#b30b0b"/>
-                  </svg>
-                </div>
-                <h1 className={styles.leftHeading}>
-                  Become an<br />
-                  <em>Internationally</em><br />
-                  Certified<br />
-                  Yoga Teacher
-                </h1>
-                <p className={styles.leftSub}>
-                  Transform your passion into purpose.<br />
-                  Start your journey today.
-                </p>
-                <div className={styles.statsRow}>
-                  <div className={styles.stat}>
-                    <span className={styles.statNum}>2000+</span>
-                    <span className={styles.statLabel}>Graduates</span>
-                  </div>
-                  <div className={styles.statDivider} />
-                  <div className={styles.stat}>
-                    <span className={styles.statNum}>50+</span>
-                    <span className={styles.statLabel}>Countries</span>
-                  </div>
-                  <div className={styles.statDivider} />
-                  <div className={styles.stat}>
-                    <span className={styles.statNum}>15+</span>
-                    <span className={styles.statLabel}>Years</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Right form panel */}
           <div className={`${styles.rightPanel} ${closing ? styles.rightPanelClosing : ""}`}>
             <button

@@ -180,7 +180,7 @@ const Form500 = () => {
         </div>
 
         {/* Table */}
-        <div className={styles.tableWrapper}>
+        <div className={styles.tableWrapper} id="course-dates3">
           {/* Table Header */}
           <div className={styles.tableHeader}>
             <div className={styles.headerCell}>

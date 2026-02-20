@@ -25,13 +25,14 @@ import BooksSection from 'components/MyBooks/Bookssection';
 import EnrollmentForm from 'components/Enrollmentform/Enrollmentform';
 import KundaliniCourses from './KundaliniCourse';
 import AyurvedaTeaser from './Ayurveda';
+import CourseCards from './CourseCards';
 
 export const Homepage = () => {
   return (
     <>
       <Hero />
       <YogaSchool />
-      <EnrollmentForm/>
+      <CourseCards/>
       <YogaTeacherTraining />
       <YogaRetreat />
       <KundaliniCourses/>

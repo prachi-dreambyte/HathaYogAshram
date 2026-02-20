@@ -296,11 +296,13 @@ const YogaOverview5 = () => {
                 onClick={() => setActive(item.key)}
               >
                 <div className={styles.itemContent}>
-                  <div className={styles.itemNumber}>{item.number}</div>
                   <div className={styles.itemIcon}>
                     <img src={item.icon} alt={item.title} />
                   </div>
-                  <h3>{item.title}</h3>
+                  <div className={styles.itemTitleRow}>
+                    <div className={styles.itemNumber}>{item.number}</div>
+                    <h3>{item.title}</h3>
+                  </div>
                   <p className={styles.itemDesc}>{content[item.key]}</p>
                   <Link to={item.link} className={styles.itemLink}>
                     Learn More →
