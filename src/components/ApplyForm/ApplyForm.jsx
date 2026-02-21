@@ -9,11 +9,10 @@ const ApplyForm = () => {
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.topHeading}>
-        Become Internationally Certified <br />
-        <span>Yoga Teacher</span>
+        Become Internationally Certified Yoga Teacher
       </h2>
 
-      <h3 className={styles.subHeading}>Apply Today!</h3>
+      <h3 className={styles.subHeading}>Apply Now!</h3>
 
       <form className={styles.form}>
         {/* ── Name + Email on same row using Bootstrap grid ── */}
