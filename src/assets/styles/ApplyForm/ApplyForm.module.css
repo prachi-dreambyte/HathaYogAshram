@@ -1,9 +1,7 @@
 .wrapper {
-  /* ── WIDER FORM: increased from 420px to 700px ── */
-  /* max-width: 700px; */
   width: 100%;
   margin: auto;
-  padding: 80px 300px;
+  padding: 40px 300px;
   background: #f3f3f3;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
