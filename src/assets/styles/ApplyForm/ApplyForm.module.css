@@ -9,7 +9,7 @@
 
 .topHeading {
   text-align: center;
-  font-size: 26px;
+  font-size: 20px;
   color: #bd0005;
   font-weight: 600;
 }
@@ -20,7 +20,7 @@
 
 .subHeading {
   text-align: center;
-  font-size: 30px;
+  font-size: 18px;
   color: #000;
   margin: 15px 0 25px;
   font-weight: 600;
@@ -32,7 +32,7 @@
 }
 
 .inputGroup {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -50,7 +50,7 @@
   padding: 12px;
   border-radius: 10px;
   border: 1px solid #ddd;
-  font-size: 14px;
+  font-size: 10px;
   outline: none;
   background: white;
   font-family: "Poppins", sans-serif;
@@ -129,8 +129,9 @@
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   transition: 0.3s;
-  width: 100%;
+  width: 50%;
   box-sizing: border-box;
+  margin: auto;
 }
 
 .submitBtn:hover {
