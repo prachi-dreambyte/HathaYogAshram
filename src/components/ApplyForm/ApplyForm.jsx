@@ -84,19 +84,19 @@ const ApplyForm = () => {
       <form className={styles.form}>
         {/* ── Name + Email on same row using Bootstrap grid ── */}
         <div className="row g-3 mb-0">
-          <div className="col-12 col-sm-4">
+          <div className="col-6 col-sm-4 col-md-4">
             <div className={styles.inputGroup}>
               <label>Name</label>
               <input type="text" placeholder="Full Name" />
             </div>
           </div>
-          <div className="col-12 col-sm-4">
+          <div className="col-6 col-sm-4 col-md-4">
             <div className={styles.inputGroup}>
               <label>Email Address *</label>
               <input type="email" placeholder="Email Address" />
             </div>
           </div>
-          <div className="col-12 col-sm-4">
+          <div className="col-6 col-sm-4 col-md-4">
         <div className={styles.inputGroup}>
           <label>Phone *</label>
           <div className={styles.phoneInput}>
@@ -105,16 +105,13 @@ const ApplyForm = () => {
           </div>
         </div>
         </div>
-        </div>
-
-         <div className="row g-3 mb-0">
-          <div className="col-12 col-sm-4">
+        <div className="col-6 col-sm-4 col-md-4">
         <div className={styles.inputGroup}>
           <label>Street Address</label>
           <input type="text" placeholder="Enter Full Address" />
         </div>
         </div>
-         <div className="col-12 col-sm-4">
+         <div className="col-6 col-sm-4 col-md-4">
        <div className={styles.inputGroup}>
           <label>Country</label>
           <select>
@@ -125,7 +122,7 @@ const ApplyForm = () => {
           </select>
         </div>
         </div>
-        <div className="col-12 col-sm-4">
+        <div className="col-6 col-sm-4 col-md-4">
         <div className={styles.inputGroup}>
           <label>Select Course</label>
           <select>
@@ -136,9 +133,7 @@ const ApplyForm = () => {
           </select>
         </div>
         </div>
-        </div>
-        <div className="row g-3 mb-0">
-          <div className="col-12 col-sm-6">
+          <div className="col-6 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Duration</label>
           <select>
@@ -147,7 +142,7 @@ const ApplyForm = () => {
           </select>
         </div>
         </div>
-        <div className="col-12 col-sm-6">
+        <div className="col-6 col-sm-6">
         <div className={styles.inputGroup}>
           <label>Where did you find us?</label>
           <select>
