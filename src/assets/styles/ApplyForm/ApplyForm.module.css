@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   margin: auto;
-  padding: 2px 300px;
+  padding: 10px 300px 5px 300px;
   background: #f3f3f3;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
@@ -247,7 +247,7 @@
   /* max-width: 700px; */
   width: 100%;
   margin: auto;
-  padding: 0px 300px;
+  padding: 10px 300px 5px 300px;
   background: #f3f3f3;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
@@ -255,22 +255,22 @@
 }
 @media (max-width: 1200px) {
   .wrapper {
-  padding: 0px 200px;
+  padding: 10px 200px 5px 200px;
 }
 }
 @media (max-width: 992px) {
   .wrapper {
-  padding: 0px 150px;
+  padding: 5px 150px;
 }
 }
 @media (max-width: 768px) {
    .wrapper {
-  padding: 0px 100px;
+  padding: 5px 100px;
 }
 }
 @media (max-width: 613px) {
    .wrapper {
-  padding: 35px 65px;
+  padding: 5px 65px;
 }
 }
 @media (max-width: 576px) {
@@ -284,7 +284,7 @@
 }
 @media (max-width: 575px) {
   .wrapper {
-    padding: 0px 25px;
+    padding: 5px 25px;
   }
   
 .inputGroup input,

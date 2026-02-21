@@ -156,7 +156,7 @@ const ApplyForm = () => {
         </div>
 
         {/* reCAPTCHA */}
-        <ReCaptcha />
+        {/* <ReCaptcha /> */}
 
         <button type="submit" className={styles.submitBtn}>
           Send Message
