@@ -166,7 +166,7 @@ const BasicAerialYoga = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Basic Aerial Yoga Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Discover the freedom and benefits of supported aerial practice
                 </p>
               </div>

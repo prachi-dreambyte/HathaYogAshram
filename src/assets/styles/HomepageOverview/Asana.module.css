@@ -6,7 +6,6 @@
 }
 
 .hathaYogaPage {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 
@@ -41,7 +40,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(248,228,228,0.3) 100%);
+  /* background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(248,228,228,0.3) 100%); */
+  background-image: url("../../images/grid2.png");
 }
 
 @keyframes fadeInUp {
@@ -84,6 +84,7 @@
 .heroTitle {
   color: #000;
   font-size: 4.5rem;
+  font-family: 'Philosopher', sans-serif;
   font-weight: 800;
   letter-spacing: -2px;
   text-shadow: 2px 2px 4px rgba(189, 0, 5, 0.1);
@@ -91,9 +92,11 @@
 }
 
 .heroDescription {
-  color: #333;
+  color: #000;
   font-size: 1.25rem;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.8;
+  font-weight: 500;
   max-width: 700px;
   margin: 0 auto;
   animation: fadeInUp 1s ease-out 0.4s both;
@@ -193,11 +196,13 @@
 
 /* Benefits Section */
 .benefitsSection {
-  background: linear-gradient(90deg, #fff 0%, #f8e4e4 100%);
+  /* background: linear-gradient(90deg, #fff 0%, #f8e4e4 100%); */
+  background-image: url("../../images/grid6.png");
   position: relative;
 }
 
 .sectionTitle {
+  font-family: 'Philosopher', sans-serif;
   font-size: 3rem;
   font-weight: 800;
   color: #000;
@@ -227,7 +232,7 @@
 }
 
 .benefitCard {
-  background: #fff;
+  background: linear-gradient(90deg, #fff 0%, #f8e4e4 100%);
   padding: 40px 30px;
   border-radius: 20px;
   text-align: center;
@@ -261,7 +266,7 @@
 }
 
 .benefitCard.active {
-  background: linear-gradient(135deg, #bd0005 0%, #8b0004 100%);
+  background: linear-gradient(90deg, #fff 0%, #f8e4e4 100%);
   transform: translateY(-15px) scale(1.05);
   border-color: #bd0005;
 }
@@ -269,7 +274,7 @@
 .benefitCard.active .benefitIcon,
 .benefitCard.active .benefitTitle,
 .benefitCard.active .benefitDescription {
-  color: #fff;
+  color: #000;
 }
 
 .benefitIcon {
@@ -328,7 +333,7 @@
 
 /* Poses Section */
 .posesSection {
-  background: #fff;
+ background-image: url("../../images/grid4.png");
   position: relative;
 }
 
@@ -368,6 +373,7 @@
   padding: 30px;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
+  background: #fff;
 }
 
 .poseCard:hover .poseCardInner {
@@ -440,7 +446,7 @@
 
 /* Practice Section */
 .practiceSection {
-  background: linear-gradient(90deg, #fff 0%, #f8e4e4 50%, #fff 100%);
+  background: #fff;
   position: relative;
 }
 
@@ -560,7 +566,7 @@
   align-items: flex-start;
   margin-bottom: 30px;
   padding: 20px;
-  background: #fff;
+  background: linear-gradient(90deg, #fff 0%, #f8e4e4 50%, #fff 100%);
   border-radius: 15px;
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
@@ -598,7 +604,7 @@
 
 /* CTA Section */
 .ctaSection {
-  background: linear-gradient(135deg, #000 0%, #1a0000 100%);
+  background-image: url("../../images/grid3.png");
   position: relative;
 }
 

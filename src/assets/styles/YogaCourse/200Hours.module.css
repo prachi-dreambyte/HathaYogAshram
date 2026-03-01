@@ -328,12 +328,12 @@
 }
 
 .contentCard {
- 
-  background-image: linear-gradient(to right, #fff, #f8e4e4);
-  border: 1px solid #E5E5E5;
+ background: #fff;
+  border: 1px solid #bd0005;
   padding: 2rem;
   align-items: center;
   transition: all 0.3s ease;
+  border-radius: 15px;
 }
 
 .contentCard:hover {
@@ -571,7 +571,8 @@
 }
 
 .scheduleCard {
-  background-image: linear-gradient(to right, #fff, #f8e4e4);
+  /* background-image: linear-gradient(to right, #fff, #f8e4e4); */
+  background: #fff;
   border: 1px solid #000;
   border-left: 4px solid #bd0005;
   padding: 1.5rem 2rem;
@@ -1249,7 +1250,7 @@ background-color: #fff;
 
 /* ==================== CTA SECTION ==================== */
 .ctaSection {
-   background-image:url("../../images/grid5.png");
+   background: #fff;
   padding: 5rem 2rem;
   text-align: center;
 }

@@ -104,16 +104,16 @@
 
 /* ==================== OVERVIEW SECTION ==================== */
 .overviewSection {
-  background: #fff;
-  padding: 70px 30px;
+  /* background: #fff; */
+  background-image: url("../../images/grid6.png");
+  /* padding: 70px 30px;
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: 3rem;
 }
 
 .sectionTag {
@@ -183,13 +183,14 @@
 
 .infoCard {
   display: grid;
-  grid-template-columns: 1fr 120px;
-  gap: 1.5rem;
-  background: #fff;
-  border: 1px solid #E5E5E5;
-  padding: 2rem;
-  align-items: start;
-  transition: all 0.3s ease;
+    grid-template-columns: 1fr 120px;
+    gap: 0px;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    padding: 2rem;
+    align-items: start;
+    transition: all 0.3s ease;
+    margin: 0px 135px;
 }
 
 .infoCard:hover {
@@ -254,7 +255,7 @@
 
 /* ==================== WHY RISHIKESH SECTION ==================== */
 .whyRishikeshSection {
-  background-image: url("../../images/grid4.png");
+  background-image: url("../../images/grid6.png");
  padding: 70px 30px;
 }
 
@@ -421,7 +422,7 @@ padding: 70px 30px;
 
 /* ==================== FEATURES SECTION ==================== */
 .FeaturesSection {
-   background-image: url("../../images/grid1.png");
+   background-image: url("../../images/grid9.png");
  padding: 70px 150px;
 }
 
@@ -486,7 +487,7 @@ padding: 70px 30px;
 
 /* ==================== CURRICULUM SECTION ==================== */
 .curriculumSection {
-   background-color: #fff;
+    background-image: url("../../images/grid4.png");
  padding: 70px 30px;
 }
 
@@ -555,7 +556,8 @@ padding: 70px 30px;
 
 /* ==================== SCHEDULE SECTION ==================== */
 .scheduleSection {
-   background-image: linear-gradient(to right, #fff, #f8e4e4);
+   /* background-image: linear-gradient(to right, #fff, #f8e4e4); */
+    background-image: url("../../images/grid1.png");
  padding: 70px 30px;
 }
 
@@ -786,7 +788,7 @@ padding: 70px 30px;
 
 /* ==================== CTA SECTION ==================== */
 .ctaSection {
-   background-image: url("../../images/grid3.png");
+   background: #fff;
  padding: 70px 30px;
   text-align: center;
 }
@@ -862,9 +864,9 @@ padding: 70px 30px;
 
 /* ─── Ultra-wide / Large Desktop ≥ 1920px ─── */
 @media (min-width: 1920px) {
-  .overviewSection {
+  /* .overviewSection {
     max-width: 1600px;
-  }
+  } */
 
   .heroSection {
     min-height: 600px;
@@ -915,7 +917,7 @@ padding: 70px 30px;
 @media (min-width: 1440px) and (max-width: 1919px) {
   .heroContent,
   .overviewSection {
-    max-width: 1400px;
+    padding: 50px 0px;
   }
 
   .mainTitle {

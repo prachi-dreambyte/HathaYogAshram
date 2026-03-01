@@ -5,7 +5,7 @@ html {
 /* Container Styles */
 .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f5f2;
+ background-image: url("../../images/grid4.png");
   min-height: 100vh;
   padding: 40px 0;
 }
@@ -17,7 +17,7 @@ html {
 }
 
 .headerTitle {
-  color: #4a1942;
+  color: #bd0005;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 20px;
@@ -33,13 +33,13 @@ html {
 }
 
 .dividerLine {
-  border-bottom: 2px solid #4a1942;
+  border-bottom: 2px solid #bd0005;
   width: 80px;
 }
 
 .dividerIcon {
   font-size: 2rem;
-  color: #4a1942;
+  color: #bd0005;
 }
 
 /* Tab Buttons */
@@ -53,20 +53,20 @@ html {
   font-size: 1.1rem;
   font-weight: 500;
   border-radius: 5px;
-  border: 2px solid #4a1942;
+  border: 2px solid #bd0005;
   cursor: pointer;
   transition: all 0.3s ease;
   margin: 0 5px;
 }
 
 .tabButtonActive {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
 .tabButtonInactive {
   background-color: white;
-  color: #4a1942;
+  color: #bd0005;
 }
 
 .tabButton:hover {
@@ -84,7 +84,7 @@ html {
 
 /* Table Header */
 .tableHeader {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
   padding: 1.5rem 1rem;
   display: grid;
@@ -107,7 +107,7 @@ html {
 
 .headerBadge {
   background-color: white;
-  color: #4a1942;
+  color: #bd0005;
   font-size: 0.85rem;
   padding: 6px 18px;
   border-radius: 20px;
@@ -184,7 +184,7 @@ html {
 }
 
 .seatsLeftPurple {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
@@ -228,7 +228,7 @@ html {
 }
 
 .bookButton {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
   padding: 12px 40px;
   font-weight: 500;
@@ -277,7 +277,7 @@ html {
 }
 
 .includedTabActive {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
@@ -299,7 +299,7 @@ html {
 }
 
 .includedTitle {
-  color: #4a1942;
+  color: #bd0005;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;

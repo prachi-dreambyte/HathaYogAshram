@@ -167,7 +167,7 @@ const HathaYoga = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Hatha Yoga Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Join thousands who have transformed their lives through traditional practice
                 </p>
               </div>

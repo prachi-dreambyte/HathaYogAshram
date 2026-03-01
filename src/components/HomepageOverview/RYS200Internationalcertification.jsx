@@ -211,7 +211,7 @@ const RYS200Certification = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Start Your Teaching Journey Today</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Join our internationally recognized RYS200 certification program and become a qualified yoga instructor
                 </p>
               </div>

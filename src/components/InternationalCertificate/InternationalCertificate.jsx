@@ -56,11 +56,11 @@ const InternationalCertificate = () => {
         }
 
         .hero-content {
-          background: #fff;
+         background: #fff;
           position: relative;
           z-index: 2;
           padding: 2rem 0;
-          max-width: 1200px;
+          // max-width: 1200px;
           margin: 0 auto;
           min-height: 100vh;
           display: flex;
@@ -318,19 +318,22 @@ const InternationalCertificate = () => {
         }
 
         .certification-section {
-          background: white;
+         background-image: url("../../images/grid4.png");
         }
 
         .eligibility-section {
-          background: #F5F0E8;
+          background: #fff;
         }
 
         .inclusions-section {
-          background: white;
+         background-image: linear-gradient(to right, #fff, #f8e4e4);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
         }
 
         .location-section {
-          background: #F5F0E8;
+        background: #fff;
         }
 
         .contact-section {
@@ -403,7 +406,7 @@ const InternationalCertificate = () => {
         }
 
         .inclusion-card {
-          background: linear-gradient(180deg, #F5F0E8 0%, #E8DCC8 100%);
+          background: #fff;
         }
 
         .inclusion-icon {
@@ -428,7 +431,10 @@ const InternationalCertificate = () => {
         }
 
         .location-info {
-          background: white;
+          background-image: linear-gradient(to right, #fff, #f8e4e4);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
           padding: 2.5rem;
           border-radius: 20px;
           box-shadow: 0 8px 32px rgba(139, 69, 19, 0.12);
@@ -654,7 +660,7 @@ const InternationalCertificate = () => {
         <section className="hero-section">
           <div className="hero-overlay"></div>
           <div className="hero-content">
-            <div className="text-center" style={{ width: '100%', maxWidth: '900px' }}>
+            <div className="text-center">
               <div className="hero-badge">
                 <span>✨ Transform Your Life ✨</span>
               </div>

@@ -77,7 +77,6 @@ const Footer = () => {
             <div className={styles.logoWrapper}>
               <img src={logo} alt="Hatha Yog Ashram" className={styles.logo} />
             </div>
-             <p className={styles.trustText}>YogAshram Trust.</p> 
           </motion.div>
 
           {/* COLUMN 2 - QUICK LINKS */}
@@ -154,6 +153,7 @@ const Footer = () => {
             <div className={styles.logoWrapper}>
               <img src={logo1} alt="Hatha Yog Ashram" className={styles.logo1} />
             </div>
+            <p className={styles.trustText}>YogAshram Trust.</p> 
             {/* Social Media */}
             <div className={styles.socials}>
               <motion.a

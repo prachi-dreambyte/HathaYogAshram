@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom"; // <-- import useLocation
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import ApplyForm from "./ApplyForm";
 import styles from "../../assets/styles/ApplyForm/FloatingApplyForm.module.css";
 
@@ -7,7 +7,8 @@ const FloatingApplyForm = () => {
   const [open, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
-  const location = useLocation(); // <-- get current location
+  const location = useLocation();
+  const isFirstMount = useRef(true); // tracks if this is the very first mount (i.e. a page refresh/load)
 
   // Detect sticky/fixed header height
   useEffect(() => {
@@ -32,10 +33,19 @@ const FloatingApplyForm = () => {
     return () => window.removeEventListener("resize", detectHeader);
   }, []);
 
-  // Auto-open the form on initial mount AND on every route change
+  // Auto-open ONLY on the homepage AND only on initial page load/refresh (not on client-side navigation)
   useEffect(() => {
-    setOpen(true);
-  }, [location.pathname]); // <-- dependency on pathname
+    const isHomepage = location.pathname === "/";
+
+    if (isFirstMount.current) {
+      // First mount = actual page load or refresh
+      isFirstMount.current = false;
+      if (isHomepage) {
+        setOpen(true);
+      }
+    }
+    // On subsequent route changes (client-side navigation), do nothing — form stays closed
+  }, [location.pathname]);
 
   // Prevent body scroll when modal is open
   useEffect(() => {

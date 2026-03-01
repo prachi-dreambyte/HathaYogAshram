@@ -3,7 +3,7 @@
 .coursesSection {
   width: 100%;
   padding: 80px 20px;
-  background: #fff;
+  background-image: url("../../images/grid5.png");
 }
 
 .coursesContainer {

@@ -167,7 +167,7 @@ const Mudra = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Master the Art of Mudras</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Unlock the ancient wisdom of sacred hand gestures for healing and transformation
                 </p>
               </div>

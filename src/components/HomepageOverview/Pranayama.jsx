@@ -166,7 +166,7 @@ const Pranayama = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Pranayama Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Unlock the power of breath and transform your energy and mind
                 </p>
               </div>

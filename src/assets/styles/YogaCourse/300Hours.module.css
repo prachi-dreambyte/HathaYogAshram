@@ -721,7 +721,8 @@
 
 /* ==================== CTA SECTION ==================== */
 .ctaSection {
-background-image: url("../../images/grid5.png");
+/* background-image: url("../../images/grid5.png"); */
+background: #fff;
   padding: 5rem 2rem;
 }
 

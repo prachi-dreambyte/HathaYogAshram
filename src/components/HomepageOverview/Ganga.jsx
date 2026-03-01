@@ -166,7 +166,7 @@ const PracticeAtGanga = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Practice at The Bank of Ganga ji</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Experience the transformative power of yoga in this sacred spiritual sanctuary
                 </p>
               </div>

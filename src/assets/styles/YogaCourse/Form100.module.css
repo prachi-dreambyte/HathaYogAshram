@@ -5,7 +5,8 @@ html {
 /* Container Styles */
 .container {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f5f2;
+  /* background-color: #f8f5f2; */
+  background-image: url("../../images/grid4.png");
   min-height: 100vh;
   padding: 40px 0;
 }
@@ -13,11 +14,11 @@ html {
 /* Header Styles */
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 10px;
 }
 
 .headerTitle {
-  color: #4a1942;
+  color: #bd0005;
   font-size: 2.5rem;
   font-weight: 600;
   margin-bottom: 20px;
@@ -28,19 +29,19 @@ html {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: #9b59b6;
+  color: #bd0005;
   font-size: 1.5rem;
 }
 
 .dividerLine {
-  border-bottom: 2px solid #9b59b6;
+  border-bottom: 2px solid #bd0005;
   width: 50px;
 }
 
 /* Tab Buttons */
 .tabContainer {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
 }
 
 .tabButton {
@@ -48,7 +49,7 @@ html {
   font-size: 1.1rem;
   font-weight: 500;
   border-radius: 5px;
-  border: 2px solid #4a1942;
+  border: 2px solid #bd0005;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -58,13 +59,13 @@ html {
 }
 
 .tabButtonActive {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
 .tabButtonInactive {
   background-color: white;
-  color: #4a1942;
+  color: #bd0005;
 }
 
 .tabButton:hover {
@@ -73,7 +74,7 @@ html {
 
 /* Table Container */
 .tableWrapper {
-  background-color: #4a1942;
+  background-color: #bd0005;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -81,7 +82,7 @@ html {
 
 /* Table Header */
 .tableHeader {
-  background-color: #4a1942;
+  background-color: #bd0005;
   border-bottom: 2px solid rgba(255, 255, 25, 0.1);
   padding: 1rem;
   color: white;
@@ -94,7 +95,7 @@ html {
 
 .tableBadge {
   background-color: white;
-  color: #4a1942;
+  color: #bd0005;
   font-size: 0.8rem;
   padding: 5px 15px;
   border-radius: 20px;
@@ -143,7 +144,7 @@ html {
 }
 
 .statusPrimary {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
@@ -165,7 +166,7 @@ html {
 }
 
 .bookButton {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
   padding: 10px 35px;
   font-weight: 500;
@@ -184,7 +185,7 @@ html {
 
 /* Included Section */
 .includedSection {
-  margin-top: 3rem;
+  margin-top: 20px;
 }
 
 .includedCard {
@@ -209,7 +210,7 @@ html {
 }
 
 .includedTabActive {
-  background-color: #4a1942;
+  background-color: #bd0005;
   color: white;
 }
 
@@ -227,7 +228,7 @@ html {
 }
 
 .includedTitle {
-  color: #4a1942;
+  color: #bd0005;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 30px;

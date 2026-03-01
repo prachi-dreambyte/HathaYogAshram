@@ -167,7 +167,7 @@ const Bandhas = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Unlock Your Inner Power</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Master the bandhas and discover advanced control over your energy and body
                 </p>
               </div>

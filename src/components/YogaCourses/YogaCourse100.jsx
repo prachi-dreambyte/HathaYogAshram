@@ -438,6 +438,7 @@ export default function YogaCourse100() {
           ))}
         </div>
       </section>
+      <InternationalCertificate/>
 
       {/* What's Included Section */}
       <section className={styles.includedSection}>
@@ -491,7 +492,6 @@ export default function YogaCourse100() {
           ))}
         </div>
       </section> */}
-      <InternationalCertificate/>
 
       <Hours24 />
 

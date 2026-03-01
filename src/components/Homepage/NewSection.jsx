@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from '../../assets/styles/Homepage/newsection.module.css';
+// import axios from "axios";
+// import { useEffect, useState } from "react";
 import teacher1 from '../../assets/images/ourteachers/teacher1.jpeg';
 import teacher2 from '../../assets/images/ourteachers/teacher2.jpeg';
 import teacher3 from '../../assets/images/ourteachers/teacher3.jpeg';
@@ -70,7 +72,38 @@ const YogaTeachersSection = () => {
     experience: "10+ years experience"
   }
 ];
+// const [teachers, setTeachers] = useState([]);
+// const [heading, setHeading] = useState({});
+// useEffect(() => {
+//   fetchTeachers();
+//   fetchHeading();
+// }, []);
 
+// const fetchTeachers = async () => {
+//   try {
+//     const res = await axios.get(
+//       "http://localhost:8000/api/teacher-name"
+//     );
+
+//     setTeachers(res.data.data || []);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// const fetchHeading = async () => {
+//   try {
+//     const res = await axios.get(
+//       "http://localhost:8000/api/teacher-heading"
+//     );
+
+//     if (res.data.data.length > 0) {
+//       setHeading(res.data.data[0]);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
 
   return (
     <section className={styles.yogaTeachersSection}>
@@ -78,9 +111,11 @@ const YogaTeachersSection = () => {
       <div className={styles.sectionContent}>
         <div className={styles.sectionHeader}>
           <h1 className={styles.sectionTitle}>Meet Our Teachers</h1>
+          {/* <h1 className={styles.sectionTitle}>{heading.mainHeading}</h1> */}
           <p className={styles.sectionSubtitle}>
             Experienced and certified yoga instructors dedicated to guiding you on your wellness journey
           </p>
+          {/* <p className={styles.sectionSubtitle}>{heading.subHeading}</p> */}
         </div>
 
         <div className={styles.teachersGrid}>
@@ -102,6 +137,37 @@ const YogaTeachersSection = () => {
             </div>
           ))}
         </div>
+        {/* <div className={styles.teachersGrid}>
+  {teachers.map((teacher, index) => (
+    <div key={index} className={styles.teacherItem}>
+      <div className={styles.teacherImageWrapper}>
+        <img
+          src={`http://localhost:8000/uploads/${teacher.img}`}
+          alt={teacher.teacherName}
+          className={styles.teacherImage}
+        />
+      </div>
+
+      <div className={styles.teacherOverlay}>
+        <h3 className={styles.teacherName}>
+          {teacher.teacherName}
+        </h3>
+
+        <p className={styles.teacherSpecialty}>
+          {teacher.specialty}
+        </p>
+
+        <p className={styles.teacherDescription}>
+          {teacher.subPara}
+        </p>
+
+        <p className={styles.teacherExperience}>
+          {teacher.experience}
+        </p>
+      </div>
+    </div>
+  ))}
+</div> */}
       </div>
     </section>
   );

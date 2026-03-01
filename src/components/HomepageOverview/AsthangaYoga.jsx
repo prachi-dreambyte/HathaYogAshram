@@ -166,7 +166,7 @@ const AshtangaYoga = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Ashtanga Yoga Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Experience the transformative power of dynamic, disciplined practice
                 </p>
               </div>

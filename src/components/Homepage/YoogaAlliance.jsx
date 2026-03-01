@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaAliiance.module.css";
-import heroVideo from "../../assets/videos/VID-20241125-WA0084.mp4";
+// import heroVideo from "../../assets/videos/VID-20241125-WA0084.mp4";
+const API = "http://localhost:8000/api/teacher-training";
 
 /* ===================== */
 /* Animation Variants */
@@ -35,6 +37,24 @@ const videoAnim = {
 };
 
 const YogaAlliance = () => {
+   const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(API);
+      if (res.data.data.length > 0) {
+        setData(res.data.data[0]); // take first record
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+    }
+  };
+
+  if (!data) return null;
   return (
     <motion.section
       className={styles.hero}
@@ -50,21 +70,24 @@ const YogaAlliance = () => {
           variants={staggerContainer}
         >
           <motion.span className={styles.subTitle} variants={fadeUp}>
-            Learn with Yoga Alliance® Certified School of Hatha Yog Teacher Training Rishikesh
+            {/* Learn with Yoga Alliance® Certified School of Hatha Yog Teacher Training Rishikesh */}
+            {data.mainHeading}
           </motion.span>
 
           <motion.h1 className={styles.title} variants={fadeUp}>
-            Best Yoga Teacher <br />
-            <span>Training in India</span>
+            {/* Best Yoga Teacher <br />
+            <span>Training in India</span> */}{data.subHeading}
           </motion.h1>
 
           <motion.p className={styles.boldText} variants={fadeUp}>
             Most Authentic Yoga Alliance Registered School
+            {/* {data.paragraph} */}
           </motion.p>
 
           <motion.p className={styles.desc} variants={fadeUp}>
             Are you dreaming of becoming a certified yoga instructor? Are you
             searching for the top yoga teacher training in Rishikesh, India?
+            {/* {data.paragraph} */}
           </motion.p>
 
           <motion.p className={styles.desc} variants={fadeUp}>
@@ -132,7 +155,7 @@ const YogaAlliance = () => {
         >
           <video
             className={styles.video}
-            src={heroVideo}
+            src={`http://localhost:8000/uploads/videos/${data.video}`}
             controls
             playsInline
             preload="metadata"

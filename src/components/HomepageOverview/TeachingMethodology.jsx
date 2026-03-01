@@ -166,7 +166,7 @@ const TeachingMethodology = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Teaching Methodology Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Transform into a confident, skilled yoga teacher with comprehensive training
                 </p>
               </div>

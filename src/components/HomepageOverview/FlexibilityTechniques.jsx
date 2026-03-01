@@ -167,7 +167,7 @@ const FlexibilityTechniques = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Transform Your Mobility Today</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Join thousands who have unlocked their full range of motion through proven techniques
                 </p>
               </div>

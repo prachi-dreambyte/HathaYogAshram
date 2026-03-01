@@ -87,20 +87,25 @@ export default function Dashboard(props) {
     }
     return activeNavbar;
   };
-  const getRoutes = (routes) => {
-    return routes.map((route, key) => {
-      if (route.layout === '/admin') {
-        return (
-          <Route path={`${route.path}`} element={route.component} key={key} />
-        );
-      }
-      if (route.collapse) {
-        return getRoutes(route.items);
-      } else {
-        return null;
-      }
-    });
-  };
+ const getRoutes = (routes) => {
+  return routes.map((route, key) => {
+    if (route.collapse) {
+      return getRoutes(route.items);
+    }
+
+    if (route.layout === "/admin") {
+      return (
+        <Route
+          path={route.path}
+          element={route.component}
+          key={key}
+        />
+      );
+    }
+
+    return null;
+  });
+};
   document.documentElement.dir = 'ltr';
   const { onOpen } = useDisclosure();
   document.documentElement.dir = 'ltr';

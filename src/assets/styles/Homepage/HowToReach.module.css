@@ -4,7 +4,7 @@
 
 .reachSection {
   padding: 90px 0;
-  background: linear-gradient(135deg, #fffaf6 0%, #fdf0e8 50%, #fce8e8 100%);
+  background-image: url("../../images/grid5.png");
   font-family: "Quicksand", sans-serif;
   position: relative;
   overflow: hidden;
@@ -277,7 +277,6 @@
   align-items: center;
   gap: 14px;
   cursor: pointer;
-  user-select: none;
 }
 
 .checkbox {

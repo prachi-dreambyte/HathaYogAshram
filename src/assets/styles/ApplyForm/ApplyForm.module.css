@@ -2,7 +2,8 @@
   width: 100%;
   margin: auto;
   padding: 20px 300px 20px 300px;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
+  background-image: url('../../images/grid5.png');
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
@@ -250,7 +251,8 @@
   width: 100%;
   margin: auto;
   padding: 20px 300px 20px 300px;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
+   background-image: url('../../images/grid5.png');
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }

@@ -55,7 +55,6 @@ const imageVariant = {
     },
   }),
 };
-
 const YogaSchool = () => {
   const infoData = [
     { icon: <FaCrown />, text: "India's No.1 Yoga School in Rishikesh"},

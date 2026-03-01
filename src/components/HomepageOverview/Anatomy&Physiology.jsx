@@ -166,7 +166,7 @@ const AnatomyPhysiology = () => {
             <div className="row align-items-center">
               <div className="col-lg-8">
                 <h2 className="text-white mb-3">Begin Your Anatomy & Physiology Journey</h2>
-                <p className="text-white-50 mb-0">
+                <p className="text-white mb-0">
                   Deepen your practice with scientific understanding and intelligent movement
                 </p>
               </div>

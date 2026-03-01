@@ -157,7 +157,7 @@ const Header = () => {
 
             <Link to="/payment" onClick={closeAll}>Payment</Link>
             <Link to="/contact-us" onClick={closeAll}>Contact</Link>
-            <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Apply Today</Link>
+            <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Register Now</Link>
           </nav>
 
           {/* HAMBURGER */}
@@ -207,7 +207,7 @@ const Header = () => {
               <Link to="/Ayurveda-Page" onClick={closeAll} className={styles.mobileLink}>Ayurveda</Link>
               <Link to="/payment" onClick={closeAll} className={styles.mobileLink}>Payment</Link>
               <Link to="/contact-us" onClick={closeAll} className={styles.mobileLink}>Contact</Link>
-              <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Apply Today</Link>
+              <Link to="/BookingForm" className={styles.applyBtn} onClick={closeAll}>Register Now</Link>
             </motion.div>
           )}
         </AnimatePresence>

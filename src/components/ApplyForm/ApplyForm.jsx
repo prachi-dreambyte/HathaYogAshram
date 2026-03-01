@@ -12,7 +12,7 @@ const ApplyForm = () => {
         Become Internationally Certified Yoga Teacher
       </h2>
 
-      <h3 className={styles.subHeading}>Apply Now!</h3>
+      <h3 className={styles.subHeading}>Apply Today!</h3>
 
       <form className={styles.form}>
         {/* ── Name + Email on same row using Bootstrap grid ── */}
