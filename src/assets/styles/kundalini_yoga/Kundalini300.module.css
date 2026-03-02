@@ -7,6 +7,7 @@
 /* Page Container */
 .container {
   font-family: 'Quicksand', sans-serif;
+  background-image: url("../../images/grid11.png");
 }
 
 /* Content Container */

@@ -7,6 +7,7 @@
 /* Page Container */
 .container {
   font-family: 'Quicksand', sans-serif;
+  background-image: url("../../images/grid10.png");
 }
 
 /* Content Container */
@@ -243,6 +244,7 @@
   padding: 80px 24px;
   position: relative;
   overflow: hidden;
+  background-image: url("../../images/grid5.png");
 }
 
 .floatingSection::before {
