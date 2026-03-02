@@ -244,6 +244,7 @@
   padding: 80px 24px;
   position: relative;
   overflow: hidden;
+  background-color: #f9e7e7;
 }
 
 .floatingSection::before {
@@ -344,7 +345,7 @@
 .sectionHeader {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 60px;
+  margin: 0 auto 30px;
   position: relative;
   z-index: 1;
 }
@@ -411,7 +412,7 @@
    ================================================ */
 
 .overviewSection {
-  background: white;
+ background-image: url("../../images/grid6.png");
   position: relative;
   overflow: hidden;
 }
@@ -582,7 +583,7 @@
    ================================================ */
 
 .missionSection {
-  background: #f8f6f3;
+  background-image: url("../../images/grid9.png");
   position: relative;
   overflow: hidden;
 }
@@ -701,7 +702,7 @@
    ================================================ */
 
 .valuesSection {
-  background: white;
+ background-image: url("../../images/grid1.png");
   position: relative;
   overflow: hidden;
 }
@@ -770,7 +771,7 @@
    ================================================ */
 
 .timelineSection {
-  background: #f8f6f3;
+  background-image: url("../../images/grid7.png");
   position: relative;
   overflow: hidden;
 }
@@ -810,7 +811,7 @@
 .timelineItem {
   display: flex;
   gap: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: relative;
   align-items: flex-start;
   cursor: pointer;
@@ -851,7 +852,7 @@
 .timelineContent {
   flex: 1;
   background: white;
-  padding: 24px 32px;
+  padding: 15px 32px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
@@ -883,7 +884,7 @@
    ================================================ */
 
 .teachersSection {
-  background: white;
+  background-image: url("../../images/grid6.png");
   position: relative;
   overflow: hidden;
 }
@@ -990,7 +991,7 @@
    ================================================ */
 
 .whyChooseSection {
-  background: #f8f6f3;
+  background-image: url("../../images/grid8.png");
   position: relative;
   overflow: hidden;
 }
@@ -1143,8 +1144,7 @@
    FACILITIES SECTION
    ================================================ */
 
-.facilitiesSection {
-  background: #f8f6f3;
+.facilitiesSection {background-image:url("../../images/grid11.png") ; 
   position: relative;
   overflow: hidden;
 }
