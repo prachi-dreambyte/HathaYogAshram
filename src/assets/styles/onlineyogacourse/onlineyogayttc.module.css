@@ -1,22 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-:root {
-  --primary-red: #C41E3A;
-  --deep-red: #8B0000;
-  --light-red: #DC143C;
-  --soft-red: #FFE4E1;
-  --gold: #D4AF37;
-  --dark-gray: #2C2C2C;
-  --light-gray: #F5F5F5;
-  --white: #FFFFFF;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .container {
   width: 100%;
   overflow-x: hidden;
@@ -298,7 +279,7 @@
 /* ========== COURSES SECTION ========== */
 .coursesSection {
   padding: 6rem 2rem;
-  background: var(--light-gray);
+background-image: url("../../images/grid10.png");
   position: relative;
 }
 
@@ -413,7 +394,7 @@
 /* ========== BOOKING SECTION ========== */
 .bookingSection {
   padding: 6rem 2rem;
-  background: var(--white);
+  background-image: url("../../images/grid1.png");
   position: relative;
 }
 
@@ -558,7 +539,7 @@
 /* ========== TESTIMONIALS SECTION ========== */
 .testimonialsSection {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, var(--soft-red) 0%, var(--light-gray) 100%);
+  background-image: url("../../images/grid2.png");
 }
 
 .testimonialsGrid {
@@ -742,7 +723,7 @@
 /* ========== CERTIFICATION SECTION ========== */
 .certificationSection {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, var(--soft-red) 0%, var(--white) 50%, var(--soft-red) 100%);
+  background-image: url("../../images/grid4.png");
   position: relative;
   overflow: hidden;
 }
@@ -751,7 +732,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 70px;
   margin-bottom: 3rem;
   flex-wrap: wrap;
   animation: fadeIn 1s ease-out;
@@ -783,12 +764,13 @@
 
 .certText {
   font-family: "Quicksand", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.9;
-  color: #555;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  padding: 0 2rem;
+font-size: 20px;
+    line-height: 1.9;
+    color: #000;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+    font-weight: 500;
 }
 
 .certText strong {
@@ -821,7 +803,7 @@
 /* ========== HOW IT WORKS SECTION ========== */
 .howItWorksSection {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, var(--light-gray) 0%, var(--soft-red) 100%);
+  background-image: url("../../images/grid6.png");
 }
 
 .stepsContainer {
@@ -834,7 +816,7 @@
 }
 
 .stepCard {
-  background: var(--white);
+ background: #f9e7e7;
   padding: 2.5rem;
   border-radius: 20px;
   text-align: center;
@@ -879,10 +861,7 @@
 /* ========== FINAL CTA SECTION ========== */
 .finalCta {
   padding: 8rem 2rem;
-  background: linear-gradient(135deg,
-      var(--deep-red) 0%,
-      var(--primary-red) 50%,
-      var(--deep-red) 100%);
+  background-image: url("../../images/grid2.png");
   position: relative;
   overflow: hidden;
 }
@@ -891,7 +870,6 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   opacity: 0.3;
 }
 
@@ -915,6 +893,7 @@
 
 .ctaTitle {
   font-family: "Philosopher", sans-serif;
+  color: #bd0005;
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -923,6 +902,7 @@
 .ctaText {
   font-family: "Quicksand", sans-serif;
   font-size: 1.3rem;
+  color: #000;
   line-height: 1.8;
   margin-bottom: 3rem;
   opacity: 0.95;

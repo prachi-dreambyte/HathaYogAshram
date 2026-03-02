@@ -1,20 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-/* ==================== ROOT VARIABLES ==================== */
-:root {
-  --primary-red: #C41E3A;
-  --primary-dark: #8B1538;
-  --bg-cream: #FAFAFA;
-  --bg-white: #ffffff;
-  --text-primary: #2d3748;
-  --text-secondary: #4a5568;
-  --text-light: #7f8c8d;
-  --border-light: #E5E5E5;
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 6px 20px rgba(196, 30, 58, 0.15);
-}
-
 /* ==================== HERO SECTION ==================== */
 .hero {
   position: relative;
@@ -61,7 +44,7 @@
 
 /* ==================== CONTACT SECTION ==================== */
 .contactSection {
-  background: var(--bg-cream);
+  background-image:url("../../images/grid10.png") ;
   padding: 4rem 2rem;
   position: relative;
 }
@@ -175,10 +158,10 @@
 .inputGroup label {
   display: block;
   font-family: 'Quicksand', sans-serif;
-  font-size: 0.9rem;
+  font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  color: var(--text-primary);
+  color: #000;
   margin-bottom: 0.5rem;
 }
 
@@ -188,8 +171,8 @@
   padding: 0.9rem 1.1rem;
   font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
-  color: var(--text-primary);
-  background: var(--bg-cream);
+  color: #000;
+  background: beige;
   border: 2px solid var(--border-light);
   border-radius: 0;
   transition: all 0.3s ease;
@@ -238,7 +221,7 @@
   position: relative;
   width: 20px;
   height: 20px;
-  border: 2px solid var(--border-light);
+  border: 2px solid #000;
   border-radius: 0;
   background: var(--bg-white);
   transition: all 0.3s ease;
@@ -359,13 +342,14 @@
   width: 48px;
   height: 48px;
   flex-shrink: 0;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000;
 }
 
 .locationInfo h4 {
   font-family: 'Philosopher', serif;
   font-size: 1.5rem;
   font-weight: 700;
+  color: #000;
   margin: 0 0 0.5rem;
   letter-spacing: 0.5px;
 }
@@ -374,6 +358,7 @@
   font-family: 'Quicksand', sans-serif;
   font-size: 0.95rem;
   margin: 0.25rem 0;
+  color: #000;
   opacity: 0.9;
   font-weight: 400;
 }
@@ -490,7 +475,7 @@
 
 /* ==================== DECORATIVE FOOTER ==================== */
 .decorativeFooter {
-  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-red) 100%);
+ background-image: url("../../images/grid6.png");
   padding: 4rem 2rem;
   text-align: center;
   position: relative;
@@ -518,8 +503,9 @@
   font-family: 'Philosopher', serif;
   font-size: 2.8rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.95);
+  color: #000;
   margin: 0 0 0.75rem;
+
   letter-spacing: 3px;
 }
 

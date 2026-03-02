@@ -5,7 +5,7 @@
    ======================================== */
 .container {
   min-height: 100vh;
-  background: #FAFAFA;
+ background-image: url("../../images/grid11.png");
   font-family: 'Quicksand', sans-serif;
 }
 
@@ -175,7 +175,7 @@
    ======================================== */
 .whatSection {
   padding:  2rem;
-  background: #FFF8F0;
+  background-image: url("../../images/grid1.png");
 }
 
 .contentGrid {
@@ -256,7 +256,7 @@
    ======================================== */
 .whySection {
   padding: 2rem;
-  background: white;
+  background-image: url("../../images/grid4.png");
 }
 
 .omCard {

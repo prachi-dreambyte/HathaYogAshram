@@ -5,7 +5,7 @@
    ============================================ */
 .container {
     min-height: 100vh;
-    background: #FAFAFA;
+     background-image: url("../../images/grid11.png");
     font-family: 'Quicksand', sans-serif;
     overflow-x: hidden;
 }
@@ -1115,7 +1115,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    user-select: none;
 }
 
 .faqNumber {

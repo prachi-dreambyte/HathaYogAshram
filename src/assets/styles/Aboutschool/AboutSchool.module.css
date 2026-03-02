@@ -5,7 +5,8 @@
    ======================================== */
 .container {
   min-height: 100vh;
-  background: #FAFAFA;
+  /* background: #FAFAFA; */
+  background-image: url("../../images/grid10.png");
   font-family: 'Poppins', sans-serif;
 }
 
@@ -1050,7 +1051,7 @@
    FOOTER
    ======================================== */
 .footer {
-  background: linear-gradient(135deg, #2C2C2C 0%, #1A1A1A 100%);
+  background:#bd0005;
   color: white;
   padding: 3.5rem 2rem;
   text-align: center;
@@ -1080,9 +1081,9 @@
 }
 
 .footerText {
-  font-size: 1.15rem;
+  font-size: 20px;
   opacity: 0.9;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 0.3px;
 }
 

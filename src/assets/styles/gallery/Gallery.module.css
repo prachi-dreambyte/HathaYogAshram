@@ -5,8 +5,7 @@
    ======================================== */
 .wrapper {
   min-height: 100vh;
-  background: #FAFAFA;
-  font-family: 'Poppins', sans-serif;
+   background-image: url("../../images/grid11.png");
 }
 
 /* ========================================
@@ -15,9 +14,10 @@
 .heroSection {
   position: relative;
   padding: 4rem 2rem 3rem;
-  background: linear-gradient(135deg, rgba(212, 105, 30, 0.9) 0%, rgba(196, 30, 58, 0.85) 100%),
-              url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600') center/cover;
-  min-height: 350px;
+  /* background: linear-gradient(135deg, rgba(212, 105, 30, 0.9) 0%, rgba(196, 30, 58, 0.85) 100%),
+              url('https://images.unsplash.com/photo-1545389336-cf090694435e?w=1600') center/cover; */
+  background-image: url("../../images/AccommodationBanner.webp");
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@
 }
 
 .topLabel {
-  color: white;
+  color: #C41E3A;
   font-weight: 600;
   font-size: 1rem;
   display: block;
@@ -62,7 +62,7 @@
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: #000;
   margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
@@ -93,6 +93,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
+  background:#f9e7e7;
+  margin-top: 40px;
 }
 
 /* ========================================
@@ -349,7 +351,6 @@
   border-radius: 3px;
   font-weight: 300;
   line-height: 1;
-  backdrop-filter: blur(10px);
 }
 
 .prevBtn:hover,

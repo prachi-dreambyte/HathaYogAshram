@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from '../../assets/styles/onlineyogacourse/onlineyogayttc.module.css';
-import logo1 from '../../assets/images/yoga-alliance-logo-1-e1725693185665.jpg';
-import logo2 from '../../assets/images/yoga-alliance-logo-2.png';
-import logo3 from '../../assets/images/RYS300.png';
-import logo4 from '../../assets/images/images500.png';
-import logo5 from '../../assets/images/3.png';
+import logo1 from '../../assets/images/brands/RPYS.webp';
+import logo2 from '../../assets/images/brands/200.webp';
+import logo3 from '../../assets/images/brands/300.webp';
+import logo4 from '../../assets/images/brands/500.webp';
+// import logo5 from '../../assets/images/3.png';
 import { useNavigate } from 'react-router-dom';
 import BooksSection from 'components/MyBooks/Bookssection';
 
@@ -432,7 +432,6 @@ const OnlineYTTC = () => {
           <img src={logo2} alt="RYS 200" className={styles.certLogo} />
           <img src={logo3} alt="RYS 300" className={styles.certLogo} />
           <img src={logo4} alt="RYS 500" className={styles.certLogo} />
-          <img src={logo5} alt="RYS 500" className={styles.certLogo} />
         </div>
 
         <div className={styles.certContent}>

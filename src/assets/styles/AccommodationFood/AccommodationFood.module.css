@@ -5,8 +5,7 @@
    ======================================== */
 .wrapper {
   min-height: 100vh;
-  background: #FAFAFA;
-  font-family: 'Poppins', sans-serif;
+  background-image: url("../../images/grid10.png");
 }
 
 /* ========================================
@@ -111,6 +110,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
+  background: #fff;
 }
 
 /* ========================================
@@ -188,7 +188,7 @@
   gap: 1rem;
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
-  background: white;
+ background: beige;
   border-radius: 3px;
   border-left: 4px solid #D2691E;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);

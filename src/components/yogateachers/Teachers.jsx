@@ -318,23 +318,7 @@ const Teachers = () => {
           ))}
         </div>
       </section>
-       <section className={styles.hero}>
-      <div className={styles.content}>
-        <h1 className={styles.title}>
-          Experience the Best Yoga Teacher Training Course of Your Life.
-        </h1>
-
-        <p className={styles.subtitle}>
-          Rishikesh Yogkulam Exists To Bring The Authentic Teachings Of Yoga Back
-          to yoga; both on and off the mat.
-        </p>
-
-        <button className={styles.ctaBtn}>
-          Join Our Course Now
-        </button>
-      </div>
-    </section>
-    <section className={styles.section}>
+      <section className={styles.section}>
       <div className={styles.heading}>
         <span>Short & Sweet Videos</span>
         <h2>Yoga Moments In Motion</h2>
@@ -355,6 +339,24 @@ const Teachers = () => {
         ))}
       </div>
     </section>
+    
+       <section className={styles.hero}>
+      <div className={styles.content}>
+        <h1 className={styles.title}>
+          Experience the Best Yoga Teacher Training Course of Your Life.
+        </h1>
+
+        <p className={styles.subtitle}>
+          Rishikesh Yogkulam Exists To Bring The Authentic Teachings Of Yoga Back
+          to yoga; both on and off the mat.
+        </p>
+
+        <button className={styles.ctaBtn}>
+          Join Our Course Now
+        </button>
+      </div>
+    </section>
+    
     </div>
   );
 };

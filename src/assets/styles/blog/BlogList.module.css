@@ -5,8 +5,7 @@
    ======================================== */
 .wrapper {
   min-height: 100vh;
-  background: #FAFAFA;
-  font-family: 'Poppins', sans-serif;
+  background-image: url("../../images//grid6.png");
 }
 
 /* ========================================
@@ -45,6 +44,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
+
 }
 
 .topLabel {
@@ -93,6 +93,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
+  background:#f9e7e7;
 }
 
 /* ========================================

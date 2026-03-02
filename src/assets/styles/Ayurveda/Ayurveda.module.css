@@ -1,13 +1,12 @@
 /* AyurvedaPage.module.css */
 .pageWrapper {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #2d3e2d;
+  background-image: url("../../images/grid11.png");
   overflow-x: hidden;
 }
 
 /* Hero */
 .hero {
- background-image: url("../../images/grid5.png");
+ background-image: url("../../images/ourteacher.jpeg");
   min-height: 70vh;
 }
 .heroTitle {
@@ -39,7 +38,8 @@
 .section {
   padding-top: 4rem;
   padding-bottom: 4rem;
-   background: linear-gradient(180deg, #ffdfc5, #fff4f4);
+   /* background: linear-gradient(180deg, #ffdfc5, #fff4f4); */
+   background: #f9e7e7;
 }
 
 /* Section title */
@@ -128,7 +128,8 @@
 
 /* Integration section */
 .integrationSection {
-  background: linear-gradient(135deg, #eaf4e5 0%, #d4e8cf 100%);
+  /* background: linear-gradient(135deg, #eaf4e5 0%, #d4e8cf 100%); */
+  background-image: url("../../images/grid6.png");
 }
 .benefitList li {
   margin-bottom: 0.75rem;
@@ -191,12 +192,12 @@
 
 /* Testimonials */
 .testimonialSection {
-  background-color: #f8f4ed;
+  background-color: #fff;
 }
 .testimonialCard {
   border: none;
   border-radius: 20px;
-  background: white;
+  background: #f9e7e7;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   transition: 0.3s;
 }
@@ -210,7 +211,8 @@
 
 /* Benefits of Ayurveda section */
 .benefitsSection {
-  background: linear-gradient(135deg, #fff4f4 0%, #ffdfc5 100%);
+  /* background: linear-gradient(135deg, #fff4f4 0%, #ffdfc5 100%); */
+  background-image:url("../../images/grid6.png");
 }
 .benefitIcon {
   font-size: 1.5rem;
@@ -222,7 +224,8 @@
 
 /* Yoga & Ayurveda Connection section */
 .yogaConnectionSection {
-  background: linear-gradient(180deg, #eaf4e5, #d4e8cf);
+  /* background: linear-gradient(180deg, #eaf4e5, #d4e8cf); */
+  background-image: url("../../images/grid2.png");
 }
 .yogaConnectionCard {
   background: white;

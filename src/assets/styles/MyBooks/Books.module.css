@@ -3,8 +3,9 @@
 /* Container */
 .container {
   min-height: 100vh;
-  background: #FAFAFA;
+  background-image: url("../../images/grid11.png") ;
   font-family: 'Poppins', sans-serif;
+
 }
 
 /* Hero Section */
@@ -12,6 +13,7 @@
   position: relative;
   padding: 3rem 2rem 2rem;
   min-height: 620px;
+  background-image: url("../../images/Founder_Banner_V03.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -101,7 +103,7 @@
 
 /* Library Section */
 .librarySection {
-  background: white;
+  background:#f9e7e7;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 1200px;
@@ -328,12 +330,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: #f6f4f2;
-  background-image: repeating-linear-gradient(45deg,
-      rgba(0, 0, 0, 0.03) 0,
-      rgba(0, 0, 0, 0.03) 1px,
-      transparent 1px,
-      transparent 24px);
+  background-color: #fff;
 }
 
 .content {
