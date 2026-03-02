@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
 import styles from "../../assets/styles/Homepage/Ayurveda.module.css";
 import AyurvedaTeaserImg from "../../assets/images/SHIRODHARA.jpg";
