@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000/api/teacher-training-cards";
+const API = "http://localhost:8000/api/home-what-we-offer";
 
-function TeacherTrainingCards() {
-
+function HomeWhatWeOffer() {
   const [data, setData] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
 
   const [formData, setFormData] = useState({
-    number: "",
     icon: "",
-    heading: "",
-    paragraph: "",
+    title: "",
+    text: "",
+    modalTitle: "",
+    modalDescription: "",
+    features: "",
     image: null
   });
 
@@ -37,33 +38,28 @@ function TeacherTrainingCards() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const sendData = new FormData();
-    sendData.append("number", formData.number);
-    sendData.append("icon", formData.icon);
-    sendData.append("heading", formData.heading);
-    sendData.append("paragraph", formData.paragraph);
+    const dataToSend = new FormData();
+
+    dataToSend.append("icon", formData.icon);
+    dataToSend.append("title", formData.title);
+    dataToSend.append("text", formData.text);
+    dataToSend.append("modalTitle", formData.modalTitle);
+    dataToSend.append("modalDescription", formData.modalDescription);
+    dataToSend.append("features", formData.features);
 
     if (formData.image) {
-      sendData.append("image", formData.image);
+      dataToSend.append("image", formData.image);
     }
 
     if (editId) {
-      await axios.put(`${API}/${editId}`, sendData);
+      await axios.put(`${API}/${editId}`, dataToSend);
     } else {
-      await axios.post(API, sendData);
+      await axios.post(API, dataToSend);
     }
 
     fetchData();
     setShowForm(false);
     setEditId(null);
-
-    setFormData({
-      number: "",
-      icon: "",
-      heading: "",
-      paragraph: "",
-      image: null
-    });
   };
 
   const handleDelete = async (id) => {
@@ -73,10 +69,12 @@ function TeacherTrainingCards() {
 
   const handleEdit = (item) => {
     setFormData({
-      number: item.number || "",
       icon: item.icon || "",
-      heading: item.heading || "",
-      paragraph: item.paragraph || "",
+      title: item.title || "",
+      text: item.text || "",
+      modalTitle: item.modalContent?.title || "",
+      modalDescription: item.modalContent?.description || "",
+      features: item.modalContent?.features?.join(", ") || "",
       image: null
     });
 
@@ -100,11 +98,11 @@ function TeacherTrainingCards() {
             <thead>
               <tr>
                 <th>S.No</th>
-                <th>Number</th>
-                <th>Icon</th>
-                <th>Heading</th>
-                <th>Paragraph</th>
                 <th>Image</th>
+                <th>Icon</th>
+                <th>Title</th>
+                <th>Text</th>
+                <th>Modal Title</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -113,10 +111,6 @@ function TeacherTrainingCards() {
               {data.map((item, index) => (
                 <tr key={item._id}>
                   <td>{index + 1}</td>
-                  <td>{item.number}</td>
-                  <td>{item.icon}</td>
-                  <td>{item.heading}</td>
-                  <td>{item.paragraph}</td>
 
                   <td>
                     <img
@@ -125,6 +119,14 @@ function TeacherTrainingCards() {
                       alt=""
                     />
                   </td>
+
+                  <td>{item.icon}</td>
+
+                  <td>{item.title}</td>
+
+                  <td>{item.text}</td>
+
+                  <td>{item.modalContent?.title}</td>
 
                   <td>
                     <button
@@ -141,10 +143,10 @@ function TeacherTrainingCards() {
                       Delete
                     </button>
                   </td>
+
                 </tr>
               ))}
             </tbody>
-
           </table>
         </>
       )}
@@ -152,49 +154,64 @@ function TeacherTrainingCards() {
       {showForm && (
         <form onSubmit={handleSubmit} className="card p-4">
 
-          <label>Number*</label>
-          <input
-            type="text"
-            name="number"
-            className="form-control mb-2"
-            value={formData.number}
-            onChange={handleChange}
-            placeholder="01"
-            required
-          />
-
-          <label>Icon*</label>
+          <label>Icon (Example: FaBook)</label>
           <input
             type="text"
             name="icon"
             className="form-control mb-2"
             value={formData.icon}
             onChange={handleChange}
-            placeholder="fa-yoga / icon name"
             required
           />
 
-          <label>Heading*</label>
+          <label>Title</label>
           <input
             type="text"
-            name="heading"
+            name="title"
             className="form-control mb-2"
-            value={formData.heading}
+            value={formData.title}
             onChange={handleChange}
             required
           />
 
-          <label>Paragraph*</label>
+          <label>Text</label>
           <textarea
-            name="paragraph"
+            name="text"
             className="form-control mb-2"
-            value={formData.paragraph}
+            value={formData.text}
             onChange={handleChange}
-            rows="4"
             required
           />
 
-          <label>Image*</label>
+          <label>Modal Title</label>
+          <input
+            type="text"
+            name="modalTitle"
+            className="form-control mb-2"
+            value={formData.modalTitle}
+            onChange={handleChange}
+            required
+          />
+
+          <label>Modal Description</label>
+          <textarea
+            name="modalDescription"
+            className="form-control mb-2"
+            value={formData.modalDescription}
+            onChange={handleChange}
+            required
+          />
+
+          <label>Features (comma separated)</label>
+          <textarea
+            name="features"
+            className="form-control mb-2"
+            value={formData.features}
+            onChange={handleChange}
+            placeholder="feature1, feature2, feature3"
+          />
+
+          <label>Image</label>
           <input
             type="file"
             name="image"
@@ -208,9 +225,8 @@ function TeacherTrainingCards() {
 
         </form>
       )}
-
     </div>
   );
 }
 
-export default TeacherTrainingCards;
+export default HomeWhatWeOffer;

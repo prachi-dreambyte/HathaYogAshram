@@ -159,7 +159,6 @@ const HowToReach = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <span className={styles.badge}>✦ Travel Guide</span>
           <h2 className={styles.mainTitle}>How to Reach Us</h2>
           <p className={styles.subTitle}>
             Easy &amp; Comfortable Travel Options to Reach Our Yogashram in Rishikesh —

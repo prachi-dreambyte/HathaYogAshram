@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000/api/teacher-training-cards";
+const API = "http://localhost:8000/api/home-video-section";
 
-function TeacherTrainingCards() {
-
+function HomeVideoSection() {
   const [data, setData] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
 
   const [formData, setFormData] = useState({
-    number: "",
-    icon: "",
     heading: "",
     paragraph: "",
-    image: null
+    video: null,
   });
 
   useEffect(() => {
@@ -27,8 +24,8 @@ function TeacherTrainingCards() {
   };
 
   const handleChange = (e) => {
-    if (e.target.name === "image") {
-      setFormData({ ...formData, image: e.target.files[0] });
+    if (e.target.name === "video") {
+      setFormData({ ...formData, video: e.target.files[0] });
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value });
     }
@@ -37,33 +34,28 @@ function TeacherTrainingCards() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const sendData = new FormData();
-    sendData.append("number", formData.number);
-    sendData.append("icon", formData.icon);
-    sendData.append("heading", formData.heading);
-    sendData.append("paragraph", formData.paragraph);
+    try {
+      const dataToSend = new FormData();
+      dataToSend.append("heading", formData.heading);
+      dataToSend.append("paragraph", formData.paragraph);
 
-    if (formData.image) {
-      sendData.append("image", formData.image);
+      if (formData.video) {
+        dataToSend.append("video", formData.video);
+      }
+
+      if (editId) {
+        await axios.put(`${API}/${editId}`, dataToSend);
+      } else {
+        await axios.post(API, dataToSend);
+      }
+
+      fetchData();
+      setShowForm(false);
+      setEditId(null);
+      setFormData({ heading: "", paragraph: "", video: null });
+    } catch (error) {
+      console.error("UPLOAD ERROR:", error.response || error.message);
     }
-
-    if (editId) {
-      await axios.put(`${API}/${editId}`, sendData);
-    } else {
-      await axios.post(API, sendData);
-    }
-
-    fetchData();
-    setShowForm(false);
-    setEditId(null);
-
-    setFormData({
-      number: "",
-      icon: "",
-      heading: "",
-      paragraph: "",
-      image: null
-    });
   };
 
   const handleDelete = async (id) => {
@@ -73,20 +65,23 @@ function TeacherTrainingCards() {
 
   const handleEdit = (item) => {
     setFormData({
-      number: item.number || "",
-      icon: item.icon || "",
       heading: item.heading || "",
       paragraph: item.paragraph || "",
-      image: null
+      video: null, // ⚠️ file input cannot auto-fill
     });
 
     setEditId(item._id);
     setShowForm(true);
   };
 
+  const handleCancel = () => {
+    setShowForm(false);
+    setEditId(null);
+    setFormData({ heading: "", paragraph: "", video: null });
+  };
+
   return (
     <div className="container pt-5 mt-5">
-
       {!showForm && (
         <>
           <button
@@ -100,32 +95,25 @@ function TeacherTrainingCards() {
             <thead>
               <tr>
                 <th>S.No</th>
-                <th>Number</th>
-                <th>Icon</th>
+                <th>Video</th>
                 <th>Heading</th>
                 <th>Paragraph</th>
-                <th>Image</th>
                 <th>Actions</th>
               </tr>
             </thead>
-
             <tbody>
               {data.map((item, index) => (
                 <tr key={item._id}>
                   <td>{index + 1}</td>
-                  <td>{item.number}</td>
-                  <td>{item.icon}</td>
-                  <td>{item.heading}</td>
-                  <td>{item.paragraph}</td>
-
                   <td>
-                    <img
-                      src={`http://localhost:8000/uploads/${item.image}`}
-                      width="60"
-                      alt=""
+                    <video
+                      src={`http://localhost:8000/uploads/${item.video}`}
+                      width="120"
+                      controls
                     />
                   </td>
-
+                  <td>{item.heading}</td>
+                  <td>{item.paragraph}</td>
                   <td>
                     <button
                       className="btn btn-warning btn-sm me-2"
@@ -133,7 +121,6 @@ function TeacherTrainingCards() {
                     >
                       Edit
                     </button>
-
                     <button
                       className="btn btn-danger btn-sm"
                       onClick={() => handleDelete(item._id)}
@@ -144,35 +131,13 @@ function TeacherTrainingCards() {
                 </tr>
               ))}
             </tbody>
-
           </table>
         </>
       )}
 
       {showForm && (
         <form onSubmit={handleSubmit} className="card p-4">
-
-          <label>Number*</label>
-          <input
-            type="text"
-            name="number"
-            className="form-control mb-2"
-            value={formData.number}
-            onChange={handleChange}
-            placeholder="01"
-            required
-          />
-
-          <label>Icon*</label>
-          <input
-            type="text"
-            name="icon"
-            className="form-control mb-2"
-            value={formData.icon}
-            onChange={handleChange}
-            placeholder="fa-yoga / icon name"
-            required
-          />
+          <h5 className="mb-3">{editId ? "Edit" : "Create"} Home Video Section</h5>
 
           <label>Heading*</label>
           <input
@@ -188,29 +153,38 @@ function TeacherTrainingCards() {
           <textarea
             name="paragraph"
             className="form-control mb-2"
+            rows={4}
             value={formData.paragraph}
             onChange={handleChange}
-            rows="4"
             required
           />
 
-          <label>Image*</label>
+          <label>Video{!editId && "*"}</label>
           <input
             type="file"
-            name="image"
+            name="video"
+            accept="video/*"
             className="form-control mb-3"
             onChange={handleChange}
+            {...(!editId && { required: true })}
           />
 
-          <button className="btn btn-success">
-            {editId ? "Update" : "Save"}
-          </button>
-
+          <div className="d-flex gap-2">
+            <button type="submit" className="btn btn-success">
+              {editId ? "Update" : "Save"}
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={handleCancel}
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       )}
-
     </div>
   );
 }
 
-export default TeacherTrainingCards;
+export default HomeVideoSection;

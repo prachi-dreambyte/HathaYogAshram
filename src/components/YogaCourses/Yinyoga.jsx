@@ -73,32 +73,6 @@ export default function YinYoga() {
         </div>
       </section>
 
-      {/* HERO STATS */}
-      <section className={styles.heroStats}>
-        <div className={styles.statsContainer}>
-          <div className={styles.stat}>
-            <div className={styles.statIcon}>🧘‍♀️</div>
-            <div className={styles.statValue}>50-100</div>
-            <div className={styles.statLabel}>Hour Options</div>
-          </div>
-          <div className={styles.stat}>
-            <div className={styles.statIcon}>🌙</div>
-            <div className={styles.statValue}>12</div>
-            <div className={styles.statLabel}>Meridians</div>
-          </div>
-          <div className={styles.stat}>
-            <div className={styles.statIcon}>⏰</div>
-            <div className={styles.statValue}>3-5 Min</div>
-            <div className={styles.statLabel}>Pose Holds</div>
-          </div>
-          <div className={styles.stat}>
-            <div className={styles.statIcon}>☯️</div>
-            <div className={styles.statValue}>Yin-Yang</div>
-            <div className={styles.statLabel}>Balance</div>
-          </div>
-        </div>
-      </section>
-
       {/* FLOATING INFO CARDS */}
       <section className={styles.floatingSection}>
         <div className={styles.container}>
@@ -130,7 +104,6 @@ export default function YinYoga() {
           </div>
         </div>
       </section>
-
       {/* OVERVIEW SECTION */}
       <section className={styles.overviewSection}>
         <div className={styles.container}>
@@ -153,7 +126,7 @@ export default function YinYoga() {
 
               <div className={styles.highlights}>
                 <div className={styles.highlight}>
-                  <div className={styles.highlightIcon}>🌊</div>
+                  <div className={styles.highlightIcon}>➤</div>
                   <div>
                     <h4>Passive Practice</h4>
                     <p>
@@ -163,7 +136,7 @@ export default function YinYoga() {
                   </div>
                 </div>
                 <div className={styles.highlight}>
-                  <div className={styles.highlightIcon}>🔮</div>
+                  <div className={styles.highlightIcon}>➤</div>
                   <div>
                     <h4>Meridian System</h4>
                     <p>
@@ -173,7 +146,7 @@ export default function YinYoga() {
                   </div>
                 </div>
                 <div className={styles.highlight}>
-                  <div className={styles.highlightIcon}>🧠</div>
+                  <div className={styles.highlightIcon}>➤</div>
                   <div>
                     <h4>Meditative State</h4>
                     <p>
@@ -192,7 +165,7 @@ export default function YinYoga() {
               />
               <div className={styles.imageOverlay}>
                 <div className={styles.mantraBox}>
-                  <div className={styles.mantraSymbol}>☯️</div>
+                  <div className={styles.mantraSymbol}>🧘🏻‍♂️</div>
                   <p>Find Your Edge</p>
                 </div>
               </div>
@@ -231,6 +204,31 @@ export default function YinYoga() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+       {/* HERO STATS */}
+      <section className={styles.heroStats}>
+        <div className={styles.statsContainer}>
+          <div className={styles.stat}>
+            <div className={styles.statIcon}>🧘‍♀️</div>
+            <div className={styles.statValue}>50-100</div>
+            <div className={styles.statLabel}>Hour Options</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statIcon}>🌙</div>
+            <div className={styles.statValue}>12</div>
+            <div className={styles.statLabel}>Meridians</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statIcon}>⏰</div>
+            <div className={styles.statValue}>3-5 Min</div>
+            <div className={styles.statLabel}>Pose Holds</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statIcon}>☯️</div>
+            <div className={styles.statValue}>Yin-Yang</div>
+            <div className={styles.statLabel}>Balance</div>
           </div>
         </div>
       </section>

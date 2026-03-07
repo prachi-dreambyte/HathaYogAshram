@@ -1081,7 +1081,7 @@
    ================================================ */
 
 .pricingSection {
-  background: #f8f6f3;
+ background-image: url("../../images/grid4.png");
   position: relative;
   overflow: hidden;
 }
@@ -1107,21 +1107,6 @@
   50% {
     opacity: 0.06;
   }
-}
-
-.pricingSection::after {
-  content: '';
-  position: absolute;
-  bottom: -80px;
-  right: -80px;
-  width: 350px;
-  height: 350px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3C!-- Warrior Pose --%3E%3Ccircle cx='100' cy='30' r='14' fill='rgba(196,30,58,0.08)' stroke='rgba(196,30,58,0.12)' stroke-width='2'/%3E%3Cpath d='M100 46 L100 100' stroke='rgba(196,30,58,0.12)' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M100 60 L130 70 L150 75' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 60 L70 80 L60 90' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 100 L110 130 L115 160' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Cpath d='M100 100 L80 120 L60 130' stroke='rgba(196,30,58,0.12)' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.6;
-  pointer-events: none;
-  z-index: 0;
 }
 
 .pricingCards {

@@ -80,17 +80,17 @@ const YogaAlliance = () => {
           </motion.h1>
 
           <motion.p className={styles.boldText} variants={fadeUp}>
-            Most Authentic Yoga Alliance Registered School
+            {/* Most Authentic Yoga Alliance Registered School */}
             {/* {data.paragraph} */}
           </motion.p>
 
           <motion.p className={styles.desc} variants={fadeUp}>
-            Are you dreaming of becoming a certified yoga instructor? Are you
-            searching for the top yoga teacher training in Rishikesh, India?
-            {/* {data.paragraph} */}
+            {/* Are you dreaming of becoming a certified yoga instructor? Are you
+            searching for the top yoga teacher training in Rishikesh, India? */}
+            {data.paragraph}
           </motion.p>
 
-          <motion.p className={styles.desc} variants={fadeUp}>
+          {/* <motion.p className={styles.desc} variants={fadeUp}>
             Look no further than <strong>Hatha Yogashram</strong>. We are the{" "}
             <span className={styles.highlight}>
               best online yoga teacher training
@@ -136,7 +136,7 @@ const YogaAlliance = () => {
             Join our Hatha Ashtanga Yoga Teacher Training in Rishikesh, India, at
             Hatha Yogashram and embark on a journey of self-development and
             transformation.
-          </motion.p>
+          </motion.p> */}
 
           <motion.button
             className={styles.button}

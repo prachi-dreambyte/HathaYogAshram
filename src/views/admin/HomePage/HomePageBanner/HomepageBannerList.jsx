@@ -1,32 +1,21 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const API_BASE_URL = "http://localhost:8000";
 
 export default function HomepageBannerList() {
 
-  /* ================= STATES ================= */
   const [banners, setBanners] = useState([]);
   const [showForm, setShowForm] = useState(false);
-
-  // ✅ FIXED FORM STATE
-  const [form, setForm] = useState({
-    image: null,
-  });
-
-  const [previewImg, setPreviewImg] = useState(null);
-  const [errors, setErrors] = useState({});
+  const [image, setImage] = useState(null);
+  const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [deleteHover, setDeleteHover] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const fileRef = useRef();
 
-  /* ================= FETCH DATA ================= */
-  useEffect(() => {
-    fetchBanners();
-  }, []);
+  /* ================= FETCH BANNERS ================= */
 
   const fetchBanners = async () => {
-    setLoading(true);
     try {
       const res = await fetch(`${API_BASE_URL}/api/banners`);
       const data = await res.json();
@@ -35,241 +24,267 @@ export default function HomepageBannerList() {
         setBanners(data.data);
       }
     } catch (err) {
-      console.error(err);
-    } finally {
-      setLoading(false);
+      console.log(err);
     }
   };
 
-  /* ================= VALIDATION ================= */
-  const validate = () => {
-    const err = {};
-    if (!form.image) err.image = "Banner image required";
-    return err;
-  };
+  useEffect(() => {
+    fetchBanners();
+  }, []);
 
   /* ================= IMAGE CHANGE ================= */
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
 
     if (file) {
-      setPreviewImg(URL.createObjectURL(file));
-      setForm((prev) => ({
-        ...prev,
-        image: file,
-      }));
+      setImage(file);
+      setPreview(URL.createObjectURL(file));
     }
   };
 
+  /* ================= VALIDATE ================= */
+
+  const validate = () => {
+    let err = {};
+
+    if (!image) {
+      err.image = "Banner image required";
+    }
+
+    return err;
+  };
+
   /* ================= SUBMIT ================= */
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const err = validate();
-    if (Object.keys(err).length) {
+
+    if (Object.keys(err).length > 0) {
       setErrors(err);
       return;
     }
 
     const formData = new FormData();
-    formData.append("image", form.image);
+    formData.append("image", image);
 
     setLoading(true);
 
     try {
+
       const res = await fetch(`${API_BASE_URL}/api/banners`, {
         method: "POST",
-        body: formData,
+        body: formData
       });
 
       const data = await res.json();
 
       if (data.success) {
-        await fetchBanners();
 
-        // ✅ RESET FORM
-        setForm({ image: null });
-        setPreviewImg(null);
+        fetchBanners();
+
+        setImage(null);
+        setPreview(null);
         setErrors({});
         setShowForm(false);
 
         if (fileRef.current) {
           fileRef.current.value = "";
         }
+
       } else {
         setErrors({ api: data.error });
       }
+
     } catch (err) {
       console.log(err);
-      setErrors({ api: "Network Error" });
-    } finally {
-      setLoading(false);
     }
+
+    setLoading(false);
   };
 
   /* ================= DELETE ================= */
+
   const handleDelete = async (id) => {
+
     if (!window.confirm("Delete banner?")) return;
 
     try {
-      const res = await fetch(
-        `${API_BASE_URL}/api/banners/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
+
+      const res = await fetch(`${API_BASE_URL}/api/banners/${id}`, {
+        method: "DELETE"
+      });
 
       const data = await res.json();
 
       if (data.success) {
-        setBanners((prev) =>
-          prev.filter((b) => b._id !== id)
-        );
+        setBanners((prev) => prev.filter((b) => b._id !== id));
       }
+
     } catch (err) {
       console.log(err);
     }
   };
 
-  /* ================= UI ================= */
   return (
-    <div style={{ padding: 40 }}>
+    <div style={{ padding: 80 }}>
 
       {/* HEADER */}
+
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <h2>All Banners</h2>
+        {/* <h2>Homepage Banners</h2> */}
 
         <button
-          onClick={() => {
-            setShowForm(!showForm);
-            setErrors({});
-            setPreviewImg(null);
-          }}
+          onClick={() => setShowForm(!showForm)}
+          className="btn btn-primary"
         >
           {showForm ? "Cancel" : "Add Banner"}
         </button>
       </div>
 
       {/* ================= FORM ================= */}
+
       {showForm && (
-        <form onSubmit={handleSubmit} style={{ marginTop: 20 }}>
+        <div className="card shadow-sm mt-4">
+          <div className="card-body">
 
-          {errors.api && (
-            <p style={{ color: "red" }}>{errors.api}</p>
-          )}
+            <h5 className="mb-4">Add Homepage Banner</h5>
 
-          <div
-            style={{
-              border: "2px dashed #ccc",
-              padding: 20,
-              cursor: "pointer",
-              width: 250,
-            }}
-            onClick={() => fileRef.current.click()}
-          >
-            {previewImg ? (
-              <img
-                src={previewImg}
-                alt=""
-                width="200"
-              />
-            ) : (
-              <p>Click to upload image</p>
-            )}
+            <form onSubmit={handleSubmit}>
+
+              {errors.api && (
+                <p className="text-danger">{errors.api}</p>
+              )}
+
+              <div className="mb-3">
+                <label className="form-label fw-semibold">
+                  Banner Image*
+                </label>
+
+                <input
+                  type="file"
+                  className="form-control"
+                  ref={fileRef}
+                  accept="image/*"
+                  onChange={handleImageChange}
+                />
+              </div>
+
+              {preview && (
+                <div className="mb-3">
+                  <img
+                    src={preview}
+                    alt="preview"
+                    style={{
+                      width: "300px",
+                      borderRadius: "6px"
+                    }}
+                  />
+                </div>
+              )}
+
+              {errors.image && (
+                <p className="text-danger">{errors.image}</p>
+              )}
+
+              <div className="d-flex gap-2">
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="btn btn-success"
+                >
+                  {loading ? "Saving..." : "Save"}
+                </button>
+
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={() => setShowForm(false)}
+                >
+                  Cancel
+                </button>
+
+              </div>
+
+            </form>
+
           </div>
-
-          <input
-            ref={fileRef}
-            type="file"
-            hidden
-            accept="image/*"
-            onChange={handleImageChange}
-          />
-
-          {errors.image && (
-            <p style={{ color: "red" }}>
-              {errors.image}
-            </p>
-          )}
-
-          <button
-            type="submit"
-            disabled={loading}
-            style={{ marginTop: 15 }}
-          >
-            {loading ? "Saving..." : "Save Banner"}
-          </button>
-        </form>
+        </div>
       )}
 
       {/* ================= TABLE ================= */}
+
       <table
-        border="1"
-        cellPadding="10"
-        style={{ marginTop: 30, width: "100%" }}
+        className="table table-bordered mt-4"
       >
-        <thead>
+
+        <thead className="table-light">
           <tr>
+            <th style={{ width: "80px" }}>S.No</th>
             <th>Banner</th>
-            <th>Action</th>
+            <th style={{ width: "150px" }}>Action</th>
           </tr>
         </thead>
 
         <tbody>
-          {loading && banners.length === 0 ? (
+
+          {banners.length === 0 ? (
             <tr>
-              <td colSpan="2">Loading...</td>
-            </tr>
-          ) : banners.length === 0 ? (
-            <tr>
-              <td colSpan="2">No Data</td>
+              <td colSpan="3" className="text-center">
+                No banners found
+              </td>
             </tr>
           ) : (
-            banners.map((banner) => (
+
+            banners.map((banner, index) => (
+
               <tr key={banner._id}>
+
                 <td>
+                  <strong>{index + 1}</strong>
+                </td>
+
+                <td>
+                  <p className="mb-2">
+                    <strong>Banner {index + 1}</strong>
+                  </p>
+
                   <img
                     src={`${API_BASE_URL}${banner.image}`}
-                    width="200"
-                    alt=""
+                    width="250"
+                    alt={`Banner ${index + 1}`}
+                    style={{ borderRadius: "6px" }}
                   />
                 </td>
 
                 <td>
+
                   <button
-                    onMouseEnter={() =>
-                      setDeleteHover(banner._id)
-                    }
-                    onMouseLeave={() =>
-                      setDeleteHover(null)
-                    }
-                    style={{
-                      background:
-                        deleteHover === banner._id
-                          ? "red"
-                          : "#bd0005",
-                      color: "#fff",
-                      padding: "8px 15px",
-                      border: "none",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      handleDelete(banner._id)
-                    }
+                    onClick={() => handleDelete(banner._id)}
+                    className="btn btn-danger btn-sm"
                   >
                     Delete
                   </button>
+
                 </td>
+
               </tr>
+
             ))
+
           )}
+
         </tbody>
+
       </table>
 
-      <p>
-        Showing {banners.length} banner
-        {banners.length !== 1 && "s"}
+      <p className="mt-3">
+        Showing {banners.length} banner{banners.length !== 1 && "s"}
       </p>
+
     </div>
   );
 }

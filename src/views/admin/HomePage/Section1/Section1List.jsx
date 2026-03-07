@@ -143,7 +143,7 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="container mt-5 pt-5"mon>
+    <div className="container mt-5 pt-5">
 
       <div className="d-flex justify-content-between mb-4">
         <button className="btn btn-primary" onClick={handleOpenCreate}>

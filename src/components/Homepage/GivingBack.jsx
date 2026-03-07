@@ -39,9 +39,6 @@ const GivingBack = () => {
         {/* Right Image */}
         <div className={styles.imageCard}>
           <img src={img3} alt="Hatha Yogashram social initiative" />
-          <span className={styles.imageLabel}>
-            Yoga • Seva • Transformation
-          </span>
         </div>
       </div>
     </section>
