@@ -27,6 +27,7 @@ import AboutFounderDetails from 'views/admin/AboutUs/Founder/FounderDetails';
 import AboutTeacherHeading from 'views/admin/AboutUs/Teachers/TeacherHeading';
 import AboutTeacherDetails from 'views/admin/AboutUs/Teachers/TeacherDetails';
 import AboutCoursesDetails from 'views/admin/Courses/CoursesDetails';
+import HomeStudentReview from 'views/admin/HomePage/StudentReview/StudentReview';
 
 const routes = [
   {
@@ -110,29 +111,29 @@ const routes = [
           },
         ],
       },
-      {
-        name: 'Home Facility',
-        layout: '/admin',
-        path: '/homepage/facility',
-        icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-        collapse: true,
-        items: [
-          {
-            name: 'Facility Heading',
-            layout: '/admin',
-            path: '/homepage/facility/heading',
-            icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-            // component: optional
-          },
-          {
-            name: 'Facility Cards',
-            layout: '/admin',
-            path: '/homepage/facility/cards',
-            icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-            component: <HomeFacilityCards />,
-          },
-        ],
-      },
+     {
+  name: 'Home Facility',
+  layout: '/admin',
+  path: '/homepage/facility',
+  icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+  collapse: true,
+  items: [
+    // {
+    //   name: 'Facility Heading',
+    //   layout: '/admin',
+    //   path: '/homepage/facility/heading',
+    //   icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+    //   component: <HomeFacilityHeading />,
+    // },
+    {
+      name: 'Facility Cards',
+      layout: '/admin',
+      path: '/homepage/facility/cards',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <HomeFacilityCards />,
+    },
+  ],
+},
       {
         name: 'Home Yoga Alliance',
         layout: '/admin',
@@ -246,6 +247,13 @@ const routes = [
           },
         ],
       },
+      {
+  name: 'Student Review',
+  layout: '/admin',
+  path: '/homepage/student-review',
+  icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+  component: <HomeStudentReview/>,
+},
     ],
   },
   {
