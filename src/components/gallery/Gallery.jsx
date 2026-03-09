@@ -1,34 +1,48 @@
-import { useState } from 'react';
-import styles from '../../assets/styles/gallery/Gallery.module.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import styles from "../../assets/styles/gallery/Gallery.module.css";
 
-import img1 from '../../assets/images/gallery/1000040963.webp';
-import img2 from '../../assets/images/gallery/20180809.webp';
-import img3 from '../../assets/images/gallery/1000040970.webp';
-import img4 from '../../assets/images/gallery/1000058539.webp';
-import img5 from '../../assets/images/gallery/food.webp';
-import img6 from '../../assets/images/gallery/1000040963.webp';
-import img7 from '../../assets/images/gallery/1000040963.webp';
-import img8 from '../../assets/images/gallery/20180809.webp';
+const API = "http://localhost:8000/api/gallery-heading";
+const IMAGE = "http://localhost:8000/uploads/";
 
-const filters = ['All', 'Yogashram', 'Classes', 'Happy Students', 'Food'];
-
-const galleryData = [
-  { id: 1, category: 'Classes', img: img1 },
-  { id: 2, category: 'Classes', img: img2 },
-  { id: 3, category: 'Food', img: img3 },
-  { id: 4, category: 'Yogashram', img: img4 },
-  { id: 5, category: 'Happy Students', img: img5 },
-  { id: 6, category: 'Happy Students', img: img6 },
-  { id: 7, category: 'Yogashram', img: img7 },
-  { id: 8, category: 'Food', img: img8 },
-];
+const filters = ["All", "Yogashram", "Classes", "Happy Students", "Food"];
 
 const Gallery = () => {
-  const [active, setActive] = useState('All');
+
+  const [galleryData, setGalleryData] = useState([]);
+  const [active, setActive] = useState("All");
   const [modalIndex, setModalIndex] = useState(null);
 
+  useEffect(() => {
+    fetchGallery();
+  }, []);
+
+  // FETCH DATA FROM BACKEND
+  const fetchGallery = async () => {
+    try {
+      const res = await axios.get(API);
+
+      const formatted = [];
+
+      res.data.data.forEach((item) => {
+        item.img.forEach((image) => {
+          formatted.push({
+            id: Math.random(),
+            category: item.category,
+            img: IMAGE + image,
+          });
+        });
+      });
+
+      setGalleryData(formatted);
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const filteredImages =
-    active === 'All'
+    active === "All"
       ? galleryData
       : galleryData.filter((item) => item.category === active);
 
@@ -37,19 +51,20 @@ const Gallery = () => {
 
   const prevImage = () => {
     setModalIndex(
-      modalIndex === 0 ? filteredImages.length - 1 : modalIndex - 1,
+      modalIndex === 0 ? filteredImages.length - 1 : modalIndex - 1
     );
   };
 
   const nextImage = () => {
     setModalIndex(
-      modalIndex === filteredImages.length - 1 ? 0 : modalIndex + 1,
+      modalIndex === filteredImages.length - 1 ? 0 : modalIndex + 1
     );
   };
 
   return (
     <section className={styles.wrapper}>
-      {/* ================= HERO HEADER ================= */}
+
+      {/* HERO */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>
@@ -66,24 +81,26 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* ================= MAIN CONTENT ================= */}
+      {/* CONTENT */}
       <div className={styles.contentSection}>
+
         <h2 className={styles.sectionTitle}>
           Explore Our Journey Through Images
         </h2>
 
         <p className={styles.description}>
-          Take a visual journey through Rishikesh Yogkulam® and witness the transformative 
-          experiences of our students, the serene beauty of our ashram, and the authentic 
-          yogic lifestyle we nurture together.
+          Take a visual journey through Rishikesh Yogkulam® and witness the transformative
+          experiences of our students.
         </p>
 
-        {/* ================= FILTER TABS ================= */}
+        {/* FILTER */}
         <div className={styles.filterTabs}>
           {filters.map((tab) => (
             <button
               key={tab}
-              className={`${styles.filterTab} ${active === tab ? styles.activeTab : ''}`}
+              className={`${styles.filterTab} ${
+                active === tab ? styles.activeTab : ""
+              }`}
               onClick={() => setActive(tab)}
             >
               {tab}
@@ -91,7 +108,7 @@ const Gallery = () => {
           ))}
         </div>
 
-        {/* ================= IMAGE GRID ================= */}
+        {/* IMAGE GRID */}
         <div className={styles.imageGrid}>
           {filteredImages.map((item, index) => (
             <div
@@ -106,17 +123,17 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
       </div>
 
-      {/* ================= MODAL ================= */}
+      {/* MODAL */}
       {modalIndex !== null && (
         <div className={styles.modal} onClick={closeModal}>
-          <span className={styles.closeBtn} onClick={closeModal}>
-            ×
-          </span>
 
-          <button 
-            className={styles.prevBtn} 
+          <span className={styles.closeBtn}>×</span>
+
+          <button
+            className={styles.prevBtn}
             onClick={(e) => {
               e.stopPropagation();
               prevImage();
@@ -127,13 +144,13 @@ const Gallery = () => {
 
           <img
             src={filteredImages[modalIndex].img}
-            alt={filteredImages[modalIndex].category}
+            alt=""
             className={styles.modalImg}
             onClick={(e) => e.stopPropagation()}
           />
 
-          <button 
-            className={styles.nextBtn} 
+          <button
+            className={styles.nextBtn}
             onClick={(e) => {
               e.stopPropagation();
               nextImage();
@@ -143,8 +160,10 @@ const Gallery = () => {
           </button>
 
           <div className={styles.modalCaption}>
-            {filteredImages[modalIndex].category} - {modalIndex + 1} / {filteredImages.length}
+            {filteredImages[modalIndex].category} - {modalIndex + 1} /{" "}
+            {filteredImages.length}
           </div>
+
         </div>
       )}
     </section>
