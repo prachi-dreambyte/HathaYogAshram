@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaRetreat.module.css";
 import dividerImg from "../../assets/images/linedesign.png";
@@ -7,9 +8,17 @@ import img1 from "../../assets/images/courses/1.png";
 import img2 from "../../assets/images/courses/2.png";
 import img3 from "../../assets/images/courses/3.png";
 
+const API_BASE = "http://localhost:8000/api";
+const ASSET_BASE = "http://localhost:8000";
 
+const toAssetUrl = (value) => {
+  if (!value) return "";
+  if (typeof value !== "string") return value;
+  if (value.startsWith("http") || value.startsWith("data:")) return value;
+  return `${ASSET_BASE}/${value.replace(/^\/+/, "")}`;
+};
 
-const retreats = [
+const DEFAULT_RETREATS = [
   {
     days: "5 Days Yoga Retreat",
     img: img1,
@@ -32,7 +41,6 @@ const retreats = [
     path: "/20-days-yoga-retreat",
   },
 ];
-
 
 /* ===================== */
 /* Framer Motion Variants */
@@ -66,10 +74,39 @@ const cardVariant = {
   },
 };
 
-
 const YogaRetreat = () => {
+  const navigate = useNavigate();
+  const [retreats, setRetreats] = useState(DEFAULT_RETREATS);
 
-   const navigate = useNavigate(); 
+  useEffect(() => {
+    const fetchRetreats = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses`, {
+          params: { homeSection: "retreat" },
+        });
+        const items = res.data?.data || [];
+        if (!items.length) return;
+
+        const mapped = items.map((course, index) => {
+          const details = course.retreat || {};
+          return {
+            days: details.title || course.title || `Retreat ${index + 1}`,
+            img: toAssetUrl(details.image) || DEFAULT_RETREATS[index % DEFAULT_RETREATS.length].img,
+            private: details.privatePrice || course.home?.privatePrice || "",
+            shared: details.sharedPrice || course.home?.sharedPrice || "",
+            path: details.path || course.legacyPath || (course.slug ? `/course/${course.slug}` : "/BookingForm"),
+          };
+        });
+
+        setRetreats(mapped);
+      } catch (error) {
+        console.error("Failed to load retreat courses", error);
+      }
+    };
+
+    fetchRetreats();
+  }, []);
+
   return (
     <motion.section
       className={styles.section}
@@ -78,7 +115,6 @@ const YogaRetreat = () => {
       viewport={{ once: true }}
     >
       <div className="container">
-
         {/* Heading */}
         <motion.div
           className={styles.headingWrapper}
@@ -134,33 +170,32 @@ const YogaRetreat = () => {
               </p>
 
               <div className={styles.btnGroup}>
-                 <motion.button
-    className={styles.outlineBtn}
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    onClick={() => navigate(item.path)}
-  >
-    Course
-    <br />
-    Details
-  </motion.button>
+                <motion.button
+                  className={styles.outlineBtn}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate(item.path)}
+                >
+                  Course
+                  <br />
+                  Details
+                </motion.button>
 
                 <motion.button
-  className={styles.outlineBtn}
-  whileHover={{ scale: 1.05 }}
-  whileTap={{ scale: 0.95 }}
-  onClick={() => navigate('/BookingForm')}
->
-  <span className={styles.btnText}>
-    Book
-    <span>Now</span>
-  </span>
-</motion.button>
+                  className={styles.outlineBtn}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => navigate('/BookingForm')}
+                >
+                  <span className={styles.btnText}>
+                    Book
+                    <span>Now</span>
+                  </span>
+                </motion.button>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </motion.section>
   );

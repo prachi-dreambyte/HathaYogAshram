@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/YogaTeacherTraining.module.css";
@@ -17,7 +18,17 @@ import img2 from "../../assets/images/courses/2.png";
 import img3 from "../../assets/images/courses/3.png";
 import img4 from "../../assets/images/courses/4.png";
 
-const courses = [
+const API_BASE = "http://localhost:8000/api";
+const ASSET_BASE = "http://localhost:8000";
+
+const toAssetUrl = (value) => {
+  if (!value) return "";
+  if (typeof value !== "string") return value;
+  if (value.startsWith("http") || value.startsWith("data:")) return value;
+  return `${ASSET_BASE}/${value.replace(/^\/+/, "")}`;
+};
+
+const DEFAULT_COURSES = [
   {
     images: [img1, img2, img3, img4],
     title: "100 Hours Yoga Teacher Training",
@@ -26,7 +37,7 @@ const courses = [
     sharedRoom: "$400",
     certification: "Yoga Alliance USA",
     style: "Multi-Style Hatha",
-    path: "/YogaCourse100",
+    path: "/course/100-hour-yttc",
   },
   {
     images: [img2, img1, img3, img4],
@@ -36,7 +47,7 @@ const courses = [
     sharedRoom: "$980",
     certification: "RYT-200 Certified",
     style: "Hatha & Ashtanga",
-    path: "/YogaCourse200",
+    path: "/course/200-hour-yttc",
   },
   {
     images: [img3, img2, img1, img4],
@@ -46,7 +57,7 @@ const courses = [
     sharedRoom: "$1150",
     certification: "RYT-300 Certified",
     style: "Advanced Multi-Style",
-    path: "/YogaCourse300",
+    path: "/course/300-hour-yttc",
   },
   {
     images: [img4, img1, img2, img3],
@@ -56,7 +67,7 @@ const courses = [
     sharedRoom: "$1900",
     certification: "RYT-500 Certified",
     style: "Complete Mastery",
-    path: "/YogaCourse500",
+    path: "/course/500-hour-yttc",
   },
   {
     images: [img1, img3, img2, img4],
@@ -184,6 +195,43 @@ const cardVariant = {
 
 const YogaTeacherTraining = () => {
   const navigate = useNavigate();
+  const [courses, setCourses] = useState(DEFAULT_COURSES);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses`, {
+          params: { homeSection: "teacher-training" },
+        });
+        const items = res.data?.data || [];
+        if (!items.length) return;
+
+        const mapped = items.map((course) => {
+          const training = course.teacherTraining || {};
+          const images = (training.images || course.home?.images || course.gallery || [])
+            .map((img) => toAssetUrl(img))
+            .filter(Boolean);
+
+          return {
+            images: images.length ? images : [img1, img2, img3, img4],
+            title: training.title || course.title || "Yoga Teacher Training",
+            duration: training.duration || course.duration || "",
+            privateRoom: training.privateRoom || course.home?.privateRoom || "",
+            sharedRoom: training.sharedRoom || course.home?.sharedRoom || "",
+            certification: training.certification || course.home?.certification || "",
+            style: training.style || course.home?.style || "",
+            path: training.path || course.legacyPath || (course.slug ? `/course/${course.slug}` : "/BookingForm"),
+          };
+        });
+
+        setCourses(mapped);
+      } catch (error) {
+        console.error("Failed to load teacher training courses", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
 
   return (
     <motion.section

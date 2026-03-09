@@ -1,5 +1,6 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
+import axios from 'axios';
 import styles from '../../assets/styles/YogaCourse/100Hours.module.css';
 import Refund from 'components/Refund/refund';
 import OurCourses from 'components/OurCourses/OurCourses';
@@ -10,11 +11,63 @@ import InternationalCertificate from 'components/InternationalCertificate/Intern
 import Form100 from './Form100';
 import HowToReach from 'components/Homepage/HowToReach';
 
+const API_BASE = "http://localhost:8000/api";
+const ASSET_BASE = "http://localhost:8000";
 
-export default function YogaCourse100() {
-  const navigate = useNavigate();
+const toAssetUrl = (value) => {
+  if (!value) return '';
+  if (typeof value !== 'string') return value;
+  if (value.startsWith('http') || value.startsWith('data:')) return value;
+  return `${ASSET_BASE}/${value.replace(/^\/+/, '')}`;
+};
 
-  const whyRishikesh = [
+const DEFAULT_HERO = {
+  quoteText: 'Transform Your Practice, Inspire Others, Become a Certified Yoga Teacher',
+  title: 'Yoga Teacher Training in Rishikesh, India',
+  breadcrumbLabel: 'Yoga Training',
+  bannerImage: '',
+};
+
+const DEFAULT_OVERVIEW = {
+  tag: 'Course Overview',
+  title: 'A Comprehensive, Residential Program Designed for Beginners and Practitioners',
+  description:
+    'This yoga teacher training program is your gateway to authentic yoga practice in the birthplace of yoga. This transformative journey in Rishikesh combines traditional teachings with modern methodology, covering essential aspects of yoga philosophy, anatomy, pranayama, meditation, and asanas.',
+};
+
+const DEFAULT_INFO_CARDS = [
+  {
+    title: 'Duration',
+    tag: 'Course Duration',
+    detail: '📅 Intensive residential program',
+    icon: '📅',
+  },
+  {
+    title: 'Level',
+    tag: 'All Levels',
+    detail: '📊 Suitable for all levels of practitioners',
+    icon: '📊',
+  },
+  {
+    title: 'Certification',
+    tag: 'Certification',
+    detail: '🏆 Internationally recognized certificate',
+    icon: '🏆',
+  },
+  {
+    title: 'Location',
+    tag: 'Rishikesh, India',
+    detail: '📍 Yoga capital of the world',
+    icon: '📍',
+  },
+];
+
+const DEFAULT_WHY = {
+  tag: 'Why Rishikesh?',
+  title: 'Discover the Magic of Learning Yoga in Its Birthplace',
+  description:
+    'Rishikesh is the yoga capital of the world, home to authentic yoga schools and ancient wisdom.',
+  items: [
     {
       icon: '🏔️',
       title: 'Birthplace of Yoga',
@@ -39,52 +92,13 @@ export default function YogaCourse100() {
       description:
         'Peaceful environment surrounded by mountains and nature, perfect for deep yoga practice.',
     },
-  ];
+  ],
+};
 
-  const features = [
-    {
-      icon: '🧘',
-      title: 'Expert Teachers',
-      desc: '15-30+ years of experience in traditional yoga',
-    },
-    {
-      icon: '🏔️',
-      title: 'Rishikesh Setting',
-      desc: 'Yoga capital of the world',
-    },
-    {
-      icon: '📜',
-      title: 'Yoga Alliance',
-      desc: 'Internationally certified courses',
-    },
-    {
-      icon: '🌿',
-      title: 'Organic Meals',
-      desc: 'Nutritious sattvic vegetarian food',
-    },
-    {
-      icon: '🏠',
-      title: 'Accommodation',
-      desc: 'Comfortable & clean rooms with modern facilities',
-    },
-    {
-      icon: '🧘‍♀️',
-      title: 'Small Groups',
-      desc: 'Personal attention guaranteed',
-    },
-    {
-      icon: '📚',
-      title: 'Comprehensive Curriculum',
-      desc: '100+ yoga postures and techniques',
-    },
-    {
-      icon: '🎓',
-      title: 'Certification',
-      desc: 'Step towards 200hr RYT certification',
-    },
-  ];
-
-  const curriculum = [
+const DEFAULT_CURRICULUM = {
+  tag: "What You'll Learn",
+  title: 'Comprehensive Curriculum Covering All Aspects of Yoga',
+  items: [
     {
       category: 'Hatha Yog',
       items: [
@@ -139,9 +153,13 @@ export default function YogaCourse100() {
         'Injury prevention',
       ],
     },
-  ];
+  ],
+};
 
-  const dailySchedule = [
+const DEFAULT_SCHEDULE = {
+  tag: 'Daily Schedule',
+  title: 'A Typical Day in Your Yoga Teacher Training Journey',
+  items: [
     { time: '6:00 AM', activity: 'Morning Tea' },
     { time: '6:30 AM', activity: 'Pranayama & Meditation' },
     { time: '8:00 AM', activity: 'Hatha Yog Asana Practice' },
@@ -153,9 +171,31 @@ export default function YogaCourse100() {
     { time: '5:00 PM', activity: 'Teaching Methodology' },
     { time: '6:30 PM', activity: 'Dinner' },
     { time: '7:30 PM', activity: 'Satsang / Self Study / Kirtan' },
-  ];
+  ],
+};
 
-  const included = [
+const DEFAULT_FEATURES = {
+  tag: 'Course Features',
+  title: 'Everything You Need for a Transformative Yoga Journey',
+  items: [
+    { icon: '🧘', title: 'Expert Teachers', desc: '15-30+ years of experience in traditional yoga' },
+    { icon: '🏔️', title: 'Rishikesh Setting', desc: 'Yoga capital of the world' },
+    { icon: '📜', title: 'Yoga Alliance', desc: 'Internationally certified courses' },
+    { icon: '🌿', title: 'Organic Meals', desc: 'Nutritious sattvic vegetarian food' },
+    { icon: '🏠', title: 'Accommodation', desc: 'Comfortable & clean rooms with modern facilities' },
+    { icon: '🧘‍♀️', title: 'Small Groups', desc: 'Personal attention guaranteed' },
+    { icon: '📚', title: 'Comprehensive Curriculum', desc: 'Comprehensive yoga postures and techniques' },
+    { icon: '🎓', title: 'Certification', desc: 'Internationally recognized certification' },
+  ],
+};
+
+const DEFAULT_INCLUDED_SECTION = {
+  tag: "What's Included",
+  title: 'Everything You Need for a Comfortable Stay and Learning Experience',
+  includedTitle: 'What does the course fees include?',
+  notIncludedTitle: 'What is not included in the course fees?',
+  toBringTitle: 'What to bring with you?',
+  items: [
     '11-12 nights accommodation (shared/private)',
     '3 nutritious vegetarian meals daily',
     'Yoga materials, books & manuals',
@@ -166,27 +206,40 @@ export default function YogaCourse100() {
     '24/7 WiFi access',
     'Laundry service',
     'Free pickup from Dehradun Airport',
-  ];
+  ],
+  notIncluded: [],
+  toBringImage: '',
+};
 
-  const testimonials = [
+const DEFAULT_TESTIMONIALS = {
+  tag: 'What Our Students Say',
+  title: 'Hear from Those Who Experienced the Transformation',
+  items: [
     {
       name: 'Sarah Johnson',
       country: 'USA',
-      text: 'This course transformed my life. The teachers are incredibly knowledgeable, and the setting in Rishikesh is magical. I left feeling confident and prepared to continue my yoga journey.',
+      text:
+        'This course transformed my life. The teachers are incredibly knowledgeable, and the setting in Rishikesh is magical. I left feeling confident and prepared to continue my yoga journey.',
     },
     {
       name: 'Michael Chen',
       country: 'Canada',
-      text: 'The perfect introduction to yoga teacher training. Small class sizes meant I got personal attention, and the curriculum was comprehensive yet accessible for beginners.',
+      text:
+        'The perfect introduction to yoga teacher training. Small class sizes meant I got personal attention, and the curriculum was comprehensive yet accessible for beginners.',
     },
     {
       name: 'Emma Williams',
       country: 'UK',
-      text: 'The spiritual atmosphere of Rishikesh combined with expert teaching made this an unforgettable experience. The daily practice by the Ganges was life-changing.',
+      text:
+        'The spiritual atmosphere of Rishikesh combined with expert teaching made this an unforgettable experience. The daily practice by the Ganges was life-changing.',
     },
-  ];
+  ],
+};
 
-  const faqs = [
+const DEFAULT_FAQS = {
+  tag: 'Frequently Asked Questions',
+  title: 'Get Answers to Common Questions',
+  items: [
     {
       q: 'Which airport should I fly to?',
       a: 'The closest airport is New Delhi (DEL). From there, you can take a domestic flight to Dehradun (DED) which is 30 minutes from Rishikesh, or travel by taxi/bus (6-7 hours).',
@@ -197,7 +250,7 @@ export default function YogaCourse100() {
     },
     {
       q: 'Will I get certification?',
-      a: 'You will receive a 100-hour certificate. To become a certified yoga teacher (RYT-200), you need to complete the remaining 100 hours within one year at the same school.',
+      a: 'You will receive a certification for the training hours you complete. Please ask us how to combine multiple trainings for a longer credential.',
     },
     {
       q: 'What is included in the course fee?',
@@ -207,15 +260,105 @@ export default function YogaCourse100() {
       q: 'Is the food suitable for special diets?',
       a: 'Yes! We provide vegetarian, vegan, and gluten-free options. Please inform us of any allergies or dietary requirements in advance.',
     },
-  ];
+  ],
+};
+
+const DEFAULT_CTA = {
+  title: 'Ready to Begin Your Journey?',
+  subtitle: 'Transform your life through yoga. Join us in Rishikesh for an unforgettable experience.',
+  primaryLabel: 'Apply Now',
+  primaryLink: '/BookingForm',
+  secondaryLabel: 'Contact Us',
+  secondaryLink: '/contact-us',
+};
+
+export default function YogaCourse100() {
+  const navigate = useNavigate();
+  const { slug } = useParams();
+  const [course, setCourse] = useState(null);
+
+  const courseSlug = slug || '100-hour-yttc';
+
+  useEffect(() => {
+    const fetchCourse = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses/slug/${courseSlug}`);
+        setCourse(res.data?.data || null);
+      } catch (error) {
+        console.error('Failed to load course data', error);
+      }
+    };
+
+    fetchCourse();
+  }, [courseSlug]);
+
+  const content = course?.content || {};
+
+  const hero = { ...DEFAULT_HERO, ...(content.hero || {}) };
+  if (!content.hero?.title && course?.title) hero.title = course.title;
+  if (!content.hero?.breadcrumbLabel && (course?.shortTitle || course?.title)) {
+    hero.breadcrumbLabel = course?.shortTitle || course?.title;
+  }
+
+  const overview = { ...DEFAULT_OVERVIEW, ...(content.overview || {}) };
+  if (!content.overview?.description && course?.description) {
+    overview.description = course.description;
+  }
+
+  const fallbackInfoCards = useMemo(() => {
+    const duration = course?.duration || course?.teacherTraining?.duration;
+    const level = course?.level;
+    const certification = course?.teacherTraining?.certification || course?.home?.certification;
+    const location = course?.location;
+
+    return [
+      {
+        ...DEFAULT_INFO_CARDS[0],
+        tag: duration || DEFAULT_INFO_CARDS[0].tag,
+        detail: duration ? `📅 ${duration}` : DEFAULT_INFO_CARDS[0].detail,
+      },
+      {
+        ...DEFAULT_INFO_CARDS[1],
+        tag: level || DEFAULT_INFO_CARDS[1].tag,
+        detail: level ? `📊 ${level}` : DEFAULT_INFO_CARDS[1].detail,
+      },
+      {
+        ...DEFAULT_INFO_CARDS[2],
+        tag: certification || DEFAULT_INFO_CARDS[2].tag,
+        detail: certification ? `🏆 ${certification}` : DEFAULT_INFO_CARDS[2].detail,
+      },
+      {
+        ...DEFAULT_INFO_CARDS[3],
+        tag: location || DEFAULT_INFO_CARDS[3].tag,
+        detail: location ? `📍 ${location}` : DEFAULT_INFO_CARDS[3].detail,
+      },
+    ];
+  }, [course]);
+
+  const infoCards = content.infoCards?.length ? content.infoCards : fallbackInfoCards;
+  const whySection = { ...DEFAULT_WHY, ...(content.whyRishikesh || {}) };
+  const curriculumSection = { ...DEFAULT_CURRICULUM, ...(content.curriculum || {}) };
+  const scheduleSection = { ...DEFAULT_SCHEDULE, ...(content.dailySchedule || {}) };
+  const featuresSection = { ...DEFAULT_FEATURES, ...(content.features || {}) };
+  const includedSection = { ...DEFAULT_INCLUDED_SECTION, ...(content.included || {}) };
+  const testimonialsSection = { ...DEFAULT_TESTIMONIALS, ...(content.testimonials || {}) };
+  const faqSection = { ...DEFAULT_FAQS, ...(content.faqs || {}) };
+  const ctaSection = { ...DEFAULT_CTA, ...(content.cta || {}) };
+
+  const heroImage =
+    toAssetUrl(hero.bannerImage || course?.banner || course?.card?.image) || heroVideo;
+  const includedItems = includedSection.items?.length ? includedSection.items : DEFAULT_INCLUDED_SECTION.items;
+  const notIncludedItems = includedSection.notIncluded || [];
+
+  const courseTitle = hero.title || course?.title || DEFAULT_HERO.title;
 
   return (
     <>
       {/* Banner Image */}
       <div className={styles.bannerWrapper}>
         <img
-          src={heroVideo}
-          alt="100 Hour Yoga Teacher Training"
+          src={heroImage}
+          alt={courseTitle}
           className={styles.bannerImage}
         />
       </div>
@@ -224,16 +367,15 @@ export default function YogaCourse100() {
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <p className={styles.quoteText}>
-            Transform Your Practice, Inspire Others, Become a Certified Yoga
-            Teacher
+            {hero.quoteText}
           </p>
           <h1 className={styles.mainTitle}>
-            100 Hour Yoga Teacher Training in Rishikesh, India
+            {hero.title}
           </h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
             <span className={styles.breadcrumbSeparator}>/</span>
-            <span>100 Hour YTTC</span>
+            <span>{hero.breadcrumbLabel}</span>
           </div>
         </div>
       </section>
@@ -241,104 +383,64 @@ export default function YogaCourse100() {
       {/* Overview Section */}
       <section className={styles.overviewSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Course Overview</p>
+          <p className={styles.sectionTag}>{overview.tag}</p>
           <h2 className={styles.sectionTitle}>
-            A Comprehensive, Residential Program Designed for Beginners and
-            Practitioners
+            {overview.title}
           </h2>
           <div className={styles.decorativeLine}></div>
           <p className={styles.sectionDescription}>
-            The <strong>100 Hour Yoga Teacher Training Course</strong> is your
-            gateway to authentic yoga practice in the birthplace of yoga. This
-            transformative journey in Rishikesh combines traditional teachings
-            with modern methodology, covering essential aspects of yoga
-            philosophy, anatomy, pranayama, meditation, and asanas.
+            {overview.description}
           </p>
         </div>
 
         {/* Info Grid */}
         <div className={styles.infoGrid}>
-          <div className={styles.infoCard}>
-            <div className={styles.infoContent}>
-              <h3 className={styles.infoCardTitle}>Duration</h3>
-              <div className={styles.infoTags}>
-                <span className={styles.infoTag}>12-14 Days</span>
+          {infoCards.map((card, index) => (
+            <div className={styles.infoCard} key={index}>
+              <div className={styles.infoContent}>
+                <h3 className={styles.infoCardTitle}>{card.title}</h3>
+                <div className={styles.infoTags}>
+                  <span className={styles.infoTag}>{card.tag}</span>
+                </div>
+                <div className={styles.infoDetails}>
+                  <p>{card.detail}</p>
+                </div>
               </div>
-              <div className={styles.infoDetails}>
-                <p>📅 12-14 Days intensive residential program</p>
-              </div>
-            </div>
-            <div className={styles.infoImageSection}>
-              <div className={styles.infoIcon}>📅</div>
-            </div>
-          </div>
-
-          <div className={styles.infoCard}>
-            <div className={styles.infoContent}>
-              <h3 className={styles.infoCardTitle}>Level</h3>
-              <div className={styles.infoTags}>
-                <span className={styles.infoTag}>Beginner to Intermediate</span>
-              </div>
-              <div className={styles.infoDetails}>
-                <p>📊 Suitable for all levels of practitioners</p>
+              <div className={styles.infoImageSection}>
+                <div className={styles.infoIcon}>{card.icon}</div>
               </div>
             </div>
-            <div className={styles.infoImageSection}>
-              <div className={styles.infoIcon}>📊</div>
-            </div>
-          </div>
-
-          <div className={styles.infoCard}>
-            <div className={styles.infoContent}>
-              <h3 className={styles.infoCardTitle}>Certification</h3>
-              <div className={styles.infoTags}>
-                <span className={styles.infoTag}>Step to RYT-200</span>
-              </div>
-              <div className={styles.infoDetails}>
-                <p>🏆 Internationally recognized certificate</p>
-              </div>
-            </div>
-            <div className={styles.infoImageSection}>
-              <div className={styles.infoIcon}>🏆</div>
-            </div>
-          </div>
-
-          <div className={styles.infoCard}>
-            <div className={styles.infoContent}>
-              <h3 className={styles.infoCardTitle}>Location</h3>
-              <div className={styles.infoTags}>
-                <span className={styles.infoTag}>Rishikesh, India</span>
-              </div>
-              <div className={styles.infoDetails}>
-                <p>📍 Yoga capital of the world</p>
-              </div>
-            </div>
-            <div className={styles.infoImageSection}>
-              <div className={styles.infoIcon}>📍</div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
-      
-      <Form100/>
 
+      <Form100
+        courseId={course?._id}
+        courseTitle={courseTitle}
+        batches={course?.batches || []}
+        included={includedItems}
+        notIncluded={notIncludedItems}
+        toBringImage={includedSection.toBringImage}
+        includedTitle={includedSection.includedTitle}
+        notIncludedTitle={includedSection.notIncludedTitle}
+        toBringTitle={includedSection.toBringTitle}
+      />
 
       {/* Why Rishikesh Section */}
       <section className={styles.whyRishikeshSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Why Rishikesh?</p>
+          <p className={styles.sectionTag}>{whySection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Discover the Magic of Learning Yoga in Its Birthplace
+            {whySection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
           <p className={styles.sectionDescription}>
-            Rishikesh is the yoga capital of the world, home to authentic yoga
-            schools and ancient wisdom.
+            {whySection.description}
           </p>
         </div>
 
         <div className={styles.contentGrid}>
-          {whyRishikesh.map((item, index) => (
+          {(whySection.items || DEFAULT_WHY.items).map((item, index) => (
             <div key={index} className={styles.contentCard}>
               <div className={styles.contentInfo}>
                 <h3 className={styles.contentCardTitle}>{item.title}</h3>
@@ -360,15 +462,15 @@ export default function YogaCourse100() {
       {/* Curriculum Section - What You'll Learn */}
       <section className={styles.curriculumSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>What You'll Learn</p>
+          <p className={styles.sectionTag}>{curriculumSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Comprehensive Curriculum Covering All Aspects of Yoga
+            {curriculumSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.curriculumGrid}>
-          {curriculum.map((item, index) => (
+          {(curriculumSection.items || DEFAULT_CURRICULUM.items).map((item, index) => (
             <div key={index} className={styles.curriculumCard}>
               <div className={styles.curriculumInfo}>
                 <h3 className={styles.curriculumTitle}>{item.category}</h3>
@@ -388,15 +490,15 @@ export default function YogaCourse100() {
       {/* Daily Schedule Section */}
       <section className={styles.scheduleSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Daily Schedule</p>
+          <p className={styles.sectionTag}>{scheduleSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            A Typical Day in Your Yoga Teacher Training Journey
+            {scheduleSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.scheduleGrid}>
-          {dailySchedule.map((item, index) => (
+          {(scheduleSection.items || DEFAULT_SCHEDULE.items).map((item, index) => (
             <div key={index} className={styles.scheduleCard}>
               <div className={styles.scheduleInfo}>
                 <h3 className={styles.scheduleTime}>{item.time}</h3>
@@ -412,15 +514,15 @@ export default function YogaCourse100() {
       {/* Course Features Section */}
       <section className={styles.FeaturesSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Course Features</p>
+          <p className={styles.sectionTag}>{featuresSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Everything You Need for a Transformative Yoga Journey
+            {featuresSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.featuresGrid}>
-          {features.map((feature, index) => (
+          {(featuresSection.items || DEFAULT_FEATURES.items).map((feature, index) => (
             <div key={index} className={styles.featureCard}>
               <div className={styles.featureInfo}>
                 <h3 className={styles.featureTitle}>{feature.title}</h3>
@@ -438,20 +540,20 @@ export default function YogaCourse100() {
           ))}
         </div>
       </section>
-      <InternationalCertificate/>
+      <InternationalCertificate data={content.certificate} />
 
       {/* What's Included Section */}
       <section className={styles.includedSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>What's Included</p>
+          <p className={styles.sectionTag}>{includedSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Everything You Need for a Comfortable Stay and Learning Experience
+            {includedSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.includedGrid}>
-          {included.map((item, index) => (
+          {includedItems.map((item, index) => (
             <div key={index} className={styles.includedCard}>
               <div className={styles.includedInfo}>
                 <div className={styles.includedIcon}>✓</div>
@@ -462,51 +564,20 @@ export default function YogaCourse100() {
         </div>
       </section>
 
-      {/* Schools Section */}
-      {/* <section className={styles.schoolsSection}>
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Our Partner Schools</p>
-          <h2 className={styles.sectionTitle}>
-            Choose from Rishikesh's Most Reputed Yoga Schools
-          </h2>
-          <div className={styles.decorativeLine}></div>
-        </div>
-
-        <div className={styles.schoolsGrid}>
-          {schools.map((school, index) => (
-            <div key={index} className={styles.schoolCard}>
-              <div className={styles.schoolInfo}>
-                <h3 className={styles.schoolName}>{school.name}</h3>
-                <div className={styles.schoolDescription}>
-                  <p>{school.description}</p>
-                </div>
-              </div>
-              <div className={styles.schoolImageSection}>
-                <img
-                  src={school.image}
-                  alt={school.name}
-                  className={styles.schoolImage}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
       <Hours24 />
 
       {/* Testimonials Section */}
       <section className={styles.testimonialsSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>What Our Students Say</p>
+          <p className={styles.sectionTag}>{testimonialsSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Hear from Those Who Experienced the Transformation
+            {testimonialsSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.testimonialsGrid}>
-          {testimonials.map((testimonial, index) => (
+          {(testimonialsSection.items || DEFAULT_TESTIMONIALS.items).map((testimonial, index) => (
             <div key={index} className={styles.testimonialCard}>
               <div className={styles.testimonialInfo}>
                 <h3 className={styles.testimonialName}>{testimonial.name}</h3>
@@ -529,15 +600,15 @@ export default function YogaCourse100() {
       {/* FAQ Section */}
       <section className={styles.faqSection}>
         <div className={styles.sectionHeader}>
-          <p className={styles.sectionTag}>Frequently Asked Questions</p>
+          <p className={styles.sectionTag}>{faqSection.tag}</p>
           <h2 className={styles.sectionTitle}>
-            Get Answers to Common Questions
+            {faqSection.title}
           </h2>
           <div className={styles.decorativeLine}></div>
         </div>
 
         <div className={styles.faqGrid}>
-          {faqs.map((faq, index) => (
+          {(faqSection.items || DEFAULT_FAQS.items).map((faq, index) => (
             <div key={index} className={styles.faqCard}>
               <div className={styles.faqInfo}>
                 <h3 className={styles.faqQuestion}>{faq.q}</h3>
@@ -552,28 +623,27 @@ export default function YogaCourse100() {
 
       <OurCourses />
       <BooksSection />
-      <HowToReach/>
+      <HowToReach />
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <div className={styles.ctaContent}>
-          <h2 className={styles.ctaTitle}>Ready to Begin Your Journey?</h2>
+          <h2 className={styles.ctaTitle}>{ctaSection.title}</h2>
           <p className={styles.ctaSubtitle}>
-            Transform your life through yoga. Join us in Rishikesh for an
-            unforgettable experience.
+            {ctaSection.subtitle}
           </p>
           <div className={styles.ctaButtons}>
             <button
               className={styles.ctaButton}
-              onClick={() => navigate('/BookingForm')}
+              onClick={() => navigate(ctaSection.primaryLink || '/BookingForm')}
             >
-              Apply Now
+              {ctaSection.primaryLabel}
             </button>
 
             <button
               className={`${styles.ctaButton} ${styles.ctaButtonSecondary}`}
-              onClick={() => navigate('/contact-us')}
+              onClick={() => navigate(ctaSection.secondaryLink || '/contact-us')}
             >
-              Contact Us
+              {ctaSection.secondaryLabel}
             </button>
           </div>
         </div>

@@ -161,9 +161,9 @@ const YogaSchool = () => {
 
             <div className={styles.buttons}>
               {[
-                { label: '200 Hour Yoga TTC', path: '/YogaCourse200' },
-                { label: '300 Hour Yoga TTC', path: '/YogaCourse300' },
-                { label: '500 Hour Yoga TTC', path: '/YogaCourse500' },
+                { label: '200 Hour Yoga TTC', path: '/course/200-hour-yttc' },
+                { label: '300 Hour Yoga TTC', path: '/course/300-hour-yttc' },
+                { label: '500 Hour Yoga TTC', path: '/course/500-hour-yttc' },
               ].map((item, i) => (
                 <motion.button
                   key={i}

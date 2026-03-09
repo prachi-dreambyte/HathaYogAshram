@@ -532,6 +532,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.successText {
+  color: #1b7d3c;
+  font-size: 0.9em;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .submitBtn {
   background: linear-gradient(135deg, #b71c1c 0%, #8b0000 100%);
   color: #ffffff;

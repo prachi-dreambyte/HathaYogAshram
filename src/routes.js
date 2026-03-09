@@ -27,6 +27,8 @@ import AboutFounderDetails from 'views/admin/AboutUs/Founder/FounderDetails';
 import AboutTeacherHeading from 'views/admin/AboutUs/Teachers/TeacherHeading';
 import AboutTeacherDetails from 'views/admin/AboutUs/Teachers/TeacherDetails';
 import AboutCoursesDetails from 'views/admin/Courses/CoursesDetails';
+import CourseBatches from 'views/admin/Courses/CourseBatches';
+import CourseBookings from 'views/admin/Courses/CourseBookings';
 import BooksAdmin from 'views/admin/Books/BooksAdmin';
 import BooksPageContent from 'views/admin/Books/BooksPageContent';
 
@@ -313,11 +315,25 @@ const routes = [
   collapse: true,
   items: [
     {
-      name: 'Courses Details',
+      name: 'Courses Catalog',
       layout: '/admin',
       path: '/Courses/Courses-Details',
       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
       component: <AboutCoursesDetails />,
+    },
+    {
+      name: 'Course Batches',
+      layout: '/admin',
+      path: '/Courses/Batches',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <CourseBatches />,
+    },
+    {
+      name: 'Course Bookings',
+      layout: '/admin',
+      path: '/Courses/Bookings',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <CourseBookings />,
     },
   ],
 },
