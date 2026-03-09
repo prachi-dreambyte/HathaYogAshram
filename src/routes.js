@@ -48,6 +48,7 @@ import HomeStudentReview from 'views/admin/HomePage/StudentReview/StudentReview'
 import AccommodationForm from 'views/admin/AboutUs/Accommodation/Accommodation';
 import GalleryHeadingForm from 'views/admin/AboutUs/Gallery/Gallery';
 import GalleryForm from 'views/admin/AboutUs/Gallery/GalleryHeading';
+import BlogHeadingForm from 'views/admin/AboutUs/Blog/BlogHeading';
 
 const routes = [
   {
@@ -351,6 +352,36 @@ const routes = [
         path: '/AboutUs/Accommodation',
         icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
         component: <AccommodationForm />,
+      },
+       {
+        name: 'Blog',
+        layout: '/admin',
+        path: '/AboutUs/Blogs',
+        icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
+        collapse: true,
+        items: [
+          {
+            name: 'Blogs',
+        layout: '/admin',
+        path: '/AboutUs/Blogs/Heading',
+            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
+            component: <BlogHeadingForm/>,
+          },
+           {
+            name: 'Blogs Tab',
+        layout: '/admin',
+        path: '/AboutUs/Blogs/Tabs',
+            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
+            component: <HomeFacilityCards />,
+          },
+           {
+            name: 'Blog Details',
+        layout: '/admin',
+        path: '/AboutUs/Blogs/Blog-Details',
+            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
+            component: <HomeFacilityCards />,
+          },
+        ],
       },
     ],
   },
