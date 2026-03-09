@@ -8,6 +8,7 @@ const EMPTY_VIDEO = { type: "upload", file: null, link: "" };
 const EMPTY_FORM = {
   journeyHeading: "",
   journeyTitle: "",
+  journeyParagraph: "",
   videoTitle: "",
   videos: [
     { ...EMPTY_VIDEO },
@@ -19,6 +20,39 @@ const EMPTY_FORM = {
   lastHeading: "",
   lastParagraph: "",
 };
+
+const Field = ({ label, name, required, value, onChange }) => (
+  <div className="mb-3">
+    <label className="form-label fw-semibold">
+      {label}{required && " *"}
+    </label>
+    <input
+      type="text"
+      name={name}
+      className="form-control"
+      value={value}
+      onChange={onChange}
+      required={required}
+    />
+  </div>
+);
+
+const TextArea = ({ label, name, value, onChange, rows = 3 }) => (
+  <div className="mb-3">
+    <label className="form-label fw-semibold">{label}</label>
+    <textarea
+      name={name}
+      className="form-control"
+      rows={rows}
+      value={value}
+      onChange={onChange}
+    />
+  </div>
+);
+
+const SectionTitle = ({ title }) => (
+  <h5 className="mt-4 mb-3 border-bottom pb-2 text-primary">{title}</h5>
+);
 
 function AboutFounderSection() {
   const [data, setData] = useState([]);
@@ -83,6 +117,7 @@ function AboutFounderSection() {
       const fd = new FormData();
       fd.append("journeyHeading", formData.journeyHeading);
       fd.append("journeyTitle", formData.journeyTitle);
+      fd.append("journeyParagraph", formData.journeyParagraph);
       fd.append("videoTitle", formData.videoTitle);
       if (formData.lastIcon) fd.append("lastIcon", formData.lastIcon);
       fd.append("lastHeading", formData.lastHeading);
@@ -115,15 +150,20 @@ function AboutFounderSection() {
 
   // ── Edit ────────────────────────────────────────────────────────────────
   const handleEdit = (item) => {
-    const videos = Array.from({ length: 4 }, (_, i) => ({
-      type: item.videos?.[i]?.type || "upload",
-      file: null,
-      link: item.videos?.[i]?.link || "",
-    }));
+    const videos = Array.from({ length: 4 }, (_, i) => {
+      const existing = item.videos?.[i];
+      const type = existing?.type || "upload";
+      return {
+        type,
+        file: null,
+        link: type === "link" ? (existing?.url || "") : "",
+      };
+    });
 
     setFormData({
       journeyHeading: item.journeyHeading || "",
       journeyTitle: item.journeyTitle || "",
+      journeyParagraph: item.journeyParagraph || "",
       videoTitle: item.videoTitle || "",
       videos,
       lastIcon: null,
@@ -150,40 +190,6 @@ function AboutFounderSection() {
     setEditId(null);
     setShowForm(false);
   };
-
-  // ── UI Helpers ──────────────────────────────────────────────────────────
-  const Field = ({ label, name, required }) => (
-    <div className="mb-3">
-      <label className="form-label fw-semibold">
-        {label}{required && " *"}
-      </label>
-      <input
-        type="text"
-        name={name}
-        className="form-control"
-        value={formData[name]}
-        onChange={handleChange}
-        required={required}
-      />
-    </div>
-  );
-
-  const TextArea = ({ label, name }) => (
-    <div className="mb-3">
-      <label className="form-label fw-semibold">{label}</label>
-      <textarea
-        name={name}
-        className="form-control"
-        rows={3}
-        value={formData[name]}
-        onChange={handleChange}
-      />
-    </div>
-  );
-
-  const SectionTitle = ({ title }) => (
-    <h5 className="mt-4 mb-3 border-bottom pb-2 text-primary">{title}</h5>
-  );
 
   // ── Render ───────────────────────────────────────────────────────────────
   return (
@@ -259,11 +265,33 @@ function AboutFounderSection() {
 
           {/* ── Journey Section ── */}
           <SectionTitle title="Journey Section" />
-          <Field label="Heading" name="journeyHeading" required />
-          <Field label="Title" name="journeyTitle" />
+          <Field
+            label="Heading"
+            name="journeyHeading"
+            required
+            value={formData.journeyHeading}
+            onChange={handleChange}
+          />
+          <Field
+            label="Title"
+            name="journeyTitle"
+            value={formData.journeyTitle}
+            onChange={handleChange}
+          />
+          <TextArea
+            label="Paragraph"
+            name="journeyParagraph"
+            value={formData.journeyParagraph}
+            onChange={handleChange}
+          />
           {/* ── Founder Videos ── */}
           <SectionTitle title="Founder Videos" />
-          <Field label="Video Section Title" name="videoTitle" />
+          <Field
+            label="Video Section Title"
+            name="videoTitle"
+            value={formData.videoTitle}
+            onChange={handleChange}
+          />
 
           <div className="row g-3">
             {formData.videos.map((v, i) => (
@@ -330,18 +358,37 @@ function AboutFounderSection() {
           {/* ── Last Section ── */}
           <SectionTitle title="Founder Last Section" />
           <div className="mb-3">
-           <label>Icon (Example: FaBook)</label>
-          <input
-            type="text"
-            name="icon"
-            className="form-control mb-2"
-            value={formData.icon}
-            onChange={handleChange}
-            required
-          />
+            <label className="form-label fw-semibold">Icon</label>
+            <input
+              type="file"
+              name="lastIcon"
+              accept="image/*"
+              className="form-control mb-2"
+              onChange={handleChange}
+            />
+            {formData.lastIcon && (
+              <small className="text-success d-block">
+                ✅ {formData.lastIcon.name}
+              </small>
+            )}
+            {!formData.lastIcon && editId && (
+              <small className="text-muted d-block">
+                (existing icon will be kept if no new file chosen)
+              </small>
+            )}
           </div>
-          <Field label="Heading" name="lastHeading" />
-          <TextArea label="Paragraph" name="lastParagraph" />
+          <Field
+            label="Heading"
+            name="lastHeading"
+            value={formData.lastHeading}
+            onChange={handleChange}
+          />
+          <TextArea
+            label="Paragraph"
+            name="lastParagraph"
+            value={formData.lastParagraph}
+            onChange={handleChange}
+          />
 
           <div className="d-flex gap-2 mt-3">
             <button

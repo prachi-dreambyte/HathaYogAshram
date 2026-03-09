@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaLeaf } from "react-icons/fa";
@@ -53,7 +54,9 @@ const fadeUp = {
 /* Course Data              */
 /* ======================== */
 
-const courses = [
+const API_BASE = "http://localhost:8000/api";
+
+const DEFAULT_COURSES = [
   {
     title: "5 Days Ayurveda Courses",
     label: "Introduction to Ayurveda",
@@ -89,6 +92,38 @@ const courses = [
 
 const AyurvedaTeaser = () => {
   const navigate = useNavigate();
+  const [courses, setCourses] = useState(DEFAULT_COURSES);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses`, {
+          params: { homeSection: "ayurveda" },
+        });
+        const items = res.data?.data || [];
+        if (!items.length) return;
+
+        const mapped = items.map((course) => {
+          const details = course.ayurveda || {};
+          return {
+            title: details.title || course.title || "",
+            label: details.label || course.shortTitle || "",
+            price: details.price || course.card?.price || "",
+            duration: details.duration || course.duration || "",
+            date: details.date || course.home?.date || "",
+            badge: details.badge || course.home?.badge || "Beginner",
+            detailsRoute: details.detailsRoute || course.legacyPath || (course.slug ? `/course/${course.slug}` : "/BookingForm"),
+          };
+        });
+
+        setCourses(mapped);
+      } catch (error) {
+        console.error("Failed to load ayurveda courses", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
 
   return (
     <motion.section
@@ -100,7 +135,6 @@ const AyurvedaTeaser = () => {
     >
       <div className={`container ${styles.cardWrapper}`}>
         <div className={styles.card}>
-
           {/* Left Image */}
           <motion.div className={styles.imageBox} variants={imageVariant}>
             <img
@@ -111,11 +145,10 @@ const AyurvedaTeaser = () => {
 
           {/* Right Content */}
           <motion.div className={styles.contentBox} variants={contentVariant}>
-
             {/* Header */}
             <motion.h2 className={styles.mainTitle} variants={fadeUp}>
               <FaLeaf className={styles.titleIcon} />
-               Discover Ayurveda Courses
+              Discover Ayurveda Courses
             </motion.h2>
             <motion.p className={styles.mainSubtitle} variants={fadeUp}>
               Ayurveda Wellness & Healing Programs
@@ -135,7 +168,6 @@ const AyurvedaTeaser = () => {
               {courses.map((course, index) => (
                 <React.Fragment key={course.title}>
                   <div className={styles.courseCol}>
-
                     {/* Badge */}
                     <span className={`${styles.badge} ${styles[`badge${course.badge}`]}`}>
                       {course.badge}
@@ -184,7 +216,6 @@ const AyurvedaTeaser = () => {
                 </React.Fragment>
               ))}
             </motion.div>
-
           </motion.div>
         </div>
       </div>

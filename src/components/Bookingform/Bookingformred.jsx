@@ -1,17 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import axios from 'axios';
 import styles from '../../assets/styles/Bookingform/Bookingformred.module.css';
 
+const API_BASE = "http://localhost:8000/api";
+
 const BookingForm = () => {
+  const [searchParams] = useSearchParams();
+  const [courses, setCourses] = useState([]);
+  const [batches, setBatches] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState('');
+  const [submitSuccess, setSubmitSuccess] = useState('');
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     address: '',
-    country: '',
-    course: '',
-    duration: '',
-    source: '',
-    captcha: false
+    country: 'Select country',
+    courseId: '',
+    batchId: '',
+    source: 'Where did you find us?',
+    captcha: false,
   });
 
   const [errors, setErrors] = useState({});
@@ -63,35 +74,6 @@ const BookingForm = () => {
     "Taiwan"
   ];
 
-  const courses = [
-    "Select Course",
-    "100 Hour Yoga Teacher Training (10 Days)",
-    "200 Hour Yoga Teacher Training (24 Days)",
-    "300 Hour Yoga Teacher Training (30 Days)",
-    "500 Hour Yoga Teacher Training (60 Days)",
-    "Prenatal Yoga Teacher Training (100 Hours - 12 Days)",
-    "Meditation Teacher Training (50 Hours - 7 Days)",
-    "Ayurveda Massage Course (100 Hours - 14 Days)",
-    "Yoga Retreat (7 Days)",
-    "Advanced Ashtanga Yoga (200 Hours - 21 Days)"
-  ];
-
-  const durations = [
-    "Select Duration",
-    "1st October 2025",
-    "1st November 2025",
-    "1st December 2025",
-    "1st January 2026",
-    "1st February 2026",
-    "1st March 2026",
-    "1st April 2026",
-    "1st May 2026",
-    "1st June 2026",
-    "1st July 2026",
-    "1st August 2026",
-    "1st September 2026"
-  ];
-
   const sources = [
     "Where did you find us?",
     "Google",
@@ -105,13 +87,62 @@ const BookingForm = () => {
     "Other"
   ];
 
+  const courseOptions = useMemo(() => {
+    return courses.map((course) => ({
+      id: course._id,
+      label: course.shortTitle || course.title,
+      batches: course.batches || [],
+    }));
+  }, [courses]);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses`, {
+          params: { withBatches: true },
+        });
+        const items = res.data?.data || [];
+        setCourses(items);
+      } catch (error) {
+        console.error('Failed to load courses', error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
+
+  useEffect(() => {
+    const preselectedCourse = searchParams.get('course');
+    const preselectedBatch = searchParams.get('batch');
+    if (preselectedCourse) {
+      setFormData((prev) => ({
+        ...prev,
+        courseId: preselectedCourse,
+        batchId: preselectedBatch || prev.batchId,
+      }));
+    }
+  }, [searchParams]);
+
+  useEffect(() => {
+    const selected = courseOptions.find((course) => course.id === formData.courseId);
+    if (selected) {
+      setBatches(selected.batches || []);
+      const hasBatch = (selected.batches || []).some((batch) => batch._id === formData.batchId);
+      if (!hasBatch) {
+        setFormData((prev) => ({ ...prev, batchId: '' }));
+      }
+    } else {
+      setBatches([]);
+    }
+  }, [courseOptions, formData.courseId]);
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    
+
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -142,12 +173,12 @@ const BookingForm = () => {
       newErrors.country = 'Please select a country';
     }
 
-    if (!formData.course || formData.course === 'Select Course') {
-      newErrors.course = 'Please select a course';
+    if (!formData.courseId) {
+      newErrors.courseId = 'Please select a course';
     }
 
-    if (!formData.duration || formData.duration === 'Select Duration') {
-      newErrors.duration = 'Please select a duration';
+    if (!formData.batchId) {
+      newErrors.batchId = 'Please select a duration';
     }
 
     if (!formData.source || formData.source === 'Where did you find us?') {
@@ -162,12 +193,43 @@ const BookingForm = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (validateForm()) {
-      console.log('Form submitted:', formData);
-      alert('🙏 Namaste! Thank you for your application! We will contact you soon.');
+    setSubmitError('');
+    setSubmitSuccess('');
+
+    if (!validateForm()) return;
+
+    setLoading(true);
+    try {
+      await axios.post(`${API_BASE}/course-bookings`, {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address,
+        country: formData.country,
+        source: formData.source,
+        course: formData.courseId,
+        batch: formData.batchId,
+        seats: 1,
+      });
+
+      setSubmitSuccess('🙏 Namaste! Thank you for your application! We will contact you soon.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        address: '',
+        country: 'Select country',
+        courseId: '',
+        batchId: '',
+        source: 'Where did you find us?',
+        captcha: false,
+      });
+    } catch (error) {
+      setSubmitError(error.response?.data?.message || 'Something went wrong.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -236,6 +298,9 @@ const BookingForm = () => {
               </div>
               <h3>Apply Today!</h3>
             </div>
+
+            {submitError && <div className={styles.errorText}>{submitError}</div>}
+            {submitSuccess && <div className={styles.successText}>{submitSuccess}</div>}
 
             <form onSubmit={handleSubmit} className={styles.form}>
               <div className={styles.formGroup}>
@@ -320,39 +385,45 @@ const BookingForm = () => {
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="course">Select Course</label>
+                <label htmlFor="courseId">Select Course</label>
                 <select
-                  id="course"
-                  name="course"
-                  value={formData.course}
+                  id="courseId"
+                  name="courseId"
+                  value={formData.courseId}
                   onChange={handleChange}
-                  className={errors.course ? styles.errorInput : ''}
+                  className={errors.courseId ? styles.errorInput : ''}
                 >
-                  {courses.map((course, index) => (
-                    <option key={index} value={course}>
-                      {course}
+                  <option value="">Select Course</option>
+                  {courseOptions.map((course) => (
+                    <option key={course.id} value={course.id}>
+                      {course.label}
                     </option>
                   ))}
                 </select>
-                {errors.course && <span className={styles.errorText}>{errors.course}</span>}
+                {errors.courseId && <span className={styles.errorText}>{errors.courseId}</span>}
               </div>
 
               <div className={styles.formGroup}>
-                <label htmlFor="duration">Duration</label>
+                <label htmlFor="batchId">Duration</label>
                 <select
-                  id="duration"
-                  name="duration"
-                  value={formData.duration}
+                  id="batchId"
+                  name="batchId"
+                  value={formData.batchId}
                   onChange={handleChange}
-                  className={errors.duration ? styles.errorInput : ''}
+                  className={errors.batchId ? styles.errorInput : ''}
                 >
-                  {durations.map((duration, index) => (
-                    <option key={index} value={duration}>
-                      {duration}
+                  <option value="">Select Duration</option>
+                  {batches.map((batch) => (
+                    <option
+                      key={batch._id}
+                      value={batch._id}
+                      disabled={batch.availableSeats <= 0}
+                    >
+                      {new Date(batch.startDate).toLocaleDateString()} - {new Date(batch.endDate).toLocaleDateString()} ({batch.availableSeats ?? 0} seats)
                     </option>
                   ))}
                 </select>
-                {errors.duration && <span className={styles.errorText}>{errors.duration}</span>}
+                {errors.batchId && <span className={styles.errorText}>{errors.batchId}</span>}
               </div>
 
               <div className={styles.formGroup}>
@@ -386,8 +457,8 @@ const BookingForm = () => {
                     <span>I'm not a robot</span>
                   </label>
                   <div className={styles.captchaLogo}>
-                    <img 
-                      src="https://www.gstatic.com/recaptcha/api2/logo_48.png" 
+                    <img
+                      src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
                       alt="reCAPTCHA"
                     />
                     <div className={styles.captchaText}>
@@ -399,8 +470,8 @@ const BookingForm = () => {
                 {errors.captcha && <span className={styles.errorText}>{errors.captcha}</span>}
               </div>
 
-              <button type="submit" className={styles.submitBtn}>
-                <span>Send Message</span>
+              <button type="submit" className={styles.submitBtn} disabled={loading}>
+                <span>{loading ? 'Submitting...' : 'Send Message'}</span>
                 <span className={styles.btnIcon}>→</span>
               </button>
             </form>

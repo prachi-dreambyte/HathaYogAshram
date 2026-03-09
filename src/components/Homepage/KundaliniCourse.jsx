@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
 import styles from "../../assets/styles/Homepage/KundaliniCourse.module.css";
 import kundaliniImg from "../../assets/images/Yoga1.jpg"; // replace with actual image
@@ -51,7 +52,9 @@ const fadeUp = {
 /* Course Data              */
 /* ======================== */
 
-const courses = [
+const API_BASE = "http://localhost:8000/api";
+
+const DEFAULT_COURSES = [
   {
     title: "100-Hour Kundalini Yoga",
     label: "Foundation Course",
@@ -87,6 +90,38 @@ const courses = [
 
 const KundaliniCourses = () => {
   const navigate = useNavigate();
+  const [courses, setCourses] = useState(DEFAULT_COURSES);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses`, {
+          params: { homeSection: "kundalini" },
+        });
+        const items = res.data?.data || [];
+        if (!items.length) return;
+
+        const mapped = items.map((course) => {
+          const details = course.kundalini || {};
+          return {
+            title: details.title || course.title || "",
+            label: details.label || course.shortTitle || "",
+            price: details.price || course.card?.price || "",
+            duration: details.duration || course.duration || "",
+            date: details.date || course.home?.date || "",
+            badge: details.badge || course.home?.badge || "Beginner",
+            detailsRoute: details.detailsRoute || course.legacyPath || (course.slug ? `/course/${course.slug}` : "/BookingForm"),
+          };
+        });
+
+        setCourses(mapped);
+      } catch (error) {
+        console.error("Failed to load kundalini courses", error);
+      }
+    };
+
+    fetchCourses();
+  }, []);
 
   return (
     <motion.section

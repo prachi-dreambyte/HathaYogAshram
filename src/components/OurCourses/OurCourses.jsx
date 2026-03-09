@@ -12,7 +12,7 @@ const courses = [
       "Be a part of USA Yoga Alliance registered 100 Hour Yoga Teacher Training with Hatha Yogashram, Rishikesh, India. This foundational course is ideal for beginners who want to explore yogic philosophy, asana practice, pranayama, and meditation while building a strong base for a yogic lifestyle.",
     image:
       "https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=80", // beginner yoga
-    link: "/YogaCourse100",
+    link: "/course/100-hour-yttc",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const courses = [
       "The 200 Hour Yoga Teacher Training Course is a complete and immersive program registered with USA Yoga Alliance (RYT 200). This course is designed to deepen your understanding of yoga through asana alignment, pranayama, meditation, anatomy, philosophy, and teaching methodology",
     image:
       "https://images.unsplash.com/photo-1599447421416-3414500d18a5?w=800&q=80", // yoga class teaching
-    link: "/YogaCourse200",
+    link: "/course/200-hour-yttc",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const courses = [
       "The 300 Hour Yoga Teacher Training Course is an advanced-level program for students who have completed 200 hours of training. It focuses on refined teaching skills, advanced asana practices, in-depth yoga philosophy, therapeutic applications, and self-transformation on a deeper spiritual level.",
     image:
       "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=80", // advanced yoga pose
-    link: "/YogaCourse300",
+    link: "/course/300-hour-yttc",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ const courses = [
       "The 500 Hour Yoga Teacher Training Course is a master-level program registered with USA Yoga Alliance (RYT 500). This intensive course combines both 200 and 300 hour teachings, offering complete mastery in traditional yoga practices, advanced philosophy, anatomy, and professional teaching excellence.",
     image:
       "https://images.unsplash.com/photo-1603988363607-e1e4a66962c6?w=800&q=80", // meditation + mastery
-    link: "/YogaCourse500",
+    link: "/course/500-hour-yttc",
   },
 ];
 

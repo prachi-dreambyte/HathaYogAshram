@@ -109,10 +109,10 @@ const Footer = () => {
               <ul className={styles.list}>
                 <li><Link to="/YinYoga">Yin Yoga</Link></li>
                 <li><Link to="/vedic-mantra">Vedic Mantra</Link></li>
-                <li><Link to="/YogaCourse100">100 Hour TTC</Link></li>
-                <li><Link to="/YogaCourse200">200 Hour TTC</Link></li>
-                <li><Link to="/YogaCourse300">300 Hour TTC</Link></li>
-                <li><Link to="/YogaCourse500">500 Hour TTC</Link></li>
+                <li><Link to="/course/100-hour-yttc">100 Hour TTC</Link></li>
+                <li><Link to="/course/200-hour-yttc">200 Hour TTC</Link></li>
+                <li><Link to="/course/300-hour-yttc">300 Hour TTC</Link></li>
+                <li><Link to="/course/500-hour-yttc">500 Hour TTC</Link></li>
               </ul>
             </div>
           </motion.div>

@@ -128,10 +128,10 @@ const Header = () => {
             </DesktopDropdown>
 
             <DesktopDropdown name="rishikesh" label="Rishikesh TTC">
-              <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
-              <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
-              <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
-              <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+              <Link to="/course/100-hour-yttc" onClick={closeAll}>100 Hour TTC</Link>
+              <Link to="/course/200-hour-yttc" onClick={closeAll}>200 Hour TTC</Link>
+              <Link to="/course/300-hour-yttc" onClick={closeAll}>300 Hour TTC</Link>
+              <Link to="/course/500-hour-yttc" onClick={closeAll}>500 Hour TTC</Link>
             </DesktopDropdown>
 
             <DesktopDropdown name="short" label="Short Course">
@@ -189,10 +189,10 @@ const Header = () => {
               </MobileAccordion>
 
               <MobileAccordion name="rishikesh" label="Rishikesh TTC">
-                <Link to="/YogaCourse100" onClick={closeAll}>100 Hour TTC</Link>
-                <Link to="/YogaCourse200" onClick={closeAll}>200 Hour TTC</Link>
-                <Link to="/YogaCourse300" onClick={closeAll}>300 Hour TTC</Link>
-                <Link to="/YogaCourse500" onClick={closeAll}>500 Hour TTC</Link>
+                <Link to="/course/100-hour-yttc" onClick={closeAll}>100 Hour TTC</Link>
+                <Link to="/course/200-hour-yttc" onClick={closeAll}>200 Hour TTC</Link>
+                <Link to="/course/300-hour-yttc" onClick={closeAll}>300 Hour TTC</Link>
+                <Link to="/course/500-hour-yttc" onClick={closeAll}>500 Hour TTC</Link>
               </MobileAccordion>
 
               <MobileAccordion name="short" label="Short Course">
