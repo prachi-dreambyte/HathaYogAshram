@@ -1,32 +1,37 @@
-import React from 'react';
-import styles from '../../assets/styles/AccommodationFood/AccommodationFood.module.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import styles from "../../assets/styles/AccommodationFood/AccommodationFood.module.css";
 
-/* ================= IMAGES (Google) ================= */
-
-const building1Images = [
-  'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b',
-  'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2',
-  'https://images.unsplash.com/photo-1582719478181-2b6d7b2c1b4c',
-  'https://images.unsplash.com/photo-1505691938895-1758d7feb511',
-];
-
-const building2Images = [
-  'https://images.unsplash.com/photo-1505691723518-36a5ac3b2b8f',
-  'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267',
-  'https://images.unsplash.com/photo-1618220179428-22790b461013',
-];
-
-const foodImages = [
-  'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe',
-  'https://images.unsplash.com/photo-1512621776951-a57141f2eefd',
-  'https://images.unsplash.com/photo-1572441710534-6801c27c29db',
-  'https://images.unsplash.com/photo-1542444459-db3e07fdbf15',
-];
+const API = "http://localhost:8000/api/accommodation";
 
 const AccommodationFood = () => {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+
+      const res = await axios.get(API);
+
+      if (res.data.data.length > 0) {
+        setData(res.data.data[0]);
+      }
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  if (!data) return <p>Loading...</p>;
+
   return (
     <section className={styles.wrapper}>
-      {/* ================= HERO HEADER ================= */}
+      
+      {/* HERO HEADER */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
           <span className={styles.topLabel}>
@@ -43,97 +48,90 @@ const AccommodationFood = () => {
         </div>
       </div>
 
-      {/* ================= MAIN CONTENT ================= */}
       <div className={styles.contentSection}>
-        {/* ================= ACCOMMODATION ================= */}
+        
+        {/* ACCOMMODATION */}
         <h2 className={styles.sectionTitle}>
-          Experience the Best Accommodation at Rishikesh Yogkulam
+          {data.sectionTitle}
         </h2>
 
         <p className={styles.description}>
-          At Rishikesh Yogkulam® you will surely feel the comfort of a Home Away
-          From Home. Our accommodations are designed to provide peace, comfort
-          and focus during your yoga teacher training journey.
+          {data.description}
         </p>
 
         <ul className={styles.features}>
-          <li><strong>Comfort & Convenience:</strong> Modern, cozy rooms.</li>
-          <li>
-            <strong>Two Dedicated Buildings:</strong> For
-            <span> 200 Hour</span> & <span>300 Hour YTTC</span>.
-          </li>
-          <li>
-            <strong>Homely Atmosphere:</strong> Calm, peaceful environment.
-          </li>
-          <li>
-            <strong>Modern Facilities:</strong> Clean rooms & bathrooms.
-          </li>
-          <li>
-            <strong>AC Available:</strong> On additional cost (limited rooms).
-          </li>
+          <li>{data.feature1}</li>
+          <li>{data.feature2}</li>
+          <li>{data.feature3}</li>
+          <li>{data.feature4}</li>
+          <li>{data.feature5}</li>
         </ul>
 
-        {/* ================= BUILDING 1 ================= */}
+        {/* BUILDING 1 */}
         <h3 className={styles.subTitle}>
-          Building 1 (200 Hour Yoga Teacher Training)
+          {data.building1Title}
         </h3>
 
         <div className={styles.imageGrid}>
-          {building1Images.map((img, i) => (
+          {data.building1Images?.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Accommodation Building 1" />
+              <img
+                src={`http://localhost:8000/uploads/${img}`}
+                alt="Building1"
+              />
             </div>
           ))}
         </div>
 
-        {/* ================= BUILDING 2 ================= */}
+        {/* BUILDING 2 */}
         <h3 className={styles.subTitle}>
-          Building 2 (300 Hour Yoga Teacher Training)
+          {data.building2Title}
         </h3>
 
         <div className={styles.imageGrid}>
-          {building2Images.map((img, i) => (
+          {data.building2Images?.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Accommodation Building 2" />
+              <img
+                src={`http://localhost:8000/uploads/${img}`}
+                alt="Building2"
+              />
             </div>
           ))}
         </div>
 
         <p className={styles.note}>
-          <strong>Note:</strong> Buildings assigned to each course may be
-          interchanged depending on availability.
+          <strong>Note:</strong> {data.note}
         </p>
 
         <div className={styles.divider}></div>
 
-        {/* ================= FOOD ================= */}
+        {/* FOOD */}
         <h2 className={styles.sectionTitle}>
-          Nourish Your Body, Mind & Soul With Our Vegetarian Food
+          {data.foodTitle}
         </h2>
 
         <p className={styles.description}>
-          Our dedicated kitchen staff prepares fresh, healthy and delicious
-          vegetarian meals that support your yogic lifestyle and training.
+          {data.foodDescription}
         </p>
 
         <ul className={styles.features}>
-          <li><strong>Three Meals Daily:</strong> Breakfast, lunch & dinner.</li>
-          <li><strong>Refreshing Teas:</strong> Herbal teas & juices.</li>
-          <li>
-            <strong>Special Diets:</strong> Vegan & gluten-free (on request).
-          </li>
-          <li>
-            <strong>Sundays Free:</strong> Explore Rishikesh cafés.
-          </li>
+          <li>{data.foodFeature1}</li>
+          <li>{data.foodFeature2}</li>
+          <li>{data.foodFeature3}</li>
+          <li>{data.foodFeature4}</li>
         </ul>
 
         <div className={styles.imageGrid}>
-          {foodImages.map((img, i) => (
+          {data.foodImages?.map((img, i) => (
             <div className={styles.imageCard} key={i}>
-              <img src={img} alt="Vegetarian Food" />
+              <img
+                src={`http://localhost:8000/uploads/${img}`}
+                alt="Food"
+              />
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
