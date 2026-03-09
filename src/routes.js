@@ -52,6 +52,9 @@ import HomeStudentReview from 'views/admin/HomePage/StudentReview/StudentReview'
 import AccommodationForm from 'views/admin/AboutUs/Accommodation/Accommodation';
 import GalleryHeadingForm from 'views/admin/AboutUs/Gallery/Gallery';
 import GalleryForm from 'views/admin/AboutUs/Gallery/GalleryHeading';
+import BlogPosts from 'views/admin/Blog/BlogPosts';
+import BlogPageContent from 'views/admin/Blog/BlogPageContent';
+import OurSchoolAdmin from 'views/admin/OurSchool/OurSchoolAdmin';
 
 const routes = [
   {
@@ -411,6 +414,13 @@ const routes = [
         },
       ],
     },
+    {
+      name: 'Our School Page',
+      layout: '/admin',
+      path: '/about-us/our-school',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <OurSchoolAdmin />,
+    },
   ],
 },
 {
@@ -449,6 +459,29 @@ const routes = [
   path: '/books',
   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
   component: <BooksAdmin />,
+},
+{
+  name: 'Blog',
+  layout: '/admin',
+  path: '/blog',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  collapse: true,
+  items: [
+    {
+      name: 'Blog Posts',
+      layout: '/admin',
+      path: '/blog/posts',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <BlogPosts />,
+    },
+    {
+      name: 'Blog Page Content',
+      layout: '/admin',
+      path: '/blog/page',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <BlogPageContent />,
+    },
+  ],
 },
 {
   name: 'Books Page Content',
