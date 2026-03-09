@@ -27,6 +27,8 @@ import AboutFounderDetails from 'views/admin/AboutUs/Founder/FounderDetails';
 import AboutTeacherHeading from 'views/admin/AboutUs/Teachers/TeacherHeading';
 import AboutTeacherDetails from 'views/admin/AboutUs/Teachers/TeacherDetails';
 import AboutCoursesDetails from 'views/admin/Courses/CoursesDetails';
+import BooksAdmin from 'views/admin/Books/BooksAdmin';
+import BooksPageContent from 'views/admin/Books/BooksPageContent';
 
 const routes = [
   {
@@ -318,6 +320,20 @@ const routes = [
       component: <AboutCoursesDetails />,
     },
   ],
+},
+{
+  name: 'Books',
+  layout: '/admin',
+  path: '/books',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  component: <BooksAdmin />,
+},
+{
+  name: 'Books Page Content',
+  layout: '/admin',
+  path: '/books-page',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  component: <BooksPageContent />,
 },
   {
     name: 'Sign In',

@@ -1,94 +1,79 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import styles from '../../assets/styles/MyBooks/Books.module.css';
 
-// Placeholder book cover images (replace with your actual images later)
-// For now using placeholder URLs - you can download actual book covers from Google
-const book1 = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400';
-const book2 = 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400';
-const book3 = 'https://images.unsplash.com/photo-1589998059171-988d887df646?w=400';
-const book4 = 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400';
+const API = "http://localhost:8000/api/books";
+const PAGE_API = "http://localhost:8000/api/books-page";
+const FILE_BASE = "http://localhost:8000/uploads/books";
+
+const getFileUrl = (file) => (file ? `${FILE_BASE}/${file}` : "");
+const getAssetUrl = (value) =>
+  value && value.startsWith("http") ? value : getFileUrl(value);
 
 const Books = () => {
+  const [books, setBooks] = useState([]);
+  const [pageContent, setPageContent] = useState({
+    heroQuote: "Knowledge Is The Light That Illuminates The Path Of Yoga",
+    heroTitle: "Sacred Yoga Books & Ancient Scriptures",
+    heroBreadcrumb: "Yoga Books",
+    libraryTitle: "Digital Library",
+    librarySubtitle: "Explore Our Collection of Yoga Literature",
+    libraryDescription:
+      "Discover timeless wisdom through our curated collection of classical and modern yoga texts. Read online or download for your personal study and practice.",
+  });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  const books = [
-    {
-      id: 1,
-      title: 'Hatha Yog Pradipika',
-      author: 'Swami Swatmarama',
-      description: 'A classical Sanskrit manual on hatha yog, written by Swami Swatmarama in the 15th century. It is one of the most influential texts of Hatha yog.',
-      coverImage: book1,
-      pdfUrl: '/pdfs/1766929251310.pdf', // Add your PDF URLs here
-      category: 'Classical Texts',
-      pages: 156,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 2,
-      title: 'Yoga Sutras of Patanjali',
-      author: 'Maharishi Patanjali',
-      description: 'The foundational text of yoga philosophy, containing 196 aphorisms on the theory and practice of yoga.',
-      coverImage: book2,
-      pdfUrl: '/pdfs/yoga-sutras.pdf',
-      category: 'Classical Texts',
-      pages: 208,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 3,
-      title: 'Bhagavad Gita',
-      author: 'Vyasa',
-      description: 'A 700-verse Hindu scripture that is part of the epic Mahabharata, containing a conversation between Prince Arjuna and Lord Krishna.',
-      coverImage: book3,
-      pdfUrl: '/pdfs/bhagavad-gita.pdf',
-      category: 'Spiritual Texts',
-      pages: 352,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 4,
-      title: 'Light on Yoga',
-      author: 'B.K.S. Iyengar',
-      description: 'A comprehensive guide to yoga asanas and pranayama, often considered the bible of modern yoga.',
-      coverImage: book4,
-      pdfUrl: '/pdfs/light-on-yoga.pdf',
-      category: 'Modern Yoga',
-      pages: 544,
-      language: 'English'
-    },
-    {
-      id: 5,
-      title: 'Autobiography of a Yogi',
-      author: 'Paramahansa Yogananda',
-      description: 'A spiritual classic that introduces readers to the life of one of India\'s great spiritual masters.',
-      coverImage: book1,
-      pdfUrl: '/pdfs/autobiography-yogi.pdf',
-      category: 'Spiritual Biography',
-      pages: 502,
-      language: 'English'
-    },
-    {
-      id: 6,
-      title: 'The Complete Illustrated Book of Yoga',
-      author: 'Swami Vishnu-Devananda',
-      description: 'A comprehensive guide to the practice of yoga with detailed illustrations and instructions.',
-      coverImage: book2,
-      pdfUrl: '/pdfs/complete-yoga.pdf',
-      category: 'Modern Yoga',
-      pages: 384,
-      language: 'English'
-    }
-  ];
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get(API);
+        setBooks(res.data?.data || []);
+      } catch (err) {
+        setError("Failed to load books.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const fetchPageContent = async () => {
+      try {
+        const res = await axios.get(PAGE_API);
+        const latest = Array.isArray(res.data?.data) ? res.data.data[0] : null;
+        if (latest) {
+          setPageContent((prev) => ({
+            heroQuote: latest.heroQuote || prev.heroQuote,
+            heroTitle: latest.heroTitle || prev.heroTitle,
+            heroBreadcrumb: latest.heroBreadcrumb || prev.heroBreadcrumb,
+            libraryTitle: latest.libraryTitle || prev.libraryTitle,
+            librarySubtitle: latest.librarySubtitle || prev.librarySubtitle,
+            libraryDescription:
+              latest.libraryDescription || prev.libraryDescription,
+          }));
+        }
+      } catch (err) {
+        // keep defaults
+      }
+    };
+
+    fetchBooks();
+    fetchPageContent();
+  }, []);
 
   const handleViewBook = (book) => {
     // Open PDF in new tab for viewing
-    window.open(book.pdfUrl, '_blank');
+    const pdfUrl = book.pdfUrl || getFileUrl(book.pdfFile);
+    if (pdfUrl) window.open(pdfUrl, '_blank');
   };
 
   const handleDownload = (e, book) => {
     e.stopPropagation(); // Prevent view from opening when clicking download
     // Create a temporary link and trigger download
+    const pdfUrl = book.pdfUrl || getFileUrl(book.pdfFile);
+    if (!pdfUrl) return;
     const link = document.createElement('a');
-    link.href = book.pdfUrl;
+    link.href = pdfUrl;
     link.download = `${book.title}.pdf`;
     document.body.appendChild(link);
     link.click();
@@ -101,15 +86,15 @@ const Books = () => {
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <p className={styles.quoteText}>
-            Knowledge Is The Light That Illuminates The Path Of Yoga
+            {pageContent.heroQuote}
           </p>
           <h1 className={styles.mainTitle}>
-            Sacred Yoga Books & Ancient Scriptures
+            {pageContent.heroTitle}
           </h1>
           <div className={styles.breadcrumb}>
             <span className={styles.breadcrumbLink}>Home</span>
             <span className={styles.breadcrumbSeparator}>/</span>
-            <span>Yoga Books</span>
+            <span>{pageContent.heroBreadcrumb}</span>
           </div>
         </div>
       </section>
@@ -117,26 +102,28 @@ const Books = () => {
       {/* Books Library Section */}
       <section className={styles.librarySection}>
         <div className={styles.libraryHeader}>
-          <p className={styles.libraryTitle}>Digital Library</p>
+          <p className={styles.libraryTitle}>{pageContent.libraryTitle}</p>
           <h2 className={styles.librarySubtitle}>
-            Explore Our Collection of Yoga Literature
+            {pageContent.librarySubtitle}
           </h2>
           <div className={styles.decorativeLine}></div>
           <p className={styles.libraryDescription}>
-            Discover timeless wisdom through our curated collection of classical and modern yoga texts.
-            Read online or download for your personal study and practice.
+            {pageContent.libraryDescription}
           </p>
         </div>
 
         {/* Books Grid */}
         <div className={styles.booksGrid}>
-          {books.map((book) => (
+          {loading && <p>Loading...</p>}
+          {!loading && error && <p>{error}</p>}
+          {!loading && !error && books.length === 0 && <p>No books available.</p>}
+          {!loading && !error && books.map((book) => (
             <div 
-              key={book.id} 
+              key={book._id || book.id} 
               className={styles.bookCard}
             >
               <div className={styles.bookCover}>
-                <img src={book.coverImage} alt={book.title} />
+                <img src={getAssetUrl(book.coverImage)} alt={book.title} />
                 <div className={styles.bookOverlay}>
                   <button 
                     className={styles.viewButton}

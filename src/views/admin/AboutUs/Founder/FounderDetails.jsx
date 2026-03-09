@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API = "http://localhost:8000/api/about-founder-details";
 
-const EMPTY_PHILOSOPHY = { icon: null, heading: "", paragraph: "" };
+const EMPTY_PHILOSOPHY = { iconFile: null, iconUrl: "", heading: "", paragraph: "" };
 
 const EMPTY_FORM = {
   founderName: "",
@@ -25,6 +25,52 @@ const EMPTY_FORM = {
   mainAchievements: "",
   text: "",
 };
+
+const Field = ({ label, name, required, value, onChange }) => (
+  <div className="mb-3">
+    <label className="form-label fw-semibold">{label}{required && " *"}</label>
+    <input
+      type="text"
+      name={name}
+      className="form-control"
+      value={value}
+      onChange={onChange}
+      required={required}
+    />
+  </div>
+);
+
+const TextArea = ({ label, name, required, value, onChange, placeholder, rows = 3 }) => (
+  <div className="mb-3">
+    <label className="form-label fw-semibold">{label}{required && " *"}</label>
+    <textarea
+      name={name}
+      className="form-control"
+      rows={rows}
+      value={value}
+      onChange={onChange}
+      placeholder={placeholder}
+      required={required}
+    />
+  </div>
+);
+
+const FileField = ({ label, name, onChange, accept = "image/*" }) => (
+  <div className="mb-3">
+    <label className="form-label fw-semibold">{label}</label>
+    <input
+      type="file"
+      name={name}
+      className="form-control"
+      accept={accept}
+      onChange={onChange}
+    />
+  </div>
+);
+
+const SectionTitle = ({ title }) => (
+  <h5 className="mt-4 mb-3 border-bottom pb-2 text-primary">{title}</h5>
+);
 
 function AboutFounderDetails() {
   const [data, setData] = useState([]);
@@ -56,13 +102,16 @@ function AboutFounderDetails() {
   };
 
   // ── Philosophy item helpers ───────────────────────────────────────────────
-//   const handlePhilosophyIcon = (index, file) => {
-//     setFormData((prev) => {
-//       const philosophyItems = [...prev.philosophyItems];
-//       philosophyItems[index] = { ...philosophyItems[index], icon: file };
-//       return { ...prev, philosophyItems };
-//     });
-//   };
+  const handlePhilosophyIcon = (index, file) => {
+    setFormData((prev) => {
+      const philosophyItems = [...prev.philosophyItems];
+      philosophyItems[index] = {
+        ...philosophyItems[index],
+        iconFile: file,
+      };
+      return { ...prev, philosophyItems };
+    });
+  };
 
   const handlePhilosophyField = (index, field, value) => {
     setFormData((prev) => {
@@ -95,7 +144,7 @@ function AboutFounderDetails() {
       formData.philosophyItems.forEach((item, i) => {
         fd.append(`philoHeading_${i}`, item.heading);
         fd.append(`philoParagraph_${i}`, item.paragraph);
-        if (item.icon) fd.append(`philoIcon_${i}`, item.icon);
+        if (item.iconFile) fd.append(`philoIcon_${i}`, item.iconFile);
       });
 
       if (editId) {
@@ -116,7 +165,8 @@ function AboutFounderDetails() {
   // ── Edit ──────────────────────────────────────────────────────────────────
   const handleEdit = (item) => {
     const philosophyItems = Array.from({ length: 4 }, (_, i) => ({
-      icon: null, // file inputs can't be pre-filled
+      iconFile: null, // file inputs can't be pre-filled
+      iconUrl:  item.philosophyItems?.[i]?.icon || "",
       heading:   item.philosophyItems?.[i]?.heading   || "",
       paragraph: item.philosophyItems?.[i]?.paragraph || "",
     }));
@@ -156,52 +206,6 @@ function AboutFounderDetails() {
     setEditId(null);
     setShowForm(false);
   };
-
-  // ── UI Helpers ────────────────────────────────────────────────────────────
-  const Field = ({ label, name, required }) => (
-    <div className="mb-3">
-      <label className="form-label fw-semibold">{label}{required && " *"}</label>
-      <input
-        type="text"
-        name={name}
-        className="form-control"
-        value={formData[name]}
-        onChange={handleChange}
-        required={required}
-      />
-    </div>
-  );
-
-  const TextArea = ({ label, name, required }) => (
-    <div className="mb-3">
-      <label className="form-label fw-semibold">{label}{required && " *"}</label>
-      <textarea
-        name={name}
-        className="form-control"
-        rows={3}
-        value={formData[name]}
-        onChange={handleChange}
-        required={required}
-      />
-    </div>
-  );
-
-  const FileField = ({ label, name }) => (
-    <div className="mb-3">
-      <label className="form-label fw-semibold">{label}</label>
-      <input
-        type="file"
-        name={name}
-        className="form-control"
-        accept="image/*"
-        onChange={handleChange}
-      />
-    </div>
-  );
-
-  const SectionTitle = ({ title }) => (
-    <h5 className="mt-4 mb-3 border-bottom pb-2 text-primary">{title}</h5>
-  );
 
   // ── Render ────────────────────────────────────────────────────────────────
   return (
@@ -289,25 +293,74 @@ function AboutFounderDetails() {
 
           {/* ── Founder Details ── */}
           <SectionTitle title="Founder Details" />
-          <Field label="Founder Name" name="founderName" required />
-          <Field label="Role" name="role" required />
-          <FileField label="Founder Image" name="img" />
-          <Field label="Short Title" name="shortTitle" />
-          <Field label="Stats" name="stats" />
+          <Field
+            label="Founder Name"
+            name="founderName"
+            required
+            value={formData.founderName}
+            onChange={handleChange}
+          />
+          <TextArea
+            label="Role"
+            name="role"
+            required
+            placeholder="Example: Vinyasa Yogashala | Founder"
+            value={formData.role}
+            onChange={handleChange}
+          />
+          <FileField label="Founder Image" name="img" onChange={handleChange} />
+          <Field
+            label="Short Title"
+            name="shortTitle"
+            value={formData.shortTitle}
+            onChange={handleChange}
+          />
+          <TextArea
+            label="Stats"
+            name="stats"
+            placeholder="Example: 20+ | Years Experience"
+            value={formData.stats}
+            onChange={handleChange}
+          />
 
           {/* ── Quotes ── */}
           <SectionTitle title="Quotes" />
-          <TextArea label="Main Quote" name="mainQuote" />
-          <Field label="Quote Title" name="quoteTitle" />
+          <TextArea
+            label="Main Quote"
+            name="mainQuote"
+            value={formData.mainQuote}
+            onChange={handleChange}
+          />
+          <Field
+            label="Quote Title"
+            name="quoteTitle"
+            value={formData.quoteTitle}
+            onChange={handleChange}
+          />
 
           {/* ── Biography ── */}
           <SectionTitle title="Biography" />
-          <TextArea label="Main Biography" name="mainBiography" />
-          <Field label="Bio Title" name="bioTitle" />
+          <TextArea
+            label="Main Biography"
+            name="mainBiography"
+            value={formData.mainBiography}
+            onChange={handleChange}
+          />
+          <Field
+            label="Bio Title"
+            name="bioTitle"
+            value={formData.bioTitle}
+            onChange={handleChange}
+          />
 
           {/* ── Philosophy ── */}
           <SectionTitle title="Philosophy" />
-          <TextArea label="Main Philosophy" name="mainPhilosophy" />
+          <TextArea
+            label="Main Philosophy"
+            name="mainPhilosophy"
+            value={formData.mainPhilosophy}
+            onChange={handleChange}
+          />
 
           <div className="row g-3 mb-3">
             {formData.philosophyItems.map((item, i) => (
@@ -318,24 +371,31 @@ function AboutFounderDetails() {
                   </span>
 
                   {/* Icon upload */}
-                   <label>Icon (Example: FaBook)</label>
-          <input
-            type="text"
-            name="icon"
-            className="form-control mb-2"
-            value={formData.icon}
-            onChange={handleChange}
-            required
-          />
-                  {/* Show existing icon URL on edit */}
-                  {!item.icon && editId && (
-                    <small className="text-muted d-block mb-2">
-                      (existing icon will be kept if no new file chosen)
+                  <label className="form-label small fw-semibold">Icon</label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    className="form-control form-control-sm mb-2"
+                    onChange={(e) =>
+                      handlePhilosophyIcon(i, e.target.files?.[0] || null)
+                    }
+                  />
+                  {item.iconUrl && (
+                    <img
+                      src={item.iconUrl}
+                      alt={`Icon ${i + 1}`}
+                      style={{ width: 36, height: 36, objectFit: "contain" }}
+                      className="mb-2 d-block"
+                    />
+                  )}
+                  {item.iconFile && (
+                    <small className="text-success d-block mb-2">
+                      ✅ {item.iconFile.name}
                     </small>
                   )}
-                  {item.icon && (
-                    <small className="text-success d-block mb-2">
-                      ✅ {item.icon.name}
+                  {!item.iconFile && editId && (
+                    <small className="text-muted d-block mb-2">
+                      (existing icon will be kept if no new file chosen)
                     </small>
                   )}
 
@@ -366,8 +426,18 @@ function AboutFounderDetails() {
 
           {/* ── Achievements ── */}
           <SectionTitle title="Achievements" />
-          <TextArea label="Main Achievements" name="mainAchievements" />
-          <Field label="Text" name="text" />
+          <TextArea
+            label="Main Achievements"
+            name="mainAchievements"
+            value={formData.mainAchievements}
+            onChange={handleChange}
+          />
+          <Field
+            label="Text"
+            name="text"
+            value={formData.text}
+            onChange={handleChange}
+          />
 
           <div className="d-flex gap-2 mt-3">
             <button
