@@ -1,5 +1,64 @@
 import React, { useState } from 'react';
-const InternationalCertificate = () => {
+
+const DEFAULT_CERTIFICATE = {
+  hero: {
+    badgeText: '✨ Transform Your Life ✨',
+    title: 'Hatha Yoga Teacher Training',
+    subtitle: 'in Rishikesh, India',
+    description: 'Become a Yoga Trainer & Design Your Own Course',
+  },
+  program: {
+    title: '200 Hour Yoga TTC',
+    duration: 'Duration: 24 Days',
+  },
+  pricing: {
+    offerBadge: 'Special Offer for International Students',
+    regularLabel: 'Regular Fees',
+    currentPrice: '$1300',
+    payNotice: 'Pay Only',
+    ctaLabel: 'Book Your Seat Now',
+  },
+  certification: {
+    title: 'Internationally Recognized',
+    text:
+      'Upon completion, receive your RYS200 certification from Yoga Alliance USA, enabling you to teach yoga professionally anywhere in the world.',
+    name: 'Yoga Alliance USA',
+  },
+  eligibility: {
+    title: 'Who Can Join?',
+    items: [
+      'Age 18+',
+      'Basic knowledge of Yoga',
+      'All body types accepting',
+      'Anyone can join this course who Breathe',
+    ],
+  },
+  inclusions: {
+    title: 'Everything Included in Your Training',
+    items: [
+      { icon: '📚', text: 'Teaching Material' },
+      { icon: '👕', text: 'School Logo T-Shirt' },
+      { icon: '🫖', text: 'Shatkarma Pot & Sutra Neti' },
+      { icon: '📓', text: 'Notebook' },
+      { icon: '🌊', text: 'Practice at The Ganga River' },
+      { icon: '🏡', text: 'Cleaned Hygienic Accommodation' },
+      { icon: '🍽️', text: 'Three Satvic Indian Meals Daily' },
+      { icon: '🎓', text: 'Yoga Alliance USA Certification RYS200' },
+    ],
+  },
+  location: {
+    title: 'Find Us in Rishikesh',
+    school: 'Hatha Yogashram School',
+    address:
+      'Hatha Yogashram, Balaknath Rd, Upper Tapovan, Rishikesh, Uttarakhand, India - 249192',
+    description:
+      'Nestled in the spiritual heart of Rishikesh, our ashram offers the perfect sanctuary for your yoga journey alongside the sacred Ganga River.',
+    mapSrc:
+      'https://www.google.com/maps?q=Hatha%20Yogashram,%20Balaknath%20Rd,%20Upper%20Tapovan,%20Rishikesh,%20Uttarakhand%20249192&output=embed',
+  },
+};
+
+const InternationalCertificate = ({ data }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleBookNow = () => {
@@ -10,23 +69,25 @@ const InternationalCertificate = () => {
     setShowModal(false);
   };
 
-  const inclusionsList = [
-    { icon: '📚', text: 'Teaching Material' },
-    { icon: '👕', text: 'School Logo T-Shirt' },
-    { icon: '🫖', text: 'Shatkarma Pot & Sutra Neti' },
-    { icon: '📓', text: 'Notebook' },
-    { icon: '🌊', text: 'Practice at The Ganga River' },
-    { icon: '🏡', text: 'Cleaned Hygienic Accommodation' },
-    { icon: '🍽️', text: 'Three Satvic Indian Meals Daily' },
-    { icon: '🎓', text: 'Yoga Alliance USA Certification RYS200' }
-  ];
+  const certificate = {
+    hero: { ...DEFAULT_CERTIFICATE.hero, ...(data?.hero || {}) },
+    program: { ...DEFAULT_CERTIFICATE.program, ...(data?.program || {}) },
+    pricing: { ...DEFAULT_CERTIFICATE.pricing, ...(data?.pricing || {}) },
+    certification: { ...DEFAULT_CERTIFICATE.certification, ...(data?.certification || {}) },
+    eligibility: { ...DEFAULT_CERTIFICATE.eligibility, ...(data?.eligibility || {}) },
+    inclusions: { ...DEFAULT_CERTIFICATE.inclusions, ...(data?.inclusions || {}) },
+    location: { ...DEFAULT_CERTIFICATE.location, ...(data?.location || {}) },
+  };
 
-  const eligibilityList = [
-    'Age 18+',
-    'Basic knowledge of Yoga',
-    'All body types accepting',
-    'Anyone can join this course who Breathe'
-  ];
+  const eligibilityItems =
+    certificate.eligibility.items && certificate.eligibility.items.length
+      ? certificate.eligibility.items
+      : DEFAULT_CERTIFICATE.eligibility.items;
+
+  const inclusionsItems =
+    certificate.inclusions.items && certificate.inclusions.items.length
+      ? certificate.inclusions.items
+      : DEFAULT_CERTIFICATE.inclusions.items;
 
   return (
     <>
@@ -662,34 +723,34 @@ const InternationalCertificate = () => {
           <div className="hero-content">
             <div className="text-center">
               <div className="hero-badge">
-                <span>✨ Transform Your Life ✨</span>
+                <span>{certificate.hero.badgeText}</span>
               </div>
               <h1 className="hero-title">
-                Hatha Yoga Teacher Training
+                {certificate.hero.title}
               </h1>
               <p className="hero-subtitle">
-                in Rishikesh, India
+                {certificate.hero.subtitle}
               </p>
               <p className="hero-description">
-                Become a Yoga Trainer & Design Your Own Course
+                {certificate.hero.description}
               </p>
               
               <div className="training-info">
                 <div className="info-card">
-                  <h2 className="program-title">200 Hour Yoga TTC</h2>
-                  <p className="duration">Duration: 24 Days</p>
+                  <h2 className="program-title">{certificate.program.title}</h2>
+                  <p className="duration">{certificate.program.duration}</p>
                 </div>
               </div>
 
               <div className="price-section">
-                <div className="offer-badge">Special Offer for International Students</div>
+                <div className="offer-badge">{certificate.pricing.offerBadge}</div>
                 <div className="price-box">
-                  <div className="original-price">Regular Fees</div>
-                  <div className="current-price">$1300</div>
-                  <p className="pay-notice">Pay Only</p>
+                  <div className="original-price">{certificate.pricing.regularLabel}</div>
+                  <div className="current-price">{certificate.pricing.currentPrice}</div>
+                  <p className="pay-notice">{certificate.pricing.payNotice}</p>
                 </div>
                 <button className="cta-button" onClick={handleBookNow}>
-                  <span>Book Your Seat Now</span>
+                  <span>{certificate.pricing.ctaLabel}</span>
                   <span className="arrow">→</span>
                 </button>
               </div>
@@ -705,14 +766,13 @@ const InternationalCertificate = () => {
                 <div className="cert-badge">
                   <div className="cert-icon">🎓</div>
                   <h3>Certified By</h3>
-                  <p className="cert-name">Yoga Alliance USA</p>
+                  <p className="cert-name">{certificate.certification.name}</p>
                 </div>
               </div>
               <div>
-                <h2 className="section-title">Internationally Recognized</h2>
+                <h2 className="section-title">{certificate.certification.title}</h2>
                 <p className="section-text">
-                  Upon completion, receive your RYS200 certification from Yoga Alliance USA, 
-                  enabling you to teach yoga professionally anywhere in the world.
+                  {certificate.certification.text}
                 </p>
               </div>
             </div>
@@ -723,10 +783,10 @@ const InternationalCertificate = () => {
         <section className="eligibility-section">
           <div className="container">
             <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>
-              Who Can Join?
+              {certificate.eligibility.title}
             </h2>
             <div className="grid">
-              {eligibilityList.map((item, index) => (
+              {eligibilityItems.map((item, index) => (
                 <div className="eligibility-card" key={index}>
                   <div className="check-icon">✓</div>
                   <p>{item}</p>
@@ -740,10 +800,10 @@ const InternationalCertificate = () => {
         <section className="inclusions-section">
           <div className="container">
             <h2 className="section-title text-center" style={{ marginBottom: '3rem' }}>
-              Everything Included in Your Training
+              {certificate.inclusions.title}
             </h2>
             <div className="grid">
-              {inclusionsList.map((item, index) => (
+              {inclusionsItems.map((item, index) => (
                 <div className="inclusion-card" key={index}>
                   <div className="inclusion-icon">{item.icon}</div>
                   <p className="inclusion-text">{item.text}</p>
@@ -758,17 +818,15 @@ const InternationalCertificate = () => {
           <div className="container">
             <div className="two-col">
               <div>
-                <h2 className="section-title">Find Us in Rishikesh</h2>
+                <h2 className="section-title">{certificate.location.title}</h2>
                 <div className="location-info">
-                  <h3>Hatha Yogashram School</h3>
+                  <h3>{certificate.location.school}</h3>
                   <p className="address">
                     <span className="location-icon">📍</span>
-                    Hatha Yogashram, Balaknath Rd, Upper Tapovan, 
-                    Rishikesh, Uttarakhand, India - 249192
+                    {certificate.location.address}
                   </p>
                   <p className="location-description">
-                    Nestled in the spiritual heart of Rishikesh, our ashram offers 
-                    the perfect sanctuary for your yoga journey alongside the sacred Ganga River.
+                    {certificate.location.description}
                   </p>
                 </div>
               </div>
@@ -781,7 +839,7 @@ const InternationalCertificate = () => {
 }}>
   <iframe
     title="Hatha Yogashram Location"
-    src="https://www.google.com/maps?q=Hatha%20Yogashram,%20Balaknath%20Rd,%20Upper%20Tapovan,%20Rishikesh,%20Uttarakhand%20249192&output=embed"
+    src={certificate.location.mapSrc}
     width="100%"
     height="100%"
     style={{ border: 0 }}

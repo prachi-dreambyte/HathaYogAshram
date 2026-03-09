@@ -1,47 +1,124 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import styles from '../../assets/styles/YogaCourse/Form100.module.css';
 
-const Form100 = () => {
-  const [activeTab, setActiveTab] = useState('2026');
+const API_BASE = "http://localhost:8000/api";
+
+const DEFAULT_INCLUDED = [
+  '12 Days & 11 Nights Accommodation',
+  'Yoga material',
+  'Daily nutritious vegetarian, vegan meals',
+  'Kirtan Night',
+  'Full Body Massage',
+  'Weekend excursions'
+];
+
+const DEFAULT_NOT_INCLUDED = [
+  'Ayurvedic Panchakarma & Treatment',
+  'Air-conditioner (On Additional Charges)',
+  'Visa fee/Air fare/Taxi pick-up from Delhi, Haridwar'
+];
+
+const toOrdinal = (num) => {
+  const n = Number(num);
+  if (!n) return '';
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 13) return `${n}th`;
+  const mod10 = n % 10;
+  if (mod10 === 1) return `${n}st`;
+  if (mod10 === 2) return `${n}nd`;
+  if (mod10 === 3) return `${n}rd`;
+  return `${n}th`;
+};
+
+const formatDateRange = (startDate, endDate) => {
+  if (!startDate || !endDate) return '';
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+  if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) return '';
+  const startLabel = `${toOrdinal(start.getDate())} ${start.toLocaleString('en-US', { month: 'short' })} ${start.getFullYear()}`;
+  const endLabel = `${toOrdinal(end.getDate())} ${end.toLocaleString('en-US', { month: 'short' })} ${end.getFullYear()}`;
+  return `${startLabel} To ${endLabel}`;
+};
+
+const groupByYear = (items) => {
+  const groups = {};
+  items.forEach((item) => {
+    const year = new Date(item.startDate).getFullYear();
+    if (!groups[year]) groups[year] = [];
+    groups[year].push(item);
+  });
+  return groups;
+};
+
+const getStatusClass = (statusType) => {
+  switch (statusType) {
+    case 'success':
+      return styles.statusSuccess;
+    case 'warning':
+      return styles.statusWarning;
+    case 'primary':
+      return styles.statusPrimary;
+    default:
+      return '';
+  }
+};
+
+const Form100 = ({
+  courseId,
+  courseTitle,
+  batches: initialBatches,
+  included,
+  notIncluded,
+  toBringImage,
+  includedTitle,
+  notIncludedTitle,
+  toBringTitle,
+}) => {
+  const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState('');
   const [includedTab, setIncludedTab] = useState('included');
+  const [batches, setBatches] = useState(initialBatches || []);
 
-  const courses2026 = [
-    { date: '1st To 12th Jan 2026', status: 'Fully Booked', statusClass: 'success', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Feb 2026', status: 'Fully Booked', statusClass: 'success', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Mar 2026', status: 'Fully Booked', statusClass: 'success', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Apr 2026', status: 'Fully Booked', statusClass: 'success', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th May 2026', status: 'Waiting List', statusClass: 'warning', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Jun 2026', status: '3 Seats Left', statusClass: 'primary', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Jul 2026', status: '6 Seat Left', statusClass: 'primary', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Aug 2026', status: '6 Seats Left', statusClass: 'primary', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Sep 2026', status: '5 Seats Left', statusClass: 'primary', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Oct 2026', status: 'Waiting List', statusClass: 'warning', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Nov 2026', status: 'Waiting List', statusClass: 'warning', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-    { date: '1st To 12th Dec 2026', status: '5 Seats Left', statusClass: 'primary', sharing: '$449', sharingOld: '$599', private: '$599', privateOld: '$799' },
-  ];
+  useEffect(() => {
+    setBatches(initialBatches || []);
+  }, [initialBatches]);
 
-  const included = [
-    '12 Days & 11 Nights Accommodation',
-    'Yoga material',
-    'Daily nutritious vegetarian, vegan meals',
-    'Kirtan Night',
-    'Full Body Massage',
-    'Weekend excursions'
-  ];
+  useEffect(() => {
+    if (!courseId || (initialBatches && initialBatches.length)) return;
+    const fetchBatches = async () => {
+      try {
+        const res = await axios.get(`${API_BASE}/courses/${courseId}/batches`);
+        setBatches(res.data?.data || []);
+      } catch (err) {
+        console.error('Failed to load batches', err);
+      }
+    };
+    fetchBatches();
+  }, [courseId, initialBatches]);
 
-  const notIncluded = [
-    'Ayurvedic Panchakarma & Treatment',
-    'Air-conditioner (On Additional Charges)',
-    'Visa fee/Air fare/Taxi pick-up from Delhi, Haridwar'
-  ];
+  const grouped = useMemo(() => groupByYear(batches), [batches]);
+  const years = useMemo(() => Object.keys(grouped).sort(), [grouped]);
 
-  const getStatusClass = (statusClass) => {
-    switch(statusClass) {
-      case 'success': return styles.statusSuccess;
-      case 'warning': return styles.statusWarning;
-      case 'primary': return styles.statusPrimary;
-      default: return '';
-    }
+  useEffect(() => {
+    if (!years.length) return;
+    if (activeTab && years.includes(activeTab)) return;
+    const currentYear = String(new Date().getFullYear());
+    setActiveTab(years.includes(currentYear) ? currentYear : years[0]);
+  }, [years, activeTab]);
+
+  const rows = grouped[activeTab] || [];
+
+  const includedItems = included && included.length ? included : DEFAULT_INCLUDED;
+  const notIncludedItems = notIncluded && notIncluded.length ? notIncluded : DEFAULT_NOT_INCLUDED;
+  const includedHeading = includedTitle || 'What does the course fees include?';
+  const notIncludedHeading = notIncludedTitle || 'What is not included in the course fees?';
+  const toBringHeading = toBringTitle || 'What to bring with you?';
+
+  const handleBook = (batchId) => {
+    if (!courseId || !batchId) return;
+    navigate(`/BookingForm?course=${courseId}&batch=${batchId}`);
   };
 
   return (
@@ -50,7 +127,7 @@ const Form100 = () => {
         {/* Header */}
         <div className={styles.header}>
           <h1 className={styles.headerTitle}>
-            Upcoming Dates For 100 Hour Yoga Teacher Training In Rishikesh
+            Upcoming Dates For {courseTitle || 'Yoga Teacher Training'}
           </h1>
           <div className={styles.headerDivider}>
             <span className={styles.dividerLine}></span>
@@ -61,24 +138,15 @@ const Form100 = () => {
 
         {/* Tab Buttons */}
         <div className={styles.tabContainer}>
-          <button 
-            className={`${styles.tabButton} ${activeTab === '2026' ? styles.tabButtonActive : styles.tabButtonInactive}`}
-            onClick={() => setActiveTab('2026')}
-          >
-            Dates Of 2026
-          </button>
-          <button 
-            className={`${styles.tabButton} ${activeTab === '2027' ? styles.tabButtonActive : styles.tabButtonInactive}`}
-            onClick={() => setActiveTab('2027')}
-          >
-            Dates Of 2027
-          </button>
-          <button 
-            className={`${styles.tabButton} ${activeTab === '2028' ? styles.tabButtonActive : styles.tabButtonInactive}`}
-            onClick={() => setActiveTab('2028')}
-          >
-            Dates Of 2028
-          </button>
+          {years.map((year) => (
+            <button
+              key={year}
+              className={`${styles.tabButton} ${activeTab === year ? styles.tabButtonActive : styles.tabButtonInactive}`}
+              onClick={() => setActiveTab(year)}
+            >
+              Dates Of {year}
+            </button>
+          ))}
         </div>
 
         {/* Table */}
@@ -110,35 +178,49 @@ const Form100 = () => {
 
           {/* Table Body */}
           <div className={styles.tableBody}>
-            {courses2026.map((course, index) => (
-              <div 
-                key={index} 
-                className={`row ${styles.tableRow} ${index < courses2026.length - 1 ? styles.tableRowBorder : ''}`}
+            {rows.length === 0 && (
+              <div className={`row ${styles.tableRow}`}>
+                <div className="col-12 text-center">
+                  <p className="mb-0">No batches available.</p>
+                </div>
+              </div>
+            )}
+
+            {rows.map((batch, index) => (
+              <div
+                key={batch._id || index}
+                className={`row ${styles.tableRow} ${index < rows.length - 1 ? styles.tableRowBorder : ''}`}
               >
                 <div className="col-md-3 text-center">
-                  <div className={styles.courseDate}>{course.date}</div>
-                  <span className={`${styles.statusBadge} ${getStatusClass(course.statusClass)}`}>
-                    {course.status}
+                  <div className={styles.courseDate}>{formatDateRange(batch.startDate, batch.endDate)}</div>
+                  <span className={`${styles.statusBadge} ${getStatusClass(batch.statusType)}`}>
+                    {batch.statusLabel}
                   </span>
                 </div>
                 <div className="col-md-6">
                   <div className="row">
                     <div className="col-6">
                       <div className={styles.priceContainer}>
-                        <span className={styles.currentPrice}>{course.sharing}</span>
-                        <span className={styles.oldPrice}>{course.sharingOld}</span>
+                        <span className={styles.currentPrice}>{batch.priceShared || '-'}</span>
+                        <span className={styles.oldPrice}>{batch.priceSharedOld || ''}</span>
                       </div>
                     </div>
                     <div className="col-6">
                       <div className={styles.priceContainer}>
-                        <span className={styles.currentPrice}>{course.private}</span>
-                        <span className={styles.oldPrice}>{course.privateOld}</span>
+                        <span className={styles.currentPrice}>{batch.pricePrivate || '-'}</span>
+                        <span className={styles.oldPrice}>{batch.pricePrivateOld || ''}</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-3 text-center">
-                  <button className={styles.bookButton}>Book Now</button>
+                  <button
+                    className={styles.bookButton}
+                    onClick={() => handleBook(batch._id)}
+                    disabled={batch.availableSeats <= 0}
+                  >
+                    {batch.availableSeats <= 0 ? 'Fully Booked' : 'Book Now'}
+                  </button>
                 </div>
               </div>
             ))}
@@ -153,7 +235,7 @@ const Form100 = () => {
                 {/* Tabs */}
                 <div className={`row ${styles.includedTabs}`}>
                   <div className="col-md-4">
-                    <button 
+                    <button
                       className={`${styles.includedTabButton} ${includedTab === 'included' ? styles.includedTabActive : styles.includedTabInactive}`}
                       onClick={() => setIncludedTab('included')}
                     >
@@ -161,7 +243,7 @@ const Form100 = () => {
                     </button>
                   </div>
                   <div className="col-md-4">
-                    <button 
+                    <button
                       className={`${styles.includedTabButton} ${includedTab === 'notIncluded' ? styles.includedTabActive : styles.includedTabInactive}`}
                       onClick={() => setIncludedTab('notIncluded')}
                     >
@@ -169,7 +251,7 @@ const Form100 = () => {
                     </button>
                   </div>
                   <div className="col-md-4">
-                    <button 
+                    <button
                       className={`${styles.includedTabButton} ${includedTab === 'toBring' ? styles.includedTabActive : styles.includedTabInactive}`}
                       onClick={() => setIncludedTab('toBring')}
                     >
@@ -183,10 +265,10 @@ const Form100 = () => {
                   {includedTab === 'included' && (
                     <>
                       <h3 className={styles.includedTitle}>
-                        What does the course fees include?
+                        {includedHeading}
                       </h3>
                       <div className="row">
-                        {included.map((item, index) => (
+                        {includedItems.map((item, index) => (
                           <div key={index} className={`col-md-6 ${styles.includedItem}`}>
                             <div className={styles.includedItemContent}>
                               <span className={styles.includedIcon}>🕉️</span>
@@ -201,10 +283,10 @@ const Form100 = () => {
                   {includedTab === 'notIncluded' && (
                     <>
                       <h3 className={styles.includedTitle}>
-                        What is not included in the course fees?
+                        {notIncludedHeading}
                       </h3>
                       <div className="row">
-                        {notIncluded.map((item, index) => (
+                        {notIncludedItems.map((item, index) => (
                           <div key={index} className={`col-md-6 ${styles.includedItem}`}>
                             <div className={styles.includedItemContent}>
                               <span className={styles.includedIcon}>🕉️</span>
@@ -219,15 +301,19 @@ const Form100 = () => {
                   {includedTab === 'toBring' && (
                     <>
                       <h3 className={styles.includedTitle}>
-                        What to bring with you?
+                        {toBringHeading}
                       </h3>
                       <div className="row">
                         <div className="col-12">
-                          <img 
-                            src="/mnt/user-data/uploads/1771226018830_image.png" 
-                            alt="What to bring for Yoga Teacher Training" 
-                            style={{ width: '100%', maxWidth: '100%', height: 'auto' }}
-                          />
+                          {toBringImage ? (
+                            <img
+                              src={toBringImage}
+                              alt="What to bring for Yoga Teacher Training"
+                              style={{ width: '100%', maxWidth: '100%', height: 'auto' }}
+                            />
+                          ) : (
+                            <p className="mb-0">Please contact us for the packing checklist.</p>
+                          )}
                         </div>
                       </div>
                     </>

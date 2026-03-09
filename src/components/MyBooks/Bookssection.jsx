@@ -1,68 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import styles from '../../assets/styles/MyBooks/Bookssection.module.css';
 
-// Placeholder book cover images
-const book1 = 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400';
-const book2 = 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400';
-const book3 = 'https://images.unsplash.com/photo-1589998059171-988d887df646?w=400';
-const book4 = 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400';
+const API = "http://localhost:8000/api/books?limit=4";
+const FILE_BASE = "http://localhost:8000/uploads/books";
+
+const getFileUrl = (file) => (file ? `${FILE_BASE}/${file}` : "");
+const getAssetUrl = (value) =>
+  value && value.startsWith("http") ? value : getFileUrl(value);
 
 const BooksSection = () => {
   const navigate = useNavigate();
 
-  // Latest 4 books only
-  const latestBooks = [
-    {
-      id: 1,
-      title: 'Hatha Yog Pradipika',
-      author: 'Swami Swatmarama',
-      coverImage: book1,
-      pdfUrl: '/pdfs/1766929251310.pdf',
-      category: 'Classical Texts',
-      pages: 156,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 2,
-      title: 'Yoga Sutras of Patanjali',
-      author: 'Maharishi Patanjali',
-      coverImage: book2,
-      pdfUrl: '/pdfs/yoga-sutras.pdf',
-      category: 'Classical Texts',
-      pages: 208,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 3,
-      title: 'Bhagavad Gita',
-      author: 'Vyasa',
-      coverImage: book3,
-      pdfUrl: '/pdfs/bhagavad-gita.pdf',
-      category: 'Spiritual Texts',
-      pages: 352,
-      language: 'Sanskrit/English'
-    },
-    {
-      id: 4,
-      title: 'Light on Yoga',
-      author: 'B.K.S. Iyengar',
-      coverImage: book4,
-      pdfUrl: '/pdfs/light-on-yoga.pdf',
-      category: 'Modern Yoga',
-      pages: 544,
-      language: 'English'
-    }
-  ];
+  const [latestBooks, setLatestBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        setLoading(true);
+        const res = await axios.get(API);
+        setLatestBooks(res.data?.data || []);
+      } catch (err) {
+        setError("Failed to load books.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBooks();
+  }, []);
 
   const handleViewBook = (book) => {
-    window.open(book.pdfUrl, '_blank');
+    const pdfUrl = book.pdfUrl || getFileUrl(book.pdfFile);
+    if (pdfUrl) window.open(pdfUrl, '_blank');
   };
 
   const handleDownload = (e, book) => {
     e.stopPropagation();
+    const pdfUrl = book.pdfUrl || getFileUrl(book.pdfFile);
+    if (!pdfUrl) return;
     const link = document.createElement('a');
-    link.href = book.pdfUrl;
+    link.href = pdfUrl;
     link.download = `${book.title}.pdf`;
     link.setAttribute('download', `${book.title}.pdf`);
     document.body.appendChild(link);
@@ -91,16 +72,19 @@ const BooksSection = () => {
 
         {/* Books Grid - Only 4 books */}
         <div className={styles.booksGrid}>
-          {latestBooks.map((book) => (
+          {loading && <p>Loading...</p>}
+          {!loading && error && <p>{error}</p>}
+          {!loading && !error && latestBooks.length === 0 && <p>No books available.</p>}
+          {!loading && !error && latestBooks.map((book) => (
             <div 
-              key={book.id} 
+              key={book._id || book.id} 
               className={styles.bookCard}
             >
               <div 
                 className={styles.bookCover}
                 onClick={() => handleViewBook(book)}
               >
-                <img src={book.coverImage} alt={book.title} />
+                <img src={getAssetUrl(book.coverImage)} alt={book.title} />
                 <div className={styles.bookOverlay}>
                   <span className={styles.viewText}>Click to View PDF</span>
                 </div>
