@@ -1,42 +1,60 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-const API = "http://localhost:8000/api/blog-heading";
 
-function BlogHeadingForm() {
+const API = "http://localhost:8000/api/rules-refund";
+
+function RulesRefundForm() {
 
   const [data, setData] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editId, setEditId] = useState(null);
 
   const [formData, setFormData] = useState({
-    title: "",
-    description: ""
+
+    mainHeading: "",
+
+    preTitle: "",
+    preDesc1: "",
+    preDesc2: "",
+
+    rulesTitle: "",
+    rulesDesc1: "",
+    rulesDesc2: "",
+
+    refundTitle: "",
+    refundDesc1: "",
+    refundDesc2: ""
+
   });
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  // Fetch Data
   const fetchData = async () => {
+
     try {
+
       const res = await axios.get(API);
       setData(res.data.data);
+
     } catch (error) {
       console.log(error);
     }
+
   };
 
-  // Handle Change
   const handleChange = (e) => {
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+
   };
 
-  // Submit Form
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     try {
@@ -50,46 +68,61 @@ function BlogHeadingForm() {
       fetchData();
 
       setFormData({
-        title: "",
-        description: ""
+
+        mainHeading: "",
+
+        preTitle: "",
+        preDesc1: "",
+        preDesc2: "",
+
+        rulesTitle: "",
+        rulesDesc1: "",
+        rulesDesc2: "",
+
+        refundTitle: "",
+        refundDesc1: "",
+        refundDesc2: ""
+
       });
 
       setEditId(null);
       setShowForm(false);
 
     } catch (error) {
+
       console.log(error);
+
     }
+
   };
 
-  // Delete
   const handleDelete = async (id) => {
 
     if (window.confirm("Delete this item?")) {
+
       await axios.delete(`${API}/${id}`);
       fetchData();
+
     }
 
   };
 
-  // Edit
   const handleEdit = (item) => {
 
-    setFormData({
-      title: item.title,
-      description: item.description
-    });
-
+    setFormData(item);
     setEditId(item._id);
     setShowForm(true);
 
   };
 
   return (
+
     <div className="container mt-5 pt-5">
 
       {!showForm && (
+
         <>
+
           <button
             className="btn btn-primary mb-3"
             onClick={() => setShowForm(true)}
@@ -102,8 +135,7 @@ function BlogHeadingForm() {
             <thead className="table-dark">
               <tr>
                 <th>S.No</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th>Main Heading</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -115,8 +147,7 @@ function BlogHeadingForm() {
                 <tr key={item._id}>
 
                   <td>{index + 1}</td>
-                  <td>{item.title}</td>
-                  <td>{item.description}</td>
+                  <td>{item.mainHeading}</td>
 
                   <td>
 
@@ -143,7 +174,9 @@ function BlogHeadingForm() {
             </tbody>
 
           </table>
+
         </>
+
       )}
 
       {showForm && (
@@ -154,25 +187,88 @@ function BlogHeadingForm() {
             {editId ? "Update Data" : "Add Data"}
           </h4>
 
-          <label>Title</label>
+          <label>Main Heading</label>
+          <input
+            type="text"
+            name="mainHeading"
+            className="form-control mb-3"
+            value={formData.mainHeading}
+            onChange={handleChange}
+          />
+
+          <h5>Prerequisites</h5>
 
           <input
             type="text"
-            name="title"
-            className="form-control mb-3"
-            value={formData.title}
+            name="preTitle"
+            placeholder="Title"
+            className="form-control mb-2"
+            value={formData.preTitle}
             onChange={handleChange}
-            required
           />
 
-          <label>Description</label>
+          <textarea
+            name="preDesc1"
+            placeholder="Description 1"
+            className="form-control mb-2"
+            value={formData.preDesc1}
+            onChange={handleChange}
+          />
 
           <textarea
-            name="description"
+            name="preDesc2"
+            placeholder="Description 2"
             className="form-control mb-3"
-            value={formData.description}
+            value={formData.preDesc2}
             onChange={handleChange}
-            required
+          />
+
+          <h5>Rules For Students</h5>
+
+          <input
+            type="text"
+            name="rulesTitle"
+            className="form-control mb-2"
+            value={formData.rulesTitle}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="rulesDesc1"
+            className="form-control mb-2"
+            value={formData.rulesDesc1}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="rulesDesc2"
+            className="form-control mb-3"
+            value={formData.rulesDesc2}
+            onChange={handleChange}
+          />
+
+          <h5>Refund Policy</h5>
+
+          <input
+            type="text"
+            name="refundTitle"
+            className="form-control mb-2"
+            value={formData.refundTitle}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="refundDesc1"
+            className="form-control mb-2"
+            value={formData.refundDesc1}
+            onChange={handleChange}
+          />
+
+          <textarea
+            name="refundDesc2"
+            className="form-control mb-3"
+            value={formData.refundDesc2}
+            onChange={handleChange}
           />
 
           <button type="submit" className="btn btn-success me-2">
@@ -195,4 +291,4 @@ function BlogHeadingForm() {
   );
 }
 
-export default BlogHeadingForm;
+export default RulesRefundForm;

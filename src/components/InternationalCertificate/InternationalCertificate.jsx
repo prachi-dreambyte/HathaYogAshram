@@ -58,7 +58,8 @@ const DEFAULT_CERTIFICATE = {
   },
 };
 
-const InternationalCertificate = ({ data }) => {
+const InternationalCertificate = ({  }) => {
+  let data = null
   const [showModal, setShowModal] = useState(false);
 
   const handleBookNow = () => {

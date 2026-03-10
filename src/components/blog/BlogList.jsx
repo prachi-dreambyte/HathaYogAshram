@@ -26,6 +26,7 @@ const blogData = [
     link: '/blog/sheetkari-pranayama',
     date: 'Jan 15, 2026',
     readTime: '5 min read',
+    
   },
   {
     id: 2,

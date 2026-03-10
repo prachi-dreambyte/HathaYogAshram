@@ -5,6 +5,7 @@ import {
   MdLock,
   MdImage,
   MdDashboard,
+  MdAdd,
   MdSchool,
   MdPerson,
   MdPhotoLibrary,
@@ -46,13 +47,16 @@ import AboutTeacherDetails from 'views/admin/AboutUs/Teachers/TeacherDetails';
 import AboutCoursesDetails from 'views/admin/Courses/CoursesDetails';
 import CourseBatches from 'views/admin/Courses/CourseBatches';
 import CourseBookings from 'views/admin/Courses/CourseBookings';
-import BooksAdmin from 'views/admin/Books/BooksAdmin';
-import BooksPageContent from 'views/admin/Books/BooksPageContent';
 import HomeStudentReview from 'views/admin/HomePage/StudentReview/StudentReview';
 import AccommodationForm from 'views/admin/AboutUs/Accommodation/Accommodation';
 import GalleryHeadingForm from 'views/admin/AboutUs/Gallery/Gallery';
 import GalleryForm from 'views/admin/AboutUs/Gallery/GalleryHeading';
 import BlogHeadingForm from 'views/admin/AboutUs/Blog/BlogHeading';
+import BooksAdmin from 'views/admin/AboutUs/Books/BooksAdmin';
+import BooksPageContent from 'views/admin/AboutUs/Books/BooksPageContent';
+import Hours24Form from 'views/admin/Courses/Hours24';
+import RulesRefundForm from 'views/admin/Courses/RulesRefundForm';
+import VedicMantraForm from 'views/admin/Courses/VedicMantraForm';
 
 const routes = [
   {
@@ -365,7 +369,7 @@ const routes = [
         collapse: true,
         items: [
           {
-            name: 'Blogs',
+            name: 'Blogs Heading',
         layout: '/admin',
         path: '/AboutUs/Blogs/Heading',
             icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
@@ -383,68 +387,37 @@ const routes = [
         layout: '/admin',
         path: '/AboutUs/Blogs/Blog-Details',
             icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
-            component: <HomeFacilityCards />,
+            component: <BlogHeadingForm />,
           },
         ],
       },
+      {
+        name: 'Books',
+        layout: '/admin',
+        path: '/AboutUs/Books',
+        icon: <Icon as={MdPhotoLibrary} width="20px" height="20px" color="inherit" />,
+        collapse: true,
+        items: [
+      {
+        name: 'Books',
+        layout: '/admin',
+        path: '/AboutUs/Books/Heading',
+        icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+        component: <BooksAdmin/>,
+      },
+      {
+   name: 'Books Details',
+   layout: '/admin',
+   path: '/AboutUs/Books/Details',
+   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+   component: <BooksPageContent/>,
+ }
+
+    ]
+  },
     ],
   },
-  {
-  name: 'AboutUS',
-  layout: '/admin',
-  path: '/about-us',
-  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
-  collapse: true,
-  items: [
-    {
-      name: 'Founder',
-      layout: '/admin',
-      path: '/about-us/founder',
-      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-      collapse: true,
-      items: [
-        {
-          name: 'Founder Details',
-          layout: '/admin',
-          path: '/about-us/founder/details',
-          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-          component: <AboutFounderDetails/>,
-        },
-         {
-          name: 'Founder Section',
-          layout: '/admin',
-          path: '/about-us/founder/Section',
-          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-          component: <AboutFounderSection/>,
-        },
-      ],
-    },
-     {
-      name: 'Teacher',
-      layout: '/admin',
-      path: '/about-us/Teacher',
-      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-      collapse: true,
-      items: [
-        {
-          name: 'Teacher Details',
-          layout: '/admin',
-          path: '/about-us/Teacher/details',
-          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-          component: <AboutTeacherDetails />,
-        },
-         {
-          name: 'Teacher Section',
-          layout: '/admin',
-          path: '/about-us/Teacher/Section',
-          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
-          component: <AboutTeacherHeading/>,
-        },
-      ],
-    },
-  ],
-},
-{
+   {
   name: 'Courses',
   layout: '/admin',
   path: '/Courses',
@@ -472,37 +445,137 @@ const routes = [
       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
       component: <CourseBookings />,
     },
+     {
+      name: 'Hours24Form',
+      layout: '/admin',
+      path: '/Courses/Hours-24-Form',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <Hours24Form/>,
+    },
+     {
+      name: 'RulesRefundForm',
+      layout: '/admin',
+      path: '/Courses/RulesRefundForm',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <RulesRefundForm/>,
+    },
+    {
+      name: 'VedicMantraForm',
+      layout: '/admin',
+      path: '/Courses/VedicMantraForm',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <VedicMantraForm/>,
+    },
+    //  {
+    //     name: 'Courses Details',
+    //     layout: '/admin',
+    //     path: '/Courses/Courses-Details',
+    //     icon: <Icon as={MdMenuBook} width="20px" height="20px" color="inherit" />,
+    //     component: <AboutCoursesDetails />,
+    //   },
   ],
 },
-{
-  name: 'Books',
-  layout: '/admin',
-  path: '/books',
-  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
-  component: <BooksAdmin />,
-},
-{
-  name: 'Books Page Content',
-  layout: '/admin',
-  path: '/books-page',
-  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
-  component: <BooksPageContent />,
-},
-    name: 'Courses',
-    layout: '/admin',
-    path: '/Courses',
-    icon: <Icon as={MdMenuBook} width="20px" height="20px" color="inherit" />,
-    collapse: true,
-    items: [
-      {
-        name: 'Courses Details',
-        layout: '/admin',
-        path: '/Courses/Courses-Details',
-        icon: <Icon as={MdMenuBook} width="20px" height="20px" color="inherit" />,
-        component: <AboutCoursesDetails />,
-      },
-    ],
-  },
+ 
+//   {
+//   name: 'AboutUS',
+//   layout: '/admin',
+//   path: '/about-us',
+//   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+//   collapse: true,
+//   items: [
+//     {
+//       name: 'Founder',
+//       layout: '/admin',
+//       path: '/about-us/founder',
+//       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//       collapse: true,
+//       items: [
+//         {
+//           name: 'Founder Details',
+//           layout: '/admin',
+//           path: '/about-us/founder/details',
+//           icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//           component: <AboutFounderDetails/>,
+//         },
+//          {
+//           name: 'Founder Section',
+//           layout: '/admin',
+//           path: '/about-us/founder/Section',
+//           icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//           component: <AboutFounderSection/>,
+//         },
+//       ],
+//     },
+//      {
+//       name: 'Teacher',
+//       layout: '/admin',
+//       path: '/about-us/Teacher',
+//       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//       collapse: true,
+//       items: [
+//         {
+//           name: 'Teacher Details',
+//           layout: '/admin',
+//           path: '/about-us/Teacher/details',
+//           icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//           component: <AboutTeacherDetails />,
+//         },
+//          {
+//           name: 'Teacher Section',
+//           layout: '/admin',
+//           path: '/about-us/Teacher/Section',
+//           icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//           component: <AboutTeacherHeading/>,
+//         },
+//       ],
+//     },
+//   ],
+// },
+// {
+//   name: 'Courses',
+//   layout: '/admin',
+//   path: '/Courses',
+//   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+//   collapse: true,
+//   items: [
+//     {
+//       name: 'Courses Catalog',
+//       layout: '/admin',
+//       path: '/Courses/Courses-Details',
+//       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//       component: <AboutCoursesDetails />,
+//     },
+//     {
+//       name: 'Course Batches',
+//       layout: '/admin',
+//       path: '/Courses/Batches',
+//       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//       component: <CourseBatches />,
+//     },
+//     {
+//       name: 'Course Bookings',
+//       layout: '/admin',
+//       path: '/Courses/Bookings',
+//       icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+//       component: <CourseBookings />,
+//     },
+//   ],
+// },
+// {
+//   name: 'Books',
+//   layout: '/admin',
+//   path: '/books',
+//   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+//   component: <BooksAdmin />,
+// },
+// {
+//   name: 'Books Page Content',
+//   layout: '/admin',
+//   path: '/books-page',
+//   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+//   component: <BooksPageContent />,
+// },
+
   {
     name: 'Sign In',
     layout: '/auth',
