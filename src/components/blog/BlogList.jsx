@@ -1,35 +1,125 @@
-import { useEffect, useMemo, useState } from "react";
-import axios from "axios";
-import styles from "../../assets/styles/blog/BlogList.module.css";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import styles from '../../assets/styles/blog/BlogList.module.css';
 
-const API_BASE = "http://localhost:8000/api";
-const ASSET_BASE = "http://localhost:8000";
+import blog1 from '../../assets/images/blog/5-Ways-to.webp';
+import blog2 from '../../assets/images/blog/500-.webp';
+import blog3 from '../../assets/images/blog/Sheetkari-.webp';
+import { Link } from 'react-router-dom';
 
-const toAssetUrl = (value) => {
-  if (!value) return "";
-  if (typeof value !== "string") return value;
-  if (value.startsWith("http") || value.startsWith("data:")) return value;
-  return `${ASSET_BASE}/${value.replace(/^\/+/, "")}`;
-};
+const categories = [
+  'All Posts',
+  'Kundalini Yoga',
+  'Yoga Online',
+  'Yoga Philosophy',
+  'Yoga Retreat',
+  'Yoga Training',
+];
 
-const formatDate = (value) => {
-  if (!value) return "";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "";
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "2-digit",
-    year: "numeric",
-  }).format(date);
-};
-
-const estimateReadTime = (html) => {
-  const text = String(html || "").replace(/<[^>]*>/g, " ");
-  const words = text.trim().split(/\s+/).filter(Boolean).length;
-  if (!words) return "";
-  return `${Math.max(1, Math.round(words / 200))} min read`;
-};
+const blogData = [
+  {
+    id: 1,
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
+    excerpt:
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
+    image: blog1,
+    link: '/blog/sheetkari-pranayama',
+    date: 'Jan 15, 2026',
+    readTime: '5 min read',
+    
+  },
+  {
+    id: 2,
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
+    excerpt:
+      "If you're feeling the call to deepen your practice, here are five essential ways...",
+    category: 'Yoga Training',
+    image: blog2,
+    link: '/blog/prepare-ytt-rishikesh',
+    date: 'Jan 12, 2026',
+    readTime: '7 min read',
+  },
+  {
+    id: 3,
+    title:
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
+    excerpt:
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
+    image: blog3,
+    link: '/blog/500-hour-ytt',
+    date: 'Jan 10, 2026',
+    readTime: '6 min read',
+  },
+  {
+    id: 4,
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
+    excerpt:
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
+    image: blog1,
+    link: '/blog/sheetkari-pranayama',
+    date: 'Jan 08, 2026',
+    readTime: '5 min read',
+  },
+  {
+    id: 5,
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
+    excerpt:
+      "If you're feeling the call to deepen your practice, here are five essential ways...",
+    category: 'Yoga Training',
+    image: blog2,
+    link: '/blog/prepare-ytt-rishikesh',
+    date: 'Jan 05, 2026',
+    readTime: '7 min read',
+  },
+  {
+    id: 6,
+    title:
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
+    excerpt:
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
+    image: blog3,
+    link: '/blog/500-hour-ytt',
+    date: 'Jan 03, 2026',
+    readTime: '6 min read',
+  },
+  {
+    id: 7,
+    title: 'Sheetkari Pranayama: Benefits and Techniques for Daily Yoga',
+    excerpt:
+      'Sheetkari Pranayama helps bring a wave of calm and coolness into daily yoga practice...',
+    category: 'Yoga Philosophy',
+    image: blog1,
+    link: '/blog/sheetkari-pranayama',
+    date: 'Dec 28, 2025',
+    readTime: '5 min read',
+  },
+  {
+    id: 8,
+    title: '5 Ways to Prepare for Yoga Teacher Training in Rishikesh, India',
+    excerpt:
+      "If you're feeling the call to deepen your practice, here are five essential ways...",
+    category: 'Yoga Training',
+    image: blog2,
+    link: '/blog/prepare-ytt-rishikesh',
+    date: 'Dec 25, 2025',
+    readTime: '7 min read',
+  },
+  {
+    id: 9,
+    title:
+      '500-Hour Yoga Teacher Training in Rishikesh: Key Benefits for Advanced Practitioners',
+    excerpt:
+      'Discover how a 500-hour yoga teacher training can elevate your teaching skills...',
+    category: 'Yoga Training',
+    image: blog3,
+    link: '/blog/500-hour-ytt',
+    date: 'Dec 22, 2025',
+    readTime: '6 min read',
+  },
+];
 
 const BlogList = () => {
   const [pageContent, setPageContent] = useState(null);
