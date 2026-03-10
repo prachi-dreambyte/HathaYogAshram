@@ -331,6 +331,13 @@ const routes = [
           },
         ],
       },
+       {
+      name: 'Our School Page',
+      layout: '/admin',
+      path: '/about-us/our-school',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <OurSchoolAdmin />,
+    },
       {
         name: 'Gallery',
         layout: '/admin',
@@ -361,36 +368,7 @@ const routes = [
         icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
         component: <AccommodationForm />,
       },
-       {
-        name: 'Blog',
-        layout: '/admin',
-        path: '/AboutUs/Blogs',
-        icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
-        collapse: true,
-        items: [
-          {
-            name: 'Blogs Heading',
-        layout: '/admin',
-        path: '/AboutUs/Blogs/Heading',
-            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
-            component: <BlogHeadingForm/>,
-          },
-           {
-            name: 'Blogs Tab',
-        layout: '/admin',
-        path: '/AboutUs/Blogs/Tabs',
-            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
-            component: <HomeFacilityCards />,
-          },
-           {
-            name: 'Blog Details',
-        layout: '/admin',
-        path: '/AboutUs/Blogs/Blog-Details',
-            icon: <Icon as={MdHotel} width="20px" height="20px" color="inherit" />,
-            component: <BlogHeadingForm />,
-          },
-        ],
-      },
+      
       {
         name: 'Books',
         layout: '/admin',
@@ -415,6 +393,7 @@ const routes = [
 
     ]
   },
+  
     ],
   },
    {
@@ -473,6 +452,29 @@ const routes = [
     //     icon: <Icon as={MdMenuBook} width="20px" height="20px" color="inherit" />,
     //     component: <AboutCoursesDetails />,
     //   },
+  ],
+},
+{
+  name: 'Blog',
+  layout: '/admin',
+  path: '/blog',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  collapse: true,
+  items: [
+    {
+      name: 'Blog Posts',
+      layout: '/admin',
+      path: '/blog/posts',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <BlogPosts />,
+    },
+    {
+      name: 'Blog Page Content',
+      layout: '/admin',
+      path: '/blog/page',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <BlogPageContent />,
+    },
   ],
 },
  
