@@ -51,6 +51,9 @@ import HomeStudentReview from 'views/admin/HomePage/StudentReview/StudentReview'
 import AccommodationForm from 'views/admin/AboutUs/Accommodation/Accommodation';
 import GalleryHeadingForm from 'views/admin/AboutUs/Gallery/Gallery';
 import GalleryForm from 'views/admin/AboutUs/Gallery/GalleryHeading';
+import BlogPosts from 'views/admin/Blog/BlogPosts';
+import BlogPageContent from 'views/admin/Blog/BlogPageContent';
+import OurSchoolAdmin from 'views/admin/OurSchool/OurSchoolAdmin';
 import BlogHeadingForm from 'views/admin/AboutUs/Blog/BlogHeading';
 import BooksAdmin from 'views/admin/AboutUs/Books/BooksAdmin';
 import BooksPageContent from 'views/admin/AboutUs/Books/BooksPageContent';
@@ -396,6 +399,69 @@ const routes = [
   
     ],
   },
+  {
+  name: 'AboutUS',
+  layout: '/admin',
+  path: '/about-us',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  collapse: true,
+  items: [
+    {
+      name: 'Founder',
+      layout: '/admin',
+      path: '/about-us/founder',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      collapse: true,
+      items: [
+        {
+          name: 'Founder Details',
+          layout: '/admin',
+          path: '/about-us/founder/details',
+          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+          component: <AboutFounderDetails/>,
+        },
+         {
+          name: 'Founder Section',
+          layout: '/admin',
+          path: '/about-us/founder/Section',
+          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+          component: <AboutFounderSection/>,
+        },
+      ],
+    },
+     {
+      name: 'Teacher',
+      layout: '/admin',
+      path: '/about-us/Teacher',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      collapse: true,
+      items: [
+        {
+          name: 'Teacher Details',
+          layout: '/admin',
+          path: '/about-us/Teacher/details',
+          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+          component: <AboutTeacherDetails />,
+        },
+         {
+          name: 'Teacher Section',
+          layout: '/admin',
+          path: '/about-us/Teacher/Section',
+          icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+          component: <AboutTeacherHeading/>,
+        },
+      ],
+    },
+    {
+      name: 'Our School Page',
+      layout: '/admin',
+      path: '/about-us/our-school',
+      icon: <Icon as={MdAdd} width="20px" height="20px" color="inherit" />,
+      component: <OurSchoolAdmin />,
+    },
+  ],
+},
+{
    {
   name: 'Courses',
   layout: '/admin',
@@ -459,6 +525,13 @@ const routes = [
   layout: '/admin',
   path: '/blog',
   icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  component: <BooksAdmin />,
+},
+{
+  name: 'Blog',
+  layout: '/admin',
+  path: '/blog',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
   collapse: true,
   items: [
     {
@@ -476,6 +549,13 @@ const routes = [
       component: <BlogPageContent />,
     },
   ],
+},
+{
+  name: 'Books Page Content',
+  layout: '/admin',
+  path: '/books-page',
+  icon: <Icon as={MdImage} width="20px" height="20px" color="inherit" />,
+  component: <BooksPageContent />,
 },
  
 //   {

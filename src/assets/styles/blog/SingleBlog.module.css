@@ -137,6 +137,52 @@
 }
 
 /* ========================================
+   RICH CONTENT (DYNAMIC HTML)
+   ======================================== */
+.richContent {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #444;
+}
+
+.richContent h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #C41E3A;
+  margin: 2.5rem 0 1rem;
+}
+
+.richContent h3 {
+  font-size: 1.4rem;
+  color: #D2691E;
+  margin: 2rem 0 0.75rem;
+}
+
+.richContent p {
+  margin: 0 0 1.2rem;
+}
+
+.richContent ul,
+.richContent ol {
+  margin: 0 0 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.richContent li {
+  margin-bottom: 0.5rem;
+}
+
+.richContent strong {
+  color: #C41E3A;
+}
+
+.richContent img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+/* ========================================
    INTRO SECTION
    ======================================== */
 .introSection {
